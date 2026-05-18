@@ -350,6 +350,81 @@ describe("SendVote", () => {
 		votingMock.mockRestore();
 	});
 
+	it("should pass `legacyNonce` when wallet is a legacy cold wallet", async () => {
+		const isLegacyColdSpy = vi.spyOn(wallet, "isLegacyCold").mockReturnValue(true);
+		const legacyNonceSpy = vi.spyOn(wallet, "legacyNonce").mockReturnValue(BigNumber.make(1));
+
+		await wallet.synchroniser().votes();
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+
+		const votes: VoteValidatorProperties[] = [
+			{
+				amount: 10,
+				validatorAddress: validatorData[0].address,
+			},
+		];
+
+		const { router } = render(
+			<Component activeProfile={profile} activeNetwork={wallet.network()} activeWallet={wallet} votes={votes} />,
+			{
+				route: `${voteURL}`,
+			},
+		);
+
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+
+		expect(screen.getAllByRole("radio")[1]).toBeChecked();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		// AuthenticationStep
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
+
+		const signVoteMock = vi
+			.spyOn(wallet.transaction(), "signVote")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+		const broadcastVoteMock = vi
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [transactionFixture.data.id], errors: {}, rejected: [] });
+		const transactionVoteMock = createVoteTransactionMock(wallet);
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, passphrase);
+
+		expect(passwordInput).toHaveValue(passphrase);
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		await act(async () => {
+			await userEvent.click(sendButton());
+		});
+
+		expect(legacyNonceSpy).toHaveBeenCalled();
+		expect(isLegacyColdSpy).toHaveBeenCalled();
+
+		await waitFor(() => {
+			expect(signVoteMock).toHaveBeenCalledWith(
+				expect.objectContaining({
+					gasLimit: expect.any(BigNumber),
+					gasPrice: expect.any(BigNumber),
+					nonce: expect.any(String),
+					signatory: expect.any(Object),
+				}),
+			);
+		});
+
+		signVoteMock.mockRestore();
+		broadcastVoteMock.mockRestore();
+		transactionVoteMock.mockRestore();
+		isLegacyColdSpy.mockRestore();
+		legacyNonceSpy.mockRestore();
+	});
+
 	it("should send a unvote & vote transaction and use split voting method", async () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 
