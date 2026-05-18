@@ -1,6 +1,6 @@
 import { Contracts, Services } from "@/app/lib/mainsail";
 
-import { IReadWriteWallet, IWalletSynchroniser, WalletData, WalletFlag } from "./contracts.js";
+import { IReadWriteWallet, IWalletSynchroniser, WalletData } from "./contracts.js";
 import { WalletIdentifierFactory } from "./wallet.identifier.factory.js";
 import { WalletData as WalletDataDto } from "@/app/lib/mainsail/wallet.dto";
 
