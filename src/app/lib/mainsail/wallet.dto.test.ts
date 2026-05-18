@@ -100,6 +100,24 @@ describe("WalletData", () => {
 		});
 	});
 
+	describe("legacyNonce", () => {
+		it("should return `legacyNonce` as BigNumber", () => {
+			walletData.fill({ address: "test-address", attributes: { legacyNonce: "5" } });
+			const nonce = walletData.legacyNonce();
+
+			expect(nonce).toBeInstanceOf(BigNumber);
+			expect(nonce.toHuman()).toBe(5);
+		});
+
+		it("should handle undefined nonce", () => {
+			walletData.fill({ address: "test-address" });
+			const nonce = walletData.legacyNonce();
+
+			expect(nonce).toBeInstanceOf(BigNumber);
+			expect(nonce.toHuman()).toBe(0);
+		});
+	});
+
 	describe("nested properties", () => {
 		it("should get secondPublicKey from root level", () => {
 			walletData.fill({ address: "test-address", secondPublicKey: "test-second-key" });

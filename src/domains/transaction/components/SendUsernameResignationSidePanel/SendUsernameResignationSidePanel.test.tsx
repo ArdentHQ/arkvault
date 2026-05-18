@@ -134,8 +134,6 @@ describe("SendUsernameResignationSidePanel", () => {
 			.wallets()
 			.findByAddressWithNetwork("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", "mainsail.devnet")!;
 
-		vi.spyOn(wallet, "isValidator").mockImplementation(() => true);
-
 		vi.spyOn(PublicKeyService.prototype, "verifyPublicKeyWithBLS").mockReturnValue(true);
 
 		await wallet.synchroniser().identity();
@@ -266,6 +264,94 @@ describe("SendUsernameResignationSidePanel", () => {
 		findWalletMock.mockRestore();
 		syncedWithNetworkMock.mockRestore();
 		fullyRestoredMock.mockRestore();
+	});
+
+	it("should pass `legacyNonce` when wallet is a legacy cold wallet", async () => {
+		const isLegacyColdSpy = vi.spyOn(wallet, "isLegacyCold").mockReturnValue(true);
+		const legacyNonceSpy = vi.spyOn(wallet, "legacyNonce").mockReturnValue(BigNumber.make(1));
+
+		vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: vi.fn().mockReturnValue(signedTransactionMock),
+		}));
+
+		await renderPanel();
+
+		// Step 1 - Form step
+		await expect(formStep()).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		// Navigate to review step with Enter key
+		await userEvent.keyboard("{enter}");
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Navigate back to form step
+		await userEvent.click(screen.getByTestId(backButtonTestId));
+		await expect(formStep()).resolves.toBeVisible();
+
+		// Continue to review step again
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Continue to authentication step
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		// Enter mnemonic and submit
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		await userEvent.type(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).toBeEnabled());
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signUsernameResignation")
+			.mockReturnValue(Promise.resolve(UsernameResignationFixture.data.hash));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [UsernameResignationFixture.data.hash],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createUsernameResignationMock(wallet);
+
+		await userEvent.click(sendButton());
+
+		await waitFor(() => {
+			expect(signMock).toHaveBeenCalledWith(
+				expect.objectContaining({
+					gasLimit: expect.any(BigNumber),
+					gasPrice: expect.any(BigNumber),
+					nonce: expect.any(String),
+					signatory: expect.any(Object),
+				}),
+			);
+		});
+
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(UsernameResignationFixture.data.hash));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(UsernameResignationFixture.data.hash));
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		isLegacyColdSpy.mockRestore();
+		legacyNonceSpy.mockRestore();
+
+		await act(() => vi.runOnlyPendingTimers());
+
+		// Step 4 - summary screen
+		await waitFor(
+			() => {
+				expect(screen.getByTestId("TransactionSuccessful")).toBeVisible();
+			},
+			{ timeout: 4000 },
+		);
+
+		// Close the side panel
+		await userEvent.click(screen.getByTestId("SendUsernameResignation__close-button"));
 	});
 
 	it("should handle on change with undefined wallet selection", async () => {
