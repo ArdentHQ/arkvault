@@ -5,9 +5,6 @@ import { TruncatedWithTooltip } from "./TruncatedWithTooltip";
 import * as TooltipMock from "@/app/components/Tooltip";
 
 describe("TruncatedWithTooltip", () => {
-	let observerCallback: (entries: ResizeObserverEntry[]) => void = () => {};
-	let observedTarget: Element | null = null;
-
 	beforeAll(() => {
 		vi.spyOn(TooltipMock, "Tooltip").mockImplementation(({ content, disabled, children }) => (
 			<span data-testid="tooltip-wrapper">
@@ -23,12 +20,8 @@ describe("TruncatedWithTooltip", () => {
 
 	beforeEach(() => {
 		class MockResizeObserver {
-			constructor(callback: (entries: ResizeObserverEntry[]) => void) {
-				observerCallback = callback;
-			}
-			observe(target: Element) {
-				observedTarget = target;
-			}
+			constructor() {}
+			observe() {}
 			disconnect() {}
 			unobserve() {}
 		}
