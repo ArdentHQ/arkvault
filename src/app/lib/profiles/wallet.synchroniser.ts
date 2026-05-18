@@ -1,6 +1,6 @@
 import { Contracts, Services } from "@/app/lib/mainsail";
 
-import { IReadWriteWallet, IWalletSynchroniser, WalletData } from "./contracts.js";
+import { IReadWriteWallet, IWalletSynchroniser, WalletData, WalletFlag } from "./contracts.js";
 import { WalletIdentifierFactory } from "./wallet.identifier.factory.js";
 import { WalletData as WalletDataDto } from "@/app/lib/mainsail/wallet.dto";
 
@@ -20,10 +20,6 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 
 		try {
 			const wallet: Contracts.WalletData = await this.#wallet.client().wallet(walletIdentifier);
-
-			// Clear legacy attributes — they only apply to cold wallets tha don't exist on chain (see legacyIdentity below).
-			wallet.setAttribute("attributes.isLegacy", false);
-			wallet.setAttribute("attributes.legacyNonce", undefined);
 
 			this.#wallet.getAttributes().set("wallet", wallet);
 
@@ -46,6 +42,7 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 
 					this.#wallet.getAttributes().set("wallet", legacyWalletData);
 					this.#wallet.data().set(WalletData.Balance, legacyWalletData.balance());
+					this.#wallet.data().set(WalletData.IsLegacyColdWallet, true);
 				}
 			}
 

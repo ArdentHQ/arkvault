@@ -414,6 +414,14 @@ export interface IReadWriteWallet {
 	isCold(): boolean;
 
 	/**
+	 * Determine if the wallet is a legacy cold wallet.
+	 *
+	 * @return {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	isLegacyCold(): boolean;
+
+	/**
 	 * Toggle the starred state.
 	 *
 	 * @memberof IReadWriteWallet

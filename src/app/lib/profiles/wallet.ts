@@ -405,6 +405,11 @@ export class Wallet implements IReadWriteWallet {
 		return this.data().get(WalletData.Status) === WalletFlag.Cold;
 	}
 
+	/** {@inheritDoc IReadWriteWallet.isLegacyCold} */
+	public isLegacyCold(): boolean {
+		return this.data().get(WalletData.IsLegacyColdWallet) === true;
+	}
+
 	/** {@inheritDoc IReadWriteWallet.toggleStarred} */
 	public toggleStarred(): void {
 		this.data().set(WalletFlag.Starred, !this.isStarred());
