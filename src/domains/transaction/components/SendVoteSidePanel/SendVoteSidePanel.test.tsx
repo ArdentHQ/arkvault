@@ -365,7 +365,8 @@ describe("SendVote", () => {
 			},
 		];
 
-		const { router } = render(
+		
+		render(
 			<Component activeProfile={profile} activeNetwork={wallet.network()} activeWallet={wallet} votes={votes} />,
 			{
 				route: `${voteURL}`,
