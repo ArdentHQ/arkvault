@@ -305,7 +305,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			const voteTransactionInput: Services.TransactionInput = {
 				gasLimit,
 				gasPrice,
-				nonce: activeWallet.isLegacyCold() ? activewallet.legacyNonce() : undefined,
+				nonce: activeWallet.isLegacyCold() ? activewallet.legacyNonce().toFixed(0) : undefined,
 				signatory,
 			};
 
