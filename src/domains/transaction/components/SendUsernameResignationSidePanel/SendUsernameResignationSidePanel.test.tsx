@@ -235,6 +235,7 @@ describe("SendUsernameResignationSidePanel", () => {
 				expect.objectContaining({
 					gasLimit: expect.any(BigNumber),
 					gasPrice: expect.any(BigNumber),
+					nonce: undefined,
 					signatory: expect.any(Object),
 				}),
 			);
@@ -319,6 +320,9 @@ describe("SendUsernameResignationSidePanel", () => {
 		const transactionMock = createUsernameResignationMock(wallet);
 
 		await userEvent.click(sendButton());
+
+		expect(legacyNonceSpy).toHaveBeenCalled();
+		expect(isLegacyColdSpy).toHaveBeenCalled();
 
 		await waitFor(() => {
 			expect(signMock).toHaveBeenCalledWith(
