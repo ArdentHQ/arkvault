@@ -376,6 +376,7 @@ describe("TokenService", () => {
 		it("should update existing tokens on the page", async () => {
 			const walletAddress = "0x1";
 			const newBalanceRaw = "555";
+			const token = "0x180a864a755fed0144c622df49b83db577befefb";
 
 			server.use(
 				http.get(WalletsTokensEndpoint, () =>
@@ -389,7 +390,7 @@ describe("TokenService", () => {
 								name: "DARK20",
 								supply: "100000000000000000000000000",
 								symbol: "DARK20",
-								token: "0x180a864a755fed0144c622df49b83db577befefb",
+								token,
 							},
 						],
 						meta: { next: null, self: WalletsTokensPagePath },
@@ -405,7 +406,11 @@ describe("TokenService", () => {
 			await tokenService.sync();
 			expect(tokenService.selected().items()).toHaveLength(1);
 
-			await tokenService.syncOne(walletAddress);
+			const result = await tokenService.syncOne(token);
+
+			expect(result).toBeInstanceOf(WalletToken);
+			expect(result!.address()).toBe(walletAddress);
+			expect(result!.balanceRaw()).toBe(newBalanceRaw);
 
 			expect(tokenService.selected().items()).toHaveLength(1);
 			expect(tokenService.selected().items()[0].address()).toBe(walletAddress);
@@ -414,6 +419,7 @@ describe("TokenService", () => {
 
 		it("should keep existing items when response has no matching tokens", async () => {
 			const walletAddress = "0x1";
+			const tokenAddress = "0x180a864a755fed0144c622df49b83db577befefb";
 
 			server.use(
 				http.get(WalletsTokensEndpoint, () =>
@@ -427,7 +433,7 @@ describe("TokenService", () => {
 								name: "DARK20",
 								supply: "100000000000000000000000000",
 								symbol: "DARK20",
-								token: "0x180a864a755fed0144c622df49b83db577befefb",
+								token: tokenAddress,
 							},
 						],
 						meta: { next: null, self: WalletsTokensPagePath },
@@ -449,13 +455,14 @@ describe("TokenService", () => {
 				),
 			);
 
-			await tokenService.syncOne(walletAddress);
+			await tokenService.syncOne(tokenAddress);
 
 			expect(tokenService.selected().items()).toHaveLength(1);
 		});
 
 		it("should catch errors without mutating the collection", async () => {
 			const walletAddress = "0x1";
+			const tokenAddress = "0x180a864a755fed0144c622df49b83db577befefb";
 
 			server.use(
 				http.get(WalletsTokensEndpoint, () =>
@@ -469,7 +476,7 @@ describe("TokenService", () => {
 								name: "DARK20",
 								supply: "100000000000000000000000000",
 								symbol: "DARK20",
-								token: "0x180a864a755fed0144c622df49b83db577befefb",
+								token: tokenAddress,
 							},
 						],
 						meta: { next: null, self: WalletsTokensPagePath },
@@ -487,7 +494,7 @@ describe("TokenService", () => {
 
 			server.use(http.get(WalletsTokensEndpoint, () => HttpResponse.json(null, { status: 500 })));
 
-			await expect(tokenService.syncOne(walletAddress)).resolves.toBeUndefined();
+			await expect(tokenService.syncOne(tokenAddress)).resolves.toBeUndefined();
 			expect(tokenService.selected().items()).toHaveLength(1);
 		});
 
