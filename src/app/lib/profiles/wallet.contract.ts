@@ -212,6 +212,14 @@ export interface IReadWriteWallet {
 	nonce(): BigNumber;
 
 	/**
+	 * Get the legacy nonce.
+	 *
+	 * @return {BigNumber}
+	 * @memberof IReadWriteWallet
+	 */
+	legacyNonce(): BigNumber;
+
+	/**
 	 * Get the avatar.
 	 *
 	 * @return {string}
@@ -412,6 +420,14 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	isCold(): boolean;
+
+	/**
+	 * Determine if the wallet is a legacy cold wallet.
+	 *
+	 * @return {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	isLegacyCold(): boolean;
 
 	/**
 	 * Toggle the starred state.

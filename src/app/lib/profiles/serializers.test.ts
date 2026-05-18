@@ -35,6 +35,7 @@ describe("WalletSerialiser", () => {
 			    "ENCRYPTED_CONFIRM_KEY": undefined,
 			    "ENCRYPTED_SIGNING_KEY": undefined,
 			    "IMPORT_METHOD": "BIP39.MNEMONIC",
+			    "IS_LEGACY_COLD_WALLET": false,
 			    "IS_PRIMARY": false,
 			    "LEDGER_MODEL": undefined,
 			    "LEGACY_ADDRESS": undefined,

@@ -180,6 +180,16 @@ describe("Wallet", () => {
 		expect(wallet.nonce()).toEqual(BigNumber.ZERO);
 	});
 
+	it("should have a legacy nonce", () => {
+		const result = wallet.legacyNonce();
+		expect(result).toBeInstanceOf(BigNumber);
+	});
+
+	it("should return zero `legacyNonce` when undefined", () => {
+		vi.spyOn(wallet.data(), "get").mockReturnValue(undefined);
+		expect(wallet.legacyNonce()).toEqual(BigNumber.ZERO);
+	});
+
 	it("should have an avatar", () => {
 		const result = wallet.avatar();
 		expect(result).toBeDefined();
