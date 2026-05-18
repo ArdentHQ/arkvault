@@ -9,8 +9,23 @@ import { server } from "./src/tests/mocks/server";
 import { pwnedMock } from "./src/tests/mocks/handlers/pwned";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
+import { openTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 
 expect.extend(matchers);
+
+vi.mock("@/app/contexts/Ledger/ledger.transport.factory", () => {
+	class LedgerTransportFactory {
+		supportedTransport() {
+			return Promise.resolve({
+				list: () => [],
+				listen: () => {},
+				openConnected: async () => openTransportReplayer(RecordStore.fromString("")),
+			});
+		}
+	}
+
+	return { LedgerTransportFactory };
+});
 
 vi.mock("@faustbrian/node-haveibeenpwned", () => ({
 	pwned: async () => pwnedMock(),
