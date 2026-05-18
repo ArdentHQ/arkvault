@@ -12,18 +12,6 @@ exports[`Collapse > should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Collapse > should render visible 1`] = `
-<DocumentFragment>
-  <div
-    aria-hidden="false"
-    data-testid="Collapse"
-    style="height: auto; max-height: auto; opacity: 1; overflow: auto;"
-  >
-    Test
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Collapse > should render with custom scroll 1`] = `
 <DocumentFragment>
   <div
