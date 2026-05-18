@@ -11,8 +11,9 @@ describe("routing", () => {
 		]);
 	});
 
-	it.each(ProfileRoutes)("should use lazy loading with preload", (route) => {
+	it.each(ProfileRoutes)("should use lazy loading with preload", async (route) => {
 		expect(typeof route.component["preload"]).toBe("function");
 		expect(() => route.component["preload"]()).not.toThrow();
+		await route.component.preload();
 	});
 });

@@ -31,7 +31,9 @@ const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
 const selectSender = async () => {
 	await userEvent.click(within(screen.getByTestId("sender-address")).getAllByTestId("SelectDropdown__input")[0]);
 
-	await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
+	await waitFor(() => {
+		expect(screen.getByTestId("SelectDropdown__option--0")).toBeVisible();
+	});
 
 	const firstAddress = screen.getByTestId("SelectDropdown__option--0");
 
