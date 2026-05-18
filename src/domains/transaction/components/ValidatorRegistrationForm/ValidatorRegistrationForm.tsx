@@ -80,7 +80,9 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 			},
 			gasLimit,
 			gasPrice,
-			nonce: senderWallet.isLegacyCold() ? senderWallet.getAttributes().get("wallet.data.attributes.legacyNonce") : undefined,
+			nonce: senderWallet.isLegacyCold()
+				? senderWallet.getAttributes().get("wallet.data.attributes.legacyNonce")
+				: undefined,
 			signatory,
 		});
 	} else {
@@ -91,7 +93,9 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 			},
 			gasLimit,
 			gasPrice,
-			nonce: senderWallet.isLegacyCold() ? senderWallet.getAttributes().get("wallet.data.attributes.legacyNonce") : undefined,
+			nonce: senderWallet.isLegacyCold()
+				? senderWallet.getAttributes().get("wallet.data.attributes.legacyNonce")
+				: undefined,
 			signatory,
 		});
 	}
