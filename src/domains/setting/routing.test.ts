@@ -13,8 +13,8 @@ describe("routing", () => {
 		]);
 	});
 
-	it.each(SettingRoutes)("should use lazy loading with preload", (route) => {
+	it.each(SettingRoutes)("should use lazy loading with preload", async (route) => {
 		expect(typeof route.component["preload"]).toBe("function");
-		expect(() => route.component["preload"]()).not.toThrow();
+		await expect(route.component["preload"]()).resolves.not.toThrow();
 	});
 });
