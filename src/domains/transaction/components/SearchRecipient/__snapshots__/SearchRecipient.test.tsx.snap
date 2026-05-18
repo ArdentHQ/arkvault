@@ -220,22 +220,38 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -328,22 +344,38 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -645,22 +677,38 @@ exports[`SearchRecipient > should render a modal 1`] = `
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -753,22 +801,38 @@ exports[`SearchRecipient > should render a modal 1`] = `
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -1068,22 +1132,38 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -1176,22 +1256,38 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -1491,22 +1587,38 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -1841,29 +1953,38 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                             class="max-w-100"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                               <span>
                                 <span>
                                   <button
-                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -2143,22 +2264,38 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2493,29 +2630,38 @@ exports[`SearchRecipient > should render with my address on mobile 1`] = `
                             class="max-w-100"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                               <span>
                                 <span>
                                   <button
-                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -2795,22 +2941,38 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3110,22 +3272,38 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3218,22 +3396,38 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3533,22 +3727,38 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3641,22 +3851,38 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-52 min-w-52 justify-between"
                           >
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </span>
+                            <div
+                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                            >
+                              <div
+                                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                                data-testid="Address__address"
+                              >
+                                <div>
+                                  <span
+                                    class="flex w-full items-start overflow-y-hidden"
+                                    style="height: 0px;"
+                                  >
+                                    <span
+                                      class="invisible absolute left-0 whitespace-nowrap"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                    <span
+                                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3991,29 +4217,38 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                             class="max-w-100"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                               <span>
                                 <span>
                                   <button
-                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -4121,29 +4356,38 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                             class="max-w-100"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                               <span>
                                 <span>
                                   <button
-                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"

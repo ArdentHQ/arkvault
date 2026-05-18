@@ -163,7 +163,6 @@ export const TokenDetailSidepanel = ({
 
 								<div className="flex flex-1 flex-col justify-end gap-2 sm:w-full sm:justify-start md:flex-row md:items-center">
 									<Address
-										truncateOnTable
 										address={walletToken.token().address()}
 										showCopyButton
 										walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"

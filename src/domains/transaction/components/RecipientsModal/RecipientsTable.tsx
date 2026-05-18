@@ -45,7 +45,6 @@ export const RecipientsTable: FC<RecipientsProperties> = ({ recipients, ticker }
 					<Address
 						walletName={recipient.alias}
 						address={recipient.address}
-						truncateOnTable
 						showCopyButton
 						walletNameClass="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
 						addressClass="text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] flex items-center h-5"

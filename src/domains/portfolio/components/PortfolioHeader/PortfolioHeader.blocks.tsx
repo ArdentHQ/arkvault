@@ -34,7 +34,6 @@ export const ViewingAddressInfo = ({
 			<Address
 				alignment="center"
 				walletName={alias}
-				truncateOnTable
 				maxNameChars={20}
 				walletNameClass={cn("text-sm leading-[17px] sm:text-base sm:leading-5", {
 					"text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600":

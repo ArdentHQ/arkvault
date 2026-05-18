@@ -24,7 +24,7 @@ exports[`Notifications > should render in xs 1`] = `
               class="xs:w-50 w-40 min-[480px]:w-2/3"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -41,16 +41,32 @@ exports[`Notifications > should render in xs 1`] = `
                     </span>
                   </span>
                 </span>
-                <span>
-                  <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                    </span>
-                  </span>
-                </span>
+                <div
+                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                >
+                  <div
+                    class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+                    data-testid="Address__address"
+                  >
+                    <div>
+                      <span
+                        class="flex w-full items-start overflow-y-hidden"
+                        style="height: 0px;"
+                      >
+                        <span
+                          class="invisible absolute left-0 whitespace-nowrap"
+                        >
+                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                        </span>
+                        <span
+                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                        >
+                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -109,7 +125,7 @@ exports[`Notifications > should render in xs 2`] = `
               class="xs:w-50 w-40 min-[480px]:w-2/3"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -126,16 +142,32 @@ exports[`Notifications > should render in xs 2`] = `
                     </span>
                   </span>
                 </span>
-                <span>
-                  <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                    </span>
-                  </span>
-                </span>
+                <div
+                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                >
+                  <div
+                    class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+                    data-testid="Address__address"
+                  >
+                    <div>
+                      <span
+                        class="flex w-full items-start overflow-y-hidden"
+                        style="height: 0px;"
+                      >
+                        <span
+                          class="invisible absolute left-0 whitespace-nowrap"
+                        >
+                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                        </span>
+                        <span
+                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                        >
+                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -195,7 +227,7 @@ exports[`Notifications > should render in xs 3`] = `
               class="w-20 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -212,16 +244,32 @@ exports[`Notifications > should render in xs 3`] = `
                     </span>
                   </span>
                 </span>
-                <span>
-                  <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                    </span>
-                  </span>
-                </span>
+                <div
+                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                >
+                  <div
+                    class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+                    data-testid="Address__address"
+                  >
+                    <div>
+                      <span
+                        class="flex w-full items-start overflow-y-hidden"
+                        style="height: 0px;"
+                      >
+                        <span
+                          class="invisible absolute left-0 whitespace-nowrap"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                        <span
+                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -296,7 +344,7 @@ exports[`Notifications > should render in xs 4`] = `
               class="w-20 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -313,16 +361,32 @@ exports[`Notifications > should render in xs 4`] = `
                     </span>
                   </span>
                 </span>
-                <span>
-                  <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                    </span>
-                  </span>
-                </span>
+                <div
+                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                >
+                  <div
+                    class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+                    data-testid="Address__address"
+                  >
+                    <div>
+                      <span
+                        class="flex w-full items-start overflow-y-hidden"
+                        style="height: 0px;"
+                      >
+                        <span
+                          class="invisible absolute left-0 whitespace-nowrap"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                        <span
+                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -397,7 +461,7 @@ exports[`Notifications > should render in xs 5`] = `
               class="w-20 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -414,16 +478,32 @@ exports[`Notifications > should render in xs 5`] = `
                     </span>
                   </span>
                 </span>
-                <span>
-                  <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                    </span>
-                  </span>
-                </span>
+                <div
+                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                >
+                  <div
+                    class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+                    data-testid="Address__address"
+                  >
+                    <div>
+                      <span
+                        class="flex w-full items-start overflow-y-hidden"
+                        style="height: 0px;"
+                      >
+                        <span
+                          class="invisible absolute left-0 whitespace-nowrap"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                        <span
+                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -498,7 +578,7 @@ exports[`Notifications > should render notification item 1`] = `
               class="w-20 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -515,16 +595,32 @@ exports[`Notifications > should render notification item 1`] = `
                     </span>
                   </span>
                 </span>
-                <span>
-                  <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                    </span>
-                  </span>
-                </span>
+                <div
+                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                >
+                  <div
+                    class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+                    data-testid="Address__address"
+                  >
+                    <div>
+                      <span
+                        class="flex w-full items-start overflow-y-hidden"
+                        style="height: 0px;"
+                      >
+                        <span
+                          class="invisible absolute left-0 whitespace-nowrap"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                        <span
+                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useRef, useState } from "react";
+import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@/app/lib/profiles";
 import { useBreakpoint } from "@/app/hooks";
@@ -8,7 +8,7 @@ import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
 import { getStyles } from "@/app/components/Button/Button.styles";
 import { twMerge } from "tailwind-merge";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { MiddleTruncate } from "@/app/components/MiddleTruncate";
 
 interface Properties {
 	transaction: Pick<
@@ -23,15 +23,6 @@ export const TransactionId = ({ transaction, isConfirmed, label }: Properties): 
 	const { t } = useTranslation();
 	const { isSmAndAbove } = useBreakpoint();
 	const { openExternal } = useLink();
-	const reference = useRef(null);
-
-	const [mounted, setMounted] = useState(false);
-
-	useEffect(() => {
-		if (!mounted) {
-			setMounted(true);
-		}
-	}, [mounted]);
 
 	return (
 		<div
@@ -42,8 +33,8 @@ export const TransactionId = ({ transaction, isConfirmed, label }: Properties): 
 				{label ?? t("TRANSACTION.TRANSACTION_ID")}
 			</div>
 
-			<div ref={reference} className="flex-1 overflow-hidden font-semibold sm:mx-4">
-				<TruncateMiddleDynamic value={transaction.hash()} parentRef={reference} />
+			<div className="font-semibold sm:mx-4">
+				<MiddleTruncate text={transaction.hash()} />
 			</div>
 
 			<div className="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4">

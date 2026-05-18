@@ -29,7 +29,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
               >
                 <span
                   class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -329,7 +329,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
               >
                 <span
                   class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -629,7 +629,7 @@ exports[`TokenHeader > should render 1`] = `
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
               >
                 <span
                   class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -929,7 +929,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
               >
                 <span
                   class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -1229,7 +1229,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
               >
                 <span
                   class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -1534,7 +1534,7 @@ exports[`TokenHeader > should show balance information when tokens are available
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
               >
                 <span
                   class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -1834,7 +1834,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
               >
                 <span
                   class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -2134,7 +2134,7 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
               >
                 <span
                   class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"

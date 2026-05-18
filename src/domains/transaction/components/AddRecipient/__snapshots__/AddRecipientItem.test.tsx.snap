@@ -58,7 +58,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
             Recipient #2
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
           >
             <span
               class="font-semibold text-base leading-5 text-theme-text"
@@ -75,16 +75,32 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
                 </span>
               </span>
             </span>
-            <span>
-              <span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                </span>
-              </span>
-            </span>
+            <div
+              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+            >
+              <div
+                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                data-testid="Address__address"
+              >
+                <div>
+                  <span
+                    class="flex w-full items-start overflow-y-hidden"
+                    style="height: 0px;"
+                  >
+                    <span
+                      class="invisible absolute left-0 whitespace-nowrap"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                    <span
+                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -171,7 +187,7 @@ exports[`Add Recipient item > should render with size lg 1`] = `
             Recipient #2
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
           >
             <span
               class="font-semibold text-base leading-5 text-theme-text"
@@ -188,16 +204,32 @@ exports[`Add Recipient item > should render with size lg 1`] = `
                 </span>
               </span>
             </span>
-            <span>
-              <span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                </span>
-              </span>
-            </span>
+            <div
+              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+            >
+              <div
+                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                data-testid="Address__address"
+              >
+                <div>
+                  <span
+                    class="flex w-full items-start overflow-y-hidden"
+                    style="height: 0px;"
+                  >
+                    <span
+                      class="invisible absolute left-0 whitespace-nowrap"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                    <span
+                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -292,7 +324,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
                   Address
                 </div>
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                 >
                   <span
                     class="font-semibold text-base leading-[17px] text-sm"
@@ -309,16 +341,32 @@ exports[`Add Recipient item > should render with size xs 1`] = `
                       </span>
                     </span>
                   </span>
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                      </span>
-                    </span>
-                  </span>
+                  <div
+                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                  >
+                    <div
+                      class="font-semibold leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+                      data-testid="Address__address"
+                    >
+                      <div>
+                        <span
+                          class="flex w-full items-start overflow-y-hidden"
+                          style="height: 0px;"
+                        >
+                          <span
+                            class="invisible absolute left-0 whitespace-nowrap"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                          <span
+                            class="no-ligatures truncate break-all whitespace-break-spaces"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div>
@@ -428,7 +476,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
             Recipient #2
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
           >
             <span
               class="font-semibold text-base leading-5 text-theme-text"
@@ -445,16 +493,32 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
                 </span>
               </span>
             </span>
-            <span>
-              <span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                </span>
-              </span>
-            </span>
+            <div
+              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+            >
+              <div
+                class="font-semibold text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
+                data-testid="Address__address"
+              >
+                <div>
+                  <span
+                    class="flex w-full items-start overflow-y-hidden"
+                    style="height: 0px;"
+                  >
+                    <span
+                      class="invisible absolute left-0 whitespace-nowrap"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                    <span
+                      class="no-ligatures truncate break-all whitespace-break-spaces"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div

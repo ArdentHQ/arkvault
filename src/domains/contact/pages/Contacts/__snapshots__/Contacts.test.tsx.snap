@@ -1203,29 +1203,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             >
                               <div
                                 class="w-0 flex-1"
-                              >
-                                <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                                >
-                                  <div
-                                    class="relative grow leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                          data-testid="Address__address"
-                                        >
-                                          0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
-                                        </span>
-                                      </span>
-                                    </span>
-                                    <span>
-                                       
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              />
                             </div>
                           </td>
                           <td
@@ -1405,29 +1383,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             >
                               <div
                                 class="w-0 flex-1"
-                              >
-                                <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                                >
-                                  <div
-                                    class="relative grow leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                          data-testid="Address__address"
-                                        >
-                                          0xb9169B1F206d78702e047F3b56b9d7e08eD9B065
-                                        </span>
-                                      </span>
-                                    </span>
-                                    <span>
-                                       
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              />
                             </div>
                           </td>
                           <td
@@ -1607,29 +1563,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             >
                               <div
                                 class="w-0 flex-1"
-                              >
-                                <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                                >
-                                  <div
-                                    class="relative grow leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                          data-testid="Address__address"
-                                        >
-                                          0x0000000000000000000000000000000000000000
-                                        </span>
-                                      </span>
-                                    </span>
-                                    <span>
-                                       
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              />
                             </div>
                           </td>
                           <td
@@ -2899,22 +2833,38 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                       data-testid="ContactListItemMobile__addresses"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                       >
-                                        <span>
-                                          <span>
-                                            <span
-                                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                                              data-testid="Address__address"
-                                            >
-                                              0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
-                                            </span>
-                                          </span>
-                                        </span>
+                                        <div
+                                          class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                        >
+                                          <div
+                                            class="font-semibold text-theme-text text-sm"
+                                            data-testid="Address__address"
+                                          >
+                                            <div>
+                                              <span
+                                                class="flex w-full items-start overflow-y-hidden"
+                                                style="height: 0px;"
+                                              >
+                                                <span
+                                                  class="invisible absolute left-0 whitespace-nowrap"
+                                                >
+                                                  0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                                                </span>
+                                                <span
+                                                  class="no-ligatures truncate break-all whitespace-break-spaces"
+                                                >
+                                                  0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                                                </span>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
                                         <span>
                                           <span>
                                             <button
-                                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                              class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                               data-ring-focus-margin="-m-1"
                                               data-testid="clipboard-icon__wrapper"
                                               type="button"
@@ -3067,22 +3017,38 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                       data-testid="ContactListItemMobile__addresses"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                       >
-                                        <span>
-                                          <span>
-                                            <span
-                                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                                              data-testid="Address__address"
-                                            >
-                                              0xb9169B1F206d78702e047F3b56b9d7e08eD9B065
-                                            </span>
-                                          </span>
-                                        </span>
+                                        <div
+                                          class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                        >
+                                          <div
+                                            class="font-semibold text-theme-text text-sm"
+                                            data-testid="Address__address"
+                                          >
+                                            <div>
+                                              <span
+                                                class="flex w-full items-start overflow-y-hidden"
+                                                style="height: 0px;"
+                                              >
+                                                <span
+                                                  class="invisible absolute left-0 whitespace-nowrap"
+                                                >
+                                                  0xb9169B1F206d78702e047F3b56b9d7e08eD9B065
+                                                </span>
+                                                <span
+                                                  class="no-ligatures truncate break-all whitespace-break-spaces"
+                                                >
+                                                  0xb9169B1F206d78702e047F3b56b9d7e08eD9B065
+                                                </span>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
                                         <span>
                                           <span>
                                             <button
-                                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                              class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                               data-ring-focus-margin="-m-1"
                                               data-testid="clipboard-icon__wrapper"
                                               type="button"
@@ -3235,22 +3201,38 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                       data-testid="ContactListItemMobile__addresses"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                       >
-                                        <span>
-                                          <span>
-                                            <span
-                                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                                              data-testid="Address__address"
-                                            >
-                                              0x0000000000000000000000000000000000000000
-                                            </span>
-                                          </span>
-                                        </span>
+                                        <div
+                                          class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                        >
+                                          <div
+                                            class="font-semibold text-theme-text text-sm"
+                                            data-testid="Address__address"
+                                          >
+                                            <div>
+                                              <span
+                                                class="flex w-full items-start overflow-y-hidden"
+                                                style="height: 0px;"
+                                              >
+                                                <span
+                                                  class="invisible absolute left-0 whitespace-nowrap"
+                                                >
+                                                  0x0000000000000000000000000000000000000000
+                                                </span>
+                                                <span
+                                                  class="no-ligatures truncate break-all whitespace-break-spaces"
+                                                >
+                                                  0x0000000000000000000000000000000000000000
+                                                </span>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
                                         <span>
                                           <span>
                                             <button
-                                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                              class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                               data-ring-focus-margin="-m-1"
                                               data-testid="clipboard-icon__wrapper"
                                               type="button"
@@ -4508,29 +4490,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             >
                               <div
                                 class="w-0 flex-1"
-                              >
-                                <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                                >
-                                  <div
-                                    class="relative grow leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                          data-testid="Address__address"
-                                        >
-                                          0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
-                                        </span>
-                                      </span>
-                                    </span>
-                                    <span>
-                                       
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              />
                             </div>
                           </td>
                           <td
@@ -4710,29 +4670,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             >
                               <div
                                 class="w-0 flex-1"
-                              >
-                                <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                                >
-                                  <div
-                                    class="relative grow leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                          data-testid="Address__address"
-                                        >
-                                          0xb9169B1F206d78702e047F3b56b9d7e08eD9B065
-                                        </span>
-                                      </span>
-                                    </span>
-                                    <span>
-                                       
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              />
                             </div>
                           </td>
                           <td
@@ -4912,29 +4850,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             >
                               <div
                                 class="w-0 flex-1"
-                              >
-                                <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                                >
-                                  <div
-                                    class="relative grow leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                          data-testid="Address__address"
-                                        >
-                                          0x0000000000000000000000000000000000000000
-                                        </span>
-                                      </span>
-                                    </span>
-                                    <span>
-                                       
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              />
                             </div>
                           </td>
                           <td
