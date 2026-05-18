@@ -75,7 +75,7 @@ export const signUsernameRegistration = async ({ env, form, profile, signatory }
 		},
 		gasLimit,
 		gasPrice,
-		nonce: senderWallet.getAttributes().get("wallet.data.attributes.legacyNonce"),
+		nonce: senderWallet.isLegacyCold() ? senderWallet.getAttributes().get("wallet.data.attributes.legacyNonce") : undefined,
 		signatory,
 	});
 
