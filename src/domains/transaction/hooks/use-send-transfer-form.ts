@@ -122,7 +122,7 @@ export const useSendTransferForm = ({
 				gasLimit,
 				gasPrice,
 				nonce: wallet.isLegacyCold()
-					? wallet.getAttributes().get<string>("wallet.data.attributes.legacyNonce")
+					? wallet.legacyNonce()
 					: undefined,
 				signatory,
 				token,

@@ -137,7 +137,7 @@ export const SendUsernameResignationSidePanel = ({
 				gasLimit,
 				gasPrice,
 				nonce: activeWallet.isLegacyCold()
-					? activeWallet.getAttributes().get<string>("wallet.data.attributes.legacyNonce")
+					? activeWallet.legacyNonce()
 					: undefined,
 				signatory,
 			});

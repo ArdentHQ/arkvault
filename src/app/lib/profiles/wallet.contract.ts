@@ -212,6 +212,14 @@ export interface IReadWriteWallet {
 	nonce(): BigNumber;
 
 	/**
+	 * Get the legacy nonce.
+	 *
+	 * @return {BigNumber}
+	 * @memberof IReadWriteWallet
+	 */
+	legacyNonce(): BigNumber;
+
+	/**
 	 * Get the avatar.
 	 *
 	 * @return {string}

@@ -214,6 +214,12 @@ export class Wallet implements IReadWriteWallet {
 		return BigNumber.make(value, this.#decimals());
 	}
 
+	/** {@inheritDoc IReadWriteWallet.legacyNonce} */
+	public legacyNonce(): BigNumber {
+		const value = this.#attributes.get<Contracts.WalletData>("wallet").legacyNonce();
+		return BigNumber.make(value, this.#decimals());
+	}
+
 	/** {@inheritDoc IReadWriteWallet.avatar} */
 	public avatar(): string {
 		const value: string | undefined = this.data().get(WalletSetting.Avatar);
