@@ -49,6 +49,10 @@ export class WalletData {
 		return BigNumber.make(this.data.nonce ?? 0);
 	}
 
+	public legacyNonce(): BigNumber {
+		return BigNumber.make(this.#getProperty(["attributes.legacyNonce"]) ?? 0);
+	}
+
 	public secondPublicKey(): string | undefined {
 		return this.#getProperty(["secondPublicKey", "attributes.secondPublicKey"]);
 	}
