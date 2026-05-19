@@ -1,3 +1,3 @@
-export * from "./CreateContact/CreateContact";
-export * from "./DeleteContact/DeleteContact";
-export * from "./UpdateContact/UpdateContact";
+export * from "./CreateContact";
+export * from "./DeleteContact";
+export * from "./UpdateContact";
