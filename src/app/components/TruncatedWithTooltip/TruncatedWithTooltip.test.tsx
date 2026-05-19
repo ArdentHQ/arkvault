@@ -4,6 +4,8 @@ import { render, screen, waitFor, act } from "@testing-library/react";
 import { TruncatedWithTooltip } from "./TruncatedWithTooltip";
 import * as TooltipMock from "@/app/components/Tooltip";
 
+let observerCallback: (entries: ResizeObserverEntry[]) => void = () => {};
+
 describe("TruncatedWithTooltip", () => {
 	beforeAll(() => {
 		vi.spyOn(TooltipMock, "Tooltip").mockImplementation(({ content, disabled, children }) => (
@@ -18,18 +20,19 @@ describe("TruncatedWithTooltip", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("shows tooltip when text is truncated", async () => {
-		let observerCallback;
-		const ResizeObserverSpy = vi.fn().mockImplementation((callback) => {
-			observerCallback = callback;
-			return {
-				disconnect: vi.fn(),
-				observe: vi.fn(),
-				unobserve: vi.fn(),
-			};
-		});
-		global.ResizeObserver = ResizeObserverSpy;
+	beforeEach(() => {
+		class MockResizeObserver {
+			constructor(callback: (entries: ResizeObserverEntry[]) => void) {
+				observerCallback = callback;
+			}
+			observe() {}
+			disconnect() {}
+			unobserve() {}
+		}
+		global.ResizeObserver = MockResizeObserver as unknown as typeof ResizeObserver;
+	});
 
+	it("shows tooltip when text is truncated", async () => {
 		render(
 			<div style={{ width: "50px" }}>
 				<TruncatedWithTooltip text="LongTextForTruncation123" />
@@ -50,17 +53,6 @@ describe("TruncatedWithTooltip", () => {
 	});
 
 	it("does not show tooltip when text is not truncated", async () => {
-		let observerCallback;
-		const ResizeObserverSpy = vi.fn().mockImplementation((callback) => {
-			observerCallback = callback;
-			return {
-				disconnect: vi.fn(),
-				observe: vi.fn(),
-				unobserve: vi.fn(),
-			};
-		});
-		global.ResizeObserver = ResizeObserverSpy;
-
 		render(
 			<div style={{ width: "400px" }}>
 				<TruncatedWithTooltip text="LongTextForTruncation123" />
@@ -81,17 +73,6 @@ describe("TruncatedWithTooltip", () => {
 	});
 
 	it("updates tooltip state on resize", async () => {
-		let observerCallback;
-		const ResizeObserverSpy = vi.fn().mockImplementation((callback) => {
-			observerCallback = callback;
-			return {
-				disconnect: vi.fn(),
-				observe: vi.fn(),
-				unobserve: vi.fn(),
-			};
-		});
-		global.ResizeObserver = ResizeObserverSpy;
-
 		const { rerender } = render(
 			<div style={{ width: "50px" }}>
 				<TruncatedWithTooltip text="LongTextForTruncation123" />

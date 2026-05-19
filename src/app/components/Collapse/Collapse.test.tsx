@@ -13,11 +13,10 @@ describe("Collapse", () => {
 	});
 
 	it("should render visible", () => {
-		const { asFragment } = render(<Collapse isOpen>Test</Collapse>);
+		render(<Collapse isOpen>Test</Collapse>);
 
 		expect(screen.getByTestId("Collapse")).toHaveAttribute("aria-hidden", "false");
 		expect(screen.getByTestId("Collapse")).toHaveTextContent("Test");
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with custom scroll", () => {

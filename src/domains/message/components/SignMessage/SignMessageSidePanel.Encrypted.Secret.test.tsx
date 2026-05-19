@@ -45,51 +45,47 @@ describe("SignMessage with encrypted secret", () => {
 		dashboardRoute = `/profiles/${profile.id()}/dashboard`;
 	});
 
-	it(
-		"should sign message with encrypted secret",
-		async () => {
-			const secret = "secret";
+	it("should sign message with encrypted secret", { timeout: 8000 }, async () => {
+		const secret = "secret";
 
-			const encryptedWallet = await profile.walletFactory().fromSecret({
-				secret,
-			});
+		const encryptedWallet = await profile.walletFactory().fromSecret({
+			secret,
+		});
 
-			vi.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(secret);
+		vi.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(secret);
 
-			await encryptedWallet.signingKey().set(secret, "password");
+		await encryptedWallet.signingKey().set(secret, "password");
 
-			encryptedWallet
-				.data()
-				.set(Contracts.WalletData.ImportMethod, Contracts.WalletImportMethod.SECRET_WITH_ENCRYPTION);
+		encryptedWallet
+			.data()
+			.set(Contracts.WalletData.ImportMethod, Contracts.WalletImportMethod.SECRET_WITH_ENCRYPTION);
 
-			profile.wallets().push(encryptedWallet);
+		profile.wallets().push(encryptedWallet);
 
-			await env.profiles().restore(profile);
+		await env.profiles().restore(profile);
 
-			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
-				route: dashboardRoute,
-			});
+		render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
+			route: dashboardRoute,
+		});
 
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			// The profile only have one address so we dont need to select any address
+		// The profile only have one address so we dont need to select any address
 
-			await userEvent.type(messageInput(), signMessage);
+		await userEvent.type(messageInput(), signMessage);
 
-			await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
-			await waitFor(
-				() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
-				{ timeout: 4000 },
-			);
+		await waitFor(
+			() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+			{ timeout: 4000 },
+		);
 
-			await waitFor(() => expect(continueButton()).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-			await userEvent.click(continueButton());
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
+		await userEvent.click(continueButton());
+		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
-			profile.wallets().forget(encryptedWallet.id());
-		},
-		{ timeout: 8000 },
-	);
+		profile.wallets().forget(encryptedWallet.id());
+	});
 });
