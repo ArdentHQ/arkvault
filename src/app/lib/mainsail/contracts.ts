@@ -28,6 +28,8 @@ export interface WalletData {
 
 	nonce(): BigNumber;
 
+	legacyNonce(): BigNumber;
+
 	// Second Signature
 	secondPublicKey(): string | undefined;
 
