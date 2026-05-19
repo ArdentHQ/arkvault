@@ -45,7 +45,7 @@ const TransferType = ({ isSingle, onChange, maxRecipients, disableMultiple }: To
 			/>
 
 			<Tooltip content={t("TRANSACTION.RECIPIENTS_HELPTEXT", { count: maxRecipients })}>
-				<div className="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white">
+				<div className="questionmark flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dim:bg-theme-dim-700 dim:text-theme-dim-50 dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
 					<Icon name="QuestionMarkSmall" size="sm" />
 				</div>
 			</Tooltip>
@@ -303,7 +303,7 @@ export const AddRecipient = ({
 								value={convert(amount || 0)}
 								ticker={exchangeTicker}
 								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+								className="whitespace-no-break text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
 							/>
 						),
 					},
@@ -312,8 +312,8 @@ export const AddRecipient = ({
 
 	return (
 		<AddRecipientWrapper>
-			<div className="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between">
-				<div className="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5">
+			<div className="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200">
+				<div className="text-sm font-semibold leading-[17px] transition-colors duration-100 sm:text-base sm:leading-5">
 					{t("TRANSACTION.RECIPIENT")}
 				</div>
 
@@ -396,7 +396,7 @@ export const AddRecipient = ({
 									<span className="hidden text-base leading-5 sm:block">
 										{t("COMMON.ASSET_AMOUNT")}
 									</span>
-									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden">
+									<span className="text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:hidden">
 										(
 										<Amount
 											value={remainingBalance}
@@ -411,7 +411,7 @@ export const AddRecipient = ({
 									{isSenderFilled && (
 										<div
 											data-testid="AddRecipient__available"
-											className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
+											className="hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:flex"
 										>
 											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
 											<Amount
@@ -424,7 +424,7 @@ export const AddRecipient = ({
 									)}
 									{isSenderFilled && !!remainingBalance && isSingle && (
 										<div
-											className="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 hidden h-3 w-px sm:flex"
+											className="hidden h-3 w-px bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700 sm:flex"
 											data-testid="AddRecipient__divider"
 										/>
 									)}
@@ -434,7 +434,7 @@ export const AddRecipient = ({
 												type="button"
 												variant="transparent"
 												disabled={!isSenderFilled}
-												className="text-theme-navy-600 dim:text-theme-dim-navy-600 hover:text-theme-navy-700 dark:hover:text-theme-dark-navy-500 dim:hover:text-theme-dim-navy-700 p-0 text-sm underline-offset-4 hover:underline"
+												className="p-0 text-sm text-theme-navy-600 underline-offset-4 hover:text-theme-navy-700 hover:underline dim:text-theme-dim-navy-600 dim:hover:text-theme-dim-navy-700 dark:hover:text-theme-dark-navy-500"
 												onClick={() => {
 													setValue("isSendAllSelected", !getValues("isSendAllSelected"));
 												}}

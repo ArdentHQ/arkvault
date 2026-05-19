@@ -40,11 +40,11 @@ export const MethodStep = ({
 			<div
 				className={cn(
 					"my-2 flex items-center",
-					"before:border-theme-secondary-300 dark:before:border-theme-dark-700 dim:before:border-theme-dim-700 before:flex-1 before:border-t before:border-dashed",
-					"after:border-theme-secondary-300 dark:after:border-theme-dark-700 dim:after:border-theme-dim-700 after:flex-1 after:border-t after:border-dashed",
+					"before:flex-1 before:border-t before:border-dashed before:border-theme-secondary-300 dim:before:border-theme-dim-700 dark:before:border-theme-dark-700",
+					"after:flex-1 after:border-t after:border-dashed after:border-theme-secondary-300 dim:after:border-theme-dim-700 dark:after:border-theme-dark-700",
 				)}
 			>
-				<span className="text-theme-secondary-500 px-3 text-sm leading-[17px] font-semibold">Advanced</span>
+				<span className="px-3 text-sm font-semibold leading-[17px] text-theme-secondary-500">Advanced</span>
 			</div>
 
 			<div className="space-y-2">
@@ -58,7 +58,7 @@ export const MethodStep = ({
 						value: OptionsValue.BIP44,
 					}}
 				/>
-				<div className="bg-theme-secondary-200 dim:bg-theme-dim-950 dark:bg-theme-dark-950 dark:text-theme-dark-200 text-theme-secondary-700 flex items-center space-x-4 rounded-lg px-4 py-3">
+				<div className="flex items-center space-x-4 rounded-lg bg-theme-secondary-200 px-4 py-3 text-theme-secondary-700 dim:bg-theme-dim-950 dark:bg-theme-dark-950 dark:text-theme-dark-200">
 					<ThemeIcon
 						dimensions={[40, 40]}
 						lightIcon="WalletMultipleLight"
@@ -75,7 +75,7 @@ export const MethodStep = ({
 									<Button
 										type="button"
 										variant="transparent"
-										className="text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
+										className="p-0 text-sm text-theme-navy-600 dim:text-theme-dim-navy-600"
 										onClick={onImportAddress}
 									>
 										{t("COMMON.IMPORT")}
@@ -94,20 +94,20 @@ const Option = ({ option, onClick }: { option: ImportOption; onClick?: () => voi
 	<button
 		type="button"
 		onClick={onClick}
-		className="group border-theme-primary-200 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 focus:ring-theme-primary-400 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex w-full cursor-pointer flex-col items-start space-y-2 rounded-lg border p-4 focus:ring-2 focus:outline-hidden focus:ring-inset sm:p-6"
+		className="focus:outline-hidden group flex w-full cursor-pointer flex-col items-start space-y-2 rounded-lg border border-theme-primary-200 p-4 hover:bg-theme-primary-200 focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 sm:p-6"
 	>
 		<div className="m-0 flex items-center space-x-3 sm:mb-2">
 			{option.icon && (
-				<div className="text-theme-primary-600 dark:text-theme-dark-200 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-white">
+				<div className="text-theme-primary-600 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-white dark:text-theme-dark-200">
 					{option.icon}
 				</div>
 			)}
-			<div className="text-theme-primary-600 dark:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-50 dim:group-hover:text-white text-sm leading-5 font-semibold sm:text-base dark:group-hover:text-white">
+			<div className="text-sm font-semibold leading-5 text-theme-primary-600 group-hover:text-theme-primary-700 dim:text-theme-dim-50 dim:group-hover:text-white dark:text-theme-dark-50 dark:group-hover:text-white sm:text-base">
 				{option.label}
 			</div>
 		</div>
 		{option.description && (
-			<div className="text-theme-secondary-700 dark:text-theme-dark-200 group-hover:text-theme-primary-500 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block dark:group-hover:text-white">
+			<div className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-primary-500 dim:text-theme-dim-200 dark:text-theme-dark-200 dark:group-hover:text-white sm:block">
 				{option.description}
 			</div>
 		)}

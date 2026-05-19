@@ -39,14 +39,14 @@ export const AddRecipientItem: React.FC<{
 				dataTestId="AddRecipientItem--mobile"
 				titleSlot={
 					<div className="flex w-full items-center justify-between">
-						<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold whitespace-nowrap">
+						<div className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-500">
 							{t("COMMON.RECIPIENT_#", { count: index + 1 })}
 						</div>
 						<Button
 							onClick={() => onDelete(index)}
 							data-testid="AddRecipientItem--deleteButton_mobile"
 							size="icon"
-							className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-50 p-0"
+							className="p-0 text-theme-secondary-700 dim:text-theme-dim-50 dark:text-theme-secondary-500"
 							variant="transparent"
 						>
 							<Icon name="Trash" size="md" />
@@ -73,7 +73,7 @@ export const AddRecipientItem: React.FC<{
 									<Amount
 										ticker={ticker}
 										value={amount!}
-										className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+										className="text-sm font-semibold leading-[17px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
 									/>
 								}
 							/>
@@ -83,7 +83,7 @@ export const AddRecipientItem: React.FC<{
 				rightSlot={
 					<div className="flex items-center gap-3">
 						<div className="flex flex-col items-end space-y-2">
-							<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 leading-[17px] font-semibold whitespace-nowrap">
+							<div className="whitespace-nowrap font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-500">
 								{!showExchangeAmount && (
 									<span className="text-sm leading-[17px]">{t("COMMON.AMOUNT")}</span>
 								)}
@@ -91,7 +91,7 @@ export const AddRecipientItem: React.FC<{
 							<Amount
 								ticker={ticker}
 								value={amount!}
-								className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 leading-5 font-semibold"
+								className="font-semibold leading-5 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
 							/>
 						</div>
 					</div>
@@ -141,22 +141,22 @@ const RecipientRow = ({
 	return (
 		<div
 			data-testid="AddRecipientItem"
-			className="group border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700 cursor-pointer items-center rounded-lg border transition-all"
+			className="group cursor-pointer items-center rounded-lg border border-theme-primary-200 transition-all hover:bg-theme-navy-100 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700"
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
 				<Button
 					onClick={() => onDelete(index)}
 					data-testid={`AddRecipientItem--deleteButton-${index}`}
 					size="icon"
-					className="text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+					className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-500 dark:hover:text-white"
 					variant="transparent"
 				>
 					<Icon name="Trash" dimensions={[16, 16]} />
 				</Button>
 
-				<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold">
+				<div className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700 dim:border-theme-dim-700 dim:text-theme-dim-200 dark:border-theme-dark-700 dark:text-theme-dark-200">
 					<div className="flex w-1/2 min-w-0 flex-col space-y-2 truncate">
-						<div className="group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 text-sm leading-[17px]">
+						<div className="text-sm leading-[17px] group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200">
 							{t("COMMON.RECIPIENT_#", { count: index + 1 })}
 						</div>
 						<Address
@@ -184,7 +184,7 @@ const RecipientRow = ({
 						<Amount
 							ticker={ticker}
 							value={amount}
-							className="group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 leading-5"
+							className="leading-5 group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200"
 						/>
 					</div>
 				</div>

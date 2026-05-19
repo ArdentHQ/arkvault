@@ -180,6 +180,16 @@ describe("Wallet", () => {
 		expect(wallet.nonce()).toEqual(BigNumber.ZERO);
 	});
 
+	it("should have a legacy nonce", () => {
+		const result = wallet.legacyNonce();
+		expect(result).toBeInstanceOf(BigNumber);
+	});
+
+	it("should return zero `legacyNonce` when undefined", () => {
+		vi.spyOn(wallet.data(), "get").mockReturnValue(undefined);
+		expect(wallet.legacyNonce()).toEqual(BigNumber.ZERO);
+	});
+
 	it("should have an avatar", () => {
 		const result = wallet.avatar();
 		expect(result).toBeDefined();
@@ -442,6 +452,12 @@ describe("Wallet", () => {
 	it("should check if is cold", () => {
 		const spy = vi.spyOn(wallet.data(), "get").mockReturnValue(WalletFlag.Cold);
 		expect(wallet.isCold()).toBe(true);
+		spy.mockRestore();
+	});
+
+	it("should check if is legacy cold wallet", () => {
+		const spy = vi.spyOn(wallet.data(), "get").mockReturnValue(true);
+		expect(wallet.isLegacyCold()).toBe(true);
 		spy.mockRestore();
 	});
 

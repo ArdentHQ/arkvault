@@ -31,7 +31,7 @@ export const AccountNameEditRow = ({
 	if (accountName === "undefined") {
 		return (
 			<div
-				className="text-theme-secondary-500 mt-4 mb-2 px-3 font-semibold"
+				className="mb-2 mt-4 px-3 font-semibold text-theme-secondary-500"
 				data-testid="AccountNameEditRow__empty"
 			>
 				<div>{t("COMMON.REGULAR_ADDRESS")}</div>
@@ -42,18 +42,18 @@ export const AccountNameEditRow = ({
 	return (
 		<div
 			className={classNames("my-1 rounded-lg border", {
-				"border-theme-danger-400 dark:border-theme-danger-400 dim:border-theme-danger-400": isDeleting,
-				"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700": !isDeleting,
+				"border-theme-danger-400 dim:border-theme-danger-400 dark:border-theme-danger-400": isDeleting,
+				"border-theme-primary-200 dim:border-theme-dim-700 dark:border-theme-dark-700": !isDeleting,
 			})}
 			data-testid="AccountNameEditRow__wrapper"
 		>
 			<div className="px-4 py-3">
 				<div className="flex items-center justify-between">
-					<div className="no-ligatures text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-200 dim:text-theme-dim-100 dark:border-theme-dark-700 dim:border-theme-dim-700 inline-block truncate overflow-hidden rounded border bg-transparent px-1 py-0.5 text-xs leading-[15px] font-semibold uppercase">
+					<div className="no-ligatures inline-block overflow-hidden truncate rounded border border-theme-secondary-300 bg-transparent px-1 py-0.5 text-xs font-semibold uppercase leading-[15px] text-theme-secondary-700 dim:border-theme-dim-700 dim:text-theme-dim-100 dark:border-theme-dark-700 dark:text-theme-secondary-200">
 						{accountName}
 					</div>
 					<div className="flex items-center">
-						<div className="text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white">
+						<div className="h-6 w-6 rounded bg-transparent text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-navy-500 dim-hover:text-white dark:bg-transparent dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white">
 							<Button
 								variant="transparent"
 								size="md"
@@ -70,9 +70,9 @@ export const AccountNameEditRow = ({
 						<Divider type="vertical" />
 						<div
 							className={classNames(
-								"text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:bg-transparent h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear dark:bg-transparent",
+								"h-6 w-6 rounded bg-transparent text-theme-secondary-700 transition-all duration-100 ease-linear dim:bg-transparent dim:text-theme-dim-200 dark:bg-transparent dark:text-theme-secondary-200",
 								{
-									"dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hover:text-white dark:bg-transparent dark:hover:text-white":
+									"hover:bg-theme-primary-800 hover:text-white dim-hover:bg-theme-dim-navy-500 dim-hover:text-white dark:bg-transparent dark:hover:bg-theme-primary-500 dark:hover:text-white":
 										!isDeleting,
 								},
 							)}
@@ -93,7 +93,7 @@ export const AccountNameEditRow = ({
 										data-testid="icon-MarkedTrash"
 										name="MarkedTrash"
 										dimensions={[16, 16]}
-										className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-200 p-1"
+										className="p-1 text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-dark-500"
 									/>
 								)}
 							</Button>

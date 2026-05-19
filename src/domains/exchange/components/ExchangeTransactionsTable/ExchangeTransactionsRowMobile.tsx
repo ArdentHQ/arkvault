@@ -96,7 +96,7 @@ const getIcon = (status: Contracts.ExchangeTransactionStatus) => {
 const ExchangeTransactionsRowStatusIcon = ({ status }: ExchangeTransactionsRowStatusProperties) => {
 	const { name, color } = getIcon(status);
 	return (
-		<span className="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2">
+		<span className="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200">
 			<Icon name={name} size="lg" className={color} />
 		</span>
 	);
@@ -127,7 +127,7 @@ export const ExchangeTransactionsRowMobile = ({
 			<td>
 				<MobileCard className="mb-3">
 					<div
-						className="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
+						className="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
 						data-testid="TableRow__mobile"
 					>
 						<div className="text-sm font-semibold">
@@ -145,7 +145,7 @@ export const ExchangeTransactionsRowMobile = ({
 						</div>
 
 						<div className="flex flex-row items-center">
-							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block">
+							<span className="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block">
 								<TimeAgo
 									date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()}
 								/>
@@ -156,14 +156,14 @@ export const ExchangeTransactionsRowMobile = ({
 							<ExchangeTransactionsRowStatusIcon status={exchangeTransaction.status()} />
 							<Divider type="vertical" />
 							<TableRemoveButton
-								className="cursor-pointer p-0!"
+								className="p-0! cursor-pointer"
 								onClick={handleRemove}
 								data-testid="TableRow__mobile-remove-button"
 							/>
 						</div>
 					</div>
 
-					<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3">
+					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-3">
 						<MobileSection title={t("COMMON.AGE")} className="sm:hidden">
 							<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 						</MobileSection>

@@ -46,7 +46,7 @@ export const WalletOverviewStep = ({
 			<Alert>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
 
 			{mnemonic && (
-				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-4 space-y-4 rounded-lg border p-4 pb-0 sm:space-y-6 sm:p-6 sm:pb-0">
+				<div className="mt-4 space-y-4 rounded-lg border border-theme-secondary-300 p-4 pb-0 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:space-y-6 sm:p-6 sm:pb-0">
 					{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
 
 					<CopyOrDownload

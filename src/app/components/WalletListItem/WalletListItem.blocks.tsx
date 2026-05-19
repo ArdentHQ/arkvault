@@ -29,7 +29,7 @@ export const Balance = ({ wallet, isSynced, isLargeScreen = true, className }: B
 					value={wallet.balance()}
 					ticker={wallet.network().ticker()}
 					className={cn(
-						"dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50",
+						"dark:text-theme-white text-theme-secondary-700 dim:text-theme-dim-50 dark:md:text-theme-secondary-500",
 						className,
 					)}
 				/>
@@ -59,15 +59,15 @@ export const RecipientItemMobile = ({
 		<MultiEntryItem
 			dataTestId="RecipientItemMobile"
 			className={cn({
-				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700": selected,
+				"border-theme-success-200 dim:border-theme-success-700 dark:border-theme-success-700": selected,
 			})}
 			titleWrapperClassName={cn({ "bg-theme-success-100": selected })}
 			titleSlot={
 				<div className="flex w-full items-center justify-between">
 					<div
-						className={cn("max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap", {
-							"text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200": !selected,
-							"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
+						className={cn("max-w-56 truncate whitespace-nowrap text-sm font-semibold leading-[17px]", {
+							"text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-200": !selected,
+							"text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50": selected,
 						})}
 					>
 						{name}
@@ -78,8 +78,8 @@ export const RecipientItemMobile = ({
 						data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
 						size="icon"
 						className={cn("p-0 text-sm leading-[17px]", {
-							"text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600": !selected,
-							"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600": selected,
+							"dark:text-theme-green-600 dim:text-theme-green-600 text-theme-success-600": selected,
+							"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400": !selected,
 						})}
 						variant="transparent"
 					>
@@ -135,22 +135,22 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 			tabIndex={0}
 			data-testid="RecipientItem"
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
-				"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
+				"border-theme-primary-200 hover:bg-theme-navy-100 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700":
 					!selected,
-				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950":
+				"border-theme-success-200 bg-theme-success-100 dim:border-theme-success-700 dim:bg-theme-dim-950 dark:border-theme-success-700 dark:bg-theme-dark-950":
 					selected,
-				"hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700":
+				"hover:border-theme-navy-200 hover:bg-theme-secondary-200 dim:hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dark:hover:border-theme-dark-700 dark:hover:bg-theme-dark-700":
 					selected,
 			})}
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
 				<div
 					className={cn(
-						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold",
+						"flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200",
 						{
-							"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500":
+							"border-theme-primary-200 dim:border-theme-dim-700 group-hover:dim:border-theme-dim-500 dark:border-theme-dark-700 group-hover:dark:border-theme-dark-500":
 								!selected,
-							"border-theme-success-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-600 group-hover:dim:border-theme-dim-600":
+							"border-theme-success-200 dim:border-theme-dim-700 group-hover:dim:border-theme-dim-600 dark:border-theme-dark-700 group-hover:dark:border-theme-dark-600":
 								selected,
 						},
 					)}
@@ -158,9 +158,9 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 					<div className="flex min-w-0 flex-col space-y-1 truncate">
 						<div
 							className={cn("text-sm leading-5", {
-								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-50 dim:group-hover:text-theme-dim-50":
+								"group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-50":
 									!selected,
-								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
+								"text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50": selected,
 							})}
 						>
 							{name}
@@ -177,7 +177,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 
 							<Divider
 								type="vertical"
-								className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
+								className="border-theme-secondary-300 dim:border-theme-dim-700 group-hover:dim:border-theme-dim-500 dark:border-theme-secondary-800 group-hover:dark:border-theme-dark-500"
 							/>
 
 							<Label
@@ -185,7 +185,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 								size="xs"
 								noBorder
 								className={cn(
-									"dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border",
+									"flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dim:group-hover:border-theme-dim-500 dark:border dark:group-hover:border-theme-dark-500",
 									{
 										"bg-theme-secondary-100": selected,
 									},
@@ -207,12 +207,12 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 						}
 						size="icon"
 						className={cn("p-0 text-sm leading-[17px]", {
-							"group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700":
-								!selected,
-							"group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500":
+							"dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 group-hover:text-theme-success-700":
 								selected,
-							"text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600": !selected,
-							"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600": selected,
+							"dark:text-theme-green-600 dim:text-theme-green-600 text-theme-success-600": selected,
+							"group-hover:text-theme-navy-700 dim:group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500":
+								!selected,
+							"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400": !selected,
 						})}
 						variant="transparent"
 					>
@@ -245,15 +245,15 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 		<MultiEntryItem
 			dataTestId="ReceiverItemMobile"
 			className={cn({
-				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700": selected,
+				"border-theme-success-200 dim:border-theme-success-700 dark:border-theme-success-700": selected,
 			})}
 			titleWrapperClassName={cn({ "bg-theme-success-100": selected })}
 			titleSlot={
 				<div className="flex w-full items-center justify-between">
 					<div
-						className={cn("max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap", {
-							"text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200": !selected,
-							"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
+						className={cn("max-w-56 truncate whitespace-nowrap text-sm font-semibold leading-[17px]", {
+							"text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-200": !selected,
+							"text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50": selected,
 						})}
 					>
 						{name}
@@ -266,9 +266,9 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 								data-testid="ReceiverItemMobile--Select"
 								size="icon"
 								className={cn("p-0 text-sm leading-[17px]", {
-									"text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600": !selected,
-									"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600":
+									"dark:text-theme-green-600 dim:text-theme-green-600 text-theme-success-600":
 										selected,
+									"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400": !selected,
 								})}
 								variant="transparent"
 							>
@@ -300,7 +300,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 								<Amount
 									ticker={wallet.currency()}
 									value={wallet.balance()}
-									className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+									className="text-sm font-semibold leading-[17px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50"
 								/>
 							}
 						/>
@@ -334,26 +334,26 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 				tabIndex={0}
 				data-testid="ReceiverItem"
 				className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
-					"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700":
+					"border-theme-primary-200 dim:border-theme-dim-700 dark:border-theme-dark-700":
 						!selected && disabled,
-					"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
+					"border-theme-primary-200 hover:bg-theme-navy-100 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700":
 						!selected && !disabled,
-					"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950":
+					"border-theme-success-200 bg-theme-success-100 dim:border-theme-success-700 dim:bg-theme-dim-950 dark:border-theme-success-700 dark:bg-theme-dark-950":
 						selected,
-					"hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700":
+					"hover:border-theme-navy-200 hover:bg-theme-secondary-200 dim:hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dark:hover:border-theme-dark-700 dark:hover:bg-theme-dark-700":
 						selected,
 				})}
 			>
 				<div className="flex items-center px-4 py-3 duration-150">
 					<div
 						className={cn(
-							"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold",
+							"flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200",
 							{
-								"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500":
+								"border-theme-primary-200 dim:border-theme-dim-700 group-hover:dim:border-theme-dim-500 dark:border-theme-dark-700 group-hover:dark:border-theme-dark-500":
 									!selected && !disabled,
-								"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700":
+								"border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700":
 									disabled,
-								"border-theme-success-200 dark:border-theme-dark-600 dim:border-theme-dim-600":
+								"border-theme-success-200 dim:border-theme-dim-600 dark:border-theme-dark-600":
 									selected,
 							},
 						)}
@@ -361,11 +361,11 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 						<div className="flex w-1/2 min-w-0 flex-col space-y-2 truncate">
 							<div
 								className={cn("text-sm leading-5", {
-									"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-50 dim:group-hover:text-theme-dim-50":
+									"group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-50":
 										!selected && !disabled,
-									"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+									"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500":
 										disabled,
-									"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
+									"text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50": selected,
 								})}
 							>
 								{name}
@@ -386,10 +386,10 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 								ticker={wallet.currency()}
 								value={wallet.balance()}
 								className={cn("leading-5", {
-									"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-50 dim:group-hover:text-theme-dim-50":
+									"group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-50":
 										!selected && !disabled,
-									"text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
-									"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+									"text-theme-primary-900 dim:text-theme-dim-50 dark:text-theme-dark-50": selected,
+									"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500":
 										disabled,
 								})}
 							/>
@@ -400,7 +400,7 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 										ticker={exchangeCurrency}
 										value={wallet.convertedBalance()}
 										className={cn("text-sm leading-[17px]", {
-											"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+											"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500":
 												disabled,
 										})}
 									/>
@@ -420,14 +420,14 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 							}
 							size="icon"
 							className={cn("p-0 text-sm leading-[17px]", {
-								"group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700":
-									!selected && !disabled,
-								"group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500":
+								"dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 group-hover:text-theme-success-700":
 									selected,
-								"text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600":
+								"dark:text-theme-green-600 dim:text-theme-green-600 text-theme-success-600": selected,
+								"group-hover:text-theme-navy-700 dim:group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500":
 									!selected && !disabled,
-								"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500": disabled,
-								"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600": selected,
+								"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400":
+									!selected && !disabled,
+								"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500": disabled,
 							})}
 							variant="transparent"
 						>

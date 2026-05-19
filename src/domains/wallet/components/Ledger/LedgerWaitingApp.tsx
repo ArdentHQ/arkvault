@@ -49,7 +49,7 @@ export const LedgerWaitingAppContent = ({
 					<div className="inline-flex w-full items-center justify-center space-x-3">
 						<Spinner />
 						<span
-							className="text-theme-secondary-text animate-pulse font-semibold"
+							className="animate-pulse font-semibold text-theme-secondary-text"
 							data-testid="LedgerWaitingApp-loading_message"
 						>
 							{t("WALLETS.MODAL_LEDGER_WALLET.OPEN_APP", { coin: coinName })}

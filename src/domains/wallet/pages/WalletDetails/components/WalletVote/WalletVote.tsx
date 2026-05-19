@@ -42,7 +42,7 @@ export const WalletVote = ({
 		if (wallets.length > 1) {
 			return (
 				<div className="w-full">
-					<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left">
+					<p className="px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left">
 						{t("WALLETS.PAGE_WALLET_DETAILS.MANAGE_VOTES_FOR_YOUR_ADDRESSES")}
 					</p>
 				</div>
@@ -56,7 +56,7 @@ export const WalletVote = ({
 					{hasTokens && (
 						<Divider
 							type="vertical"
-							className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 ml-3 h-5"
+							className="ml-3 h-5 border-theme-primary-300 dim:border-theme-dim-700 dark:border-theme-dark-700"
 						/>
 					)}
 				</>
@@ -85,23 +85,23 @@ export const WalletVote = ({
 		>
 			{hasTokens && (
 				<div className="hidden items-center md:flex">
-					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-1.5 leading-5 font-semibold">
+					<div className="mr-1.5 font-semibold leading-5 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 						{t("COMMON.TOKEN_HOLDINGS")}
 					</div>
 					<TokensSummary wallet={wallet} />
 
 					<Divider
 						type="vertical"
-						className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 ml-3 h-5"
+						className="ml-3 h-5 border-theme-primary-300 dim:border-theme-dim-700 dark:border-theme-dark-700"
 					/>
 
 					<Button
 						data-testid="ViewTokens"
 						variant="secondary-icon"
-						className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+						className="mt-4 hidden w-full whitespace-nowrap text-theme-primary-600 disabled:bg-transparent dim:text-theme-dim-navy-600 dim:disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
 						onClick={onViewTokens}
 					>
-						<span className="md-lg:inline hidden">{t("COMMON.VIEW_TOKENS")}</span>
+						<span className="hidden md-lg:inline">{t("COMMON.VIEW_TOKENS")}</span>
 						<span className="md-lg:hidden">{t("COMMON.VIEW")}</span>
 					</Button>
 				</div>
@@ -114,23 +114,23 @@ export const WalletVote = ({
 			>
 				{renderVotes()}
 			</div>
-			<div className="w-full md:w-auto md:max-md:self-end">
+			<div className="md:max-md:self-end w-full md:w-auto">
 				{wallets.length > 1 && (
 					<>
 						<Button
 							data-testid="WalletMyVotes__button"
 							variant="secondary-icon"
-							className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full space-x-2 whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+							className="mt-4 hidden w-full space-x-2 whitespace-nowrap text-theme-primary-600 disabled:bg-transparent dim:text-theme-dim-navy-600 dim:disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
 							onClick={() => onButtonClick()}
 						>
-							<Icon className={cn({ "md-lg:block hidden": hasTokens })} name="Vote" />
+							<Icon className={cn({ "hidden md-lg:block": hasTokens })} name="Vote" />
 							<span>{t("COMMON.MY_VOTES")}</span>
 						</Button>
 
 						<Button
 							data-testid="WalletMyVotes__button_mobile"
 							variant="secondary"
-							className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+							className="w-full text-theme-primary-600 disabled:bg-transparent dim:text-theme-dim-navy-600 dark:text-white dark:disabled:bg-transparent md:hidden"
 							onClick={() => onButtonClick()}
 						>
 							<Icon name="Vote" />
@@ -156,10 +156,10 @@ export const WalletVote = ({
 										!isLedgerWalletCompatible(wallet)
 									}
 									variant="secondary-icon"
-									className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+									className="mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
 									onClick={() => onButtonClick()}
 								>
-									<Icon className={cn({ "md-lg:block hidden": hasTokens })} name="Vote" />
+									<Icon className={cn({ "hidden md-lg:block": hasTokens })} name="Vote" />
 									<span>{t("COMMON.VOTE")}</span>
 								</Button>
 
@@ -176,7 +176,7 @@ export const WalletVote = ({
 										!isLedgerWalletCompatible(wallet)
 									}
 									variant="secondary"
-									className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+									className="w-full text-theme-primary-600 disabled:bg-transparent dim:text-theme-dim-navy-600 dark:text-white dark:disabled:bg-transparent md:hidden"
 									onClick={() => onButtonClick()}
 								>
 									<Icon name="Vote" />

@@ -14,7 +14,7 @@ const SearchBarInputWrapper = (
 	<div
 		{...props}
 		className={cn(
-			"dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border",
+			"dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px]",
 			props.className,
 		)}
 	/>
@@ -54,11 +54,11 @@ export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
 			<SearchBarInputWrapper
 				data-testid="HeaderSearchInput__input"
 				ref={reference}
-				className="border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 dim:border-theme-dim-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
+				className="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dim:border-theme-dim-700 dark:border-theme-secondary-700"
 			>
 				<button
 					data-testid="HeaderSearchInput__input__reset"
-					className={cn("transition-all duration-300 focus:outline-hidden", { "mr-4": query !== "" })}
+					className={cn("focus:outline-hidden transition-all duration-300", { "mr-4": query !== "" })}
 					onClick={handleQueryReset}
 					type="button"
 				>
@@ -89,7 +89,7 @@ export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
 				</div>
 
 				<Icon
-					className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500"
+					className="text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-600"
 					name="MagnifyingGlassAlt"
 					size="lg"
 				/>

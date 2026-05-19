@@ -31,9 +31,9 @@ const FilterOption = ({
 	<span
 		data-testid="FilterOption"
 		className={classNames("group -my-1 flex w-screen items-center space-x-2 transition-all", {
-			"border-theme-secondary-300 dark:border-theme-secondary-600 dim:border-theme-dim-600 border-b": hasDivider,
-			"hover:text-theme-navy-600 font-semibold": isChecked,
-			"hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 font-normal": !isChecked,
+			"border-b border-theme-secondary-300 dim:border-theme-dim-600 dark:border-theme-secondary-600": hasDivider,
+			"font-normal hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200": !isChecked,
+			"font-semibold hover:text-theme-navy-600": isChecked,
 		})}
 		onClick={() => onChange?.(!isChecked)}
 	>
@@ -91,7 +91,7 @@ export const FilterTransactions = memo(
 									onChange={() => onToggleAll(!isAllSelected)}
 								/>
 
-								<hr className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 -mx-7 mt-3.5 -mb-3.5 border-t border-b-0" />
+								<hr className="-mx-7 -mb-3.5 mt-3.5 border-b-0 border-t border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700" />
 							</div>
 						),
 						label: "",
@@ -170,7 +170,7 @@ export const FilterTransactions = memo(
 							size="sm"
 							icon="Funnel"
 							iconSize="md"
-							className="dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
+							className="w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
 							disabled={isDisabled}
 							data-testid="CollapseToggleButton"
 						>

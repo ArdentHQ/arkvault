@@ -40,7 +40,7 @@ export const Transactions = ({
 							<Divider type="vertical" />
 							<Icon
 								name="ChevronDownSmall"
-								className={cn("text-theme-secondary-500 ml-1 transition-transform", {
+								className={cn("ml-1 text-theme-secondary-500 transition-transform", {
 									"rotate-180 transform": isOpen,
 								})}
 								size="sm"
@@ -88,20 +88,20 @@ export const Transactions = ({
 	return (
 		<div
 			className={cn(
-				"outline-theme-secondary-300 dark:border-theme-secondary-800 dark:outline-theme-secondary-800 dim:border-theme-dim-700 dim:outline-theme-dim-700 rounded-xl outline outline-1",
+				"rounded-xl outline outline-1 outline-theme-secondary-300 dim:border-theme-dim-700 dim:outline-theme-dim-700 dark:border-theme-secondary-800 dark:outline-theme-secondary-800",
 			)}
 		>
 			<div
 				data-testid="TransactionTableToggle"
 				className={cn(
-					"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 flex w-full cursor-pointer items-center justify-between gap-3 px-6 py-4 pt-3 pb-4",
+					"flex w-full cursor-pointer items-center justify-between gap-3 border-b-theme-secondary-300 px-6 py-4 pb-4 pt-3 dim:border-b-theme-dim-700 dark:border-b-theme-secondary-800",
 					{
 						"border-b": isOpen,
 					},
 				)}
 				onClick={() => setIsOpen(!isOpen)}
 			>
-				<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-base leading-5 font-semibold">
+				<div className="text-base font-semibold leading-5 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500">
 					{t("COMMON.ADDRESSES")}
 				</div>
 				<div className="flex items-center">
@@ -112,7 +112,7 @@ export const Transactions = ({
 					<Divider type="vertical" />
 					<Icon
 						name="ChevronDownSmall"
-						className={cn("text-theme-secondary-500 ml-1 transition-transform", {
+						className={cn("ml-1 text-theme-secondary-500 transition-transform", {
 							"rotate-180 transform": isOpen,
 						})}
 						size="sm"

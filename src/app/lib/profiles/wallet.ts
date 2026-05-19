@@ -214,6 +214,12 @@ export class Wallet implements IReadWriteWallet {
 		return BigNumber.make(value, this.#decimals());
 	}
 
+	/** {@inheritDoc IReadWriteWallet.legacyNonce} */
+	public legacyNonce(): BigNumber {
+		const value = this.#attributes.get<Contracts.WalletData>("wallet").legacyNonce();
+		return BigNumber.make(value, this.#decimals());
+	}
+
 	/** {@inheritDoc IReadWriteWallet.avatar} */
 	public avatar(): string {
 		const value: string | undefined = this.data().get(WalletSetting.Avatar);
@@ -403,6 +409,11 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.isCold} */
 	public isCold(): boolean {
 		return this.data().get(WalletData.Status) === WalletFlag.Cold;
+	}
+
+	/** {@inheritDoc IReadWriteWallet.isLegacyCold} */
+	public isLegacyCold(): boolean {
+		return this.data().get(WalletData.IsLegacyColdWallet) === true;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.toggleStarred} */

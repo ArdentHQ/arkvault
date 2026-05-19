@@ -57,10 +57,10 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 	return (
 		<div data-testid="ExchangeForm__status-step" className="flex flex-col">
 			<div className="flex items-center space-x-1">
-				<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs font-semibold">
+				<span className="text-xs font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 					{exchangeProvider?.name} {t("EXCHANGE.TRANSACTION_ID")}: {exchangeTransaction.orderId()}
 				</span>
-				<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex">
+				<span className="flex text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 					<Clipboard variant="icon" data={exchangeTransaction.orderId()}>
 						<Icon name="Copy" />
 					</Clipboard>
@@ -78,12 +78,12 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 							/>
 						</FormItemRow>
 						<FormItemRow label={t("EXCHANGE.TO_ADDRESS")}>
-							<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 flex space-x-2 font-semibold">
+							<div className="flex space-x-2 font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 								<TruncateMiddleDynamic
 									value={exchangeTransaction.input().address}
 									className="no-ligatures"
 								/>
-								<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex">
+								<span className="flex text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 									<Clipboard variant="icon" data={exchangeTransaction.input().address}>
 										<Icon name="Copy" />
 									</Clipboard>
@@ -92,9 +92,9 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 						</FormItemRow>
 						{transferTransactionId && (
 							<FormItemRow label={t("EXCHANGE.ARK_TRANSACTION_ID")}>
-								<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 flex space-x-2 font-semibold">
+								<div className="flex space-x-2 font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 									<TruncateMiddleDynamic value={transferTransactionId} className="no-ligatures" />
-									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex">
+									<span className="flex text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 										<Clipboard variant="icon" data={transferTransactionId}>
 											<Icon name="Copy" />
 										</Clipboard>
@@ -120,12 +120,12 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 					</FormItemRow>
 
 					<FormItemRow label={t("EXCHANGE.TO_ADDRESS")}>
-						<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 flex space-x-2 font-semibold">
+						<div className="flex space-x-2 font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 							<TruncateMiddleDynamic
 								value={exchangeTransaction.output().address}
 								className="no-ligatures"
 							/>
-							<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex">
+							<span className="flex text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 								<Clipboard variant="icon" data={exchangeTransaction.output().address}>
 									<Icon name="Copy" />
 								</Clipboard>
@@ -135,7 +135,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 				</FormItem>
 			</div>
 
-			<div className="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:text-theme-dim-200 dark:text-theme-dark-200 mt-2 rounded-xl px-4 py-3 text-xs font-semibold">
+			<div className="mt-2 rounded-xl bg-theme-secondary-200 px-4 py-3 text-xs font-semibold text-theme-secondary-700 dim:bg-theme-dim-950 dim:text-theme-dim-200 dark:bg-theme-dark-950 dark:text-theme-dark-200">
 				<Trans
 					i18nKey="EXCHANGE.EXCHANGE_FORM.SUPPORT_INFO"
 					values={{

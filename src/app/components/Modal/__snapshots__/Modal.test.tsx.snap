@@ -11,11 +11,11 @@ exports[`Modal > should closed by the Esc key 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -59,10 +59,10 @@ exports[`Modal > should closed by the Esc key 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -90,11 +90,11 @@ exports[`Modal > should render a 3x large one 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -138,10 +138,10 @@ exports[`Modal > should render a 3x large one 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -167,11 +167,11 @@ exports[`Modal > should render a 4x large one 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -215,10 +215,10 @@ exports[`Modal > should render a 4x large one 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -244,11 +244,11 @@ exports[`Modal > should render a 5x large one 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -292,10 +292,10 @@ exports[`Modal > should render a 5x large one 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -321,11 +321,11 @@ exports[`Modal > should render a large one 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -369,10 +369,10 @@ exports[`Modal > should render a large one 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -398,11 +398,11 @@ exports[`Modal > should render a medium one 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -446,10 +446,10 @@ exports[`Modal > should render a medium one 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -475,11 +475,11 @@ exports[`Modal > should render a modal with banner 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -523,7 +523,7 @@ exports[`Modal > should render a modal with banner 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <div
               class="relative -mx-10 -mt-10 mb-10 h-56"
@@ -532,7 +532,7 @@ exports[`Modal > should render a modal with banner 1`] = `
                 class="absolute bottom-0 left-0 mb-10 ml-10"
               >
                 <h2
-                  class="m-0 text-4xl leading-tight font-extrabold text-theme-text"
+                  class="m-0 text-4xl font-extrabold leading-tight text-theme-text"
                 >
                   ark
                 </h2>
@@ -562,11 +562,11 @@ exports[`Modal > should render a modal with content 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -610,10 +610,10 @@ exports[`Modal > should render a modal with content 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -641,11 +641,11 @@ exports[`Modal > should render a modal with description 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -689,10 +689,10 @@ exports[`Modal > should render a modal with description 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -701,7 +701,7 @@ exports[`Modal > should render a modal with description 1`] = `
             class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
-              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               This is the Modal description
             </div>
@@ -724,11 +724,11 @@ exports[`Modal > should render a modal with overlay 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -772,10 +772,10 @@ exports[`Modal > should render a modal with overlay 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -803,11 +803,11 @@ exports[`Modal > should render a modal with overlay 2`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -851,10 +851,10 @@ exports[`Modal > should render a modal with overlay 2`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -882,11 +882,11 @@ exports[`Modal > should render a small one 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -930,10 +930,10 @@ exports[`Modal > should render a small one 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -959,11 +959,11 @@ exports[`Modal > should render a xlarge one 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -1007,10 +1007,10 @@ exports[`Modal > should render a xlarge one 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -1036,11 +1036,11 @@ exports[`Modal > should render with scrollbar if it exceeds window height 1`] = 
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -1084,10 +1084,10 @@ exports[`Modal > should render with scrollbar if it exceeds window height 1`] = 
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -1115,17 +1115,17 @@ exports[`Modal > should render without close button 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>
@@ -1153,11 +1153,11 @@ exports[`Modal > should render without offset for buttons 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -1201,10 +1201,10 @@ exports[`Modal > should render without offset for buttons 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               ark
             </h2>

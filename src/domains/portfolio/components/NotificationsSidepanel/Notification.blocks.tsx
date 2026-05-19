@@ -43,7 +43,7 @@ export const Notifications = ({
 					data-testid="MarkAllNotificationsRead"
 					disabled={!hasUnread}
 					variant="secondary-icon"
-					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 w-auto space-x-2 px-2 py-[3px] disabled:bg-transparent dark:disabled:bg-transparent"
+					className="w-auto space-x-2 px-2 py-[3px] text-theme-primary-600 disabled:bg-transparent dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400 dark:disabled:bg-transparent"
 					onClick={() => markAllAsRead()}
 				>
 					<Icon name="CheckmarkDouble" />
@@ -54,7 +54,7 @@ export const Notifications = ({
 					data-testid="WalletVote__button"
 					disabled={transactions.length === 0}
 					variant="secondary-icon"
-					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 space-x-2 px-2 py-[3px] disabled:bg-transparent dark:disabled:bg-transparent"
+					className="space-x-2 px-2 py-[3px] text-theme-primary-600 disabled:bg-transparent dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400 dark:disabled:bg-transparent"
 					onClick={() => markAllAsRemoved()}
 				>
 					<Icon name="Trash" />
@@ -126,9 +126,9 @@ export const Notification = ({
 				}}
 				onMouseEnter={onMarkAsRead}
 				className={cn(
-					"group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 dim:hover:bg-theme-dim-700 relative my-1 flex cursor-pointer flex-col rounded-[12px] px-2 py-3 sm:flex-row sm:justify-between sm:gap-14 sm:px-4",
+					"group relative my-1 flex cursor-pointer flex-col rounded-[12px] px-2 py-3 hover:bg-theme-secondary-200 dim:hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 sm:flex-row sm:justify-between sm:gap-14 sm:px-4",
 					{
-						"bg-theme-secondary-200 dark:bg-theme-dark-700 dim:bg-theme-dim-700": isExpanded,
+						"bg-theme-secondary-200 dim:bg-theme-dim-700 dark:bg-theme-dark-700": isExpanded,
 					},
 				)}
 			>
@@ -141,7 +141,7 @@ export const Notification = ({
 					onRemove={onRemove}
 				/>
 			</div>
-			<div className="border-theme-secondary-300 divider dark:border-theme-dark-700 dim:border-theme-dim-700 h-px border-t border-dashed last:border-none" />
+			<div className="divider h-px border-t border-dashed border-theme-secondary-300 last:border-none dim:border-theme-dim-700 dark:border-theme-dark-700" />
 		</>
 	);
 };
@@ -182,13 +182,13 @@ const NotificationActions = ({
 					event.stopPropagation();
 					onDetailsClick?.();
 				}}
-				className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 px-2 py-[3px] sm:hidden"
+				className="px-2 py-[3px] text-theme-navy-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400 sm:hidden"
 			>
 				{t("COMMON.DETAILS")}
 			</Button>
 			<Divider
 				type="vertical"
-				className="border-theme-secondary-400 dark:border-theme-dark-400 dim:border-theme-dim-400 sm:hidden"
+				className="border-theme-secondary-400 dim:border-theme-dim-400 dark:border-theme-dark-400 sm:hidden"
 			/>
 			<Tooltip content={t("COMMON.REMOVE_NOTIFICATION")} placement="top-end">
 				<Button
@@ -198,7 +198,7 @@ const NotificationActions = ({
 					}}
 					data-testid={`Notification--delete-`}
 					size="icon"
-					className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+					className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-500 dark:hover:text-white"
 					variant="transparent"
 				>
 					<Icon name="Trash" dimensions={[16, 16]} />
@@ -222,15 +222,15 @@ export const NotificationRightSide = ({
 	onRemove: () => void;
 }) => (
 	<>
-		<div className="mt-[5px] ml-9 flex min-w-24 flex-shrink-0 items-start sm:mt-0 sm:ml-0 sm:justify-end">
+		<div className="ml-9 mt-[5px] flex min-w-24 flex-shrink-0 items-start sm:ml-0 sm:mt-0 sm:justify-end">
 			<div className="transition-all duration-200">
 				<span
 					className={cn(
-						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex items-center gap-2 text-sm leading-[17px] font-semibold sm:leading-7",
+						"flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:leading-7",
 						{
-							"after:bg-theme-navy-300 dark:after:bg-theme-dark-navy-400 dim:after:bg-theme-dim-navy-600 after:inline-flex after:h-2 after:w-2 after:rounded-full after:content-[''] sm:after:hidden":
+							"after:inline-flex after:h-2 after:w-2 after:rounded-full after:bg-theme-navy-300 after:content-[''] dim:after:bg-theme-dim-navy-600 dark:after:bg-theme-dark-navy-400 sm:after:hidden":
 								isUnread,
-							"before:bg-theme-navy-300 dark:before:bg-theme-dark-navy-400 dim:before:bg-theme-dim-navy-600 before:hidden before:h-2 before:w-2 before:rounded-full before:content-[''] sm:before:inline-flex":
+							"before:hidden before:h-2 before:w-2 before:rounded-full before:bg-theme-navy-300 before:content-[''] dim:before:bg-theme-dim-navy-600 dark:before:bg-theme-dark-navy-400 sm:before:inline-flex":
 								isUnread,
 						},
 					)}
@@ -240,14 +240,14 @@ export const NotificationRightSide = ({
 			</div>
 			<NotificationActions
 				onRemove={onRemove}
-				className="dim:bg-[linear-gradient(270deg,#283C64_51.96%,rgba(40,60,100,0)_88.67%)] hidden w-24 bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] sm:group-hover:flex dark:bg-[linear-gradient(270deg,#3D444D_51.96%,rgba(61,68,77,0)_88.67%)]"
+				className="hidden w-24 bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] dim:bg-[linear-gradient(270deg,#283C64_51.96%,rgba(40,60,100,0)_88.67%)] dark:bg-[linear-gradient(270deg,#3D444D_51.96%,rgba(61,68,77,0)_88.67%)] sm:group-hover:flex"
 			/>
 		</div>
 		<NotificationActions
 			onRemove={onRemove}
 			onDetailsClick={onShowDetails}
 			className={cn(
-				"dim:bg-[linear-gradient(270deg,#283C64_51.96%,rgba(40,60,100,0)_88.67%)] right-0 w-8/12 min-w-8/12 bg-[linear-gradient(270deg,#EEF3F5_51.96%,rgba(238,243,245,0)_88.67%)] dark:bg-[linear-gradient(270deg,#3D444D_51.96%,rgba(61,68,77,0)_88.67%)]",
+				"min-w-8/12 right-0 w-8/12 bg-[linear-gradient(270deg,#EEF3F5_51.96%,rgba(238,243,245,0)_88.67%)] dim:bg-[linear-gradient(270deg,#283C64_51.96%,rgba(40,60,100,0)_88.67%)] dark:bg-[linear-gradient(270deg,#3D444D_51.96%,rgba(61,68,77,0)_88.67%)]",
 				{
 					flex: isExpanded,
 					hidden: !isExpanded,
@@ -267,20 +267,20 @@ export const TransferNotification = ({ transaction }: { transaction: Transaction
 			<div className="flex sm:h-7 sm:items-end">
 				<Icon
 					name="DoubleArrowLeftDashed"
-					className="bg-theme-success-100 border-theme-success-100 dark:border-theme-success-700 dark:text-theme-success-500 dim:bg-transparent dim:border-theme-success-700 dim:text-theme-success-500 text-theme-success-700 rounded-lg border p-[3px] dark:bg-transparent"
+					className="rounded-lg border border-theme-success-100 bg-theme-success-100 p-[3px] text-theme-success-700 dim:border-theme-success-700 dim:bg-transparent dim:text-theme-success-500 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500"
 				/>
 			</div>
-			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[21px] sm:text-base sm:leading-7">
+			<div className="text-sm leading-[21px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:text-base sm:leading-7">
 				<Trans
 					i18nKey={`COMMON.NOTIFICATIONS.${translationKey}`}
 					components={{
 						Address: (
-							<span className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold">
+							<span className="font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 								{transaction.wallet().alias()}
 							</span>
 						),
 						Amount: (
-							<span className="text-theme-success-700 dark:text-theme-success-500 dim:text-theme-success-500 font-semibold">
+							<span className="font-semibold text-theme-success-700 dim:text-theme-success-500 dark:text-theme-success-500">
 								{transaction.convertedAmount()}
 							</span>
 						),
@@ -299,10 +299,10 @@ export const FailedTransactionNotification = ({ transaction }: { transaction: Tr
 			<div className="flex h-7 items-end">
 				<Icon
 					name="CircleCross"
-					className="bg-theme-danger-100 text-theme-danger-700 border-theme-danger-100 dark:border-theme-danger-400 dark:text-theme-danger-400 dim:bg-transparent dim:border-theme-danger-400 dim:text-theme-danger-400 rounded-lg border p-[3px] dark:bg-transparent"
+					className="rounded-lg border border-theme-danger-100 bg-theme-danger-100 p-[3px] text-theme-danger-700 dim:border-theme-danger-400 dim:bg-transparent dim:text-theme-danger-400 dark:border-theme-danger-400 dark:bg-transparent dark:text-theme-danger-400"
 				/>
 			</div>
-			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[21px] sm:text-base sm:leading-7">
+			<div className="text-sm leading-[21px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:text-base sm:leading-7">
 				<Trans
 					i18nKey={
 						receipt.hasUnknownError()
@@ -313,7 +313,7 @@ export const FailedTransactionNotification = ({ transaction }: { transaction: Tr
 						Error: <span>{receipt.prettyError()}</span>,
 						TransactionId: (
 							<TruncateMiddle
-								className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold"
+								className="font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50"
 								text={transaction.hash()}
 							/>
 						),

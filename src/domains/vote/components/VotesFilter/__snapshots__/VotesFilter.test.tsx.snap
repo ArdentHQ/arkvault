@@ -72,7 +72,7 @@ exports[`VotesFilter > should render default 1`] = `
     class="mr-6 hidden md:block"
   >
     <div
-      aria-controls="«r2»"
+      aria-controls="_r_2_"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle-VotesFilter"
@@ -139,7 +139,7 @@ exports[`VotesFilter > should render with current option selected 1`] = `
     class="mr-6 hidden md:block"
   >
     <div
-      aria-controls="«r7»"
+      aria-controls="_r_7_"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle-VotesFilter"
@@ -206,7 +206,7 @@ exports[`VotesFilter > should render with disabled current option 1`] = `
     class="mr-6 hidden md:block"
   >
     <div
-      aria-controls="«rc»"
+      aria-controls="_r_c_"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle-VotesFilter"

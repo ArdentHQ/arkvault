@@ -13,16 +13,16 @@ export const TokenRowMobileSkeleton = () => {
 	const contractWidth = useRandomNumber(120, 150);
 
 	return (
-		<TableRow className="group border-b-0!">
+		<TableRow className="border-b-0! group">
 			<td data-testid="TokenRow__skeleton">
 				<MobileCard className="mb-3">
-					<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between pr-3 pl-4 sm:pl-3 dark:bg-black">
+					<div className="flex h-10 w-full items-center justify-between bg-theme-secondary-100 pl-4 pr-3 dim:bg-theme-dim-950 dark:bg-black sm:pl-3">
 						<div className="flex flex-row items-center gap-3">
 							<div className="hidden flex-row items-center sm:flex">
 								<Skeleton height={16} width={16} className="mr-2 rounded-full" />
 								<Divider
 									type="vertical"
-									className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
+									className="m-0 h-[17px] border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800"
 								/>
 							</div>
 
@@ -33,7 +33,7 @@ export const TokenRowMobileSkeleton = () => {
 						<Skeleton height={17} width={40} />
 					</div>
 
-					<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_180px] sm:pb-4">
+					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_180px] sm:pb-4">
 						<div className="flex flex-col gap-2">
 							<Skeleton height={17} width={90} />
 							<Skeleton height={17} width={balanceWidth} />
@@ -47,7 +47,7 @@ export const TokenRowMobileSkeleton = () => {
 							<Skeleton height={17} width={contractWidth} />
 						</div>
 
-						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden">
+						<div className="border-t border-dashed border-theme-secondary-300 pt-4 dim:border-theme-dim-700 dark:border-theme-secondary-800 sm:hidden">
 							<div className="flex flex-row items-center gap-2">
 								<Skeleton height={20} width={20} className="rounded-full" />
 								<Skeleton height={17} width={60} />

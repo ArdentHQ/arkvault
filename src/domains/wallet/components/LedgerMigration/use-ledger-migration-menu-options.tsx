@@ -9,7 +9,7 @@ export const useLedgerMigrationMenuOptions = () => {
 			element: (
 				<div className="relative">
 					{t("COMMON.LEDGER_MIGRATION.ADDRESS_MIGRATION")}
-					<Dot className="top-2 -right-4" />
+					<Dot className="-right-4 top-2" />
 				</div>
 			),
 			label: "",

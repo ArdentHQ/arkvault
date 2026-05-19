@@ -216,7 +216,7 @@ const SelectDropdown = ({
 						visible={isVisible}
 						placement="bottom-start"
 						className={cn(
-							"dim:bg-transparent w-full bg-transparent dark:bg-transparent",
+							"w-full bg-transparent dim:bg-transparent dark:bg-transparent",
 							dropdownClassName,
 						)}
 						showFloatingArrow={false}

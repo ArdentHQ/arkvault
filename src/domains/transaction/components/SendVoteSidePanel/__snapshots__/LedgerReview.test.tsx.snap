@@ -11,7 +11,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
       >
         Unvote
       </div>
@@ -22,7 +22,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
           class="-my-2 flex-1"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
               class="w-28 flex-1"
@@ -48,7 +48,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                 <span>
                   <span>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -71,7 +71,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
       >
         Vote
       </div>
@@ -82,7 +82,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
           class="-my-2 flex-1"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
               class="w-28 flex-1"
@@ -108,7 +108,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                 <span>
                   <span>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -129,21 +129,21 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
       data-testid="DetailWrapper"
     >
       <div
-        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+        class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dim:border-x-theme-dim-navy-400 dim:bg-theme-dim-950 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dim:sm:bg-transparent dark:sm:bg-transparent"
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5"
           data-testid="DetailLabelText"
         >
           Transaction Summary
         </div>
       </div>
       <div
-        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden sm:border mt-0 sm:mt-2 rounded-xl"
+        class="overflow-hidden border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2 rounded-xl"
       >
         <div
-          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+          class="sm:in-[.condensed]:py-4 w-full break-words p-3 sm:px-6 sm:py-5"
         >
           <div
             class="flex flex-col gap-3"
@@ -153,7 +153,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
               data-testid="AmountSection"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 data-testid="DetailTitle"
               >
                 Amount
@@ -173,7 +173,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
               class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 data-testid="DetailTitle"
               >
                 Fee
@@ -193,7 +193,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
               class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 data-testid="DetailTitle"
               >
                 Total
@@ -212,19 +212,19 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
           </div>
         </div>
         <div
-          class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
+          class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
         >
           <div
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
+              class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 leading-4! w-auto sm:min-w-36 sm:text-sm"
               data-testid="DetailTitle"
             >
               Confirmation Time
             </div>
             <div
-              class="flex flex-row items-center gap-2 leading-4! lowercase sm:text-sm"
+              class="leading-4! flex flex-row items-center gap-2 lowercase sm:text-sm"
             >
               ~10s
             </div>
@@ -247,7 +247,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
       >
         Unvote
       </div>
@@ -258,7 +258,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
           class="-my-2 flex-1"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
               class="w-28 flex-1"
@@ -284,7 +284,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
                 <span>
                   <span>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -305,21 +305,21 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
       data-testid="DetailWrapper"
     >
       <div
-        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+        class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dim:border-x-theme-dim-navy-400 dim:bg-theme-dim-950 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dim:sm:bg-transparent dark:sm:bg-transparent"
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5"
           data-testid="DetailLabelText"
         >
           Transaction Summary
         </div>
       </div>
       <div
-        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden sm:border mt-0 sm:mt-2 rounded-xl"
+        class="overflow-hidden border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2 rounded-xl"
       >
         <div
-          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+          class="sm:in-[.condensed]:py-4 w-full break-words p-3 sm:px-6 sm:py-5"
         >
           <div
             class="flex flex-col gap-3"
@@ -329,7 +329,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
               data-testid="AmountSection"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 data-testid="DetailTitle"
               >
                 Amount
@@ -349,7 +349,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
               class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 data-testid="DetailTitle"
               >
                 Fee
@@ -369,7 +369,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
               class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 data-testid="DetailTitle"
               >
                 Total
@@ -388,19 +388,19 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
           </div>
         </div>
         <div
-          class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
+          class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
         >
           <div
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
+              class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 leading-4! w-auto sm:min-w-36 sm:text-sm"
               data-testid="DetailTitle"
             >
               Confirmation Time
             </div>
             <div
-              class="flex flex-row items-center gap-2 leading-4! lowercase sm:text-sm"
+              class="leading-4! flex flex-row items-center gap-2 lowercase sm:text-sm"
             >
               ~10s
             </div>
@@ -423,7 +423,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
       >
         Vote
       </div>
@@ -434,7 +434,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
           class="-my-2 flex-1"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
               class="w-28 flex-1"
@@ -460,7 +460,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
                 <span>
                   <span>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -481,21 +481,21 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
       data-testid="DetailWrapper"
     >
       <div
-        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+        class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dim:border-x-theme-dim-navy-400 dim:bg-theme-dim-950 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dim:sm:bg-transparent dark:sm:bg-transparent"
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5"
           data-testid="DetailLabelText"
         >
           Transaction Summary
         </div>
       </div>
       <div
-        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden sm:border mt-0 sm:mt-2 rounded-xl"
+        class="overflow-hidden border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2 rounded-xl"
       >
         <div
-          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+          class="sm:in-[.condensed]:py-4 w-full break-words p-3 sm:px-6 sm:py-5"
         >
           <div
             class="flex flex-col gap-3"
@@ -505,7 +505,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
               data-testid="AmountSection"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 data-testid="DetailTitle"
               >
                 Amount
@@ -525,7 +525,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
               class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 data-testid="DetailTitle"
               >
                 Fee
@@ -545,7 +545,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
               class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 data-testid="DetailTitle"
               >
                 Total
@@ -564,19 +564,19 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
           </div>
         </div>
         <div
-          class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
+          class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
         >
           <div
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
+              class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 leading-4! w-auto sm:min-w-36 sm:text-sm"
               data-testid="DetailTitle"
             >
               Confirmation Time
             </div>
             <div
-              class="flex flex-row items-center gap-2 leading-4! lowercase sm:text-sm"
+              class="leading-4! flex flex-row items-center gap-2 lowercase sm:text-sm"
             >
               ~10s
             </div>
