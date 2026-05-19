@@ -365,7 +365,6 @@ describe("SendVote", () => {
 			},
 		];
 
-		
 		render(
 			<Component activeProfile={profile} activeNetwork={wallet.network()} activeWallet={wallet} votes={votes} />,
 			{
