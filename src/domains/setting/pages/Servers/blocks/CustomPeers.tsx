@@ -68,13 +68,13 @@ const PeerRow = ({
 	return (
 		<TableRow data-testid={checked ? "CustomPeers-network-item--checked" : "CustomPeers-network-item"}>
 			<TableCell variant="start" innerClassName={tdClasses}>
-				<div className="md-lg:overflow-hidden relative flex h-20 w-full flex-col">
-					<div className="md-lg:absolute md-lg:inset-0 md-lg:max-w-full flex max-w-72 flex-col">
+				<div className="relative flex h-20 w-full flex-col md-lg:overflow-hidden">
+					<div className="flex max-w-72 flex-col md-lg:absolute md-lg:inset-0 md-lg:max-w-full">
 						<TruncatedWithTooltip
-							className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 cursor-pointer truncate text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-28 lg:max-w-56 xl:max-w-64"
+							className="cursor-pointer truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dim:text-theme-dim-50 dark:text-theme-dark-50 md:max-w-28 lg:max-w-56 xl:max-w-64"
 							text={name}
 						/>
-						<div className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 mt-[2px] text-xs leading-[15px] font-semibold">
+						<div className="mt-[2px] text-xs font-semibold leading-[15px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500">
 							{networkName}
 						</div>
 					</div>
@@ -84,32 +84,32 @@ const PeerRow = ({
 			<TableCell innerClassName={tdClasses}>
 				<div className="h-20 space-y-3">
 					<div className="flex items-center space-x-5">
-						<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-9 text-sm leading-[17px] font-semibold">
+						<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 							{t("SETTINGS.SERVERS.API")}:
 						</div>
 						<TruncatedWithTooltip
 							text={publicApi.url}
-							className="text-theme-secondary-900 md-lg:max-w-72 dark:text-theme-dark-50 dim:text-theme-dim-50 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
+							className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dim:text-theme-dim-50 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
 						/>
 					</div>
 
 					<div className="flex items-center space-x-5">
-						<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-9 text-sm leading-[17px] font-semibold">
+						<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 							{t("SETTINGS.SERVERS.TX")}:
 						</div>
 						<TruncatedWithTooltip
 							text={txApi.url}
-							className="text-theme-secondary-900 md-lg:max-w-72 dark:text-theme-dark-50 dim:text-theme-dim-50 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
+							className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dim:text-theme-dim-50 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
 						/>
 					</div>
 
 					<div className="flex items-center space-x-5">
-						<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-9 text-sm leading-[17px] font-semibold">
+						<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 							{t("SETTINGS.SERVERS.EVM")}:
 						</div>
 						<TruncatedWithTooltip
 							text={evmApi.url}
-							className="text-theme-secondary-900 md-lg:max-w-72 dark:text-theme-dark-50 dim:text-theme-dim-50 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
+							className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dim:text-theme-dim-50 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
 						/>
 					</div>
 				</div>
@@ -124,7 +124,7 @@ const PeerRow = ({
 			</TableCell>
 
 			<TableCell innerClassName={tdClasses}>
-				<div className="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start">
+				<div className="flex h-20 items-start text-theme-secondary-900 dark:text-theme-dark-50">
 					{height === undefined ? (
 						<span className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</span>
 					) : (
@@ -135,7 +135,7 @@ const PeerRow = ({
 
 			<TableCell variant="end" innerClassName={cn(tdClasses, "pr-0")}>
 				<div className="flex h-20 items-start">
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mt-px flex items-start border-r pr-3">
+					<div className="mt-px flex items-start border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
 						<Toggle
 							data-testid="CustomPeers-toggle"
 							defaultChecked={checked}
@@ -150,7 +150,7 @@ const PeerRow = ({
 							<Button
 								variant="transparent"
 								size="icon"
-								className="text-theme-secondary-700 dark:text-theme-dark-200 -mt-3 -mr-3"
+								className="-mr-3 -mt-3 text-theme-secondary-700 dark:text-theme-dark-200"
 							>
 								<Icon name="EllipsisVerticalFilled" size="md" />
 							</Button>
@@ -286,7 +286,7 @@ const CustomPeersPeer = ({
 											<Button
 												variant="transparent"
 												size="icon"
-												className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 -m-3"
+												className="-m-3 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
 											>
 												<Icon name="EllipsisVerticalFilled" size="md" />
 											</Button>
@@ -300,7 +300,7 @@ const CustomPeersPeer = ({
 									<Icon
 										name="ChevronDownSmall"
 										className={cn(
-											"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 transition-transform",
+											"text-theme-secondary-700 transition-transform dim:text-theme-dim-200 dark:text-theme-dark-200",
 											{ "rotate-180": isExpanded },
 										)}
 										size="sm"
@@ -316,12 +316,12 @@ const CustomPeersPeer = ({
 							<div className="space-y-3">
 								<div className="flex items-center space-x-5">
 									<div className="flex min-w-0 flex-1 items-center space-x-5">
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-9 text-sm leading-[17px] font-semibold sm:shrink-0">
+										<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:shrink-0">
 											{t("SETTINGS.SERVERS.API")}:
 										</div>
 										<TruncatedWithTooltip
 											text={publicApiEndpoint}
-											className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 block text-sm font-semibold sm:max-w-52"
+											className="block text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:max-w-52"
 										/>
 									</div>
 									<CustomPeerStatusIcon status={publicApiStatus} />
@@ -329,12 +329,12 @@ const CustomPeersPeer = ({
 
 								<div className="flex items-center space-x-5">
 									<div className="flex min-w-0 flex-1 items-center space-x-5">
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-9 shrink-0 text-sm leading-[17px] font-semibold">
+										<div className="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 											{t("SETTINGS.SERVERS.TX")}:
 										</div>
 										<TruncatedWithTooltip
 											text={transactionApiEndpoint}
-											className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 block text-sm font-semibold sm:max-w-52"
+											className="block text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:max-w-52"
 										/>
 									</div>
 									<CustomPeerStatusIcon status={txApiStatus} />
@@ -342,12 +342,12 @@ const CustomPeersPeer = ({
 
 								<div className="flex items-center space-x-5">
 									<div className="flex min-w-0 flex-1 items-center space-x-5">
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-9 shrink-0 text-sm leading-[17px] font-semibold">
+										<div className="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 											{t("SETTINGS.SERVERS.EVM")}:
 										</div>
 										<TruncatedWithTooltip
 											text={evmApiEndpoint}
-											className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 block text-sm font-semibold sm:max-w-52"
+											className="block text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:max-w-52"
 										/>
 									</div>
 									<CustomPeerStatusIcon status={evmApiStatus} />
@@ -356,18 +356,18 @@ const CustomPeersPeer = ({
 						</MobileTableElementRow>
 
 						<MobileTableElementRow title={t("COMMON.NETWORK")} className="place-content-start">
-							<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 flex items-center space-x-3 text-sm font-semibold">
+							<div className="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 								{networkDisplayName(network)}
 							</div>
 						</MobileTableElementRow>
 
 						<MobileTableElementRow title={t("COMMON.HEIGHT")} className="place-content-start">
-							<span className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm font-semibold">
+							<span className="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 								{height}
 							</span>
 						</MobileTableElementRow>
 
-						<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden">
+						<div className="grid grid-cols-3 gap-2 border-t border-dashed border-theme-secondary-300 pt-4 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:hidden">
 							<Button
 								variant="secondary"
 								size="sm"
@@ -443,11 +443,11 @@ const CustomPeersTableFooter = ({
 		<tr data-testid="EmptyResults">
 			<td colSpan={totalColumns}>
 				{isEmpty && (
-					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 py-3 text-center">
+					<div className="py-3 text-center text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 						{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}
 					</div>
 				)}
-				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-3 pb-2 sm:border-t sm:px-6">
+				<div className="border-theme-secondary-300 pb-2 pt-3 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-t sm:px-6">
 					<Button
 						data-testid="CustomPeers--addnew"
 						onClick={addNewServerHandler}

@@ -81,7 +81,7 @@ export const UpdateAccountNameForm = ({
 			</FormField>
 
 			{children || (
-				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 modal-footer -mx-6 px-6 sm:border-t">
+				<div className="modal-footer -mx-6 border-theme-secondary-300 px-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-t">
 					<FormButtons>
 						<Button data-testid="UpdateWalletName__cancel" variant="secondary" onClick={onCancel}>
 							{t("COMMON.CANCEL")}

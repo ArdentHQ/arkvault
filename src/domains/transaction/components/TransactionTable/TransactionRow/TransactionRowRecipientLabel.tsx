@@ -14,13 +14,13 @@ interface Properties {
 }
 
 const RecipientLabel = ({ children }: { children: ReactNode }) => (
-	<span data-testid="TransactionRowRecipientLabel" className="text-theme-text font-semibold">
+	<span data-testid="TransactionRowRecipientLabel" className="font-semibold text-theme-text">
 		{children}
 	</span>
 );
 
 const ValidatorLabel = ({ username, count }: { username?: string; count?: number }) => (
-	<span className="border-theme-secondary-300 text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700 ml-2 truncate border-l pl-2 font-semibold">
+	<span className="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700">
 		{username}
 		{count !== undefined && count > 1 && <span className="ml-1">+{count - 1}</span>}
 	</span>
@@ -81,7 +81,7 @@ export const BaseTransactionRowRecipientLabel = ({
 		return (
 			<span>
 				<RecipientLabel>{t("TRANSACTION.TRANSACTION_TYPES.PAY")}</RecipientLabel>
-				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-50 ml-1 font-semibold">
+				<span className="ml-1 font-semibold text-theme-secondary-500 dim:text-theme-dim-50 dark:text-theme-secondary-700">
 					{transaction.recipients().length}
 				</span>
 			</span>

@@ -21,14 +21,14 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 <span>
                   <span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                      class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
                           class="text-sm"
@@ -36,7 +36,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                           <span>
                             <span>
                               <span
-                                class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                class="no-ligatures cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
                                 data-testid="TransactionRow__id"
                               >
                                 ea63b…5c79b
@@ -50,7 +50,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 </span>
               </div>
               <span
-                class="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden"
+                class="text-xs text-theme-secondary-700 dim:text-theme-dim-200 xl:hidden"
               >
                 <span
                   data-testid="TimeAgo"
@@ -80,7 +80,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] dark:border lg:max-w-40"
               data-testid="TransactionRow__type"
             >
               <span
@@ -146,13 +146,13 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden"
+                        class="ring-focus focus:outline-hidden relative cursor-pointer"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
                         <div
-                          class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                         >
                           <div
                             style="height: 16px; width: 16px;"
@@ -237,13 +237,13 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     <span>
                       <span>
                         <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
+                          class="ring-focus focus:outline-hidden relative cursor-pointer"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                            class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -284,7 +284,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           </div>
         </td>
         <td
-          class="md-lg:table-cell hidden"
+          class="hidden md-lg:table-cell"
         >
           <div
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
@@ -335,13 +335,13 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      class="ring-focus focus:outline-hidden relative cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -431,13 +431,13 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      class="ring-focus focus:outline-hidden relative cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -495,7 +495,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 </span>
               </span>
               <span
-                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                 data-testid="TransactionRow__exchange-currency"
               >
                 <span
@@ -547,14 +547,14 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 <span>
                   <span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                      class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
                           class="text-sm"
@@ -562,7 +562,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                           <span>
                             <span>
                               <span
-                                class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                class="no-ligatures cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
                                 data-testid="TransactionRow__id"
                               >
                                 ea63b…5c79b
@@ -576,7 +576,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 </span>
               </div>
               <span
-                class="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden"
+                class="text-xs text-theme-secondary-700 dim:text-theme-dim-200 xl:hidden"
               >
                 <span
                   data-testid="TimeAgo"
@@ -606,7 +606,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] dark:border lg:max-w-40"
               data-testid="TransactionRow__type"
             >
               <span
@@ -672,13 +672,13 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden"
+                        class="ring-focus focus:outline-hidden relative cursor-pointer"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
                         <div
-                          class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                         >
                           <div
                             style="height: 16px; width: 16px;"
@@ -763,13 +763,13 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                     <span>
                       <span>
                         <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
+                          class="ring-focus focus:outline-hidden relative cursor-pointer"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                            class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -810,7 +810,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
           </div>
         </td>
         <td
-          class="md-lg:table-cell hidden"
+          class="hidden md-lg:table-cell"
         >
           <div
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
@@ -861,13 +861,13 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      class="ring-focus focus:outline-hidden relative cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -957,13 +957,13 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      class="ring-focus focus:outline-hidden relative cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -1021,7 +1021,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 </span>
               </span>
               <span
-                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                 data-testid="TransactionRow__exchange-currency"
               >
                 <span
@@ -1052,7 +1052,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 </span>
               </span>
               <span
-                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                class="text-xs font-semibold text-theme-secondary-700 xl:hidden"
                 data-testid="TransactionRow__exchange-currency"
               >
                 <span
@@ -1092,14 +1092,14 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 <span>
                   <span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                      class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
                           class="text-sm"
@@ -1107,7 +1107,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                           <span>
                             <span>
                               <span
-                                class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                class="no-ligatures cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
                                 data-testid="TransactionRow__id"
                               >
                                 ea63…c79b
@@ -1121,7 +1121,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 </span>
               </div>
               <span
-                class="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden"
+                class="text-xs text-theme-secondary-700 dim:text-theme-dim-200 xl:hidden"
               >
                 <span
                   data-testid="TimeAgo"
@@ -1151,7 +1151,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] dark:border lg:max-w-40"
               data-testid="TransactionRow__type"
             >
               <span
@@ -1217,13 +1217,13 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden"
+                        class="ring-focus focus:outline-hidden relative cursor-pointer"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
                         <div
-                          class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                         >
                           <div
                             style="height: 16px; width: 16px;"
@@ -1308,13 +1308,13 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                     <span>
                       <span>
                         <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
+                          class="ring-focus focus:outline-hidden relative cursor-pointer"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                            class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -1355,7 +1355,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
           </div>
         </td>
         <td
-          class="md-lg:table-cell hidden"
+          class="hidden md-lg:table-cell"
         >
           <div
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
@@ -1406,13 +1406,13 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      class="ring-focus focus:outline-hidden relative cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -1502,13 +1502,13 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      class="ring-focus focus:outline-hidden relative cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -1566,7 +1566,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 </span>
               </span>
               <span
-                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                 data-testid="TransactionRow__exchange-currency"
               >
                 <span
@@ -1597,7 +1597,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 </span>
               </span>
               <span
-                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                class="text-xs font-semibold text-theme-secondary-700 xl:hidden"
                 data-testid="TransactionRow__exchange-currency"
               >
                 <span
@@ -1621,17 +1621,17 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group border-b-0! group"
         data-testid="TableRow"
       >
         <td
           data-testid="TableRow__mobile"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dim:border-theme-dim-700 dim:bg-theme-background dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
-              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+              class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dim:bg-theme-dim-950 dark:bg-black"
             >
               <div>
                 <div
@@ -1640,14 +1640,14 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                   <span>
                     <span>
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
                             class="text-sm"
@@ -1655,7 +1655,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                             <span>
                               <span>
                                 <span
-                                  class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                  class="no-ligatures cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
                                   data-testid="TransactionRow__id"
                                 >
                                   ea63…c79b
@@ -1673,7 +1673,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 sm:block"
                   data-testid="TransactionRow__timestamp"
                 >
                   <span
@@ -1685,19 +1685,19 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
                 data-testid="TransactionRowMobile__label"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Transfer
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <div
                     class="flex flex-col gap-2"
@@ -1748,13 +1748,13 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                         <span>
                           <span>
                             <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              class="ring-focus focus:outline-hidden relative cursor-pointer"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -1836,13 +1836,13 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                         <span>
                           <span>
                             <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              class="ring-focus focus:outline-hidden relative cursor-pointer"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -1885,12 +1885,12 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Amount
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <span>
                     <span>
@@ -1908,12 +1908,12 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Fiat Value
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1953,14 +1953,14 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                 <span>
                   <span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                      class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
                           class="text-sm"
@@ -1968,7 +1968,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                           <span>
                             <span>
                               <span
-                                class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                class="no-ligatures cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
                                 data-testid="TransactionRow__id"
                               >
                                 ea63b…5c79b
@@ -1982,7 +1982,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                 </span>
               </div>
               <span
-                class="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden"
+                class="text-xs text-theme-secondary-700 dim:text-theme-dim-200 xl:hidden"
               >
                 <span
                   data-testid="TimeAgo"
@@ -2012,7 +2012,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] dark:border lg:max-w-40"
               data-testid="TransactionRow__type"
             >
               <span
@@ -2078,13 +2078,13 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden"
+                        class="ring-focus focus:outline-hidden relative cursor-pointer"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
                         <div
-                          class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                         >
                           <div
                             style="height: 16px; width: 16px;"
@@ -2169,13 +2169,13 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                     <span>
                       <span>
                         <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
+                          class="ring-focus focus:outline-hidden relative cursor-pointer"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                            class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -2216,7 +2216,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
           </div>
         </td>
         <td
-          class="md-lg:table-cell hidden"
+          class="hidden md-lg:table-cell"
         >
           <div
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
@@ -2267,13 +2267,13 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      class="ring-focus focus:outline-hidden relative cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -2363,13 +2363,13 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      class="ring-focus focus:outline-hidden relative cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -2427,7 +2427,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                 </span>
               </span>
               <span
-                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                 data-testid="TransactionRow__exchange-currency"
               >
                 <span
@@ -2463,17 +2463,17 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group border-b-0! group"
         data-testid="TableRow"
       >
         <td
           data-testid="TableRow__mobile"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dim:border-theme-dim-700 dim:bg-theme-background dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
-              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+              class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dim:bg-theme-dim-950 dark:bg-black"
             >
               <div>
                 <div
@@ -2482,14 +2482,14 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                   <span>
                     <span>
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
                             class="text-sm"
@@ -2497,7 +2497,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                             <span>
                               <span>
                                 <span
-                                  class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                  class="no-ligatures cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
                                   data-testid="TransactionRow__id"
                                 >
                                   ea63…c79b
@@ -2515,7 +2515,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 sm:block"
                   data-testid="TransactionRow__timestamp"
                 >
                   <span
@@ -2527,19 +2527,19 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
                 data-testid="TransactionRowMobile__label"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Transfer
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <div
                     class="flex flex-col gap-2"
@@ -2590,13 +2590,13 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                         <span>
                           <span>
                             <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              class="ring-focus focus:outline-hidden relative cursor-pointer"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -2678,13 +2678,13 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                         <span>
                           <span>
                             <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              class="ring-focus focus:outline-hidden relative cursor-pointer"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -2727,12 +2727,12 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Amount
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <span>
                     <span>
@@ -2750,12 +2750,12 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Fiat Value
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -2779,17 +2779,17 @@ exports[`TransactionRow > should render responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group border-b-0! group"
         data-testid="TableRow"
       >
         <td
           data-testid="TableRow__mobile"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dim:border-theme-dim-700 dim:bg-theme-background dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
-              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+              class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dim:bg-theme-dim-950 dark:bg-black"
             >
               <div>
                 <div
@@ -2798,14 +2798,14 @@ exports[`TransactionRow > should render responsive 1`] = `
                   <span>
                     <span>
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
                             class="text-sm"
@@ -2813,7 +2813,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                             <span>
                               <span>
                                 <span
-                                  class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                  class="no-ligatures cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
                                   data-testid="TransactionRow__id"
                                 >
                                   ea63…c79b
@@ -2831,7 +2831,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 sm:block"
                   data-testid="TransactionRow__timestamp"
                 >
                   <span
@@ -2843,19 +2843,19 @@ exports[`TransactionRow > should render responsive 1`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
                 data-testid="TransactionRowMobile__label"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Transfer
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <div
                     class="flex flex-col gap-2"
@@ -2906,13 +2906,13 @@ exports[`TransactionRow > should render responsive 1`] = `
                         <span>
                           <span>
                             <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              class="ring-focus focus:outline-hidden relative cursor-pointer"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -2994,13 +2994,13 @@ exports[`TransactionRow > should render responsive 1`] = `
                         <span>
                           <span>
                             <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              class="ring-focus focus:outline-hidden relative cursor-pointer"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -3043,12 +3043,12 @@ exports[`TransactionRow > should render responsive 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Amount
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <span>
                     <span>
@@ -3066,12 +3066,12 @@ exports[`TransactionRow > should render responsive 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Fiat Value
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3095,17 +3095,17 @@ exports[`TransactionRow > should render responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group border-b-0! group"
         data-testid="TableRow"
       >
         <td
           data-testid="TableRow__mobile"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dim:border-theme-dim-700 dim:bg-theme-background dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
-              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+              class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dim:bg-theme-dim-950 dark:bg-black"
             >
               <div>
                 <div
@@ -3114,14 +3114,14 @@ exports[`TransactionRow > should render responsive 2`] = `
                   <span>
                     <span>
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
                             class="text-sm"
@@ -3129,7 +3129,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                             <span>
                               <span>
                                 <span
-                                  class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                  class="no-ligatures cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
                                   data-testid="TransactionRow__id"
                                 >
                                   ea63…c79b
@@ -3147,7 +3147,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 sm:block"
                   data-testid="TransactionRow__timestamp"
                 >
                   <span
@@ -3159,19 +3159,19 @@ exports[`TransactionRow > should render responsive 2`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
                 data-testid="TransactionRowMobile__label"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Transfer
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <div
                     class="flex flex-col gap-2"
@@ -3222,13 +3222,13 @@ exports[`TransactionRow > should render responsive 2`] = `
                         <span>
                           <span>
                             <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              class="ring-focus focus:outline-hidden relative cursor-pointer"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -3310,13 +3310,13 @@ exports[`TransactionRow > should render responsive 2`] = `
                         <span>
                           <span>
                             <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              class="ring-focus focus:outline-hidden relative cursor-pointer"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -3359,12 +3359,12 @@ exports[`TransactionRow > should render responsive 2`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Amount
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <span>
                     <span>
@@ -3382,12 +3382,12 @@ exports[`TransactionRow > should render responsive 2`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Fiat Value
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                  class="text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3427,14 +3427,14 @@ exports[`TransactionRow > should render with currency 1`] = `
                 <span>
                   <span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                      class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
                           class="text-sm"
@@ -3442,7 +3442,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                           <span>
                             <span>
                               <span
-                                class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                class="no-ligatures cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
                                 data-testid="TransactionRow__id"
                               >
                                 ea63b…5c79b
@@ -3456,7 +3456,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 </span>
               </div>
               <span
-                class="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden"
+                class="text-xs text-theme-secondary-700 dim:text-theme-dim-200 xl:hidden"
               >
                 <span
                   data-testid="TimeAgo"
@@ -3486,7 +3486,7 @@ exports[`TransactionRow > should render with currency 1`] = `
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] dark:border lg:max-w-40"
               data-testid="TransactionRow__type"
             >
               <span
@@ -3552,13 +3552,13 @@ exports[`TransactionRow > should render with currency 1`] = `
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden"
+                        class="ring-focus focus:outline-hidden relative cursor-pointer"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
                         <div
-                          class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                         >
                           <div
                             style="height: 16px; width: 16px;"
@@ -3643,13 +3643,13 @@ exports[`TransactionRow > should render with currency 1`] = `
                     <span>
                       <span>
                         <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
+                          class="ring-focus focus:outline-hidden relative cursor-pointer"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                            class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -3690,7 +3690,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           </div>
         </td>
         <td
-          class="md-lg:table-cell hidden"
+          class="hidden md-lg:table-cell"
         >
           <div
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
@@ -3741,13 +3741,13 @@ exports[`TransactionRow > should render with currency 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      class="ring-focus focus:outline-hidden relative cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -3837,13 +3837,13 @@ exports[`TransactionRow > should render with currency 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      class="ring-focus focus:outline-hidden relative cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -3901,7 +3901,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 </span>
               </span>
               <span
-                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                 data-testid="TransactionRow__exchange-currency"
               >
                 <span

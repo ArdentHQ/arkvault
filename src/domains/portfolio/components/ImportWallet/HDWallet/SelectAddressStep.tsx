@@ -133,7 +133,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 
 	return (
 		<div>
-			<div className="md:border-theme-secondary-300 dark:md:border-theme-secondary-800 dim:md:border-theme-dim-700 relative hidden rounded-xl border border-transparent sm:block">
+			<div className="relative hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dim:md:border-theme-dim-700 dark:md:border-theme-secondary-800">
 				<div>
 					<Table columns={columns} data={data} className="with-x-padding">
 						{renderTableRow}
@@ -165,14 +165,14 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 			</div>
 
 			<div className="sm:hidden">
-				<div className="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 dim:border-l-theme-dim-navy-400 dim:bg-theme-dim-950 mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3">
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-base font-semibold">
+				<div className="mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dim:border-l-theme-dim-navy-400 dim:bg-theme-dim-950 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800">
+					<span className="text-base font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500">
 						{t("COMMON.ADDRESS")}
 					</span>
 					<label
 						className={cn("flex flex-row items-center gap-2", {
-							"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700": isLoading,
-							"text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500": !isLoading,
+							"text-theme-secondary-500 dim:text-theme-dim-700 dark:text-theme-secondary-700": isLoading,
+							"text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-500": !isLoading,
 						})}
 					>
 						<Checkbox

@@ -14,7 +14,7 @@ export const VoteItem = ({ wallet, amount = 0, currency, isNegativeAmount }: Vot
 	}
 
 	return (
-		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0">
+		<div className="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800">
 			<div className="w-28 flex-1">
 				<Address address={wallet.address()} walletName={wallet.username()} />
 			</div>

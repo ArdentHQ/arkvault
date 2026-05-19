@@ -30,7 +30,7 @@ export const TransactionRow = ({ transaction }: { transaction: DraftTransfer }):
 				/>
 			</TableCell>
 			<TableCell variant="end">
-				<div className="flext w-full justify-end text-right whitespace-nowrap">
+				<div className="flext w-full justify-end whitespace-nowrap text-right">
 					{transaction.isCompleted() && (
 						<Link to={transaction.signedTransaction()?.explorerLink()!} isExternal>
 							{t("COMMON.VIEW")}

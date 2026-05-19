@@ -21,7 +21,7 @@ export function WalletSelection({
 		<div className="relative inline-block">
 			<DropdownRoot>
 				<DropdownToggle>
-					<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 inline-block cursor-pointer rounded-sm border px-3 py-2 text-sm font-semibold">
+					<div className="inline-block cursor-pointer rounded-sm border border-theme-secondary-300 px-3 py-2 text-sm font-semibold text-theme-secondary-700 dim:border-theme-dim-700 dim:text-theme-dim-200 dark:border-theme-dark-700 dark:text-theme-dark-200">
 						<div className="flex items-center space-x-2">
 							<span className="max-w-[14rem] truncate">{selectedAlias}</span>
 							<Icon name="ChevronDownSmall" width={12} height={12} />
@@ -36,7 +36,7 @@ export function WalletSelection({
 							.map((wallet) => (
 								<DropdownListItem
 									className={cn({
-										"bg-theme-secondary-200 text-theme-secondary-900 dark:bg-theme-dark-700 dark:text-theme-dark-50 dim-bg-theme-dim-700 dim-text-theme-dim-50":
+										"dim-bg-theme-dim-700 dim-text-theme-dim-50 bg-theme-secondary-200 text-theme-secondary-900 dark:bg-theme-dark-700 dark:text-theme-dark-50":
 											selectedAlias === wallet.alias(),
 									})}
 									key={wallet.address()}
@@ -45,7 +45,7 @@ export function WalletSelection({
 										onChange?.([wallet]);
 									}}
 								>
-									<div className="w-3xs truncate sm:w-xs">
+									<div className="w-3xs sm:w-xs truncate">
 										<OptionLabel
 											network={profile.activeNetwork()}
 											profile={profile}
@@ -61,7 +61,7 @@ export function WalletSelection({
 
 						<DropdownListItem
 							className={cn("w-full", {
-								"bg-theme-secondary-200 text-theme-secondary-900 dark:bg-theme-dark-700 dark:text-theme-dark-50 dim-bg-theme-dim-700 dim-text-theme-dim-50":
+								"dim-bg-theme-dim-700 dim-text-theme-dim-50 bg-theme-secondary-200 text-theme-secondary-900 dark:bg-theme-dark-700 dark:text-theme-dark-50":
 									selectedAlias === multipleViewText,
 							})}
 							key="multiple"
@@ -72,10 +72,10 @@ export function WalletSelection({
 						>
 							<div className="flex w-full items-center justify-between">
 								<span
-									className={cn("w-full leading-[17px] font-semibold sm:leading-5", {
-										"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50":
+									className={cn("w-full font-semibold leading-[17px] sm:leading-5", {
+										"text-theme-primary-600 dim:text-theme-dim-50 dark:text-theme-secondary-50":
 											selectedAlias === multipleViewText,
-										"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+										"text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
 											selectedAlias !== multipleViewText,
 									})}
 								>
@@ -86,7 +86,7 @@ export function WalletSelection({
 									<Icon
 										name="CheckmarkDouble"
 										size="md"
-										className="text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50"
+										className="text-theme-primary-600 dim:text-theme-dim-50 dark:text-theme-secondary-50"
 									/>
 								)}
 							</div>

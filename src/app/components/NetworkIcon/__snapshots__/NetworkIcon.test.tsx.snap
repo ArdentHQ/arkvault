@@ -87,7 +87,7 @@ exports[`NetworkIcon > should render with tooltip in the dark mode 1`] = `
 <DocumentFragment>
   <span>
     <span
-      aria-describedby="«r4»"
+      aria-describedby="_r_4_"
     >
       <div
         aria-label="Mainsail Devnet"
@@ -120,7 +120,7 @@ exports[`NetworkIcon > should render with tooltip in the dark mode 1`] = `
     </span>
     <div
       data-floating-ui-focusable=""
-      id="«r4»"
+      id="_r_4_"
       role="tooltip"
       style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
       tabindex="-1"
@@ -130,7 +130,7 @@ exports[`NetworkIcon > should render with tooltip in the dark mode 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
+          class="fill-theme-secondary-900 dim:fill-theme-dim-700 dark:fill-theme-secondary-700"
           height="14"
           style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
           viewBox="0 0 14 14"
@@ -141,7 +141,7 @@ exports[`NetworkIcon > should render with tooltip in the dark mode 1`] = `
             stroke="none"
           />
           <clippath
-            id="«r6»"
+            id="_r_6_"
           >
             <rect
               height="14"
@@ -152,7 +152,7 @@ exports[`NetworkIcon > should render with tooltip in the dark mode 1`] = `
           </clippath>
         </svg>
         <div
-          class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 whitespace-wrap max-w-72 rounded-md px-2 py-1 text-sm font-semibold break-words text-white sm:max-w-3xl sm:whitespace-nowrap"
+          class="overflow-wrap-anywhere whitespace-wrap max-w-72 break-words rounded-md bg-theme-secondary-900 px-2 py-1 text-sm font-semibold text-white dim:bg-theme-dim-700 dim:text-theme-dim-50 dark:bg-theme-secondary-700 dark:text-theme-secondary-200 sm:max-w-3xl sm:whitespace-nowrap"
           style="font-feature-settings: "liga" off, "calt" off;"
         >
           <div>

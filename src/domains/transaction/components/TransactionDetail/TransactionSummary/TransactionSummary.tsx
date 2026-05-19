@@ -89,7 +89,7 @@ export const TransactionSummary = ({
 							<Tooltip content={t("TRANSACTION.VALIDATOR_REGISTERED_WITHOUT_FEE")}>
 								<div
 									data-testid="TransactionSummary__ValidatorFee__Tooltip"
-									className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full"
+									className="flex h-5 w-5 items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50"
 								>
 									<Icon name="QuestionMarkSmall" size="sm" />
 								</div>
@@ -103,7 +103,7 @@ export const TransactionSummary = ({
 					<Amount
 						ticker={senderWallet.currency()}
 						value={transaction.fee()}
-						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+						className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 						allowHideBalance={allowHideBalance}
 						profile={profile}
 					/>
@@ -114,7 +114,7 @@ export const TransactionSummary = ({
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
 						value={isTokenTransfer ? transaction.convertedFee() : transaction.convertedAmount()}
-						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+						className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 						allowHideBalance={allowHideBalance}
 						profile={profile}
 					/>
