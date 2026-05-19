@@ -19,6 +19,8 @@ const WalletsTokensPagePath = "/wallets/tokens?page=1";
 import type { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
 
 const tokenAddress = "0x180a864a755fed0144c622df49b83db577befefb";
+const tokenTransfersUrl = "/tokens/transfers?page=1";
+
 const createTransferData = (from: string) => ({
 	blockNumber: "22773025",
 	from,
@@ -114,7 +116,7 @@ describe("TokenService", () => {
 				capturedQuery = Object.fromEntries(new URL(request.url).searchParams) as TokenTransfersQuery;
 				return HttpResponse.json({
 					data: [createTransferData(walletAddress)],
-					meta: { next: null, self: "/tokens/transfers?page=1" },
+					meta: { next: null, self: tokenTransfersUrl },
 				});
 			}),
 		);
@@ -138,7 +140,7 @@ describe("TokenService", () => {
 				capturedQuery = Object.fromEntries(new URL(request.url).searchParams) as TokenTransfersQuery;
 				return HttpResponse.json({
 					data: [createTransferData(walletAddress)],
-					meta: { next: null, self: "/tokens/transfers?page=1" },
+					meta: { next: null, self: tokenTransfersUrl },
 				});
 			}),
 		);
@@ -156,7 +158,7 @@ describe("TokenService", () => {
 			http.get(/\/tokens\/transfers.*/, () =>
 				HttpResponse.json({
 					data: [createTransferData(walletAddress)],
-					meta: { next: null, self: "/tokens/transfers?page=1" },
+					meta: { next: null, self: tokenTransfersUrl },
 				}),
 			),
 		);
@@ -181,7 +183,7 @@ describe("TokenService", () => {
 							from: walletAddress,
 						},
 					],
-					meta: { next: null, self: "/tokens/transfers?page=1" },
+					meta: { next: null, self: tokenTransfersUrl },
 				}),
 			),
 		);
@@ -549,7 +551,7 @@ describe("TokenService", () => {
 					];
 					return HttpResponse.json({
 						data: transaction,
-						meta: { next: null, self: "/tokens/transfers?page=1" },
+						meta: { next: null, self: tokenTransfersUrl },
 					});
 				}),
 			);
@@ -568,7 +570,7 @@ describe("TokenService", () => {
 				http.get(/\/tokens\/transfers.*/, () =>
 					HttpResponse.json({
 						data: [createTransferData(unknownAddress)],
-						meta: { next: null, self: "/tokens/transfers?page=1" },
+						meta: { next: null, self: tokenTransfersUrl },
 					}),
 				),
 			);
