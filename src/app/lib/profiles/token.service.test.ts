@@ -18,6 +18,7 @@ const WalletsTokensEndpoint = "https://dwallets-evm.mainsailhq.com/api/wallets/t
 const WalletsTokensPagePath = "/wallets/tokens?page=1";
 import type { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
 
+const tokenAddress = "0x180a864a755fed0144c622df49b83db577befefb";
 const createTransferData = (from: string) => ({
 	blockNumber: "22773025",
 	from,
@@ -25,7 +26,7 @@ const createTransferData = (from: string) => ({
 	timestamp: "1769010139522",
 	to: "0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5",
 	token: {
-		address: "0x180a864a755fed0144c622df49b83db577befefb",
+		address: tokenAddress,
 		decimals: 18,
 		name: "DARK20",
 		symbol: "DARK20",
@@ -300,7 +301,7 @@ describe("TokenService", () => {
 								name: "DARK20",
 								supply: "100000000000000000000000000",
 								symbol: "DARK20",
-								token: "0x180a864a755fed0144c622df49b83db577befefb",
+								token: tokenAddress,
 							},
 						],
 						meta: { next: null, self: WalletsTokensPagePath },
@@ -376,7 +377,6 @@ describe("TokenService", () => {
 		it("should update existing tokens on the page", async () => {
 			const walletAddress = "0x1";
 			const newBalanceRaw = "555";
-			const token = "0x180a864a755fed0144c622df49b83db577befefb";
 
 			server.use(
 				http.get(WalletsTokensEndpoint, () =>
@@ -390,7 +390,7 @@ describe("TokenService", () => {
 								name: "DARK20",
 								supply: "100000000000000000000000000",
 								symbol: "DARK20",
-								token,
+								token: tokenAddress,
 							},
 						],
 						meta: { next: null, self: WalletsTokensPagePath },
@@ -406,7 +406,7 @@ describe("TokenService", () => {
 			await tokenService.sync();
 			expect(tokenService.selected().items()).toHaveLength(1);
 
-			const result = await tokenService.syncOne(token);
+			const result = await tokenService.syncOne(tokenAddress);
 
 			expect(result).toBeInstanceOf(WalletToken);
 			expect(result!.address()).toBe(walletAddress);
@@ -419,7 +419,6 @@ describe("TokenService", () => {
 
 		it("should keep existing items when response has no matching tokens", async () => {
 			const walletAddress = "0x1";
-			const tokenAddress = "0x180a864a755fed0144c622df49b83db577befefb";
 
 			server.use(
 				http.get(WalletsTokensEndpoint, () =>
@@ -532,6 +531,87 @@ describe("TokenService", () => {
 			expect(tokenService.selected().items()).toHaveLength(1);
 			expect(tokenService.selected().items()[0].address()).toBe(walletAddress);
 			expect(tokenService.selected().items()[0].balanceRaw()).toBe("200");
+		});
+
+		it("should set wallet metadata from address", async () => {
+			const walletAddress = profile.wallets().first().address();
+			const otherAddress = "0x5";
+			let transaction = [];
+
+			server.use(
+				http.get(/\/tokens\/transfers.*/, () => {
+					transaction = [
+						createTransferData(walletAddress),
+						{
+							...createTransferData(otherAddress),
+							to: walletAddress,
+						},
+					];
+					return HttpResponse.json({
+						data: transaction,
+						meta: { next: null, self: "/tokens/transfers?page=1" },
+					});
+				}),
+			);
+
+			const transfers = await profile.tokens().transfers();
+
+			expect(transfers.items()).toHaveLength(2);
+			expect(transfers.items()[0].getMeta("address")).toBe(walletAddress);
+			expect(transfers.items()[1].getMeta("address")).toBe(walletAddress);
+		});
+
+		it("should not set wallet metadata when no matching wallet is found", async () => {
+			const unknownAddress = "0x100";
+
+			server.use(
+				http.get(/\/tokens\/transfers.*/, () =>
+					HttpResponse.json({
+						data: [createTransferData(unknownAddress)],
+						meta: { next: null, self: "/tokens/transfers?page=1" },
+					}),
+				),
+			);
+
+			const transfers = await profile.tokens().transfers();
+
+			expect(transfers.items()).toHaveLength(1);
+			expect(transfers.items()[0].getMeta("address")).toBeUndefined();
+		});
+
+		it("should return matching token in syncOne when item is found", async () => {
+			server.use(
+				http.get(WalletsTokensEndpoint, () =>
+					HttpResponse.json({
+						data: [
+							{
+								addresses: {
+									"0x3": "777",
+								},
+								decimals: 18,
+								name: "DARK20",
+								supply: "100000000000000000000000000",
+								symbol: "DARK20",
+								token: tokenAddress,
+							},
+						],
+						meta: { next: null, self: WalletsTokensPagePath },
+					}),
+				),
+			);
+
+			const tokenService = new TokenService({
+				network: profile.activeNetwork(),
+				profile,
+			});
+
+			await tokenService.sync();
+
+			const result = await tokenService.syncOne(tokenAddress);
+
+			expect(result).toBeDefined();
+			expect(result!.balanceRaw()).toBe("777");
+			expect(tokenService.selected().items()[0].balanceRaw()).toBe("777");
 		});
 	});
 });
