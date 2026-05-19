@@ -18,6 +18,16 @@ interface ObserverMock {
 
 type MockTransport = ReturnType<typeof LedgerTransportFactory.prototype.supportedTransport>;
 
+export class LedgerTransportFactoryMock {
+	supportedTransport() {
+		return Promise.resolve({
+			list: () => [],
+			listen: () => {},
+			openConnected: async () => openTransportReplayer(RecordStore.fromString("")),
+		});
+	}
+}
+
 interface TransportObserver {
 	error?: (errorValue: Error) => void;
 	next?: (value: unknown) => void;

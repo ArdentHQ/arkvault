@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import MockDate from "mockdate";
-import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
+import { bootEnvironmentWithProfileFixtures, LedgerTransportFactoryMock } from "@/utils/test-helpers";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import crypto from "crypto";
@@ -14,17 +14,7 @@ import { openTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocke
 expect.extend(matchers);
 
 vi.mock("@/app/contexts/Ledger/ledger.transport.factory", () => {
-	class LedgerTransportFactory {
-		supportedTransport() {
-			return Promise.resolve({
-				list: () => [],
-				listen: () => {},
-				openConnected: async () => openTransportReplayer(RecordStore.fromString("")),
-			});
-		}
-	}
-
-	return { LedgerTransportFactory };
+	return { LedgerTransportFactory: LedgerTransportFactoryMock };
 });
 
 vi.mock("@faustbrian/node-haveibeenpwned", () => ({
