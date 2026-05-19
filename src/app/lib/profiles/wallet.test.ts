@@ -455,6 +455,12 @@ describe("Wallet", () => {
 		spy.mockRestore();
 	});
 
+	it("should check if is legacy cold wallet", () => {
+		const spy = vi.spyOn(wallet.data(), "get").mockReturnValue(true);
+		expect(wallet.isLegacyCold()).toBe(true);
+		spy.mockRestore();
+	});
+
 	it("should toggle starred", () => {
 		const setSpy = vi.spyOn(wallet.data(), "set");
 		const statusSpy = vi.spyOn(profile.status(), "markAsDirty");
