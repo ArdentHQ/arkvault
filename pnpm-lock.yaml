@@ -27,8 +27,8 @@ importers:
         specifier: ^0.27.19
         version: 0.27.19(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@ledgerhq/hw-app-eth':
-        specifier: ^6.47.1
-        version: 6.47.1(react@19.2.6)
+        specifier: ^7.8.2
+        version: 7.8.2(react@19.2.6)
       '@ledgerhq/hw-transport-webhid':
         specifier: ^6.35.2
         version: 6.35.2
@@ -1639,20 +1639,11 @@ packages:
   '@ledgerhq/client-ids@0.9.0':
     resolution: {integrity: sha512-Ms7AaUb1Qlu2RSboPN87gqfBLuaxPUsr+++gHpQYbK25fQhjCKT/Xm88km/P5cbpgzWx8gIm6KuLRrDQItNqzg==}
 
-  '@ledgerhq/cryptoassets-evm-signatures@13.7.1':
-    resolution: {integrity: sha512-ehLn62L15fOlTH6u5D1eV1d4/QIju6aaUKWy7CpVLSiRmkWEBaORhOL/l9TvBrRIvNLHVBQEhiBaJcJ4hGrlEw==}
-
   '@ledgerhq/devices@8.14.2':
     resolution: {integrity: sha512-T3pnfrsQEC/eJU0XHIqWI6qww+CL1k3NumR2XGWlMz8lVpoZ9HhcuGoCkMevp+8SWmymgyNIIFue3jlNA5KiMw==}
 
-  '@ledgerhq/devices@8.7.0':
-    resolution: {integrity: sha512-3pSOULPUhClk2oOxa6UnoyXW8+05FK7r6cpq2WiTey4kyIUjmIraO7AX9lhz9IU73dGVtBMdU+NCPPO2RYJaTQ==}
-
   '@ledgerhq/domain-service@1.8.2':
     resolution: {integrity: sha512-qvoqhsI8ODWxzRa6/UTF9vyp+UMl3X2nR7XWVbVx/M1M+D2eh3xj1Gb9hATwyV19YOYJSZdZ0xM/poSpWUxnlg==}
-
-  '@ledgerhq/errors@6.30.0':
-    resolution: {integrity: sha512-MnN0JDIcGRJRjLTt9bTXYhuWsoyeUXMkC/UcjG/HbukYAZx28o3Y8eRxu1Zfi4cL7lInuBuc8Nq2wwngHjg6jw==}
 
   '@ledgerhq/errors@6.35.0':
     resolution: {integrity: sha512-qk9PbqIvze7NXGogVxNCsz60rNo5FrGj8gKqs7pcyDk+em5L6s70G7cRxR+1HTXdam4WoPfntUq+WX9zQUynkg==}
@@ -1660,8 +1651,8 @@ packages:
   '@ledgerhq/evm-tools@1.12.5':
     resolution: {integrity: sha512-U0fCYOSFQJcMoKJyAQsmxnP7epfvLLRhgqWnLFZXoTwhGJj60tG1W3eClWmhvplkMIiqtxlo+gv6GcUiwtSTbQ==}
 
-  '@ledgerhq/hw-app-eth@6.47.1':
-    resolution: {integrity: sha512-uTgXZwiEBuXoouZOzd/wi06FGyUdP8THDkzPcHfbt4hcIwiPMfRc/vrOXJtCq/LaM8nVEuf8xk+H1sAgJzPCkw==}
+  '@ledgerhq/hw-app-eth@7.8.2':
+    resolution: {integrity: sha512-vc3RNnniOyUOz1x3PnAhaZXCj/jffi1mbPL0XP8L3cmn4OV4dy+1rTvCn+Jl6wx5oyJXuOXuadq2yBhQVbQCPA==}
 
   '@ledgerhq/hw-transport-mocker@6.34.2':
     resolution: {integrity: sha512-qnSLdYlgWk1YzjsyIz199aTm7KexOEcSZLBhBHVVJpuM6zWLUaM1HPbYx5R5aR5hJzhAVSrXVDzXpEriNrBa6w==}
@@ -1672,17 +1663,11 @@ packages:
   '@ledgerhq/hw-transport-webusb@6.34.2':
     resolution: {integrity: sha512-2nRe72vfUsxWkIFSgV8b/RR8BXA27284Uy5Yx+JJnxs1D5bCdvO4WDYg1kXsDd2E3Q1eCZBvV5gSHQbi+uKsvA==}
 
-  '@ledgerhq/hw-transport@6.31.13':
-    resolution: {integrity: sha512-MrJRDk74wY980ofiFPRpTHQBbRw1wDuKbdag1zqlO1xtJglymwwY03K2kvBNvkm1RTSCPUp/nAoNG+WThZuuew==}
-
   '@ledgerhq/hw-transport@6.35.2':
     resolution: {integrity: sha512-eSXFFqMDAB2Ra/5uqmlru0cUyc2XDQPEKf4ITWHeMms2fHhETw9lcgAEl61vszkiz0RLUVB4VQsLJjj7O8kCvg==}
 
   '@ledgerhq/live-env@2.34.0':
     resolution: {integrity: sha512-g6tVBiLHzoVFzWUBLvCToYaBHyjKuK92bS+b6aGqyjUx51Ik9BznU1mMtCB5KcO6FtZLy71+uicTTqIjVY61TQ==}
-
-  '@ledgerhq/logs@6.15.0':
-    resolution: {integrity: sha512-AJSXELFIDTyKkMs8udR9B3YxftQIibceeZFWC36pGkAXDnY53vPR8s25IgQefEANGr8e2ZdAEwTL1tLOYAHqSw==}
 
   '@ledgerhq/logs@6.17.0':
     resolution: {integrity: sha512-yra33g5q/AU7+PwAws+GaVpQGUuxnDREjVBnviJjcaJLVKuLzI4pnj8Bd3nY3fypM5k1yZEYKEXfUuGFUjP2+w==}
@@ -2563,9 +2548,6 @@ packages:
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
-
-  axios@1.12.2:
-    resolution: {integrity: sha512-vMJzPewAlRyOgxV2dU0Cuz2O8zzzx9VYtbJOaBgXFeLc4IV/Eg50n4LowmehOOR61S8ZMpc2K5Sa7g6A4jfkUw==}
 
   axios@1.13.2:
     resolution: {integrity: sha512-VPk9ebNqPcy5lRGuSlKx752IlDatOjT9paPlm8A7yOuW2Fbvp4X3JznJtT4f0GzGLLiWE9W8onz51SqLYwzGaA==}
@@ -8265,26 +8247,12 @@ snapshots:
       - react
       - react-redux
 
-  '@ledgerhq/cryptoassets-evm-signatures@13.7.1':
-    dependencies:
-      '@ledgerhq/live-env': 2.34.0
-      axios: 1.12.2
-    transitivePeerDependencies:
-      - debug
-
   '@ledgerhq/devices@8.14.2':
     dependencies:
       '@ledgerhq/errors': 6.35.0
       '@ledgerhq/logs': 6.17.0
       rxjs: 7.8.2
       semver: 7.7.3
-
-  '@ledgerhq/devices@8.7.0':
-    dependencies:
-      '@ledgerhq/errors': 6.30.0
-      '@ledgerhq/logs': 6.15.0
-      rxjs: 7.8.2
-      semver: 7.8.0
 
   '@ledgerhq/domain-service@1.8.2':
     dependencies:
@@ -8299,8 +8267,6 @@ snapshots:
       - debug
       - react-redux
 
-  '@ledgerhq/errors@6.30.0': {}
-
   '@ledgerhq/errors@6.35.0': {}
 
   '@ledgerhq/evm-tools@1.12.5':
@@ -8313,22 +8279,21 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@ledgerhq/hw-app-eth@6.47.1(react@19.2.6)':
+  '@ledgerhq/hw-app-eth@7.8.2(react@19.2.6)':
     dependencies:
       '@ethersproject/abi': 5.8.0
       '@ethersproject/rlp': 5.8.0
       '@ethersproject/transactions': 5.8.0
-      '@ledgerhq/cryptoassets-evm-signatures': 13.7.1
       '@ledgerhq/domain-service': 1.8.2
-      '@ledgerhq/errors': 6.30.0
+      '@ledgerhq/errors': 6.35.0
       '@ledgerhq/evm-tools': 1.12.5
-      '@ledgerhq/hw-transport': 6.31.13
+      '@ledgerhq/hw-transport': 6.35.2
       '@ledgerhq/hw-transport-mocker': 6.34.2
-      '@ledgerhq/logs': 6.15.0
+      '@ledgerhq/logs': 6.17.0
       '@ledgerhq/types-live': 6.107.0(react@19.2.6)
-      axios: 1.12.2
+      axios: 1.13.2
       bignumber.js: 9.3.1
-      semver: 7.8.0
+      semver: 7.7.3
     transitivePeerDependencies:
       - debug
       - react
@@ -8354,13 +8319,6 @@ snapshots:
       '@ledgerhq/hw-transport': 6.35.2
       '@ledgerhq/logs': 6.17.0
 
-  '@ledgerhq/hw-transport@6.31.13':
-    dependencies:
-      '@ledgerhq/devices': 8.7.0
-      '@ledgerhq/errors': 6.30.0
-      '@ledgerhq/logs': 6.15.0
-      events: 3.3.0
-
   '@ledgerhq/hw-transport@6.35.2':
     dependencies:
       '@ledgerhq/devices': 8.14.2
@@ -8372,8 +8330,6 @@ snapshots:
     dependencies:
       rxjs: 7.8.2
       utility-types: 3.11.0
-
-  '@ledgerhq/logs@6.15.0': {}
 
   '@ledgerhq/logs@6.17.0': {}
 
@@ -9307,14 +9263,6 @@ snapshots:
   available-typed-arrays@1.0.7:
     dependencies:
       possible-typed-array-names: 1.1.0
-
-  axios@1.12.2:
-    dependencies:
-      follow-redirects: 1.15.9
-      form-data: 4.0.5
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
 
   axios@1.13.2:
     dependencies:
