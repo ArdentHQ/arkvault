@@ -55,7 +55,7 @@ exports[`LogoAlpha > should render in lg 1`] = `
         class="flex items-center space-x-[2px]"
       >
         <button
-          class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden"
+          class="outline-hidden focus:outline-hidden my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
           data-testid="NavigationBarLogo--button"
           type="button"
         >
@@ -79,7 +79,7 @@ exports[`LogoAlpha > should render in lg 1`] = `
           </span>
         </button>
         <div
-          class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold"
+          class="flex cursor-pointer items-center bg-theme-navy-100 px-2 py-[0.313rem] text-center text-xs font-semibold leading-[0.938rem] text-theme-navy-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300"
         >
           ALPHA
         </div>
@@ -97,7 +97,7 @@ exports[`LogoAlpha > should render in md 1`] = `
         class="flex items-center space-x-[2px]"
       >
         <button
-          class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden"
+          class="outline-hidden focus:outline-hidden my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
           data-testid="NavigationBarLogo--button"
           type="button"
         >
@@ -121,7 +121,7 @@ exports[`LogoAlpha > should render in md 1`] = `
           </span>
         </button>
         <div
-          class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold"
+          class="flex cursor-pointer items-center bg-theme-navy-100 px-2 py-[0.313rem] text-center text-xs font-semibold leading-[0.938rem] text-theme-navy-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300"
         >
           ALPHA
         </div>
@@ -139,7 +139,7 @@ exports[`LogoAlpha > should render in sm 1`] = `
         class="flex items-center space-x-[2px]"
       >
         <button
-          class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden"
+          class="outline-hidden focus:outline-hidden my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
           data-testid="NavigationBarLogo--button"
           type="button"
         >
@@ -163,7 +163,7 @@ exports[`LogoAlpha > should render in sm 1`] = `
           </span>
         </button>
         <div
-          class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold"
+          class="flex cursor-pointer items-center bg-theme-navy-100 px-2 py-[0.313rem] text-center text-xs font-semibold leading-[0.938rem] text-theme-navy-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300"
         >
           ALPHA
         </div>
@@ -181,7 +181,7 @@ exports[`LogoAlpha > should render in xl 1`] = `
         class="flex items-center space-x-[2px]"
       >
         <button
-          class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden"
+          class="outline-hidden focus:outline-hidden my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
           data-testid="NavigationBarLogo--button"
           type="button"
         >
@@ -205,7 +205,7 @@ exports[`LogoAlpha > should render in xl 1`] = `
           </span>
         </button>
         <div
-          class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold"
+          class="flex cursor-pointer items-center bg-theme-navy-100 px-2 py-[0.313rem] text-center text-xs font-semibold leading-[0.938rem] text-theme-navy-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300"
         >
           ALPHA
         </div>
@@ -223,7 +223,7 @@ exports[`LogoAlpha > should render in xs 1`] = `
         class="flex items-center space-x-[2px]"
       >
         <button
-          class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden"
+          class="outline-hidden focus:outline-hidden my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
           data-testid="NavigationBarLogo--button"
           type="button"
         >
@@ -247,7 +247,7 @@ exports[`LogoAlpha > should render in xs 1`] = `
           </span>
         </button>
         <div
-          class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold"
+          class="flex cursor-pointer items-center bg-theme-navy-100 px-2 py-[0.313rem] text-center text-xs font-semibold leading-[0.938rem] text-theme-navy-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300"
         >
           ALPHA
         </div>

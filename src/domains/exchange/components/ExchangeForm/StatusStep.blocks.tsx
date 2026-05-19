@@ -19,7 +19,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 			return (
 				<div
 					data-testid="StatusIcon__check-mark"
-					className="text-theme-success-700 dark:text-theme-success-500 dim:text-theme-success-500 flex h-4 w-4 items-center justify-center rounded-full sm:h-5 sm:w-5"
+					className="flex h-4 w-4 items-center justify-center rounded-full text-theme-success-700 dim:text-theme-success-500 dark:text-theme-success-500 sm:h-5 sm:w-5"
 				>
 					<Icon name="CheckmarkDouble" />
 				</div>
@@ -29,7 +29,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 		if (isLoading) {
 			return (
 				<span data-testid="StatusIcon__spinner">
-					<Spinner className="border-theme-warning-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dark:border-l-theme-warning-900 dim:border-l-theme-warning-900 border-l-theme-warning-900 h-4! w-4! border-[2px]! sm:h-5! sm:w-5! sm:border-[3px]!" />
+					<Spinner className="h-4! w-4! border-[2px]! sm:h-5! sm:w-5! sm:border-[3px]! border-theme-warning-200 border-l-theme-warning-900 dim:border-theme-dim-700 dim:border-l-theme-warning-900 dark:border-theme-dark-700 dark:border-l-theme-warning-900" />
 				</span>
 			);
 		}
@@ -37,7 +37,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 		return (
 			<div
 				data-testid="StatusIcon__empty"
-				className="bg-theme-secondary-200 dark:bg-theme-dark-800 dim:bg-theme-dim-800 h-4 w-4 rounded-full sm:h-5 sm:w-5"
+				className="h-4 w-4 rounded-full bg-theme-secondary-200 dim:bg-theme-dim-800 dark:bg-theme-dark-800 sm:h-5 sm:w-5"
 			/>
 		);
 	};
@@ -45,24 +45,24 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 	return (
 		<div
 			className={cn(
-				"relative flex items-center overflow-hidden rounded-lg border px-3 py-2 sm:-mt-[22px] sm:rounded-none sm:border-none sm:bg-transparent! sm:pt-[22px] sm:pr-0 sm:pb-0 sm:pl-[38px]",
+				"sm:bg-transparent! relative flex items-center overflow-hidden rounded-lg border px-3 py-2 sm:-mt-[22px] sm:rounded-none sm:border-none sm:pb-0 sm:pl-[38px] sm:pr-0 sm:pt-[22px]",
 				{
-					"bg-theme-secondary-100 border-theme-secondary-300 dark:border-theme-secondary-700 dim:bg-transparent dim:border-theme-secondary-700 dark:bg-transparent":
+					"border-theme-secondary-300 bg-theme-secondary-100 dim:border-theme-secondary-700 dim:bg-transparent dark:border-theme-secondary-700 dark:bg-transparent":
 						!isDone && !isLoading,
-					"bg-theme-success-100 border-theme-success-200 dark:border-theme-success-500 dim:bg-theme-success-900 dim:border-theme-success-500 dark:bg-theme-success-900":
+					"border-theme-success-200 bg-theme-success-100 dim:border-theme-success-500 dim:bg-theme-success-900 dark:border-theme-success-500 dark:bg-theme-success-900":
 						isDone,
-					"bg-theme-warning-50 border-theme-warning-200 dark:border-theme-warning-600 dim:bg-transparent dim:border-theme-warning-600 dark:bg-transparent":
+					"border-theme-warning-200 bg-theme-warning-50 dim:border-theme-warning-600 dim:bg-transparent dark:border-theme-warning-600 dark:bg-transparent":
 						isLoading,
 				},
 			)}
 		>
-			<span className="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 absolute top-0 left-0 hidden h-[35px] w-[26px] rounded-bl-xl border-b-2 border-l-2 sm:inline" />
+			<span className="absolute left-0 top-0 hidden h-[35px] w-[26px] rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:inline" />
 			<span>{renderIcon()}</span>
 			<span
-				className={cn("ml-2 font-semibold whitespace-nowrap sm:ml-3", {
-					"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500": !isDone && !isLoading,
-					"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200": isLoading,
-					"text-theme-success-700 dark:text-theme-success-500 dim:text-theme-success-500": isDone,
+				className={cn("ml-2 whitespace-nowrap font-semibold sm:ml-3", {
+					"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500": !isDone && !isLoading,
+					"text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200": isLoading,
+					"text-theme-success-700 dim:text-theme-success-500 dark:text-theme-success-500": isDone,
 				})}
 			>
 				{label}
@@ -110,7 +110,7 @@ const ExchangeStatus = ({ exchangeTransaction }: { exchangeTransaction: Contract
 	const status = exchangeTransaction.status();
 
 	return (
-		<div className="items-top mt-2 mb-4 flex flex-col space-y-1 overflow-hidden pt-1.5 sm:mb-6 sm:justify-center sm:space-y-4 sm:px-6">
+		<div className="items-top mb-4 mt-2 flex flex-col space-y-1 overflow-hidden pt-1.5 sm:mb-6 sm:justify-center sm:space-y-4 sm:px-6">
 			<StatusIcon
 				label={t("EXCHANGE.TRANSACTION_STATUS.AWAITING_DEPOSIT")}
 				isDone={status > Contracts.ExchangeTransactionStatus.Confirming}

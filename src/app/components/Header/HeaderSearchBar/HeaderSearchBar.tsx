@@ -17,7 +17,7 @@ const SearchBarInputWrapper = (properties: SearchBarInputWrapperProperties) => (
 	<div
 		{...properties}
 		className={twMerge(
-			"dark:border-theme-secondary-800 xs:[min-width:300px] dim:border-theme-dim-700 sm:[min-width:448px] dark:border",
+			"dim:border-theme-dim-700 dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px]",
 			properties.className,
 		)}
 	/>
@@ -78,7 +78,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					data-testid="HeaderSearchBar__input"
 					ref={reference}
 					className={cn(
-						"bg-theme-background absolute z-50 -mx-10 flex items-center rounded-lg px-6 py-2.5 text-base shadow-xl",
+						"absolute z-50 -mx-10 flex items-center rounded-lg bg-theme-background px-6 py-2.5 text-base shadow-xl",
 						offsetClassName || "top-1/2 -translate-y-1/2",
 						{
 							"right-0": noToggleBorder,
@@ -89,13 +89,13 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					{extra && (
 						<div className="flex items-center">
 							<div>{extra}</div>
-							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mr-8 h-10 border-l" />
+							<div className="mr-8 h-10 border-l border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800" />
 						</div>
 					)}
 
 					<button
 						data-testid="header-search-bar__reset"
-						className={cn("transition-all duration-300 focus:outline-hidden", {
+						className={cn("focus:outline-hidden transition-all duration-300", {
 							"mr-4": query !== "" || alwaysDisplayClearButton,
 						})}
 						onClick={handleQueryReset}
@@ -103,7 +103,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					>
 						<Icon
 							className={cn(
-								"text-theme-text dim:text-theme-dim-50 transition-all duration-300",
+								"text-theme-text transition-all duration-300 dim:text-theme-dim-50",
 								{ "w-0": query === "" && !alwaysDisplayClearButton },
 								{ "w-4": query !== "" || alwaysDisplayClearButton },
 							)}
@@ -129,7 +129,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					</div>
 
 					<Icon
-						className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-500"
+						className="text-theme-primary-300 dim:text-theme-dim-500 dark:text-theme-secondary-600"
 						name="MagnifyingGlass"
 						size="lg"
 					/>

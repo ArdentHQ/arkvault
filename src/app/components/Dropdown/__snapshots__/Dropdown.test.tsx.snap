@@ -8,7 +8,7 @@ exports[`Dropdown > should render 1`] = `
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -49,13 +49,13 @@ exports[`Dropdown > should render 1`] = `
 exports[`Dropdown > should render a bottom position 1`] = `
 <div>
   <div
-    aria-controls="«r1k»"
+    aria-controls="_r_1k_"
     aria-expanded="true"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -96,13 +96,13 @@ exports[`Dropdown > should render a bottom position 1`] = `
 exports[`Dropdown > should render a bottom-left position 1`] = `
 <div>
   <div
-    aria-controls="«r1n»"
+    aria-controls="_r_1n_"
     aria-expanded="true"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -148,7 +148,7 @@ exports[`Dropdown > should render a large one 1`] = `
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -189,13 +189,13 @@ exports[`Dropdown > should render a large one 1`] = `
 exports[`Dropdown > should render a left position 1`] = `
 <div>
   <div
-    aria-controls="«r1q»"
+    aria-controls="_r_1q_"
     aria-expanded="true"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -241,7 +241,7 @@ exports[`Dropdown > should render a small one 1`] = `
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -282,13 +282,13 @@ exports[`Dropdown > should render a small one 1`] = `
 exports[`Dropdown > should render a top 1`] = `
 <div>
   <div
-    aria-controls="«r20»"
+    aria-controls="_r_20_"
     aria-expanded="true"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -329,13 +329,13 @@ exports[`Dropdown > should render a top 1`] = `
 exports[`Dropdown > should render a top-left position 1`] = `
 <div>
   <div
-    aria-controls="«r1t»"
+    aria-controls="_r_1t_"
     aria-expanded="true"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -376,13 +376,13 @@ exports[`Dropdown > should render a top-left position 1`] = `
 exports[`Dropdown > should render a top-right 1`] = `
 <div>
   <div
-    aria-controls="«r23»"
+    aria-controls="_r_23_"
     aria-expanded="true"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -423,13 +423,13 @@ exports[`Dropdown > should render a top-right 1`] = `
 exports[`Dropdown > should render dropdown group options with divider, icon and secondary label 1`] = `
 <div>
   <div
-    aria-controls="«r26»"
+    aria-controls="_r_26_"
     aria-expanded="true"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -475,7 +475,7 @@ exports[`Dropdown > should render toggle icon 1`] = `
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -549,7 +549,7 @@ exports[`Dropdown > should render with options 1`] = `
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div
@@ -590,13 +590,13 @@ exports[`Dropdown > should render with options 1`] = `
 exports[`Dropdown > should render without options one 1`] = `
 <div>
   <div
-    aria-controls="«r29»"
+    aria-controls="_r_29_"
     aria-expanded="true"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
   >
     <div
-      class="cursor-pointer outline-hidden focus:outline-hidden"
+      class="outline-hidden focus:outline-hidden cursor-pointer"
     >
       <div>
         <div

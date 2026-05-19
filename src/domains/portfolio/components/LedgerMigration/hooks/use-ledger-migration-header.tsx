@@ -93,7 +93,7 @@ export const useLedgerMigrationHeader = ({
 					<Icon
 						name="CircleCross"
 						dimensions={[24, 24]}
-						className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-400"
+						className="text-theme-danger-700 dim:text-theme-danger-400 dark:text-theme-danger-info-border"
 					/>
 				),
 			};

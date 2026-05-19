@@ -100,6 +100,24 @@ describe("WalletData", () => {
 		});
 	});
 
+	describe("legacyNonce", () => {
+		it("should return `legacyNonce` as BigNumber", () => {
+			walletData.fill({ address: "test-address", attributes: { legacyNonce: "5" } });
+			const nonce = walletData.legacyNonce();
+
+			expect(nonce).toBeInstanceOf(BigNumber);
+			expect(nonce.toHuman()).toBe(5);
+		});
+
+		it("should handle undefined nonce", () => {
+			walletData.fill({ address: "test-address" });
+			const nonce = walletData.legacyNonce();
+
+			expect(nonce).toBeInstanceOf(BigNumber);
+			expect(nonce.toHuman()).toBe(0);
+		});
+	});
+
 	describe("nested properties", () => {
 		it("should get secondPublicKey from root level", () => {
 			walletData.fill({ address: "test-address", secondPublicKey: "test-second-key" });
@@ -243,6 +261,40 @@ describe("WalletData", () => {
 		it("should not be second signature when not present", () => {
 			walletData.fill({ address: "test-address" });
 			expect(walletData.isSecondSignature()).toBe(false);
+		});
+	});
+
+	describe("setAttribute", () => {
+		it("should set a top-level attribute", () => {
+			walletData.fill({ address: "test-address" });
+			walletData.setAttribute("customKey", "customValue");
+
+			expect(walletData.raw().customKey).toBe("customValue");
+		});
+
+		it("should set a nested attribute under attributes", () => {
+			walletData.fill({ address: "test-address" });
+			walletData.setAttribute("attributes.customKey", false);
+
+			expect(walletData.raw().attributes?.customKey).toBe(false);
+		});
+
+		it("should create the nested object if it does not exist", () => {
+			walletData.fill({ address: "test-address" });
+			walletData.setAttribute("attributes.customKey", undefined);
+
+			expect(walletData.raw().attributes).toBeDefined();
+			expect(walletData.raw().attributes?.customKey).toBe(undefined);
+		});
+
+		it("should override an existing value", () => {
+			walletData.fill({
+				address: "test-address",
+				attributes: { customKey: "oldValue" },
+			});
+			walletData.setAttribute("attributes.customKey", "newValue");
+
+			expect(walletData.raw().attributes?.customKey).toBe("newValue");
 		});
 	});
 

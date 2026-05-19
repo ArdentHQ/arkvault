@@ -172,6 +172,14 @@ export interface IReadWriteWallet {
 	address(): string;
 
 	/**
+	 * Get the legacy address.
+	 *
+	 * @return {?string}
+	 * @memberof IReadWriteWallet
+	 */
+	legacyAddress(): string | undefined;
+
+	/**
 	 * Get the public key
 	 *
 	 * @return {(string | undefined)}
@@ -202,6 +210,14 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	nonce(): BigNumber;
+
+	/**
+	 * Get the legacy nonce.
+	 *
+	 * @return {BigNumber}
+	 * @memberof IReadWriteWallet
+	 */
+	legacyNonce(): BigNumber;
 
 	/**
 	 * Get the avatar.
@@ -404,6 +420,14 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	isCold(): boolean;
+
+	/**
+	 * Determine if the wallet is a legacy cold wallet.
+	 *
+	 * @return {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	isLegacyCold(): boolean;
 
 	/**
 	 * Toggle the starred state.

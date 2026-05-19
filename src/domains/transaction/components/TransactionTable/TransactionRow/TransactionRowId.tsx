@@ -32,7 +32,7 @@ export const TransactionRowId = ({ transaction }: { transaction: ExtendedTransac
 				<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
 					<span className="text-sm">
 						<TruncateMiddle
-							className="text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+							className="cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
 							text={transaction.hash()}
 							maxChars={isLgAndAbove ? 14 : 12}
 							data-testid="TransactionRow__id"
@@ -43,9 +43,9 @@ export const TransactionRowId = ({ transaction }: { transaction: ExtendedTransac
 			{!transaction.isSuccess() && transaction.blockHash() && (
 				<Tooltip content={transaction.hash()}>
 					<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
-						<span className="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
+						<span className="flex h-[21px] items-center justify-between space-x-2 rounded bg-theme-danger-50 px-1.5 py-[2px] text-sm dim:border dim:border-theme-danger-info-border dim:bg-transparent dark:border dark:border-theme-danger-info-border dark:bg-transparent">
 							<TruncateMiddle
-								className="text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
+								className="cursor-pointer border-b border-b-transparent leading-[17px] text-theme-danger-700 hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border"
 								text={transaction.hash()}
 								maxChars={maxCharacters()}
 								data-testid="TransactionRow__id"
@@ -53,7 +53,7 @@ export const TransactionRowId = ({ transaction }: { transaction: ExtendedTransac
 
 							<Icon
 								name="CrossSmall"
-								className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
+								className="text-theme-danger-700 dim:text-theme-danger-info-border dark:text-theme-danger-info-border"
 								width={12}
 								height={12}
 							/>
@@ -64,9 +64,9 @@ export const TransactionRowId = ({ transaction }: { transaction: ExtendedTransac
 			{!transaction.isSuccess() && !transaction.blockHash() && (
 				<Tooltip content={transaction.hash()}>
 					<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
-						<span className="bg-theme-secondary-200 dark:border-theme-dark-700 dim:bg-transparent dim:border dim:border-theme-dim-700 flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
+						<span className="flex h-[21px] items-center justify-between space-x-1 rounded bg-theme-secondary-200 px-1.5 py-[2px] text-sm dim:border dim:border-theme-dim-700 dim:bg-transparent dark:border dark:border-theme-dark-700 dark:bg-transparent">
 							<TruncateMiddle
-								className="text-theme-primary-600 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-500 hover:border-theme-primary-600 dim:text-theme-dim-200 dim-hover:border-theme-dim-200 cursor-pointer border-b border-b-transparent leading-[17px]"
+								className="cursor-pointer border-b border-b-transparent leading-[17px] text-theme-primary-600 hover:border-theme-primary-600 dim:text-theme-dim-200 dim-hover:border-theme-dim-200 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-500"
 								text={transaction.hash()}
 								maxChars={maxCharacters()}
 								data-testid="TransactionRow__id"
@@ -74,7 +74,7 @@ export const TransactionRowId = ({ transaction }: { transaction: ExtendedTransac
 
 							<Icon
 								name="Hourglass"
-								className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200"
+								className="text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
 								width={12}
 								height={12}
 							/>

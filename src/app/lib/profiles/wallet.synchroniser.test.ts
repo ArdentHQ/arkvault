@@ -63,6 +63,44 @@ describe("WalletSynchroniser", () => {
 
 			expect(walletMock).toHaveBeenCalled();
 		});
+
+		it("should try to fetch wallet identity from snapshot if it throws 404 error", async () => {
+			const walletMock = vi.fn().mockRejectedValue(new Error("404"));
+			const legacyColdWalletMock = vi.fn().mockResolvedValue({
+				address: "legacyAddress",
+				attributes: {
+					legacyNonce: "0",
+				},
+				balance: "1000000000000000000000",
+			});
+
+			vi.spyOn(wallet, "client").mockReturnValue({
+				legacyColdWallet: legacyColdWalletMock,
+				wallet: walletMock,
+			} as any);
+
+			const legacyAddressSpy = vi.spyOn(wallet, "legacyAddress").mockReturnValue("legacyAddress");
+
+			await subject.identity();
+
+			expect(legacyColdWalletMock).toHaveBeenCalled();
+
+			legacyAddressSpy.mockRestore();
+		});
+
+		it("should not fetch wallet identity from snapshot if `legacyAddress` is `undefined`", async () => {
+			const walletMock = vi.fn().mockRejectedValue(new Error("404"));
+			const legacyColdWalletMock = vi.fn().mockResolvedValue({});
+
+			vi.spyOn(wallet, "client").mockReturnValue({
+				legacyColdWallet: legacyColdWalletMock,
+				wallet: walletMock,
+			} as any);
+
+			await subject.identity();
+
+			expect(legacyColdWalletMock).not.toHaveBeenCalled();
+		});
 	});
 
 	describe("votes", () => {

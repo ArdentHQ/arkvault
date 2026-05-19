@@ -87,13 +87,13 @@ export const FormStep = ({
 
 	return (
 		<section>
-			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex flex-col overflow-hidden rounded-sm border sm:rounded-xl">
+			<div className="flex flex-col overflow-hidden rounded-sm border border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:rounded-xl">
 				<div className="flex flex-row justify-between p-4">
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm font-semibold sm:hidden">
+					<span className="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-700 dark:text-theme-secondary-700 sm:hidden">
 						{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.TITLE")}:
 					</span>
 
-					<span className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden text-base font-semibold sm:block">
+					<span className="hidden text-base font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:block">
 						{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.FULL_TITLE")}
 					</span>
 
@@ -110,8 +110,8 @@ export const FormStep = ({
 						}}
 					/>
 				</div>
-				<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 hidden px-4 pt-3 pb-3 sm:block dark:bg-black">
-					<span className="text-theme-secondary-text dim:text-theme-dim-200 text-sm font-normal">
+				<div className="hidden bg-theme-secondary-100 px-4 pb-3 pt-3 dim:bg-theme-dim-950 dark:bg-black sm:block">
+					<span className="text-sm font-normal text-theme-secondary-text dim:text-theme-dim-200">
 						{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.DESCRIPTION")}
 					</span>
 				</div>

@@ -45,14 +45,14 @@ export const LabelCompleted = ({ className }: { className?: string }): React.Rea
 		<div
 			data-testid="LabelCompleted"
 			className={cn(
-				"dim:text-theme-success-500 text-theme-success-700 dark:text-theme-success-500 flex space-x-2 rounded-sm px-1 py-[3px] text-xs",
+				"flex space-x-2 rounded-sm px-1 py-[3px] text-xs text-theme-success-700 dim:text-theme-success-500 dark:text-theme-success-500",
 				labelBackgroundClasses({ isCompleted: true }),
 				labelBorderClasses({ isCompleted: true }),
 				{ className },
 			)}
 		>
 			<Icon name="CheckmarkDouble" className="h-4 w-4" />
-			<span className="font-semibold whitespace-nowrap">{t("COMMON.COMPLETED")}</span>
+			<span className="whitespace-nowrap font-semibold">{t("COMMON.COMPLETED")}</span>
 		</div>
 	);
 };
@@ -64,14 +64,14 @@ export const LabelPending = ({ className }: { className?: string }): React.React
 		<div
 			data-testid="LabelPending"
 			className={cn(
-				"text-theme-warning-900 dark:text-theme-dark-200 dim:text-theme-dim-200 flex space-x-2 rounded-sm px-1 py-[3px] text-xs",
+				"flex space-x-2 rounded-sm px-1 py-[3px] text-xs text-theme-warning-900 dim:text-theme-dim-200 dark:text-theme-dark-200",
 				className,
 				labelBackgroundClasses({ isPending: true }),
 				labelBorderClasses({ isPending: true }),
 			)}
 		>
 			<Spinner color="warning-alt" size="xs" width={2} />
-			<span className="font-semibold whitespace-nowrap">{t("COMMON.PENDING")}</span>
+			<span className="whitespace-nowrap font-semibold">{t("COMMON.PENDING")}</span>
 		</div>
 	);
 };
@@ -83,13 +83,13 @@ export const LabelAwaiting = ({ className }: { className?: string }): React.Reac
 		<div
 			data-testid="LabelAwaiting"
 			className={cn(
-				"dim:text-theme-dim-200 text-theme-secondary-700 dark:text-theme-dark-200 flex space-x-2 rounded-sm px-1 py-[3px] text-xs",
+				"flex space-x-2 rounded-sm px-1 py-[3px] text-xs text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200",
 				labelBackgroundClasses({ isCompleted: false, isPending: false }),
 				labelBorderClasses({ isPending: true }),
 				className,
 			)}
 		>
-			<span className="font-semibold whitespace-nowrap">{t("COMMON.AWAITING")}</span>
+			<span className="whitespace-nowrap font-semibold">{t("COMMON.AWAITING")}</span>
 		</div>
 	);
 };

@@ -123,7 +123,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 							/>
 						</FormField>
 
-						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-4 sm:mt-0 sm:ml-4 sm:border-l sm:pl-4">
+						<div className="mt-4 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800 sm:ml-4 sm:mt-0 sm:border-l sm:pl-4">
 							<FormField name="viewingMode">
 								<FormLabel label={t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")} />
 								<Select
@@ -184,7 +184,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 									})
 								}
 							/>
-							<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm whitespace-pre-line">
+							<span className="whitespace-pre-line text-sm text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700">
 								<Trans
 									i18nKey="PROFILE.PAGE_CREATE_PROFILE.DISCLAIMER"
 									components={{
