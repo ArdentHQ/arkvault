@@ -18,8 +18,8 @@ importers:
         specifier: ^0.19.0
         version: 0.19.0
       '@arkecosystem/typescript-crypto':
-        specifier: ^0.0.21
-        version: 0.0.21
+        specifier: ^0.0.26
+        version: 0.0.26
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0
@@ -51,8 +51,8 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0
       bignumber.js:
-        specifier: ^9.3.1
-        version: 9.3.1
+        specifier: ^11.0.0
+        version: 11.1.1
       browser-fs-access:
         specifier: ^0.38.0
         version: 0.38.0
@@ -430,8 +430,8 @@ packages:
     resolution: {integrity: sha512-0zLB0CMEjgQrwHBZBVTTpIjzGqr1B7A046DXvXfaFacvWPjf3ioQJHF3lQ7K1OpBaiF6KDMW7EEUXtexnb0k1g==}
     engines: {node: '>=20.12.2'}
 
-  '@arkecosystem/typescript-crypto@0.0.21':
-    resolution: {integrity: sha512-QUDFYXG4u3UjB02LXAeb+sXsCeRUmgtxo/56XyqkvDgNCndBr2hYkqUiTs9kXV8tD9wgfBRxpfMG9zNw6yXLfw==}
+  '@arkecosystem/typescript-crypto@0.0.26':
+    resolution: {integrity: sha512-bXjgcfKVVwjG/cuhmyHlxtrNtnlj+fpuWRK+V7Fg3bKgCrasQ+AdScjVBcnCeNku+fP5zHmijW62QufvCBUDOA==}
     engines: {node: '>=20.12.2'}
 
   '@asamuzakjp/css-color@3.2.0':
@@ -1676,8 +1676,8 @@ packages:
     resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
     engines: {node: ^14.21.3 || >=16}
 
-  '@noble/secp256k1@2.3.0':
-    resolution: {integrity: sha512-0TQed2gcBbIrh7Ccyw+y/uZQvbJwm7Ao4scBUxqpBCcsOlZG0O4KGfjtNAy/li4W8n1xt3dxrwJ0beZ2h2G6Kw==}
+  '@noble/secp256k1@3.1.0':
+    resolution: {integrity: sha512-+F7iS7tUMaNGXcc9X3PjmjvuQnXEuSjCRNzVVA2xAcKXgCaP0dHYz4SFyt4FKNHef7sOP//xihowcySSS7PK9g==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2602,6 +2602,9 @@ packages:
   bcryptjs@3.0.3:
     resolution: {integrity: sha512-GlF5wPWnSa/X5LKM1o0wz0suXIINz1iHRLvTS+sLyi7XPbe5ycmYI3DlZqVGZZtDgl4DmasFg7gOB3JYbphV5g==}
     hasBin: true
+
+  bignumber.js@11.1.1:
+    resolution: {integrity: sha512-LNkCYMieJqAts/Sj5094B92c5q+yRPlXWpABJnHMbUjB/F8AUjELmSmYX5mxbNiY/QnGnJvJIrnRuW5gUqbW5Q==}
 
   bignumber.js@9.3.1:
     resolution: {integrity: sha512-Ko0uX15oIUS7wJ3Rb30Fs6SkVbLmPBAKdlm7q9+ak9bbIeFf0MwuBsQV6z7+X768/cHsfg+WlysDWJcmthjsjQ==}
@@ -6624,10 +6627,10 @@ snapshots:
 
   '@arkecosystem/typescript-client@0.19.0': {}
 
-  '@arkecosystem/typescript-crypto@0.0.21':
+  '@arkecosystem/typescript-crypto@0.0.26':
     dependencies:
-      '@noble/secp256k1': 2.3.0
-      bignumber.js: 9.3.1
+      '@noble/secp256k1': 3.1.0
+      bignumber.js: 11.1.1
       ethers: 6.16.0
       wif: 5.0.0
     transitivePeerDependencies:
@@ -8247,7 +8250,7 @@ snapshots:
 
   '@noble/hashes@1.8.0': {}
 
-  '@noble/secp256k1@2.3.0': {}
+  '@noble/secp256k1@3.1.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -9240,6 +9243,8 @@ snapshots:
   base64-js@1.5.1: {}
 
   bcryptjs@3.0.3: {}
+
+  bignumber.js@11.1.1: {}
 
   bignumber.js@9.3.1: {}
 

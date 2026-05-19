@@ -310,7 +310,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    NaN ARK
+                    0.00 ARK
                   </span>
                 </div>
               </div>

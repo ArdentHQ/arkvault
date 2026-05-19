@@ -106,7 +106,7 @@ export const AddRecipientItem: React.FC<{
 			onDelete={onDelete}
 			address={address}
 			alias={alias}
-			amount={amount!}
+			amount={amount ?? 0}
 			ticker={ticker}
 			exchangeTicker={exchangeTicker}
 			convertedAmount={convert(amount)}

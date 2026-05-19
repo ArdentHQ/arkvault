@@ -246,6 +246,40 @@ describe("WalletData", () => {
 		});
 	});
 
+	describe("setAttribute", () => {
+		it("should set a top-level attribute", () => {
+			walletData.fill({ address: "test-address" });
+			walletData.setAttribute("customKey", "customValue");
+
+			expect(walletData.raw().customKey).toBe("customValue");
+		});
+
+		it("should set a nested attribute under attributes", () => {
+			walletData.fill({ address: "test-address" });
+			walletData.setAttribute("attributes.customKey", false);
+
+			expect(walletData.raw().attributes?.customKey).toBe(false);
+		});
+
+		it("should create the nested object if it does not exist", () => {
+			walletData.fill({ address: "test-address" });
+			walletData.setAttribute("attributes.customKey", undefined);
+
+			expect(walletData.raw().attributes).toBeDefined();
+			expect(walletData.raw().attributes?.customKey).toBe(undefined);
+		});
+
+		it("should override an existing value", () => {
+			walletData.fill({
+				address: "test-address",
+				attributes: { customKey: "oldValue" },
+			});
+			walletData.setAttribute("attributes.customKey", "newValue");
+
+			expect(walletData.raw().attributes?.customKey).toBe("newValue");
+		});
+	});
+
 	describe("conversion methods", () => {
 		it("should convert to object", () => {
 			walletData.fill({
