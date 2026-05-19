@@ -84,22 +84,22 @@ Tests import from `@/utils/testing-library` (not directly from `@testing-library
 
 ### File Naming
 
-| Type | Convention | Example |
-| :--- | :--- | :--- |
-| React component | `ComponentName.tsx` | `Button.tsx` |
-| Test | `ComponentName.test.tsx` | `Button.test.tsx` |
+| Type                 | Convention                   | Example               |
+| :------------------- | :--------------------------- | :-------------------- |
+| React component      | `ComponentName.tsx`          | `Button.tsx`          |
+| Test                 | `ComponentName.test.tsx`     | `Button.test.tsx`     |
 | TypeScript contracts | `ComponentName.contracts.ts` | `Button.contracts.ts` |
-| Styles (CSS-in-JS) | `ComponentName.styles.ts` | `Button.styles.ts` |
+| Styles (CSS-in-JS)   | `ComponentName.styles.ts`    | `Button.styles.ts`    |
 
 ### TypeScript Naming
 
-| Construct | Convention |
-| :--- | :--- |
-| interface / type / class / enum | `PascalCase` |
-| Component props interface | `ComponentNameProps` |
-| variables / functions | `camelCase` |
-| constants | `CONSTANT_CASE` |
-| data attributes / URL paths | `kebab-case` |
+| Construct                       | Convention           |
+| :------------------------------ | :------------------- |
+| interface / type / class / enum | `PascalCase`         |
+| Component props interface       | `ComponentNameProps` |
+| variables / functions           | `camelCase`          |
+| constants                       | `CONSTANT_CASE`      |
+| data attributes / URL paths     | `kebab-case`         |
 
 ### Naming Philosophy (from `NAMING_CONVENTIONS.md`)
 
