@@ -26,6 +26,9 @@ export class Currency {
 		const valueBigNumber = BigNumber.make(value);
 		const absValue = valueBigNumber.isNegative() ? valueBigNumber.times(-1) : valueBigNumber;
 
+		if (ticker === "JPY") {
+			console.log(value)
+		}
 		if (currencyDecimals > 2) {
 			const numeral = Numeral.make(options.locale, {
 				currencyDisplay: "name",
@@ -41,6 +44,10 @@ export class Currency {
 
 		const multiplier = Math.pow(10, decimals);
 		let money = Money.make(Math.round(absValue.times(multiplier).toNumber()), ticker);
+		// let money =
+		// 	decimals === 2
+		// 		? Money.make(Math.round(absValue.times(100).toNumber()), ticker)
+		// 		: Money.make(absValue.times(100).decimalPlaces(0).toNumber(), ticker);
 
 		if (options.locale) {
 			money = money.setLocale(options.locale);
