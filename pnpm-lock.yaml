@@ -69,8 +69,8 @@ importers:
         specifier: ^4.3.1
         version: 4.3.1
       dinero.js:
-        specifier: ^1.9.1
-        version: 1.9.1
+        specifier: ^2.0.2
+        version: 2.0.2
       dot-prop:
         specifier: ^9.0.0
         version: 9.0.0
@@ -3164,8 +3164,9 @@ packages:
   dijkstrajs@1.0.3:
     resolution: {integrity: sha512-qiSlmBq9+BCdCA/L46dw8Uy93mloxsPSbwnm5yrKn2vMPiy8KyAskTF6zuV/j5BMsmOGZDPs7KjU+mjb670kfA==}
 
-  dinero.js@1.9.1:
-    resolution: {integrity: sha512-1HXiF2vv3ZeRQ23yr+9lFxj/PbZqutuYWJnE0qfCB9xYBPnuaJ8lXtli1cJM0TvUXW1JTOaePldmqN5JVNxKSA==}
+  dinero.js@2.0.2:
+    resolution: {integrity: sha512-d+4egJTvNinkb66KSed11Daqz6MWaOHzyalLu6h3p+BLrsmwKFjHjvOKivOWeM7WyoX89te+xx4cKI6zrDtCfQ==}
+    engines: {node: '>=20.0.0'}
 
   dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
@@ -9887,7 +9888,7 @@ snapshots:
 
   dijkstrajs@1.0.3: {}
 
-  dinero.js@1.9.1: {}
+  dinero.js@2.0.2: {}
 
   dir-glob@3.0.1:
     dependencies:
