@@ -26,9 +26,6 @@ export class Currency {
 		const valueBigNumber = BigNumber.make(value);
 		const absValue = valueBigNumber.isNegative() ? valueBigNumber.times(-1) : valueBigNumber;
 
-		if (ticker === "JPY") {
-			console.log(value);
-		}
 		if (currencyDecimals > 2) {
 			const numeral = Numeral.make(options.locale, {
 				currencyDisplay: "name",
