@@ -1,3 +1,4 @@
+import Dinero from "dinero.js";
 import { describe, expect, it } from "vitest";
 import { Money } from "./money";
 
