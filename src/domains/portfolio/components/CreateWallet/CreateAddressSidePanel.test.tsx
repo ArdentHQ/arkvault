@@ -330,6 +330,33 @@ describe("CreateAddressSidePanel", () => {
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 	});
 
+	it("should reset state when panel is closed and reopened", async () => {
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
+
+		const ControlledPanel = () => {
+			const [open, setOpen] = React.useState(true);
+			return (
+				<>
+					<button data-testid="toggle-panel" onClick={() => setOpen((v) => !v)} />
+					<CreateAddressesSidePanel open={open} onOpenChange={setOpen} />
+				</>
+			);
+		};
+
+		render(<ControlledPanel />, { route: createURL });
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("toggle-panel"));
+		await userEvent.click(screen.getByTestId("toggle-panel"));
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+	});
+
 	it("should call onOpenChange when clicking back on WalletOverviewStep", async () => {
 		const onOpenChange = vi.fn();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
@@ -359,9 +386,7 @@ describe("CreateAddressSidePanel", () => {
 			route: createURL,
 		});
 
-		await expect(
-			screen.findByTestId("AlertBanner_error"),
-		).resolves.toBeVisible();
+		await expect(screen.findByTestId("AlertBanner_error")).resolves.toBeVisible();
 
 		generateSpy.mockRestore();
 	});
@@ -469,42 +494,58 @@ describe("useCreateStepHeaderConfig", () => {
 
 describe("useShowFooter", () => {
 	it("returns false when on MethodStep", () => {
-		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.MethodStep, isHDWalletCreation: false }));
+		const { result } = renderHook(() =>
+			useShowFooter({ activeTab: CreateStep.MethodStep, isHDWalletCreation: false }),
+		);
 		expect(result.current).toBe(false);
 	});
 
 	it("returns true for non-HD wallet when on WalletOverviewStep", () => {
-		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.WalletOverviewStep, isHDWalletCreation: false }));
+		const { result } = renderHook(() =>
+			useShowFooter({ activeTab: CreateStep.WalletOverviewStep, isHDWalletCreation: false }),
+		);
 		expect(result.current).toBe(true);
 	});
 
 	it("returns true for non-HD wallet on ConfirmPassphraseStep", () => {
-		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.ConfirmPassphraseStep, isHDWalletCreation: false }));
+		const { result } = renderHook(() =>
+			useShowFooter({ activeTab: CreateStep.ConfirmPassphraseStep, isHDWalletCreation: false }),
+		);
 		expect(result.current).toBe(true);
 	});
 
 	it("returns false for non-HD wallet on SuccessStep", () => {
-		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.SuccessStep, isHDWalletCreation: false }));
+		const { result } = renderHook(() =>
+			useShowFooter({ activeTab: CreateStep.SuccessStep, isHDWalletCreation: false }),
+		);
 		expect(result.current).toBe(true);
 	});
 
 	it("returns false for HD wallet when on MethodStep", () => {
-		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.MethodStep, isHDWalletCreation: true }));
+		const { result } = renderHook(() =>
+			useShowFooter({ activeTab: CreateStep.MethodStep, isHDWalletCreation: true }),
+		);
 		expect(result.current).toBe(false);
 	});
 
 	it("returns true for HD wallet when on WalletOverviewStep", () => {
-		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.WalletOverviewStep, isHDWalletCreation: true }));
+		const { result } = renderHook(() =>
+			useShowFooter({ activeTab: CreateStep.WalletOverviewStep, isHDWalletCreation: true }),
+		);
 		expect(result.current).toBe(true);
 	});
 
 	it("returns false for HD wallet when on SuccessStep", () => {
-		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.SuccessStep, isHDWalletCreation: true }));
+		const { result } = renderHook(() =>
+			useShowFooter({ activeTab: CreateStep.SuccessStep, isHDWalletCreation: true }),
+		);
 		expect(result.current).toBe(false);
 	});
 
 	it("returns false for HD wallet when on ConfirmPassphraseStep", () => {
-		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.ConfirmPassphraseStep, isHDWalletCreation: true }));
+		const { result } = renderHook(() =>
+			useShowFooter({ activeTab: CreateStep.ConfirmPassphraseStep, isHDWalletCreation: true }),
+		);
 		expect(result.current).toBe(true);
 	});
 });
