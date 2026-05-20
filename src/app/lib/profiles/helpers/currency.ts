@@ -42,12 +42,12 @@ export class Currency {
 				.trim();
 		}
 
-		const multiplier = Math.pow(10, decimals);
-		let money = Money.make(Math.round(absValue.times(multiplier).toNumber()), ticker);
-		// let money =
-		// 	decimals === 2
-		// 		? Money.make(Math.round(absValue.times(100).toNumber()), ticker)
-		// 		: Money.make(absValue.times(100).decimalPlaces(0).toNumber(), ticker);
+		// const multiplier = Math.pow(10, decimals);
+		// let money = Money.make(Math.round(absValue.times(multiplier).toNumber()), ticker);
+		let money =
+			decimals === 2
+				? Money.make(Math.round(absValue.times(100).toNumber()), ticker)
+				: Money.make(absValue.times(100).decimalPlaces(0).toNumber(), ticker);
 
 		if (options.locale) {
 			money = money.setLocale(options.locale);
