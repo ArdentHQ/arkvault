@@ -77,7 +77,12 @@ export class Money {
 		if (!Number.isInteger(value) || value === 0) {
 			throw new TypeError("The divisor must be a non-zero integer.");
 		}
-		return this.#fromDinero(allocate(this.#value, Array.from({ length: value }, () => 1))[0]);
+		return this.#fromDinero(
+			allocate(
+				this.#value,
+				Array.from({ length: value }, () => 1),
+			)[0],
+		);
 	}
 
 	#fromDinero(value: Dinero<number, string>): Money {
