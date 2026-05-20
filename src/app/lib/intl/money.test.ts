@@ -1,5 +1,5 @@
 import { dinero } from "dinero.js";
-import * as currencies from "dinero.js/currencies";
+import * as currencies from "dinero.js";
 import { describe, expect, it } from "vitest";
 import { Money } from "./money";
 

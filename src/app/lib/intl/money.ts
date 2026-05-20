@@ -16,7 +16,7 @@ import {
 	toDecimal,
 	toSnapshot,
 } from "dinero.js";
-import * as allCurrencies from "dinero.js/currencies";
+import * as allCurrencies from "dinero.js";
 
 const currencyMap = allCurrencies as unknown as Record<string, DineroCurrency<number>>;
 
