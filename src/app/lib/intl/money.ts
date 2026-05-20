@@ -38,7 +38,7 @@ export class Money {
 		this.#value = dinero({
 			amount: options.amount,
 			currency: getCurrencyObject(options.currency),
-			...(options.scale !== undefined ? { scale: options.scale } : {}),
+			...(options.scale ? { scale: options.scale } : {}),
 		});
 		this.#currency = options.currency;
 		this.#locale = options.locale ?? "en-US";

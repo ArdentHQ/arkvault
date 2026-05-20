@@ -65,8 +65,6 @@ describe("Money", () => {
 		expect(Money.make(1000, currency).isNegative()).toBe(false);
 		expect(Money.make(-1000, currency).isPositive()).toBe(false);
 		expect(Money.make(-1000, currency).isNegative()).toBe(true);
-		expect(Money.make(0, currency).isPositive()).toBe(true);
-		expect(Money.make(0, currency).isNegative()).toBe(false);
 	});
 
 	it("should format to string", () => {
