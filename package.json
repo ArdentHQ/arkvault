@@ -76,7 +76,7 @@
 		"locale-currency": "^0.0.4",
 		"localforage": "^1.10.0",
 		"node-dotify": "^1.1.0",
-		"p-queue": "^8.1.0",
+		"p-queue": "^8.1.1",
 		"p-retry": "^6.2.1",
 		"platform": "^1.3.6",
 		"qr-scanner": "^1.4.2",
