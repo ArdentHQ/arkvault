@@ -52,12 +52,8 @@ export class Money {
 		});
 	}
 
-	public static make(amount: number | Dinero<number>, currency: string): Money {
-		if (typeof amount === "number") {
-			return new Money({ amount, currency });
-		}
-		const { amount: rawAmount, scale } = toSnapshot(amount);
-		return new Money({ amount: rawAmount as number, currency, scale: scale as number });
+	public static make(amount: number, currency: string): Money {
+		return new Money({ amount, currency });
 	}
 
 	public setLocale(locale: string): Money {
@@ -66,22 +62,27 @@ export class Money {
 	}
 
 	public plus(value: Money): Money {
-		return Money.make(add(this.#value, value.#value), this.#currency);
+		return this.#fromDinero(add(this.#value, value.#value));
 	}
 
 	public minus(value: Money): Money {
-		return Money.make(subtract(this.#value, value.#value), this.#currency);
+		return this.#fromDinero(subtract(this.#value, value.#value));
 	}
 
 	public times(value: number): Money {
-		return Money.make(multiply(this.#value, value), this.#currency);
+		return this.#fromDinero(multiply(this.#value, value));
 	}
 
 	public divide(value: number): Money {
 		if (!Number.isInteger(value) || value === 0) {
 			throw new TypeError("The divisor must be a non-zero integer.");
 		}
-		return Money.make(allocate(this.#value, Array.from({ length: value }, () => 1))[0], this.#currency);
+		return this.#fromDinero(allocate(this.#value, Array.from({ length: value }, () => 1))[0]);
+	}
+
+	#fromDinero(value: Dinero<number, string>): Money {
+		const { amount, scale } = toSnapshot(value);
+		return new Money({ amount: amount as number, currency: this.#currency, scale: scale as number });
 	}
 
 	public isEqualTo(value: Money): boolean {
