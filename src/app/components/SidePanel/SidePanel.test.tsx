@@ -133,13 +133,16 @@ describe("SidePanel", () => {
 	it("should detect scrollable content and apply footer shadow", () => {
 		let resizeObserverCallback: ResizeObserverCallback;
 
-		const observe = vi.fn();
-		const disconnect = vi.fn();
+		class MockResizeObserver {
+			constructor(callback: ResizeObserverCallback) {
+				resizeObserverCallback = callback;
+			}
+			observe() {}
+			disconnect() {}
+			unobserve() {}
+		}
 
-		global.ResizeObserver = vi.fn((cb) => {
-			resizeObserverCallback = cb;
-			return { disconnect, observe };
-		}) as unknown as typeof ResizeObserver;
+		global.ResizeObserver = MockResizeObserver as unknown as typeof ResizeObserver;
 
 		render(
 			<SidePanel open={true} title="" onOpenChange={vi.fn()} footer={<div>footer</div>}>
@@ -164,13 +167,16 @@ describe("SidePanel", () => {
 	it("should not apply footer shadow when content is not scrollable", () => {
 		let resizeObserverCallback: ResizeObserverCallback;
 
-		const observe = vi.fn();
-		const disconnect = vi.fn();
+		class MockResizeObserver {
+			constructor(callback: ResizeObserverCallback) {
+				resizeObserverCallback = callback;
+			}
+			observe() {}
+			disconnect() {}
+			unobserve() {}
+		}
 
-		global.ResizeObserver = vi.fn((cb) => {
-			resizeObserverCallback = cb;
-			return { disconnect, observe };
-		}) as unknown as typeof ResizeObserver;
+		global.ResizeObserver = MockResizeObserver as unknown as typeof ResizeObserver;
 
 		render(
 			<SidePanel open={true} title="" onOpenChange={vi.fn()} footer={<div>footer</div>}>
