@@ -42,39 +42,31 @@ export class Money {
 	readonly #locale: string;
 	readonly #formatter: Intl.NumberFormat;
 
-	private constructor(options: { amount: number | Dinero<number>; currency: string; locale?: string; scale?: number }) {
-		let amount: number;
-		let scale: number | undefined = options.scale;
-
-		if (typeof options.amount === "object" && options.amount !== null) {
-			const snapshot = toSnapshot(options.amount as Dinero<number>);
-			amount = snapshot.amount as number;
-			if (scale === undefined) {
-				scale = snapshot.scale as number;
-			}
-		} else {
-			amount = options.amount as number;
-		}
-
+	private constructor(options: { amount: number; currency: string; locale?: string; scale?: number }) {
 		this.#value = dinero({
-			amount,
+			amount: options.amount,
 			currency: getCurrencyObject(options.currency),
-			...(scale !== undefined ? { scale } : {}),
+			...(options.scale !== undefined ? { scale: options.scale } : {}),
 		});
 		this.#currency = options.currency;
 		this.#locale = options.locale ?? "en-US";
 
-		const { scale: resolvedScale } = toSnapshot(this.#value);
+		const { scale } = toSnapshot(this.#value);
 		this.#formatter = new Intl.NumberFormat(this.#locale, {
 			currency: this.#currency,
-			maximumFractionDigits: resolvedScale as number,
-			minimumFractionDigits: resolvedScale as number,
+			maximumFractionDigits: scale as number,
+			minimumFractionDigits: scale as number,
 			style: "currency",
 		});
 	}
 
-	public static make(amount: number | Dinero<number>, currency: string): Money {
+	public static make(amount: number, currency: string): Money {
 		return new Money({ amount, currency });
+	}
+
+	private static fromDinero(value: Dinero<number>, currency: string): Money {
+		const { amount, scale } = toSnapshot(value);
+		return new Money({ amount: amount as number, currency, scale: scale as number });
 	}
 
 	public setLocale(locale: string): Money {
@@ -88,22 +80,22 @@ export class Money {
 	}
 
 	public plus(value: Money): Money {
-		return Money.make(add(this.#value, value.#value), this.#currency);
+		return Money.fromDinero(add(this.#value, value.#value), this.#currency);
 	}
 
 	public minus(value: Money): Money {
-		return Money.make(subtract(this.#value, value.#value), this.#currency);
+		return Money.fromDinero(subtract(this.#value, value.#value), this.#currency);
 	}
 
 	public times(value: number): Money {
-		return Money.make(multiply(this.#value, value), this.#currency);
+		return Money.fromDinero(multiply(this.#value, value), this.#currency);
 	}
 
 	public divide(value: number): Money {
 		if (!Number.isInteger(value) || value === 0) {
 			throw new TypeError("The divisor must be a non-zero integer.");
 		}
-		return Money.make(allocate(this.#value, Array.from({ length: value }, () => 1))[0], this.#currency);
+		return Money.fromDinero(allocate(this.#value, Array.from({ length: value }, () => 1))[0], this.#currency);
 	}
 
 	public isEqualTo(value: Money): boolean {
