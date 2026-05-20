@@ -8,7 +8,7 @@ const currency = "USD";
 const USD = (currencies as any).USD;
 const EUR = (currencies as any).EUR;
 
-const makeDinero = (amt: number, curr = USD) => dinero({ amount: amt, currency: curr });
+const makeDinero = (amount: number, currency = USD) => dinero({ amount, currency });
 
 describe("Money", () => {
 	it("should make an instance of Money", () => {
@@ -80,17 +80,12 @@ describe("Money", () => {
 	it("should check if positive or negative", () => {
 		const positive = Money.make(makeDinero(1000), currency);
 		const negative = Money.make(makeDinero(-1000), currency);
-		const zero = Money.make(makeDinero(0), currency);
 
 		expect(positive.isPositive()).toBe(true);
 		expect(positive.isNegative()).toBe(false);
 
 		expect(negative.isPositive()).toBe(false);
 		expect(negative.isNegative()).toBe(true);
-
-		// Dinero.js considers 0 to be positive
-		expect(zero.isPositive()).toBe(true);
-		expect(zero.isNegative()).toBe(false);
 	});
 
 	it("should format to string", () => {

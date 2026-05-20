@@ -16,7 +16,7 @@ import {
 	toDecimal,
 	toSnapshot,
 } from "dinero.js";
-import * as allCurrencies from "dinero.js";
+import * as allCurrencies from "dinero.js/currencies";
 
 const currencyMap = allCurrencies as unknown as Record<string, DineroCurrency<number>>;
 
@@ -40,6 +40,7 @@ export class Money {
 	readonly #value: Dinero<number>;
 	readonly #currency: string;
 	readonly #locale: string;
+	readonly #formatter: Intl.NumberFormat;
 
 	private constructor(options: { amount: number | Dinero<number>; currency: string; locale?: string; scale?: number }) {
 		let amount: number;
@@ -62,6 +63,14 @@ export class Money {
 		});
 		this.#currency = options.currency;
 		this.#locale = options.locale ?? "en-US";
+
+		const { scale: resolvedScale } = toSnapshot(this.#value);
+		this.#formatter = new Intl.NumberFormat(this.#locale, {
+			currency: this.#currency,
+			maximumFractionDigits: resolvedScale as number,
+			minimumFractionDigits: resolvedScale as number,
+			style: "currency",
+		});
 	}
 
 	public static make(amount: number | Dinero<number>, currency: string): Money {
@@ -134,14 +143,7 @@ export class Money {
 	}
 
 	public format(): string {
-		const { currency, scale } = toSnapshot(this.#value);
-		const amount = parseFloat(toDecimal(this.#value));
-		return new Intl.NumberFormat(this.#locale, {
-			currency: currency.code,
-			maximumFractionDigits: scale as number,
-			minimumFractionDigits: scale as number,
-			style: "currency",
-		}).format(amount);
+		return this.#formatter.format(toDecimal(this.#value) as unknown as number);
 	}
 
 	public toUnit(): number {

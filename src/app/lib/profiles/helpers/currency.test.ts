@@ -11,8 +11,8 @@ describe("Helpers.Currency", () => {
 	});
 
 	it("should format fiat without decimals", () => {
-		expect(Currency.format(10, "KRW")).toBe("₩10.00");
-		expect(Currency.format(10, "JPY")).toBe("¥10.00");
+		expect(Currency.format(10, "KRW")).toBe("₩10");
+		expect(Currency.format(10, "JPY")).toBe("¥10");
 	});
 
 	it.each(["BTC", "ETH", "ARK", "DARK"])("should format crypto (%s)", (currency) => {
