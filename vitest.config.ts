@@ -30,9 +30,7 @@ export default defineConfig(async (env) => {
 				isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
 				// include: ["src/**/*.test.{ts,tsx}"],
-				include: process.env.COVERAGE_INCLUDE_PATH
-					? process.env.COVERAGE_INCLUDE_PATH.split(",")
-					: ["src/"],
+				include: process.env.COVERAGE_INCLUDE_PATH ? process.env.COVERAGE_INCLUDE_PATH.split(",") : ["src/"],
 				server: {
 					deps: {
 						fallbackCJS: true,
