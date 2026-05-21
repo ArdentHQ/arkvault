@@ -40,6 +40,7 @@ export default defineConfig(async (env) => {
 						? process.env.COVERAGE_INCLUDE_PATH.split(",")
 						: ["src/"],
 					exclude: [
+						"**/*.svg",
 						"src/**/*.e2e.ts",
 						"src/**/e2e/**",
 						"src/**/cucumber/**",
