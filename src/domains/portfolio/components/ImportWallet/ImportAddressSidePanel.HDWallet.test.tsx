@@ -628,4 +628,140 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		expect(getAddressPrefix(summaryFirstAddress)).toBe(getAddressPrefix(firstAddress)); // Address from index 0
 		expect(getAddressPrefix(summarySecondAddress)).toBe(getAddressPrefix(secondAddress)); // Address from index 1
 	});
+
+	it("should call onBack handler when pressing back on SelectAccountStep with existing HD wallets", async () => {
+		for (const w of profile.wallets().values()) {
+			profile.wallets().forget(w.id());
+		}
+
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			levels: { account: 0 },
+			mnemonic,
+		});
+		profile.wallets().push(wallet);
+
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		await user.click(screen.getByText("HD Wallet"));
+
+		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
+
+		await user.click(getBackButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		});
+
+		profile.wallets().forget(wallet.id());
+	});
+
+	it("should complete encryption password step and import with encrypted mnemonic", async () => {
+		profile.wallets().flush();
+
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		await user.click(screen.getByText("HD Wallet"));
+
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
+
+		const encryptionCheckbox = screen.getByTestId("WalletEncryptionBanner__encryption-toggle");
+		await user.click(encryptionCheckbox);
+
+		const responsibilityCheckbox = screen.getByTestId("WalletEncryptionBanner__checkbox");
+		await user.click(responsibilityCheckbox);
+
+		await waitFor(() => expect(getContinueButton()).toBeEnabled());
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
+		});
+
+		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
+		const confirmPasswordInput = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
+
+		await user.clear(passwordInput);
+		await user.paste("TestPass1!");
+
+		await user.clear(confirmPasswordInput);
+		await user.paste("TestPass1!");
+
+		await waitFor(() => expect(getContinueButton()).toBeEnabled());
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SelectAddressStep")).toBeInTheDocument();
+		});
+
+		await waitFor(() => expect(screen.queryByText(/Loading Addresses/)).not.toBeInTheDocument());
+
+		await user.click(getAddressCheckboxes()[0]);
+
+		await waitFor(() => expect(getContinueButton()).toBeEnabled());
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SummaryStep")).toBeInTheDocument();
+		});
+
+		for (const w of profile.wallets().values()) {
+			if (w.isHDWallet()) {
+				profile.wallets().forget(w.id());
+			}
+		}
+	});
+
+	it("should skip already-imported addresses when all addresses are selected", async () => {
+		profile.wallets().flush();
+
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			levels: { account: 0, addressIndex: 0 },
+			mnemonic,
+		});
+
+		wallet.mutator().accountName("Test Account");
+		profile.wallets().push(wallet);
+
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		await user.click(screen.getByText("HD Wallet"));
+
+		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
+
+		await user.click(getContinueButton());
+
+		await expect(screen.findByTestId("EnterImportValueStep")).resolves.toBeVisible();
+
+		await user.clear(screen.getByTestId("InputPassword"));
+		await user.paste(mnemonic);
+
+		await waitFor(() => expect(getContinueButton()).toBeEnabled());
+		await user.click(getContinueButton());
+
+		await expect(screen.findByTestId("SelectAddressStep")).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.queryByText(/Loading Addresses/)).not.toBeInTheDocument());
+
+		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
+
+		await waitFor(() => expect(getAddressCheckboxes().length).toBeGreaterThan(1));
+
+		await user.click(screen.getByTestId("SelectAddressStep__select-all"));
+
+		await waitFor(() => expect(getContinueButton()).toBeEnabled());
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SummaryStep")).toBeInTheDocument();
+		});
+
+		profile.wallets().flush();
+	});
 });
