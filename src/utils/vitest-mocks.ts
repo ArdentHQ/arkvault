@@ -1,4 +1,3 @@
-/* istanbul ignore file */
 import { openTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 
 export function createLedgerTransportFactoryMock() {
