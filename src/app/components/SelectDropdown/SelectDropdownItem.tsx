@@ -23,7 +23,6 @@ export const SelectDropdownItem = memo(
 					{ "is-selected": item.label === inputValue },
 					{ "is-disabled": item.isDisabled },
 				),
-				disabled: item.isDisabled,
 				index,
 				item,
 				onMouseDown: item.isDisabled ? undefined : () => onMouseDown(item),
