@@ -11,13 +11,6 @@ const coverageThresholdFunctions = Number(process.env.COVERAGE_THRESHOLD_FUNCTIO
 const coverageThresholdStatements = Number(process.env.COVERAGE_THRESHOLD_STATEMENTS || 100);
 const coverageThresholdBranches = Number(process.env.COVERAGE_THRESHOLD_BRANCHES || 100);
 
-const e2eExclude = [
-	"src/**/*.e2e.ts",
-	"src/**/e2e/**",
-	"src/**/cucumber/**",
-	"src/tests/**",
-];
-
 export default defineConfig(async (env) => {
 	const tailwindcss = (await import("@tailwindcss/vite")).default;
 
@@ -36,12 +29,7 @@ export default defineConfig(async (env) => {
 				environment: "jsdom",
 				isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
-				exclude: [
-					"**/node_modules/**",
-					"**/dist/**",
-					"**/.{idea,git,cache,output,temp}/**",
-					...e2eExclude,
-				],
+				include: ["src/**/*.test.{ts,tsx}"],
 				server: {
 					deps: {
 						fallbackCJS: true,
@@ -52,7 +40,10 @@ export default defineConfig(async (env) => {
 						? process.env.COVERAGE_INCLUDE_PATH.split(",")
 						: ["src/"],
 					exclude: [
-						...e2eExclude,
+						"src/**/*.e2e.ts",
+						"src/**/e2e/**",
+						"src/**/cucumber/**",
+						"src/tests/**",
 						"**/build/*",
 						"**/dist/*",
 						"data.ts",
