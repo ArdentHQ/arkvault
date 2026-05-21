@@ -651,11 +651,7 @@ exports[`FormStep > should render 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="fromCurrency-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -678,8 +674,10 @@ exports[`FormStep > should render 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="fromCurrency-menu"
+                                aria-expanded="false"
                                 aria-labelledby="fromCurrency-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text cursor-default"
@@ -688,6 +686,7 @@ exports[`FormStep > should render 1`] = `
                                 id="fromCurrency-input"
                                 name="fromCurrency"
                                 placeholder="Select"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -703,8 +702,13 @@ exports[`FormStep > should render 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="fromCurrency-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    disabled=""
+                                    id="fromCurrency-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -897,11 +901,7 @@ exports[`FormStep > should render 1`] = `
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="toCurrency-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -924,8 +924,10 @@ exports[`FormStep > should render 1`] = `
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="toCurrency-menu"
+                                  aria-expanded="false"
                                   aria-labelledby="toCurrency-label"
                                   autocomplete="off"
                                   class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text cursor-default"
@@ -934,6 +936,7 @@ exports[`FormStep > should render 1`] = `
                                   id="toCurrency-input"
                                   name="toCurrency"
                                   placeholder="Select"
+                                  role="combobox"
                                   type="text"
                                   value=""
                                 />
@@ -949,8 +952,13 @@ exports[`FormStep > should render 1`] = `
                                     class="flex items-center"
                                   >
                                     <div
+                                      aria-controls="toCurrency-menu"
+                                      aria-expanded="false"
                                       class="flex items-center justify-center"
                                       data-testid="SelectDropdown__caret"
+                                      disabled=""
+                                      id="toCurrency-toggle-button"
+                                      tabindex="-1"
                                     >
                                       <div
                                         class="absolute inset-0 block cursor-pointer md:hidden"
@@ -1141,11 +1149,7 @@ exports[`FormStep > should render 1`] = `
                 class="w-full"
               >
                 <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  aria-owns="SelectRecipient__dropdown-menu"
                   class="w-full"
-                  role="combobox"
                 >
                   <span>
                     <span>
@@ -1161,8 +1165,10 @@ exports[`FormStep > should render 1`] = `
                             class="relative flex h-full flex-1"
                           >
                             <input
+                              aria-activedescendant=""
                               aria-autocomplete="list"
                               aria-controls="SelectRecipient__dropdown-menu"
+                              aria-expanded="false"
                               aria-invalid="false"
                               aria-labelledby="SelectRecipient__dropdown-label"
                               autocomplete="off"
@@ -1172,6 +1178,7 @@ exports[`FormStep > should render 1`] = `
                               id="SelectRecipient__dropdown-input"
                               name="recipientWallet"
                               placeholder="Enter the payout address"
+                              role="combobox"
                               type="text"
                               value=""
                             />
