@@ -36,6 +36,7 @@ export default defineConfig(async (env) => {
 					},
 				},
 				coverage: {
+					all: false,
 					include: process.env.COVERAGE_INCLUDE_PATH
 						? process.env.COVERAGE_INCLUDE_PATH.split(",")
 						: ["src/"],
