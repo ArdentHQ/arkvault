@@ -29,7 +29,10 @@ export default defineConfig(async (env) => {
 				environment: "jsdom",
 				isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
-				include: ["src/**/*.test.{ts,tsx}"],
+				// include: ["src/**/*.test.{ts,tsx}"],
+				exclude: [
+					"src/**/cucumber/**",
+				],
 				server: {
 					deps: {
 						fallbackCJS: true,
