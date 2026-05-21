@@ -49,6 +49,7 @@ export default defineConfig(async (env) => {
 						"src/**/*.models.{js,jsx,ts,tsx}",
 						"src/**/*.styles.{js,jsx,ts,tsx}",
 						"src/**/cucumber/*.ts",
+						"src/**/cucumber/**",
 						"src/**/e2e/*.ts",
 						"src/i18n/**/*",
 						"src/polyfill/**/*",
