@@ -27,11 +27,7 @@ exports[`SelectToken > should render 1`] = `
       class="w-full"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-owns="SelectToken__dropdown-menu"
         class="w-full"
-        role="combobox"
       >
         <span>
           <span>
@@ -50,14 +46,17 @@ exports[`SelectToken > should render 1`] = `
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-controls="SelectToken__dropdown-menu"
+                    aria-expanded="false"
                     aria-labelledby="SelectToken__dropdown-label"
                     autocomplete="off"
                     class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
                     data-testid="SelectDropdown__input"
                     id="SelectToken__dropdown-input"
                     placeholder="Select Token"
+                    role="combobox"
                     type="text"
                     value=""
                   />
@@ -73,8 +72,12 @@ exports[`SelectToken > should render 1`] = `
                       class="flex items-center"
                     >
                       <div
+                        aria-controls="SelectToken__dropdown-menu"
+                        aria-expanded="false"
                         class="flex items-center justify-center"
                         data-testid="SelectDropdown__caret"
+                        id="SelectToken__dropdown-toggle-button"
+                        tabindex="-1"
                       >
                         <div
                           class="absolute inset-0 block cursor-pointer md:hidden"
@@ -151,11 +154,7 @@ exports[`SelectToken > should render multiple  1`] = `
       class="w-full"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-owns="SelectToken__dropdown-menu"
         class="w-full"
-        role="combobox"
       >
         <span>
           <span>
@@ -174,14 +173,17 @@ exports[`SelectToken > should render multiple  1`] = `
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-controls="SelectToken__dropdown-menu"
+                    aria-expanded="false"
                     aria-labelledby="SelectToken__dropdown-label"
                     autocomplete="off"
                     class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
                     data-testid="SelectDropdown__input"
                     id="SelectToken__dropdown-input"
                     placeholder="Select Token"
+                    role="combobox"
                     type="text"
                     value=""
                   />
@@ -197,8 +199,12 @@ exports[`SelectToken > should render multiple  1`] = `
                       class="flex items-center"
                     >
                       <div
+                        aria-controls="SelectToken__dropdown-menu"
+                        aria-expanded="false"
                         class="flex items-center justify-center"
                         data-testid="SelectDropdown__caret"
+                        id="SelectToken__dropdown-toggle-button"
+                        tabindex="-1"
                       >
                         <div
                           class="absolute inset-0 block cursor-pointer md:hidden"
@@ -275,11 +281,7 @@ exports[`SelectToken > should render with default value  1`] = `
       class="w-full"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-owns="SelectToken__dropdown-menu"
         class="w-full"
-        role="combobox"
       >
         <span>
           <span>
@@ -313,14 +315,17 @@ exports[`SelectToken > should render with default value  1`] = `
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
                     aria-controls="SelectToken__dropdown-menu"
+                    aria-expanded="false"
                     aria-labelledby="SelectToken__dropdown-label"
                     autocomplete="off"
                     class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
                     data-testid="SelectDropdown__input"
                     id="SelectToken__dropdown-input"
                     placeholder="Select Token"
+                    role="combobox"
                     type="text"
                     value="DARK2…"
                   />
@@ -346,8 +351,12 @@ exports[`SelectToken > should render with default value  1`] = `
                       class="flex items-center"
                     >
                       <div
+                        aria-controls="SelectToken__dropdown-menu"
+                        aria-expanded="false"
                         class="flex items-center justify-center"
                         data-testid="SelectDropdown__caret"
+                        id="SelectToken__dropdown-toggle-button"
+                        tabindex="-1"
                       >
                         <div
                           class="absolute inset-0 block cursor-pointer md:hidden"
