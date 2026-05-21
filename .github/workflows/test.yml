@@ -411,6 +411,8 @@ jobs:
 
             - name: Test (Validations)
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_INCLUDE_PATH: src/domains/contact/routing.ts
               with:
                   timeout_minutes: 10
                   max_attempts: 2
