@@ -29,16 +29,16 @@ export default defineConfig(async (env) => {
 				environment: "jsdom",
 				isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
-				include: ["src/**/*.test.{ts,tsx}"],
+				// include: ["src/**/*.test.{ts,tsx}"],
+				include: process.env.COVERAGE_INCLUDE_PATH
+					? process.env.COVERAGE_INCLUDE_PATH.split(",")
+					: ["src/"],
 				server: {
 					deps: {
 						fallbackCJS: true,
 					},
 				},
 				coverage: {
-					include: process.env.COVERAGE_INCLUDE_PATH
-						? process.env.COVERAGE_INCLUDE_PATH.split(",")
-						: ["src/"],
 					exclude: [
 						"src/**/e2e/**",
 						"src/**/cucumber/**",
