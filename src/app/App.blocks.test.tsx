@@ -14,9 +14,9 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-vi.mock("@/domains/contact/routing", () => ({
-	ContactRoutes: [{ component: { preload: vi.fn() } }],
-}));
+// vi.mock("@/domains/contact/routing", () => ({
+// 	ContactRoutes: [{ component: { preload: vi.fn() } }],
+// }));
 
 vi.mock("@/domains/profile/routing", async () => {
 	const page = await vi.importActual("@/domains/profile/pages/Welcome");
