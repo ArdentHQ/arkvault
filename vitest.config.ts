@@ -30,9 +30,7 @@ export default defineConfig(async (env) => {
 				isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
 				// include: ["src/**/*.test.{ts,tsx}"],
-				exclude: [
-					"src/**/cucumber/**",
-				],
+				exclude: ["src/**/cucumber/**"],
 				server: {
 					deps: {
 						fallbackCJS: true,
