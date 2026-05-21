@@ -25,7 +25,6 @@ export default defineConfig(async (env) => {
 				logHeapUsage: true,
 				maxConcurrency: 4,
 				maxWorkers: 1,
-				minWorkers: 1,
 				globals: true,
 				environment: "jsdom",
 				isolate: true,
@@ -36,7 +35,6 @@ export default defineConfig(async (env) => {
 					},
 				},
 				coverage: {
-					all: false,
 					include: process.env.COVERAGE_INCLUDE_PATH
 						? process.env.COVERAGE_INCLUDE_PATH.split(",")
 						: ["src/"],
