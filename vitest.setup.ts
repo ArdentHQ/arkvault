@@ -162,7 +162,7 @@ beforeEach(() => {
 	}
 });
 
-afterEach(async () => {
+afterEach(() => {
 	server.resetHandlers();
 });
 
