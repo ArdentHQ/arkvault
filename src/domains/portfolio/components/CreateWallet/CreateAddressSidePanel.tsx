@@ -18,7 +18,13 @@ import { useForm } from "react-hook-form";
 import { assertNetwork, assertString } from "@/utils/assertions";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { Contracts } from "@/app/lib/profiles";
-import { CreateStep, useCreateStepHeaderConfig, useShowFooter } from "./CreateAddressSidePanel.blocks";
+import {
+	CreateStep,
+	resolveBackNavigation,
+	resolveNextStep,
+	useCreateStepHeaderConfig,
+	useShowFooter,
+} from "./CreateAddressSidePanel.blocks";
 import { MethodStep } from "./MethodStep";
 import { HDWalletTabs } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletTabs";
 import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
@@ -136,31 +142,20 @@ export const CreateAddressesSidePanel = ({
 	};
 
 	const handleBack = () => {
-		if (activeTab === CreateStep.MethodStep) {
+		const nextTab = resolveBackNavigation({ activeTab, usesHDWallets });
+
+		if (nextTab === null) {
 			onOpenChange(false);
 			return;
 		}
 
-		if (!usesHDWallets && activeTab === CreateStep.WalletOverviewStep) {
-			onOpenChange(false);
-			return;
-		}
-
-		setActiveTab(activeTab - 1);
+		setActiveTab(nextTab);
 	};
 
 	const handleNext = async (parameters: { encryptionPassword?: string } = {}) => {
-		let newIndex = activeTab + 1;
+		const newIndex = resolveNextStep({ activeTab, useEncryption });
 
-		if (newIndex === CreateStep.EncryptPasswordStep && !useEncryption) {
-			newIndex = newIndex + 1;
-		}
-
-		if (newIndex === CreateStep.WalletOverviewStep) {
-			void handleGenerateWallet();
-
-			return;
-		}
+		if (newIndex === null) {return void handleGenerateWallet();}
 
 		if (newIndex === CreateStep.SuccessStep && !isHDWalletCreation) {
 			const { mnemonic, network } = getValues(["mnemonic", "network"]);
@@ -326,9 +321,7 @@ export const CreateAddressesSidePanel = ({
 			isLastStep={isLastStep}
 		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0" id="CreateWallet__form">
-				{generationError && (
-					<ErrorBanner title={t("COMMON.ERROR")}>{generationError}</ErrorBanner>
-				)}
+				{generationError && <ErrorBanner title={t("COMMON.ERROR")}>{generationError}</ErrorBanner>}
 				<Tabs activeId={activeTab}>
 					<div>
 						<TabPanel tabId={CreateStep.MethodStep}>
@@ -361,11 +354,11 @@ export const CreateAddressesSidePanel = ({
 									activeIndex={HDWalletTabStep.SelectAddressStep}
 									onClickEditWalletName={(wallet) => setEditingWallet(wallet)}
 									onStepChange={setHDWalletActiveTab}
-									onCancel={() => onOpenChange(false)}
+									onCancel={handleFinish}
 									onSubmit={handleFinish}
 									onBack={handleBackFromHdWallet}
 								/>
-								)}
+							)}
 							{!isHDWalletCreation && (
 								<SuccessStep onClickEditAlias={(wallet) => setEditingWallet(wallet)} />
 							)}

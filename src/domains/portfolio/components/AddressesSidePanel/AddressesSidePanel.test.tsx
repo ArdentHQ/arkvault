@@ -347,7 +347,7 @@ describe("AddressesSidePanel", () => {
 
 	it("should hit closeSidepanel guard when panel closes via external trigger", async () => {
 		const onOpenChange = vi.fn((open) => {
-			if (!open) return;
+			if (!open) {return;}
 		});
 
 		render(<AddressesSidePanel open={true} onClose={() => {}} onOpenChange={onOpenChange} />, {

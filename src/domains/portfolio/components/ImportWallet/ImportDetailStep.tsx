@@ -168,7 +168,7 @@ const PublicKeyField = ({ profile }: { profile: Contracts.IProfile }) => {
 					}).toString(),
 					validate: {
 						duplicateAddress: (value) => validatePublicKeyDuplicate({ profile, t, value }),
-						publicKey: async (publicKey) => validatePublicKeyAddress({ profile, t, publicKey }),
+						publicKey: async (publicKey) => validatePublicKeyAddress({ profile, publicKey, t }),
 					},
 				})}
 				data-testid="ImportWallet__publicKey-input"

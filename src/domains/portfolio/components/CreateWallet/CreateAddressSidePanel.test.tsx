@@ -1,4 +1,13 @@
-import { CreateStep, useCreateStepHeaderConfig, useShowFooter } from "./CreateAddressSidePanel.blocks";
+import * as blocks from "./CreateAddressSidePanel.blocks";
+import {
+	CreateStep,
+	resolveBackNavigation,
+	resolveNextStep,
+	useCreateStepHeaderConfig,
+	useShowFooter,
+} from "./CreateAddressSidePanel.blocks";
+import * as HDWalletTabsModule from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletTabs";
+
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
@@ -25,6 +34,7 @@ const passphrase = "power return attend drink piece found tragic fire liar page 
 const encryptionPassword = "S3cUrePa$sword";
 
 const continueButton = () => screen.getByTestId("CreateWallet__continue-button");
+const importWalletContinueButton = () => screen.getByTestId("ImportWallet__continue-button");
 
 describe("CreateAddressSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
@@ -79,6 +89,92 @@ describe("CreateAddressSidePanel", () => {
 		await userEvent.click(regularAddressButton);
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+		hdWalletMock.mockRestore();
+	});
+
+	it("should navigate to wallet overview and set HD creation mode when selecting HD wallet", async () => {
+		const hdWalletMock = vi.spyOn(profile.settings(), "get").mockReturnValue(true);
+
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.click(screen.getByText("HD Wallet"));
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+		hdWalletMock.mockRestore();
+	});
+
+	it("should open wallet name editor when onClickEditWalletName is triggered from HD wallet tabs", async () => {
+		const hdWalletMock = vi.spyOn(profile.settings(), "get").mockReturnValue(true);
+
+		const wallet = await profile.walletFactory().fromAddress({
+			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
+		});
+
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.click(screen.getByText("HD Wallet"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
+		await userEvent.type(firstInput, "power");
+		await userEvent.type(secondInput, "return");
+		await userEvent.type(thirdInput, "attend");
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("SelectAddressStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("SelectAddressStep__select-all"));
+
+		await userEvent.click(importWalletContinueButton());
+		await userEvent.click(screen.getByTestId("LedgerImportStep__edit-alias"));
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		hdWalletMock.mockRestore();
+	});
+
+	it("should regenerate wallet and return to wallet overview when backing out of HD wallet tabs", async () => {
+		const hdWalletMock = vi.spyOn(profile.settings(), "get").mockReturnValue(true);
+
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.click(screen.getByText("HD Wallet"));
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
+		await userEvent.type(firstInput, "power");
+		await userEvent.type(secondInput, "return");
+		await userEvent.type(thirdInput, "attend");
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("SelectAddressStep")).resolves.toBeVisible();
+
+		await userEvent.click(await screen.findByTestId("ImportWallet__back-button"));
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+
 		hdWalletMock.mockRestore();
 	});
 
@@ -547,5 +643,63 @@ describe("useShowFooter", () => {
 			useShowFooter({ activeTab: CreateStep.ConfirmPassphraseStep, isHDWalletCreation: true }),
 		);
 		expect(result.current).toBe(true);
+	});
+});
+
+describe("resolveNextStep", () => {
+	it("returns null for MethodStep (regenerate signal)", () => {
+		expect(resolveNextStep({ activeTab: CreateStep.MethodStep, useEncryption: false })).toBeNull();
+	});
+
+	it("returns ConfirmPassphraseStep from WalletOverviewStep", () => {
+		expect(resolveNextStep({ activeTab: CreateStep.WalletOverviewStep, useEncryption: false })).toBe(
+			CreateStep.ConfirmPassphraseStep,
+		);
+	});
+
+	it("returns EncryptPasswordStep from ConfirmPassphraseStep when encryption is enabled", () => {
+		expect(resolveNextStep({ activeTab: CreateStep.ConfirmPassphraseStep, useEncryption: true })).toBe(
+			CreateStep.EncryptPasswordStep,
+		);
+	});
+
+	it("skips EncryptPasswordStep from ConfirmPassphraseStep when encryption is disabled", () => {
+		expect(resolveNextStep({ activeTab: CreateStep.ConfirmPassphraseStep, useEncryption: false })).toBe(
+			CreateStep.SuccessStep,
+		);
+	});
+
+	it("returns SuccessStep from EncryptPasswordStep", () => {
+		expect(resolveNextStep({ activeTab: CreateStep.EncryptPasswordStep, useEncryption: true })).toBe(
+			CreateStep.SuccessStep,
+		);
+	});
+});
+
+describe("resolveBackNavigation", () => {
+	it("returns null when on MethodStep", () => {
+		expect(resolveBackNavigation({ activeTab: CreateStep.MethodStep, usesHDWallets: true })).toBeNull();
+	});
+
+	it("returns null when on WalletOverviewStep without HD wallets", () => {
+		expect(resolveBackNavigation({ activeTab: CreateStep.WalletOverviewStep, usesHDWallets: false })).toBeNull();
+	});
+
+	it("returns previous step when on WalletOverviewStep with HD wallets", () => {
+		expect(resolveBackNavigation({ activeTab: CreateStep.WalletOverviewStep, usesHDWallets: true })).toBe(
+			CreateStep.MethodStep,
+		);
+	});
+
+	it("returns previous step for mid-flow steps", () => {
+		expect(resolveBackNavigation({ activeTab: CreateStep.ConfirmPassphraseStep, usesHDWallets: false })).toBe(
+			CreateStep.WalletOverviewStep,
+		);
+	});
+
+	it("returns previous step for EncryptPasswordStep", () => {
+		expect(resolveBackNavigation({ activeTab: CreateStep.EncryptPasswordStep, usesHDWallets: false })).toBe(
+			CreateStep.ConfirmPassphraseStep,
+		);
 	});
 });

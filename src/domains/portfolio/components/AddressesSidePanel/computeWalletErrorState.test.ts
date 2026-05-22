@@ -13,10 +13,10 @@ describe("computeWalletErrorState", () => {
 	it("returns false when not in manage mode", () => {
 		expect(
 			computeWalletErrorState({
-				isManageMode: false,
-				selectedAddressesLength: 1,
 				addressToDelete: "0x123",
 				hdAccountToDelete: undefined,
+				isManageMode: false,
+				selectedAddressesLength: 1,
 				wallet,
 			}),
 		).toBe(false);
@@ -25,10 +25,10 @@ describe("computeWalletErrorState", () => {
 	it("returns false when selected addresses length is 0", () => {
 		expect(
 			computeWalletErrorState({
-				isManageMode: true,
-				selectedAddressesLength: 0,
 				addressToDelete: "0x123",
 				hdAccountToDelete: undefined,
+				isManageMode: true,
+				selectedAddressesLength: 0,
 				wallet,
 			}),
 		).toBe(false);
@@ -37,10 +37,10 @@ describe("computeWalletErrorState", () => {
 	it("returns true when wallet address matches addressToDelete", () => {
 		expect(
 			computeWalletErrorState({
-				isManageMode: true,
-				selectedAddressesLength: 1,
 				addressToDelete: wallet.address(),
 				hdAccountToDelete: undefined,
+				isManageMode: true,
+				selectedAddressesLength: 1,
 				wallet,
 			}),
 		).toBe(true);
@@ -51,10 +51,10 @@ describe("computeWalletErrorState", () => {
 		const spy = vi.spyOn(wallet, "accountName").mockReturnValue(accountName);
 		expect(
 			computeWalletErrorState({
-				isManageMode: true,
-				selectedAddressesLength: 1,
 				addressToDelete: undefined,
 				hdAccountToDelete: accountName,
+				isManageMode: true,
+				selectedAddressesLength: 1,
 				wallet,
 			}),
 		).toBe(true);
@@ -64,10 +64,10 @@ describe("computeWalletErrorState", () => {
 	it("returns false when no conditions match", () => {
 		expect(
 			computeWalletErrorState({
-				isManageMode: true,
-				selectedAddressesLength: 1,
 				addressToDelete: "0x456",
 				hdAccountToDelete: "Account 2",
+				isManageMode: true,
+				selectedAddressesLength: 1,
 				wallet,
 			}),
 		).toBe(false);

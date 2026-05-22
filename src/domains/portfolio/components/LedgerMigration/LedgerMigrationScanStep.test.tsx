@@ -13,30 +13,11 @@ import { Networks } from "@/app/lib/mainsail";
 
 vi.mock("@/app/contexts/Ledger", () => ({
 	useLedgerScanner: vi.fn().mockReturnValue({
-		wallets: [
-			{
-				address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-				balance: "100",
-				path: "m/44'/1'/0'/0/1",
-			},
-		],
-		selectedWallets: [
-			{
-				address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
-				balance: "0",
-				path: "m/44'/1'/0'/0/0",
-			},
-			{
-				address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-				balance: "100",
-				path: "m/44'/1'/0'/0/1",
-			},
-			{
-				address: "0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f",
-				balance: undefined as unknown as string,
-				path: "m/44'/1'/0'/0/2",
-			},
-		],
+		abortScanner: vi.fn(),
+		canRetry: true,
+		error: null,
+		isScanning: false,
+		isSelected: vi.fn().mockReturnValue(false),
 		loadedWallets: [
 			{
 				address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
@@ -54,12 +35,31 @@ vi.mock("@/app/contexts/Ledger", () => ({
 				path: "m/44'/1'/0'/0/2",
 			},
 		],
-		isScanning: false,
-		canRetry: true,
-		error: null,
 		scan: vi.fn(),
-		abortScanner: vi.fn(),
-		isSelected: vi.fn().mockReturnValue(false),
+		selectedWallets: [
+			{
+				address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+				balance: "0",
+				path: "m/44'/1'/0'/0/0",
+			},
+			{
+				address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+				balance: "100",
+				path: "m/44'/1'/0'/0/1",
+			},
+			{
+				address: "0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f",
+				balance: undefined as unknown as string,
+				path: "m/44'/1'/0'/0/2",
+			},
+		],
+		wallets: [
+			{
+				address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+				balance: "100",
+				path: "m/44'/1'/0'/0/1",
+			},
+		],
 	}),
 }));
 
@@ -75,8 +75,8 @@ describe("MigrationLedgerScanStep", () => {
 		network = profile.wallets().first().network();
 
 		migrator = {
-			flushTransactions: vi.fn(),
 			createTransactions: vi.fn().mockResolvedValue(undefined),
+			flushTransactions: vi.fn(),
 		};
 	});
 

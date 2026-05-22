@@ -9,22 +9,19 @@ import userEvent from "@testing-library/user-event";
 
 vi.mock("@/app/services", () => ({
 	toasts: {
-		success: vi.fn((...args: any[]) => args),
-		update: vi.fn((...args: any[]) => args),
 		dismiss: vi.fn(),
 		isActive: vi.fn().mockReturnValue(false),
+		success: vi.fn((...arguments_: any[]) => arguments_),
+		update: vi.fn((...arguments_: any[]) => arguments_),
 	},
 }));
 
 const defaultScannerState = {
-	wallets: [
-		{
-			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-			balance: "100",
-			path: "m/44'/1'/0'/0/1",
-		},
-	],
-	selectedWallets: [],
+	abortScanner: vi.fn(),
+	canRetry: true,
+	error: null,
+	isScanning: false,
+	isSelected: vi.fn().mockReturnValue(false),
 	loadedWallets: [
 		{
 			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
@@ -32,13 +29,16 @@ const defaultScannerState = {
 			path: "m/44'/1'/0'/0/1",
 		},
 	],
-	isScanning: false,
-	canRetry: true,
-	error: null,
 	scan: vi.fn(),
-	abortScanner: vi.fn(),
-	isSelected: vi.fn().mockReturnValue(false),
+	selectedWallets: [],
 	toggleSelect: vi.fn(),
+	wallets: [
+		{
+			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			balance: "100",
+			path: "m/44'/1'/0'/0/1",
+		},
+	],
 };
 
 vi.mock("@/app/contexts/Ledger", () => ({
@@ -75,16 +75,16 @@ describe("LedgerMigration LedgerScanStep", () => {
 
 	it("should show error when present", () => {
 		vi.mocked(useLedgerScanner).mockReturnValue({
-			wallets: [],
-			selectedWallets: [],
-			loadedWallets: [],
-			isScanning: false,
+			abortScanner: vi.fn(),
 			canRetry: false,
 			error: "Test error",
-			scan: vi.fn(),
-			abortScanner: vi.fn(),
+			isScanning: false,
 			isSelected: vi.fn().mockReturnValue(false),
+			loadedWallets: [],
+			scan: vi.fn(),
+			selectedWallets: [],
 			toggleSelect: vi.fn(),
+			wallets: [],
 		} as any);
 
 		render(<LedgerScanStep profile={profile} network={network} children={<div>test</div>} />);

@@ -146,7 +146,7 @@ describe("LedgerAddressVerification", () => {
 
 		await userEvent.click(screen.getByText("Cancel"));
 
-		expect(screen.queryByTestId("LedgerAddressVerification__error")).toBeInTheDocument();
+		expect(screen.getByTestId("LedgerAddressVerification__error")).toBeInTheDocument();
 		signResolve?.();
 		ledgerMocks.restoreAll();
 		signMessageSpy.mockRestore();

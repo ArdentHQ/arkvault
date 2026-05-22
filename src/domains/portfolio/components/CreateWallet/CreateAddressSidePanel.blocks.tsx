@@ -15,6 +15,54 @@ interface ShowFooterOptions {
 	isHDWalletCreation: boolean;
 }
 
+interface BackNavigationOptions {
+	activeTab: CreateStep;
+	usesHDWallets: boolean;
+}
+
+const backNavigationMap: Record<CreateStep, CreateStep | null> = {
+	[CreateStep.MethodStep]: null,
+	[CreateStep.WalletOverviewStep]: CreateStep.MethodStep,
+	[CreateStep.ConfirmPassphraseStep]: CreateStep.WalletOverviewStep,
+	[CreateStep.EncryptPasswordStep]: CreateStep.ConfirmPassphraseStep,
+	[CreateStep.SuccessStep]: CreateStep.EncryptPasswordStep,
+};
+
+export const resolveBackNavigation = ({ activeTab, usesHDWallets }: BackNavigationOptions): CreateStep | null => {
+	if (!usesHDWallets && activeTab === CreateStep.WalletOverviewStep) {
+		return null;
+	}
+
+	return backNavigationMap[activeTab];
+};
+
+interface NextStepOptions {
+	activeTab: CreateStep;
+	useEncryption: boolean;
+}
+
+const nextStepMap: Record<CreateStep, CreateStep> = {
+	[CreateStep.MethodStep]: CreateStep.WalletOverviewStep,
+	[CreateStep.WalletOverviewStep]: CreateStep.ConfirmPassphraseStep,
+	[CreateStep.ConfirmPassphraseStep]: CreateStep.EncryptPasswordStep,
+	[CreateStep.EncryptPasswordStep]: CreateStep.SuccessStep,
+	[CreateStep.SuccessStep]: CreateStep.SuccessStep,
+};
+
+export const resolveNextStep = ({ activeTab, useEncryption }: NextStepOptions): CreateStep | null => {
+	if (activeTab === CreateStep.MethodStep) {
+		return null;
+	}
+
+	const next = nextStepMap[activeTab];
+
+	if (next === CreateStep.EncryptPasswordStep && !useEncryption) {
+		return CreateStep.SuccessStep;
+	}
+
+	return next;
+};
+
 export const useShowFooter = ({ activeTab, isHDWalletCreation }: ShowFooterOptions): boolean => {
 	if (isHDWalletCreation) {
 		return activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep;

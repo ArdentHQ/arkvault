@@ -170,15 +170,13 @@ export const AddressesSidePanel = ({
 		return;
 	};
 
-	const renderErrorState = (wallet: Contracts.IReadWriteWallet) => {
-		return computeWalletErrorState({
-			isManageMode,
-			selectedAddressesLength: selectedAddresses.length,
+	const renderErrorState = (wallet: Contracts.IReadWriteWallet) => computeWalletErrorState({
 			addressToDelete,
 			hdAccountToDelete,
+			isManageMode,
+			selectedAddressesLength: selectedAddresses.length,
 			wallet,
 		});
-	};
 
 	return (
 		<SidePanel
