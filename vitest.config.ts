@@ -16,7 +16,7 @@ const toCoverageGlob = (p: string) => {
 	// Already a file path or glob with extension — leave as-is
 	if (trimmed.includes("*") || /\.\w+$/.test(trimmed)) return trimmed;
 	// Directory path — scope to TS files only
-	return `${trimmed}/**/*.{ts,tsx}`;
+	return `${trimmed}/**/*.{tsx}`;
 };
 
 export default defineConfig(async (env) => {
