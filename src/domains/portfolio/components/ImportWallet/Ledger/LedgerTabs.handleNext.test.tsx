@@ -18,7 +18,6 @@ describe("useLedgerTabsHandleNext", () => {
 		onStepChange: mockOnStepChange,
 		setShowRetry: mockSetShowRetry,
 		setActiveTab: mockSetActiveTab,
-		handleSubmit: (mockHandleSubmit as any) ?? vi.fn(),
 		handleWalletImporting: mockHandleWalletImporting,
 		...overrides,
 	});
@@ -26,7 +25,7 @@ describe("useLedgerTabsHandleNext", () => {
 	beforeEach(() => {
 		vi.clearAllMocks();
 		mockHandleSubmit = vi.fn((cb) => () => {
-			cb({ wallets: [] });
+			cb([]);
 			return undefined;
 		});
 		mockSetShowRetry.mockReset();
@@ -36,14 +35,7 @@ describe("useLedgerTabsHandleNext", () => {
 	});
 
 	it("should advance activeTab by 1 when not on LedgerScanStep", async () => {
-		const { result } = renderHook(() =>
-			useLedgerTabsHandleNext(
-				createDeps({
-					activeTab: LedgerTabStep.ListenLedgerStep,
-					handleSubmit: mockHandleSubmit as any,
-				}),
-			),
-		);
+		const { result } = renderHook(() => useLedgerTabsHandleNext(createDeps(), mockHandleSubmit));
 
 		await act(async () => {
 			await result.current.handleNext();
@@ -58,8 +50,8 @@ describe("useLedgerTabsHandleNext", () => {
 			useLedgerTabsHandleNext(
 				createDeps({
 					activeTab: LedgerTabStep.LedgerScanStep,
-					handleSubmit: mockHandleSubmit as any,
 				}),
+				mockHandleSubmit,
 			),
 		);
 
@@ -76,8 +68,8 @@ describe("useLedgerTabsHandleNext", () => {
 				createDeps({
 					activeTab: LedgerTabStep.ListenLedgerStep,
 					showRetry: true,
-					handleSubmit: mockHandleSubmit as any,
 				}),
+				mockHandleSubmit,
 			),
 		);
 
@@ -94,8 +86,8 @@ describe("useLedgerTabsHandleNext", () => {
 				createDeps({
 					activeTab: LedgerTabStep.ListenLedgerStep,
 					showRetry: false,
-					handleSubmit: mockHandleSubmit as any,
 				}),
+				mockHandleSubmit,
 			),
 		);
 
@@ -111,8 +103,8 @@ describe("useLedgerTabsHandleNext", () => {
 			useLedgerTabsHandleNext(
 				createDeps({
 					activeTab: LedgerTabStep.LedgerConnectionStep,
-					handleSubmit: mockHandleSubmit as any,
 				}),
+				mockHandleSubmit,
 			),
 		);
 
@@ -129,8 +121,8 @@ describe("useLedgerTabsHandleNext", () => {
 			useLedgerTabsHandleNext(
 				createDeps({
 					activeTab: LedgerTabStep.LedgerScanStep,
-					handleSubmit: mockHandleSubmit as any,
 				}),
+				mockHandleSubmit,
 			),
 		);
 
@@ -148,8 +140,8 @@ describe("useLedgerTabsHandleNext", () => {
 			useLedgerTabsHandleNext(
 				createDeps({
 					activeTab: LedgerTabStep.LedgerImportStep,
-					handleSubmit: mockHandleSubmit as any,
 				}),
+				mockHandleSubmit,
 			),
 		);
 
@@ -167,8 +159,8 @@ describe("useLedgerTabsHandleNext", () => {
 				createDeps({
 					activeTab: LedgerTabStep.ListenLedgerStep,
 					showRetry: true,
-					handleSubmit: mockHandleSubmit as any,
 				}),
+				mockHandleSubmit,
 			),
 		);
 
