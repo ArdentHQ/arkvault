@@ -6,9 +6,25 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-import { expect, it, describe, beforeAll, vi } from "vitest";
+import { expect, it, describe, beforeAll, vi, beforeEach } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { LedgerConnectionStep } from "./LedgerConnection";
+import { useLedgerContext } from "@/app/contexts/Ledger";
+
+const defaultLedgerContext = {
+	abortConnectionRetry: vi.fn(),
+	connect: vi.fn(),
+	error: "",
+	isConnected: false,
+};
+
+vi.mock("@/app/contexts/Ledger", () => ({
+	useLedgerContext: vi.fn(() => defaultLedgerContext),
+}));
+
+beforeEach(() => {
+	vi.mocked(useLedgerContext).mockReturnValue({ ...defaultLedgerContext });
+});
 
 const mockNetwork = {
 	coin: () => "Mainsail",
@@ -33,7 +49,7 @@ describe("LedgerConnection", () => {
 	it("should render connection step", async () => {
 		const onConnect = vi.fn();
 
-		render(
+		await render(
 			<LedgerConnectionStep
 				profile={profile}
 				network={mockNetwork as any}
@@ -48,7 +64,7 @@ describe("LedgerConnection", () => {
 	it("should render cancelling state", async () => {
 		const onConnect = vi.fn();
 
-		render(
+		await render(
 			<LedgerConnectionStep
 				profile={profile}
 				network={mockNetwork as any}
