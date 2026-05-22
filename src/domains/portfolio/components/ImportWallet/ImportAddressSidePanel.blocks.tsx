@@ -6,6 +6,8 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 import { SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
+import { assertWallet } from "@/utils/assertions";
+import { Contracts } from "@/app/lib/profiles";
 
 export enum ImportAddressStep {
 	MethodStep = 1,
@@ -24,6 +26,20 @@ export interface ImportBackButtonProps {
 	onBack?: () => void;
 	showBack?: boolean;
 }
+
+export const forgetImportedWallets = (profile: Contracts.IProfile, importedWallet?: Contracts.IReadWriteWallet) => {
+	assertWallet(importedWallet);
+
+	for (const profileWallet of profile.wallets().values()) {
+		if (profileWallet.address() === importedWallet.address()) {
+			profile.wallets().forget(profileWallet.id());
+		}
+	}
+
+	if (profile.wallets().selected().length === 0) {
+		profile.wallets().selectOne(profile.wallets().first());
+	}
+};
 
 export const getActiveStep = (
 	activeTab: ImportAddressStep,
