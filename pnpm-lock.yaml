@@ -256,8 +256,8 @@ importers:
         specifier: ^4.7.0
         version: 4.7.0(vite@7.3.3(@types/node@22.15.32)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.8.0))
       '@vitest/coverage-istanbul':
-        specifier: 4.1.6
-        version: 4.1.6(vitest@4.1.7)
+        specifier: 4.1.7
+        version: 4.1.7(vitest@4.1.7)
       autoprefixer:
         specifier: ^10.5.0
         version: 10.5.0(postcss@8.5.14)
@@ -386,7 +386,7 @@ importers:
         version: 4.5.0(rollup@2.79.2)(typescript@5.9.3)(vite@7.3.3(@types/node@22.15.32)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.8.0))
       vitest:
         specifier: ^4.1.7
-        version: 4.1.7(@types/node@22.15.32)(@vitest/coverage-istanbul@4.1.6)(jsdom@29.1.1(@noble/hashes@1.8.0))(msw@2.14.6(@types/node@22.15.32)(typescript@5.9.3))(vite@7.3.3(@types/node@22.15.32)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.8.0))
+        version: 4.1.7(@types/node@22.15.32)(@vitest/coverage-istanbul@4.1.7)(jsdom@29.1.1(@noble/hashes@1.8.0))(msw@2.14.6(@types/node@22.15.32)(typescript@5.9.3))(vite@7.3.3(@types/node@22.15.32)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.8.0))
       workbox-window:
         specifier: ^7.4.1
         version: 7.4.1
@@ -2396,10 +2396,10 @@ packages:
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
 
-  '@vitest/coverage-istanbul@4.1.6':
-    resolution: {integrity: sha512-lOt/VDh+sihAx3OUxCE5CC0qZfAhIzE3Dxw75NJ3P0C6ruUgT9b/jZKECE1ctpbxSVic9OkLdXz5UEX39ks4Sw==}
+  '@vitest/coverage-istanbul@4.1.7':
+    resolution: {integrity: sha512-EbruXy+E9MJk+y7sFzriYfoI4JP2Ow+SyWDkewFOWFjzrbQBHlEgi6dGE7pxge8Z+W+7oJOxAVVb6mQHKCCZlw==}
     peerDependencies:
-      vitest: 4.1.6
+      vitest: 4.1.7
 
   '@vitest/expect@4.1.7':
     resolution: {integrity: sha512-1R+tw0ortHEbZDGMymm+pN7/AFQ/RkFFdtd7EN+VBpynKmLbP8A3rpEXdshBJ7+8hQ9zBJh/i1s0yKNtxAnU7w==}
@@ -9568,7 +9568,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-istanbul@4.1.6(vitest@4.1.7)':
+  '@vitest/coverage-istanbul@4.1.7(vitest@4.1.7)':
     dependencies:
       '@babel/core': 7.29.0
       '@istanbuljs/schema': 0.1.3
@@ -9580,7 +9580,7 @@ snapshots:
       magicast: 0.5.3
       obug: 2.1.1
       tinyrainbow: 3.1.0
-      vitest: 4.1.7(@types/node@22.15.32)(@vitest/coverage-istanbul@4.1.6)(jsdom@29.1.1(@noble/hashes@1.8.0))(msw@2.14.6(@types/node@22.15.32)(typescript@5.9.3))(vite@7.3.3(@types/node@22.15.32)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.8.0))
+      vitest: 4.1.7(@types/node@22.15.32)(@vitest/coverage-istanbul@4.1.7)(jsdom@29.1.1(@noble/hashes@1.8.0))(msw@2.14.6(@types/node@22.15.32)(typescript@5.9.3))(vite@7.3.3(@types/node@22.15.32)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.8.0))
     transitivePeerDependencies:
       - supports-color
 
@@ -13850,7 +13850,7 @@ snapshots:
       terser: 5.44.0
       yaml: 2.8.0
 
-  vitest@4.1.7(@types/node@22.15.32)(@vitest/coverage-istanbul@4.1.6)(jsdom@29.1.1(@noble/hashes@1.8.0))(msw@2.14.6(@types/node@22.15.32)(typescript@5.9.3))(vite@7.3.3(@types/node@22.15.32)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.8.0)):
+  vitest@4.1.7(@types/node@22.15.32)(@vitest/coverage-istanbul@4.1.7)(jsdom@29.1.1(@noble/hashes@1.8.0))(msw@2.14.6(@types/node@22.15.32)(typescript@5.9.3))(vite@7.3.3(@types/node@22.15.32)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.8.0)):
     dependencies:
       '@vitest/expect': 4.1.7
       '@vitest/mocker': 4.1.7(msw@2.14.6(@types/node@22.15.32)(typescript@5.9.3))(vite@7.3.3(@types/node@22.15.32)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.8.0))
@@ -13874,7 +13874,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.15.32
-      '@vitest/coverage-istanbul': 4.1.6(vitest@4.1.7)
+      '@vitest/coverage-istanbul': 4.1.7(vitest@4.1.7)
       jsdom: 29.1.1(@noble/hashes@1.8.0)
     transitivePeerDependencies:
       - msw
