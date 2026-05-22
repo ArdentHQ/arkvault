@@ -44,7 +44,7 @@ export default defineConfig(async (env) => {
 				},
 				coverage: {
 					include: process.env.COVERAGE_INCLUDE_PATH
-						? process.env.COVERAGE_INCLUDE_PATH.split(",")
+						? process.env.COVERAGE_INCLUDE_PATH.split(",").map(toCoverageGlob)
 						: ["src/**/*.{ts,tsx}"],
 					exclude: [
 						"**/build/*",
@@ -67,7 +67,6 @@ export default defineConfig(async (env) => {
 						"src/utils/test-plugins.ts",
 						"src/utils/test-helpers.ts",
 						"**/*.test.{ts,tsx}",
-						"**/*.svg",
 					],
 					provider: "istanbul",
 					reporter: ["json", "lcov", "text", "clover", "html"],
