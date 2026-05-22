@@ -764,4 +764,35 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		profile.wallets().flush();
 	});
+
+	it("should call forgetImportedWallets when going back from EncryptPasswordStep with imported wallet", async () => {
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		await user.click(screen.getByText("HD Wallet"));
+
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
+
+		const encryptionCheckbox = screen.getByTestId("WalletEncryptionBanner__encryption-toggle");
+		await user.click(encryptionCheckbox);
+
+		const responsibilityCheckbox = screen.getByTestId("WalletEncryptionBanner__checkbox");
+		await user.click(responsibilityCheckbox);
+
+		await waitFor(() => expect(getContinueButton()).toBeEnabled());
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
+		});
+
+		const backButton = screen.getByTestId("ImportWallet__back-button");
+		await user.click(backButton);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ImportWallet__detail-step")).toBeInTheDocument();
+		});
+	});
 });
