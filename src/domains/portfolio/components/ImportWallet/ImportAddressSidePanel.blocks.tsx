@@ -25,6 +25,28 @@ export interface ImportBackButtonProps {
 	showBack?: boolean;
 }
 
+export const getActiveStep = (
+	activeTab: ImportAddressStep,
+	isLedgerImport: boolean,
+	isHDWalletImport: boolean,
+	ledgerActiveTab?: LedgerTabStep,
+	hdWalletActiveTab?: HDWalletTabStep,
+): number => {
+	if (isHDWalletImport && hdWalletActiveTab !== undefined) {
+		return hdWalletActiveTab;
+	}
+
+	if (isLedgerImport && ledgerActiveTab !== undefined) {
+		return ledgerActiveTab - 2;
+	}
+
+	if (activeTab !== ImportAddressStep.MethodStep) {
+		return activeTab - 1;
+	}
+
+	return 1;
+};
+
 export const ImportBackButton = ({ onBack, showBack }: ImportBackButtonProps) => {
 	const { t } = useTranslation();
 
