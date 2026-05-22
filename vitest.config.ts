@@ -11,6 +11,14 @@ const coverageThresholdFunctions = Number(process.env.COVERAGE_THRESHOLD_FUNCTIO
 const coverageThresholdStatements = Number(process.env.COVERAGE_THRESHOLD_STATEMENTS || 100);
 const coverageThresholdBranches = Number(process.env.COVERAGE_THRESHOLD_BRANCHES || 100);
 
+const toCoverageGlob = (p: string) => {
+	const trimmed = p.trim().replace(/\/$/, "");
+	// Already a file path or glob with extension — leave as-is
+	if (trimmed.includes("*") || /\.\w+$/.test(trimmed)) return trimmed;
+	// Directory path — scope to TS files only
+	return `${trimmed}/**/*.{ts,tsx}`;
+};
+
 export default defineConfig(async (env) => {
 	const tailwindcss = (await import("@tailwindcss/vite")).default;
 
@@ -25,7 +33,6 @@ export default defineConfig(async (env) => {
 				logHeapUsage: true,
 				maxConcurrency: 4,
 				maxWorkers: 1,
-				minWorkers: 1,
 				globals: true,
 				environment: "jsdom",
 				isolate: true,
@@ -36,10 +43,9 @@ export default defineConfig(async (env) => {
 					},
 				},
 				coverage: {
-					all: false,
 					include: process.env.COVERAGE_INCLUDE_PATH
-						? process.env.COVERAGE_INCLUDE_PATH.split(",")
-						: ["src/"],
+						? process.env.COVERAGE_INCLUDE_PATH.split(",").map(toCoverageGlob)
+						: ["src/**/*.{ts,tsx}"],
 					exclude: [
 						"**/build/*",
 						"**/dist/*",

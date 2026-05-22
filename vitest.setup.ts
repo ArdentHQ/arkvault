@@ -11,7 +11,6 @@ import { server } from "./src/tests/mocks/server";
 import { pwnedMock } from "./src/tests/mocks/handlers/pwned";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
-import { openTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 
 expect.extend(matchers);
 
