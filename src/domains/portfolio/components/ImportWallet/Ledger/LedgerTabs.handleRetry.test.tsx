@@ -19,8 +19,8 @@ describe("useLedgerTabsHandleRetry", () => {
 	it("should call goToPreviousStep when no retry callback is registered", () => {
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleRetry({
-				retryFunctionReference: retryRef,
 				goToPreviousStep: mockGoToPreviousStep,
+				retryFunctionReference: retryRef,
 			}),
 		);
 
@@ -37,8 +37,8 @@ describe("useLedgerTabsHandleRetry", () => {
 
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleRetry({
-				retryFunctionReference: retryRef,
 				goToPreviousStep: mockGoToPreviousStep,
+				retryFunctionReference: retryRef,
 			}),
 		);
 
@@ -55,8 +55,8 @@ describe("useLedgerTabsHandleRetry", () => {
 
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleRetry({
-				retryFunctionReference: retryRef,
 				goToPreviousStep: mockGoToPreviousStep,
+				retryFunctionReference: retryRef,
 			}),
 		);
 
@@ -73,8 +73,8 @@ describe("useLedgerTabsHandleRetry", () => {
 
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleRetry({
-				retryFunctionReference: retryRef,
 				goToPreviousStep: mockGoToPreviousStep,
+				retryFunctionReference: retryRef,
 			}),
 		);
 
@@ -90,8 +90,8 @@ describe("useLedgerTabsHandleRetry", () => {
 
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleRetry({
-				retryFunctionReference: retryRef,
 				goToPreviousStep: mockGoToPreviousStep,
+				retryFunctionReference: retryRef,
 			}),
 		);
 

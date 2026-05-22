@@ -10,10 +10,10 @@ describe("useCancel", () => {
 			({ cancelling }: { cancelling: boolean }) =>
 				useCancel({
 					cancelling,
-					isBusy: false,
 					disconnect: mockDisconnect,
 					isAwaitingConnection: false,
 					isAwaitingDeviceConfirmation: false,
+					isBusy: false,
 					isConnected: true,
 					setCancelling: mockSetCancelling,
 				}),
@@ -35,10 +35,10 @@ describe("useCancel", () => {
 			({ cancelling }: { cancelling: boolean }) =>
 				useCancel({
 					cancelling,
-					isBusy: false,
 					disconnect: mockDisconnect,
 					isAwaitingConnection: false,
 					isAwaitingDeviceConfirmation: false,
+					isBusy: false,
 					isConnected: true,
 					setCancelling: mockSetCancelling,
 				}),
@@ -61,10 +61,10 @@ describe("useCancel", () => {
 			({ cancelling }: { cancelling: boolean }) =>
 				useCancel({
 					cancelling,
-					isBusy: true,
 					disconnect: mockDisconnect,
 					isAwaitingConnection: false,
 					isAwaitingDeviceConfirmation: false,
+					isBusy: true,
 					isConnected: true,
 					setCancelling: mockSetCancelling,
 				}),

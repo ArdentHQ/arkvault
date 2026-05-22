@@ -42,11 +42,11 @@ export const useLedgerTabsGoToPrev = ({
 	}, [onStepChange]);
 
 	return {
-		goToPreviousStep,
 		activeTab,
-		showRetry,
+		goToPreviousStep,
 		setActiveTab,
 		setShowRetry,
+		showRetry,
 	};
 };
 

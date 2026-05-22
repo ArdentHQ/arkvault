@@ -27,11 +27,11 @@ describe("useLedgerTabsHandleBack", () => {
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleBack({
 				activeTab: activeTabIndex,
-				setShowRetry: mockSetShowRetry,
-				setActiveTab: mockSetActiveTab,
-				onStepChange: mockOnStepChange,
 				onBack: mockOnBack,
 				onCancel: mockOnCancel,
+				onStepChange: mockOnStepChange,
+				setActiveTab: mockSetActiveTab,
+				setShowRetry: mockSetShowRetry,
 			}),
 		);
 
@@ -46,11 +46,11 @@ describe("useLedgerTabsHandleBack", () => {
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleBack({
 				activeTab: LedgerTabStep.ListenLedgerStep,
-				setShowRetry: mockSetShowRetry,
-				setActiveTab: mockSetActiveTab,
-				onStepChange: mockOnStepChange,
 				onBack: mockOnBack,
 				onCancel: mockOnCancel,
+				onStepChange: mockOnStepChange,
+				setActiveTab: mockSetActiveTab,
+				setShowRetry: mockSetShowRetry,
 			}),
 		);
 
@@ -66,10 +66,10 @@ describe("useLedgerTabsHandleBack", () => {
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleBack({
 				activeTab: LedgerTabStep.ListenLedgerStep,
-				setShowRetry: mockSetShowRetry,
-				setActiveTab: mockSetActiveTab,
-				onStepChange: mockOnStepChange,
 				onCancel: mockOnCancel,
+				onStepChange: mockOnStepChange,
+				setActiveTab: mockSetActiveTab,
+				setShowRetry: mockSetShowRetry,
 			}),
 		);
 
@@ -85,11 +85,11 @@ describe("useLedgerTabsHandleBack", () => {
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleBack({
 				activeTab: LedgerTabStep.LedgerConnectionStep,
-				setShowRetry: mockSetShowRetry,
-				setActiveTab: mockSetActiveTab,
-				onStepChange: mockOnStepChange,
 				onBack: mockOnBack,
 				onCancel: mockOnCancel,
+				onStepChange: mockOnStepChange,
+				setActiveTab: mockSetActiveTab,
+				setShowRetry: mockSetShowRetry,
 			}),
 		);
 
@@ -105,11 +105,11 @@ describe("useLedgerTabsHandleBack", () => {
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleBack({
 				activeTab: LedgerTabStep.LedgerImportStep,
-				setShowRetry: mockSetShowRetry,
-				setActiveTab: mockSetActiveTab,
-				onStepChange: mockOnStepChange,
 				onBack: mockOnBack,
 				onCancel: mockOnCancel,
+				onStepChange: mockOnStepChange,
+				setActiveTab: mockSetActiveTab,
+				setShowRetry: mockSetShowRetry,
 			}),
 		);
 
@@ -127,11 +127,11 @@ describe("useLedgerTabsHandleBack", () => {
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleBack({
 				activeTab: LedgerTabStep.LedgerImportStep,
-				setShowRetry: mockSetShowRetry,
-				setActiveTab: mockSetActiveTab,
-				onStepChange: mockOnStepChange,
 				onBack: mockOnBack,
 				onCancel: mockOnCancel,
+				onStepChange: mockOnStepChange,
+				setActiveTab: mockSetActiveTab,
+				setShowRetry: mockSetShowRetry,
 			}),
 		);
 
@@ -147,10 +147,10 @@ describe("useLedgerTabsHandleBack", () => {
 		const { result } = renderHook(() =>
 			useLedgerTabsHandleBack({
 				activeTab: LedgerTabStep.LedgerImportStep,
-				setShowRetry: mockSetShowRetry,
-				setActiveTab: mockSetActiveTab,
-				onStepChange: mockOnStepChange,
 				onCancel: mockOnCancel,
+				onStepChange: mockOnStepChange,
+				setActiveTab: mockSetActiveTab,
+				setShowRetry: mockSetShowRetry,
 			}),
 		);
 

@@ -55,9 +55,9 @@ export const LedgerTabs = ({
 	const [cancelling, setCancelling] = useState(false);
 
 	const { onConnect } = useOnConnect({
-		setShowRetry,
-		setActiveTab,
 		onStepChange,
+		setActiveTab,
+		setShowRetry,
 	});
 
 	const retryFunctionReference = useRef<(() => void) | undefined>(undefined);
@@ -65,11 +65,11 @@ export const LedgerTabs = ({
 	const { handleNext } = useLedgerTabsHandleNext(
 		{
 			activeTab,
-			showRetry,
-			onStepChange,
-			setShowRetry,
-			setActiveTab,
 			handleWalletImporting,
+			onStepChange,
+			setActiveTab,
+			setShowRetry,
+			showRetry,
 		},
 		handleSubmit,
 	);
@@ -78,10 +78,10 @@ export const LedgerTabs = ({
 
 	useCancel({
 		cancelling,
-		isBusy,
 		disconnect,
 		isAwaitingConnection,
 		isAwaitingDeviceConfirmation,
+		isBusy,
 		isConnected,
 		setCancelling,
 	});
@@ -92,14 +92,14 @@ export const LedgerTabs = ({
 	}, []);
 
 	const { onFailed } = useOnFailed({
-		setShowRetry,
 		goToPreviousStep,
 		registerRetry,
+		setShowRetry,
 	});
 
 	const { handleRetry } = useLedgerTabsHandleRetry({
-		retryFunctionReference,
 		goToPreviousStep,
+		retryFunctionReference,
 	});
 
 	const { handleFinish } = useLedgerTabsHandleFinish({
@@ -107,11 +107,11 @@ export const LedgerTabs = ({
 	});
 
 	const { handleEnter } = useEnterHandler({
+		activeTab,
 		isNextDisabled,
 		isSubmitting,
-		activeTab,
-		onHandleNext: handleNext,
 		onHandleFinish: handleFinish,
+		onHandleNext: handleNext,
 	});
 
 	useKeydown("Enter", handleEnter);
@@ -122,11 +122,11 @@ export const LedgerTabs = ({
 
 	const { handleBack } = useLedgerTabsHandleBack({
 		activeTab,
-		setShowRetry,
-		setActiveTab,
-		onStepChange,
 		onBack,
 		onCancel,
+		onStepChange,
+		setActiveTab,
+		setShowRetry,
 	});
 
 	const showFooter = showRetry || [LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab);

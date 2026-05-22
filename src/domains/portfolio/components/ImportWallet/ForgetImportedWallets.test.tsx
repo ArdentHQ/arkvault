@@ -3,8 +3,8 @@ import { forgetImportedWallets } from "./ImportAddressSidePanel.blocks";
 import { Contracts } from "@/app/lib/profiles";
 
 vi.mock("@/utils/assertions", () => ({
-	assertWallet: vi.fn(),
 	assertString: vi.fn(),
+	assertWallet: vi.fn(),
 }));
 
 describe("forgetImportedWallets", () => {
@@ -15,18 +15,18 @@ describe("forgetImportedWallets", () => {
 
 	beforeEach(() => {
 		mockFirstWallet = {
-			id: vi.fn(() => "first-wallet"),
 			address: vi.fn(() => "0x123"),
+			id: vi.fn(() => "first-wallet"),
 		};
 
 		mockSelectedWallets = [];
 
 		mockWallets = {
-			values: vi.fn(() => []),
+			first: vi.fn(() => mockFirstWallet),
 			forget: vi.fn(),
 			selectOne: vi.fn(),
 			selected: vi.fn(() => mockSelectedWallets),
-			first: vi.fn(() => mockFirstWallet),
+			values: vi.fn(() => []),
 		};
 
 		mockProfile = {
@@ -41,8 +41,8 @@ describe("forgetImportedWallets", () => {
 
 	it("should forget the imported wallet if it matches", () => {
 		const importedWallet = {
-			id: vi.fn(() => "imported-wallet"),
 			address: vi.fn(() => "0x123"),
+			id: vi.fn(() => "imported-wallet"),
 		};
 
 		vi.mocked(mockWallets.values).mockReturnValue([importedWallet]);
@@ -54,8 +54,8 @@ describe("forgetImportedWallets", () => {
 
 	it("should select the first wallet when no wallets are selected after forgetting", () => {
 		const importedWallet = {
-			id: vi.fn(() => "imported-wallet"),
 			address: vi.fn(() => "0x123"),
+			id: vi.fn(() => "imported-wallet"),
 		};
 
 		vi.mocked(mockWallets.values).mockReturnValue([importedWallet]);
@@ -66,12 +66,12 @@ describe("forgetImportedWallets", () => {
 	});
 
 	it("should not select the first wallet when other wallets remain selected", () => {
-		const otherWallet = { id: vi.fn(() => "other-wallet"), address: vi.fn(() => "0x456") };
+		const otherWallet = { address: vi.fn(() => "0x456"), id: vi.fn(() => "other-wallet") };
 		mockSelectedWallets.push(otherWallet);
 
 		const importedWallet = {
-			id: vi.fn(() => "imported-wallet"),
 			address: vi.fn(() => "0x123"),
+			id: vi.fn(() => "imported-wallet"),
 		};
 
 		vi.mocked(mockWallets.values).mockReturnValue([importedWallet, otherWallet]);
@@ -83,11 +83,11 @@ describe("forgetImportedWallets", () => {
 
 	it("should not forget wallet if address does not match", () => {
 		const importedWallet = {
-			id: vi.fn(() => "imported-wallet"),
 			address: vi.fn(() => "0x123"),
+			id: vi.fn(() => "imported-wallet"),
 		};
 
-		const otherWallet = { id: vi.fn(() => "other-wallet"), address: vi.fn(() => "0x456") };
+		const otherWallet = { address: vi.fn(() => "0x456"), id: vi.fn(() => "other-wallet") };
 
 		vi.mocked(mockWallets.values).mockReturnValue([otherWallet]);
 

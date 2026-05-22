@@ -10,9 +10,9 @@ describe("useOnConnect", () => {
 
 		const { result } = renderHook(() =>
 			useOnConnect({
-				setShowRetry: mockSetShowRetry,
-				setActiveTab: mockSetActiveTab,
 				onStepChange: mockOnStepChange,
+				setActiveTab: mockSetActiveTab,
+				setShowRetry: mockSetShowRetry,
 			}),
 		);
 
@@ -29,8 +29,8 @@ describe("useOnConnect", () => {
 
 		const { result } = renderHook(() =>
 			useOnConnect({
-				setShowRetry: mockSetShowRetry,
 				setActiveTab: mockSetActiveTab,
+				setShowRetry: mockSetShowRetry,
 			}),
 		);
 

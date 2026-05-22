@@ -41,9 +41,9 @@ describe("LedgerTransactionApproveStep", () => {
 
 		const mockSignAndBroadcast = vi.fn().mockResolvedValue({ hash: "0xabc123" });
 		Object.defineProperty(transfer, "signAndBroadcast", {
+			configurable: true,
 			value: mockSignAndBroadcast,
 			writable: true,
-			configurable: true,
 		});
 
 		const { container } = render(<LedgerTransactionApproveStep transfer={transfer} migrator={migrator} />, {
@@ -68,9 +68,9 @@ describe("LedgerTransactionApproveStep", () => {
 		vi.spyOn(transfer, "isCompleted").mockReturnValue(true);
 
 		Object.defineProperty(transfer, "signAndBroadcast", {
+			configurable: true,
 			value: vi.fn().mockResolvedValue({ hash: "0xabc123" }),
 			writable: true,
-			configurable: true,
 		});
 
 		const { container } = render(<LedgerTransactionApproveStep transfer={transfer} migrator={multiTxMigrator} />, {
@@ -91,9 +91,9 @@ describe("LedgerTransactionApproveStep", () => {
 
 		const mockSignAndBroadcast = vi.fn().mockResolvedValue({ hash: "0xabc123" });
 		Object.defineProperty(transfer, "signAndBroadcast", {
+			configurable: true,
 			value: mockSignAndBroadcast,
 			writable: true,
-			configurable: true,
 		});
 
 		render(<LedgerTransactionApproveStep transfer={transfer} migrator={migrator} onSuccess={onSuccess} />, {
@@ -115,9 +115,9 @@ describe("LedgerTransactionApproveStep", () => {
 		vi.spyOn(transfer, "isCompleted").mockReturnValue(true);
 
 		Object.defineProperty(transfer, "signAndBroadcast", {
+			configurable: true,
 			value: vi.fn().mockRejectedValue(new Error("Sign failed")),
 			writable: true,
-			configurable: true,
 		});
 
 		render(<LedgerTransactionApproveStep transfer={transfer} migrator={migrator} onError={onError} />, { route });

@@ -14,11 +14,11 @@ describe("useLedgerTabsHandleNext", () => {
 
 	const createDeps = (overrides: Partial<Parameters<typeof useLedgerTabsHandleNext>[0]> = {}) => ({
 		activeTab: overrides.activeTab ?? LedgerTabStep.ListenLedgerStep,
-		showRetry: false,
-		onStepChange: mockOnStepChange,
-		setShowRetry: mockSetShowRetry,
-		setActiveTab: mockSetActiveTab,
 		handleWalletImporting: mockHandleWalletImporting,
+		onStepChange: mockOnStepChange,
+		setActiveTab: mockSetActiveTab,
+		setShowRetry: mockSetShowRetry,
+		showRetry: false,
 		...overrides,
 	});
 
@@ -26,7 +26,7 @@ describe("useLedgerTabsHandleNext", () => {
 		vi.clearAllMocks();
 		mockHandleSubmit = vi.fn((cb) => () => {
 			cb([]);
-			return undefined;
+			return;
 		});
 		mockSetShowRetry.mockReset();
 		mockSetActiveTab.mockReset();

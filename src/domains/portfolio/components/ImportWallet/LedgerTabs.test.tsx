@@ -29,11 +29,11 @@ describe("LedgerTabs", () => {
 	});
 
 	const mockProps = {
+		onBack: vi.fn(),
 		onCancel: vi.fn(),
 		onClickEditWalletName: vi.fn(),
 		onStepChange: vi.fn(),
 		onSubmit: vi.fn(),
-		onBack: vi.fn(),
 	};
 
 	it("should render LedgerTabs with all props passed through", () => {

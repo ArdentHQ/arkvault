@@ -9,9 +9,9 @@ describe("useOnFailed", () => {
 
 		const { result } = renderHook(() =>
 			useOnFailed({
-				setShowRetry: mockSetShowRetry,
 				goToPreviousStep: mockGoToPreviousStep,
 				registerRetry: mockRegisterRetry,
+				setShowRetry: mockSetShowRetry,
 			}),
 		);
 

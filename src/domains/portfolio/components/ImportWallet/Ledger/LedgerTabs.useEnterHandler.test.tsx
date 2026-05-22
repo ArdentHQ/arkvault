@@ -14,15 +14,15 @@ describe("useEnterHandler", () => {
 	it("should call handleNext when activeTab is before LedgerImportStep and target is inside ledgerTabs", () => {
 		const { result } = renderHook(() =>
 			useEnterHandler({
+				activeTab: LedgerTabStep.LedgerScanStep,
 				isNextDisabled: false,
 				isSubmitting: false,
-				activeTab: LedgerTabStep.LedgerScanStep,
-				onHandleNext: mockHandleNext,
 				onHandleFinish: mockHandleFinish,
+				onHandleNext: mockHandleNext,
 			}),
 		);
 
-		const target = { tagName: "BUTTON", closest: vi.fn().mockReturnValue({}) } as unknown as Element;
+		const target = { closest: vi.fn().mockReturnValue({}), tagName: "BUTTON" } as unknown as Element;
 		result.current.handleEnter({ target } as KeyboardEvent);
 
 		expect(mockHandleNext).toHaveBeenCalledTimes(1);
@@ -32,15 +32,15 @@ describe("useEnterHandler", () => {
 	it("should call handleFinish when activeTab is LedgerImportStep and target is BODY", () => {
 		const { result } = renderHook(() =>
 			useEnterHandler({
+				activeTab: LedgerTabStep.LedgerImportStep,
 				isNextDisabled: false,
 				isSubmitting: false,
-				activeTab: LedgerTabStep.LedgerImportStep,
-				onHandleNext: mockHandleNext,
 				onHandleFinish: mockHandleFinish,
+				onHandleNext: mockHandleNext,
 			}),
 		);
 
-		const target = { tagName: "BODY", closest: vi.fn().mockReturnValue(null) } as unknown as Element;
+		const target = { closest: vi.fn().mockReturnValue(null), tagName: "BODY" } as unknown as Element;
 		result.current.handleEnter({ target } as KeyboardEvent);
 
 		expect(mockHandleFinish).toHaveBeenCalledTimes(1);
@@ -50,15 +50,15 @@ describe("useEnterHandler", () => {
 	it("should not call any handler when isNextDisabled is true", () => {
 		const { result } = renderHook(() =>
 			useEnterHandler({
+				activeTab: LedgerTabStep.LedgerScanStep,
 				isNextDisabled: true,
 				isSubmitting: false,
-				activeTab: LedgerTabStep.LedgerScanStep,
-				onHandleNext: mockHandleNext,
 				onHandleFinish: mockHandleFinish,
+				onHandleNext: mockHandleNext,
 			}),
 		);
 
-		const target = { tagName: "BUTTON", closest: vi.fn().mockReturnValue({}) } as unknown as Element;
+		const target = { closest: vi.fn().mockReturnValue({}), tagName: "BUTTON" } as unknown as Element;
 		result.current.handleEnter({ target } as KeyboardEvent);
 
 		expect(mockHandleNext).not.toHaveBeenCalled();
@@ -68,15 +68,15 @@ describe("useEnterHandler", () => {
 	it("should not call any handler when isSubmitting is true", () => {
 		const { result } = renderHook(() =>
 			useEnterHandler({
+				activeTab: LedgerTabStep.LedgerScanStep,
 				isNextDisabled: false,
 				isSubmitting: true,
-				activeTab: LedgerTabStep.LedgerScanStep,
-				onHandleNext: mockHandleNext,
 				onHandleFinish: mockHandleFinish,
+				onHandleNext: mockHandleNext,
 			}),
 		);
 
-		const target = { tagName: "BUTTON", closest: vi.fn().mockReturnValue({}) } as unknown as Element;
+		const target = { closest: vi.fn().mockReturnValue({}), tagName: "BUTTON" } as unknown as Element;
 		result.current.handleEnter({ target } as KeyboardEvent);
 
 		expect(mockHandleNext).not.toHaveBeenCalled();
@@ -85,16 +85,16 @@ describe("useEnterHandler", () => {
 
 	it("should not call any handler when target is not a component child", () => {
 		const mockClosest = vi.fn().mockReturnValue(null);
-		const target = { tagName: "SPAN", closest: mockClosest } as unknown as Element;
+		const target = { closest: mockClosest, tagName: "SPAN" } as unknown as Element;
 		const event = { target } as unknown as KeyboardEvent;
 
 		const { result } = renderHook(() =>
 			useEnterHandler({
+				activeTab: LedgerTabStep.LedgerScanStep,
 				isNextDisabled: false,
 				isSubmitting: false,
-				activeTab: LedgerTabStep.LedgerScanStep,
-				onHandleNext: mockHandleNext,
 				onHandleFinish: mockHandleFinish,
+				onHandleNext: mockHandleNext,
 			}),
 		);
 

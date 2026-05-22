@@ -73,7 +73,7 @@ describe("ImportWallet LedgerScanStep component", () => {
 		setRetryFn,
 	}: {
 		cancelling?: boolean;
-		setRetryFn?: (fn?: () => void) => void;
+		setRetryFn?: (function_?: () => void) => void;
 	}) => (
 		<FormProvider {...({ register: vi.fn(), setValue: vi.fn(), unregister: vi.fn() } as any)}>
 			<LedgerScanStep profile={profile} network={network} cancelling={cancelling} setRetryFn={setRetryFn} />

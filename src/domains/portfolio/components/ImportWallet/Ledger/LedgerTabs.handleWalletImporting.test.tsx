@@ -48,8 +48,8 @@ describe("useHandleWalletImporting", () => {
 		);
 
 		const wallets = [
-			{ path: "m/44'/1'/0'/0/0", address: "addr1" },
-			{ path: "m/44'/1'/0'/0/1", address: "addr2" },
+			{ address: "addr1", path: "m/44'/1'/0'/0/0" },
+			{ address: "addr2", path: "m/44'/1'/0'/0/1" },
 		];
 
 		await act(async () => {
@@ -87,7 +87,7 @@ describe("useHandleWalletImporting", () => {
 			}),
 		);
 
-		const wallets = [{ path: "m/44'/1'/0'/0/0", address: "addr1" }];
+		const wallets = [{ address: "addr1", path: "m/44'/1'/0'/0/0" }];
 
 		await expect(
 			act(async () => {
