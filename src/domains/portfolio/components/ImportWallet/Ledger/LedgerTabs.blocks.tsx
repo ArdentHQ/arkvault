@@ -14,7 +14,7 @@ import { Contracts } from "@/app/lib/profiles";
 
 export interface UseLedgerTabsGoToPrevDeps {
 	activeIndex: number;
-	onStepChange?: (step: LedgerTabStep) => void;
+	onStepChange?: (step: number) => void;
 }
 
 export interface UseLedgerTabsGoToPrevResult {
@@ -53,7 +53,7 @@ export const useLedgerTabsGoToPrev = ({
 export interface UseLedgerTabsHandleNextDeps {
 	activeTab: number;
 	showRetry: boolean;
-	onStepChange?: (step: LedgerTabStep) => void;
+	onStepChange?: (step: number) => void;
 	setShowRetry: React.Dispatch<React.SetStateAction<boolean>>;
 	setActiveTab: React.Dispatch<React.SetStateAction<number>>;
 	handleWalletImporting: ({ wallets }: { wallets: LedgerData[] }) => Promise<void>;
