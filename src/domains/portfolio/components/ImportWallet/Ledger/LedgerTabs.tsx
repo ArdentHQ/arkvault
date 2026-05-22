@@ -21,11 +21,10 @@ import {
 } from "./LedgerTabs.blocks";
 import { ListenLedger } from "@/domains/transaction/components/AuthenticationStep/Ledger/ListenLedger";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { LedgerData, useLedgerContext } from "@/app/contexts";
+import { useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { useWalletImport } from "@/domains/wallet/hooks";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
@@ -37,7 +36,6 @@ export const LedgerTabs = ({
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
-	const { importWallets } = useWalletImport({ profile: activeProfile });
 
 	const { isBusy, disconnect, isAwaitingConnection, isAwaitingDeviceConfirmation, isConnected, listenDevice } =
 		useLedgerContext();
@@ -45,11 +43,9 @@ export const LedgerTabs = ({
 	const { formState, handleSubmit } = useFormContext();
 	const { isValid, isSubmitting } = formState;
 
-	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
-
-	const { handleWalletImporting } = useHandleWalletImporting({
+	const { handleWalletImporting, importedWallets } = useHandleWalletImporting({
 		listenDevice,
-		importWallets,
+		profile: activeProfile,
 	});
 
 	const { activeTab, showRetry, setActiveTab, setShowRetry, goToPreviousStep } = useLedgerTabsGoToPrev({
@@ -66,15 +62,17 @@ export const LedgerTabs = ({
 
 	const retryFunctionReference = useRef<(() => void) | undefined>(undefined);
 
-	const { handleNext } = useLedgerTabsHandleNext({
-		activeTab,
-		showRetry,
-		onStepChange,
-		setShowRetry,
-		setActiveTab,
+	const { handleNext } = useLedgerTabsHandleNext(
+		{
+			activeTab,
+			showRetry,
+			onStepChange,
+			setShowRetry,
+			setActiveTab,
+			handleWalletImporting,
+		},
 		handleSubmit,
-		handleWalletImporting: handleWalletImporting as (params: { wallets: unknown[] }) => Promise<void>,
-	});
+	);
 
 	const isNextDisabled = useMemo(() => isBusy || !isValid, [isBusy, isValid]);
 

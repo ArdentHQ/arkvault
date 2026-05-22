@@ -9,6 +9,8 @@ import { LedgerTabStep } from "./LedgerTabs.contracts";
 import { LedgerData } from "@/app/contexts";
 import { ProfilePaths } from "@/router/paths";
 import { assertString } from "@/utils/assertions";
+import { useWalletImport } from "@/domains/wallet/hooks";
+import { Contracts } from "@/app/lib/profiles";
 
 export interface UseLedgerTabsGoToPrevDeps {
 	activeIndex: number;
@@ -54,30 +56,31 @@ export interface UseLedgerTabsHandleNextDeps {
 	onStepChange?: (step: LedgerTabStep) => void;
 	setShowRetry: React.Dispatch<React.SetStateAction<boolean>>;
 	setActiveTab: React.Dispatch<React.SetStateAction<number>>;
-	handleSubmit: <T>(onSuccess: (data: T) => void | Promise<void>) => () => void;
-	handleWalletImporting: (params: { wallets: unknown[] }) => Promise<void>;
+	handleWalletImporting: ({ wallets }: { wallets: LedgerData[] }) => Promise<void>;
 }
 
 export interface UseLedgerTabsHandleNextResult {
 	handleNext: () => Promise<void>;
 }
 
-export const useLedgerTabsHandleNext = ({
-	activeTab,
-	showRetry,
-	onStepChange,
-	setShowRetry,
-	setActiveTab,
-	handleSubmit,
-	handleWalletImporting,
-}: UseLedgerTabsHandleNextDeps): UseLedgerTabsHandleNextResult => {
+export const useLedgerTabsHandleNext = (
+	{
+		activeTab,
+		showRetry,
+		onStepChange,
+		setShowRetry,
+		setActiveTab,
+		handleWalletImporting,
+	}: UseLedgerTabsHandleNextDeps,
+	handleSubmit: (onValid: (data: unknown) => void | Promise<void>) => () => Promise<void>,
+): UseLedgerTabsHandleNextResult => {
 	const handleNext = useCallback(async () => {
 		if (showRetry) {
 			setShowRetry(false);
 		}
 
 		if (activeTab === LedgerTabStep.LedgerScanStep) {
-			await handleSubmit((data: unknown) => handleWalletImporting(data as { wallets: unknown[] }))();
+			await handleSubmit((data: unknown) => handleWalletImporting({ wallets: data as LedgerData[] }))();
 		}
 
 		const next = activeTab + 1;
@@ -194,15 +197,13 @@ export const useLedgerTabsHandleBack = ({
 
 interface UseHandleWalletImportingParams {
 	listenDevice: () => Promise<{ id?: string } | undefined>;
-	importWallets: (params: {
-		disableAddressSelection?: boolean;
-		ledgerOptions: { deviceId: string; path: string };
-		type: string;
-		value: string;
-	}) => Promise<void>;
+	profile: Contracts.IProfile;
 }
 
-export const useHandleWalletImporting = ({ listenDevice, importWallets }: UseHandleWalletImportingParams) => {
+export const useHandleWalletImporting = ({ listenDevice, profile }: UseHandleWalletImportingParams) => {
+	const { importWallets } = useWalletImport({ profile });
+	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
+
 	const handleWalletImporting = useCallback(
 		async ({ wallets }: { wallets: LedgerData[] }) => {
 			const device = await listenDevice();
@@ -223,12 +224,12 @@ export const useHandleWalletImporting = ({ listenDevice, importWallets }: UseHan
 				),
 			);
 
-			return wallets;
+			setImportedWallets(wallets);
 		},
-		[listenDevice, importWallets],
+		[listenDevice, profile],
 	);
 
-	return { handleWalletImporting };
+	return { handleWalletImporting, importedWallets };
 };
 
 interface UseOnConnectParams {
@@ -329,7 +330,7 @@ export const LedgerTabsFooter = ({
 	// Normal toolbar footer (no error)
 	if (!showRetry) {
 		return (
-			<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
+			<div className="absolute bottom-0 left-0 right-0 flex w-full flex-col border-t border-theme-secondary-300 bg-theme-background px-6 py-4 dark:border-theme-dark-700">
 				<ImportActionToolbar
 					showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
 					onBack={onBack}
@@ -346,14 +347,9 @@ export const LedgerTabsFooter = ({
 
 	// Error-only footer (Back / Retry buttons)
 	return (
-		<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
+		<div className="absolute bottom-0 left-0 right-0 flex w-full flex-col border-t border-theme-secondary-300 bg-theme-background px-6 py-4 dark:border-theme-dark-700">
 			<div className="flex w-full items-center justify-end gap-3">
-				<Button
-					type="button"
-					onClick={onBack}
-					variant="secondary"
-					data-testid="LedgerFooter__backToSelection"
-				>
+				<Button type="button" onClick={onBack} variant="secondary" data-testid="LedgerFooter__backToSelection">
 					Back
 				</Button>
 
