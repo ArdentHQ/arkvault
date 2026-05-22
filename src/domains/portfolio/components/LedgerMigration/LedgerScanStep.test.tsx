@@ -3,7 +3,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { Networks } from "@/app/lib/mainsail";
 import { env, getMainsailProfileId, mockNanoSTransport, render, screen, waitFor } from "@/utils/testing-library";
 import { LedgerScanStep, showLoadedLedgerWalletsMessage } from "./LedgerScanStep";
-import { useLedgerScanner } from "@/app/contexts/Ledger";
+import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { toasts } from "@/app/services";
 import userEvent from "@testing-library/user-event";
 
@@ -21,6 +21,7 @@ const defaultScannerState = {
 	canRetry: true,
 	error: null,
 	isScanning: false,
+	isScanningMore: false,
 	isSelected: vi.fn().mockReturnValue(false),
 	loadedWallets: [
 		{
@@ -32,6 +33,7 @@ const defaultScannerState = {
 	scan: vi.fn(),
 	selectedWallets: [],
 	toggleSelect: vi.fn(),
+	toggleSelectAll: vi.fn(),
 	wallets: [
 		{
 			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
@@ -85,7 +87,7 @@ describe("LedgerMigration LedgerScanStep", () => {
 			selectedWallets: [],
 			toggleSelect: vi.fn(),
 			wallets: [],
-		} as any);
+		});
 
 		render(<LedgerScanStep profile={profile} network={network} children={<div>test</div>} />);
 
@@ -99,14 +101,14 @@ describe("LedgerMigration LedgerScanStep", () => {
 	});
 
 	it("should show loaded wallets message for single wallet", () => {
-		const result = showLoadedLedgerWalletsMessage([{ address: "0x123", balance: "100" } as any]);
+		const result = showLoadedLedgerWalletsMessage([{ address: "0x123", balance: "100" }]);
 		expect(result).toMatchSnapshot();
 	});
 
 	it("should show loaded wallets message for multiple wallets", () => {
 		const result = showLoadedLedgerWalletsMessage([
-			{ address: "0x123", balance: "100" } as any,
-			{ address: "0x456", balance: "200" } as any,
+			{ address: "0x123", balance: "100" },
+			{ address: "0x456", balance: "200" },
 		]);
 
 		expect(result).toMatchSnapshot();
@@ -169,5 +171,90 @@ describe("LedgerMigration LedgerScanStep", () => {
 		await user.click(scanMoreButton);
 
 		expect(scanMore).toHaveBeenCalled();
+	});
+
+	it("should call toggleSelectAll when clicking desktop select-all checkbox", async () => {
+		const user = userEvent.setup();
+		const toggleSelectAll = vi.fn();
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			toggleSelectAll,
+		});
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		await user.click(screen.getByTestId("LedgerScanStep__select-all"));
+
+		expect(toggleSelectAll).toHaveBeenCalled();
+	});
+
+	it("should call toggleSelect when clicking a wallet row checkbox", async () => {
+		const user = userEvent.setup();
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		await user.click(screen.getByTestId("LedgerScanStep__checkbox-row"));
+
+		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith("m/44'/1'/0'/0/1");
+	});
+
+	it("should show all wallets after clicking the load-more button", async () => {
+		const user = userEvent.setup();
+
+		const wallets: LedgerData[] = [];
+
+		for (let index = 0; index < 8; index++) {
+			const { wallet } = await profile.walletFactory().generate({});
+			const path = `m/44'/1'/${index}'/0/0`;
+
+			const ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
+				address: wallet.address(),
+				path,
+			});
+
+			wallets.push({ address: ledgerWallet.address(), path });
+		}
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			wallets,
+		});
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		expect(screen.getByTestId("LedgerScanStep__load-more")).toBeInTheDocument();
+
+		await user.click(screen.getByTestId("LedgerScanStep__load-more"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("LedgerScanStep__load-more")).not.toBeInTheDocument();
+		});
+	});
+
+	it("should call toggleSelectAll when clicking mobile select-all checkbox", async () => {
+		const user = userEvent.setup();
+		const toggleSelectAll = vi.fn();
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			toggleSelectAll,
+		});
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		await user.click(screen.getByTestId("LedgerScanStep__select-all-mobile"));
+
+		expect(toggleSelectAll).toHaveBeenCalled();
+	});
+
+	it("should call toggleSelect when clicking a mobile wallet item", async () => {
+		const user = userEvent.setup();
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		await user.click(screen.getByTestId("LedgerMobileItem__checkbox"));
+
+		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith("m/44'/1'/0'/0/1");
 	});
 });
