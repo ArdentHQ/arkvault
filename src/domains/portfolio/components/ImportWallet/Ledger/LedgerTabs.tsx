@@ -1,7 +1,5 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { generatePath } from "react-router";
 
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
 import { LedgerImportStep } from "./LedgerImportStep";
@@ -26,10 +24,8 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { LedgerData, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
-import { assertString } from "@/utils/assertions";
-import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { OptionsValue, useWalletImport } from "@/domains/wallet/hooks";
+import { useWalletImport } from "@/domains/wallet/hooks";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
@@ -43,7 +39,6 @@ export const LedgerTabs = ({
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 	const { importWallets } = useWalletImport({ profile: activeProfile });
 
-	const navigate = useNavigate();
 	const { isBusy, disconnect, isAwaitingConnection, isAwaitingDeviceConfirmation, isConnected, listenDevice } =
 		useLedgerContext();
 

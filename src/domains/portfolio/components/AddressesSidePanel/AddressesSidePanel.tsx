@@ -170,7 +170,8 @@ export const AddressesSidePanel = ({
 		return;
 	};
 
-	const renderErrorState = (wallet: Contracts.IReadWriteWallet) => computeWalletErrorState({
+	const renderErrorState = (wallet: Contracts.IReadWriteWallet) =>
+		computeWalletErrorState({
 			addressToDelete,
 			hdAccountToDelete,
 			isManageMode,
@@ -401,6 +402,7 @@ export const AddressesSidePanel = ({
 
 												// Automatically close if single mode.
 												/* istanbul ignore next -- @preserve single-mode auto-close depends on async profile setting sync */
+												const newSelection = toggleSelection(wallet);
 												if (profile.walletSelectionMode() === "single") {
 													closeSidepanel(newSelection);
 												}
