@@ -1,5 +1,5 @@
 import React, { RefObject } from "react";
-import { OnRefChangeType } from "react-resize-detector/build/types/types";
+import { OnRefChangeType } from "react-resize-detector/build/types";
 
 export type TruncateMiddleDynamicProperties = {
 	value: string;

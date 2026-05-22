@@ -21,7 +21,7 @@ const CircleWrapper = ({ size, noShadow, children, avatarId, ...props }: CircleP
 		className={twMerge(
 			"inline-flex items-center justify-center rounded-full border-2 align-middle transition-all",
 			cn({
-				"bg-theme-info-200 border-0": avatarId,
+				"border-0 bg-theme-info-200": avatarId,
 				"h-10 w-10 px-4 py-2": !size || !["lg", "sm", "xl", "xs"].includes(size),
 				"h-11 w-11 px-2 py-1": size === "lg",
 				"h-16 w-16 px-2 py-1 text-lg": size === "xl",

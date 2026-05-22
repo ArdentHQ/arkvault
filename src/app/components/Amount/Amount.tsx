@@ -15,6 +15,7 @@ interface AmountProperties {
 	profile?: Contracts.IProfile;
 	decimals?: number;
 	showCompactFormat?: boolean;
+	tooltipContent?: string;
 }
 
 const Amount = ({
@@ -28,6 +29,7 @@ const Amount = ({
 	profile,
 	decimals,
 	showCompactFormat,
+	tooltipContent,
 }: AmountProperties) => {
 	const compact = Helpers.Currency.formatCompact(value, ticker, { decimals, withTicker: showTicker });
 	const fullAmount = Helpers.Currency.format(BigNumber.make(value, decimals).toString(), ticker, {
@@ -52,8 +54,9 @@ const Amount = ({
 	}
 
 	if (showCompactFormat) {
+		const tooltipText = tooltipContent ?? fullAmount;
 		return (
-			<Tooltip content={fullAmount} className="sm:whitespace-normal">
+			<Tooltip content={tooltipText} className="sm:whitespace-normal">
 				<span data-testid="Amount" className={twMerge("whitespace-nowrap", className)}>
 					{formattedAmount}
 				</span>

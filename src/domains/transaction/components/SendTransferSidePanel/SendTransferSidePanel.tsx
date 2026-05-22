@@ -43,7 +43,6 @@ import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
 import { Image } from "@/app/components/Image";
-import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 
 const MAX_TABS = 5;
 
@@ -69,7 +68,7 @@ export const SendTransferSidePanel = ({
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
-	const { aggregated: tokens } = useProfileTokens({ profile: activeProfile });
+	const tokens = wallet?.tokens().values() ?? [];
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();

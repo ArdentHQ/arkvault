@@ -44,14 +44,14 @@ export const TokenRowMobile = memo(
 		return (
 			<TableRow
 				onClick={onClick}
-				className={cn("group border-b-0!", className, {
+				className={cn("border-b-0! group", className, {
 					"pointer-events-none opacity-50": isDeleted,
 				})}
 				{...properties}
 			>
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
-						<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between pr-3 pl-4 sm:pl-3 dark:bg-black">
+						<div className="flex h-10 w-full items-center justify-between bg-theme-secondary-100 pl-4 pr-3 dim:bg-theme-dim-950 dark:bg-black sm:pl-3">
 							<div className="flex w-full flex-row items-center gap-3">
 								{isManageMode && (
 									<div className="hidden flex-row items-center sm:flex">
@@ -69,14 +69,14 @@ export const TokenRowMobile = memo(
 											</div>
 											<Divider
 												type="vertical"
-												className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
+												className="m-0 h-[17px] border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800"
 											/>
 										</>
 									</div>
 								)}
 
 								<TokenNameInitials tokenName={walletToken.token().name()} className="shrink-0" />
-								<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 w-full text-sm leading-[17px] font-semibold">
+								<span className="w-full text-sm font-semibold leading-[17px] dim:text-theme-dim-50 dark:text-theme-dark-50">
 									<TruncateEndResponsive>{walletToken.token().name()}</TruncateEndResponsive>
 								</span>
 							</div>
@@ -86,7 +86,7 @@ export const TokenRowMobile = memo(
 									<Button
 										size="icon"
 										variant="transparent"
-										className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+										className="p-1 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500"
 										onClick={(event) => {
 											event.stopPropagation();
 											onSend();
@@ -101,7 +101,7 @@ export const TokenRowMobile = memo(
 										data-testid="TokenRow_DeleteToken"
 										size="icon"
 										variant="transparent"
-										className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 p-1 text-sm"
+										className="p-1 text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
 										onClick={(event) => {
 											event.stopPropagation();
 											onDelete(walletToken);
@@ -117,7 +117,7 @@ export const TokenRowMobile = memo(
 										{isDeletable && (
 											<Divider
 												type="vertical"
-												className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
+												className="m-0 h-[17px] border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800"
 											/>
 										)}
 
@@ -136,7 +136,7 @@ export const TokenRowMobile = memo(
 							</div>
 						</div>
 
-						<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_180px] sm:pb-4">
+						<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_180px] sm:pb-4">
 							<MobileSection
 								title={t("COMMON.TOKEN_BALANCE")}
 								className="w-full"
@@ -146,13 +146,13 @@ export const TokenRowMobile = memo(
 									ticker={walletToken.token().displaySymbol()}
 									showTicker={false}
 									value={walletToken.balance().toHuman()}
-									className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+									className="text-sm font-semibold leading-[17px] dim:text-theme-dim-50 dark:text-theme-dark-50"
 									showCompactFormat
 								/>
 							</MobileSection>
 
 							<MobileSection title={t("COMMON.VALUE")} className="w-full">
-								<div className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm font-semibold">
+								<div className="text-sm font-semibold text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500">
 									{t("COMMON.NOT_AVAILABLE")}
 								</div>
 							</MobileSection>
@@ -163,16 +163,16 @@ export const TokenRowMobile = memo(
 									showExternalIcon={false}
 									isExternal={true}
 								>
-									<div className="flex w-40 flex-row items-center gap-2 text-sm leading-[17px] font-semibold">
+									<div className="flex w-40 flex-row items-center gap-2 text-sm font-semibold leading-[17px]">
 										<TruncateMiddle
 											text={walletToken.token().address()}
-											className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+											className="text-theme-navy-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400"
 										/>
 										<Icon
 											data-testid="Link__external"
 											name="ArrowExternal"
 											dimensions={[12, 12]}
-											className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 shrink-0 align-middle duration-200"
+											className="shrink-0 align-middle text-theme-secondary-500 duration-200 dim:text-theme-dim-500 dark:text-theme-dark-500"
 										/>
 									</div>
 								</Link>

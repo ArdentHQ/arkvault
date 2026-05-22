@@ -49,7 +49,7 @@ export const WalletStatus = ({
 			<div
 				data-testid={dataTestId}
 				className={twMerge(
-					"bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+					"inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
 					className,
 				)}
 			>
@@ -63,7 +63,7 @@ export const WalletStatus = ({
 			<div
 				data-testid={dataTestId}
 				className={twMerge(
-					"bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+					"inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
 					className,
 				)}
 			>
@@ -76,7 +76,7 @@ export const WalletStatus = ({
 		<div
 			data-testid={dataTestId}
 			className={twMerge(
-				"bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+				"inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500",
 				className,
 			)}
 		>
@@ -129,7 +129,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 	const renderRestOfVotes = (restOfVotes: number) => {
 		const rest = (
-			<span className="text-theme-primary-700 dark:text-theme-secondary-500 text-sm font-semibold">
+			<span className="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500">
 				+{restOfVotes}
 			</span>
 		);
@@ -137,7 +137,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		return (
 			<Circle
 				size="lg"
-				className="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 relative h-8! w-8!"
+				className="h-8! w-8! relative border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800"
 			>
 				{rest}
 			</Circle>
@@ -170,7 +170,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				<Link
 					to={votes[0].wallet?.explorerLink() as string}
 					isExternal
-					className="[&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
+					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dim:[&_svg]:text-theme-dim-500 dark:[&_svg]:text-theme-dark-500"
 				>
 					{votes[0].wallet?.username() ?? (
 						<TruncateMiddle text={votes[0].wallet?.address() ?? ""} maxChars={14} />
@@ -195,7 +195,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		!isLedgerWalletCompatible(wallet);
 
 	return (
-		<TableRow className="last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid">
+		<TableRow className="last:border-b-4! relative last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800">
 			<TableCell data-testid="AddressRow__wallet" variant="start" innerClassName="space-x-3">
 				<div className="w-40 flex-1">
 					<Address
@@ -234,7 +234,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				</>
 			) : (
 				<TableCell innerClassName="text-sm justify-center">
-					<div className="text-theme-secondary-400 font-semibold">
+					<div className="font-semibold text-theme-secondary-400">
 						<span className="text-theme-secondary-text">{hasVotes ? votes.length : "0"}</span>
 						<span>/{maxVotes}</span>
 					</div>
@@ -248,7 +248,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 							size="icon"
 							disabled={isButtonDisabled}
 							variant="transparent"
-							className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
+							className="-mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dim:text-theme-dim-navy-600 dim:disabled:text-theme-dim-500 dim-hover:text-theme-dim-navy-700 dim-hover:disabled:text-theme-dim-500 dark:hover:text-theme-primary-500"
 							onClick={() => onSelect?.(wallet.address())}
 							data-testid={`AddressRow__select-${index}`}
 						>

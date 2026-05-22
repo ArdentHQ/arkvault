@@ -3,7 +3,7 @@
 import { ConfigRepository, Contracts, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
-import { ArkClient } from "@arkecosystem/typescript-client";
+import { Client } from "@arkecosystem/typescript-client";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { EstimateGasPayload, TransactionFee } from "@/app/lib/mainsail/fee.contract";
 import { hexToBigInt } from "viem";
@@ -20,14 +20,14 @@ type ConfirmationFeeType = "Slow" | "Average" | "Fast";
 const defaultBlockTime = 8000;
 
 export class FeeService {
-	readonly #client: ArkClient;
+	readonly #client: Client;
 	#config: ConfigRepository;
 
 	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
 		const api = this.#config.host("full", profile);
 		const evm = this.#config.host("evm", profile);
-		this.#client = new ArkClient({ api, evm });
+		this.#client = new Client({ api, evm });
 	}
 
 	public async all(): Promise<Services.TransactionFees> {

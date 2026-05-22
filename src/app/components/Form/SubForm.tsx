@@ -13,7 +13,7 @@ const SubFormWrapper = ({
 			"space-y-4 rounded-lg",
 			cn({
 				"-mx-4 p-4": !noPadding,
-				"border-theme-secondary-300 border-b-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border border-b-[5px]":
+				"border border-b-[5px] border-theme-secondary-300 border-b-theme-secondary-200 dim:border-theme-dim-700 dark:border-theme-secondary-800":
 					!noBorder,
 			}),
 			props.className,

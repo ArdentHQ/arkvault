@@ -107,7 +107,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 					</div>
 				)}
 
-				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 -mx-6 flex justify-end border-t px-6 pt-3.5 pb-3.5 sm:pb-0">
+				<div className="-mx-6 flex justify-end border-t border-theme-secondary-300 px-6 pb-3.5 pt-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:pb-0">
 					<Button onClick={handleClose} data-testid="CloseMigrationResult">
 						{t("COMMON.CONTINUE")}
 					</Button>

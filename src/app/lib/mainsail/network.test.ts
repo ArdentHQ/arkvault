@@ -260,7 +260,7 @@ describe("Network", () => {
 		await expect(noHostNetwork.sync()).rejects.toThrow("Expected network host to be a url but received undefined");
 	});
 
-	it("should throw an error if ArkClient crypto() fails during evaluateUrl", async () => {
+	it("should throw an error if Client crypto() fails during evaluateUrl", async () => {
 		await expect(networkInstance.evaluateUrl("http://bad.host")).rejects.toThrow("fetch failed");
 	});
 

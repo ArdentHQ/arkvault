@@ -308,7 +308,70 @@ describe("Tokens", () => {
 		const reloadButton = screen.getByTestId("TokenDetailSidepanel__reload-button");
 		await user.click(reloadButton);
 
-		expect(reloadMock).toHaveBeenCalledWith(profile.wallets().first().address());
+		expect(reloadMock).toHaveBeenCalledWith("0xToken1");
+	});
+
+	it("should update modal item on token refresh", async () => {
+		let loadedToken: string | undefined;
+
+		vi.spyOn(useProfileTokensMock, "useProfileTokens").mockReturnValue({
+			fetchMore: vi.fn(),
+			hasEmptyResults: false,
+			hasMore: false,
+			isLoadingMore: false,
+			isLoadingTokens: false,
+			isReloading: false,
+			refresh: vi.fn(),
+			reload: async (address?: string) => {
+				loadedToken = address;
+				return {
+					address: () => profile.wallets().first().address(),
+					balance: () => "5000",
+					contractExplorerLink: () => "test",
+					token: () => ({
+						address: () => "0xToken1",
+						decimals: () => 18,
+						displaySymbol: () => "T1",
+						name: () => "Token 1",
+						symbol: () => "T1",
+						totalSupply: () => BigNumber.make(100),
+					}),
+				};
+			},
+			setSortBy: vi.fn(),
+			sortBy: { column: "date", desc: true },
+			tokens: [
+				{
+					address: () => profile.wallets().first().address(),
+					balance: () => "1000",
+					contractExplorerLink: () => "test",
+					token: () => ({
+						address: () => "0xToken1",
+						decimals: () => 18,
+						displaySymbol: () => "T1",
+						name: () => "Token 1",
+						symbol: () => "T1",
+						totalSupply: () => BigNumber.make(100),
+					}),
+				},
+			],
+		});
+
+		render(<Tokens />, { route });
+
+		const user = userEvent.setup();
+		await expect(screen.findByTestId("TokenList")).resolves.toBeInTheDocument();
+		await waitFor(() => expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument());
+
+		const tokenRow = screen.getAllByTestId("TokensTableRow")[0];
+		await user.click(tokenRow);
+
+		await expect(screen.findByTestId("TokenDetailSidepanel")).resolves.toBeInTheDocument();
+
+		const reloadButton = screen.getByTestId("TokenDetailSidepanel__reload-button");
+		await user.click(reloadButton);
+
+		expect(loadedToken).toBe("0xToken1");
 	});
 
 	it("should close confirmation modal and exit manage mode when confirm is clicked", async () => {

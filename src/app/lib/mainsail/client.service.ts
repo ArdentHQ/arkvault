@@ -4,7 +4,7 @@ import { Collections, Contracts, DTO, Services } from "@/app/lib/mainsail";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
 import { decodeFunctionResult, encodeFunctionData } from "viem";
 
-import { ArkClient } from "@arkecosystem/typescript-client";
+import { Client } from "@arkecosystem/typescript-client";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transactions.collection";
 import { DateTime } from "@/app/lib/intl";
@@ -27,6 +27,7 @@ import {
 	TransactionTypeIdentifier,
 	UsernamesContract,
 } from "@arkecosystem/typescript-crypto";
+import { Cache } from "@/app/lib/mainsail/cache";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -36,8 +37,10 @@ const wellKnownContracts = {
 	username: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
 };
 
+const cache = new Cache(86_400); // 24hr TTL in seconds
+
 export class ClientService {
-	readonly #client!: ArkClient;
+	readonly #client!: Client;
 	#config: ConfigRepository;
 	#profile: IProfile;
 
@@ -49,7 +52,7 @@ export class ClientService {
 		const evm = config.host("evm", profile);
 		const transactions = config.host("tx", profile);
 
-		this.#client = new ArkClient({
+		this.#client = new Client({
 			api,
 			evm,
 			transactions,
@@ -202,6 +205,15 @@ export class ClientService {
 	public async wallet(id: Services.WalletIdentifier): Promise<Contracts.WalletData> {
 		const body = await this.#client.wallets().get(id.value);
 		return new WalletData({ config: this.#config }).fill(body.data);
+	}
+
+	public async legacyColdWallet(
+		address: string,
+	): Promise<{ address: string; balance: string; attributes: Record<string, string> }> {
+		return cache.remember(`legacy-cold-wallet-${address}`, async () => {
+			const body = await this.#client.legacy().coldWallet(address);
+			return body.data;
+		});
 	}
 
 	public async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {

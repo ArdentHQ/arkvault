@@ -62,7 +62,6 @@ describe("Use Ledger Scanner", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-		await wallet.synchroniser().coin();
 		await wallet.ledger().connect();
 
 		legacyPublicKeyPaths = new Map([

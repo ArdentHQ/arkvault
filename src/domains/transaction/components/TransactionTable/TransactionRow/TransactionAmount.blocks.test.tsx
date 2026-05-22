@@ -86,6 +86,7 @@ describe("TransactionAmount.blocks", () => {
 			token: () => ({
 				token: () => ({
 					displaySymbol: () => "USDC",
+					symbol: () => "USDC",
 					value: () => 100,
 				}),
 				value: () => 100,

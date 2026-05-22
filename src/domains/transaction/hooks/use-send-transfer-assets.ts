@@ -11,11 +11,13 @@ export const useTransferAssets = ({
 	isSingle?: boolean;
 }) => {
 	const assetOptions = tokens.map((token) => ({
+		data: token,
 		label: token.token().displaySymbol(),
 		value: token.token().address(),
 	}));
 
 	const mainsailAsset = {
+		data: undefined,
 		label: profile.activeNetwork().ticker(),
 		value: profile.activeNetwork().ticker(),
 	};

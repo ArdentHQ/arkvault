@@ -11,11 +11,11 @@ export const ExchangeCurrencyAmount = ({
 }) => (
 	<>
 		{!isTestnet && !!convertedAmount && !!exchangeTicker && (
-			<div className="text-theme-secondary-700 font-semibold">
+			<div className="font-semibold text-theme-secondary-700">
 				<Amount
 					ticker={exchangeTicker}
 					value={convertedAmount}
-					className="text-sm break-all whitespace-normal md:text-base"
+					className="whitespace-normal break-all text-sm md:text-base"
 				/>
 			</div>
 		)}

@@ -17,18 +17,18 @@ export const TransactionRowMobile = ({ transaction }: { transaction: DraftTransf
 			className={cn(
 				"mb-3",
 				cn({
-					"border-theme-warning-200 dim:border-theme-warning-700 dark:border-theme-warning-700 border":
-						transaction.isPending(),
-					"dim:border-theme-dim-700 border-theme-secondary-300 dark:border-theme-dark-700 border":
+					"border border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700":
 						!transaction.isCompleted() && !transaction.isPending(),
-					"dim:border-theme-success-700 border-theme-success-300 dark:border-theme-success-700 border":
+					"border border-theme-success-300 dim:border-theme-success-700 dark:border-theme-success-700":
 						transaction.isCompleted(),
+					"border border-theme-warning-200 dim:border-theme-warning-700 dark:border-theme-warning-700":
+						transaction.isPending(),
 				}),
 			)}
 		>
 			<div
 				className={cn(
-					"dim:bg-theme-dim-950 dark:bg-theme-dark-950 flex h-10 w-full items-center justify-between px-4",
+					"flex h-10 w-full items-center justify-between px-4 dim:bg-theme-dim-950 dark:bg-theme-dark-950",
 					cn({
 						"bg-theme-secondary-200": !transaction.isCompleted() && !transaction.isPending(),
 						"bg-theme-success-100": transaction.isCompleted(),
@@ -44,7 +44,7 @@ export const TransactionRowMobile = ({ transaction }: { transaction: DraftTransf
 					/>
 				</div>
 				<div className="flex flex-row items-center">
-					<span className="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block">
+					<span className="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 sm:block">
 						<TransactionConfirmationStatusLabel
 							isCompleted={transaction.isCompleted()}
 							isPending={transaction.isPending()}
@@ -54,7 +54,7 @@ export const TransactionRowMobile = ({ transaction }: { transaction: DraftTransf
 				</div>
 			</div>
 
-			<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
+			<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
 				<MobileSection title={t("COMMON.NEW")} className="w-full">
 					<TruncateMiddle
 						className="text-sm font-semibold"

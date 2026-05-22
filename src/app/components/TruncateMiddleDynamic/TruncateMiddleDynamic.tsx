@@ -66,7 +66,7 @@ export const TruncateMiddleDynamic = ({
 	}, [value, internalReference, width, offset]);
 
 	return (
-		<Tooltip content={value} disabled={truncatedValue === value || !showTooltip}>
+		<Tooltip content={value} disabled={truncatedValue === value || !showTooltip} usePortal>
 			<span
 				ref={internalReference}
 				className={cn("no-ligatures min-w-0 overflow-hidden", className)}

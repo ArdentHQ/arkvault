@@ -254,6 +254,7 @@ export const translations = {
 	},
 	PAGE_TRANSACTION_SEND: {
 		FORM_STEP: {
+			CONTRACT_ADDRESS_ENDING: "Contract address ending in",
 			DESCRIPTION: "Enter details below to send your transaction.",
 			FEE_UPDATE: "The selected fee has been changed.",
 			MULTIPLE_UNAVAILBLE: "Multiple Recipient Transactions are not available from Ledger addresses.",

@@ -15,6 +15,8 @@ export interface WalletBalance {
 export interface WalletData {
 	fill(data: any): WalletData;
 
+	setAttribute(key: string, value: unknown): void;
+
 	// Wallet
 	primaryKey(): string;
 
@@ -25,6 +27,8 @@ export interface WalletData {
 	balance(): WalletBalance;
 
 	nonce(): BigNumber;
+
+	legacyNonce(): BigNumber;
 
 	// Second Signature
 	secondPublicKey(): string | undefined;

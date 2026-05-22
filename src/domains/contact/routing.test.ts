@@ -6,8 +6,8 @@ describe("routing", () => {
 		expect(ContactRoutes).toStrictEqual([expect.objectContaining({ path: ProfilePaths.Contacts })]);
 	});
 
-	it.each(ContactRoutes)("should use lazy loading with preload", (route) => {
+	it.each(ContactRoutes)("should use lazy loading with preload", async (route) => {
 		expect(typeof route.component["preload"]).toBe("function");
-		expect(() => route.component["preload"]()).not.toThrow();
+		await expect(route.component["preload"]()).resolves.not.toThrow();
 	});
 });

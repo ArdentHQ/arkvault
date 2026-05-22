@@ -28,8 +28,10 @@ export enum WalletData {
 	LedgerModel = "LEDGER_MODEL",
 	Status = "STATUS",
 	IsPrimary = "IS_PRIMARY",
+	IsLegacyColdWallet = "IS_LEGACY_COLD_WALLET",
 	AddressIndex = "ADDRESS_INDEX",
 	TokenCount = "TOKEN_COUNT",
+	LegacyAddress = "LEGACY_ADDRESS",
 }
 
 /**

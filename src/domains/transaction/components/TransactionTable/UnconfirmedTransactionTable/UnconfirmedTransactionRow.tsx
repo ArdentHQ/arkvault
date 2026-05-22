@@ -32,7 +32,7 @@ export const UnconfirmedTransactionRow = ({ transaction, profile, ...properties 
 
 					<RowWrapper>
 						<RowLabel>{t("COMMON.DATE")}</RowLabel>
-						<div className="text-theme-secondary-500 whitespace-nowrap">
+						<div className="whitespace-nowrap text-theme-secondary-500">
 							<TimeAgo date={transaction.timestamp()?.toString() as string} />
 						</div>
 					</RowWrapper>

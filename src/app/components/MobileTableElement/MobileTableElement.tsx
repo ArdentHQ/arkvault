@@ -30,7 +30,7 @@ export const MobileTableElementRow = ({
 	...properties
 }: MobileTableElementRowProperties) => (
 	<div className={twMerge("grid grid-cols-1 gap-2", className)} {...properties}>
-		<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold">
+		<div className="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 			{title}
 		</div>
 
@@ -54,7 +54,7 @@ export const MobileTableElement = ({
 				"border-theme-danger-400": variant === MobileTableElementVariant.danger,
 				"border-theme-primary-300 dark:border-theme-dark-navy-400":
 					variant === MobileTableElementVariant.primary,
-				"border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700": !variant,
+				"border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800": !variant,
 				"border-theme-success-300 dark:border-theme-success-700": variant === MobileTableElementVariant.success,
 				"border-theme-warning-400": variant === MobileTableElementVariant.warning,
 			}),
@@ -65,7 +65,7 @@ export const MobileTableElement = ({
 	>
 		<div
 			data-testid="mobile-table-element-header"
-			className={classNames("dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3", {
+			className={classNames("flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950", {
 				"bg-theme-danger-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.danger,
 				"bg-theme-primary-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.primary,
 				"bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black": !variant,
@@ -74,7 +74,7 @@ export const MobileTableElement = ({
 			})}
 			onClick={onHeaderClick}
 		>
-			<span className="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold">
+			<span className="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">
 				{title}
 			</span>
 

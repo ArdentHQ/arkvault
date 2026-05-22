@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/mainsail";
-import { BigNumber, get, has } from "@/app/lib/helpers";
+import { BigNumber, get, has, set } from "@/app/lib/helpers";
 import { KeyValuePair } from "@/app/lib/mainsail/contracts";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
 
@@ -15,6 +15,10 @@ export class WalletData {
 		this.data = data;
 
 		return this;
+	}
+
+	public setAttribute(key: string, value: unknown): void {
+		set(this.data, key, value);
 	}
 
 	public primaryKey(): string {
@@ -43,6 +47,10 @@ export class WalletData {
 
 	public nonce(): BigNumber {
 		return BigNumber.make(this.data.nonce ?? 0);
+	}
+
+	public legacyNonce(): BigNumber {
+		return BigNumber.make(this.#getProperty(["attributes.legacyNonce"]) ?? 0);
 	}
 
 	public secondPublicKey(): string | undefined {
