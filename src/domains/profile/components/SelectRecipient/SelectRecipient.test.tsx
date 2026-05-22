@@ -77,8 +77,8 @@ describe("SelectRecipient", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		expect(focusSpy).toHaveBeenCalledTimes(2);
-		expect(blurSpy).toHaveBeenCalledTimes(2);
+		expect(focusSpy).toHaveBeenCalledTimes(1);
+		expect(blurSpy).toHaveBeenCalledTimes(1);
 
 		contactsSpy.mockRestore();
 		focusSpy.mockRestore();

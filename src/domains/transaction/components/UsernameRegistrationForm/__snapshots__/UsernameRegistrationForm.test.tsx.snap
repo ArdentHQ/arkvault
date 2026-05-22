@@ -110,11 +110,7 @@ exports[`UsernameRegistrationForm > should render form step 1`] = `
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="SelectAddressDropdown__dropdown-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -149,8 +145,10 @@ exports[`UsernameRegistrationForm > should render form step 1`] = `
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="SelectAddressDropdown__dropdown-menu"
+                                  aria-expanded="false"
                                   aria-invalid="false"
                                   aria-labelledby="SelectAddressDropdown__dropdown-label"
                                   autocomplete="off"
@@ -159,6 +157,7 @@ exports[`UsernameRegistrationForm > should render form step 1`] = `
                                   id="SelectAddressDropdown__dropdown-input"
                                   name="senderAddress"
                                   placeholder="Address"
+                                  role="combobox"
                                   type="text"
                                   value="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
                                 />

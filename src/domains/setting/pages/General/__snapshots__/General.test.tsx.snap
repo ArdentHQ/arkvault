@@ -1229,11 +1229,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -1254,8 +1250,10 @@ exports[`General Settings > should disable submit button when profile is not res
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-passphrase-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-passphrase-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -1263,6 +1261,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                               id="select-passphrase-language-input"
                                               name="bip39Locale"
                                               placeholder="Select Passphrase Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -1288,8 +1287,12 @@ exports[`General Settings > should disable submit button when profile is not res
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-passphrase-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-passphrase-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -1373,11 +1376,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -1398,8 +1397,10 @@ exports[`General Settings > should disable submit button when profile is not res
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-currency-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-currency-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -1407,6 +1408,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                               id="select-currency-input"
                                               name="exchangeCurrency"
                                               placeholder="Select Currency"
+                                              role="combobox"
                                               type="text"
                                               value="BTC (Ƀ)"
                                             />
@@ -1432,8 +1434,12 @@ exports[`General Settings > should disable submit button when profile is not res
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-currency-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-currency-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -1521,11 +1527,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -1546,8 +1548,10 @@ exports[`General Settings > should disable submit button when profile is not res
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -1555,6 +1559,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                               id="select-language-input"
                                               name="locale"
                                               placeholder="Select Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -1580,8 +1585,12 @@ exports[`General Settings > should disable submit button when profile is not res
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -1665,11 +1674,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -1690,8 +1695,10 @@ exports[`General Settings > should disable submit button when profile is not res
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-market-provider-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-market-provider-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -1699,6 +1706,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                               id="select-market-provider-input"
                                               name="marketProvider"
                                               placeholder="Select Price Source"
+                                              role="combobox"
                                               type="text"
                                               value="CryptoCompare"
                                             />
@@ -1724,8 +1732,12 @@ exports[`General Settings > should disable submit button when profile is not res
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-market-provider-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-market-provider-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -1809,11 +1821,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -1834,8 +1842,10 @@ exports[`General Settings > should disable submit button when profile is not res
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-time-format-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-time-format-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -1843,6 +1853,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                               id="select-time-format-input"
                                               name="timeFormat"
                                               placeholder="Select Time Format"
+                                              role="combobox"
                                               type="text"
                                               value="12h"
                                             />
@@ -1868,8 +1879,12 @@ exports[`General Settings > should disable submit button when profile is not res
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-time-format-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-time-format-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -1985,11 +2000,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
                                     class="w-full"
-                                    role="combobox"
                                   >
                                     <span>
                                       <span>
@@ -2010,8 +2021,10 @@ exports[`General Settings > should disable submit button when profile is not res
                                               class="relative flex h-full flex-1"
                                             >
                                               <input
+                                                aria-activedescendant=""
                                                 aria-autocomplete="list"
                                                 aria-controls="select-auto-signout-menu"
+                                                aria-expanded="false"
                                                 aria-labelledby="select-auto-signout-label"
                                                 autocomplete="off"
                                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -2019,6 +2032,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                                 id="select-auto-signout-input"
                                                 name="automaticSignOutPeriod"
                                                 placeholder="Select Auto Log-Off"
+                                                role="combobox"
                                                 type="text"
                                                 value="15 minutes"
                                               />
@@ -2044,8 +2058,12 @@ exports[`General Settings > should disable submit button when profile is not res
                                                   class="flex items-center"
                                                 >
                                                   <div
+                                                    aria-controls="select-auto-signout-menu"
+                                                    aria-expanded="false"
                                                     class="flex items-center justify-center"
                                                     data-testid="SelectDropdown__caret"
+                                                    id="select-auto-signout-toggle-button"
+                                                    tabindex="-1"
                                                   >
                                                     <div
                                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -3946,11 +3964,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -3971,8 +3985,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-passphrase-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-passphrase-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -3980,6 +3996,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                               id="select-passphrase-language-input"
                                               name="bip39Locale"
                                               placeholder="Select Passphrase Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -4005,8 +4022,12 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-passphrase-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-passphrase-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -4090,11 +4111,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -4115,8 +4132,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-currency-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-currency-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -4124,6 +4143,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                               id="select-currency-input"
                                               name="exchangeCurrency"
                                               placeholder="Select Currency"
+                                              role="combobox"
                                               type="text"
                                               value="BTC (Ƀ)"
                                             />
@@ -4149,8 +4169,12 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-currency-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-currency-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -4238,11 +4262,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -4263,8 +4283,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -4272,6 +4294,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                               id="select-language-input"
                                               name="locale"
                                               placeholder="Select Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -4297,8 +4320,12 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -4382,11 +4409,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -4407,8 +4430,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-market-provider-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-market-provider-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -4416,6 +4441,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                               id="select-market-provider-input"
                                               name="marketProvider"
                                               placeholder="Select Price Source"
+                                              role="combobox"
                                               type="text"
                                               value="CryptoCompare"
                                             />
@@ -4441,8 +4467,12 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-market-provider-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-market-provider-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -4526,11 +4556,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -4551,8 +4577,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-time-format-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-time-format-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -4560,6 +4588,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                               id="select-time-format-input"
                                               name="timeFormat"
                                               placeholder="Select Time Format"
+                                              role="combobox"
                                               type="text"
                                               value="12h"
                                             />
@@ -4585,8 +4614,12 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-time-format-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-time-format-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -4702,11 +4735,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
                                     class="w-full"
-                                    role="combobox"
                                   >
                                     <span>
                                       <span>
@@ -4727,8 +4756,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                               class="relative flex h-full flex-1"
                                             >
                                               <input
+                                                aria-activedescendant=""
                                                 aria-autocomplete="list"
                                                 aria-controls="select-auto-signout-menu"
+                                                aria-expanded="false"
                                                 aria-labelledby="select-auto-signout-label"
                                                 autocomplete="off"
                                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -4736,6 +4767,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                                 id="select-auto-signout-input"
                                                 name="automaticSignOutPeriod"
                                                 placeholder="Select Auto Log-Off"
+                                                role="combobox"
                                                 type="text"
                                                 value="15 minutes"
                                               />
@@ -4761,8 +4793,12 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                                   class="flex items-center"
                                                 >
                                                   <div
+                                                    aria-controls="select-auto-signout-menu"
+                                                    aria-expanded="false"
                                                     class="flex items-center justify-center"
                                                     data-testid="SelectDropdown__caret"
+                                                    id="select-auto-signout-toggle-button"
+                                                    tabindex="-1"
                                                   >
                                                     <div
                                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -6617,11 +6653,7 @@ exports[`General Settings > should render 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -6642,8 +6674,10 @@ exports[`General Settings > should render 1`] = `
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-passphrase-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-passphrase-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -6651,6 +6685,7 @@ exports[`General Settings > should render 1`] = `
                                               id="select-passphrase-language-input"
                                               name="bip39Locale"
                                               placeholder="Select Passphrase Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -6676,8 +6711,12 @@ exports[`General Settings > should render 1`] = `
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-passphrase-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-passphrase-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -6761,11 +6800,7 @@ exports[`General Settings > should render 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -6786,8 +6821,10 @@ exports[`General Settings > should render 1`] = `
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-currency-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-currency-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -6795,6 +6832,7 @@ exports[`General Settings > should render 1`] = `
                                               id="select-currency-input"
                                               name="exchangeCurrency"
                                               placeholder="Select Currency"
+                                              role="combobox"
                                               type="text"
                                               value="BTC (Ƀ)"
                                             />
@@ -6820,8 +6858,12 @@ exports[`General Settings > should render 1`] = `
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-currency-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-currency-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -6909,11 +6951,7 @@ exports[`General Settings > should render 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -6934,8 +6972,10 @@ exports[`General Settings > should render 1`] = `
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -6943,6 +6983,7 @@ exports[`General Settings > should render 1`] = `
                                               id="select-language-input"
                                               name="locale"
                                               placeholder="Select Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -6968,8 +7009,12 @@ exports[`General Settings > should render 1`] = `
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -7053,11 +7098,7 @@ exports[`General Settings > should render 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -7078,8 +7119,10 @@ exports[`General Settings > should render 1`] = `
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-market-provider-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-market-provider-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -7087,6 +7130,7 @@ exports[`General Settings > should render 1`] = `
                                               id="select-market-provider-input"
                                               name="marketProvider"
                                               placeholder="Select Price Source"
+                                              role="combobox"
                                               type="text"
                                               value="CryptoCompare"
                                             />
@@ -7112,8 +7156,12 @@ exports[`General Settings > should render 1`] = `
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-market-provider-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-market-provider-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -7197,11 +7245,7 @@ exports[`General Settings > should render 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -7222,8 +7266,10 @@ exports[`General Settings > should render 1`] = `
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-time-format-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-time-format-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -7231,6 +7277,7 @@ exports[`General Settings > should render 1`] = `
                                               id="select-time-format-input"
                                               name="timeFormat"
                                               placeholder="Select Time Format"
+                                              role="combobox"
                                               type="text"
                                               value="12h"
                                             />
@@ -7256,8 +7303,12 @@ exports[`General Settings > should render 1`] = `
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-time-format-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-time-format-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -7373,11 +7424,7 @@ exports[`General Settings > should render 1`] = `
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
                                     class="w-full"
-                                    role="combobox"
                                   >
                                     <span>
                                       <span>
@@ -7398,8 +7445,10 @@ exports[`General Settings > should render 1`] = `
                                               class="relative flex h-full flex-1"
                                             >
                                               <input
+                                                aria-activedescendant=""
                                                 aria-autocomplete="list"
                                                 aria-controls="select-auto-signout-menu"
+                                                aria-expanded="false"
                                                 aria-labelledby="select-auto-signout-label"
                                                 autocomplete="off"
                                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -7407,6 +7456,7 @@ exports[`General Settings > should render 1`] = `
                                                 id="select-auto-signout-input"
                                                 name="automaticSignOutPeriod"
                                                 placeholder="Select Auto Log-Off"
+                                                role="combobox"
                                                 type="text"
                                                 value="15 minutes"
                                               />
@@ -7432,8 +7482,12 @@ exports[`General Settings > should render 1`] = `
                                                   class="flex items-center"
                                                 >
                                                   <div
+                                                    aria-controls="select-auto-signout-menu"
+                                                    aria-expanded="false"
                                                     class="flex items-center justify-center"
                                                     data-testid="SelectDropdown__caret"
+                                                    id="select-auto-signout-toggle-button"
+                                                    tabindex="-1"
                                                   >
                                                     <div
                                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -9360,11 +9414,7 @@ exports[`General Settings > should update profile 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -9385,8 +9435,10 @@ exports[`General Settings > should update profile 1`] = `
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-passphrase-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-passphrase-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -9394,6 +9446,7 @@ exports[`General Settings > should update profile 1`] = `
                                               id="select-passphrase-language-input"
                                               name="bip39Locale"
                                               placeholder="Select Passphrase Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -9419,8 +9472,12 @@ exports[`General Settings > should update profile 1`] = `
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-passphrase-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-passphrase-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -9504,11 +9561,7 @@ exports[`General Settings > should update profile 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -9529,8 +9582,10 @@ exports[`General Settings > should update profile 1`] = `
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-currency-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-currency-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -9538,6 +9593,7 @@ exports[`General Settings > should update profile 1`] = `
                                               id="select-currency-input"
                                               name="exchangeCurrency"
                                               placeholder="Select Currency"
+                                              role="combobox"
                                               type="text"
                                               value="BTC (Ƀ)"
                                             />
@@ -9563,8 +9619,12 @@ exports[`General Settings > should update profile 1`] = `
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-currency-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-currency-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -9652,11 +9712,7 @@ exports[`General Settings > should update profile 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -9677,8 +9733,10 @@ exports[`General Settings > should update profile 1`] = `
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -9686,6 +9744,7 @@ exports[`General Settings > should update profile 1`] = `
                                               id="select-language-input"
                                               name="locale"
                                               placeholder="Select Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -9711,8 +9770,12 @@ exports[`General Settings > should update profile 1`] = `
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -9796,11 +9859,7 @@ exports[`General Settings > should update profile 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -9821,8 +9880,10 @@ exports[`General Settings > should update profile 1`] = `
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-market-provider-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-market-provider-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -9830,6 +9891,7 @@ exports[`General Settings > should update profile 1`] = `
                                               id="select-market-provider-input"
                                               name="marketProvider"
                                               placeholder="Select Price Source"
+                                              role="combobox"
                                               type="text"
                                               value="CryptoCompare"
                                             />
@@ -9855,8 +9917,12 @@ exports[`General Settings > should update profile 1`] = `
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-market-provider-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-market-provider-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -9940,11 +10006,7 @@ exports[`General Settings > should update profile 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -9965,8 +10027,10 @@ exports[`General Settings > should update profile 1`] = `
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-time-format-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-time-format-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -9974,6 +10038,7 @@ exports[`General Settings > should update profile 1`] = `
                                               id="select-time-format-input"
                                               name="timeFormat"
                                               placeholder="Select Time Format"
+                                              role="combobox"
                                               type="text"
                                               value="12h"
                                             />
@@ -9999,8 +10064,12 @@ exports[`General Settings > should update profile 1`] = `
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-time-format-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-time-format-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -10116,11 +10185,7 @@ exports[`General Settings > should update profile 1`] = `
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
                                     class="w-full"
-                                    role="combobox"
                                   >
                                     <span>
                                       <span>
@@ -10141,8 +10206,10 @@ exports[`General Settings > should update profile 1`] = `
                                               class="relative flex h-full flex-1"
                                             >
                                               <input
+                                                aria-activedescendant=""
                                                 aria-autocomplete="list"
                                                 aria-controls="select-auto-signout-menu"
+                                                aria-expanded="false"
                                                 aria-labelledby="select-auto-signout-label"
                                                 autocomplete="off"
                                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -10150,6 +10217,7 @@ exports[`General Settings > should update profile 1`] = `
                                                 id="select-auto-signout-input"
                                                 name="automaticSignOutPeriod"
                                                 placeholder="Select Auto Log-Off"
+                                                role="combobox"
                                                 type="text"
                                                 value="1 minute"
                                               />
@@ -10175,8 +10243,12 @@ exports[`General Settings > should update profile 1`] = `
                                                   class="flex items-center"
                                                 >
                                                   <div
+                                                    aria-controls="select-auto-signout-menu"
+                                                    aria-expanded="false"
                                                     class="flex items-center justify-center"
                                                     data-testid="SelectDropdown__caret"
+                                                    id="select-auto-signout-toggle-button"
+                                                    tabindex="-1"
                                                   >
                                                     <div
                                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -12032,11 +12104,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -12057,8 +12125,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-passphrase-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-passphrase-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -12066,6 +12136,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               id="select-passphrase-language-input"
                                               name="bip39Locale"
                                               placeholder="Select Passphrase Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -12091,8 +12162,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-passphrase-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-passphrase-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -12176,11 +12251,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -12201,8 +12272,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-currency-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-currency-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -12210,6 +12283,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               id="select-currency-input"
                                               name="exchangeCurrency"
                                               placeholder="Select Currency"
+                                              role="combobox"
                                               type="text"
                                               value="BTC (Ƀ)"
                                             />
@@ -12235,8 +12309,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-currency-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-currency-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -12324,11 +12402,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -12349,8 +12423,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -12358,6 +12434,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               id="select-language-input"
                                               name="locale"
                                               placeholder="Select Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -12383,8 +12460,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -12468,11 +12549,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -12493,8 +12570,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-market-provider-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-market-provider-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -12502,6 +12581,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               id="select-market-provider-input"
                                               name="marketProvider"
                                               placeholder="Select Price Source"
+                                              role="combobox"
                                               type="text"
                                               value="CryptoCompare"
                                             />
@@ -12527,8 +12607,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-market-provider-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-market-provider-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -12612,11 +12696,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -12637,8 +12717,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-time-format-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-time-format-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -12646,6 +12728,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               id="select-time-format-input"
                                               name="timeFormat"
                                               placeholder="Select Time Format"
+                                              role="combobox"
                                               type="text"
                                               value="12h"
                                             />
@@ -12671,8 +12754,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-time-format-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-time-format-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -12788,11 +12875,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
                                     class="w-full"
-                                    role="combobox"
                                   >
                                     <span>
                                       <span>
@@ -12813,8 +12896,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               class="relative flex h-full flex-1"
                                             >
                                               <input
+                                                aria-activedescendant=""
                                                 aria-autocomplete="list"
                                                 aria-controls="select-auto-signout-menu"
+                                                aria-expanded="false"
                                                 aria-labelledby="select-auto-signout-label"
                                                 autocomplete="off"
                                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -12822,6 +12907,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 id="select-auto-signout-input"
                                                 name="automaticSignOutPeriod"
                                                 placeholder="Select Auto Log-Off"
+                                                role="combobox"
                                                 type="text"
                                                 value="15 minutes"
                                               />
@@ -12847,8 +12933,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                   class="flex items-center"
                                                 >
                                                   <div
+                                                    aria-controls="select-auto-signout-menu"
+                                                    aria-expanded="false"
                                                     class="flex items-center justify-center"
                                                     data-testid="SelectDropdown__caret"
+                                                    id="select-auto-signout-toggle-button"
+                                                    tabindex="-1"
                                                   >
                                                     <div
                                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -14806,11 +14896,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -14831,8 +14917,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-passphrase-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-passphrase-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -14840,6 +14928,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               id="select-passphrase-language-input"
                                               name="bip39Locale"
                                               placeholder="Select Passphrase Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -14865,8 +14954,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-passphrase-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-passphrase-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -14950,11 +15043,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -14975,8 +15064,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-currency-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-currency-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -14984,6 +15075,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               id="select-currency-input"
                                               name="exchangeCurrency"
                                               placeholder="Select Currency"
+                                              role="combobox"
                                               type="text"
                                               value="BTC (Ƀ)"
                                             />
@@ -15009,8 +15101,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-currency-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-currency-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -15098,11 +15194,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -15123,8 +15215,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-language-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-language-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -15132,6 +15226,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               id="select-language-input"
                                               name="locale"
                                               placeholder="Select Language"
+                                              role="combobox"
                                               type="text"
                                               value="English"
                                             />
@@ -15157,8 +15252,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-language-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-language-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -15242,11 +15341,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -15267,8 +15362,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-market-provider-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-market-provider-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -15276,6 +15373,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               id="select-market-provider-input"
                                               name="marketProvider"
                                               placeholder="Select Price Source"
+                                              role="combobox"
                                               type="text"
                                               value="CryptoCompare"
                                             />
@@ -15301,8 +15399,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-market-provider-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-market-provider-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -15386,11 +15488,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
                                   class="w-full"
-                                  role="combobox"
                                 >
                                   <span>
                                     <span>
@@ -15411,8 +15509,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="relative flex h-full flex-1"
                                           >
                                             <input
+                                              aria-activedescendant=""
                                               aria-autocomplete="list"
                                               aria-controls="select-time-format-menu"
+                                              aria-expanded="false"
                                               aria-labelledby="select-time-format-label"
                                               autocomplete="off"
                                               class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -15420,6 +15520,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               id="select-time-format-input"
                                               name="timeFormat"
                                               placeholder="Select Time Format"
+                                              role="combobox"
                                               type="text"
                                               value="12h"
                                             />
@@ -15445,8 +15546,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 class="flex items-center"
                                               >
                                                 <div
+                                                  aria-controls="select-time-format-menu"
+                                                  aria-expanded="false"
                                                   class="flex items-center justify-center"
                                                   data-testid="SelectDropdown__caret"
+                                                  id="select-time-format-toggle-button"
+                                                  tabindex="-1"
                                                 >
                                                   <div
                                                     class="absolute inset-0 block cursor-pointer md:hidden"
@@ -15562,11 +15667,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
                                     class="w-full"
-                                    role="combobox"
                                   >
                                     <span>
                                       <span>
@@ -15587,8 +15688,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               class="relative flex h-full flex-1"
                                             >
                                               <input
+                                                aria-activedescendant=""
                                                 aria-autocomplete="list"
                                                 aria-controls="select-auto-signout-menu"
+                                                aria-expanded="false"
                                                 aria-labelledby="select-auto-signout-label"
                                                 autocomplete="off"
                                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
@@ -15596,6 +15699,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                 id="select-auto-signout-input"
                                                 name="automaticSignOutPeriod"
                                                 placeholder="Select Auto Log-Off"
+                                                role="combobox"
                                                 type="text"
                                                 value="15 minutes"
                                               />
@@ -15621,8 +15725,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                                                   class="flex items-center"
                                                 >
                                                   <div
+                                                    aria-controls="select-auto-signout-menu"
+                                                    aria-expanded="false"
                                                     class="flex items-center justify-center"
                                                     data-testid="SelectDropdown__caret"
+                                                    id="select-auto-signout-toggle-button"
+                                                    tabindex="-1"
                                                   >
                                                     <div
                                                       class="absolute inset-0 block cursor-pointer md:hidden"
