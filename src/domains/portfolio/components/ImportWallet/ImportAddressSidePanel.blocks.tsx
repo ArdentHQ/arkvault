@@ -20,6 +20,23 @@ export interface StepHeaderConfig {
 	titleIcon?: React.ReactNode;
 }
 
+export interface ImportBackButtonProps {
+	onBack?: () => void;
+	showBack?: boolean;
+}
+
+export const ImportBackButton = ({ onBack, showBack }: ImportBackButtonProps) => {
+	const { t } = useTranslation();
+
+	if (!showBack || !onBack) return null;
+
+	return (
+		<Button data-testid="ImportWallet__back-button" variant="secondary" onClick={onBack}>
+			{t("COMMON.BACK")}
+		</Button>
+	);
+};
+
 export function useStepHeaderConfig(step: ImportAddressStep, importOption?: ImportOption): StepHeaderConfig {
 	const { t } = useTranslation();
 
