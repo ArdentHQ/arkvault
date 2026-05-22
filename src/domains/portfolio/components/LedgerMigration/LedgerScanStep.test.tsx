@@ -146,6 +146,45 @@ describe("LedgerMigration LedgerScanStep", () => {
 		});
 	});
 
+	it("should create scanMore callback that calls scan with profile", async () => {
+		vi.resetModules();
+
+		const capturedScanMore = vi.fn<() => void>();
+
+		vi.doMock("@/domains/portfolio/components/ImportWallet/Ledger/LedgerScanStep", () => ({
+			LedgerTable: vi.fn((props: any) => {
+				capturedScanMore(props.scanMore);
+				return <div data-testid="mock-LedgerTable" />;
+			}),
+		}));
+
+		const { LedgerScanStep: LedgerScanStepMocked } = await import("./LedgerScanStep");
+
+		mockNanoSTransport();
+		const testProfile = env.profiles().findById(getMainsailProfileId());
+		await env.profiles().restore(testProfile);
+		const testNetwork = testProfile.wallets().first().network();
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			canRetry: false,
+		});
+
+		render(<LedgerScanStepMocked profile={testProfile} network={testNetwork} children={<div>test</div>} />);
+
+		expect(capturedScanMore).toHaveBeenCalledTimes(1);
+		expect(typeof capturedScanMore.mock.calls[0][0]).toBe("function");
+
+		defaultScannerState.scan.mockClear();
+
+		const scanMoreFn = capturedScanMore.mock.calls[0][0];
+		scanMoreFn();
+
+		await vi.waitFor(() => {
+			expect(defaultScannerState.scan).toHaveBeenCalledWith(testProfile);
+		});
+	});
+
 	it("should call scan more", async () => {
 		const user = userEvent.setup();
 		const scanMore = vi.fn();
