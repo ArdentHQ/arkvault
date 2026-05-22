@@ -3,6 +3,7 @@ import React, { JSX, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { LedgerTabs } from "./Ledger/LedgerTabs";
+import { HDWalletTabs } from "./HDWallet/HDWalletTabs";
 import { ImportDetailStep } from "./ImportDetailStep";
 import { SuccessStep } from "./SuccessStep";
 import { Form } from "@/app/components/Form";
@@ -321,7 +322,7 @@ export const ImportAddressesSidePanel = ({
 
 						<TabPanel tabId={ImportAddressStep.ImportDetailStep}>
 							{isHDWalletImport && (
-								<LedgerTabs
+								<HDWalletTabs
 									mnemonic={getValues("mnemonic")}
 									onClickEditWalletName={handleEditLedgerAlias}
 									onStepChange={setHDWalletActiveTab}
