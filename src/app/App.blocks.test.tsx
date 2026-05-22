@@ -14,21 +14,6 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-vi.mock("@/domains/profile/routing", async () => {
-	const page = await vi.importActual("@/domains/profile/pages/Welcome");
-	const { ProfilePaths } = await vi.importActual("@/router/paths");
-
-	return {
-		ProfileRoutes: [
-			{
-				component: page.default,
-				exact: true,
-				path: ProfilePaths.Welcome,
-			},
-		],
-	};
-});
-
 describe("App Router", () => {
 	beforeEach(() => {
 		process.env.REACT_APP_IS_UNIT = undefined;

@@ -164,7 +164,6 @@ beforeEach(() => {
 
 afterEach(async () => {
 	server.resetHandlers();
-	await vi.dynamicImportSettled();
 });
 
 afterAll(() => {
