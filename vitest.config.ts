@@ -67,6 +67,7 @@ export default defineConfig(async (env) => {
 						"src/utils/test-plugins.ts",
 						"src/utils/test-helpers.ts",
 						"**/*.test.{ts,tsx}",
+						"**/*.svg",
 					],
 					provider: "istanbul",
 					reporter: ["json", "lcov", "text", "clover", "html"],
