@@ -13,6 +13,8 @@ import { LedgerMigrationSidepanel } from "./LedgerMigrationSidepanel";
 import userEvent from "@testing-library/user-event";
 import { createTransactionMocks } from "@/tests/mocks/Ledger";
 import { WalletData } from "@/app/lib/mainsail/wallet.dto";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { LedgerScanner } from "@/app/lib/mainsail/ledger.scanner";
 
 vi.mock("@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction", () => ({
 	useConfirmedTransaction: vi.fn().mockReturnValue({
@@ -314,6 +316,361 @@ describe("LedgerMigrationSidepanel", () => {
 			await userEvent.click(closeButton);
 
 			expect(onOpenChange).toHaveBeenCalledWith(false);
+		},
+	);
+
+	it.each(["sm", "md", "lg", "xl"])(
+		"should log not available when device is unavailable in %s",
+		async (containerSize) => {
+			mockLedgerTransportError("Access denied to use Ledger device");
+			const consoleSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+
+			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, {
+				route,
+			});
+
+			await waitFor(() => {
+				expect(consoleSpy).toHaveBeenCalledWith("not available");
+			});
+
+			consoleSpy.mockRestore();
+		},
+	);
+
+	it.each(["sm", "md", "lg", "xl"])(
+		"should navigate back to listen step when connection fails in %s",
+		async (containerSize) => {
+			mockNanoSTransport();
+
+			const accessSpy = vi
+				.spyOn(profile.ledger(), "accessLedgerApp")
+				.mockRejectedValueOnce(new Error("INCOMPATIBLE_APP"));
+
+			const onOpenChange = vi.fn();
+			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
+				route,
+			});
+
+			await waitFor(() => {
+				expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+			});
+
+			await waitFor(() => {
+				expect(screen.getByTestId("LedgerAuthStep")).toBeInTheDocument();
+			});
+
+			accessSpy.mockRestore();
+		},
+	);
+
+	it.each(["sm", "md", "lg", "xl"])(
+		"should close and go to portfolio from pending confirmation in %s",
+		async (containerSize) => {
+			vi.mocked(useConfirmedTransaction).mockReturnValue({
+				isConfirmed: false,
+				transaction: undefined,
+			});
+
+			const onOpenChange = vi.fn();
+			mockNanoSTransport();
+			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
+				route,
+			});
+
+			await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
+
+			await waitFor(() => {
+				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+			});
+			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+
+			await waitFor(() => expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument());
+
+			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
+			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+
+			await waitFor(() => expect(screen.getByRole("button", { name: /go to portfolio/i })).toBeInTheDocument());
+
+			await userEvent.click(screen.getByRole("button", { name: /go to portfolio/i }));
+
+			expect(onOpenChange).toHaveBeenCalledWith(false);
+
+			vi.mocked(useConfirmedTransaction).mockReturnValue({
+				isConfirmed: true,
+				transaction: undefined,
+			});
+		},
+	);
+
+	it.each(["sm", "md", "lg", "xl"])(
+		"should navigate to next transaction overview after success in %s",
+		async (containerSize) => {
+			mockNanoSTransport();
+			const wallet = profile.wallets().first();
+			const mocky = await createTransactionMocks(wallet);
+
+			const extendedKeyPaths = new Map([
+				...publicKeyPaths,
+				["m/44'/1'/0'/0/1", profile.wallets().last().publicKey()!],
+				["m/44'/60'/0'/0/1", profile.wallets().last().publicKey()!],
+			]);
+			const publicKeySpy = vi
+				.spyOn(wallet.ledger(), "getExtendedPublicKey")
+				.mockImplementation((path) => extendedKeyPaths.get(path));
+
+			const scannerPrototypeSpy = vi.spyOn(LedgerScanner.prototype, "scan").mockResolvedValue([
+				{ address: wallet.address(), balance: 10, path: "m/44'/1'/0'/0/0" },
+				{ address: profile.wallets().last().address(), balance: 10, path: "m/44'/1'/0'/0/1" },
+			]);
+
+			vi.useFakeTimers({ shouldAdvanceTime: true });
+
+			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, {
+				route,
+			});
+
+			await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
+			await waitFor(() => {
+				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+			});
+
+			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+
+			await waitFor(() => expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument());
+
+			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
+			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+
+			await vi.advanceTimersByTimeAsync(2100);
+
+			await waitFor(() => expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument());
+
+			vi.useRealTimers();
+			publicKeySpy.mockRestore();
+			scannerPrototypeSpy.mockRestore();
+			mocky.restoreAll();
+		},
+	);
+
+	it.each(["sm", "md", "lg", "xl"])(
+		"should close panel when clicking Close on error step in %s",
+		async (containerSize) => {
+			mockNanoSTransport();
+			const wallet = profile.wallets().first();
+			const onOpenChange = vi.fn();
+			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
+				route,
+			});
+
+			await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
+			await waitFor(() => {
+				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+			});
+			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+			await waitFor(() => expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument());
+
+			vi.spyOn(wallet.transaction(), "signTransfer").mockRejectedValueOnce(new Error("Signing failed"));
+
+			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
+			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+
+			await waitFor(() => expect(screen.getByTestId("LedgerTransactionErrorStep")).toBeInTheDocument());
+
+			await userEvent.click(screen.getByRole("button", { name: /close/i }));
+
+			expect(onOpenChange).toHaveBeenCalledWith(false);
+		},
+	);
+
+	it.each(["sm", "md", "lg", "xl"])(
+		"should retry transaction when clicking Try Again on error step in %s",
+		async (containerSize) => {
+			mockNanoSTransport();
+			const wallet = profile.wallets().first();
+
+			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, {
+				route,
+			});
+
+			await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
+			await waitFor(() => {
+				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+			});
+			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+			await waitFor(() => expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument());
+
+			vi.spyOn(wallet.transaction(), "signTransfer").mockRejectedValueOnce(new Error("Signing failed"));
+
+			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
+			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+
+			await waitFor(() => expect(screen.getByTestId("LedgerTransactionErrorStep")).toBeInTheDocument());
+
+			await userEvent.click(screen.getByRole("button", { name: /try again/i }));
+
+			await waitFor(() => expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument());
+		},
+	);
+
+	it.each(["sm", "md", "lg", "xl"])(
+		"should show confirmation modal when closing with completed transactions in %s",
+		async (containerSize) => {
+			mockNanoSTransport();
+			const wallet = profile.wallets().first();
+			const mocky = await createTransactionMocks(wallet);
+
+			const publicKeySpy = vi
+				.spyOn(wallet.ledger(), "getExtendedPublicKey")
+				.mockImplementation((path) => publicKeyPaths.get(path));
+
+			const scanSpy = vi
+				.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan")
+				.mockImplementation(() => {
+					return Promise.resolve({
+						"m/44'/1'/0'/0/0": new WalletData({ config: wallet.network().config() }).fill({
+							address: wallet.address(),
+							balance: 10,
+							publicKey: wallet.publicKey(),
+						}),
+					});
+				});
+
+			const onOpenChange = vi.fn();
+			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
+				route,
+			});
+
+			await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
+			await waitFor(() => {
+				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+			});
+			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+			await waitFor(() => expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument());
+
+			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
+			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+
+			await waitFor(
+				() => expect(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio")).toBeInTheDocument(),
+				{ timeout: 4000 },
+			);
+
+			await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+
+			await waitFor(() => expect(screen.getByTestId("ConfirmationModal__no-button")).toBeInTheDocument());
+			expect(onOpenChange).not.toHaveBeenCalled();
+
+			publicKeySpy.mockRestore();
+			scanSpy.mockRestore();
+			mocky.restoreAll();
+		},
+	);
+
+	it.each(["sm", "md", "lg", "xl"])("should dismiss confirmation modal on cancel in %s", async (containerSize) => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const mocky = await createTransactionMocks(wallet);
+
+		const publicKeySpy = vi
+			.spyOn(wallet.ledger(), "getExtendedPublicKey")
+			.mockImplementation((path) => publicKeyPaths.get(path));
+
+		const scanSpy = vi.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan").mockImplementation(() => {
+			return Promise.resolve({
+				"m/44'/1'/0'/0/0": new WalletData({ config: wallet.network().config() }).fill({
+					address: wallet.address(),
+					balance: 10,
+					publicKey: wallet.publicKey(),
+				}),
+			});
+		});
+
+		const onOpenChange = vi.fn();
+		renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
+			route,
+		});
+
+		await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+		});
+		await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+		await waitFor(() => expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument());
+
+		await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
+		await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+
+		await waitFor(
+			() => expect(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio")).toBeInTheDocument(),
+			{ timeout: 4000 },
+		);
+
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+		await waitFor(() => expect(screen.getByTestId("ConfirmationModal__no-button")).toBeInTheDocument());
+
+		await userEvent.click(screen.getByTestId("ConfirmationModal__no-button"));
+
+		await waitFor(() => expect(screen.queryByTestId("ConfirmationModal__no-button")).not.toBeInTheDocument());
+		expect(onOpenChange).not.toHaveBeenCalled();
+
+		publicKeySpy.mockRestore();
+		scanSpy.mockRestore();
+		mocky.restoreAll();
+	});
+
+	it.each(["sm", "md", "lg", "xl"])(
+		"should close panel on confirmation modal confirm in %s",
+		async (containerSize) => {
+			mockNanoSTransport();
+			const wallet = profile.wallets().first();
+			const mocky = await createTransactionMocks(wallet);
+
+			const publicKeySpy = vi
+				.spyOn(wallet.ledger(), "getExtendedPublicKey")
+				.mockImplementation((path) => publicKeyPaths.get(path));
+
+			const scanSpy = vi
+				.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan")
+				.mockImplementation(() => {
+					return Promise.resolve({
+						"m/44'/1'/0'/0/0": new WalletData({ config: wallet.network().config() }).fill({
+							address: wallet.address(),
+							balance: 10,
+							publicKey: wallet.publicKey(),
+						}),
+					});
+				});
+
+			const onOpenChange = vi.fn();
+			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
+				route,
+			});
+
+			await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
+			await waitFor(() => {
+				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+			});
+			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+			await waitFor(() => expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument());
+
+			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
+			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+
+			await waitFor(
+				() => expect(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio")).toBeInTheDocument(),
+				{ timeout: 4000 },
+			);
+
+			await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+			await waitFor(() => expect(screen.getByTestId("ConfirmationModal__yes-button")).toBeInTheDocument());
+
+			await userEvent.click(screen.getByTestId("ConfirmationModal__yes-button"));
+
+			expect(onOpenChange).toHaveBeenCalledWith(false);
+
+			publicKeySpy.mockRestore();
+			scanSpy.mockRestore();
+			mocky.restoreAll();
 		},
 	);
 });
