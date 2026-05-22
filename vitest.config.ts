@@ -44,7 +44,7 @@ export default defineConfig(async (env) => {
 				},
 				coverage: {
 					include: process.env.COVERAGE_INCLUDE_PATH
-						? process.env.COVERAGE_INCLUDE_PATH.split(",").map(toCoverageGlob)
+						? process.env.COVERAGE_INCLUDE_PATH.split(",")
 						: ["src/**/*.{ts,tsx}"],
 					exclude: [
 						"**/build/*",
