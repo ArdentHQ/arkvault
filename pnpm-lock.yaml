@@ -96,8 +96,8 @@ importers:
         specifier: ^18.2.1
         version: 18.2.1
       locale-currency:
-        specifier: ^0.0.4
-        version: 0.0.4
+        specifier: ^1.0.0
+        version: 1.0.0
       localforage:
         specifier: ^1.10.0
         version: 1.10.0
@@ -105,8 +105,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       p-queue:
-        specifier: ^8.1.1
-        version: 8.1.1
+        specifier: ^9.3.0
+        version: 9.3.0
       p-retry:
         specifier: ^6.2.1
         version: 6.2.1
@@ -3520,6 +3520,9 @@ packages:
   eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
 
+  eventemitter3@5.0.4:
+    resolution: {integrity: sha512-mlsTRyGaPBjPedk6Bvw+aqbsXDtoAyAzm5MO7JgU+yVRyMQ5O8bD4Kcci7BS85f93veegeCPkL8R4GLClnjLFw==}
+
   events@3.3.0:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
@@ -4478,8 +4481,9 @@ packages:
   linux-platform-info@0.0.3:
     resolution: {integrity: sha512-FZhfFOIz0i4EGAvM4fQz+eayE9YzMuTx45tbygWYBttNapyiODg85BnAlQ1xnahEkvIM87T98XhXSfW8JAClHg==}
 
-  locale-currency@0.0.4:
-    resolution: {integrity: sha512-S3pRVxU7xZDFlN4DkvLChQf8e1xm39XD6gkiWk1GI7nP3P7VMXHTWD/ZLLr13rAKNRpAeNCgTTMMNxEG8GZYRQ==}
+  locale-currency@1.0.0:
+    resolution: {integrity: sha512-OPw/KpjqAQdk36fbBHzJxPVpFx7DGU4jFYjmJoinkvbgS/QeKtsykiXszgS/EB458eieVppo/gbP1CbtJN4E9g==}
+    engines: {node: '>=14.0.0'}
 
   localforage@1.10.0:
     resolution: {integrity: sha512-14/H1aX7hzBBmmh7sGPd+AOMkkIrHM3Z1PAyGgZigA1H1p5O5ANnMyWzvpAETtG68/dC4pC0ncy3+PPGzXZHPg==}
@@ -4892,17 +4896,17 @@ packages:
     resolution: {integrity: sha512-d3qXVTF/s+W+CdJ5A29wywV2n8CQQYahlgz2bFiA+4eVNJbHJodPZ+/gXwPGh0bOqA+j8S+6+ckmvLGPk1QpxQ==}
     engines: {node: '>=8'}
 
-  p-queue@8.1.1:
-    resolution: {integrity: sha512-aNZ+VfjobsWryoiPnEApGGmf5WmNsCo9xu8dfaYamG5qaLP7ClhLN6NgsFe6SwJ2UbLEBK5dv9x8Mn5+RVhMWQ==}
-    engines: {node: '>=18'}
+  p-queue@9.3.0:
+    resolution: {integrity: sha512-7NED7xhQ74Ngp4JP/2e0VZHp7vSWfJfqeiR92jPgxsz6m0Se4P03YoTKa9dDXyZ3r6P616gUXttrB6nnHYKang==}
+    engines: {node: '>=20'}
 
   p-retry@6.2.1:
     resolution: {integrity: sha512-hEt02O4hUct5wtwg4H4KcWgDdm+l1bOaEy/hWzd8xtXB9BqxTWBBhb+2ImAtH4Cv4rPjV76xN3Zumqk3k3AhhQ==}
     engines: {node: '>=16.17'}
 
-  p-timeout@6.1.4:
-    resolution: {integrity: sha512-MyIV3ZA/PmyBN/ud8vV9XzwTrNtR4jFrObymZYnZqMmW0zA8Z17vnT0rBgFE/TlohB+YCHqXMgZzb3Csp49vqg==}
-    engines: {node: '>=14.16'}
+  p-timeout@7.0.1:
+    resolution: {integrity: sha512-AxTM2wDGORHGEkPCt8yqxOTMgpfbEHqF51f/5fJCmwFC3C/zNcGT63SymH2ttOAaiIws2zVg4+izQCjrakcwHg==}
+    engines: {node: '>=20'}
 
   p-try@2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
@@ -10934,6 +10938,8 @@ snapshots:
 
   eventemitter3@5.0.1: {}
 
+  eventemitter3@5.0.4: {}
+
   events@3.3.0: {}
 
   evp_bytestokey@1.0.3:
@@ -11880,7 +11886,7 @@ snapshots:
     dependencies:
       os-family: 1.1.0
 
-  locale-currency@0.0.4: {}
+  locale-currency@1.0.0: {}
 
   localforage@1.10.0:
     dependencies:
@@ -12309,10 +12315,10 @@ snapshots:
     dependencies:
       aggregate-error: 3.1.0
 
-  p-queue@8.1.1:
+  p-queue@9.3.0:
     dependencies:
-      eventemitter3: 5.0.1
-      p-timeout: 6.1.4
+      eventemitter3: 5.0.4
+      p-timeout: 7.0.1
 
   p-retry@6.2.1:
     dependencies:
@@ -12320,7 +12326,7 @@ snapshots:
       is-network-error: 1.1.0
       retry: 0.13.1
 
-  p-timeout@6.1.4: {}
+  p-timeout@7.0.1: {}
 
   p-try@2.2.0: {}
 
