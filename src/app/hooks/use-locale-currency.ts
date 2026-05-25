@@ -1,4 +1,4 @@
-import {getCurrency} from "locale-currency";
+import { getCurrency } from "locale-currency";
 import { useMemo } from "react";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
