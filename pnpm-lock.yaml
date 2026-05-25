@@ -194,9 +194,6 @@ importers:
       viem:
         specifier: ^2.49.2
         version: 2.49.2(typescript@5.9.3)
-      yup:
-        specifier: ^1.7.1
-        version: 1.7.1
     devDependencies:
       '@cucumber/cucumber':
         specifier: ^12.8.3
