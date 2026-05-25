@@ -138,8 +138,8 @@ importers:
         specifier: ^17.0.8
         version: 17.0.8(i18next@26.2.0(typescript@5.9.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.9.3)
       react-idle-timer:
-        specifier: 5.7.2
-        version: 5.7.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: 5.7.3
+        version: 5.7.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       react-loading-skeleton:
         specifier: ^3.5.0
         version: 3.5.0(react@19.2.6)
@@ -5280,8 +5280,8 @@ packages:
       typescript:
         optional: true
 
-  react-idle-timer@5.7.2:
-    resolution: {integrity: sha512-+BaPfc7XEUU5JFkwZCx6fO1bLVK+RBlFH+iY4X34urvIzZiZINP6v2orePx3E6pAztJGE7t4DzvL7if2SL/0GQ==}
+  react-idle-timer@5.7.3:
+    resolution: {integrity: sha512-7QuPkJ8ffraiECVRP1KlzHOocvkvN1XEPeOevnfMLNc7A6O/TMZo11j5sPfYvftvkOqNA84iCc5dYXoX+m2raQ==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -12610,7 +12610,7 @@ snapshots:
       react-dom: 19.2.6(react@19.2.6)
       typescript: 5.9.3
 
-  react-idle-timer@5.7.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6):
+  react-idle-timer@5.7.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6):
     dependencies:
       react: 19.2.6
       react-dom: 19.2.6(react@19.2.6)
