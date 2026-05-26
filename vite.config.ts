@@ -210,7 +210,6 @@ export default defineConfig(async () => {
 				"semver",
 				"socks-proxy-agent",
 				"string-hash",
-				"yup",
 				"react-zendesk",
 				"@ledgerhq/hw-app-eth",
 				"@ledgerhq/hw-transport-webhid",
