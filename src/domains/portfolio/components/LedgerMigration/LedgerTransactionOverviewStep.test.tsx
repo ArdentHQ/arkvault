@@ -72,8 +72,12 @@ describe("LedgerTransactionOverviewStep", () => {
 			{ route },
 		);
 
-		expect(screen.getByTestId("Overview_accept-responsibility")).toBeInTheDocument();
-		expect(screen.getByTestId("OverviewStep__continue-button")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("Overview_accept-responsibility")).toBeInTheDocument();
+		});
+		await waitFor(() => {
+			expect(screen.getByTestId("OverviewStep__continue-button")).toBeInTheDocument();
+		});
 	});
 
 	it("should not call onContinue when checkbox is unchecked", async () => {
@@ -91,7 +95,9 @@ describe("LedgerTransactionOverviewStep", () => {
 			{ route },
 		);
 
-		expect(screen.getByTestId("OverviewStep__continue-button")).toBeDisabled();
+		await waitFor(() => {
+			expect(screen.getByTestId("OverviewStep__continue-button")).toBeDisabled();
+		});
 	});
 
 	it("should not show Transactions component when only one transaction", async () => {
