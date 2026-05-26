@@ -206,6 +206,22 @@ describe("TransferNotification", () => {
 	});
 });
 
+
+describe("NotificationLeftSide empty return", () => {
+	it("should render empty fragment when transaction is neither transfer nor multiPayment nor tokenTransfer", () => {
+		const nonTransferTx = createMockTransaction({
+			isMultiPayment: (): boolean => false,
+			isSuccess: (): boolean => true,
+			isTokenTransfer: (): boolean => false,
+			isTransfer: (): boolean => false,
+		});
+
+		const { container } = render(<NotificationLeftSide transaction={nonTransferTx} />);
+
+		expect(container).toMatchSnapshot();
+	});
+});
+
 describe("FailedTransactionNotification", () => {
 	it("should render failed notification with error message", async () => {
 		const failedTransaction = createMockTransaction({
