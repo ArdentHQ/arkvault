@@ -19,7 +19,7 @@ const route = `/profiles/${fixtureProfileId}/dashboard`;
 const mnemonic = getDefaultMainsailWalletMnemonic();
 const hdWalletLabel = "HD Wallet";
 const detailStepTestId = "ImportWallet__detail-step";
-const loadMoreAddressTestId = loadMoreAddressTestId;
+const loadMoreAddressTestId = "SelectAddressStep__load-more";
 
 // Test helper selectors
 const getMnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
