@@ -22,7 +22,7 @@ const route = `/profiles/${fixtureProfileId}/dashboard`;
 const mnemonic = getDefaultMainsailWalletMnemonic();
 const testBaseDerivationPath = "m/44'/1'/0'/0"; // todo: 86dxuqw2q
 
-const selectAllTestId = selectAllTestId;
+const selectAllTestId = "SelectAddressStep__select-all";
 const getAddressCheckboxes = () => screen.getAllByTestId("SelectAddressStep__checkbox-row");
 
 const addressIndex0 = "0x715Ab07Cf7EbA2F069d10d368c3dB4158DC9CFfe"; // "0xe37F40bC165c670Eb50367C43f5581cFDA897320"; todo: 86dxuqw2q

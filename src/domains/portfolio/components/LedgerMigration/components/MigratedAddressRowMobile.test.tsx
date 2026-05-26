@@ -7,7 +7,7 @@ import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { createLedgerMocks } from "@/tests/mocks/Ledger";
 
 describe("MigratedAddressRow", () => {
-	const testPath = testPath;
+	const testPath = "m/44'/1'/1'/0/0";
 
 	let profile: Contracts.IProfile;
 	const route = `/profiles/${getMainsailProfileId()}/dashboard`;

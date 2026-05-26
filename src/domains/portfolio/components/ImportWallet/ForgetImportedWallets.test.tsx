@@ -9,7 +9,7 @@ vi.mock("@/utils/assertions", () => ({
 
 describe("forgetImportedWallets", () => {
 	const testAddress = "0x123";
-	const importedWalletId = importedWalletId;
+	const importedWalletId = "imported-wallet";
 
 	let mockProfile: Partial<Contracts.IProfile>;
 	let mockWallets: Partial<Contracts.IWalletCollection>;
