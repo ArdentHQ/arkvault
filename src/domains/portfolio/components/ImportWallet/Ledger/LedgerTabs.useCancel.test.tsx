@@ -1,4 +1,4 @@
-import { renderHook, act } from "@testing-library/react";
+import { renderHook } from "@testing-library/react";
 import { useCancel } from "./LedgerTabs.blocks";
 
 describe("useCancel", () => {
@@ -20,9 +20,7 @@ describe("useCancel", () => {
 			{ initialProps: { cancelling: false } },
 		);
 
-		await act(async () => {
-			rerender({ cancelling: false });
-		});
+		rerender({ cancelling: false });
 
 		expect(mockDisconnect).not.toHaveBeenCalled();
 	});
@@ -45,9 +43,7 @@ describe("useCancel", () => {
 			{ initialProps: { cancelling: false } },
 		);
 
-		await act(async () => {
-			rerender({ cancelling: true });
-		});
+		rerender({ cancelling: true });
 
 		expect(mockSetCancelling).toHaveBeenCalledWith(false);
 		expect(mockDisconnect).toHaveBeenCalledTimes(1);
@@ -71,9 +67,7 @@ describe("useCancel", () => {
 			{ initialProps: { cancelling: false } },
 		);
 
-		await act(async () => {
-			rerender({ cancelling: true });
-		});
+		rerender({ cancelling: true });
 
 		expect(mockDisconnect).not.toHaveBeenCalled();
 	});

@@ -282,9 +282,7 @@ describe("ImportAddress Validations", () => {
 	});
 
 	it("should show an error message for invalid public key", async () => {
-		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{ route: route },
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, { route: route });
 
 		expect(methodStep()).toBeInTheDocument();
 

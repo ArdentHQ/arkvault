@@ -20,8 +20,9 @@ const fixtureProfileId = getMainsailProfileId();
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 
 const mnemonic = getDefaultMainsailWalletMnemonic();
-const baseDerivationPath = "m/44'/1'/0'/0"; // todo: 86dxuqw2q
+const testBaseDerivationPath = "m/44'/1'/0'/0"; // todo: 86dxuqw2q
 
+const selectAllTestId = selectAllTestId;
 const getAddressCheckboxes = () => screen.getAllByTestId("SelectAddressStep__checkbox-row");
 
 const addressIndex0 = "0x715Ab07Cf7EbA2F069d10d368c3dB4158DC9CFfe"; // "0xe37F40bC165c670Eb50367C43f5581cFDA897320"; todo: 86dxuqw2q
@@ -31,19 +32,19 @@ const mockAddresses: AddressData[] = [
 		address: addressIndex0,
 		balance: 100,
 		levels: { account: 0, addressIndex: 0, change: 0 },
-		path: `${baseDerivationPath}/0`,
+		path: `${testBaseDerivationPath}/0`,
 	},
 	{
 		address: "0xC2803C4B88d67a394322233B13483dD0f0838090", // "0x27bFB53D7D43Fb438B4C6fF4965A2532a6403CCc", todo: 86dxuqw2q
 		balance: 250,
 		levels: { account: 0, addressIndex: 1, change: 0 },
-		path: `${baseDerivationPath}/1`,
+		path: `${testBaseDerivationPath}/1`,
 	},
 	{
 		address: "0xaDa1bD8aBdaC28158AFE3A142466e5b9e5152c68", // "0x8C400C31e1b256c90C9DA1068AbaF775E6aEe6A6", todo: 86dxuqw2q
 		balance: 0,
 		levels: { account: 0, addressIndex: 2, change: 0 },
-		path: `${baseDerivationPath}/2`,
+		path: `${testBaseDerivationPath}/2`,
 	},
 ];
 
@@ -91,14 +92,14 @@ describe("AddressesTable", () => {
 
 		render(<AddressesTable {...defaultProps} toggleSelectAll={toggleSelectAll} />);
 
-		const selectAllCheckbox = screen.getByTestId("SelectAddressStep__select-all");
+		const selectAllCheckbox = screen.getByTestId(selectAllTestId);
 		await user.click(selectAllCheckbox);
 
 		expect(toggleSelectAll).toHaveBeenCalled();
 	});
 
 	it("should show selected state correctly", () => {
-		const isSelected = vi.fn().mockImplementation((address) => address.path === `${baseDerivationPath}/0`);
+		const isSelected = vi.fn().mockImplementation((address) => address.path === `${testBaseDerivationPath}/0`);
 
 		render(<AddressesTable {...defaultProps} isSelected={isSelected} selectedWallets={[mockAddresses[0]]} />);
 
@@ -128,7 +129,7 @@ describe("AddressesTable", () => {
 	it("should show select all as checked when all addresses are selected", () => {
 		render(<AddressesTable {...defaultProps} selectedWallets={mockAddresses} />);
 
-		const selectAllCheckbox = screen.getByTestId("SelectAddressStep__select-all");
+		const selectAllCheckbox = screen.getByTestId(selectAllTestId);
 		expect(selectAllCheckbox).toBeChecked();
 	});
 
@@ -243,10 +244,10 @@ describe("SelectAddressStep", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SelectAddressStep__select-all")).toBeInTheDocument();
+			expect(screen.getByTestId(selectAllTestId)).toBeInTheDocument();
 		});
 
-		const selectAllButton = screen.getByTestId("SelectAddressStep__select-all");
+		const selectAllButton = screen.getByTestId(selectAllTestId);
 		await userEvent.click(selectAllButton);
 
 		const checkboxes = getAddressCheckboxes();
@@ -292,10 +293,10 @@ describe("SelectAddressStep", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SelectAddressStep__select-all")).toBeInTheDocument();
+			expect(screen.getByTestId(selectAllTestId)).toBeInTheDocument();
 		});
 
-		const selectAllButton = screen.getByTestId("SelectAddressStep__select-all");
+		const selectAllButton = screen.getByTestId(selectAllTestId);
 		await userEvent.click(selectAllButton);
 
 		const checkboxes = getAddressCheckboxes();

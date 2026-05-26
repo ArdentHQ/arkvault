@@ -1,11 +1,12 @@
 import { describe, it, expect, vi } from "vitest";
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { ImportBackButton } from "./ImportAddressSidePanel.blocks";
 
 describe("ImportBackButton", () => {
 	it("should not render when onBack is not provided", () => {
-		const { container } = render(<ImportBackButton />);
+		render(<ImportBackButton />);
 		expect(screen.queryByTestId("ImportWallet__back-button")).not.toBeInTheDocument();
 	});
 
@@ -15,12 +16,12 @@ describe("ImportBackButton", () => {
 		expect(screen.queryByTestId("ImportWallet__back-button")).not.toBeInTheDocument();
 	});
 
-	it("should call onBack when clicked", () => {
+	it("should call onBack when clicked", async () => {
 		const onBack = vi.fn();
 		render(<ImportBackButton onBack={onBack} showBack={true} />);
 
 		const button = screen.getByTestId("ImportWallet__back-button");
-		fireEvent.click(button);
+		await userEvent.click(button);
 
 		expect(onBack).toHaveBeenCalledTimes(1);
 	});

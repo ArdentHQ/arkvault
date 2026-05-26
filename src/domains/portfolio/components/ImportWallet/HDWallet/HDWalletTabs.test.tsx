@@ -2,13 +2,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import userEvent from "@testing-library/user-event";
-import {
-	env,
-	render,
-	screen,
-	getMainsailProfileId,
-	getDefaultMainsailWalletMnemonic,
-} from "@/utils/testing-library";
+import { env, render, screen, getMainsailProfileId, getDefaultMainsailWalletMnemonic } from "@/utils/testing-library";
 import { Contracts } from "@/app/lib/profiles";
 import { HDWalletTabs } from "./HDWalletTabs";
 

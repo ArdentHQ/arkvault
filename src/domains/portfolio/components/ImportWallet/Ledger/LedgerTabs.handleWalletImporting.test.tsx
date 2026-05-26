@@ -1,5 +1,4 @@
 import { renderHook, act } from "@testing-library/react";
-import React from "react";
 
 import { useHandleWalletImporting } from "./LedgerTabs.blocks";
 import * as useWalletImport from "@/domains/wallet/hooks/use-wallet-import";

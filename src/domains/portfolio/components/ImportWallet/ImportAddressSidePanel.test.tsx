@@ -18,7 +18,12 @@ import {
 } from "@/utils/testing-library";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { expect } from "vitest";
-import { ImportAddressStep, useHDWalletStepHeaderConfig, useLedgerStepHeaderConfig, useStepHeaderConfig } from "./ImportAddressSidePanel.blocks";
+import {
+	ImportAddressStep,
+	useHDWalletStepHeaderConfig,
+	useLedgerStepHeaderConfig,
+	useStepHeaderConfig,
+} from "./ImportAddressSidePanel.blocks";
 import { HDWalletTabStep } from "./HDWallet/HDWalletsTabs.contracts";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 import { ImportOption } from "@/domains/wallet/hooks";

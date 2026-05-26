@@ -1,11 +1,4 @@
-import {
-	env,
-	getMainsailProfileId,
-	mockNanoSTransport,
-	render,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, mockNanoSTransport, render, screen, waitFor } from "@/utils/testing-library";
 import { expect, it, describe, beforeAll, vi, beforeEach } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { LedgerConnectionStep } from "./LedgerConnection";
@@ -49,14 +42,9 @@ describe("LedgerConnection", () => {
 	it("should render connection step", async () => {
 		const onConnect = vi.fn();
 
-		await render(
-			<LedgerConnectionStep
-				profile={profile}
-				network={mockNetwork as any}
-				onConnect={onConnect}
-			/>,
-			{ route },
-		);
+		await render(<LedgerConnectionStep profile={profile} network={mockNetwork as any} onConnect={onConnect} />, {
+			route,
+		});
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
 	});

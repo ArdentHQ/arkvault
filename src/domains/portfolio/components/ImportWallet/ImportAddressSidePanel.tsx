@@ -24,7 +24,6 @@ import {
 	useHDWalletStepHeaderConfig,
 	useLedgerStepHeaderConfig,
 	useStepHeaderConfig,
-	ImportBackButton,
 	forgetImportedWallets,
 	getActiveStep,
 } from "./ImportAddressSidePanel.blocks";

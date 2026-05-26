@@ -1,11 +1,4 @@
-import {
-	env,
-	getMainsailProfileId,
-	mockNanoSTransport,
-	render,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, mockNanoSTransport, render, screen, waitFor } from "@/utils/testing-library";
 import { expect, it, describe, beforeAll, vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { LedgerTransactionPendingConfirmation } from "./LedgerTransactionPendingConfirmation";

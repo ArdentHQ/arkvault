@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { WalletActions } from "./WalletHeader.blocks";
 import { Contracts } from "@/app/lib/profiles";
@@ -15,8 +15,8 @@ beforeAll(async () => {
 });
 
 describe("WalletActions", () => {
-	const renderComponent = (isUpdatingTransactions?: boolean) => {
-		return render(
+	const renderComponent = (isUpdatingTransactions?: boolean) =>
+		render(
 			<WalletActions
 				profile={profile}
 				wallet={wallet}
@@ -24,7 +24,6 @@ describe("WalletActions", () => {
 				onUpdate={() => {}}
 			/>,
 		);
-	};
 
 	it("should render the refresh button with tooltip", () => {
 		renderComponent();

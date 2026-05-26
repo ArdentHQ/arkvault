@@ -1,5 +1,5 @@
 import { vi, describe, it, expect, beforeEach } from "vitest";
-import { renderHook, act, waitFor } from "@/utils/testing-library";
+import { renderHook, act } from "@/utils/testing-library";
 
 import { useLedgerTabsHandleNext } from "./LedgerTabs.blocks";
 import { LedgerTabStep } from "./LedgerTabs.contracts";

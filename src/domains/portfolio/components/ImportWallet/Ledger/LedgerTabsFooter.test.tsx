@@ -8,7 +8,7 @@ describe("LedgerTabsFooter", () => {
 	const mockHandleRetry = vi.fn();
 
 	it("should return null when showFooter is false", () => {
-		const { container } = render(
+		render(
 			<LedgerTabsFooter
 				showFooter={false}
 				showRetry={false}
@@ -22,7 +22,7 @@ describe("LedgerTabsFooter", () => {
 			/>,
 		);
 
-		expect(container.firstChild).toBeNull();
+		expect(screen.queryByRole("button")).not.toBeInTheDocument();
 	});
 
 	it("should render ImportActionToolbar when showFooter is true and showRetry false", () => {

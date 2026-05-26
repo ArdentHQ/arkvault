@@ -8,6 +8,8 @@ import userEvent from "@testing-library/user-event";
 import { MessageService } from "@/app/lib/mainsail/message.service";
 
 describe("LedgerAddressVerification", () => {
+	const testPath = "m/44'/1'/1'/0/0";
+
 	let profile: Contracts.IProfile;
 	const route = `/profiles/${getMainsailProfileId()}/dashboard`;
 	let publicKeyPaths;
@@ -15,7 +17,7 @@ describe("LedgerAddressVerification", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
-		publicKeyPaths = new Map([["m/44'/1'/1'/0/0", profile.wallets().first().publicKey()!]]);
+		publicKeyPaths = new Map([[testPath, profile.wallets().first().publicKey()!]]);
 	});
 
 	it("should render", async () => {
@@ -27,7 +29,7 @@ describe("LedgerAddressVerification", () => {
 		await migrator.createTransactions([
 			{
 				address: profile.wallets().first().address(),
-				path: "m/44'/1'/1'/0/0",
+				path: testPath,
 			},
 		]);
 
@@ -46,14 +48,14 @@ describe("LedgerAddressVerification", () => {
 		await migrator.createTransactions([
 			{
 				address: profile.wallets().first().address(),
-				path: "m/44'/1'/1'/0/0",
+				path: testPath,
 			},
 		]);
 
 		render(<LedgerAddressVerification transfer={migrator.transactions().at(0)!} />, { route });
 		expect(screen.getByTestId("LedgerAddressVerification")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("LedgerAddressVerification__VerifyAddress-button"));
+		await userEvent.click(screen.getByTestId("verifyAddressButtonTestId"));
 
 		expect(screen.getByTestId("LedgerAddressVerification__error")).toBeInTheDocument();
 		ledgerMocks.restoreAll();
@@ -68,7 +70,7 @@ describe("LedgerAddressVerification", () => {
 		await migrator.createTransactions([
 			{
 				address: profile.wallets().first().address(),
-				path: "m/44'/1'/1'/0/0",
+				path: testPath,
 			},
 		]);
 
@@ -78,7 +80,7 @@ describe("LedgerAddressVerification", () => {
 		render(<LedgerAddressVerification transfer={migrator.transactions().at(0)!} />, { route });
 		expect(screen.getByTestId("LedgerAddressVerification")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("LedgerAddressVerification__VerifyAddress-button"));
+		await userEvent.click(screen.getByTestId("verifyAddressButtonTestId"));
 
 		expect(screen.getByTestId("LedgerAddressVerification__error")).toBeInTheDocument();
 		ledgerMocks.restoreAll();
@@ -94,7 +96,7 @@ describe("LedgerAddressVerification", () => {
 		await migrator.createTransactions([
 			{
 				address: profile.wallets().first().address(),
-				path: "m/44'/1'/1'/0/0",
+				path: testPath,
 			},
 		]);
 
@@ -107,11 +109,9 @@ describe("LedgerAddressVerification", () => {
 		render(<LedgerAddressVerification transfer={migrator.transactions().at(0)!} />, { route });
 		expect(screen.getByTestId("LedgerAddressVerification")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("LedgerAddressVerification__VerifyAddress-button"));
+		await userEvent.click(screen.getByTestId("verifyAddressButtonTestId"));
 
-		expect(
-			screen.getByText("Message and Address Verified Successfully"),
-		).toBeInTheDocument();
+		expect(screen.getByText("Message and Address Verified Successfully")).toBeInTheDocument();
 		ledgerMocks.restoreAll();
 		signMessageSpy.mockRestore();
 	});
@@ -125,24 +125,22 @@ describe("LedgerAddressVerification", () => {
 		await migrator.createTransactions([
 			{
 				address: profile.wallets().first().address(),
-				path: "m/44'/1'/1'/0/0",
+				path: testPath,
 			},
 		]);
 
 		let signResolve: () => void;
-		const signMessageSpy = vi
-			.spyOn(profile.wallets().first().ledger(), "signMessage")
-			.mockImplementation(
-				() =>
-					new Promise<string>(resolve => {
-						signResolve = resolve;
-					}),
-			);
+		const signMessageSpy = vi.spyOn(profile.wallets().first().ledger(), "signMessage").mockImplementation(
+			() =>
+				new Promise<string>((resolve) => {
+					signResolve = resolve;
+				}),
+		);
 
 		render(<LedgerAddressVerification transfer={migrator.transactions().at(0)!} />, { route });
 		expect(screen.getByTestId("LedgerAddressVerification")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("LedgerAddressVerification__VerifyAddress-button"));
+		await userEvent.click(screen.getByTestId("verifyAddressButtonTestId"));
 
 		await userEvent.click(screen.getByText("Cancel"));
 
@@ -161,7 +159,7 @@ describe("LedgerAddressVerification", () => {
 		await migrator.createTransactions([
 			{
 				address: profile.wallets().first().address(),
-				path: "m/44'/1'/1'/0/0",
+				path: testPath,
 			},
 		]);
 
@@ -174,7 +172,7 @@ describe("LedgerAddressVerification", () => {
 		render(<LedgerAddressVerification transfer={migrator.transactions().at(0)!} />, { route });
 		expect(screen.getByTestId("LedgerAddressVerification")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("LedgerAddressVerification__VerifyAddress-button"));
+		await userEvent.click(screen.getByTestId("verifyAddressButtonTestId"));
 
 		expect(screen.getByTestId("LedgerAddressVerification__error")).toBeInTheDocument();
 		ledgerMocks.restoreAll();

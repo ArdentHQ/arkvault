@@ -1,4 +1,5 @@
-import { env, getMainsailProfileId, mockNanoSTransport, render, screen, fireEvent } from "@/utils/testing-library";
+import { env, getMainsailProfileId, mockNanoSTransport, render, screen } from "@/utils/testing-library";
+import userEvent from "@testing-library/user-event";
 import { expect, it, describe, beforeAll, vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { LedgerTransactionErrorStep } from "./LedgerTransactionErrorStep";
@@ -66,7 +67,7 @@ describe("LedgerTransactionErrorStep", () => {
 		render(<LedgerTransactionErrorStep transfer={transfer} migrator={migrator} onClose={onClose} />, { route });
 
 		const buttons = screen.getAllByTestId("LedgerScanStep__continue-button");
-		fireEvent.click(buttons[0]);
+		await userEvent.click(buttons[0]);
 
 		expect(onClose).toHaveBeenCalled();
 	});
@@ -79,10 +80,12 @@ describe("LedgerTransactionErrorStep", () => {
 		transfer.addRecipientWallet(profile.wallets().last());
 		transfer.setAmount(1);
 
-		render(<LedgerTransactionErrorStep transfer={transfer} migrator={migrator} onTryAgain={onTryAgain} />, { route });
+		render(<LedgerTransactionErrorStep transfer={transfer} migrator={migrator} onTryAgain={onTryAgain} />, {
+			route,
+		});
 
 		const buttons = screen.getAllByTestId("LedgerScanStep__continue-button");
-		fireEvent.click(buttons[1]);
+		await userEvent.click(buttons[1]);
 
 		expect(onTryAgain).toHaveBeenCalled();
 	});

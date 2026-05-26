@@ -66,7 +66,9 @@ export const getActiveStep = (
 export const ImportBackButton = ({ onBack, showBack }: ImportBackButtonProps) => {
 	const { t } = useTranslation();
 
-	if (!showBack || !onBack) {return null;}
+	if (!showBack || !onBack) {
+		return null;
+	}
 
 	return (
 		<Button data-testid="ImportWallet__back-button" variant="secondary" onClick={onBack}>

@@ -155,7 +155,9 @@ export const CreateAddressesSidePanel = ({
 	const handleNext = async (parameters: { encryptionPassword?: string } = {}) => {
 		const newIndex = resolveNextStep({ activeTab, useEncryption });
 
-		if (newIndex === null) {return void handleGenerateWallet();}
+		if (newIndex === null) {
+			return void handleGenerateWallet();
+		}
 
 		if (newIndex === CreateStep.SuccessStep && !isHDWalletCreation) {
 			const { mnemonic, network } = getValues(["mnemonic", "network"]);

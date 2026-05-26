@@ -24,15 +24,15 @@ vi.mock("@/app/components/Notifications/hooks/use-notifications", () => ({
 
 const createMockTransaction = (overrides = {}) => {
 	const baseTx = {
-		hash: () => "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
-		isSuccess: () => true,
-		isTransfer: () => true,
-		isMultiPayment: () => false,
-		isTokenTransfer: () => false,
-		wallet: () => ({ alias: () => "TestWallet" }),
 		convertedAmount: () => "100.5",
-		timestamp: () => ({ toUNIX: () => 1743669254 }),
 		data: () => ({ receipt: () => ({ hasUnknownError: () => false, prettyError: () => "Error" }) }),
+		hash: () => "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+		isMultiPayment: () => false,
+		isSuccess: () => true,
+		isTokenTransfer: () => false,
+		isTransfer: () => true,
+		timestamp: () => ({ toUNIX: () => 1743669254 }),
+		wallet: () => ({ alias: () => "TestWallet" }),
 		...overrides,
 	};
 	return baseTx;
@@ -43,13 +43,13 @@ describe("Notifications", () => {
 		const mockTransactions = [createMockTransaction()];
 
 		vi.mocked(useNotifications).mockReturnValue({
-			transactions: mockTransactions,
+			hasUnread: true,
 			isNotificationUnread: () => true,
-			markAsRead: vi.fn(),
-			markAsRemoved: vi.fn(),
 			markAllAsRead: vi.fn(),
 			markAllAsRemoved: vi.fn(),
-			hasUnread: true,
+			markAsRead: vi.fn(),
+			markAsRemoved: vi.fn(),
+			transactions: mockTransactions,
 		});
 
 		render(<Notifications profile={profile} />);
@@ -63,13 +63,13 @@ describe("Notifications", () => {
 		const mockTransactions = [createMockTransaction()];
 
 		vi.mocked(useNotifications).mockReturnValue({
-			transactions: mockTransactions,
+			hasUnread: false,
 			isNotificationUnread: () => false,
-			markAsRead: vi.fn(),
-			markAsRemoved: vi.fn(),
 			markAllAsRead: vi.fn(),
 			markAllAsRemoved: vi.fn(),
-			hasUnread: false,
+			markAsRead: vi.fn(),
+			markAsRemoved: vi.fn(),
+			transactions: mockTransactions,
 		});
 
 		render(<Notifications profile={profile} />);
@@ -81,13 +81,13 @@ describe("Notifications", () => {
 
 	it("should render empty state when no transactions", async () => {
 		vi.mocked(useNotifications).mockReturnValue({
-			transactions: [],
+			hasUnread: false,
 			isNotificationUnread: () => false,
-			markAsRead: vi.fn(),
-			markAsRemoved: vi.fn(),
 			markAllAsRead: vi.fn(),
 			markAllAsRemoved: vi.fn(),
-			hasUnread: false,
+			markAsRead: vi.fn(),
+			markAsRemoved: vi.fn(),
+			transactions: [],
 		});
 
 		render(<Notifications profile={profile} />);
@@ -103,13 +103,13 @@ describe("Notifications", () => {
 		const markAllAsReadSpy = vi.fn();
 
 		vi.mocked(useNotifications).mockReturnValue({
-			transactions: mockTransactions,
+			hasUnread: true,
 			isNotificationUnread: () => true,
-			markAsRead: vi.fn(),
-			markAsRemoved: vi.fn(),
 			markAllAsRead: markAllAsReadSpy,
 			markAllAsRemoved: vi.fn(),
-			hasUnread: true,
+			markAsRead: vi.fn(),
+			markAsRemoved: vi.fn(),
+			transactions: mockTransactions,
 		});
 
 		render(<Notifications profile={profile} />);
@@ -122,13 +122,13 @@ describe("Notifications", () => {
 
 	it("should disable mark all button when no unread notifications", async () => {
 		vi.mocked(useNotifications).mockReturnValue({
-			transactions: [createMockTransaction()],
+			hasUnread: false,
 			isNotificationUnread: () => false,
-			markAsRead: vi.fn(),
-			markAsRemoved: vi.fn(),
 			markAllAsRead: vi.fn(),
 			markAllAsRemoved: vi.fn(),
-			hasUnread: false,
+			markAsRead: vi.fn(),
+			markAsRemoved: vi.fn(),
+			transactions: [createMockTransaction()],
 		});
 
 		render(<Notifications profile={profile} />);
@@ -141,13 +141,13 @@ describe("Notifications", () => {
 
 	it("should disable remove all button when no transactions", async () => {
 		vi.mocked(useNotifications).mockReturnValue({
-			transactions: [],
+			hasUnread: false,
 			isNotificationUnread: () => false,
-			markAsRead: vi.fn(),
-			markAsRemoved: vi.fn(),
 			markAllAsRead: vi.fn(),
 			markAllAsRemoved: vi.fn(),
-			hasUnread: false,
+			markAsRead: vi.fn(),
+			markAsRemoved: vi.fn(),
+			transactions: [],
 		});
 
 		render(<Notifications profile={profile} />);
@@ -170,10 +170,10 @@ describe("NotificationLeftSide", () => {
 
 	it("should render failed transaction notification for unsuccessful transactions", () => {
 		const failedTransaction = createMockTransaction({
-			isSuccess: () => false,
 			data: () => ({
 				receipt: () => ({ hasUnknownError: () => false, prettyError: () => "Insufficient funds" }),
 			}),
+			isSuccess: () => false,
 		});
 
 		render(<NotificationLeftSide transaction={failedTransaction} />);
@@ -209,10 +209,10 @@ describe("TransferNotification", () => {
 describe("FailedTransactionNotification", () => {
 	it("should render failed notification with error message", async () => {
 		const failedTransaction = createMockTransaction({
-			isSuccess: () => false,
 			data: () => ({
 				receipt: () => ({ hasUnknownError: () => true, prettyError: (): string => "Unknown error" }),
 			}),
+			isSuccess: () => false,
 		});
 
 		render(<FailedTransactionNotification transaction={failedTransaction} />);

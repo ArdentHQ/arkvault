@@ -17,6 +17,9 @@ const fixtureProfileId = getMainsailProfileId();
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 
 const mnemonic = getDefaultMainsailWalletMnemonic();
+const hdWalletLabel = "HD Wallet";
+const detailStepTestId = "ImportWallet__detail-step";
+const loadMoreAddressTestId = loadMoreAddressTestId;
 
 // Test helper selectors
 const getMnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
@@ -49,7 +52,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
 
 		// Select HD Wallet (BIP44) option
-		const hdWalletOption = screen.getByText("HD Wallet");
+		const hdWalletOption = screen.getByText(hdWalletLabel);
 		await user.click(hdWalletOption);
 
 		expect(screen.getByTestId("HDWalletTabs--child")).toBeInTheDocument();
@@ -61,9 +64,9 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Navigate to HD wallet import
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
-		expect(screen.getByTestId("ImportWallet__detail-step")).toBeInTheDocument();
+		expect(screen.getByTestId(detailStepTestId)).toBeInTheDocument();
 	});
 
 	it("should show Select Account step when there are imported HD Wallets", async () => {
@@ -78,7 +81,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		render(<Component />, { route });
 
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
 
@@ -93,10 +96,10 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Select HD Wallet option
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		// Should start with enter mnemonic step
-		expect(screen.getByTestId("ImportWallet__detail-step")).toBeInTheDocument();
+		expect(screen.getByTestId(detailStepTestId)).toBeInTheDocument();
 
 		// Enter mnemonic
 		await user.clear(getMnemonicInput());
@@ -118,7 +121,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Navigate to HD wallet import
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		// Enter mnemonic
 		await user.clear(getMnemonicInput());
@@ -148,7 +151,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Navigate to HD wallet import
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		// Enter mnemonic and proceed to address selection
 		await user.clear(getMnemonicInput());
@@ -194,7 +197,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Navigate to HD wallet import
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		// Enter mnemonic and go to next step
 		await user.clear(getMnemonicInput());
@@ -207,7 +210,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		// Should return to method selection
 		await waitFor(() => {
-			expect(screen.getByTestId("ImportWallet__detail-step")).toBeInTheDocument();
+			expect(screen.getByTestId(detailStepTestId)).toBeInTheDocument();
 		});
 	});
 
@@ -224,7 +227,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		render(<Component />, { route });
 
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
 
@@ -264,9 +267,9 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		render(<Component />, { route });
 
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
-		expect(screen.getByTestId("ImportWallet__detail-step")).toBeInTheDocument();
+		expect(screen.getByTestId(detailStepTestId)).toBeInTheDocument();
 
 		await user.clear(getMnemonicInput());
 		await user.paste(mnemonic);
@@ -286,7 +289,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Navigate to HD wallet import
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		// Close the panel
 		const closeButton = screen.getByTestId("SidePanel__close-button");
@@ -301,7 +304,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Navigate to HD wallet import
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		// Try to continue without entering mnemonic
 		expect(getContinueButton()).toBeDisabled();
@@ -338,7 +341,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Navigate to HD wallet import
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		// Select account step should be visible
 		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
@@ -383,7 +386,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Navigate to HD wallet import
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		// Select account step should be visible
 		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
@@ -411,7 +414,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		await expect(screen.findByTestId("SelectAddressStep")).resolves.toBeVisible();
 
-		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
+		await user.click(screen.getByTestId(loadMoreAddressTestId));
 
 		const addressCheckboxes = getAddressCheckboxes();
 
@@ -453,7 +456,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Navigate to HD wallet import
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		// Select account step should be visible
 		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
@@ -480,9 +483,9 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		await expect(screen.findByTestId("SelectAddressStep")).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("SelectAddressStep__load-more")).resolves.toBeVisible();
+		await expect(screen.findByTestId(loadMoreAddressTestId)).resolves.toBeVisible();
 
-		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
+		await user.click(screen.getByTestId(loadMoreAddressTestId));
 
 		const addressCheckboxes = getAddressCheckboxes();
 
@@ -518,7 +521,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		render(<Component />, { route });
 
 		// Navigate to HD wallet import
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		// Enter mnemonic
 		await user.clear(getMnemonicInput());
@@ -538,7 +541,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		render(<Component />, { route });
 
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		await user.clear(getMnemonicInput());
 		await user.paste(mnemonic);
@@ -550,7 +553,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 			expect(screen.getByTestId("SelectAddressStep")).toBeInTheDocument();
 		});
 
-		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
+		await user.click(screen.getByTestId(loadMoreAddressTestId));
 
 		const addressCheckboxes = getAddressCheckboxes();
 		await user.click(addressCheckboxes[0]);
@@ -581,7 +584,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		render(<Component />, { route });
 
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		await user.clear(getMnemonicInput());
 		await user.paste(mnemonic);
@@ -592,7 +595,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 			expect(screen.getByTestId("SelectAddressStep")).toBeInTheDocument();
 		});
 
-		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
+		await user.click(screen.getByTestId(loadMoreAddressTestId));
 
 		await waitFor(() => {
 			expect(getAddressCheckboxes().length).toBe(6);
@@ -644,7 +647,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		render(<Component />, { route });
 
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
 
@@ -664,7 +667,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		render(<Component />, { route });
 
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		await user.clear(getMnemonicInput());
 		await user.paste(mnemonic);
@@ -731,7 +734,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		render(<Component />, { route });
 
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
 
@@ -749,7 +752,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		await waitFor(() => expect(screen.queryByText(/Loading Addresses/)).not.toBeInTheDocument());
 
-		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
+		await user.click(screen.getByTestId(loadMoreAddressTestId));
 
 		await waitFor(() => expect(getAddressCheckboxes().length).toBeGreaterThan(1));
 
@@ -770,7 +773,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		render(<Component />, { route });
 
-		await user.click(screen.getByText("HD Wallet"));
+		await user.click(screen.getByText(hdWalletLabel));
 
 		await user.clear(getMnemonicInput());
 		await user.paste(mnemonic);
@@ -792,7 +795,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(backButton);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ImportWallet__detail-step")).toBeInTheDocument();
+			expect(screen.getByTestId(detailStepTestId)).toBeInTheDocument();
 		});
 	});
 });

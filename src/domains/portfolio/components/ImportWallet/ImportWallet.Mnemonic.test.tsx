@@ -25,8 +25,9 @@ const mnemonic = MAINSAIL_MNEMONICS[1];
 const randomAddress = "0x659A76be283644AEc2003aa8ba26485047fd1BFB";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
+const encryptionToggleTestId = encryptionToggleTestId;
 
-const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
+const enableEncryptionToggle = () => userEvent.click(screen.getByTestId(encryptionToggleTestId));
 const toggleEncryptionCheckbox = () => userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
 const mnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
@@ -177,12 +178,12 @@ describe("ImportAddress", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).not.toBeChecked();
+		expect(screen.getByTestId(encryptionToggleTestId)).not.toBeChecked();
 
 		await enableEncryptionToggle();
 		await toggleEncryptionCheckbox();
 
-		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).toBeChecked());
+		await waitFor(() => expect(screen.getByTestId(encryptionToggleTestId)).toBeChecked());
 
 		await userEvent.click(screen.getByText(commonTranslations.BACK));
 
@@ -194,7 +195,7 @@ describe("ImportAddress", () => {
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).not.toBeChecked());
+		await waitFor(() => expect(screen.getByTestId(encryptionToggleTestId)).not.toBeChecked());
 	});
 
 	it("should clear accept responsibility when toggling off encryption", async () => {
@@ -220,11 +221,11 @@ describe("ImportAddress", () => {
 		await enableEncryptionToggle();
 		await toggleEncryptionCheckbox();
 
-		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).toBeChecked());
+		await waitFor(() => expect(screen.getByTestId(encryptionToggleTestId)).toBeChecked());
 
 		await enableEncryptionToggle();
 
-		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).not.toBeChecked());
+		await waitFor(() => expect(screen.getByTestId(encryptionToggleTestId)).not.toBeChecked());
 	});
 
 	// @TODO enable it when we have 2nd signature implemented

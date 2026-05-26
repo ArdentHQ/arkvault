@@ -1,4 +1,4 @@
-import * as blocks from "./CreateAddressSidePanel.blocks";
+import * as _blocks from "./CreateAddressSidePanel.blocks";
 import {
 	CreateStep,
 	resolveBackNavigation,
@@ -6,14 +6,13 @@ import {
 	useCreateStepHeaderConfig,
 	useShowFooter,
 } from "./CreateAddressSidePanel.blocks";
-import * as HDWalletTabsModule from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletTabs";
 
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
-import { translations as walletTranslations } from "@/domains/wallet/i18n";
+
 import {
 	env,
 	render,
@@ -107,12 +106,6 @@ describe("CreateAddressSidePanel", () => {
 
 	it("should open wallet name editor when onClickEditWalletName is triggered from HD wallet tabs", async () => {
 		const hdWalletMock = vi.spyOn(profile.settings(), "get").mockReturnValue(true);
-
-		const wallet = await profile.walletFactory().fromAddress({
-			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
-			coin: "Mainsail",
-			network: "mainsail.devnet",
-		});
 
 		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
@@ -316,9 +309,7 @@ describe("CreateAddressSidePanel", () => {
 
 		expect(profile.wallets().count()).toBe(1);
 
-		const wallet = profile.wallets().first();
-
-		expect(wallet.alias()).toBe("Address #1");
+		expect(profile.wallets().first().alias()).toBe("Address #1");
 	});
 
 	it("should handle invalid encryption password", async () => {

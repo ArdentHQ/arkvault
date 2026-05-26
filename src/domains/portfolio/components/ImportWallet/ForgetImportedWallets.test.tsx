@@ -8,6 +8,9 @@ vi.mock("@/utils/assertions", () => ({
 }));
 
 describe("forgetImportedWallets", () => {
+	const testAddress = "0x123";
+	const importedWalletId = importedWalletId;
+
 	let mockProfile: Partial<Contracts.IProfile>;
 	let mockWallets: Partial<Contracts.IWalletCollection>;
 	let mockSelectedWallets: Partial<Contracts.IReadWriteWallet[]>;
@@ -15,7 +18,7 @@ describe("forgetImportedWallets", () => {
 
 	beforeEach(() => {
 		mockFirstWallet = {
-			address: vi.fn(() => "0x123"),
+			address: vi.fn(() => testAddress),
 			id: vi.fn(() => "first-wallet"),
 		};
 
@@ -41,21 +44,21 @@ describe("forgetImportedWallets", () => {
 
 	it("should forget the imported wallet if it matches", () => {
 		const importedWallet = {
-			address: vi.fn(() => "0x123"),
-			id: vi.fn(() => "imported-wallet"),
+			address: vi.fn(() => testAddress),
+			id: vi.fn(() => importedWalletId),
 		};
 
 		vi.mocked(mockWallets.values).mockReturnValue([importedWallet]);
 
 		forgetImportedWallets(mockProfile, importedWallet);
 
-		expect(mockWallets.forget).toHaveBeenCalledWith("imported-wallet");
+		expect(mockWallets.forget).toHaveBeenCalledWith(importedWalletId);
 	});
 
 	it("should select the first wallet when no wallets are selected after forgetting", () => {
 		const importedWallet = {
-			address: vi.fn(() => "0x123"),
-			id: vi.fn(() => "imported-wallet"),
+			address: vi.fn(() => testAddress),
+			id: vi.fn(() => importedWalletId),
 		};
 
 		vi.mocked(mockWallets.values).mockReturnValue([importedWallet]);
@@ -71,7 +74,7 @@ describe("forgetImportedWallets", () => {
 
 		const importedWallet = {
 			address: vi.fn(() => "0x123"),
-			id: vi.fn(() => "imported-wallet"),
+			id: vi.fn(() => importedWalletId),
 		};
 
 		vi.mocked(mockWallets.values).mockReturnValue([importedWallet, otherWallet]);
@@ -84,7 +87,7 @@ describe("forgetImportedWallets", () => {
 	it("should not forget wallet if address does not match", () => {
 		const importedWallet = {
 			address: vi.fn(() => "0x123"),
-			id: vi.fn(() => "imported-wallet"),
+			id: vi.fn(() => importedWalletId),
 		};
 
 		const otherWallet = { address: vi.fn(() => "0x456"), id: vi.fn(() => "other-wallet") };

@@ -19,8 +19,8 @@ describe("Portfolio", () => {
 
 		render(<Portfolio />, {
 			route: `/profiles/${getMainsailProfileId()}/portfolio`,
-			withProviders: true,
 			withProfileSynchronizer: true,
+			withProviders: true,
 		});
 
 		await waitFor(() => {
@@ -34,8 +34,8 @@ describe("Portfolio", () => {
 
 		render(<Portfolio />, {
 			route: `/profiles/${getMainsailProfileId()}/portfolio`,
-			withProviders: true,
 			withProfileSynchronizer: true,
+			withProviders: true,
 		});
 
 		await waitFor(() => {

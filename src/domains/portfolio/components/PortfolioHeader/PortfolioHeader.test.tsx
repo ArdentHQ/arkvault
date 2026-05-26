@@ -21,37 +21,37 @@ vi.mock("@/domains/wallet/hooks", async (importOriginal) => {
 		...actual,
 		useWalletActions: () => ({
 			activeModal: undefined,
-			setActiveModal: vi.fn(),
 			handleSelectOption: vi.fn(),
 			handleSend: vi.fn(),
+			setActiveModal: vi.fn(),
 		}),
 	};
 });
 
 vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options", () => ({
 	useWalletOptions: () => ({
-		primaryOptions: { key: "primary", options: [], title: "Primary" },
-		secondaryOptions: { key: "secondary", options: [], title: "Secondary" },
 		additionalOptions: { key: "additional", options: [], title: "Additional" },
-		registrationOptions: { key: "registration", options: [], title: "Registration" },
 		contractOptions: { key: "contract", options: [], title: "Contract" },
+		primaryOptions: { key: "primary", options: [], title: "Primary" },
+		registrationOptions: { key: "registration", options: [], title: "Registration" },
+		secondaryOptions: { key: "secondary", options: [], title: "Secondary" },
 	}),
 }));
 
 vi.mock("@/domains/wallet/hooks/use-ledger-wallet-migration", () => ({
 	useLedgerMigrationMenuOptions: () => [],
 	useLedgerMigrationStatus: () => ({
-		isIgnored: false,
+		hasWalletsToMigrate: false,
 		ignore: vi.fn(),
+		isIgnored: false,
 		isLoading: false,
 		isMigratingLater: false,
 		migrateLater: vi.fn(),
-		hasWalletsToMigrate: false,
 	}),
 }));
 
 vi.mock("@/app/hooks/use-breakpoint", () => ({
-	useBreakpoint: () => ({ isXs: false, isMdAndAbove: true }),
+	useBreakpoint: () => ({ isMdAndAbove: true, isXs: false }),
 }));
 
 vi.mock("@/app/components/WalletIcons", () => ({
@@ -60,14 +60,14 @@ vi.mock("@/app/components/WalletIcons", () => ({
 
 const renderPortfolioHeader = (props: Partial<React.ComponentProps<typeof PortfolioHeader>> = {}) => {
 	const defaultProps: React.ComponentProps<typeof PortfolioHeader> = {
-		profile,
-		votes: [],
+		handleVotesButtonClick: vi.fn(),
+		hasFocus: true,
 		isLoadingVotes: false,
 		isUpdatingTransactions: false,
-		handleVotesButtonClick: vi.fn(),
 		onUpdate: vi.fn(),
-		hasFocus: true,
 		onViewTokens: vi.fn(),
+		profile,
+		votes: [],
 		...props,
 	};
 

@@ -14,7 +14,6 @@ import userEvent from "@testing-library/user-event";
 import { createTransactionMocks } from "@/tests/mocks/Ledger";
 import { WalletData } from "@/app/lib/mainsail/wallet.dto";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
-import { LedgerScanner } from "@/app/lib/mainsail/ledger.scanner";
 
 vi.mock("@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction", () => ({
 	useConfirmedTransaction: vi.fn().mockReturnValue({
@@ -26,6 +25,10 @@ vi.mock("@/domains/transaction/components/TransactionSuccessful/hooks/useConfirm
 describe("LedgerMigrationSidepanel", () => {
 	const ledgerContinueButton = "LedgerScanStep__continue-button";
 	const ledgerReviewStepTestId = "LedgerMigration__Review-step";
+	const acceptResponsibilityTestId = "Overview_accept-responsibility";
+	const overviewContinueButtonTestId = "OverviewStep__continue-button";
+	const migrationSuccessTestId = "LedgerMigration_success";
+	const successGotoPortfolioTestId = "LedgerTransactionSuccessStep_goto-portfolio";
 
 	let profile: Contracts.IProfile;
 	const route = `/profiles/${getMainsailProfileId()}/dashboard`;
@@ -146,8 +149,8 @@ describe("LedgerMigrationSidepanel", () => {
 		});
 
 		// Complete the migration flow
-		await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
-		await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+		await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
+		await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
 
 		await waitFor(() => {
 			expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
@@ -155,16 +158,16 @@ describe("LedgerMigrationSidepanel", () => {
 
 		await waitFor(
 			() => {
-				expect(screen.getByTestId("LedgerMigration_success")).toBeInTheDocument();
+				expect(screen.getByTestId(migrationSuccessTestId)).toBeInTheDocument();
 			},
 			{ timeout: 4000 },
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio")).toBeInTheDocument();
+			expect(screen.getByTestId(successGotoPortfolioTestId)).toBeInTheDocument();
 		});
 
-		await userEvent.click(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio"));
+		await userEvent.click(screen.getByTestId(successGotoPortfolioTestId));
 	});
 
 	it.each(["sm", "md", "lg", "xl"])("should successfully migrate wallet in %s", async (containerSize) => {
@@ -223,8 +226,8 @@ describe("LedgerMigrationSidepanel", () => {
 		});
 
 		// Complete the migration flow
-		await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
-		await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+		await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
+		await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
 
 		await waitFor(() => {
 			expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
@@ -232,16 +235,16 @@ describe("LedgerMigrationSidepanel", () => {
 
 		await waitFor(
 			() => {
-				expect(screen.getByTestId("LedgerMigration_success")).toBeInTheDocument();
+				expect(screen.getByTestId(migrationSuccessTestId)).toBeInTheDocument();
 			},
 			{ timeout: 4000 },
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio")).toBeInTheDocument();
+			expect(screen.getByTestId(successGotoPortfolioTestId)).toBeInTheDocument();
 		});
 
-		await userEvent.click(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio"));
+		await userEvent.click(screen.getByTestId(successGotoPortfolioTestId));
 		publicKeySpy.mockRestore();
 		scanSpy.mockRestore();
 		mocky.restoreAll();
@@ -277,8 +280,8 @@ describe("LedgerMigrationSidepanel", () => {
 
 		vi.restoreAllMocks();
 
-		await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
-		await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+		await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
+		await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("LedgerTransactionErrorStep")).toBeInTheDocument();
@@ -380,14 +383,14 @@ describe("LedgerMigrationSidepanel", () => {
 			expect(await screen.findByTestId("LedgerScanStep")).toBeInTheDocument();
 
 			await waitFor(() => {
-				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+				expect(screen.getByTestId(ledgerContinueButton)).not.toBeDisabled();
 			});
-			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+			await userEvent.click(screen.getByTestId(ledgerContinueButton));
 
 			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
-			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
-			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+			await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
+			await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
 
 			expect(await screen.findByRole("button", { name: /go to portfolio/i })).toBeInTheDocument();
 
@@ -418,20 +421,18 @@ describe("LedgerMigrationSidepanel", () => {
 				.spyOn(wallet.ledger(), "getExtendedPublicKey")
 				.mockImplementation((path) => extendedKeyPaths.get(path));
 
-			const scanSpy = vi
-				.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan")
-				.mockResolvedValue([
-					new WalletData({ config: wallet.network().config() }).fill({
-						address: wallet.address(),
-						balance: 10,
-						publicKey: wallet.publicKey(),
-					}),
-					new WalletData({ config: wallet.network().config() }).fill({
-						address: profile.wallets().last().address(),
-						balance: 10,
-						publicKey: profile.wallets().last().publicKey(),
-					}),
-				]);
+			const scanSpy = vi.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan").mockResolvedValue([
+				new WalletData({ config: wallet.network().config() }).fill({
+					address: wallet.address(),
+					balance: 10,
+					publicKey: wallet.publicKey(),
+				}),
+				new WalletData({ config: wallet.network().config() }).fill({
+					address: profile.wallets().last().address(),
+					balance: 10,
+					publicKey: profile.wallets().last().publicKey(),
+				}),
+			]);
 
 			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, {
 				route,
@@ -439,19 +440,22 @@ describe("LedgerMigrationSidepanel", () => {
 
 			expect(await screen.findByTestId("LedgerScanStep")).toBeInTheDocument();
 			await waitFor(() => {
-				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+				expect(screen.getByTestId(ledgerContinueButton)).not.toBeDisabled();
 			});
 
-			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+			await userEvent.click(screen.getByTestId(ledgerContinueButton));
 
 			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
-			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
-			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+			await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
+			await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
 
-			await waitFor(() => {
-				expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
-			}, { timeout: 4000 });
+			await waitFor(
+				() => {
+					expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
+				},
+				{ timeout: 4000 },
+			);
 
 			publicKeySpy.mockRestore();
 			scanSpy.mockRestore();
@@ -471,15 +475,15 @@ describe("LedgerMigrationSidepanel", () => {
 
 			expect(await screen.findByTestId("LedgerScanStep")).toBeInTheDocument();
 			await waitFor(() => {
-				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+				expect(screen.getByTestId(ledgerContinueButton)).not.toBeDisabled();
 			});
-			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+			await userEvent.click(screen.getByTestId(ledgerContinueButton));
 			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
 			vi.spyOn(wallet.transaction(), "signTransfer").mockRejectedValueOnce(new Error("Signing failed"));
 
-			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
-			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+			await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
+			await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
 
 			expect(await screen.findByTestId("LedgerTransactionErrorStep")).toBeInTheDocument();
 
@@ -509,15 +513,15 @@ describe("LedgerMigrationSidepanel", () => {
 
 			expect(await screen.findByTestId("LedgerScanStep")).toBeInTheDocument();
 			await waitFor(() => {
-				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+				expect(screen.getByTestId(ledgerContinueButton)).not.toBeDisabled();
 			});
-			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+			await userEvent.click(screen.getByTestId(ledgerContinueButton));
 			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
 			vi.spyOn(wallet.transaction(), "signTransfer").mockRejectedValueOnce(new Error("Signing failed"));
 
-			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
-			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+			await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
+			await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
 
 			expect(await screen.findByTestId("LedgerTransactionErrorStep")).toBeInTheDocument();
 
@@ -540,15 +544,13 @@ describe("LedgerMigrationSidepanel", () => {
 				.spyOn(wallet.ledger(), "getExtendedPublicKey")
 				.mockImplementation((path) => publicKeyPaths.get(path));
 
-			const scanSpy = vi
-				.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan")
-				.mockResolvedValue([
-					new WalletData({ config: wallet.network().config() }).fill({
-						address: wallet.address(),
-						balance: 10,
-						publicKey: wallet.publicKey(),
-					}),
-				]);
+			const scanSpy = vi.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan").mockResolvedValue([
+				new WalletData({ config: wallet.network().config() }).fill({
+					address: wallet.address(),
+					balance: 10,
+					publicKey: wallet.publicKey(),
+				}),
+			]);
 
 			const onOpenChange = vi.fn();
 			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
@@ -557,15 +559,15 @@ describe("LedgerMigrationSidepanel", () => {
 
 			expect(await screen.findByTestId("LedgerScanStep")).toBeInTheDocument();
 			await waitFor(() => {
-				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+				expect(screen.getByTestId(ledgerContinueButton)).not.toBeDisabled();
 			});
-			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+			await userEvent.click(screen.getByTestId(ledgerContinueButton));
 			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
-			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
-			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+			await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
+			await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
 
-			expect(await screen.findByTestId("LedgerTransactionSuccessStep_goto-portfolio", { timeout: 4000 })).toBeInTheDocument();
+			expect(await screen.findByTestId(successGotoPortfolioTestId, { timeout: 4000 })).toBeInTheDocument();
 
 			await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
@@ -588,12 +590,12 @@ describe("LedgerMigrationSidepanel", () => {
 			.mockImplementation((path) => publicKeyPaths.get(path));
 
 		const scanSpy = vi.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan").mockResolvedValue([
-				new WalletData({ config: wallet.network().config() }).fill({
-					address: wallet.address(),
-					balance: 10,
-					publicKey: wallet.publicKey(),
-				}),
-			]);
+			new WalletData({ config: wallet.network().config() }).fill({
+				address: wallet.address(),
+				balance: 10,
+				publicKey: wallet.publicKey(),
+			}),
+		]);
 
 		const onOpenChange = vi.fn();
 		renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
@@ -602,15 +604,15 @@ describe("LedgerMigrationSidepanel", () => {
 
 		expect(await screen.findByTestId("LedgerScanStep")).toBeInTheDocument();
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+			expect(screen.getByTestId(ledgerContinueButton)).not.toBeDisabled();
 		});
-		await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+		await userEvent.click(screen.getByTestId(ledgerContinueButton));
 		expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
-		await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+		await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
+		await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
 
-		expect(await screen.findByTestId("LedgerTransactionSuccessStep_goto-portfolio", { timeout: 4000 })).toBeInTheDocument();
+		expect(await screen.findByTestId(successGotoPortfolioTestId, { timeout: 4000 })).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 		expect(await screen.findByTestId("ConfirmationModal__no-button")).toBeInTheDocument();
@@ -636,15 +638,13 @@ describe("LedgerMigrationSidepanel", () => {
 				.spyOn(wallet.ledger(), "getExtendedPublicKey")
 				.mockImplementation((path) => publicKeyPaths.get(path));
 
-			const scanSpy = vi
-				.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan")
-				.mockResolvedValue([
-					new WalletData({ config: wallet.network().config() }).fill({
-						address: wallet.address(),
-						balance: 10,
-						publicKey: wallet.publicKey(),
-					}),
-				]);
+			const scanSpy = vi.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan").mockResolvedValue([
+				new WalletData({ config: wallet.network().config() }).fill({
+					address: wallet.address(),
+					balance: 10,
+					publicKey: wallet.publicKey(),
+				}),
+			]);
 
 			const onOpenChange = vi.fn();
 			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
@@ -653,15 +653,15 @@ describe("LedgerMigrationSidepanel", () => {
 
 			expect(await screen.findByTestId("LedgerScanStep")).toBeInTheDocument();
 			await waitFor(() => {
-				expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+				expect(screen.getByTestId(ledgerContinueButton)).not.toBeDisabled();
 			});
-			await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+			await userEvent.click(screen.getByTestId(ledgerContinueButton));
 			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
-			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
-			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+			await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
+			await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
 
-			expect(await screen.findByTestId("LedgerTransactionSuccessStep_goto-portfolio", { timeout: 4000 })).toBeInTheDocument();
+			expect(await screen.findByTestId(successGotoPortfolioTestId, { timeout: 4000 })).toBeInTheDocument();
 
 			await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 			expect(await screen.findByTestId("ConfirmationModal__yes-button")).toBeInTheDocument();
