@@ -418,12 +418,20 @@ describe("LedgerMigrationSidepanel", () => {
 				.spyOn(wallet.ledger(), "getExtendedPublicKey")
 				.mockImplementation((path) => extendedKeyPaths.get(path));
 
-			const scannerPrototypeSpy = vi.spyOn(LedgerScanner.prototype, "scan").mockResolvedValue([
-				{ address: wallet.address(), balance: 10, path: "m/44'/1'/0'/0/0" },
-				{ address: profile.wallets().last().address(), balance: 10, path: "m/44'/1'/0'/0/1" },
-			]);
-
-			vi.useFakeTimers({ shouldAdvanceTime: true });
+			const scanSpy = vi
+				.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan")
+				.mockResolvedValue([
+					new WalletData({ config: wallet.network().config() }).fill({
+						address: wallet.address(),
+						balance: 10,
+						publicKey: wallet.publicKey(),
+					}),
+					new WalletData({ config: wallet.network().config() }).fill({
+						address: profile.wallets().last().address(),
+						balance: 10,
+						publicKey: profile.wallets().last().publicKey(),
+					}),
+				]);
 
 			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, {
 				route,
@@ -441,13 +449,12 @@ describe("LedgerMigrationSidepanel", () => {
 			await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
 			await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
 
-			await vi.advanceTimersByTimeAsync(2100);
+			await waitFor(() => {
+				expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
+			}, { timeout: 4000 });
 
-			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
-
-			vi.useRealTimers();
 			publicKeySpy.mockRestore();
-			scannerPrototypeSpy.mockRestore();
+			scanSpy.mockRestore();
 			mocky.restoreAll();
 		},
 	);
@@ -488,6 +495,14 @@ describe("LedgerMigrationSidepanel", () => {
 			mockNanoSTransport();
 			const wallet = profile.wallets().first();
 
+			vi.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan").mockResolvedValue([
+				new WalletData({ config: wallet.network().config() }).fill({
+					address: wallet.address(),
+					balance: 10,
+					publicKey: wallet.publicKey(),
+				}),
+			]);
+
 			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, {
 				route,
 			});
@@ -508,7 +523,9 @@ describe("LedgerMigrationSidepanel", () => {
 
 			await userEvent.click(screen.getByRole("button", { name: /try again/i }));
 
-			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
+			await waitFor(() => {
+				expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
+			});
 		},
 	);
 
@@ -525,13 +542,13 @@ describe("LedgerMigrationSidepanel", () => {
 
 			const scanSpy = vi
 				.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan")
-				.mockImplementation(() => Promise.resolve({
-						"m/44'/1'/0'/0/0": new WalletData({ config: wallet.network().config() }).fill({
-							address: wallet.address(),
-							balance: 10,
-							publicKey: wallet.publicKey(),
-						}),
-					}));
+				.mockResolvedValue([
+					new WalletData({ config: wallet.network().config() }).fill({
+						address: wallet.address(),
+						balance: 10,
+						publicKey: wallet.publicKey(),
+					}),
+				]);
 
 			const onOpenChange = vi.fn();
 			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
@@ -570,13 +587,13 @@ describe("LedgerMigrationSidepanel", () => {
 			.spyOn(wallet.ledger(), "getExtendedPublicKey")
 			.mockImplementation((path) => publicKeyPaths.get(path));
 
-		const scanSpy = vi.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan").mockImplementation(() => Promise.resolve({
-				"m/44'/1'/0'/0/0": new WalletData({ config: wallet.network().config() }).fill({
+		const scanSpy = vi.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan").mockResolvedValue([
+				new WalletData({ config: wallet.network().config() }).fill({
 					address: wallet.address(),
 					balance: 10,
 					publicKey: wallet.publicKey(),
 				}),
-			}));
+			]);
 
 		const onOpenChange = vi.fn();
 		renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
@@ -621,13 +638,13 @@ describe("LedgerMigrationSidepanel", () => {
 
 			const scanSpy = vi
 				.spyOn(profile.ledger().scanner({ scannedWallets: [] }), "scan")
-				.mockImplementation(() => Promise.resolve({
-						"m/44'/1'/0'/0/0": new WalletData({ config: wallet.network().config() }).fill({
-							address: wallet.address(),
-							balance: 10,
-							publicKey: wallet.publicKey(),
-						}),
-					}));
+				.mockResolvedValue([
+					new WalletData({ config: wallet.network().config() }).fill({
+						address: wallet.address(),
+						balance: 10,
+						publicKey: wallet.publicKey(),
+					}),
+				]);
 
 			const onOpenChange = vi.fn();
 			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
