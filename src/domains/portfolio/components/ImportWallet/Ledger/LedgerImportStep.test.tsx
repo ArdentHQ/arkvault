@@ -1,4 +1,3 @@
-import Transport from "@ledgerhq/hw-transport";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -13,7 +12,6 @@ import { BigNumber } from "@/app/lib/helpers";
 
 describe("LedgerImportStep", () => {
 	let profile: Contracts.IProfile;
-	let transport: typeof Transport;
 
 	const derivationPath = "m/44'/1'/0'/0/3";
 
@@ -82,7 +80,7 @@ describe("LedgerImportStep", () => {
 
 			return (
 				<FormProvider {...form}>
-					<LedgerProvider transport={transport}>
+					<LedgerProvider>
 						<LedgerImportStep
 							onClickEditWalletName={onClickEditWalletName}
 							wallets={wallets}

@@ -14,6 +14,7 @@ import sortImportsEs6Autofix from "eslint-plugin-sort-imports-es6-autofix";
 import sortKeysFix from "eslint-plugin-sort-keys-fix";
 import importAlias from "eslint-plugin-import-alias";
 import globals from "globals";
+import { fixupPluginRules } from "@eslint/compat";
 
 export default [
 	{
@@ -37,7 +38,7 @@ export default [
 			},
 		},
 		settings: {
-			react: { version: "detect" },
+			react: { version: "19.2.6" },
 		},
 		plugins: {
 			"@typescript-eslint": tseslint.plugin,
@@ -52,8 +53,8 @@ export default [
 			"unused-imports": unusedImports,
 			"simple-import-sort": simpleImportSort,
 			"sort-imports-es6-autofix": sortImportsEs6Autofix,
-			"sort-keys-fix": sortKeysFix,
-			"import-alias": importAlias,
+			"sort-keys-fix": fixupPluginRules(sortKeysFix),
+			"import-alias": fixupPluginRules(importAlias),
 		},
 		rules: {
 			...js.configs.recommended.rules,

@@ -8,7 +8,6 @@ import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONIC
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 
 let profile: Contracts.IProfile;
-let wallet: Contracts.IReadWriteWallet;
 let useSearchParamsMock: MockInstance;
 
 const mnemonic = MAINSAIL_MNEMONICS[0];
@@ -34,8 +33,6 @@ describe("SignMessage with encrypted mnemonic", () => {
 			.mockReturnValue([new URLSearchParams(), vi.fn()]);
 
 		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
-
-		await triggerMessageSignOnce(wallet);
 	});
 
 	afterAll(() => {

@@ -8,7 +8,6 @@ import { env, render, screen, waitFor, triggerMessageSignOnce } from "@/utils/te
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 
 let profile: Contracts.IProfile;
-let wallet: Contracts.IReadWriteWallet;
 let useSearchParamsMock: MockInstance;
 
 const continueButton = () => screen.getByTestId("SignMessage__continue-button");
@@ -32,8 +31,6 @@ describe("SignMessage with encrypted secret", () => {
 			.mockReturnValue([new URLSearchParams(), vi.fn()]);
 
 		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
-
-		await triggerMessageSignOnce(wallet);
 	});
 
 	afterAll(() => {
