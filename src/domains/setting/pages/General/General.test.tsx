@@ -541,8 +541,8 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
-		const currencyContainer: HTMLElement = screen.getAllByRole("combobox")[1];
-		const marketPriceContainer: HTMLElement = screen.getAllByRole("combobox")[3];
+		const currencyContainer: HTMLElement = screen.getAllByTestId("SelectDropdown")[1];
+		const marketPriceContainer: HTMLElement = screen.getAllByTestId("SelectDropdown")[3];
 
 		const getSelectInput = (type: "MARKET_PROVIDER" | "CURRENCY") => {
 			let subject: HTMLElement;
@@ -553,7 +553,7 @@ describe("General Settings", () => {
 				subject = currencyContainer;
 			}
 
-			return within(subject).getByRole("textbox");
+			return within(subject).getByTestId("SelectDropdown__input");
 		};
 
 		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");

@@ -32,11 +32,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
           class="w-full"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-owns="SelectRecipient__dropdown-menu"
             class="w-full"
-            role="combobox"
           >
             <span>
               <span>
@@ -52,8 +48,10 @@ exports[`SelectRecipient > should render disabled 1`] = `
                       class="relative flex h-full flex-1"
                     >
                       <input
+                        aria-activedescendant=""
                         aria-autocomplete="list"
                         aria-controls="SelectRecipient__dropdown-menu"
+                        aria-expanded="false"
                         aria-labelledby="SelectRecipient__dropdown-label"
                         autocomplete="off"
                         class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
@@ -61,6 +59,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
                         disabled=""
                         id="SelectRecipient__dropdown-input"
                         placeholder="Address"
+                        role="combobox"
                         type="text"
                         value=""
                       />
@@ -160,11 +159,7 @@ exports[`SelectRecipient > should render empty 1`] = `
           class="w-full"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-owns="SelectRecipient__dropdown-menu"
             class="w-full"
-            role="combobox"
           >
             <span>
               <span>
@@ -180,14 +175,17 @@ exports[`SelectRecipient > should render empty 1`] = `
                       class="relative flex h-full flex-1"
                     >
                       <input
+                        aria-activedescendant=""
                         aria-autocomplete="list"
                         aria-controls="SelectRecipient__dropdown-menu"
+                        aria-expanded="false"
                         aria-labelledby="SelectRecipient__dropdown-label"
                         autocomplete="off"
                         class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
                         data-testid="SelectDropdown__input"
                         id="SelectRecipient__dropdown-input"
                         placeholder="Address"
+                        role="combobox"
                         type="text"
                         value=""
                       />
@@ -345,11 +343,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
           class="w-full"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-owns="SelectRecipient__dropdown-menu"
             class="w-full"
-            role="combobox"
           >
             <span>
               <span>
@@ -365,8 +359,10 @@ exports[`SelectRecipient > should render invalid 1`] = `
                       class="relative flex h-full flex-1"
                     >
                       <input
+                        aria-activedescendant=""
                         aria-autocomplete="list"
                         aria-controls="SelectRecipient__dropdown-menu"
+                        aria-expanded="false"
                         aria-invalid="true"
                         aria-labelledby="SelectRecipient__dropdown-label"
                         autocomplete="off"
@@ -374,6 +370,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                         data-testid="SelectDropdown__input"
                         id="SelectRecipient__dropdown-input"
                         placeholder="Address"
+                        role="combobox"
                         type="text"
                         value=""
                       />
@@ -525,11 +522,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
           class="w-full"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-owns="SelectRecipient__dropdown-menu"
             class="w-full"
-            role="combobox"
           >
             <span>
               <span>
@@ -545,14 +538,17 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                       class="relative flex h-full flex-1"
                     >
                       <input
+                        aria-activedescendant=""
                         aria-autocomplete="list"
                         aria-controls="SelectRecipient__dropdown-menu"
+                        aria-expanded="false"
                         aria-labelledby="SelectRecipient__dropdown-label"
                         autocomplete="off"
                         class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
                         data-testid="SelectDropdown__input"
                         id="SelectRecipient__dropdown-input"
                         placeholder="Address"
+                        role="combobox"
                         type="text"
                         value=""
                       />

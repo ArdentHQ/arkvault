@@ -46,19 +46,19 @@ const SelectDropdown = ({
 		isOpen,
 		closeMenu,
 		openMenu,
-		getComboboxProps,
 		getLabelProps,
 		getInputProps,
 		getItemProps,
 		getMenuProps,
+		getToggleButtonProps,
 		selectItem,
 		inputValue,
 		highlightedIndex,
 		reset,
-		toggleMenu,
 		selectedItem,
 	} = useCombobox<OptionProperties | null>({
 		id,
+		isItemDisabled: (item) => item?.isDisabled ?? false,
 		itemToString,
 		items: getMainOptions(data),
 		onInputValueChange: ({ inputValue, selectedItem, type }) => {
@@ -96,6 +96,12 @@ const SelectDropdown = ({
 
 			onSelectedItemChange?.({ selected: selectedItem });
 		},
+		stateReducer: (_state, { type, changes }) => {
+			if (type === useCombobox.stateChangeTypes.InputClick) {
+				return { ...changes, isOpen: true };
+			}
+			return changes;
+		},
 	});
 
 	useEffect(() => {
@@ -109,7 +115,7 @@ const SelectDropdown = ({
 	const { value: defaultValue } = { ...defaultSelectedItem };
 	useEffect(() => {
 		selectItem(defaultSelectedItem ?? null);
-	}, [defaultValue, selectItem]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [defaultValue, selectItem]);
 
 	const suggestion = useMemo(() => {
 		const firstMatch = mainOptions.find((option) => isMatch(inputValue, option));
@@ -129,13 +135,7 @@ const SelectDropdown = ({
 						<div
 							data-testid="SelectDropdown__caret"
 							className="flex items-center justify-center"
-							onClick={() => {
-								if (disabled) {
-									return;
-								}
-
-								toggleMenu();
-							}}
+							{...getToggleButtonProps({ disabled })}
 						>
 							<div className="absolute inset-0 block cursor-pointer md:hidden" />
 
@@ -210,7 +210,7 @@ const SelectDropdown = ({
 	return (
 		<>
 			<div className="w-full">
-				<div {...getComboboxProps()} className="w-full">
+				<div className="w-full">
 					<Tooltip
 						offset={0}
 						visible={isVisible}

@@ -128,11 +128,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="SelectRecipient__dropdown-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -148,8 +144,10 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="SelectRecipient__dropdown-menu"
+                                  aria-expanded="false"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
@@ -158,6 +156,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                                   id="SelectRecipient__dropdown-input"
                                   name="recipientAddress"
                                   placeholder="Address"
+                                  role="combobox"
                                   type="text"
                                   value=""
                                 />
@@ -264,11 +263,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -303,8 +298,10 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -312,6 +309,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="asset"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value="ARK"
                               />
@@ -337,8 +335,12 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -507,11 +509,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -546,8 +544,10 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -555,6 +555,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="amount"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value="ARK"
                               />
@@ -580,8 +581,12 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -806,11 +811,7 @@ exports[`AddRecipient > should render 1`] = `
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="SelectRecipient__dropdown-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -826,8 +827,10 @@ exports[`AddRecipient > should render 1`] = `
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="SelectRecipient__dropdown-menu"
+                                  aria-expanded="false"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
@@ -836,6 +839,7 @@ exports[`AddRecipient > should render 1`] = `
                                   id="SelectRecipient__dropdown-input"
                                   name="recipientAddress"
                                   placeholder="Address"
+                                  role="combobox"
                                   type="text"
                                   value=""
                                 />
@@ -942,11 +946,7 @@ exports[`AddRecipient > should render 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -965,8 +965,10 @@ exports[`AddRecipient > should render 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -974,6 +976,7 @@ exports[`AddRecipient > should render 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="asset"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -989,8 +992,12 @@ exports[`AddRecipient > should render 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -1159,11 +1166,7 @@ exports[`AddRecipient > should render 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -1182,8 +1185,10 @@ exports[`AddRecipient > should render 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -1191,6 +1196,7 @@ exports[`AddRecipient > should render 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="amount"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -1206,8 +1212,12 @@ exports[`AddRecipient > should render 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -1417,11 +1427,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="SelectRecipient__dropdown-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -1437,8 +1443,10 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="SelectRecipient__dropdown-menu"
+                                  aria-expanded="false"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
@@ -1447,6 +1455,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                   id="SelectRecipient__dropdown-input"
                                   name="recipientAddress"
                                   placeholder="Address"
+                                  role="combobox"
                                   type="text"
                                   value=""
                                 />
@@ -1553,11 +1562,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -1576,8 +1581,10 @@ exports[`AddRecipient > should render with assets field 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -1585,6 +1592,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="asset"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -1600,8 +1608,12 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -1770,11 +1782,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -1793,8 +1801,10 @@ exports[`AddRecipient > should render with assets field 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -1802,6 +1812,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="amount"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -1817,8 +1828,12 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -2028,11 +2043,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="SelectRecipient__dropdown-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -2048,8 +2059,10 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="SelectRecipient__dropdown-menu"
+                                  aria-expanded="false"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
@@ -2058,6 +2071,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                                   id="SelectRecipient__dropdown-input"
                                   name="recipientAddress"
                                   placeholder="Address"
+                                  role="combobox"
                                   type="text"
                                   value=""
                                 />
@@ -2164,11 +2178,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -2187,8 +2197,10 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -2196,6 +2208,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                                 id="SelectToken__dropdown-input"
                                 name="asset"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -2211,8 +2224,12 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -2381,11 +2398,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -2404,8 +2417,10 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -2413,6 +2428,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                                 id="SelectToken__dropdown-input"
                                 name="amount"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -2428,8 +2444,12 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -2639,11 +2659,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="SelectRecipient__dropdown-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -2659,8 +2675,10 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="SelectRecipient__dropdown-menu"
+                                  aria-expanded="false"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
@@ -2669,6 +2687,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                                   id="SelectRecipient__dropdown-input"
                                   name="recipientAddress"
                                   placeholder="Address"
+                                  role="combobox"
                                   type="text"
                                   value=""
                                 />
@@ -2775,11 +2794,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -2798,8 +2813,10 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -2807,6 +2824,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="asset"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -2822,8 +2840,12 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -2992,11 +3014,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -3015,8 +3033,10 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -3024,6 +3044,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="amount"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -3039,8 +3060,12 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -3250,11 +3275,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="SelectRecipient__dropdown-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -3276,8 +3297,10 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="SelectRecipient__dropdown-menu"
+                                  aria-expanded="false"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
@@ -3286,6 +3309,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                                   id="SelectRecipient__dropdown-input"
                                   name="recipientAddress"
                                   placeholder="Address"
+                                  role="combobox"
                                   type="text"
                                   value="0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54"
                                 />
@@ -3402,11 +3426,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -3425,8 +3445,10 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -3434,6 +3456,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="asset"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -3449,8 +3472,12 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -3678,11 +3705,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -3701,8 +3724,10 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-invalid="true"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
@@ -3711,6 +3736,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="amount"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -3779,8 +3805,12 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -4049,11 +4079,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="SelectRecipient__dropdown-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -4069,8 +4095,10 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="SelectRecipient__dropdown-menu"
+                                  aria-expanded="false"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
@@ -4079,6 +4107,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                                   id="SelectRecipient__dropdown-input"
                                   name="recipientAddress"
                                   placeholder="Address"
+                                  role="combobox"
                                   type="text"
                                   value=""
                                 />
@@ -4185,11 +4214,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -4208,8 +4233,10 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -4217,6 +4244,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                                 id="SelectToken__dropdown-input"
                                 name="asset"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -4232,8 +4260,12 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -4402,11 +4434,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -4425,8 +4453,10 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -4434,6 +4464,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                                 id="SelectToken__dropdown-input"
                                 name="amount"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -4449,8 +4480,12 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -4659,11 +4694,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="SelectRecipient__dropdown-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -4679,8 +4710,10 @@ exports[`AddRecipient > should set available amount 1`] = `
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="SelectRecipient__dropdown-menu"
+                                  aria-expanded="false"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
@@ -4689,6 +4722,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                                   id="SelectRecipient__dropdown-input"
                                   name="recipientAddress"
                                   placeholder="Address"
+                                  role="combobox"
                                   type="text"
                                   value=""
                                 />
@@ -4795,11 +4829,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -4834,8 +4864,10 @@ exports[`AddRecipient > should set available amount 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -4843,6 +4875,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="asset"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value="ARK"
                               />
@@ -4868,8 +4901,12 @@ exports[`AddRecipient > should set available amount 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -5038,11 +5075,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -5077,8 +5110,10 @@ exports[`AddRecipient > should set available amount 1`] = `
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -5086,6 +5121,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                                 id="SelectToken__dropdown-input"
                                 name="amount"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value="ARK"
                               />
@@ -5111,8 +5147,12 @@ exports[`AddRecipient > should set available amount 1`] = `
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -5322,11 +5362,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                     class="w-full"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-owns="SelectRecipient__dropdown-menu"
                       class="w-full"
-                      role="combobox"
                     >
                       <span>
                         <span>
@@ -5342,8 +5378,10 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                                 class="relative flex h-full flex-1"
                               >
                                 <input
+                                  aria-activedescendant=""
                                   aria-autocomplete="list"
                                   aria-controls="SelectRecipient__dropdown-menu"
+                                  aria-expanded="false"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
@@ -5352,6 +5390,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                                   id="SelectRecipient__dropdown-input"
                                   name="recipientAddress"
                                   placeholder="Address"
+                                  role="combobox"
                                   type="text"
                                   value=""
                                 />
@@ -5458,11 +5497,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -5481,8 +5516,10 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -5490,6 +5527,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                                 id="SelectToken__dropdown-input"
                                 name="asset"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -5505,8 +5543,12 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"
@@ -5734,11 +5776,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                   class="w-full"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectToken__dropdown-menu"
                     class="w-full"
-                    role="combobox"
                   >
                     <span>
                       <span>
@@ -5757,8 +5795,10 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                               class="relative flex h-full flex-1"
                             >
                               <input
+                                aria-activedescendant=""
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
+                                aria-expanded="false"
                                 aria-invalid="true"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
@@ -5767,6 +5807,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                                 id="SelectToken__dropdown-input"
                                 name="amount"
                                 placeholder="Select Token"
+                                role="combobox"
                                 type="text"
                                 value=""
                               />
@@ -5835,8 +5876,12 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                                   class="flex items-center"
                                 >
                                   <div
+                                    aria-controls="SelectToken__dropdown-menu"
+                                    aria-expanded="false"
                                     class="flex items-center justify-center"
                                     data-testid="SelectDropdown__caret"
+                                    id="SelectToken__dropdown-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div
                                       class="absolute inset-0 block cursor-pointer md:hidden"

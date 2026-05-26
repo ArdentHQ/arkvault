@@ -1,4 +1,3 @@
-import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";
 import { Cache } from "./cache";
 import { Contracts } from "@/app/lib/profiles";
@@ -50,11 +49,6 @@ export class HttpClient {
 
 	public withOptions(options: object): HttpClient {
 		this._options = { ...this._options, ...options };
-		return this;
-	}
-
-	public withSocksProxy(host: string): HttpClient {
-		this._options.agent = new SocksProxyAgent(host);
 		return this;
 	}
 
