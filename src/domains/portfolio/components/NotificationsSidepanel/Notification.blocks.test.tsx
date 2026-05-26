@@ -206,7 +206,6 @@ describe("TransferNotification", () => {
 	});
 });
 
-
 describe("NotificationLeftSide empty return", () => {
 	it("should render empty fragment when transaction is neither transfer nor multiPayment nor tokenTransfer", () => {
 		const nonTransferTx = createMockTransaction({
