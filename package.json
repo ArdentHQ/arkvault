@@ -128,7 +128,7 @@
 		"@vitest/coverage-istanbul": "4.1.7",
 		"autoprefixer": "^10.5.0",
 		"cross-fetch": "^4.1.0",
-		"eslint": "^9.39.4",
+		"eslint": "^10.0.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-import-alias": "^1.2.0",
 		"eslint-plugin-prettier": "^5.5.5",

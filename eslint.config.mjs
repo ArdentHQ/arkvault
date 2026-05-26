@@ -99,6 +99,8 @@ export default [
 			"no-unneeded-ternary": "error",
 			"no-unused-expressions": "off",
 			"no-unused-vars": "off",
+			"no-useless-assignment": "off",
+			"preserve-caught-error": "off",
 			"prefer-const": ["warn", { destructuring: "all" }],
 			"prettier/prettier": ["off", { endOfLine: "auto" }],
 			"promise/param-names": "warn",
