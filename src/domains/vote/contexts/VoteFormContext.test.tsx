@@ -11,9 +11,17 @@ import {
 	syncValidators,
 } from "@/utils/testing-library";
 import { useVoteFormContext, VoteFormProvider } from "./VoteFormContext";
-import * as ReactRouter from "react-router";
 import userEvent from "@testing-library/user-event";
 import { waitFor } from "@testing-library/react";
+import { useSearchParams } from "react-router-dom";
+
+vi.mock("react-router-dom", async () => {
+	const actual = await vi.importActual("react-router-dom");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
 
 const Component = () => {
 	const { isLoading, votes, unvotes, showSendVotePanel, setShowSendVotePanel } = useVoteFormContext();
@@ -70,7 +78,7 @@ describe("VoteFormContext", () => {
 	});
 
 	beforeEach(() => {
-		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
+		vi.mocked(useSearchParams).mockReturnValue([new URLSearchParams(), vi.fn()]);
 	});
 
 	it("should throw without provider", () => {
@@ -137,7 +145,7 @@ describe("VoteFormContext", () => {
 
 		const setSearchParamsFn = vi.fn();
 
-		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParamsFn]);
+		vi.mocked(useSearchParams).mockReturnValue([searchParams, setSearchParamsFn]);
 
 		const route =
 			"?method=vote&coin=Mainsail&validator=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&unvote=0xAa6d78a89706b744eDD2894CE30BeCE77Ab0F753";
