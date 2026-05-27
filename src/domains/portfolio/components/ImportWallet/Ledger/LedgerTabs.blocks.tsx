@@ -80,7 +80,7 @@ export const useLedgerTabsHandleNext = (
 		}
 
 		if (activeTab === LedgerTabStep.LedgerScanStep) {
-			await handleSubmit((data: { wallets: LedgerData[] }) => handleWalletImporting(data))();
+			await handleSubmit((data: unknown) => handleWalletImporting(data as { wallets: LedgerData[] }))();
 		}
 
 		const next = activeTab + 1;
