@@ -1,24 +1,31 @@
 import { render, screen, waitFor } from "@/utils/testing-library";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { PortfolioHeader } from "./PortfolioHeader";
+import { usePortfolioHeaderActions } from "./usePortfolioHeaderActions";
 import { Contracts } from "@/app/lib/profiles";
-import { PanelsProvider } from "@/app/contexts/Panels";
+import { PanelsProvider, Panel, usePanels } from "@/app/contexts/Panels";
 import { BigNumber } from "@/app/lib/helpers";
 import { vi } from "vitest";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 
-beforeAll(async () => {
-	profile = env.profiles().findById(getMainsailProfileId());
-	await env.profiles().restore(profile);
-	wallet = profile.wallets().first();
+const mockOpenPanel = vi.fn();
+vi.mock("@/app/contexts/Panels", async (importOriginal) => {
+	const actual = await importOriginal<object>();
+	return {
+		...actual,
+		usePanels: () => ({
+			openPanel: mockOpenPanel,
+		}),
+	};
 });
 
 vi.mock("@/domains/wallet/hooks", async (importOriginal) => {
-	const actual = await importOriginal<typeof import("@/domains/wallet/hooks")>();
+	const actual = await importOriginal<object>();
 	return {
 		...actual,
 		useWalletActions: () => ({
@@ -86,16 +93,64 @@ const renderPortfolioHeader = (props: Partial<React.ComponentProps<typeof Portfo
 	);
 };
 
-describe("PortfolioHeader", () => {
-	it("should render the wallet header with balance information", async () => {
-		const mockBalance = {
-			decimalPlaces: vi.fn().mockReturnValue(new BigNumber(100)),
-			isZero: vi.fn().mockReturnValue(false),
-		};
+describe("usePortfolioHeaderActions", () => {
+	beforeAll(async () => {
+		profile = env.profiles().findById(getMainsailProfileId());
+		await env.profiles().restore(profile);
+		wallet = profile.wallets().first();
+	});
 
+	beforeEach(() => {
+		mockOpenPanel.mockClear();
+	});
+
+	it("should open SendUsernameRegistration panel when no registrationType is passed", () => {
+		const { result } = renderHook(() => usePortfolioHeaderActions());
+		result.current.handleSendRegistration();
+		expect(mockOpenPanel).toHaveBeenCalledWith(Panel.SendUsernameRegistration);
+	});
+
+	it("should open SendValidatorRegistration panel when validatorRegistration is passed", () => {
+		const { result } = renderHook(() => usePortfolioHeaderActions());
+		result.current.handleSendRegistration("validatorRegistration");
+		expect(mockOpenPanel).toHaveBeenCalledWith(Panel.SendValidatorRegistration);
+	});
+
+	it("should open SendUsernameRegistration panel when usernameRegistration is passed", () => {
+		const { result } = renderHook(() => usePortfolioHeaderActions());
+		result.current.handleSendRegistration("usernameRegistration");
+		expect(mockOpenPanel).toHaveBeenCalledWith(Panel.SendUsernameRegistration);
+	});
+
+	it("should open SendContractDeployment panel", () => {
+		const { result } = renderHook(() => usePortfolioHeaderActions());
+		result.current.handleSendContractDeployment();
+		expect(mockOpenPanel).toHaveBeenCalledWith(Panel.SendContractDeployment);
+	});
+
+	it("should open SendUsernameResignation panel", () => {
+		const { result } = renderHook(() => usePortfolioHeaderActions());
+		result.current.handleSendUsernameResignation();
+		expect(mockOpenPanel).toHaveBeenCalledWith(Panel.SendUsernameResignation);
+	});
+
+	it("should open SendValidatorResignation panel", () => {
+		const { result } = renderHook(() => usePortfolioHeaderActions());
+		result.current.handleSendValidatorResignation();
+		expect(mockOpenPanel).toHaveBeenCalledWith(Panel.SendValidatorResignation);
+	});
+});
+
+describe("PortfolioHeader", () => {
+	beforeEach(() => {
+		mockOpenPanel.mockClear();
+		vi.useRealTimers();
+	});
+
+	it("should render the wallet header with balance information", async () => {
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		vi.spyOn(wallet, "balance").mockReturnValue(mockBalance);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
 
 		renderPortfolioHeader();
 
@@ -105,14 +160,9 @@ describe("PortfolioHeader", () => {
 	});
 
 	it("should render total balance label", async () => {
-		const mockBalance = {
-			decimalPlaces: vi.fn().mockReturnValue(new BigNumber(100)),
-			isZero: vi.fn().mockReturnValue(false),
-		};
-
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		vi.spyOn(wallet, "balance").mockReturnValue(mockBalance);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
 
 		renderPortfolioHeader();
 
@@ -123,14 +173,9 @@ describe("PortfolioHeader", () => {
 	});
 
 	it("should render the send button for single wallet when restored and synced", async () => {
-		const mockBalance = {
-			decimalPlaces: vi.fn().mockReturnValue(new BigNumber(100)),
-			isZero: vi.fn().mockReturnValue(false),
-		};
-
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		vi.spyOn(wallet, "balance").mockReturnValue(mockBalance);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
 
 		renderPortfolioHeader();
 
@@ -140,14 +185,9 @@ describe("PortfolioHeader", () => {
 	});
 
 	it("should render the refresh button", async () => {
-		const mockBalance = {
-			decimalPlaces: vi.fn().mockReturnValue(new BigNumber(100)),
-			isZero: vi.fn().mockReturnValue(false),
-		};
-
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		vi.spyOn(wallet, "balance").mockReturnValue(mockBalance);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
 
 		renderPortfolioHeader();
 
@@ -157,14 +197,9 @@ describe("PortfolioHeader", () => {
 	});
 
 	it("should render showing addresses panel trigger", async () => {
-		const mockBalance = {
-			decimalPlaces: vi.fn().mockReturnValue(new BigNumber(100)),
-			isZero: vi.fn().mockReturnValue(false),
-		};
-
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		vi.spyOn(wallet, "balance").mockReturnValue(mockBalance);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
 
 		renderPortfolioHeader();
 
@@ -174,14 +209,9 @@ describe("PortfolioHeader", () => {
 	});
 
 	it("should render the dropdown menu with additional options", async () => {
-		const mockBalance = {
-			decimalPlaces: vi.fn().mockReturnValue(new BigNumber(100)),
-			isZero: vi.fn().mockReturnValue(false),
-		};
-
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		vi.spyOn(wallet, "balance").mockReturnValue(mockBalance);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
 
 		renderPortfolioHeader();
 
@@ -196,14 +226,9 @@ describe("PortfolioHeader", () => {
 	});
 
 	it("should render the wallet address display", async () => {
-		const mockBalance = {
-			decimalPlaces: vi.fn().mockReturnValue(new BigNumber(100)),
-			isZero: vi.fn().mockReturnValue(false),
-		};
-
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		vi.spyOn(wallet, "balance").mockReturnValue(mockBalance);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
 
 		renderPortfolioHeader();
 
@@ -213,14 +238,9 @@ describe("PortfolioHeader", () => {
 	});
 
 	it("should call useWalletOptions with selected wallets", async () => {
-		const mockBalance = {
-			decimalPlaces: vi.fn().mockReturnValue(new BigNumber(100)),
-			isZero: vi.fn().mockReturnValue(false),
-		};
-
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		vi.spyOn(wallet, "balance").mockReturnValue(mockBalance);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
 
 		renderPortfolioHeader();
 
@@ -229,5 +249,328 @@ describe("PortfolioHeader", () => {
 		});
 
 		expect(vi.mocked(useWalletOptions)).toHaveBeenCalledWith(profile.wallets().selected());
+	});
+
+	it("should render skeleton when wallet is not restored", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render total balance for multiple wallets", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		vi.spyOn(profile, "totalBalance").mockReturnValue(BigNumber.make(200));
+
+		renderPortfolioHeader({ hasFocus: false });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render the send button disabled when balance is zero", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(0));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			const sendButton = screen.getByTestId("WalletHeader__send-button");
+			expect(sendButton).toBeDisabled();
+		});
+	});
+
+	it("should render the send button disabled when not synced", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(false);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			const sendButton = screen.getByTestId("WalletHeader__send-button");
+			expect(sendButton).toBeDisabled();
+		});
+	});
+
+	it("should render the send button disabled when not restored", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			const sendButton = screen.getByTestId("WalletHeader__send-button");
+			expect(sendButton).toBeDisabled();
+		});
+	});
+
+	it("should render the copy address button", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render wallet icons", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletIcons")).toBeInTheDocument();
+		});
+	});
+
+	it("should render WalletVote when multiple wallets", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader({ hasFocus: false });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render the import address button", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render the create address button", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render WalletActionsModals with correct props", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		const onUpdate = vi.fn();
+
+		renderPortfolioHeader({ onUpdate });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render the address when single wallet is selected", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+		vi.spyOn(wallet, "address").mockReturnValue("DkNnDEYf8k5gqqrNpzQYZHPBJhWpzbH7sF");
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render the public key copy button when wallet has public key", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+		vi.spyOn(wallet, "publicKey").mockReturnValue("02abcdef1234567890");
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should call handleSend when send button is clicked", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			const sendButton = screen.getByTestId("WalletHeader__send-button");
+			expect(sendButton).toBeInTheDocument();
+			expect(sendButton).not.toBeDisabled();
+		});
+	});
+
+	it("should render the viewing address info correctly", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should call onUpdate callback when WalletActionsModals triggers update", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		const onUpdate = vi.fn();
+
+		renderPortfolioHeader({ onUpdate });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render the dropdown with ledger migration options when hasWalletsToMigrate is true", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render the single-address hint tooltip when conditions are met", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader({ hasFocus: true });
+
+		expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+	});
+
+	it("should render the import HD wallet hint tooltip when conditions are met", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		vi.spyOn(wallet, "isHDWallet").mockReturnValue(true);
+
+		renderPortfolioHeader({ hasFocus: true });
+
+		expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+	});
+
+	it("should call handleVotesButtonClick when votes button is clicked", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		const handleVotesButtonClick = vi.fn();
+
+		renderPortfolioHeader({ handleVotesButtonClick });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should call onViewTokens when view tokens button is clicked", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		const onViewTokens = vi.fn();
+
+		renderPortfolioHeader({ onViewTokens });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render the converted balance amount", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+		vi.spyOn(wallet, "exchangeCurrency").mockReturnValue("USD");
+
+		vi.spyOn(profile.totalBalanceConverted(), "toNumber").mockReturnValue(50);
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render the wallet currency ticker", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+		vi.spyOn(wallet, "currency").mockReturnValue("ARS");
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should render the account name label when wallet is HD and only one selected", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+		vi.spyOn(wallet, "isHDWallet").mockReturnValue(true);
+		vi.spyOn(wallet, "accountName").mockReturnValue("Account 1");
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
+
+	it("should not render the double chevron button when only one wallet exists", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		vi.spyOn(profile.wallets(), "count").mockReturnValue(1);
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
 	});
 });
