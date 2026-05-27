@@ -25,7 +25,7 @@ describe("useLedgerTabsHandleNext", () => {
 	beforeEach(() => {
 		vi.clearAllMocks();
 		mockHandleSubmit = vi.fn((cb) => () => {
-			cb([]);
+			cb({ wallets: [] });
 			return;
 		});
 		mockSetShowRetry.mockReset();
