@@ -9,7 +9,7 @@ import { LedgerTabStep } from "./LedgerTabs.contracts";
 import { LedgerData } from "@/app/contexts";
 import { ProfilePaths } from "@/router/paths";
 import { assertString } from "@/utils/assertions";
-import { useWalletImport } from "@/domains/wallet/hooks";
+import { OptionsValue, useWalletImport } from "@/domains/wallet/hooks";
 import { Contracts } from "@/app/lib/profiles";
 
 export interface UseLedgerTabsGoToPrevDeps {
@@ -80,7 +80,7 @@ export const useLedgerTabsHandleNext = (
 		}
 
 		if (activeTab === LedgerTabStep.LedgerScanStep) {
-			await handleSubmit((data: unknown) => handleWalletImporting({ wallets: data as LedgerData[] }))();
+			await handleSubmit((data: { wallets: LedgerData[] }) => handleWalletImporting(data))();
 		}
 
 		const next = activeTab + 1;
@@ -218,7 +218,7 @@ export const useHandleWalletImporting = ({ listenDevice, profile }: UseHandleWal
 							deviceId,
 							path,
 						},
-						type: "LEDGER",
+						type: OptionsValue.LEDGER,
 						value: address,
 					}),
 				),
@@ -358,7 +358,7 @@ export const LedgerTabsFooter = ({
 					onClick={handleRetry}
 					variant="primary"
 					data-testid="LedgerFooter__retry"
-					disabled={false}
+					disabled={isSubmitDisabled}
 				>
 					Retry
 				</Button>

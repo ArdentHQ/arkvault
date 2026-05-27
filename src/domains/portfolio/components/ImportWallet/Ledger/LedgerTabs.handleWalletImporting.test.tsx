@@ -60,13 +60,13 @@ describe("useHandleWalletImporting", () => {
 		expect(mockImportWallets).toHaveBeenNthCalledWith(1, {
 			disableAddressSelection: false,
 			ledgerOptions: { deviceId: "device-123", path: "m/44'/1'/0'/0/0" },
-			type: "LEDGER",
+			type: "ledger",
 			value: "addr1",
 		});
 		expect(mockImportWallets).toHaveBeenNthCalledWith(2, {
 			disableAddressSelection: true,
 			ledgerOptions: { deviceId: "device-123", path: "m/44'/1'/0'/0/1" },
-			type: "LEDGER",
+			type: "ledger",
 			value: "addr2",
 		});
 	});
