@@ -3,12 +3,14 @@ import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { PortfolioHeader } from "./PortfolioHeader";
 import { usePortfolioHeaderActions } from "./usePortfolioHeaderActions";
 import { Contracts } from "@/app/lib/profiles";
-import { PanelsProvider, Panel, usePanels } from "@/app/contexts/Panels";
+import { PanelsProvider, Panel } from "@/app/contexts/Panels";
 import { BigNumber } from "@/app/lib/helpers";
 import { vi } from "vitest";
 import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+
+const sendButtonTestId = "WalletHeader__send-button";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -180,7 +182,7 @@ describe("PortfolioHeader", () => {
 		renderPortfolioHeader();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletHeader__send-button")).toBeInTheDocument();
+			expect(screen.getByTestId(sendButtonTestId)).toBeInTheDocument();
 		});
 	});
 
@@ -285,7 +287,7 @@ describe("PortfolioHeader", () => {
 		renderPortfolioHeader();
 
 		await waitFor(() => {
-			const sendButton = screen.getByTestId("WalletHeader__send-button");
+			const sendButton = screen.getByTestId(sendButtonTestId);
 			expect(sendButton).toBeDisabled();
 		});
 	});
@@ -298,7 +300,7 @@ describe("PortfolioHeader", () => {
 		renderPortfolioHeader();
 
 		await waitFor(() => {
-			const sendButton = screen.getByTestId("WalletHeader__send-button");
+			const sendButton = screen.getByTestId(sendButtonTestId);
 			expect(sendButton).toBeDisabled();
 		});
 	});
@@ -311,7 +313,7 @@ describe("PortfolioHeader", () => {
 		renderPortfolioHeader();
 
 		await waitFor(() => {
-			const sendButton = screen.getByTestId("WalletHeader__send-button");
+			const sendButton = screen.getByTestId(sendButtonTestId);
 			expect(sendButton).toBeDisabled();
 		});
 	});
@@ -424,7 +426,7 @@ describe("PortfolioHeader", () => {
 		renderPortfolioHeader();
 
 		await waitFor(() => {
-			const sendButton = screen.getByTestId("WalletHeader__send-button");
+			const sendButton = screen.getByTestId(sendButtonTestId);
 			expect(sendButton).toBeInTheDocument();
 			expect(sendButton).not.toBeDisabled();
 		});

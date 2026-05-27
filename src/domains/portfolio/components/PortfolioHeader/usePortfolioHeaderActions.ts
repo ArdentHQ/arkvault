@@ -24,8 +24,8 @@ export function usePortfolioHeaderActions() {
 	};
 
 	return {
-		handleSendRegistration,
 		handleSendContractDeployment,
+		handleSendRegistration,
 		handleSendUsernameResignation,
 		handleSendValidatorResignation,
 	};
