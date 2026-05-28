@@ -14,6 +14,14 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+vi.mock("@/domains/contact/routing", () => ({
+	ContactRoutes: [],
+}));
+
+vi.mock("@/domains/exchange/routing", () => ({
+	ExchangeRoutes: [],
+}));
+
 describe("App Router", () => {
 	beforeEach(() => {
 		process.env.REACT_APP_IS_UNIT = undefined;
