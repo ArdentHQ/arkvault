@@ -14,6 +14,34 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+vi.mock("@/domains/contact/routing", () => ({
+	ContactRoutes: [],
+}));
+
+vi.mock("@/domains/exchange/routing", () => ({
+	ExchangeRoutes: [],
+}));
+
+vi.mock("@/domains/portfolio/routing", () => ({
+	PortfolioRoutes: [],
+}));
+
+vi.mock("@/domains/setting/routing", () => ({
+	SettingRoutes: [],
+}));
+
+vi.mock("@/domains/vote/routing", () => ({
+	VoteRoutes: [],
+}));
+
+vi.mock("@/domains/profile/routing", () => ({
+	ProfileRoutes: [],
+}));
+
+vi.mock("@/domains/tokens/routing", () => ({
+	TokenRoutes: [],
+}));
+
 describe("App Router", () => {
 	beforeEach(() => {
 		process.env.REACT_APP_IS_UNIT = undefined;
