@@ -6,6 +6,7 @@ import {
 	screen,
 	waitFor,
 	renderResponsiveWithRoute,
+	renderResponsive,
 } from "@/utils/testing-library";
 import { expect, it, describe, vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
@@ -64,9 +65,12 @@ describe("MigratedAddressesTable", () => {
 		expect(screen.getAllByTestId("MigratedAddressRowMobile")).toHaveLength(2);
 	});
 
-	it("should edit wallet name", async () => {
-		render(<MigratedAddressesTable profile={profile} transactions={migrator.transactions()} />, { route });
-		expect(screen.getByTestId("MigratedAddressesTable")).toBeInTheDocument();
+	it("should open edit wallet modal and cancel", async () => {
+		renderResponsive(<MigratedAddressesTable profile={profile} transactions={migrator.transactions()} />, "lg");
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MigratedAddressesTable")).toBeInTheDocument();
+		});
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("MigratedAddressRow_edit-button")).toHaveLength(2);
@@ -76,6 +80,57 @@ describe("MigratedAddressesTable", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+		});
+
+		const cancelButton = screen.queryByTestId("UpdateWalletName__cancel-button");
+		if (cancelButton) {
+			await userEvent.click(cancelButton);
+		} else {
+			await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "{Escape}");
+		}
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MigratedAddressesTable")).toBeInTheDocument();
+		});
+	});
+
+	it("should open edit wallet modal and save wallet name", async () => {
+		renderResponsive(<MigratedAddressesTable profile={profile} transactions={migrator.transactions()} />, "lg");
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MigratedAddressesTable")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigratedAddressRow_edit-button")).toHaveLength(2);
+		});
+
+		await userEvent.click(screen.getAllByTestId("MigratedAddressRow_edit-button").at(0));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+		});
+
+		const input = screen.getByTestId("UpdateWalletName__input");
+		await userEvent.clear(input);
+		await userEvent.type(input, "Test Wallet");
+
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled();
+		});
+
+		await userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MigratedAddressesTable")).toBeInTheDocument();
 		});
 	});
 });
