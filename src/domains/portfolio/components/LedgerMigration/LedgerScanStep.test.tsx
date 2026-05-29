@@ -1,0 +1,299 @@
+import { expect, it, describe, beforeEach, afterAll, vi } from "vitest";
+import { Contracts } from "@/app/lib/profiles";
+import { Networks } from "@/app/lib/mainsail";
+import { env, getMainsailProfileId, mockNanoSTransport, render, screen, waitFor } from "@/utils/testing-library";
+import { LedgerScanStep, showLoadedLedgerWalletsMessage } from "./LedgerScanStep";
+import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
+import { toasts } from "@/app/services";
+import userEvent from "@testing-library/user-event";
+
+vi.mock("@/app/services", () => ({
+	toasts: {
+		dismiss: vi.fn(),
+		isActive: vi.fn().mockReturnValue(false),
+		success: vi.fn((...arguments_: any[]) => arguments_),
+		update: vi.fn((...arguments_: any[]) => arguments_),
+	},
+}));
+
+const defaultScannerState = {
+	abortScanner: vi.fn(),
+	canRetry: true,
+	error: null,
+	isScanning: false,
+	isScanningMore: false,
+	isSelected: vi.fn().mockReturnValue(false),
+	loadedWallets: [
+		{
+			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			balance: "100",
+			path: "m/44'/1'/0'/0/1",
+		},
+	],
+	scan: vi.fn(),
+	selectedWallets: [],
+	toggleSelect: vi.fn(),
+	toggleSelectAll: vi.fn(),
+	wallets: [
+		{
+			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			balance: "100",
+			path: "m/44'/1'/0'/0/1",
+		},
+	],
+};
+
+vi.mock("@/app/contexts/Ledger", () => ({
+	useLedgerScanner: vi.fn(() => defaultScannerState),
+}));
+
+describe("LedgerMigration LedgerScanStep", () => {
+	let profile: Contracts.IProfile;
+	let network: Networks.Network;
+
+	beforeEach(async () => {
+		mockNanoSTransport();
+		profile = env.profiles().findById(getMainsailProfileId());
+		await env.profiles().restore(profile);
+		network = profile.wallets().first().network();
+		vi.mocked(useLedgerScanner).mockReturnValue(defaultScannerState);
+	});
+
+	afterAll(() => {
+		vi.restoreAllMocks();
+	});
+
+	it("should render without error", () => {
+		render(<LedgerScanStep profile={profile} network={network} children={<div>test</div>} />);
+
+		expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
+	});
+
+	it("should render with disableColdWallets", () => {
+		render(<LedgerScanStep profile={profile} network={network} disableColdWallets children={<div>test</div>} />);
+
+		expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
+	});
+
+	it("should show error when present", () => {
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			abortScanner: vi.fn(),
+			canRetry: false,
+			error: "Test error",
+			isScanning: false,
+			isSelected: vi.fn().mockReturnValue(false),
+			loadedWallets: [],
+			scan: vi.fn(),
+			selectedWallets: [],
+			toggleSelect: vi.fn(),
+			wallets: [],
+		});
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div>test</div>} />);
+
+		expect(screen.getByTestId("LedgerScanStep__error")).toBeInTheDocument();
+	});
+
+	it("should show cancelling screen when isCancelling is true", () => {
+		render(<LedgerScanStep profile={profile} network={network} isCancelling={true} children={<div>test</div>} />);
+
+		expect(screen.queryByTestId("LedgerScanStep")).not.toBeInTheDocument();
+	});
+
+	it("should show loaded wallets message for single wallet", () => {
+		const result = showLoadedLedgerWalletsMessage([{ address: "0x123", balance: "100" }]);
+		expect(result).toMatchSnapshot();
+	});
+
+	it("should show loaded wallets message for multiple wallets", () => {
+		const result = showLoadedLedgerWalletsMessage([
+			{ address: "0x123", balance: "100" },
+			{ address: "0x456", balance: "200" },
+		]);
+
+		expect(result).toMatchSnapshot();
+	});
+
+	it("should call onSelect callback when wallets are selected", async () => {
+		const onSelect = vi.fn();
+
+		render(<LedgerScanStep profile={profile} network={network} onSelect={onSelect} children={<div>test</div>} />);
+
+		await waitFor(() => {
+			expect(onSelect).toHaveBeenCalled();
+		});
+	});
+
+	it("should call scanMore callback when clicking scan more button", async () => {
+		const { scan } = defaultScannerState;
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div>test</div>} />);
+
+		await waitFor(() => {
+			expect(scan).toHaveBeenCalledWith(profile);
+		});
+	});
+
+	it("should update toast when already active", async () => {
+		vi.mocked(toasts.isActive).mockReturnValueOnce(true);
+
+		const toastUpdateSpy = vi.spyOn(toasts, "update");
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div>test</div>} />);
+
+		await waitFor(() => {
+			expect(toastUpdateSpy).toHaveBeenCalled();
+		});
+	});
+
+	it("should create scanMore callback that calls scan with profile", async () => {
+		vi.resetModules();
+
+		const capturedScanMore = vi.fn<() => void>();
+
+		vi.doMock("@/domains/portfolio/components/ImportWallet/Ledger/LedgerScanStep", () => ({
+			LedgerTable: vi.fn((props: any) => {
+				capturedScanMore(props.scanMore);
+				return <div data-testid="mock-LedgerTable" />;
+			}),
+		}));
+
+		const { LedgerScanStep: LedgerScanStepMocked } = await import("./LedgerScanStep");
+
+		mockNanoSTransport();
+		const testProfile = env.profiles().findById(getMainsailProfileId());
+		await env.profiles().restore(testProfile);
+		const testNetwork = testProfile.wallets().first().network();
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			canRetry: false,
+		});
+
+		render(<LedgerScanStepMocked profile={testProfile} network={testNetwork} children={<div>test</div>} />);
+
+		expect(capturedScanMore).toHaveBeenCalledTimes(1);
+		expect(typeof capturedScanMore.mock.calls[0][0]).toBe("function");
+
+		defaultScannerState.scan.mockClear();
+
+		const scanMoreFn = capturedScanMore.mock.calls[0][0];
+		scanMoreFn();
+
+		await vi.waitFor(() => {
+			expect(defaultScannerState.scan).toHaveBeenCalledWith(testProfile);
+		});
+	});
+
+	it("should call scan more", async () => {
+		const user = userEvent.setup();
+		const scanMore = vi.fn();
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			canRetry: false,
+		});
+
+		render(
+			<LedgerScanStep
+				profile={profile}
+				network={network}
+				children={
+					<button data-testid="scan-more-button" onClick={scanMore}>
+						Scan More
+					</button>
+				}
+			/>,
+		);
+
+		const scanMoreButton = screen.getByTestId("scan-more-button");
+		await user.click(scanMoreButton);
+
+		expect(scanMore).toHaveBeenCalled();
+	});
+
+	it("should call toggleSelectAll when clicking desktop select-all checkbox", async () => {
+		const user = userEvent.setup();
+		const toggleSelectAll = vi.fn();
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			toggleSelectAll,
+		});
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		await user.click(screen.getByTestId("LedgerScanStep__select-all"));
+
+		expect(toggleSelectAll).toHaveBeenCalled();
+	});
+
+	it("should call toggleSelect when clicking a wallet row checkbox", async () => {
+		const user = userEvent.setup();
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		await user.click(screen.getByTestId("LedgerScanStep__checkbox-row"));
+
+		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith("m/44'/1'/0'/0/1");
+	});
+
+	it("should show all wallets after clicking the load-more button", async () => {
+		const user = userEvent.setup();
+
+		const wallets: LedgerData[] = [];
+
+		for (let index = 0; index < 8; index++) {
+			const { wallet } = await profile.walletFactory().generate({});
+			const path = `m/44'/1'/${index}'/0/0`;
+
+			const ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
+				address: wallet.address(),
+				path,
+			});
+
+			wallets.push({ address: ledgerWallet.address(), balance: "0", path });
+		}
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			wallets,
+		});
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		expect(screen.getByTestId("LedgerScanStep__load-more")).toBeInTheDocument();
+
+		await user.click(screen.getByTestId("LedgerScanStep__load-more"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("LedgerScanStep__load-more")).not.toBeInTheDocument();
+		});
+	});
+
+	it("should call toggleSelectAll when clicking mobile select-all checkbox", async () => {
+		const user = userEvent.setup();
+		const toggleSelectAll = vi.fn();
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			toggleSelectAll,
+		});
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		await user.click(screen.getByTestId("LedgerScanStep__select-all-mobile"));
+
+		expect(toggleSelectAll).toHaveBeenCalled();
+	});
+
+	it("should call toggleSelect when clicking a mobile wallet item", async () => {
+		const user = userEvent.setup();
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		await user.click(screen.getByTestId("LedgerMobileItem__checkbox"));
+
+		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith("m/44'/1'/0'/0/1");
+	});
+});
