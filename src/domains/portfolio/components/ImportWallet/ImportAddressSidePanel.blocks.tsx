@@ -6,6 +6,8 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 import { SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
+import { assertWallet } from "@/utils/assertions";
+import { Contracts } from "@/app/lib/profiles";
 
 export enum ImportAddressStep {
 	MethodStep = 1,
@@ -19,6 +21,61 @@ export interface StepHeaderConfig {
 	subtitle?: string;
 	titleIcon?: React.ReactNode;
 }
+
+export interface ImportBackButtonProps {
+	onBack?: () => void;
+	showBack?: boolean;
+}
+
+export const forgetImportedWallets = (profile: Contracts.IProfile, importedWallet?: Contracts.IReadWriteWallet) => {
+	assertWallet(importedWallet);
+
+	for (const profileWallet of profile.wallets().values()) {
+		if (profileWallet.address() === importedWallet.address()) {
+			profile.wallets().forget(profileWallet.id());
+		}
+	}
+
+	if (profile.wallets().selected().length === 0) {
+		profile.wallets().selectOne(profile.wallets().first());
+	}
+};
+
+export const getActiveStep = (
+	activeTab: ImportAddressStep,
+	isLedgerImport: boolean,
+	isHDWalletImport: boolean,
+	ledgerActiveTab?: LedgerTabStep,
+	hdWalletActiveTab?: HDWalletTabStep,
+): number => {
+	if (isHDWalletImport && hdWalletActiveTab !== undefined) {
+		return hdWalletActiveTab;
+	}
+
+	if (isLedgerImport && ledgerActiveTab !== undefined) {
+		return ledgerActiveTab - 2;
+	}
+
+	if (activeTab !== ImportAddressStep.MethodStep) {
+		return activeTab - 1;
+	}
+
+	return 1;
+};
+
+export const ImportBackButton = ({ onBack, showBack }: ImportBackButtonProps) => {
+	const { t } = useTranslation();
+
+	if (!showBack || !onBack) {
+		return null;
+	}
+
+	return (
+		<Button data-testid="ImportWallet__back-button" variant="secondary" onClick={onBack}>
+			{t("COMMON.BACK")}
+		</Button>
+	);
+};
 
 export function useStepHeaderConfig(step: ImportAddressStep, importOption?: ImportOption): StepHeaderConfig {
 	const { t } = useTranslation();
