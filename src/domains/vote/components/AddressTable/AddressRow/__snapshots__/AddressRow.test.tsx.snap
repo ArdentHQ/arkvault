@@ -64,7 +64,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -304,7 +304,7 @@ exports[`AddressRow > should render 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -542,7 +542,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -781,7 +781,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -961,7 +961,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -1203,7 +1203,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -1445,7 +1445,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -1659,7 +1659,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -1834,7 +1834,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -2048,7 +2048,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -2223,7 +2223,7 @@ exports[`AddressRow > should render with active validator 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -2461,7 +2461,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -2701,7 +2701,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
                 <span>
                   <span>
                     <button
-                      class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"

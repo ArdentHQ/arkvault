@@ -251,7 +251,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -375,7 +375,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -708,7 +708,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -832,7 +832,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -1163,7 +1163,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -1287,7 +1287,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -1618,7 +1618,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -1984,7 +1984,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                               <span>
                                 <span>
                                   <button
-                                    class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -2295,7 +2295,7 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2661,7 +2661,7 @@ exports[`SearchRecipient > should render with my address on mobile 1`] = `
                               <span>
                                 <span>
                                   <button
-                                    class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -2972,7 +2972,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3303,7 +3303,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3427,7 +3427,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3758,7 +3758,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3882,7 +3882,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             <span>
                               <span>
                                 <button
-                                  class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -4248,7 +4248,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                               <span>
                                 <span>
                                   <button
-                                    class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -4387,7 +4387,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                               <span>
                                 <span>
                                   <button
-                                    class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"

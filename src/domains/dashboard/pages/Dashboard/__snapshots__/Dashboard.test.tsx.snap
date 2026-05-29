@@ -8131,7 +8131,7 @@ exports[`Dashboard > render in lg 1`] = `
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
@@ -16313,7 +16313,7 @@ exports[`Dashboard > render in md 1`] = `
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
@@ -21339,7 +21339,7 @@ exports[`Dashboard > render in sm 1`] = `
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
@@ -29241,7 +29241,7 @@ exports[`Dashboard > render in xl 1`] = `
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
@@ -34267,7 +34267,7 @@ exports[`Dashboard > render in xs 1`] = `
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
@@ -42303,7 +42303,7 @@ exports[`Dashboard > should render 1`] = `
                   <span>
                     <span>
                       <button
-                        class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"

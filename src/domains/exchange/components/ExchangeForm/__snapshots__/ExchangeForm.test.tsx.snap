@@ -225,7 +225,7 @@ exports[`ConfirmationStep > should render 1`] = `
                           <span>
                             <span>
                               <button
-                                class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                class="ring-focus relative cursor-pointer focus:outline-hidden"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
@@ -521,7 +521,7 @@ exports[`ConfirmationStep > should render 1`] = `
                           <span>
                             <span>
                               <button
-                                class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
+                                class="ring-focus relative cursor-pointer focus:outline-hidden"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
