@@ -167,7 +167,7 @@ export const TokenDetailSidepanel = ({
 										address={walletToken.token().address()}
 										showCopyButton
 										walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-										wrapperClass="justify-end sm:justify-start"
+										wrapperClass="justify-end sm:justify-start max-w-[26.25rem]"
 										addressClass={cn(
 											"text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4",
 										)}
