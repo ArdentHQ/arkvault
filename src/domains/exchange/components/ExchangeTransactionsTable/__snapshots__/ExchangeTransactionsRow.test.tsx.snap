@@ -19,33 +19,24 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <div
-                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
-                      <div
-                        class="font-semibold text-theme-primary-600 text-sm text-base"
-                        data-testid="Address__address"
-                      >
-                        <div>
+                      <span>
+                        <span>
                           <span
-                            class="flex w-full items-start overflow-y-hidden"
-                            style="height: 0px;"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="invisible absolute left-0 whitespace-nowrap"
-                            >
-                              id
-                            </span>
-                            <span
-                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                            >
-                              id
-                            </span>
+                            id
                           </span>
-                        </div>
-                      </div>
+                        </span>
+                      </span>
+                      <span>
+                         
+                      </span>
                     </div>
                   </div>
                 </button>
@@ -252,33 +243,24 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <div
-                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
-                      <div
-                        class="font-semibold text-theme-primary-600 text-sm text-base"
-                        data-testid="Address__address"
-                      >
-                        <div>
+                      <span>
+                        <span>
                           <span
-                            class="flex w-full items-start overflow-y-hidden"
-                            style="height: 0px;"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="invisible absolute left-0 whitespace-nowrap"
-                            >
-                              id
-                            </span>
-                            <span
-                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                            >
-                              id
-                            </span>
+                            id
                           </span>
-                        </div>
-                      </div>
+                        </span>
+                      </span>
+                      <span>
+                         
+                      </span>
                     </div>
                   </div>
                 </button>
@@ -476,33 +458,24 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <div
-                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
-                      <div
-                        class="font-semibold text-theme-primary-600 text-sm text-base"
-                        data-testid="Address__address"
-                      >
-                        <div>
+                      <span>
+                        <span>
                           <span
-                            class="flex w-full items-start overflow-y-hidden"
-                            style="height: 0px;"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="invisible absolute left-0 whitespace-nowrap"
-                            >
-                              id
-                            </span>
-                            <span
-                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                            >
-                              id
-                            </span>
+                            id
                           </span>
-                        </div>
-                      </div>
+                        </span>
+                      </span>
+                      <span>
+                         
+                      </span>
                     </div>
                   </div>
                 </button>
@@ -700,33 +673,24 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <div
-                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
-                      <div
-                        class="font-semibold text-theme-primary-600 text-sm text-base"
-                        data-testid="Address__address"
-                      >
-                        <div>
+                      <span>
+                        <span>
                           <span
-                            class="flex w-full items-start overflow-y-hidden"
-                            style="height: 0px;"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="invisible absolute left-0 whitespace-nowrap"
-                            >
-                              id
-                            </span>
-                            <span
-                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                            >
-                              id
-                            </span>
+                            id
                           </span>
-                        </div>
-                      </div>
+                        </span>
+                      </span>
+                      <span>
+                         
+                      </span>
                     </div>
                   </div>
                 </button>
@@ -925,33 +889,24 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <div
-                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
-                      <div
-                        class="font-semibold text-theme-primary-600 text-sm text-base"
-                        data-testid="Address__address"
-                      >
-                        <div>
+                      <span>
+                        <span>
                           <span
-                            class="flex w-full items-start overflow-y-hidden"
-                            style="height: 0px;"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="invisible absolute left-0 whitespace-nowrap"
-                            >
-                              id
-                            </span>
-                            <span
-                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                            >
-                              id
-                            </span>
+                            id
                           </span>
-                        </div>
-                      </div>
+                        </span>
+                      </span>
+                      <span>
+                         
+                      </span>
                     </div>
                   </div>
                 </button>
@@ -1154,33 +1109,24 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <div
-                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
-                      <div
-                        class="font-semibold text-theme-primary-600 text-sm text-base"
-                        data-testid="Address__address"
-                      >
-                        <div>
+                      <span>
+                        <span>
                           <span
-                            class="flex w-full items-start overflow-y-hidden"
-                            style="height: 0px;"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="invisible absolute left-0 whitespace-nowrap"
-                            >
-                              id
-                            </span>
-                            <span
-                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                            >
-                              id
-                            </span>
+                            id
                           </span>
-                        </div>
-                      </div>
+                        </span>
+                      </span>
+                      <span>
+                         
+                      </span>
                     </div>
                   </div>
                 </button>
@@ -1383,33 +1329,24 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <div
-                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
-                      <div
-                        class="font-semibold text-theme-primary-600 text-sm text-base"
-                        data-testid="Address__address"
-                      >
-                        <div>
+                      <span>
+                        <span>
                           <span
-                            class="flex w-full items-start overflow-y-hidden"
-                            style="height: 0px;"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="invisible absolute left-0 whitespace-nowrap"
-                            >
-                              id
-                            </span>
-                            <span
-                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                            >
-                              id
-                            </span>
+                            id
                           </span>
-                        </div>
-                      </div>
+                        </span>
+                      </span>
+                      <span>
+                         
+                      </span>
                     </div>
                   </div>
                 </button>

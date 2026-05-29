@@ -88,34 +88,18 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                 class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
-                  <div
-                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                  >
-                    <div
-                      class="font-semibold text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-50 text-base"
-                      data-testid="Address__address"
-                    >
-                      <div>
-                        <span
-                          class="flex w-full items-start overflow-y-hidden"
-                          style="height: 0px;"
-                        >
-                          <span
-                            class="invisible absolute left-0 whitespace-nowrap"
-                          >
-                            0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                          </span>
-                          <span
-                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                          >
-                            0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                          </span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-50 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                      </span>
+                    </span>
+                  </span>
                   <span>
                     <span>
                       <button
@@ -251,34 +235,18 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                 class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
-                  <div
-                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                  >
-                    <div
-                      class="font-semibold text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-50 text-base"
-                      data-testid="Address__address"
-                    >
-                      <div>
-                        <span
-                          class="flex w-full items-start overflow-y-hidden"
-                          style="height: 0px;"
-                        >
-                          <span
-                            class="invisible absolute left-0 whitespace-nowrap"
-                          >
-                            0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
-                          </span>
-                          <span
-                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                          >
-                            0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
-                          </span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-50 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
+                      </span>
+                    </span>
+                  </span>
                   <span>
                     <span>
                       <button
@@ -506,7 +474,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       class="flex flex-1 flex-col py-2"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
@@ -524,30 +492,21 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           </span>
                         </span>
                         <div
-                          class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
-                          <div
-                            class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
-                            data-testid="Address__address"
-                          >
-                            <div>
+                          <span>
+                            <span>
                               <span
-                                class="flex w-full items-start overflow-y-hidden"
-                                style="height: 0px;"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="invisible absolute left-0 whitespace-nowrap"
-                                >
-                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                </span>
-                                <span
-                                  class="no-ligatures truncate break-all whitespace-break-spaces"
-                                >
-                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                </span>
+                                0x659A76be283644AEc2003aa8ba26485047fd1BFB
                               </span>
-                            </div>
-                          </div>
+                            </span>
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                         <span>
                           <span>
@@ -657,7 +616,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       class="flex flex-1 flex-col py-2"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
@@ -675,30 +634,21 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           </span>
                         </span>
                         <div
-                          class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
-                          <div
-                            class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
-                            data-testid="Address__address"
-                          >
-                            <div>
+                          <span>
+                            <span>
                               <span
-                                class="flex w-full items-start overflow-y-hidden"
-                                style="height: 0px;"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="invisible absolute left-0 whitespace-nowrap"
-                                >
-                                  0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
-                                </span>
-                                <span
-                                  class="no-ligatures truncate break-all whitespace-break-spaces"
-                                >
-                                  0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
-                                </span>
+                                0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
                               </span>
-                            </div>
-                          </div>
+                            </span>
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                         <span>
                           <span>
@@ -842,33 +792,24 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                 class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:w-full"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <div
-                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
-                    <div
-                      class="font-semibold text-theme-text text-base"
-                      data-testid="Address__address"
-                    >
-                      <div>
+                    <span>
+                      <span>
                         <span
-                          class="flex w-full items-start overflow-y-hidden"
-                          style="height: 0px;"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="invisible absolute left-0 whitespace-nowrap"
-                          >
-                            0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
-                          </span>
-                          <span
-                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                          >
-                            0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
-                          </span>
+                          0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
                         </span>
-                      </div>
-                    </div>
+                      </span>
+                    </span>
+                    <span>
+                       
+                    </span>
                   </div>
                   <span>
                     <span>
@@ -1062,34 +1003,18 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                 class="w-32"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-between"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
                 >
-                  <div
-                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                  >
-                    <div
-                      class="font-semibold text-theme-text text-base"
-                      data-testid="Address__address"
-                    >
-                      <div>
-                        <span
-                          class="flex w-full items-start overflow-y-hidden"
-                          style="height: 0px;"
-                        >
-                          <span
-                            class="invisible absolute left-0 whitespace-nowrap"
-                          >
-                            0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
-                          </span>
-                          <span
-                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                          >
-                            0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
-                          </span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
+                      </span>
+                    </span>
+                  </span>
                   <span>
                     <span>
                       <button

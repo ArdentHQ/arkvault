@@ -3544,33 +3544,24 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <div
-                                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                      class="relative grow leading-[17px] sm:leading-5 text-left"
                                     >
-                                      <div
-                                        class="font-semibold text-theme-text text-sm"
-                                        data-testid="Address__address"
-                                      >
-                                        <div>
+                                      <span>
+                                        <span>
                                           <span
-                                            class="flex w-full items-start overflow-y-hidden"
-                                            style="height: 0px;"
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                            data-testid="Address__address"
                                           >
-                                            <span
-                                              class="invisible absolute left-0 whitespace-nowrap"
-                                            >
-                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                            </span>
-                                            <span
-                                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                                            >
-                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                            </span>
+                                            0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                           </span>
-                                        </div>
-                                      </div>
+                                        </span>
+                                      </span>
+                                      <span>
+                                         
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -3643,7 +3634,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -3895,7 +3886,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -4222,7 +4213,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -4549,7 +4540,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -4876,7 +4867,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -5203,7 +5194,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -5530,7 +5521,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -5857,7 +5848,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -5945,33 +5936,24 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <div
-                                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                      class="relative grow leading-[17px] sm:leading-5 text-left"
                                     >
-                                      <div
-                                        class="font-semibold text-theme-text text-sm"
-                                        data-testid="Address__address"
-                                      >
-                                        <div>
+                                      <span>
+                                        <span>
                                           <span
-                                            class="flex w-full items-start overflow-y-hidden"
-                                            style="height: 0px;"
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                            data-testid="Address__address"
                                           >
-                                            <span
-                                              class="invisible absolute left-0 whitespace-nowrap"
-                                            >
-                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                            </span>
-                                            <span
-                                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                                            >
-                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                            </span>
+                                            0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                           </span>
-                                        </div>
-                                      </div>
+                                        </span>
+                                      </span>
+                                      <span>
+                                         
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -6208,7 +6190,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -6481,33 +6463,24 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <div
-                                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                      class="relative grow leading-[17px] sm:leading-5 text-left"
                                     >
-                                      <div
-                                        class="font-semibold text-theme-text text-sm"
-                                        data-testid="Address__address"
-                                      >
-                                        <div>
+                                      <span>
+                                        <span>
                                           <span
-                                            class="flex w-full items-start overflow-y-hidden"
-                                            style="height: 0px;"
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                            data-testid="Address__address"
                                           >
-                                            <span
-                                              class="invisible absolute left-0 whitespace-nowrap"
-                                            >
-                                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                            </span>
-                                            <span
-                                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                                            >
-                                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                            </span>
+                                            0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                           </span>
-                                        </div>
-                                      </div>
+                                        </span>
+                                      </span>
+                                      <span>
+                                         
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -6580,7 +6553,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -6856,33 +6829,24 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <div
-                                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                      class="relative grow leading-[17px] sm:leading-5 text-left"
                                     >
-                                      <div
-                                        class="font-semibold text-theme-text text-sm"
-                                        data-testid="Address__address"
-                                      >
-                                        <div>
+                                      <span>
+                                        <span>
                                           <span
-                                            class="flex w-full items-start overflow-y-hidden"
-                                            style="height: 0px;"
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                            data-testid="Address__address"
                                           >
-                                            <span
-                                              class="invisible absolute left-0 whitespace-nowrap"
-                                            >
-                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                            </span>
-                                            <span
-                                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                                            >
-                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                            </span>
+                                            0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                           </span>
-                                        </div>
-                                      </div>
+                                        </span>
+                                      </span>
+                                      <span>
+                                         
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -6955,7 +6919,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -7207,7 +7171,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -7534,7 +7498,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -7861,7 +7825,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -8188,7 +8152,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -8515,7 +8479,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -8842,7 +8806,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -9169,7 +9133,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -9257,33 +9221,24 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <div
-                                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                      class="relative grow leading-[17px] sm:leading-5 text-left"
                                     >
-                                      <div
-                                        class="font-semibold text-theme-text text-sm"
-                                        data-testid="Address__address"
-                                      >
-                                        <div>
+                                      <span>
+                                        <span>
                                           <span
-                                            class="flex w-full items-start overflow-y-hidden"
-                                            style="height: 0px;"
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                            data-testid="Address__address"
                                           >
-                                            <span
-                                              class="invisible absolute left-0 whitespace-nowrap"
-                                            >
-                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                            </span>
-                                            <span
-                                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                                            >
-                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                            </span>
+                                            0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                           </span>
-                                        </div>
-                                      </div>
+                                        </span>
+                                      </span>
+                                      <span>
+                                         
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -9520,7 +9475,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -9793,33 +9748,24 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <div
-                                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                      class="relative grow leading-[17px] sm:leading-5 text-left"
                                     >
-                                      <div
-                                        class="font-semibold text-theme-text text-sm"
-                                        data-testid="Address__address"
-                                      >
-                                        <div>
+                                      <span>
+                                        <span>
                                           <span
-                                            class="flex w-full items-start overflow-y-hidden"
-                                            style="height: 0px;"
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                            data-testid="Address__address"
                                           >
-                                            <span
-                                              class="invisible absolute left-0 whitespace-nowrap"
-                                            >
-                                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                            </span>
-                                            <span
-                                              class="no-ligatures truncate break-all whitespace-break-spaces"
-                                            >
-                                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                            </span>
+                                            0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                           </span>
-                                        </div>
-                                      </div>
+                                        </span>
+                                      </span>
+                                      <span>
+                                         
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -9892,7 +9838,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
                                     <span
                                       class="font-semibold text-sm text-theme-text"
@@ -10333,33 +10279,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <div
-                                  class="font-semibold text-theme-text text-sm"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
+                                <span>
+                                  <span>
                                     <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                     </span>
-                                  </div>
-                                </div>
+                                  </span>
+                                </span>
+                                <span>
+                                   
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -10435,7 +10372,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -10533,7 +10470,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -10629,33 +10566,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -10924,7 +10852,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -11454,7 +11382,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -11984,7 +11912,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -12514,7 +12442,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -13044,7 +12972,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -13574,7 +13502,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -14104,7 +14032,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -14195,33 +14123,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <div
-                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <div
-                                    class="font-semibold text-theme-text text-sm"
-                                    data-testid="Address__address"
-                                  >
-                                    <div>
+                                  <span>
+                                    <span>
                                       <span
-                                        class="flex w-full items-start overflow-y-hidden"
-                                        style="height: 0px;"
+                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        <span
-                                          class="invisible absolute left-0 whitespace-nowrap"
-                                        >
-                                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                        </span>
-                                        <span
-                                          class="no-ligatures truncate break-all whitespace-break-spaces"
-                                        >
-                                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                        </span>
+                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                       </span>
-                                    </div>
-                                  </div>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -14304,33 +14223,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -14411,33 +14321,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -14706,7 +14607,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -15074,33 +14975,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <div
-                                  class="font-semibold text-theme-text text-sm"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
+                                <span>
+                                  <span>
                                     <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                      </span>
+                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                     </span>
-                                  </div>
-                                </div>
+                                  </span>
+                                </span>
+                                <span>
+                                   
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -15176,7 +15068,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -15274,7 +15166,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -15370,33 +15262,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                    </span>
+                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -15840,33 +15723,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <div
-                                  class="font-semibold text-theme-text text-sm"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
+                                <span>
+                                  <span>
                                     <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                     </span>
-                                  </div>
-                                </div>
+                                  </span>
+                                </span>
+                                <span>
+                                   
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -15942,7 +15816,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -16040,7 +15914,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -16136,33 +16010,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -16431,7 +16296,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -16961,7 +16826,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -17491,7 +17356,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -18021,7 +17886,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -18551,7 +18416,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -19081,7 +18946,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -19611,7 +19476,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -19702,33 +19567,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <div
-                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <div
-                                    class="font-semibold text-theme-text text-sm"
-                                    data-testid="Address__address"
-                                  >
-                                    <div>
+                                  <span>
+                                    <span>
                                       <span
-                                        class="flex w-full items-start overflow-y-hidden"
-                                        style="height: 0px;"
+                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        <span
-                                          class="invisible absolute left-0 whitespace-nowrap"
-                                        >
-                                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                        </span>
-                                        <span
-                                          class="no-ligatures truncate break-all whitespace-break-spaces"
-                                        >
-                                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                        </span>
+                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                       </span>
-                                    </div>
-                                  </div>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -19811,33 +19667,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -19918,33 +19765,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -20213,7 +20051,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -20581,33 +20419,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <div
-                                  class="font-semibold text-theme-text text-sm"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
+                                <span>
+                                  <span>
                                     <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                      </span>
+                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                     </span>
-                                  </div>
-                                </div>
+                                  </span>
+                                </span>
+                                <span>
+                                   
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -20683,7 +20512,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -20781,7 +20610,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -20877,33 +20706,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                    </span>
+                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -21347,33 +21167,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <div
-                                  class="font-semibold text-theme-text text-sm"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
+                                <span>
+                                  <span>
                                     <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                     </span>
-                                  </div>
-                                </div>
+                                  </span>
+                                </span>
+                                <span>
+                                   
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -21449,7 +21260,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -21547,7 +21358,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -21643,33 +21454,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -21919,7 +21721,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -22430,7 +22232,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -22941,7 +22743,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -23452,7 +23254,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -23963,7 +23765,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -24474,7 +24276,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -24985,7 +24787,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -25076,33 +24878,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <div
-                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <div
-                                    class="font-semibold text-theme-text text-sm"
-                                    data-testid="Address__address"
-                                  >
-                                    <div>
+                                  <span>
+                                    <span>
                                       <span
-                                        class="flex w-full items-start overflow-y-hidden"
-                                        style="height: 0px;"
+                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        <span
-                                          class="invisible absolute left-0 whitespace-nowrap"
-                                        >
-                                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                        </span>
-                                        <span
-                                          class="no-ligatures truncate break-all whitespace-break-spaces"
-                                        >
-                                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                        </span>
+                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                       </span>
-                                    </div>
-                                  </div>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -25185,33 +24978,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -25292,33 +25076,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -25568,7 +25343,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -25917,33 +25692,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <div
-                                  class="font-semibold text-theme-text text-sm"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
+                                <span>
+                                  <span>
                                     <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                      </span>
+                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                     </span>
-                                  </div>
-                                </div>
+                                  </span>
+                                </span>
+                                <span>
+                                   
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -26019,7 +25785,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -26117,7 +25883,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -26213,33 +25979,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold text-theme-text text-sm"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                    </span>
+                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>

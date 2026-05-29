@@ -282,33 +282,24 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -425,33 +416,24 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -568,33 +550,24 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -734,7 +707,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -751,32 +724,16 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1188,33 +1145,24 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -1331,33 +1279,24 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -1474,33 +1413,24 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -1640,7 +1570,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -1657,32 +1587,16 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -2094,33 +2008,24 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -2237,33 +2142,24 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -2380,33 +2276,24 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -2546,7 +2433,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -2563,32 +2450,16 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -3000,33 +2871,24 @@ exports[`ValidatorsTable > should render 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3143,33 +3005,24 @@ exports[`ValidatorsTable > should render 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3286,33 +3139,24 @@ exports[`ValidatorsTable > should render 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3452,7 +3296,7 @@ exports[`ValidatorsTable > should render 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -3469,32 +3313,16 @@ exports[`ValidatorsTable > should render 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -3907,33 +3735,24 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -4050,33 +3869,24 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -4193,33 +4003,24 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -4359,7 +4160,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -4376,32 +4177,16 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -4813,33 +4598,24 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -4956,33 +4732,24 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -5099,33 +4866,24 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -5274,7 +5032,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -5291,32 +5049,16 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -5728,33 +5470,24 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -5871,33 +5604,24 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -6014,33 +5738,24 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -6180,7 +5895,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -6197,32 +5912,16 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -6682,7 +6381,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -6699,32 +6398,16 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -7140,33 +6823,24 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -7283,33 +6957,24 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -7426,33 +7091,24 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -7592,7 +7248,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -7609,32 +7265,16 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -8047,33 +7687,24 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -8190,33 +7821,24 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -8333,33 +7955,24 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -8499,7 +8112,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -8516,32 +8129,16 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -8954,33 +8551,24 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -9097,33 +8685,24 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -9240,33 +8819,24 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -9415,7 +8985,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -9432,32 +9002,16 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -9869,33 +9423,24 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -10012,33 +9557,24 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -10155,33 +9691,24 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -10321,7 +9848,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -10338,32 +9865,16 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -10776,33 +10287,24 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -10919,33 +10421,24 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -11062,33 +10555,24 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -11228,7 +10712,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -11245,32 +10729,16 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -11683,33 +11151,24 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                                    </span>
+                                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -11826,33 +11285,24 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                                    </span>
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -11969,33 +11419,24 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-start"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                           >
                             <div
-                              class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
-                              <div
-                                class="font-semibold leading-[17px] text-sm w-full text-base"
-                                data-testid="Address__address"
-                              >
-                                <div>
+                              <span>
+                                <span>
                                   <span
-                                    class="flex w-full items-start overflow-y-hidden"
-                                    style="height: 0px;"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
                                   >
-                                    <span
-                                      class="invisible absolute left-0 whitespace-nowrap"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
-                                    <span
-                                      class="no-ligatures truncate break-all whitespace-break-spaces"
-                                    >
-                                      0x56F925416Ef2725646442D5E0150088bd7202aCd
-                                    </span>
+                                    0x56F925416Ef2725646442D5E0150088bd7202aCd
                                   </span>
-                                </div>
-                              </div>
+                                </span>
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -12135,7 +11576,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
@@ -12152,32 +11593,16 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           </span>
                         </span>
                       </span>
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>

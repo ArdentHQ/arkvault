@@ -12,34 +12,18 @@ exports[`VoteList > should render in lg 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -50,34 +34,18 @@ exports[`VoteList > should render in lg 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -88,34 +56,18 @@ exports[`VoteList > should render in lg 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -135,34 +87,18 @@ exports[`VoteList > should render in md 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -173,34 +109,18 @@ exports[`VoteList > should render in md 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -211,34 +131,18 @@ exports[`VoteList > should render in md 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -258,34 +162,18 @@ exports[`VoteList > should render in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -296,34 +184,18 @@ exports[`VoteList > should render in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -334,34 +206,18 @@ exports[`VoteList > should render in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -381,34 +237,18 @@ exports[`VoteList > should render in xl 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -419,34 +259,18 @@ exports[`VoteList > should render in xl 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -457,34 +281,18 @@ exports[`VoteList > should render in xl 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -504,34 +312,18 @@ exports[`VoteList > should render in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -542,34 +334,18 @@ exports[`VoteList > should render in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -580,34 +356,18 @@ exports[`VoteList > should render in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -627,34 +387,18 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
+          </span>
         </div>
       </div>
       <div
@@ -675,34 +419,18 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
+          </span>
         </div>
       </div>
       <div
@@ -723,34 +451,18 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
+          </span>
         </div>
       </div>
       <div
@@ -780,34 +492,18 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
+          </span>
         </div>
       </div>
       <div
@@ -828,34 +524,18 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
+          </span>
         </div>
       </div>
       <div
@@ -876,34 +556,18 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
+          </span>
         </div>
       </div>
       <div
@@ -943,34 +607,18 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -991,34 +639,18 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -1039,34 +671,18 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -1086,34 +702,18 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
+          </span>
         </div>
       </div>
       <div
@@ -1134,34 +734,18 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
+          </span>
         </div>
       </div>
       <div
@@ -1182,34 +766,18 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="w-28 flex-1"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
+          </span>
         </div>
       </div>
       <div
@@ -1249,34 +817,18 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0xB8Be76b31E402a2D89294Aa107056484Bef94362
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -1297,34 +849,18 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -1345,34 +881,18 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <div
-            class="relative flex grow items-center leading-[17px] sm:leading-5"
-          >
-            <div
-              class="font-semibold text-theme-text text-base"
-              data-testid="Address__address"
-            >
-              <div>
-                <span
-                  class="flex w-full items-start overflow-y-hidden"
-                  style="height: 0px;"
-                >
-                  <span
-                    class="invisible absolute left-0 whitespace-nowrap"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                  <span
-                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                  >
-                    0x56F925416Ef2725646442D5E0150088bd7202aCd
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
+          </span>
         </div>
       </div>
     </div>

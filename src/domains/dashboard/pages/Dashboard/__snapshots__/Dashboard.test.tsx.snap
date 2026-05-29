@@ -779,7 +779,7 @@ exports[`Dashboard > render in lg 1`] = `
                           class="flex items-center gap-1"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
                           >
                             <span
                               class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -983,33 +983,24 @@ exports[`Dashboard > render in lg 1`] = `
                               class="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <div
-                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <div
-                                    class="font-semibold leading-[17px] sm:leading-5 text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    <div>
+                                  <span>
+                                    <span>
                                       <span
-                                        class="flex w-full items-start overflow-y-hidden"
-                                        style="height: 0px;"
+                                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        <span
-                                          class="invisible absolute left-0 whitespace-nowrap"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
-                                        <span
-                                          class="no-ligatures truncate break-all whitespace-break-spaces"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                       </span>
-                                    </div>
-                                  </div>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -1489,34 +1480,18 @@ exports[`Dashboard > render in lg 1`] = `
                             class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                              >
-                                <div
-                                  class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
-                                    <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
-                                    >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                  </span>
+                                </span>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -1589,34 +1564,18 @@ exports[`Dashboard > render in lg 1`] = `
                                 class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
-                                  <div
-                                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <div
-                                      class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                      data-testid="Address__address"
-                                    >
-                                      <div>
-                                        <span
-                                          class="flex w-full items-start overflow-y-hidden"
-                                          style="height: 0px;"
-                                        >
-                                          <span
-                                            class="invisible absolute left-0 whitespace-nowrap"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                          <span
-                                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                        data-testid="Address__address"
+                                      >
+                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                      </span>
+                                    </span>
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -1925,34 +1884,18 @@ exports[`Dashboard > render in lg 1`] = `
                     class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -2025,34 +1968,18 @@ exports[`Dashboard > render in lg 1`] = `
                         class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                          >
-                            <div
-                              class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                              data-testid="Address__address"
-                            >
-                              <div>
-                                <span
-                                  class="flex w-full items-start overflow-y-hidden"
-                                  style="height: 0px;"
-                                >
-                                  <span
-                                    class="invisible absolute left-0 whitespace-nowrap"
-                                  >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                  </span>
-                                  <span
-                                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                                  >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                  </span>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
+                          <span>
+                            <span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                              </span>
+                            </span>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2751,7 +2678,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -2842,7 +2769,7 @@ exports[`Dashboard > render in lg 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -2940,7 +2867,7 @@ exports[`Dashboard > render in lg 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -3036,7 +2963,7 @@ exports[`Dashboard > render in lg 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -3338,7 +3265,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -3886,7 +3813,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -4434,7 +4361,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -4982,7 +4909,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -5530,7 +5457,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -6078,7 +6005,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -6626,7 +6553,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -6717,7 +6644,7 @@ exports[`Dashboard > render in lg 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -6815,7 +6742,7 @@ exports[`Dashboard > render in lg 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -6911,7 +6838,7 @@ exports[`Dashboard > render in lg 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -7213,7 +7140,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -7599,33 +7526,24 @@ exports[`Dashboard > render in lg 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <div
-                                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
                                           >
-                                            <div
-                                              class="font-semibold text-theme-text text-sm"
-                                              data-testid="Address__address"
-                                            >
-                                              <div>
+                                            <span>
+                                              <span>
                                                 <span
-                                                  class="flex w-full items-start overflow-y-hidden"
-                                                  style="height: 0px;"
+                                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                                  data-testid="Address__address"
                                                 >
-                                                  <span
-                                                    class="invisible absolute left-0 whitespace-nowrap"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
-                                                  <span
-                                                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
+                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                                 </span>
-                                              </div>
-                                            </div>
+                                              </span>
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
                                           </div>
                                         </div>
                                       </div>
@@ -7701,7 +7619,7 @@ exports[`Dashboard > render in lg 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -7799,7 +7717,7 @@ exports[`Dashboard > render in lg 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -7895,33 +7813,24 @@ exports[`Dashboard > render in lg 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <div
-                                          class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                          class="relative grow leading-[17px] sm:leading-5 text-left"
                                         >
-                                          <div
-                                            class="font-semibold text-theme-text text-sm"
-                                            data-testid="Address__address"
-                                          >
-                                            <div>
+                                          <span>
+                                            <span>
                                               <span
-                                                class="flex w-full items-start overflow-y-hidden"
-                                                style="height: 0px;"
+                                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                                data-testid="Address__address"
                                               >
-                                                <span
-                                                  class="invisible absolute left-0 whitespace-nowrap"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
-                                                <span
-                                                  class="no-ligatures truncate break-all whitespace-break-spaces"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
+                                                0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                               </span>
-                                            </div>
-                                          </div>
+                                            </span>
+                                          </span>
+                                          <span>
+                                             
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
@@ -8100,33 +8009,24 @@ exports[`Dashboard > render in lg 1`] = `
                 class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 min-w-4/6"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <div
-                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
-                    <div
-                      class="font-semibold leading-[17px] sm:leading-5 text-sm"
-                      data-testid="Address__address"
-                    >
-                      <div>
+                    <span>
+                      <span>
                         <span
-                          class="flex w-full items-start overflow-y-hidden"
-                          style="height: 0px;"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="invisible absolute left-0 whitespace-nowrap"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
-                          <span
-                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
+                          021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
                         </span>
-                      </div>
-                    </div>
+                      </span>
+                    </span>
+                    <span>
+                       
+                    </span>
                   </div>
                   <span>
                     <span>
@@ -8961,7 +8861,7 @@ exports[`Dashboard > render in md 1`] = `
                           class="flex items-center gap-1"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
                           >
                             <span
                               class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -9165,33 +9065,24 @@ exports[`Dashboard > render in md 1`] = `
                               class="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <div
-                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <div
-                                    class="font-semibold leading-[17px] sm:leading-5 text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    <div>
+                                  <span>
+                                    <span>
                                       <span
-                                        class="flex w-full items-start overflow-y-hidden"
-                                        style="height: 0px;"
+                                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        <span
-                                          class="invisible absolute left-0 whitespace-nowrap"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
-                                        <span
-                                          class="no-ligatures truncate break-all whitespace-break-spaces"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                       </span>
-                                    </div>
-                                  </div>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -9671,34 +9562,18 @@ exports[`Dashboard > render in md 1`] = `
                             class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                              >
-                                <div
-                                  class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
-                                    <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
-                                    >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                  </span>
+                                </span>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -9771,34 +9646,18 @@ exports[`Dashboard > render in md 1`] = `
                                 class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
-                                  <div
-                                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <div
-                                      class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                      data-testid="Address__address"
-                                    >
-                                      <div>
-                                        <span
-                                          class="flex w-full items-start overflow-y-hidden"
-                                          style="height: 0px;"
-                                        >
-                                          <span
-                                            class="invisible absolute left-0 whitespace-nowrap"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                          <span
-                                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                        data-testid="Address__address"
+                                      >
+                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                      </span>
+                                    </span>
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -10107,34 +9966,18 @@ exports[`Dashboard > render in md 1`] = `
                     class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -10207,34 +10050,18 @@ exports[`Dashboard > render in md 1`] = `
                         class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                          >
-                            <div
-                              class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                              data-testid="Address__address"
-                            >
-                              <div>
-                                <span
-                                  class="flex w-full items-start overflow-y-hidden"
-                                  style="height: 0px;"
-                                >
-                                  <span
-                                    class="invisible absolute left-0 whitespace-nowrap"
-                                  >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                  </span>
-                                  <span
-                                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                                  >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                  </span>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
+                          <span>
+                            <span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                              </span>
+                            </span>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -10933,7 +10760,7 @@ exports[`Dashboard > render in md 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -11024,7 +10851,7 @@ exports[`Dashboard > render in md 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -11122,7 +10949,7 @@ exports[`Dashboard > render in md 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -11218,7 +11045,7 @@ exports[`Dashboard > render in md 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -11520,7 +11347,7 @@ exports[`Dashboard > render in md 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -12068,7 +11895,7 @@ exports[`Dashboard > render in md 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -12616,7 +12443,7 @@ exports[`Dashboard > render in md 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -13164,7 +12991,7 @@ exports[`Dashboard > render in md 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -13712,7 +13539,7 @@ exports[`Dashboard > render in md 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -14260,7 +14087,7 @@ exports[`Dashboard > render in md 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -14808,7 +14635,7 @@ exports[`Dashboard > render in md 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -14899,7 +14726,7 @@ exports[`Dashboard > render in md 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -14997,7 +14824,7 @@ exports[`Dashboard > render in md 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -15093,7 +14920,7 @@ exports[`Dashboard > render in md 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -15395,7 +15222,7 @@ exports[`Dashboard > render in md 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -15781,33 +15608,24 @@ exports[`Dashboard > render in md 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <div
-                                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
                                           >
-                                            <div
-                                              class="font-semibold text-theme-text text-sm"
-                                              data-testid="Address__address"
-                                            >
-                                              <div>
+                                            <span>
+                                              <span>
                                                 <span
-                                                  class="flex w-full items-start overflow-y-hidden"
-                                                  style="height: 0px;"
+                                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                                  data-testid="Address__address"
                                                 >
-                                                  <span
-                                                    class="invisible absolute left-0 whitespace-nowrap"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
-                                                  <span
-                                                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
+                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                                 </span>
-                                              </div>
-                                            </div>
+                                              </span>
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
                                           </div>
                                         </div>
                                       </div>
@@ -15883,7 +15701,7 @@ exports[`Dashboard > render in md 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -15981,7 +15799,7 @@ exports[`Dashboard > render in md 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -16077,33 +15895,24 @@ exports[`Dashboard > render in md 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <div
-                                          class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                          class="relative grow leading-[17px] sm:leading-5 text-left"
                                         >
-                                          <div
-                                            class="font-semibold text-theme-text text-sm"
-                                            data-testid="Address__address"
-                                          >
-                                            <div>
+                                          <span>
+                                            <span>
                                               <span
-                                                class="flex w-full items-start overflow-y-hidden"
-                                                style="height: 0px;"
+                                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                                data-testid="Address__address"
                                               >
-                                                <span
-                                                  class="invisible absolute left-0 whitespace-nowrap"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
-                                                <span
-                                                  class="no-ligatures truncate break-all whitespace-break-spaces"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
+                                                0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                               </span>
-                                            </div>
-                                          </div>
+                                            </span>
+                                          </span>
+                                          <span>
+                                             
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
@@ -16282,33 +16091,24 @@ exports[`Dashboard > render in md 1`] = `
                 class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 min-w-4/6"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <div
-                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
-                    <div
-                      class="font-semibold leading-[17px] sm:leading-5 text-sm"
-                      data-testid="Address__address"
-                    >
-                      <div>
+                    <span>
+                      <span>
                         <span
-                          class="flex w-full items-start overflow-y-hidden"
-                          style="height: 0px;"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="invisible absolute left-0 whitespace-nowrap"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
-                          <span
-                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
+                          021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
                         </span>
-                      </div>
-                    </div>
+                      </span>
+                    </span>
+                    <span>
+                       
+                    </span>
                   </div>
                   <span>
                     <span>
@@ -17143,7 +16943,7 @@ exports[`Dashboard > render in sm 1`] = `
                           class="flex items-center gap-1"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
                           >
                             <span
                               class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -17347,33 +17147,24 @@ exports[`Dashboard > render in sm 1`] = `
                               class="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <div
-                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <div
-                                    class="font-semibold leading-[17px] sm:leading-5 text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    <div>
+                                  <span>
+                                    <span>
                                       <span
-                                        class="flex w-full items-start overflow-y-hidden"
-                                        style="height: 0px;"
+                                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        <span
-                                          class="invisible absolute left-0 whitespace-nowrap"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
-                                        <span
-                                          class="no-ligatures truncate break-all whitespace-break-spaces"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                       </span>
-                                    </div>
-                                  </div>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -17853,34 +17644,18 @@ exports[`Dashboard > render in sm 1`] = `
                             class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                              >
-                                <div
-                                  class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
-                                    <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
-                                    >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                  </span>
+                                </span>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -17953,34 +17728,18 @@ exports[`Dashboard > render in sm 1`] = `
                                 class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
-                                  <div
-                                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <div
-                                      class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                      data-testid="Address__address"
-                                    >
-                                      <div>
-                                        <span
-                                          class="flex w-full items-start overflow-y-hidden"
-                                          style="height: 0px;"
-                                        >
-                                          <span
-                                            class="invisible absolute left-0 whitespace-nowrap"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                          <span
-                                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                        data-testid="Address__address"
+                                      >
+                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                      </span>
+                                    </span>
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -18289,34 +18048,18 @@ exports[`Dashboard > render in sm 1`] = `
                     class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -18389,34 +18132,18 @@ exports[`Dashboard > render in sm 1`] = `
                         class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                          >
-                            <div
-                              class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                              data-testid="Address__address"
-                            >
-                              <div>
-                                <span
-                                  class="flex w-full items-start overflow-y-hidden"
-                                  style="height: 0px;"
-                                >
-                                  <span
-                                    class="invisible absolute left-0 whitespace-nowrap"
-                                  >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                  </span>
-                                  <span
-                                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                                  >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                  </span>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
+                          <span>
+                            <span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                              </span>
+                            </span>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -18963,7 +18690,7 @@ exports[`Dashboard > render in sm 1`] = `
                                             data-testid="TransactionRowAddressing__address-container"
                                           >
                                             <div
-                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                             >
                                               <span
                                                 class="font-semibold text-sm text-theme-text"
@@ -20684,7 +20411,7 @@ exports[`Dashboard > render in sm 1`] = `
                                             data-testid="TransactionRowAddressing__address-container"
                                           >
                                             <div
-                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                             >
                                               <span
                                                 class="font-semibold text-sm text-theme-text"
@@ -21131,33 +20858,24 @@ exports[`Dashboard > render in sm 1`] = `
                                             data-testid="TransactionRowAddressing__address-container"
                                           >
                                             <div
-                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                             >
                                               <div
-                                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                                class="relative grow leading-[17px] sm:leading-5 text-left"
                                               >
-                                                <div
-                                                  class="font-semibold text-theme-text text-sm"
-                                                  data-testid="Address__address"
-                                                >
-                                                  <div>
+                                                <span>
+                                                  <span>
                                                     <span
-                                                      class="flex w-full items-start overflow-y-hidden"
-                                                      style="height: 0px;"
+                                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                                      data-testid="Address__address"
                                                     >
-                                                      <span
-                                                        class="invisible absolute left-0 whitespace-nowrap"
-                                                      >
-                                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                      </span>
-                                                      <span
-                                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                                      >
-                                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                      </span>
+                                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                                     </span>
-                                                  </div>
-                                                </div>
+                                                  </span>
+                                                </span>
+                                                <span>
+                                                   
+                                                </span>
                                               </div>
                                             </div>
                                           </div>
@@ -21308,33 +21026,24 @@ exports[`Dashboard > render in sm 1`] = `
                 class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 min-w-4/6"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <div
-                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
-                    <div
-                      class="font-semibold leading-[17px] sm:leading-5 text-sm"
-                      data-testid="Address__address"
-                    >
-                      <div>
+                    <span>
+                      <span>
                         <span
-                          class="flex w-full items-start overflow-y-hidden"
-                          style="height: 0px;"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="invisible absolute left-0 whitespace-nowrap"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
-                          <span
-                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
+                          021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
                         </span>
-                      </div>
-                    </div>
+                      </span>
+                    </span>
+                    <span>
+                       
+                    </span>
                   </div>
                   <span>
                     <span>
@@ -22169,7 +21878,7 @@ exports[`Dashboard > render in xl 1`] = `
                           class="flex items-center gap-1"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
                           >
                             <span
                               class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -22373,33 +22082,24 @@ exports[`Dashboard > render in xl 1`] = `
                               class="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <div
-                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <div
-                                    class="font-semibold leading-[17px] sm:leading-5 text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    <div>
+                                  <span>
+                                    <span>
                                       <span
-                                        class="flex w-full items-start overflow-y-hidden"
-                                        style="height: 0px;"
+                                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        <span
-                                          class="invisible absolute left-0 whitespace-nowrap"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
-                                        <span
-                                          class="no-ligatures truncate break-all whitespace-break-spaces"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                       </span>
-                                    </div>
-                                  </div>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -22879,34 +22579,18 @@ exports[`Dashboard > render in xl 1`] = `
                             class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                              >
-                                <div
-                                  class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
-                                    <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
-                                    >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                  </span>
+                                </span>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -22979,34 +22663,18 @@ exports[`Dashboard > render in xl 1`] = `
                                 class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
-                                  <div
-                                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <div
-                                      class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                      data-testid="Address__address"
-                                    >
-                                      <div>
-                                        <span
-                                          class="flex w-full items-start overflow-y-hidden"
-                                          style="height: 0px;"
-                                        >
-                                          <span
-                                            class="invisible absolute left-0 whitespace-nowrap"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                          <span
-                                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                        data-testid="Address__address"
+                                      >
+                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                      </span>
+                                    </span>
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -23315,34 +22983,18 @@ exports[`Dashboard > render in xl 1`] = `
                     class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -23415,34 +23067,18 @@ exports[`Dashboard > render in xl 1`] = `
                         class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                          >
-                            <div
-                              class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                              data-testid="Address__address"
-                            >
-                              <div>
-                                <span
-                                  class="flex w-full items-start overflow-y-hidden"
-                                  style="height: 0px;"
-                                >
-                                  <span
-                                    class="invisible absolute left-0 whitespace-nowrap"
-                                  >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                  </span>
-                                  <span
-                                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                                  >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                  </span>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
+                          <span>
+                            <span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                              </span>
+                            </span>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -24141,7 +23777,7 @@ exports[`Dashboard > render in xl 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -24232,7 +23868,7 @@ exports[`Dashboard > render in xl 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -24330,7 +23966,7 @@ exports[`Dashboard > render in xl 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -24426,7 +24062,7 @@ exports[`Dashboard > render in xl 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -24700,7 +24336,7 @@ exports[`Dashboard > render in xl 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -25220,7 +24856,7 @@ exports[`Dashboard > render in xl 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -25740,7 +25376,7 @@ exports[`Dashboard > render in xl 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -26260,7 +25896,7 @@ exports[`Dashboard > render in xl 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -26780,7 +26416,7 @@ exports[`Dashboard > render in xl 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -27300,7 +26936,7 @@ exports[`Dashboard > render in xl 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -27820,7 +27456,7 @@ exports[`Dashboard > render in xl 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -27911,7 +27547,7 @@ exports[`Dashboard > render in xl 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -28009,7 +27645,7 @@ exports[`Dashboard > render in xl 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -28105,7 +27741,7 @@ exports[`Dashboard > render in xl 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -28379,7 +28015,7 @@ exports[`Dashboard > render in xl 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -28737,33 +28373,24 @@ exports[`Dashboard > render in xl 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <div
-                                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
                                           >
-                                            <div
-                                              class="font-semibold text-theme-text text-sm"
-                                              data-testid="Address__address"
-                                            >
-                                              <div>
+                                            <span>
+                                              <span>
                                                 <span
-                                                  class="flex w-full items-start overflow-y-hidden"
-                                                  style="height: 0px;"
+                                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                                  data-testid="Address__address"
                                                 >
-                                                  <span
-                                                    class="invisible absolute left-0 whitespace-nowrap"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
-                                                  <span
-                                                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
+                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                                 </span>
-                                              </div>
-                                            </div>
+                                              </span>
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
                                           </div>
                                         </div>
                                       </div>
@@ -28839,7 +28466,7 @@ exports[`Dashboard > render in xl 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -28937,7 +28564,7 @@ exports[`Dashboard > render in xl 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -29033,33 +28660,24 @@ exports[`Dashboard > render in xl 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <div
-                                          class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                          class="relative grow leading-[17px] sm:leading-5 text-left"
                                         >
-                                          <div
-                                            class="font-semibold text-theme-text text-sm"
-                                            data-testid="Address__address"
-                                          >
-                                            <div>
+                                          <span>
+                                            <span>
                                               <span
-                                                class="flex w-full items-start overflow-y-hidden"
-                                                style="height: 0px;"
+                                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                                data-testid="Address__address"
                                               >
-                                                <span
-                                                  class="invisible absolute left-0 whitespace-nowrap"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
-                                                <span
-                                                  class="no-ligatures truncate break-all whitespace-break-spaces"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
+                                                0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                               </span>
-                                            </div>
-                                          </div>
+                                            </span>
+                                          </span>
+                                          <span>
+                                             
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
@@ -29210,33 +28828,24 @@ exports[`Dashboard > render in xl 1`] = `
                 class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 min-w-4/6"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <div
-                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
-                    <div
-                      class="font-semibold leading-[17px] sm:leading-5 text-sm"
-                      data-testid="Address__address"
-                    >
-                      <div>
+                    <span>
+                      <span>
                         <span
-                          class="flex w-full items-start overflow-y-hidden"
-                          style="height: 0px;"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="invisible absolute left-0 whitespace-nowrap"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
-                          <span
-                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
+                          021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
                         </span>
-                      </div>
-                    </div>
+                      </span>
+                    </span>
+                    <span>
+                       
+                    </span>
                   </div>
                   <span>
                     <span>
@@ -30071,7 +29680,7 @@ exports[`Dashboard > render in xs 1`] = `
                           class="flex items-center gap-1"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
                           >
                             <span
                               class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -30275,33 +29884,24 @@ exports[`Dashboard > render in xs 1`] = `
                               class="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <div
-                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <div
-                                    class="font-semibold leading-[17px] sm:leading-5 text-sm"
-                                    data-testid="Address__address"
-                                  >
-                                    <div>
+                                  <span>
+                                    <span>
                                       <span
-                                        class="flex w-full items-start overflow-y-hidden"
-                                        style="height: 0px;"
+                                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-sm absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        <span
-                                          class="invisible absolute left-0 whitespace-nowrap"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
-                                        <span
-                                          class="no-ligatures truncate break-all whitespace-break-spaces"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                       </span>
-                                    </div>
-                                  </div>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -30781,34 +30381,18 @@ exports[`Dashboard > render in xs 1`] = `
                             class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                              >
-                                <div
-                                  class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
-                                    <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
-                                    >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                  </span>
+                                </span>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -30881,34 +30465,18 @@ exports[`Dashboard > render in xs 1`] = `
                                 class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
-                                  <div
-                                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <div
-                                      class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                      data-testid="Address__address"
-                                    >
-                                      <div>
-                                        <span
-                                          class="flex w-full items-start overflow-y-hidden"
-                                          style="height: 0px;"
-                                        >
-                                          <span
-                                            class="invisible absolute left-0 whitespace-nowrap"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                          <span
-                                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                        data-testid="Address__address"
+                                      >
+                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                      </span>
+                                    </span>
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -31217,34 +30785,18 @@ exports[`Dashboard > render in xs 1`] = `
                     class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -31317,34 +30869,18 @@ exports[`Dashboard > render in xs 1`] = `
                         class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                          >
-                            <div
-                              class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                              data-testid="Address__address"
-                            >
-                              <div>
-                                <span
-                                  class="flex w-full items-start overflow-y-hidden"
-                                  style="height: 0px;"
-                                >
-                                  <span
-                                    class="invisible absolute left-0 whitespace-nowrap"
-                                  >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                  </span>
-                                  <span
-                                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                                  >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                  </span>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
+                          <span>
+                            <span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                              </span>
+                            </span>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -31891,7 +31427,7 @@ exports[`Dashboard > render in xs 1`] = `
                                             data-testid="TransactionRowAddressing__address-container"
                                           >
                                             <div
-                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                             >
                                               <span
                                                 class="font-semibold text-sm text-theme-text"
@@ -33612,7 +33148,7 @@ exports[`Dashboard > render in xs 1`] = `
                                             data-testid="TransactionRowAddressing__address-container"
                                           >
                                             <div
-                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                             >
                                               <span
                                                 class="font-semibold text-sm text-theme-text"
@@ -34059,33 +33595,24 @@ exports[`Dashboard > render in xs 1`] = `
                                             data-testid="TransactionRowAddressing__address-container"
                                           >
                                             <div
-                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                             >
                                               <div
-                                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                                class="relative grow leading-[17px] sm:leading-5 text-left"
                                               >
-                                                <div
-                                                  class="font-semibold text-theme-text text-sm"
-                                                  data-testid="Address__address"
-                                                >
-                                                  <div>
+                                                <span>
+                                                  <span>
                                                     <span
-                                                      class="flex w-full items-start overflow-y-hidden"
-                                                      style="height: 0px;"
+                                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                                      data-testid="Address__address"
                                                     >
-                                                      <span
-                                                        class="invisible absolute left-0 whitespace-nowrap"
-                                                      >
-                                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                      </span>
-                                                      <span
-                                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                                      >
-                                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                      </span>
+                                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                                     </span>
-                                                  </div>
-                                                </div>
+                                                  </span>
+                                                </span>
+                                                <span>
+                                                   
+                                                </span>
                                               </div>
                                             </div>
                                           </div>
@@ -34236,33 +33763,24 @@ exports[`Dashboard > render in xs 1`] = `
                 class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 min-w-4/6"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <div
-                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
-                    <div
-                      class="font-semibold leading-[17px] sm:leading-5 text-sm"
-                      data-testid="Address__address"
-                    >
-                      <div>
+                    <span>
+                      <span>
                         <span
-                          class="flex w-full items-start overflow-y-hidden"
-                          style="height: 0px;"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="invisible absolute left-0 whitespace-nowrap"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
-                          <span
-                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
+                          021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
                         </span>
-                      </div>
-                    </div>
+                      </span>
+                    </span>
+                    <span>
+                       
+                    </span>
                   </div>
                   <span>
                     <span>
@@ -35098,7 +34616,7 @@ exports[`Dashboard > should render 1`] = `
                           class="flex items-center gap-1"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
                           >
                             <span
                               class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
@@ -35302,33 +34820,24 @@ exports[`Dashboard > should render 1`] = `
                               class="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <div
-                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <div
-                                    class="font-semibold leading-[17px] sm:leading-5 text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    <div>
+                                  <span>
+                                    <span>
                                       <span
-                                        class="flex w-full items-start overflow-y-hidden"
-                                        style="height: 0px;"
+                                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        <span
-                                          class="invisible absolute left-0 whitespace-nowrap"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
-                                        <span
-                                          class="no-ligatures truncate break-all whitespace-break-spaces"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                       </span>
-                                    </div>
-                                  </div>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -35808,34 +35317,18 @@ exports[`Dashboard > should render 1`] = `
                             class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                              >
-                                <div
-                                  class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                  data-testid="Address__address"
-                                >
-                                  <div>
-                                    <span
-                                      class="flex w-full items-start overflow-y-hidden"
-                                      style="height: 0px;"
-                                    >
-                                      <span
-                                        class="invisible absolute left-0 whitespace-nowrap"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                      <span
-                                        class="no-ligatures truncate break-all whitespace-break-spaces"
-                                      >
-                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                      </span>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                  </span>
+                                </span>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -35908,34 +35401,18 @@ exports[`Dashboard > should render 1`] = `
                                 class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
-                                  <div
-                                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                                  >
-                                    <div
-                                      class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                                      data-testid="Address__address"
-                                    >
-                                      <div>
-                                        <span
-                                          class="flex w-full items-start overflow-y-hidden"
-                                          style="height: 0px;"
-                                        >
-                                          <span
-                                            class="invisible absolute left-0 whitespace-nowrap"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                          <span
-                                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                                          >
-                                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                                          </span>
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                        data-testid="Address__address"
+                                      >
+                                        0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                      </span>
+                                    </span>
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -36190,34 +35667,18 @@ exports[`Dashboard > should render 1`] = `
                     class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                   >
                     <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
-                      >
-                        <div
-                          class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
-                          data-testid="Address__address"
-                        >
-                          <div>
-                            <span
-                              class="flex w-full items-start overflow-y-hidden"
-                              style="height: 0px;"
-                            >
-                              <span
-                                class="invisible absolute left-0 whitespace-nowrap"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                              <span
-                                class="no-ligatures truncate break-all whitespace-break-spaces"
-                              >
-                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                          </span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -36923,7 +36384,7 @@ exports[`Dashboard > should render 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -37014,7 +36475,7 @@ exports[`Dashboard > should render 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -37112,7 +36573,7 @@ exports[`Dashboard > should render 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -37208,7 +36669,7 @@ exports[`Dashboard > should render 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -37510,7 +36971,7 @@ exports[`Dashboard > should render 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -38058,7 +37519,7 @@ exports[`Dashboard > should render 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -38606,7 +38067,7 @@ exports[`Dashboard > should render 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -39154,7 +38615,7 @@ exports[`Dashboard > should render 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -39702,7 +39163,7 @@ exports[`Dashboard > should render 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -40250,7 +39711,7 @@ exports[`Dashboard > should render 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -40798,7 +40259,7 @@ exports[`Dashboard > should render 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -40889,7 +40350,7 @@ exports[`Dashboard > should render 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -40987,7 +40448,7 @@ exports[`Dashboard > should render 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -41083,7 +40544,7 @@ exports[`Dashboard > should render 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -41385,7 +40846,7 @@ exports[`Dashboard > should render 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <span
                                             class="font-semibold text-sm text-theme-text"
@@ -41771,33 +41232,24 @@ exports[`Dashboard > should render 1`] = `
                                         data-testid="TransactionRowAddressing__address-container"
                                       >
                                         <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                         >
                                           <div
-                                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
                                           >
-                                            <div
-                                              class="font-semibold text-theme-text text-sm"
-                                              data-testid="Address__address"
-                                            >
-                                              <div>
+                                            <span>
+                                              <span>
                                                 <span
-                                                  class="flex w-full items-start overflow-y-hidden"
-                                                  style="height: 0px;"
+                                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                                  data-testid="Address__address"
                                                 >
-                                                  <span
-                                                    class="invisible absolute left-0 whitespace-nowrap"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
-                                                  <span
-                                                    class="no-ligatures truncate break-all whitespace-break-spaces"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
+                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                                 </span>
-                                              </div>
-                                            </div>
+                                              </span>
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
                                           </div>
                                         </div>
                                       </div>
@@ -41873,7 +41325,7 @@ exports[`Dashboard > should render 1`] = `
                                           data-testid="TransactionRowAddressing__address-container"
                                         >
                                           <div
-                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                           >
                                             <span
                                               class="font-semibold text-sm text-theme-text"
@@ -41971,7 +41423,7 @@ exports[`Dashboard > should render 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-sm text-theme-text"
@@ -42067,33 +41519,24 @@ exports[`Dashboard > should render 1`] = `
                                       data-testid="TransactionRowAddressing__address-container"
                                     >
                                       <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <div
-                                          class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                          class="relative grow leading-[17px] sm:leading-5 text-left"
                                         >
-                                          <div
-                                            class="font-semibold text-theme-text text-sm"
-                                            data-testid="Address__address"
-                                          >
-                                            <div>
+                                          <span>
+                                            <span>
                                               <span
-                                                class="flex w-full items-start overflow-y-hidden"
-                                                style="height: 0px;"
+                                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                                data-testid="Address__address"
                                               >
-                                                <span
-                                                  class="invisible absolute left-0 whitespace-nowrap"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
-                                                <span
-                                                  class="no-ligatures truncate break-all whitespace-break-spaces"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
+                                                0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                               </span>
-                                            </div>
-                                          </div>
+                                            </span>
+                                          </span>
+                                          <span>
+                                             
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
@@ -42272,33 +41715,24 @@ exports[`Dashboard > should render 1`] = `
                 class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 min-w-4/6"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <div
-                    class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
-                    <div
-                      class="font-semibold leading-[17px] sm:leading-5 text-sm"
-                      data-testid="Address__address"
-                    >
-                      <div>
+                    <span>
+                      <span>
                         <span
-                          class="flex w-full items-start overflow-y-hidden"
-                          style="height: 0px;"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="invisible absolute left-0 whitespace-nowrap"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
-                          <span
-                            class="no-ligatures truncate break-all whitespace-break-spaces"
-                          >
-                            021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
-                          </span>
+                          021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
                         </span>
-                      </div>
-                    </div>
+                      </span>
+                    </span>
+                    <span>
+                       
+                    </span>
                   </div>
                   <span>
                     <span>
@@ -43134,7 +42568,7 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                           class="flex items-center gap-1"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
                           />
                           <button
                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
@@ -43322,33 +42756,24 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                               class="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <div
-                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <div
-                                    class="font-semibold leading-[17px] sm:leading-5 text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    <div>
+                                  <span>
+                                    <span>
                                       <span
-                                        class="flex w-full items-start overflow-y-hidden"
-                                        style="height: 0px;"
+                                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        <span
-                                          class="invisible absolute left-0 whitespace-nowrap"
-                                        >
-                                          0x393f3F74F0cd9e790B5192789F31E0A38159ae03
-                                        </span>
-                                        <span
-                                          class="no-ligatures truncate break-all whitespace-break-spaces"
-                                        >
-                                          0x393f3F74F0cd9e790B5192789F31E0A38159ae03
-                                        </span>
+                                        0x393f3F74F0cd9e790B5192789F31E0A38159ae03
                                       </span>
-                                    </div>
-                                  </div>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
                                 </div>
                               </div>
                             </div>
