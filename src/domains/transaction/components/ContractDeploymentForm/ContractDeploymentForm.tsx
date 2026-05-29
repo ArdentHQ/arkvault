@@ -73,6 +73,7 @@ export const signContractDeployment = async ({ env, form, profile, signatory }: 
 		},
 		gasLimit,
 		gasPrice,
+		nonce: senderWallet.isLegacyCold() ? senderWallet.legacyNonce().toFixed(0) : undefined,
 		signatory,
 	});
 

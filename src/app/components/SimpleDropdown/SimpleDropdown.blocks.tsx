@@ -38,7 +38,7 @@ export const DropdownContent: FC<{ children: ReactNode; className?: string }> = 
 					style={floatingStyles}
 					{...getFloatingProps()}
 					className={cn(
-						"dark:bg-theme-dark-900 dark:border-theme-dark-700 dim:bg-theme-dim-900 dim:border-theme-dim-700 z-50 w-auto rounded-xl border border-transparent bg-white shadow-xl! outline-hidden",
+						"shadow-xl! outline-hidden z-50 w-auto rounded-xl border border-transparent bg-white dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border-theme-dark-700 dark:bg-theme-dark-900",
 						className,
 					)}
 				>
@@ -56,7 +56,7 @@ export const DropdownListItem = (props: React.HTMLProps<HTMLLIElement>) => {
 			data-testid="DropdownListItem"
 			{...props}
 			className={twMerge(
-				"text-theme-secondary-700 transition-colors-shadow hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:ring-theme-primary-400 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 my-0.5 flex cursor-pointer items-center justify-between rounded-lg px-5 py-[14px] text-base font-semibold whitespace-nowrap duration-100 focus:ring-2 focus:outline-hidden focus:ring-inset",
+				"focus:outline-hidden my-0.5 flex cursor-pointer items-center justify-between whitespace-nowrap rounded-lg px-5 py-[14px] text-base font-semibold text-theme-secondary-700 transition-colors-shadow duration-100 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
 				props.className,
 			)}
 			onClick={(event) => {

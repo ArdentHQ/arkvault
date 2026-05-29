@@ -70,7 +70,7 @@ export const SelectToken = ({
 									tokenName={option.label}
 									className="sm:text-md p-2.5 text-sm leading-[17px] sm:p-3 sm:leading-5"
 								/>
-								<div className="text-sm leading-[17px] break-all whitespace-normal sm:text-base sm:leading-5">
+								<div className="whitespace-normal break-all text-sm leading-[17px] sm:text-base sm:leading-5">
 									{option.label}
 								</div>
 							</div>
@@ -81,7 +81,7 @@ export const SelectToken = ({
 										showCompactFormat
 										ticker={displaySymbol}
 										value={balance}
-										className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] break-all whitespace-normal sm:text-base sm:leading-5"
+										className="whitespace-normal break-all text-sm leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:text-base sm:leading-5"
 									/>
 								)}
 								<div className="hidden w-8 justify-end sm:flex">
@@ -90,7 +90,7 @@ export const SelectToken = ({
 											name="CheckmarkDouble"
 											dimensions={[16, 16]}
 											data-testid="Icon--CheckmarkDouble"
-											className="text-theme-primary-600 dark:text-theme-dark-50 dim:text-theme-dim-50"
+											className="text-theme-primary-600 dim:text-theme-dim-50 dark:text-theme-dark-50"
 										/>
 									)}
 								</div>
@@ -102,7 +102,7 @@ export const SelectToken = ({
 									name="CheckmarkDouble"
 									dimensions={[16, 16]}
 									data-testid="Icon--CheckmarkDouble"
-									className="text-theme-primary-600 dark:text-theme-dark-50 dim:text-theme-dim-50"
+									className="text-theme-primary-600 dim:text-theme-dim-50 dark:text-theme-dark-50"
 								/>
 							)}
 						</div>

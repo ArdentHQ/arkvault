@@ -52,7 +52,7 @@ export const SuccessStep = ({
 				<DetailWrapper label={t("COMMON.ADDRESS_NAME")}>
 					<div className="flex w-full items-center justify-between sm:justify-start">
 						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
-						<div className="flex w-full min-w-0 items-center justify-end pr-4 leading-[17px] font-semibold sm:justify-between sm:leading-5">
+						<div className="flex w-full min-w-0 items-center justify-end pr-4 font-semibold leading-[17px] sm:justify-between sm:leading-5">
 							<div className="max-w-[calc(100%_-_80px)] shrink-0 truncate text-sm sm:max-w-none sm:text-base">
 								{" "}
 								{importedWallet.alias()}{" "}
@@ -67,7 +67,7 @@ export const SuccessStep = ({
 								data-testid="ImportWallet__edit-alias"
 								type="button"
 								variant="transparent"
-								className="text-theme-primary-600 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 hover:bg-theme-primary-100 dim:text-theme-dim-200 dim-hover:text-white space-x-0 rounded px-2 py-1 dark:text-white"
+								className="space-x-0 rounded px-2 py-1 text-theme-primary-600 hover:bg-theme-primary-100 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-white dark:text-white dark:hover:bg-theme-secondary-800"
 								onClick={onClickEditAlias}
 							>
 								<Icon name="Pencil" size="md" />

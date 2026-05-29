@@ -7,7 +7,7 @@ import fs from "fs";
 import { ClientFunction, RequestMock, t, Selector } from "testcafe";
 import { Before, Given, IWorld, Then, When } from "@cucumber/cucumber";
 import { TestStepFunction } from "@cucumber/cucumber/lib/support_code_library_builder/types";
-import delve from "dlv";
+import { getProperty } from "dot-prop";
 import { buildTranslations } from "../app/i18n/helpers";
 
 export const getPageURL = () => process.env.E2E_HOST;
@@ -509,7 +509,7 @@ export const cucumber = (
 
 // @TODO: fix generics declaration type errors
 export const translate = (path: any, values: Record<string, string> = {}): string => {
-	let languageString = delve(buildTranslations(), path, "No translation found") as string;
+	let languageString = getProperty(buildTranslations(), path, "No translation found") as unknown as string;
 
 	for (const [key, value] of Object.entries(values)) {
 		languageString = languageString.replace(`{{${key}}}`, value);

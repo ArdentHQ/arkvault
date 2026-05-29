@@ -154,22 +154,22 @@ export const Contacts: FC = () => {
 		return (
 			<tr
 				data-testid="EmptyResults"
-				className="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-solid md:border-b-4"
+				className="border-solid border-theme-secondary-200 dim:border-theme-dim-700 dark:border-theme-secondary-800 md:border-b-4"
 			>
-				<td colSpan={listColumns.length} className="pt-[11px] pb-4">
+				<td colSpan={listColumns.length} className="pb-4 pt-[11px]">
 					{contacts.length > 0 && (
 						<div className="flex flex-col items-center justify-center">
-							<h3 className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 mb-2 text-base font-semibold">
+							<h3 className="mb-2 text-base font-semibold text-theme-secondary-900 dim:text-theme-dim-200 dark:text-theme-secondary-200">
 								{t("COMMON.EMPTY_RESULTS.TITLE")}
 							</h3>
-							<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 text-sm">
+							<p className="text-sm text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-600">
 								{t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 							</p>
 						</div>
 					)}
 
 					{contacts.length === 0 && (
-						<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 px-6 py-4 text-center text-sm sm:py-0">
+						<p className="px-6 py-4 text-center text-sm text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-600 sm:py-0">
 							{t("CONTACTS.CONTACTS_PAGE.EMPTY_MESSAGE")}
 						</p>
 					)}
@@ -186,14 +186,14 @@ export const Contacts: FC = () => {
 			searchPlaceholder={t("CONTACTS.CONTACTS_PAGE.SEARCH_PLACEHOLDER")}
 			extra={
 				<Button
-					className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 mr-6 hidden h-8 py-0 leading-none sm:block"
+					className="mr-6 hidden h-8 py-0 leading-none text-theme-primary-600 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 sm:block"
 					data-testid="contacts__add-contact-btn"
 					onClick={() => setCreateIsOpen(true)}
 					variant="primary-transparent"
 					size="sm"
 					icon="Plus"
 				>
-					<span className="text-base font-semibold whitespace-nowrap">
+					<span className="whitespace-nowrap text-base font-semibold">
 						{t("CONTACTS.CONTACTS_PAGE.ADD_CONTACT")}
 					</span>
 				</Button>
@@ -219,16 +219,16 @@ export const Contacts: FC = () => {
 				<ContactsHeader />
 
 				<Section className="mt-4 py-0 sm:mt-0">
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded border sm:hidden">
+					<div className="flex items-center rounded border border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800 sm:hidden">
 						<Button
-							className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 h-12 w-full"
+							className="h-12 w-full text-theme-primary-600 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
 							data-testid="contacts__add-contact-btn-mobile"
 							onClick={() => setCreateIsOpen(true)}
 							variant="primary-transparent"
 							size="sm"
 							icon="Plus"
 						>
-							<span className="text-base font-semibold whitespace-nowrap">
+							<span className="whitespace-nowrap text-base font-semibold">
 								{t("CONTACTS.CONTACTS_PAGE.ADD_CONTACT")}
 							</span>
 						</Button>
@@ -240,7 +240,7 @@ export const Contacts: FC = () => {
 						{contacts.length === 0 && (
 							<p
 								data-testid="NoResultsMessage"
-								className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 p-4 px-6 text-center text-sm"
+								className="p-4 px-6 text-center text-sm text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-600"
 							>
 								{t("CONTACTS.CONTACTS_PAGE.EMPTY_MESSAGE")}
 							</p>

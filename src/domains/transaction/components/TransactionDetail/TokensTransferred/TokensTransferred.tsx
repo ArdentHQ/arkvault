@@ -84,7 +84,7 @@ export const TokensTransferred = ({
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
 						value={0}
-						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+						className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 						allowHideBalance={allowHideBalance}
 						profile={profile}
 					/>

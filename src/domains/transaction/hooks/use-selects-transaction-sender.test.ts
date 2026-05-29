@@ -4,7 +4,15 @@ import { vi, expect, beforeEach, afterEach } from "vitest";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { useSelectsTransactionSender } from "./use-selects-transaction-sender";
-import * as ReactRouter from "react-router";
+import { useSearchParams } from "react-router-dom";
+
+vi.mock("react-router-dom", async () => {
+	const actual = await vi.importActual("react-router-dom");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
 
 describe("useSelectsTransactionSender", () => {
 	let profile: Contracts.IProfile;
@@ -12,7 +20,18 @@ describe("useSelectsTransactionSender", () => {
 	let selectedWallet: Contracts.IReadWriteWallet;
 
 	beforeEach(async () => {
-		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
+		const mockSetSearchParams = vi.fn();
+		const mockDelete = vi.fn();
+
+		vi.mocked(useSearchParams).mockReturnValue([
+			{
+				delete: mockDelete,
+				get: vi.fn(),
+				has: vi.fn(),
+			},
+			mockSetSearchParams,
+		]);
+
 		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().first();
 		selectedWallet = profile.wallets().last();
@@ -158,7 +177,8 @@ describe("useSelectsTransactionSender", () => {
 	it("should clear search params when active becomes false and method param exists", () => {
 		const searchParams = new URLSearchParams("method=transfer&other=value");
 		const setSearchParams = vi.fn();
-		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParams]);
+
+		vi.mocked(useSearchParams).mockReturnValue([searchParams, setSearchParams]);
 
 		const { rerender } = renderHook(({ active }) => useSelectsTransactionSender({ active }), {
 			initialProps: { active: true },
@@ -174,7 +194,8 @@ describe("useSelectsTransactionSender", () => {
 	it("should not clear search params when active becomes false but method param does not exist", () => {
 		const searchParams = new URLSearchParams("other=value");
 		const setSearchParams = vi.fn();
-		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParams]);
+
+		vi.mocked(useSearchParams).mockReturnValue([searchParams, setSearchParams]);
 
 		const { rerender } = renderHook(({ active }) => useSelectsTransactionSender({ active }), {
 			initialProps: { active: true },
@@ -190,7 +211,8 @@ describe("useSelectsTransactionSender", () => {
 	it("should not clear search params when active becomes false and resetSearchParamsOnDeactivate is false", () => {
 		const searchParams = new URLSearchParams("method=transfer");
 		const setSearchParams = vi.fn();
-		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParams]);
+
+		vi.mocked(useSearchParams).mockReturnValue([searchParams, setSearchParams]);
 
 		const { rerender } = renderHook(({ active }) => useSelectsTransactionSender({ active }), {
 			initialProps: { active: false },
@@ -200,7 +222,7 @@ describe("useSelectsTransactionSender", () => {
 		rerender({ active: true });
 
 		// Mock search params again for the deactivation
-		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParams]);
+		vi.mocked(useSearchParams).mockReturnValue([searchParams, setSearchParams]);
 
 		// Then deactivate
 		rerender({ active: false });

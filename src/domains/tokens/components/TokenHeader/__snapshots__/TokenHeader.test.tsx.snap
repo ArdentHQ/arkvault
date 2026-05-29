@@ -3,11 +3,11 @@
 exports[`TokenHeader > should not show address button when only one wallet exists 1`] = `
 <DocumentFragment>
   <header
-    class="md:px-10 lg:container"
+    class="lg:container md:px-10"
     data-testid="TokensHeader"
   >
     <div
-      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+      class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
     >
       <div
         class="z-30 flex w-full flex-row items-center justify-between px-4"
@@ -16,7 +16,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
           class="flex h-fit flex-row items-center gap-1"
         >
           <p
-            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+            class="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:block"
           >
             Viewing:
           </p>
@@ -90,7 +90,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
           class="flex flex-row items-center gap-1"
         >
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 group flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             data-testid="Tokens__AddToken"
             type="button"
           >
@@ -98,7 +98,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50"
+                class="text-theme-secondary-700 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
               >
                 <div
                   style="height: 16px; width: 16px;"
@@ -127,24 +127,24 @@ exports[`TokenHeader > should not show address button when only one wallet exist
                 </div>
               </div>
               <p
-                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+                class="hidden text-base font-semibold leading-5 dim:text-theme-dim-50 sm:block"
               >
                 Add Token
               </p>
             </div>
           </button>
           <div
-            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dim:border-theme-dim-700 dark:border-theme-dark-700"
           />
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             type="button"
           >
             <div
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -174,7 +174,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
         class="flex flex-col gap-0.5"
       >
         <div
-          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+          class="rounded bg-white dim:bg-theme-dim-900 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
         >
           <div
             class="flex w-full flex-col gap-3 p-4"
@@ -193,42 +193,42 @@ exports[`TokenHeader > should not show address button when only one wallet exist
                     class="flex items-center gap-1"
                   >
                     <p
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                     >
                       Tokens
                     </p>
                     <div
-                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                      class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-3 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:hidden"
                     />
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 sm:hidden"
                     >
                       N/A
                     </p>
                   </div>
                   <div
-                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-2xl md:leading-[29px]"
                   >
                     0
                   </div>
                 </div>
                 <div
-                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                  class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-12 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 md-lg:block"
                 />
                 <div
                   class="hidden flex-col gap-2 sm:flex"
                   data-testid="TokensHeader__balance"
                 >
                   <p
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                   >
                     Total Balance
                   </p>
                   <div
-                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 md:text-2xl md:leading-[29px]"
                   >
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                      class="text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500"
                     >
                       N/A
                     </p>
@@ -242,7 +242,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
                   class="my-auto flex w-full flex-1 md:w-auto"
                 >
                   <button
-                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 my-auto flex-1 px-8 dim:bg-theme-dim-navy-600 dim:disabled:bg-theme-dim-navy-900 dim:disabled:text-theme-dim-navy-700 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
                     data-testid="TokensHeader__send-button"
                     type="button"
                   >
@@ -254,7 +254,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
                   </button>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-50 dim-hover:bg-theme-dim-navy-700 dark:hover:bg-theme-dark-navy-700"
                   data-testid="TokenHeader__receive-modal-toggle"
                   type="button"
                 >
@@ -303,11 +303,11 @@ exports[`TokenHeader > should not show address button when only one wallet exist
 exports[`TokenHeader > should not show wallet hd label 1`] = `
 <DocumentFragment>
   <header
-    class="md:px-10 lg:container"
+    class="lg:container md:px-10"
     data-testid="TokensHeader"
   >
     <div
-      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+      class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
     >
       <div
         class="z-30 flex w-full flex-row items-center justify-between px-4"
@@ -316,7 +316,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
           class="flex h-fit flex-row items-center gap-1"
         >
           <p
-            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+            class="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:block"
           >
             Viewing:
           </p>
@@ -390,7 +390,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
           class="flex flex-row items-center gap-1"
         >
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 group flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             data-testid="Tokens__AddToken"
             type="button"
           >
@@ -398,7 +398,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50"
+                class="text-theme-secondary-700 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
               >
                 <div
                   style="height: 16px; width: 16px;"
@@ -427,24 +427,24 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
                 </div>
               </div>
               <p
-                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+                class="hidden text-base font-semibold leading-5 dim:text-theme-dim-50 sm:block"
               >
                 Add Token
               </p>
             </div>
           </button>
           <div
-            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dim:border-theme-dim-700 dark:border-theme-dark-700"
           />
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             type="button"
           >
             <div
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -474,7 +474,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
         class="flex flex-col gap-0.5"
       >
         <div
-          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+          class="rounded bg-white dim:bg-theme-dim-900 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
         >
           <div
             class="flex w-full flex-col gap-3 p-4"
@@ -493,42 +493,42 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
                     class="flex items-center gap-1"
                   >
                     <p
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                     >
                       Tokens
                     </p>
                     <div
-                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                      class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-3 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:hidden"
                     />
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 sm:hidden"
                     >
                       N/A
                     </p>
                   </div>
                   <div
-                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-2xl md:leading-[29px]"
                   >
                     0
                   </div>
                 </div>
                 <div
-                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                  class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-12 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 md-lg:block"
                 />
                 <div
                   class="hidden flex-col gap-2 sm:flex"
                   data-testid="TokensHeader__balance"
                 >
                   <p
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                   >
                     Total Balance
                   </p>
                   <div
-                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 md:text-2xl md:leading-[29px]"
                   >
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                      class="text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500"
                     >
                       N/A
                     </p>
@@ -542,7 +542,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
                   class="my-auto flex w-full flex-1 md:w-auto"
                 >
                   <button
-                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 my-auto flex-1 px-8 dim:bg-theme-dim-navy-600 dim:disabled:bg-theme-dim-navy-900 dim:disabled:text-theme-dim-navy-700 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
                     data-testid="TokensHeader__send-button"
                     type="button"
                   >
@@ -554,7 +554,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
                   </button>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-50 dim-hover:bg-theme-dim-navy-700 dark:hover:bg-theme-dark-navy-700"
                   data-testid="TokenHeader__receive-modal-toggle"
                   type="button"
                 >
@@ -603,11 +603,11 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
 exports[`TokenHeader > should render 1`] = `
 <DocumentFragment>
   <header
-    class="md:px-10 lg:container"
+    class="lg:container md:px-10"
     data-testid="TokensHeader"
   >
     <div
-      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+      class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
     >
       <div
         class="z-30 flex w-full flex-row items-center justify-between px-4"
@@ -616,7 +616,7 @@ exports[`TokenHeader > should render 1`] = `
           class="flex h-fit flex-row items-center gap-1"
         >
           <p
-            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+            class="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:block"
           >
             Viewing:
           </p>
@@ -690,7 +690,7 @@ exports[`TokenHeader > should render 1`] = `
           class="flex flex-row items-center gap-1"
         >
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 group flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             data-testid="Tokens__AddToken"
             type="button"
           >
@@ -698,7 +698,7 @@ exports[`TokenHeader > should render 1`] = `
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50"
+                class="text-theme-secondary-700 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
               >
                 <div
                   style="height: 16px; width: 16px;"
@@ -727,24 +727,24 @@ exports[`TokenHeader > should render 1`] = `
                 </div>
               </div>
               <p
-                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+                class="hidden text-base font-semibold leading-5 dim:text-theme-dim-50 sm:block"
               >
                 Add Token
               </p>
             </div>
           </button>
           <div
-            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dim:border-theme-dim-700 dark:border-theme-dark-700"
           />
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             type="button"
           >
             <div
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -774,7 +774,7 @@ exports[`TokenHeader > should render 1`] = `
         class="flex flex-col gap-0.5"
       >
         <div
-          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+          class="rounded bg-white dim:bg-theme-dim-900 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
         >
           <div
             class="flex w-full flex-col gap-3 p-4"
@@ -793,42 +793,42 @@ exports[`TokenHeader > should render 1`] = `
                     class="flex items-center gap-1"
                   >
                     <p
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                     >
                       Tokens
                     </p>
                     <div
-                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                      class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-3 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:hidden"
                     />
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 sm:hidden"
                     >
                       N/A
                     </p>
                   </div>
                   <div
-                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-2xl md:leading-[29px]"
                   >
                     0
                   </div>
                 </div>
                 <div
-                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                  class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-12 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 md-lg:block"
                 />
                 <div
                   class="hidden flex-col gap-2 sm:flex"
                   data-testid="TokensHeader__balance"
                 >
                   <p
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                   >
                     Total Balance
                   </p>
                   <div
-                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 md:text-2xl md:leading-[29px]"
                   >
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                      class="text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500"
                     >
                       N/A
                     </p>
@@ -842,7 +842,7 @@ exports[`TokenHeader > should render 1`] = `
                   class="my-auto flex w-full flex-1 md:w-auto"
                 >
                   <button
-                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 my-auto flex-1 px-8 dim:bg-theme-dim-navy-600 dim:disabled:bg-theme-dim-navy-900 dim:disabled:text-theme-dim-navy-700 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
                     data-testid="TokensHeader__send-button"
                     type="button"
                   >
@@ -854,7 +854,7 @@ exports[`TokenHeader > should render 1`] = `
                   </button>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-50 dim-hover:bg-theme-dim-navy-700 dark:hover:bg-theme-dark-navy-700"
                   data-testid="TokenHeader__receive-modal-toggle"
                   type="button"
                 >
@@ -903,11 +903,11 @@ exports[`TokenHeader > should render 1`] = `
 exports[`TokenHeader > should render with tokens 1`] = `
 <DocumentFragment>
   <header
-    class="md:px-10 lg:container"
+    class="lg:container md:px-10"
     data-testid="TokensHeader"
   >
     <div
-      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+      class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
     >
       <div
         class="z-30 flex w-full flex-row items-center justify-between px-4"
@@ -916,7 +916,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
           class="flex h-fit flex-row items-center gap-1"
         >
           <p
-            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+            class="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:block"
           >
             Viewing:
           </p>
@@ -990,7 +990,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
           class="flex flex-row items-center gap-1"
         >
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 group flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             data-testid="Tokens__AddToken"
             type="button"
           >
@@ -998,7 +998,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50"
+                class="text-theme-secondary-700 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
               >
                 <div
                   style="height: 16px; width: 16px;"
@@ -1027,24 +1027,24 @@ exports[`TokenHeader > should render with tokens 1`] = `
                 </div>
               </div>
               <p
-                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+                class="hidden text-base font-semibold leading-5 dim:text-theme-dim-50 sm:block"
               >
                 Add Token
               </p>
             </div>
           </button>
           <div
-            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dim:border-theme-dim-700 dark:border-theme-dark-700"
           />
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             type="button"
           >
             <div
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -1074,7 +1074,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
         class="flex flex-col gap-0.5"
       >
         <div
-          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+          class="rounded bg-white dim:bg-theme-dim-900 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
         >
           <div
             class="flex w-full flex-col gap-3 p-4"
@@ -1093,42 +1093,42 @@ exports[`TokenHeader > should render with tokens 1`] = `
                     class="flex items-center gap-1"
                   >
                     <p
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                     >
                       Tokens
                     </p>
                     <div
-                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                      class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-3 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:hidden"
                     />
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 sm:hidden"
                     >
                       N/A
                     </p>
                   </div>
                   <div
-                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-2xl md:leading-[29px]"
                   >
                     0
                   </div>
                 </div>
                 <div
-                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                  class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-12 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 md-lg:block"
                 />
                 <div
                   class="hidden flex-col gap-2 sm:flex"
                   data-testid="TokensHeader__balance"
                 >
                   <p
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                   >
                     Total Balance
                   </p>
                   <div
-                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 md:text-2xl md:leading-[29px]"
                   >
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                      class="text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500"
                     >
                       N/A
                     </p>
@@ -1142,7 +1142,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
                   class="my-auto flex w-full flex-1 md:w-auto"
                 >
                   <button
-                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 my-auto flex-1 px-8 dim:bg-theme-dim-navy-600 dim:disabled:bg-theme-dim-navy-900 dim:disabled:text-theme-dim-navy-700 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
                     data-testid="TokensHeader__send-button"
                     type="button"
                   >
@@ -1154,7 +1154,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
                   </button>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-50 dim-hover:bg-theme-dim-navy-700 dark:hover:bg-theme-dark-navy-700"
                   data-testid="TokenHeader__receive-modal-toggle"
                   type="button"
                 >
@@ -1203,11 +1203,11 @@ exports[`TokenHeader > should render with tokens 1`] = `
 exports[`TokenHeader > should show account name label when wallet is HD and single wallet selected 1`] = `
 <DocumentFragment>
   <header
-    class="md:px-10 lg:container"
+    class="lg:container md:px-10"
     data-testid="TokensHeader"
   >
     <div
-      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+      class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
     >
       <div
         class="z-30 flex w-full flex-row items-center justify-between px-4"
@@ -1216,7 +1216,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
           class="flex h-fit flex-row items-center gap-1"
         >
           <p
-            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+            class="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:block"
           >
             Viewing:
           </p>
@@ -1295,7 +1295,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
           class="flex flex-row items-center gap-1"
         >
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 group flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             data-testid="Tokens__AddToken"
             type="button"
           >
@@ -1303,7 +1303,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50"
+                class="text-theme-secondary-700 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
               >
                 <div
                   style="height: 16px; width: 16px;"
@@ -1332,24 +1332,24 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
                 </div>
               </div>
               <p
-                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+                class="hidden text-base font-semibold leading-5 dim:text-theme-dim-50 sm:block"
               >
                 Add Token
               </p>
             </div>
           </button>
           <div
-            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dim:border-theme-dim-700 dark:border-theme-dark-700"
           />
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             type="button"
           >
             <div
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -1379,7 +1379,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
         class="flex flex-col gap-0.5"
       >
         <div
-          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+          class="rounded bg-white dim:bg-theme-dim-900 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
         >
           <div
             class="flex w-full flex-col gap-3 p-4"
@@ -1398,42 +1398,42 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
                     class="flex items-center gap-1"
                   >
                     <p
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                     >
                       Tokens
                     </p>
                     <div
-                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                      class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-3 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:hidden"
                     />
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 sm:hidden"
                     >
                       N/A
                     </p>
                   </div>
                   <div
-                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-2xl md:leading-[29px]"
                   >
                     0
                   </div>
                 </div>
                 <div
-                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                  class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-12 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 md-lg:block"
                 />
                 <div
                   class="hidden flex-col gap-2 sm:flex"
                   data-testid="TokensHeader__balance"
                 >
                   <p
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                   >
                     Total Balance
                   </p>
                   <div
-                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 md:text-2xl md:leading-[29px]"
                   >
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                      class="text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500"
                     >
                       N/A
                     </p>
@@ -1447,7 +1447,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
                   class="my-auto flex w-full flex-1 md:w-auto"
                 >
                   <button
-                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 my-auto flex-1 px-8 dim:bg-theme-dim-navy-600 dim:disabled:bg-theme-dim-navy-900 dim:disabled:text-theme-dim-navy-700 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
                     data-testid="TokensHeader__send-button"
                     type="button"
                   >
@@ -1459,7 +1459,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
                   </button>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-50 dim-hover:bg-theme-dim-navy-700 dark:hover:bg-theme-dark-navy-700"
                   data-testid="TokenHeader__receive-modal-toggle"
                   type="button"
                 >
@@ -1508,11 +1508,11 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
 exports[`TokenHeader > should show balance information when tokens are available 1`] = `
 <DocumentFragment>
   <header
-    class="md:px-10 lg:container"
+    class="lg:container md:px-10"
     data-testid="TokensHeader"
   >
     <div
-      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+      class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
     >
       <div
         class="z-30 flex w-full flex-row items-center justify-between px-4"
@@ -1521,7 +1521,7 @@ exports[`TokenHeader > should show balance information when tokens are available
           class="flex h-fit flex-row items-center gap-1"
         >
           <p
-            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+            class="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:block"
           >
             Viewing:
           </p>
@@ -1595,7 +1595,7 @@ exports[`TokenHeader > should show balance information when tokens are available
           class="flex flex-row items-center gap-1"
         >
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 group flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             data-testid="Tokens__AddToken"
             type="button"
           >
@@ -1603,7 +1603,7 @@ exports[`TokenHeader > should show balance information when tokens are available
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50"
+                class="text-theme-secondary-700 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
               >
                 <div
                   style="height: 16px; width: 16px;"
@@ -1632,24 +1632,24 @@ exports[`TokenHeader > should show balance information when tokens are available
                 </div>
               </div>
               <p
-                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+                class="hidden text-base font-semibold leading-5 dim:text-theme-dim-50 sm:block"
               >
                 Add Token
               </p>
             </div>
           </button>
           <div
-            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dim:border-theme-dim-700 dark:border-theme-dark-700"
           />
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             type="button"
           >
             <div
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -1679,7 +1679,7 @@ exports[`TokenHeader > should show balance information when tokens are available
         class="flex flex-col gap-0.5"
       >
         <div
-          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+          class="rounded bg-white dim:bg-theme-dim-900 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
         >
           <div
             class="flex w-full flex-col gap-3 p-4"
@@ -1698,42 +1698,42 @@ exports[`TokenHeader > should show balance information when tokens are available
                     class="flex items-center gap-1"
                   >
                     <p
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                     >
                       Tokens
                     </p>
                     <div
-                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                      class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-3 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:hidden"
                     />
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 sm:hidden"
                     >
                       N/A
                     </p>
                   </div>
                   <div
-                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-2xl md:leading-[29px]"
                   >
                     5
                   </div>
                 </div>
                 <div
-                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                  class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-12 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 md-lg:block"
                 />
                 <div
                   class="hidden flex-col gap-2 sm:flex"
                   data-testid="TokensHeader__balance"
                 >
                   <p
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                   >
                     Total Balance
                   </p>
                   <div
-                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 md:text-2xl md:leading-[29px]"
                   >
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                      class="text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500"
                     >
                       N/A
                     </p>
@@ -1747,7 +1747,7 @@ exports[`TokenHeader > should show balance information when tokens are available
                   class="my-auto flex w-full flex-1 md:w-auto"
                 >
                   <button
-                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 my-auto flex-1 px-8 dim:bg-theme-dim-navy-600 dim:disabled:bg-theme-dim-navy-900 dim:disabled:text-theme-dim-navy-700 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
                     data-testid="TokensHeader__send-button"
                     type="button"
                   >
@@ -1759,7 +1759,7 @@ exports[`TokenHeader > should show balance information when tokens are available
                   </button>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-50 dim-hover:bg-theme-dim-navy-700 dark:hover:bg-theme-dark-navy-700"
                   data-testid="TokenHeader__receive-modal-toggle"
                   type="button"
                 >
@@ -1808,11 +1808,11 @@ exports[`TokenHeader > should show balance information when tokens are available
 exports[`TokenHeader > should show not available when no tokens are selected 1`] = `
 <DocumentFragment>
   <header
-    class="md:px-10 lg:container"
+    class="lg:container md:px-10"
     data-testid="TokensHeader"
   >
     <div
-      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+      class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
     >
       <div
         class="z-30 flex w-full flex-row items-center justify-between px-4"
@@ -1821,7 +1821,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
           class="flex h-fit flex-row items-center gap-1"
         >
           <p
-            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+            class="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:block"
           >
             Viewing:
           </p>
@@ -1895,7 +1895,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
           class="flex flex-row items-center gap-1"
         >
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 group flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             data-testid="Tokens__AddToken"
             type="button"
           >
@@ -1903,7 +1903,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50"
+                class="text-theme-secondary-700 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
               >
                 <div
                   style="height: 16px; width: 16px;"
@@ -1932,24 +1932,24 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
                 </div>
               </div>
               <p
-                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+                class="hidden text-base font-semibold leading-5 dim:text-theme-dim-50 sm:block"
               >
                 Add Token
               </p>
             </div>
           </button>
           <div
-            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dim:border-theme-dim-700 dark:border-theme-dark-700"
           />
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             type="button"
           >
             <div
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -1979,7 +1979,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
         class="flex flex-col gap-0.5"
       >
         <div
-          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+          class="rounded bg-white dim:bg-theme-dim-900 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
         >
           <div
             class="flex w-full flex-col gap-3 p-4"
@@ -1998,42 +1998,42 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
                     class="flex items-center gap-1"
                   >
                     <p
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                     >
                       Tokens
                     </p>
                     <div
-                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                      class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-3 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:hidden"
                     />
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 sm:hidden"
                     >
                       N/A
                     </p>
                   </div>
                   <div
-                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-2xl md:leading-[29px]"
                   >
                     0
                   </div>
                 </div>
                 <div
-                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                  class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-12 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 md-lg:block"
                 />
                 <div
                   class="hidden flex-col gap-2 sm:flex"
                   data-testid="TokensHeader__balance"
                 >
                   <p
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                   >
                     Total Balance
                   </p>
                   <div
-                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 md:text-2xl md:leading-[29px]"
                   >
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                      class="text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500"
                     >
                       N/A
                     </p>
@@ -2047,7 +2047,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
                   class="my-auto flex w-full flex-1 md:w-auto"
                 >
                   <button
-                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 my-auto flex-1 px-8 dim:bg-theme-dim-navy-600 dim:disabled:bg-theme-dim-navy-900 dim:disabled:text-theme-dim-navy-700 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
                     data-testid="TokensHeader__send-button"
                     type="button"
                   >
@@ -2059,7 +2059,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
                   </button>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-50 dim-hover:bg-theme-dim-navy-700 dark:hover:bg-theme-dark-navy-700"
                   data-testid="TokenHeader__receive-modal-toggle"
                   type="button"
                 >
@@ -2108,11 +2108,11 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
 exports[`TokenHeader > should toggle receive funds modal 1`] = `
 <DocumentFragment>
   <header
-    class="md:px-10 lg:container"
+    class="lg:container md:px-10"
     data-testid="TokensHeader"
   >
     <div
-      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+      class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
     >
       <div
         class="z-30 flex w-full flex-row items-center justify-between px-4"
@@ -2121,7 +2121,7 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
           class="flex h-fit flex-row items-center gap-1"
         >
           <p
-            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+            class="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 sm:block"
           >
             Viewing:
           </p>
@@ -2195,7 +2195,7 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
           class="flex flex-row items-center gap-1"
         >
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 group flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             data-testid="Tokens__AddToken"
             type="button"
           >
@@ -2203,7 +2203,7 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50"
+                class="text-theme-secondary-700 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
               >
                 <div
                   style="height: 16px; width: 16px;"
@@ -2232,24 +2232,24 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
                 </div>
               </div>
               <p
-                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+                class="hidden text-base font-semibold leading-5 dim:text-theme-dim-50 sm:block"
               >
                 Add Token
               </p>
             </div>
           </button>
           <div
-            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dim:border-theme-dim-700 dark:border-theme-dark-700"
           />
           <button
-            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
             type="button"
           >
             <div
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -2279,7 +2279,7 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
         class="flex flex-col gap-0.5"
       >
         <div
-          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+          class="rounded bg-white dim:bg-theme-dim-900 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
         >
           <div
             class="flex w-full flex-col gap-3 p-4"
@@ -2298,42 +2298,42 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
                     class="flex items-center gap-1"
                   >
                     <p
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                     >
                       Tokens
                     </p>
                     <div
-                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                      class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-3 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:hidden"
                     />
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                      class="text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 sm:hidden"
                     >
                       N/A
                     </p>
                   </div>
                   <div
-                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-2xl md:leading-[29px]"
                   >
                     0
                   </div>
                 </div>
                 <div
-                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                  class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-12 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 md-lg:block"
                 />
                 <div
                   class="hidden flex-col gap-2 sm:flex"
                   data-testid="TokensHeader__balance"
                 >
                   <p
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                   >
                     Total Balance
                   </p>
                   <div
-                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                    class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 dim:text-theme-dim-50 md:text-2xl md:leading-[29px]"
                   >
                     <p
-                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                      class="text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500"
                     >
                       N/A
                     </p>
@@ -2347,7 +2347,7 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
                   class="my-auto flex w-full flex-1 md:w-auto"
                 >
                   <button
-                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 my-auto flex-1 px-8 dim:bg-theme-dim-navy-600 dim:disabled:bg-theme-dim-navy-900 dim:disabled:text-theme-dim-navy-700 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
                     data-testid="TokensHeader__send-button"
                     type="button"
                   >
@@ -2359,7 +2359,7 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
                   </button>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dim:bg-theme-dim-navy-900 dim:text-theme-dim-50 dim-hover:bg-theme-dim-navy-700 dark:hover:bg-theme-dark-navy-700"
                   data-testid="TokenHeader__receive-modal-toggle"
                   type="button"
                 >

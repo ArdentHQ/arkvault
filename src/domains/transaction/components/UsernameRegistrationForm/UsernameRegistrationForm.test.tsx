@@ -1,4 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
+import { BigNumber } from "@/app/lib/helpers";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
@@ -259,6 +260,47 @@ describe("UsernameRegistrationForm", () => {
 		transactionMock.mockRestore();
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
+	});
+
+	it("should pass `legacyNonce` when wallet is a legacy cold wallet", async () => {
+		const isLegacyColdSpy = vi.spyOn(wallet, "isLegacyCold").mockReturnValue(true);
+		const legacyNonceSpy = vi.spyOn(wallet, "legacyNonce").mockReturnValue(BigNumber.make(1));
+
+		const form = {
+			clearErrors: vi.fn(),
+			getValues: () => ({
+				gasLimit: "1",
+				gasPrice: "1",
+				mnemonic: MNEMONICS[0],
+				network: wallet.network(),
+				senderAddress: wallet.address(),
+				username: "testuser",
+			}),
+			setError: vi.fn(),
+			setValue: vi.fn(),
+		};
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signUsernameRegistration")
+			.mockReturnValue(Promise.resolve(usernameResignationFixture.data.hash));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [usernameResignationFixture.data.hash],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createTransactionMock(wallet);
+
+		await signUsernameRegistration({ env, form, profile });
+
+		expect(isLegacyColdSpy).toHaveBeenCalled();
+		expect(legacyNonceSpy).toHaveBeenCalled();
+		expect(signMock).toHaveBeenCalledWith(expect.objectContaining({ nonce: "1" }));
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		isLegacyColdSpy.mockRestore();
+		legacyNonceSpy.mockRestore();
 	});
 
 	it("should set sender address and sync wallet when not fully restored", async () => {

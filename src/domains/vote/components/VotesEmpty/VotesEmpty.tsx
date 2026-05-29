@@ -13,7 +13,7 @@ export const VotesEmpty = () => {
 
 	return (
 		<EmptyBlock>
-			<div className="flex flex-col items-center justify-between space-y-4 space-x-3 md:flex-row md:space-y-0">
+			<div className="flex flex-col items-center justify-between space-x-3 space-y-4 md:flex-row md:space-y-0">
 				<span className="text-center md:text-left">
 					<Trans
 						i18nKey="VOTE.VOTES_PAGE.EMPTY_MESSAGE"
@@ -34,7 +34,7 @@ export const VotesEmpty = () => {
 						<div className="flex items-center space-x-2">
 							<Icon
 								name="ArrowTurnDownBracket"
-								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+								className="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
 							/>
 							<span>{t("DASHBOARD.WALLET_CONTROLS.IMPORT")}</span>
 						</div>
@@ -48,7 +48,7 @@ export const VotesEmpty = () => {
 						<div className="flex items-center space-x-2">
 							<Icon
 								name="Plus"
-								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+								className="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
 							/>
 							<span>{t("DASHBOARD.WALLET_CONTROLS.CREATE")}</span>
 						</div>

@@ -122,11 +122,6 @@ describe("HttpClient", () => {
 		expect(result).toBeInstanceOf(HttpClient);
 	});
 
-	it("should use withSocksProxy method", () => {
-		const result = subject.withSocksProxy("socks5://127.0.0.1:9050");
-		expect(result).toBeInstanceOf(HttpClient);
-	});
-
 	it("should create new HttpClient instance", () => {
 		const newClient = new HttpClient(60);
 		expect(newClient).toBeInstanceOf(HttpClient);

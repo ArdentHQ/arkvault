@@ -14,17 +14,17 @@ const EmptyVotes = () => {
 	const { t } = useTranslation();
 	return (
 		<div
-			className="xs:justify-center flex w-full flex-row items-center justify-start md:justify-start"
+			className="flex w-full flex-row items-center justify-start xs:justify-center md:justify-start"
 			data-testid="EmptyVotes"
 		>
-			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left">
-				<div className="md-lg:hidden hidden gap-2 sm:flex">
+			<div className="px-[22px] pb-4 text-center text-base font-semibold leading-5 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left">
+				<div className="hidden gap-2 sm:flex md-lg:hidden">
 					<span>{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION_SHORT")} </span>
 					<Link to={votesHelpLink} isExternal className="inline-flex items-center">
 						<span className="text-base leading-5">{t("COMMON.LEARN")}</span>
 					</Link>
 				</div>
-				<div className="md-lg:flex hidden gap-2">
+				<div className="hidden gap-2 md-lg:flex">
 					<span>{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")} </span>
 					<Link to={votesHelpLink} isExternal className="inline-flex items-center">
 						<span className="text-base leading-5">{t("COMMON.LEARN_MORE")}</span>
@@ -45,9 +45,9 @@ export const ValidatorStatusIcon = ({ votes, activeValidators }: ValidatorStatus
 		return (
 			<div
 				data-testid="ValidatorStatusIcon-Active"
-				className="bg-theme-success-100 dark:border-theme-success-800 dim:border-theme-success-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+				className="flex h-5 w-5 items-center justify-center rounded-sm border border-transparent bg-theme-success-100 dim:border-theme-success-800 dark:border-theme-success-800 dark:bg-transparent"
 			>
-				<div className="bg-theme-success-700 border-theme-success-200 dark:bg-theme-success-400 dark:border-theme-success-700 dim:bg-theme-success-400 dim:border-theme-success-700 h-2 w-2 rounded-full border-2" />
+				<div className="h-2 w-2 rounded-full border-2 border-theme-success-200 bg-theme-success-700 dim:border-theme-success-700 dim:bg-theme-success-400 dark:border-theme-success-700 dark:bg-theme-success-400" />
 			</div>
 		);
 	}
@@ -56,9 +56,9 @@ export const ValidatorStatusIcon = ({ votes, activeValidators }: ValidatorStatus
 		return (
 			<div
 				data-testid="ValidatorStatusIcon-StandBy"
-				className="bg-theme-warning-100 dark:border-theme-warning-800 dim:border-theme-warning-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+				className="flex h-5 w-5 items-center justify-center rounded-sm border border-transparent bg-theme-warning-100 dim:border-theme-warning-800 dark:border-theme-warning-800 dark:bg-transparent"
 			>
-				<div className="bg-theme-warning-700 border-theme-warning-200 dark:bg-theme-warning-400 dark:border-theme-warning-700 dim:bg-theme-warning-400 dim:border-theme-warning-700 h-2 w-2 rounded-full border-2" />
+				<div className="h-2 w-2 rounded-full border-2 border-theme-warning-200 bg-theme-warning-700 dim:border-theme-warning-700 dim:bg-theme-warning-400 dark:border-theme-warning-700 dark:bg-theme-warning-400" />
 			</div>
 		);
 	}
@@ -66,9 +66,9 @@ export const ValidatorStatusIcon = ({ votes, activeValidators }: ValidatorStatus
 	return (
 		<div
 			data-testid="ValidatorStatusIcon-Resigned"
-			className="bg-theme-danger-100 dark:border-theme-danger-800 dim:border-theme-danger-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+			className="flex h-5 w-5 items-center justify-center rounded-sm border border-transparent bg-theme-danger-100 dim:border-theme-danger-800 dark:border-theme-danger-800 dark:bg-transparent"
 		>
-			<div className="bg-theme-danger-700 border-theme-danger-200 dark:bg-theme-danger-400 dark:border-theme-danger-700 dim:bg-theme-danger-400 dim:border-theme-danger-700 h-2 w-2 rounded-full border-2" />
+			<div className="h-2 w-2 rounded-full border-2 border-theme-danger-200 bg-theme-danger-700 dim:border-theme-danger-700 dim:bg-theme-danger-400 dark:border-theme-danger-700 dark:bg-theme-danger-400" />
 		</div>
 	);
 };
@@ -85,7 +85,7 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 		return (
 			<Label
 				color="success-bg"
-				className="dark:border-theme-success-800 dim:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+				className="flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dim:border-theme-success-800 dark:border-solid dark:border-theme-success-800"
 			>
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: activeCount })}
 			</Label>
@@ -96,7 +96,7 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 		return (
 			<Label
 				color="warning"
-				className="dim:border-solid flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+				className="flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dim:border-solid dark:border-solid"
 			>
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: standbyCount })}
 			</Label>
@@ -107,7 +107,7 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 		return (
 			<Label
 				color="danger"
-				className="dim:border-solid flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+				className="flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dim:border-solid dark:border-solid"
 				variant="solid"
 			>
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED", { count: resignedCount })}
@@ -125,14 +125,14 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 					{activeCount > 0 && t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_COUNT", { count: activeCount })}
 
 					{standbyCount > 0 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700">
+						<span className="text-theme-secondary-500 dim:text-theme-dim-700 dark:text-theme-secondary-700">
 							{activeCount > 0 && " / "}
 							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: standbyCount })}
 						</span>
 					)}
 
 					{resignedCount > 0 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700">
+						<span className="text-theme-secondary-500 dim:text-theme-dim-700 dark:text-theme-secondary-700">
 							{activeCount > 0 && standbyCount > 0 ? " & " : " / "}
 							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED_COUNT", { count: resignedCount })}
 						</span>
@@ -164,21 +164,21 @@ const Votes = ({ votes, activeValidators, withDivider, hasTokens }: VotesPropert
 	const validator = votes[0].wallet!;
 
 	return (
-		<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none">
-			<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent">
-				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm whitespace-nowrap md:text-base md:leading-5">
+		<div className="mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none">
+			<div className="flex w-full flex-1 flex-row items-center gap-2 bg-theme-secondary-100 p-3 text-sm font-semibold leading-[17px] dim:bg-theme-dim-950 dark:bg-theme-dark-950 md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dim:bg-transparent md:dark:bg-transparent">
+				<p className="whitespace-nowrap text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 md:text-base md:leading-5">
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 				</p>
 
 				<div
 					className={cn({
+						"max-w-28 flex-1 shrink-0 truncate xs:max-w-32 sm:max-w-40 md:max-w-44": !validator.username(),
 						"w-full shrink-0": !!validator.username(),
-						"xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44": !validator.username(),
 					})}
 				>
 					<ValidatorName
 						validatorName={validator.username() || validator.address()}
-						className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5"
+						className="text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5"
 						isUsername={validator.username() !== undefined}
 					/>
 				</div>
@@ -187,45 +187,45 @@ const Votes = ({ votes, activeValidators, withDivider, hasTokens }: VotesPropert
 			{withDivider && (
 				<Divider
 					type="vertical"
-					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 md-lg:flex mr-1 ml-1 hidden h-5 p-0"
+					className="ml-1 mr-1 hidden h-5 border-theme-secondary-300 p-0 dim:border-s-theme-dim-700 dark:border-s-theme-dark-700 md-lg:flex"
 				/>
 			)}
 
 			<div
 				className={cn(
-					"flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0",
+					"flex-col gap-2 px-4 py-3 text-base font-semibold leading-5 md:flex-row md:items-center md:px-0 md:py-0",
 					{
 						flex: !hasTokens,
-						"md-lg:flex hidden": hasTokens,
+						"hidden md-lg:flex": hasTokens,
 					},
 				)}
 			>
-				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5">
+				<p className="text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 md:text-base md:leading-5">
 					{t("COMMON.RANK")}
 				</p>
-				<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5">
+				<p className="mb-2 text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50 md:mb-0 md:text-base md:leading-5">
 					{validator.rank() ? `#${validator.rank()}` : t("COMMON.NOT_AVAILABLE")}
 				</p>
-				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden">
+				<p className="text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 md:hidden">
 					{t("COMMON.VALIDATOR_STATUS")}
 				</p>
 				<ValidatorStatus votes={votes} activeValidators={activeValidators} />
 				<Divider
 					type="vertical"
-					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+					className="ml-1 mr-3 hidden h-5 border-theme-secondary-300 p-0 dim:border-s-theme-dim-700 dark:border-s-theme-dark-700 md:flex"
 				/>
 			</div>
 			<div
 				className={cn("status", {
 					hidden: !hasTokens,
-					"md-lg:hidden hidden sm:flex": hasTokens,
+					"hidden sm:flex md-lg:hidden": hasTokens,
 				})}
 			>
 				<ValidatorStatusIcon votes={votes} activeValidators={activeValidators} />
 
 				<Divider
 					type="vertical"
-					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-3 hidden h-5 p-0 md:flex"
+					className="ml-3 mr-1 hidden h-5 border-theme-secondary-300 p-0 dim:border-s-theme-dim-700 dark:border-s-theme-dark-700 md:flex"
 				/>
 			</div>
 		</div>

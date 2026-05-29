@@ -6,6 +6,8 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 import { SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
+import { assertWallet } from "@/utils/assertions";
+import { Contracts } from "@/app/lib/profiles";
 
 export enum ImportAddressStep {
 	MethodStep = 1,
@@ -19,6 +21,61 @@ export interface StepHeaderConfig {
 	subtitle?: string;
 	titleIcon?: React.ReactNode;
 }
+
+export interface ImportBackButtonProps {
+	onBack?: () => void;
+	showBack?: boolean;
+}
+
+export const forgetImportedWallets = (profile: Contracts.IProfile, importedWallet?: Contracts.IReadWriteWallet) => {
+	assertWallet(importedWallet);
+
+	for (const profileWallet of profile.wallets().values()) {
+		if (profileWallet.address() === importedWallet.address()) {
+			profile.wallets().forget(profileWallet.id());
+		}
+	}
+
+	if (profile.wallets().selected().length === 0) {
+		profile.wallets().selectOne(profile.wallets().first());
+	}
+};
+
+export const getActiveStep = (
+	activeTab: ImportAddressStep,
+	isLedgerImport: boolean,
+	isHDWalletImport: boolean,
+	ledgerActiveTab?: LedgerTabStep,
+	hdWalletActiveTab?: HDWalletTabStep,
+): number => {
+	if (isHDWalletImport && hdWalletActiveTab !== undefined) {
+		return hdWalletActiveTab;
+	}
+
+	if (isLedgerImport && ledgerActiveTab !== undefined) {
+		return ledgerActiveTab - 2;
+	}
+
+	if (activeTab !== ImportAddressStep.MethodStep) {
+		return activeTab - 1;
+	}
+
+	return 1;
+};
+
+export const ImportBackButton = ({ onBack, showBack }: ImportBackButtonProps) => {
+	const { t } = useTranslation();
+
+	if (!showBack || !onBack) {
+		return null;
+	}
+
+	return (
+		<Button data-testid="ImportWallet__back-button" variant="secondary" onClick={onBack}>
+			{t("COMMON.BACK")}
+		</Button>
+	);
+};
 
 export function useStepHeaderConfig(step: ImportAddressStep, importOption?: ImportOption): StepHeaderConfig {
 	const { t } = useTranslation();
@@ -61,7 +118,7 @@ export function useStepHeaderConfig(step: ImportAddressStep, importOption?: Impo
 				titleIcon: (
 					<Icon
 						name="Completed"
-						className="text-theme-success-100 dark:text-theme-success-900 hidden md:block"
+						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
 						dimensions={[24, 24]}
 						data-testid="icon-Completed"
 					/>
@@ -92,7 +149,7 @@ export function useLedgerStepHeaderConfig(step: LedgerTabStep, importOption?: Im
 				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE"),
 				title: t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE"),
 				titleIcon: (
-					<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600 hidden md:block" />
+					<Icon name="NoteCheck" dimensions={[22, 22]} className="hidden text-theme-primary-600 md:block" />
 				),
 			};
 		}
@@ -104,7 +161,7 @@ export function useLedgerStepHeaderConfig(step: LedgerTabStep, importOption?: Im
 				titleIcon: (
 					<Icon
 						name="DoubleCheckedCircle"
-						className="text-theme-success-100 dark:text-theme-success-900 hidden md:block"
+						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
 						dimensions={[22, 22]}
 					/>
 				),
@@ -173,7 +230,7 @@ export function useHDWalletStepHeaderConfig(step: HDWalletTabStep, importMethod?
 				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ADDRESS_STEP.SUBTITLE"),
 				title: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ADDRESS_STEP.TITLE"),
 				titleIcon: (
-					<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600 hidden md:block" />
+					<Icon name="NoteCheck" dimensions={[22, 22]} className="hidden text-theme-primary-600 md:block" />
 				),
 			};
 		}
@@ -185,7 +242,7 @@ export function useHDWalletStepHeaderConfig(step: HDWalletTabStep, importMethod?
 				titleIcon: (
 					<Icon
 						name="DoubleCheckedCircle"
-						className="text-theme-success-100 dark:text-theme-success-900 hidden md:block"
+						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
 						dimensions={[22, 22]}
 					/>
 				),

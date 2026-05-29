@@ -23,7 +23,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	const { byFeeType } = useConfirmationTimes({ blockTime });
 
 	return (
-		<ButtonGroup className="flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
+		<ButtonGroup className="flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
 			{Object.entries(options).map(([optionValue, { label, displayValue, displayValueConverted }]) => {
 				const isSelected = optionValue === selectedOption;
 
@@ -32,23 +32,23 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 						key={optionValue}
 						value={displayValue}
 						isSelected={() => optionValue === selectedOption}
-						className="group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
+						className="group p-0 dim:border-theme-dim-700 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 dim-hover:bg-theme-dim-700 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
 						setSelectedValue={() => onChange(optionValue as InputFeeOption)}
 					>
 						<div
 							className={cn(
-								"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all",
+								"flex w-full flex-col text-theme-secondary-700 transition-all dim:text-theme-dim-200 dark:text-theme-dark-200",
 								{
-									"dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50": !isSelected,
+									"dim:text-theme-dim-navy-50 dark:group-hover:text-theme-dark-50": !isSelected,
 								},
 							)}
 						>
 							<div className="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2">
 								<div
 									className={cn("text-sm leading-[17px] sm:leading-5", {
-										"group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50 group-hover:dim:text-theme-dim-50":
+										"group-hover:text-theme-secondary-900 group-hover:dim:text-theme-dim-50 dark:group-hover:text-theme-dark-50":
 											!isSelected,
-										"text-theme-navy-700 dark:text-theme-dark-50 dim:text-theme-dim-50": isSelected,
+										"text-theme-navy-700 dim:text-theme-dim-50 dark:text-theme-dark-50": isSelected,
 									})}
 								>
 									{label}
@@ -66,9 +66,9 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 										)}
 										<span
 											className={cn(
-												"text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden",
+												"ml-1 text-xs leading-[15px] text-theme-secondary-500 transition-all sm:hidden",
 												{
-													"dark:text-theme-dark-500 dim:text-theme-dim-200": !isSelected,
+													"dim:text-theme-dim-200 dark:text-theme-dark-500": !isSelected,
 													"dim:text-theme-dim-navy-600": isSelected,
 													hidden: !showConvertedValues,
 												},
@@ -80,7 +80,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 											ticker={ticker}
 											value={displayValue}
 											className={cn("text-xs leading-[15px] transition-all", {
-												"dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-200":
+												"dim:text-theme-dim-200 group-hover:dim:text-theme-dim-200 dark:text-theme-dark-500 dark:group-hover:text-theme-dark-200":
 													!isSelected,
 												"dim:text-theme-dim-navy-600": isSelected,
 												"text-theme-secondary-500": showConvertedValues,
@@ -88,9 +88,9 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 										/>
 										<span
 											className={cn(
-												"text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden",
+												"text-xs leading-[15px] text-theme-secondary-500 transition-all sm:hidden",
 												{
-													"dark:text-theme-dark-500 dim:text-theme-dim-200": !isSelected,
+													"dim:text-theme-dim-200 dark:text-theme-dark-500": !isSelected,
 													"dim:text-theme-dim-navy-600": isSelected,
 													hidden: !showConvertedValues,
 												},
@@ -103,11 +103,11 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 							</div>
 							<div
 								className={cn(
-									"text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all",
+									"flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200",
 									{
-										"bg-theme-navy-100 dark:bg-theme-dark-500 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-400":
+										"bg-theme-navy-100 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-400 dark:bg-theme-dark-500":
 											isSelected,
-										"bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-200":
+										"bg-theme-navy-50 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-200 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-200":
 											!isSelected,
 									},
 								)}

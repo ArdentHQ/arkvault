@@ -41,7 +41,7 @@ export const MigratedAddressRow = ({
 							<Amount
 								ticker={transaction.network().ticker()}
 								value={transaction.amount()}
-								className="text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 font-semibold"
+								className="font-semibold text-theme-primary-600 dim:text-theme-dim-500 dark:text-theme-secondary-500"
 							/>
 						</div>
 					</div>
@@ -57,7 +57,7 @@ export const MigratedAddressRow = ({
 						data-testid="MigratedAddressRow_edit-button"
 						variant="transparent"
 						onClick={onEdit}
-						className="text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 pr-3!"
+						className="pr-3! text-theme-primary-600 dim:text-theme-dim-500 dark:text-theme-secondary-500"
 					>
 						<Icon name="Pencil" />
 						<span>{t("COMMON.EDIT")}</span>

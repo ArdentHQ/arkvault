@@ -153,4 +153,22 @@ describe("Transactions", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 	});
+
+	it("should toggle table visibility when clicking toggle", async () => {
+		renderResponsiveWithRoute(<Transactions migrator={migrator} />, "lg", {
+			route: `/profiles/${profile.id()}/dashboard`,
+		});
+
+		expect(screen.getByTestId("TransactionTable")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("TransactionTableToggle"));
+		await waitFor(() => {
+			expect(screen.queryByTestId("TransactionTable")).not.toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("TransactionTableToggle"));
+		await waitFor(() => {
+			expect(screen.getByTestId("TransactionTable")).toBeInTheDocument();
+		});
+	});
 });

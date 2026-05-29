@@ -138,7 +138,7 @@ export const Address = ({
 							className={cn(
 								addressClass ||
 									(walletName
-										? "text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+										? "text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
 										: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),
@@ -156,7 +156,7 @@ export const Address = ({
 						>
 							<Icon
 								name="Copy"
-								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+								className="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
 							/>
 						</Clipboard>
 					)}
