@@ -12,8 +12,8 @@ import { WalletSetting } from "@/app/lib/profiles/wallet.enum";
 import { twMerge } from "tailwind-merge";
 
 export interface UpdateWalletNameProperties {
-	onAfterSave: () => void;
-	onCancel: () => void;
+	onAfterSave?: () => void;
+	onCancel?: () => void;
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
 	children?: ReactElement;
@@ -55,7 +55,7 @@ export const UpdateWalletNameForm = ({
 		wallet.mutator().alias(name);
 		await persist();
 
-		onAfterSave();
+		onAfterSave?.();
 	};
 
 	return (
