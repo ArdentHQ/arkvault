@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ImportWallet LedgerScanStep component > should show loaded wallets message for single wallet 1`] = `
+<Trans
+  i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_SINGLE_ADDRESS"
+/>
+`;
