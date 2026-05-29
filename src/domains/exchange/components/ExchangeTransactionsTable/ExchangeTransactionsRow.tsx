@@ -128,6 +128,7 @@ export const ExchangeTransactionsRow = ({
 						{exchangeTransaction.orderId() ? (
 							<Address
 								address={exchangeTransaction.orderId()}
+								truncateOnTable
 								addressClass="text-theme-primary-600 text-sm"
 							/>
 						) : (

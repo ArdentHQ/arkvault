@@ -107,6 +107,7 @@ export const RecipientItemMobile = ({
 						<div className="max-w-100">
 							<Address
 								showCopyButton={true}
+								truncateOnTable={true}
 								address={address}
 								addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
 							/>
@@ -286,6 +287,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 								<div className="max-w-100">
 									<Address
 										showCopyButton={true}
+										truncateOnTable={true}
 										address={wallet.address()}
 										addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
 									/>

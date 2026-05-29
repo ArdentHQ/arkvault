@@ -328,6 +328,7 @@ export const PortfolioHeader = ({
 													<Address
 														size={isXs ? "sm" : undefined}
 														address={wallet.address()}
+														truncateOnTable={true}
 														addressClass="leading-[17px] sm:leading-5"
 													/>
 												</div>

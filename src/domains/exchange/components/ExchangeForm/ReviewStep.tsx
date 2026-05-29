@@ -1,3 +1,4 @@
+import React from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -5,9 +6,9 @@ import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
 import { FormField } from "@/app/components/Form";
 import { Link } from "@/app/components/Link";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { FormItem, FormItemRow, FormItemFooter, FormDivider } from "./ExchangeForm.blocks";
-import { MiddleTruncate } from "@/app/components/MiddleTruncate";
 
 export const ReviewStep = ({
 	withSignStep,
@@ -49,9 +50,10 @@ export const ReviewStep = ({
 					</FormItemRow>
 
 					<FormItemRow label={t("COMMON.ADDRESS")}>
-						<div className="no-ligatures text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold">
-							<MiddleTruncate text={recipientWallet} />
-						</div>
+						<TruncateMiddleDynamic
+							value={recipientWallet}
+							className="no-ligatures text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold"
+						/>
 					</FormItemRow>
 
 					{estimatedTime && (

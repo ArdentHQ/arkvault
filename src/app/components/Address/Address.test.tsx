@@ -24,6 +24,12 @@ describe("Formatted Address", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it.each([true, false])("should render with truncate on table = %s", (truncateOnTable) => {
+		const { container } = render(<Address address={sampleAddress} truncateOnTable={truncateOnTable} />);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it.each(["center", "right"])("should render with %s alignment", (alignment) => {
 		const { container } = render(<Address address={sampleAddress} alignment={alignment} />);
 
