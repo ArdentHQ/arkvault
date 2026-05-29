@@ -7,6 +7,8 @@ import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { createLedgerMocks } from "@/tests/mocks/Ledger";
 
 describe("MigratedAddressRow", () => {
+	const testPath = "m/44'/1'/1'/0/0";
+
 	let profile: Contracts.IProfile;
 	const route = `/profiles/${getMainsailProfileId()}/dashboard`;
 
@@ -19,7 +21,7 @@ describe("MigratedAddressRow", () => {
 		mockNanoSTransport();
 		const migrator = new LedgerMigrator({ env, profile: env.profiles().first() });
 		const publicKeyPaths = new Map([
-			["m/44'/1'/1'/0/0", profile.wallets().first().publicKey()!],
+			[testPath, profile.wallets().first().publicKey()!],
 			["m/44'/1'/1'/0/1", profile.wallets().last().publicKey()!],
 		]);
 
@@ -28,7 +30,7 @@ describe("MigratedAddressRow", () => {
 		await migrator.createTransactions([
 			{
 				address: profile.wallets().first().address(),
-				path: "m/44'/1'/1'/0/0",
+				path: testPath,
 			},
 		]);
 
@@ -41,14 +43,14 @@ describe("MigratedAddressRow", () => {
 	it("should render in edit mode", async () => {
 		mockNanoSTransport();
 		const migrator = new LedgerMigrator({ env, profile: env.profiles().first() });
-		const publicKeyPaths = new Map([["m/44'/1'/1'/0/0", profile.wallets().first().publicKey()!]]);
+		const publicKeyPaths = new Map([[testPath, profile.wallets().first().publicKey()!]]);
 
 		const ledgerMocks = createLedgerMocks(profile.wallets().first(), publicKeyPaths);
 
 		await migrator.createTransactions([
 			{
 				address: profile.wallets().first().address(),
-				path: "m/44'/1'/1'/0/0",
+				path: testPath,
 			},
 		]);
 
@@ -57,6 +59,87 @@ describe("MigratedAddressRow", () => {
 		});
 		await userEvent.click(screen.getByText("Edit"));
 		expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+
+		ledgerMocks.restoreAll();
+	});
+
+	it("should close edit mode on cancel", async () => {
+		mockNanoSTransport();
+		const migrator = new LedgerMigrator({ env, profile: env.profiles().first() });
+		const publicKeyPaths = new Map([[testPath, profile.wallets().first().publicKey()!]]);
+
+		const ledgerMocks = createLedgerMocks(profile.wallets().first(), publicKeyPaths);
+
+		await migrator.createTransactions([
+			{
+				address: profile.wallets().first().address(),
+				path: testPath,
+			},
+		]);
+
+		render(<MigratedAddressRowMobile profile={profile} transaction={migrator.transactions().at(0)!} />, {
+			route,
+		});
+		await userEvent.click(screen.getByText("Edit"));
+		expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByText("Cancel"));
+		expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
+
+		ledgerMocks.restoreAll();
+	});
+
+	it("should save wallet name", async () => {
+		mockNanoSTransport();
+		const migrator = new LedgerMigrator({ env, profile: env.profiles().first() });
+		const publicKeyPaths = new Map([[testPath, profile.wallets().first().publicKey()!]]);
+
+		const ledgerMocks = createLedgerMocks(profile.wallets().first(), publicKeyPaths);
+
+		await migrator.createTransactions([
+			{
+				address: profile.wallets().first().address(),
+				path: testPath,
+			},
+		]);
+
+		render(<MigratedAddressRowMobile profile={profile} transaction={migrator.transactions().at(0)!} />, {
+			route,
+		});
+
+		await userEvent.click(screen.getByText("Edit"));
+		expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+
+		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "UpdatedWallet");
+		await userEvent.click(screen.getByText("Save"));
+
+		expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
+
+		ledgerMocks.restoreAll();
+	});
+
+	it("should trigger onCancel callback from UpdateWalletNameForm", async () => {
+		mockNanoSTransport();
+		const migrator = new LedgerMigrator({ env, profile: env.profiles().first() });
+		const publicKeyPaths = new Map([[testPath, profile.wallets().first().publicKey()!]]);
+
+		const ledgerMocks = createLedgerMocks(profile.wallets().first(), publicKeyPaths);
+
+		await migrator.createTransactions([
+			{
+				address: profile.wallets().first().address(),
+				path: testPath,
+			},
+		]);
+
+		render(<MigratedAddressRowMobile profile={profile} transaction={migrator.transactions().at(0)!} />, {
+			route,
+		});
+		await userEvent.click(screen.getByText("Edit"));
+		expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByText("Cancel"));
+		expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
 
 		ledgerMocks.restoreAll();
 	});
