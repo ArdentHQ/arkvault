@@ -3,6 +3,7 @@ import React, { JSX, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { LedgerTabs } from "./Ledger/LedgerTabs";
+import { HDWalletTabs } from "./HDWallet/HDWalletTabs";
 import { ImportDetailStep } from "./ImportDetailStep";
 import { SuccessStep } from "./SuccessStep";
 import { Form } from "@/app/components/Form";
@@ -23,10 +24,11 @@ import {
 	useHDWalletStepHeaderConfig,
 	useLedgerStepHeaderConfig,
 	useStepHeaderConfig,
+	forgetImportedWallets,
+	getActiveStep,
 } from "./ImportAddressSidePanel.blocks";
 import { OptionsValue } from "@/domains/wallet/hooks";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
-import { HDWalletTabs } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletTabs";
 import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
 
 export const ImportAddressesSidePanel = ({
@@ -121,24 +123,10 @@ export const ImportAddressesSidePanel = ({
 		}
 	});
 
-	const forgetImportedWallets = (importedWallet?: Contracts.IReadWriteWallet) => {
-		assertWallet(importedWallet);
-
-		for (const profileWallet of activeProfile.wallets().values()) {
-			if (profileWallet.address() === importedWallet.address()) {
-				activeProfile.wallets().forget(profileWallet.id());
-			}
-		}
-
-		if (activeProfile.wallets().selected().length === 0) {
-			activeProfile.wallets().selectOne(activeProfile.wallets().first());
-		}
-	};
-
 	const handleOpenChange = (open: boolean) => {
 		// Remove the imported wallet, only if the user exits in encryption password step.
 		if (!open && activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {
-			forgetImportedWallets(importedWallet);
+			forgetImportedWallets(activeProfile, importedWallet);
 		}
 
 		if (!open) {
@@ -188,7 +176,7 @@ export const ImportAddressesSidePanel = ({
 		}
 
 		if (activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {
-			forgetImportedWallets(importedWallet);
+			forgetImportedWallets(activeProfile, importedWallet);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -290,21 +278,6 @@ export const ImportAddressesSidePanel = ({
 	}, [useEncryption, activeTab, isHDWalletImport, HDWalletActiveTab]);
 
 	const isMethodStep = activeTab === ImportAddressStep.MethodStep;
-
-	const getActiveStep = () => {
-		if (isHDWalletImport) {
-			return HDWalletActiveTab;
-		}
-
-		if (isLedgerImport) {
-			return ledgerActiveTab - 2;
-		}
-		if (!isMethodStep) {
-			return activeTab - 1;
-		}
-		return 1;
-	};
-
 	const isLastStep = activeTab === ImportAddressStep.SummaryStep;
 
 	return (
@@ -319,7 +292,7 @@ export const ImportAddressesSidePanel = ({
 			onMountChange={onMountChange}
 			hasSteps={!isMethodStep}
 			totalSteps={stepsCount}
-			activeStep={getActiveStep()}
+			activeStep={getActiveStep(activeTab, isLedgerImport, isHDWalletImport, ledgerActiveTab, HDWalletActiveTab)}
 			onBack={handleBack}
 			footer={
 				!isLedgerImport &&
@@ -352,9 +325,7 @@ export const ImportAddressesSidePanel = ({
 									mnemonic={getValues("mnemonic")}
 									onClickEditWalletName={handleEditLedgerAlias}
 									onStepChange={setHDWalletActiveTab}
-									onCancel={() => {
-										handleOpenChange(false);
-									}}
+									onCancel={() => handleOpenChange(false)}
 									onSubmit={handleFinish}
 									onBack={handleReturnToSelection}
 								/>
@@ -362,11 +333,9 @@ export const ImportAddressesSidePanel = ({
 
 							{isLedgerImport && (
 								<LedgerTabs
+									onCancel={() => handleOpenChange(false)}
 									onClickEditWalletName={handleEditLedgerAlias}
 									onStepChange={setLedgerActiveTab}
-									onCancel={() => {
-										handleOpenChange(false);
-									}}
 									onSubmit={handleFinish}
 									onBack={handleReturnToSelection}
 								/>

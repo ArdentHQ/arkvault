@@ -18,6 +18,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { Trans } from "react-i18next";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
+import { usePortfolioHeaderActions } from "./usePortfolioHeaderActions";
 import { WalletActions } from "@/domains/portfolio/components/WalletHeader/WalletHeader.blocks";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 import { WalletIcons } from "@/app/components/WalletIcons";
@@ -62,25 +63,12 @@ export const PortfolioHeader = ({
 
 	const isRestored = wallet.hasBeenFullyRestored();
 
-	const handleSendRegistration = (registrationType?: "validatorRegistration" | "usernameRegistration") => {
-		if (registrationType === "validatorRegistration") {
-			openPanel(Panel.SendValidatorRegistration);
-		} else {
-			openPanel(Panel.SendUsernameRegistration);
-		}
-	};
-
-	const handleSendContractDeployment = () => {
-		openPanel(Panel.SendContractDeployment);
-	};
-
-	const handleSendUsernameResignation = () => {
-		openPanel(Panel.SendUsernameResignation);
-	};
-
-	const handleSendValidatorResignation = () => {
-		openPanel(Panel.SendValidatorResignation);
-	};
+	const {
+		handleSendRegistration,
+		handleSendContractDeployment,
+		handleSendUsernameResignation,
+		handleSendValidatorResignation,
+	} = usePortfolioHeaderActions();
 
 	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({
 		handleSendContractDeployment,
