@@ -194,7 +194,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="max-xl:pt-2 flex flex-col xl:hidden"
+                  class="flex flex-col max-xl:pt-2 xl:hidden"
                 >
                   <span
                     aria-busy="true"
@@ -498,7 +498,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="max-xl:pt-2 flex flex-col xl:hidden"
+                  class="flex flex-col max-xl:pt-2 xl:hidden"
                 >
                   <span
                     aria-busy="true"
@@ -802,7 +802,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="max-xl:pt-2 flex flex-col xl:hidden"
+                  class="flex flex-col max-xl:pt-2 xl:hidden"
                 >
                   <span
                     aria-busy="true"
@@ -1106,7 +1106,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="max-xl:pt-2 flex flex-col xl:hidden"
+                  class="flex flex-col max-xl:pt-2 xl:hidden"
                 >
                   <span
                     aria-busy="true"
@@ -1410,7 +1410,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="max-xl:pt-2 flex flex-col xl:hidden"
+                  class="flex flex-col max-xl:pt-2 xl:hidden"
                 >
                   <span
                     aria-busy="true"
@@ -1889,7 +1889,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
                   </span>
                 </div>
                 <div
-                  class="max-xl:pt-2 flex flex-col xl:hidden"
+                  class="flex flex-col max-xl:pt-2 xl:hidden"
                 >
                   <span
                     aria-busy="true"
@@ -2193,7 +2193,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
                   </span>
                 </div>
                 <div
-                  class="max-xl:pt-2 flex flex-col xl:hidden"
+                  class="flex flex-col max-xl:pt-2 xl:hidden"
                 >
                   <span
                     aria-busy="true"
@@ -2497,7 +2497,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
                   </span>
                 </div>
                 <div
-                  class="max-xl:pt-2 flex flex-col xl:hidden"
+                  class="flex flex-col max-xl:pt-2 xl:hidden"
                 >
                   <span
                     aria-busy="true"
@@ -2801,7 +2801,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
                   </span>
                 </div>
                 <div
-                  class="max-xl:pt-2 flex flex-col xl:hidden"
+                  class="flex flex-col max-xl:pt-2 xl:hidden"
                 >
                   <span
                     aria-busy="true"
@@ -3105,7 +3105,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
                   </span>
                 </div>
                 <div
-                  class="max-xl:pt-2 flex flex-col xl:hidden"
+                  class="flex flex-col max-xl:pt-2 xl:hidden"
                 >
                   <span
                     aria-busy="true"
