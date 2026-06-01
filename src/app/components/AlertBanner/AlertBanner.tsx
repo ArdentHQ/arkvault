@@ -6,7 +6,7 @@ import { Icon } from "@/app/components/Icon";
 export const Warning = ({ children }: { children?: React.ReactElement | string }) => (
 	<div
 		data-testid="AlertBanner_warning"
-		className="max-sm:text-sm flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dim:border-theme-warning-600 dim:bg-theme-dim-900 dark:border-theme-warning-600 dark:bg-transparent sm:px-6 sm:py-4 sm:leading-5"
+		className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dim:border-theme-warning-600 dim:bg-theme-dim-900 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
 	>
 		<Spinner color="warning-alt" size="sm" width={3} />
 		<Divider
@@ -22,7 +22,7 @@ export const Warning = ({ children }: { children?: React.ReactElement | string }
 export const Error = ({ children, title }: { children?: ReactElement | string; title?: string | ReactElement }) => (
 	<div
 		data-testid="AlertBanner_error"
-		className="max-sm:text-sm rounded-xl border border-theme-danger-200 bg-theme-danger-50 py-2 dim:border-theme-danger-400 dim:bg-theme-dim-900 dark:border-theme-danger-info-border dark:bg-transparent sm:py-4 sm:leading-5"
+		className="rounded-xl border border-theme-danger-200 bg-theme-danger-50 py-2 dim:border-theme-danger-400 dim:bg-theme-dim-900 dark:border-theme-danger-info-border dark:bg-transparent max-sm:text-sm sm:py-4 sm:leading-5"
 	>
 		<div className="mb-2 flex items-center space-x-3 px-3 sm:mb-4 sm:px-6">
 			<div className="flex items-center space-x-2 text-theme-danger-700 dim:text-theme-danger-400 dark:text-theme-danger-info-border">
@@ -40,7 +40,7 @@ export const Error = ({ children, title }: { children?: ReactElement | string; t
 export const Success = ({ children }: { children?: React.ReactElement | string }) => (
 	<div
 		data-testid="AlertBanner_success"
-		className="max-sm:text-sm flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dim:border-theme-success-500 dim:bg-theme-success-900 dark:border-theme-success-600 dark:bg-transparent sm:px-6 sm:py-4 sm:leading-5"
+		className="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dim:border-theme-success-500 dim:bg-theme-success-900 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
 	>
 		<div className="flex items-center space-x-2 text-theme-success-700 dim:text-theme-success-500">
 			<Icon name="CheckmarkDouble" size="lg" className="h-5" />

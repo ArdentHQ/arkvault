@@ -17,7 +17,7 @@ export const TransactionRowSkeleton = ({ hideSender = false }: { hideSender?: bo
 					<Skeleton width={90} height={17} />
 				</div>
 
-				<div className="max-xl:pt-2 flex flex-col xl:hidden">
+				<div className="flex flex-col max-xl:pt-2 xl:hidden">
 					<Skeleton width={90} height={13} />
 					<div className="mt-1">
 						<Skeleton width={68} height={10} />

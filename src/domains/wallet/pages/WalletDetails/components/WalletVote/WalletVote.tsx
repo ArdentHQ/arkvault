@@ -114,7 +114,7 @@ export const WalletVote = ({
 			>
 				{renderVotes()}
 			</div>
-			<div className="md:max-md:self-end w-full md:w-auto">
+			<div className="w-full md:w-auto md:max-md:self-end">
 				{wallets.length > 1 && (
 					<>
 						<Button
