@@ -10,7 +10,7 @@ export type MiddleTruncationProps = React.ComponentPropsWithoutRef<"span"> & {
 
 export function MiddleTruncation({ className, children, ...props }: MiddleTruncationProps) {
 	const containerRef = useRef<HTMLSpanElement>(null);
-	const [displayedText, setDisplayedText] = useState(children);
+	const [displayedText, setDisplayedText] = useState<string | null>(null);
 
 	useLayoutEffect(() => {
 		const element = containerRef.current;
@@ -26,19 +26,21 @@ export function MiddleTruncation({ className, children, ...props }: MiddleTrunca
 
 		recalculate();
 
-		const resizeObserver = new ResizeObserver(() => requestAnimationFrame(recalculate));
+		const resizeObserver = new ResizeObserver(() => recalculate());
 		resizeObserver.observe(element);
 		return () => resizeObserver.disconnect();
-	}, [children]);
+	}, []);
 
 	return (
-		<span
-			ref={containerRef}
-			className={cn("no-ligatures block overflow-hidden text-ellipsis whitespace-nowrap", className)}
-			title={children}
-			{...props}
-		>
-			{displayedText}
+		<span className="block w-full">
+			<span
+				ref={containerRef}
+				className={cn("no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap", className)}
+				title={children}
+				{...props}
+			>
+				{displayedText}
+			</span>
 		</span>
 	);
 }
