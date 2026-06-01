@@ -1540,7 +1540,7 @@ exports[`Dashboard > render in lg 1`] = `
                       </div>
                     </div>
                     <div
-                      class="md:max-md:self-end w-full md:w-auto"
+                      class="w-full md:w-auto md:max-md:self-end"
                     >
                       <div
                         class="md:flex"
@@ -1944,7 +1944,7 @@ exports[`Dashboard > render in lg 1`] = `
               </div>
             </div>
             <div
-              class="md:max-md:self-end w-full md:w-auto"
+              class="w-full md:w-auto md:max-md:self-end"
             >
               <div
                 class="md:flex"
@@ -9622,7 +9622,7 @@ exports[`Dashboard > render in md 1`] = `
                       </div>
                     </div>
                     <div
-                      class="md:max-md:self-end w-full md:w-auto"
+                      class="w-full md:w-auto md:max-md:self-end"
                     >
                       <div
                         class="md:flex"
@@ -10026,7 +10026,7 @@ exports[`Dashboard > render in md 1`] = `
               </div>
             </div>
             <div
-              class="md:max-md:self-end w-full md:w-auto"
+              class="w-full md:w-auto md:max-md:self-end"
             >
               <div
                 class="md:flex"
@@ -17704,7 +17704,7 @@ exports[`Dashboard > render in sm 1`] = `
                       </div>
                     </div>
                     <div
-                      class="md:max-md:self-end w-full md:w-auto"
+                      class="w-full md:w-auto md:max-md:self-end"
                     >
                       <div
                         class="md:flex"
@@ -18108,7 +18108,7 @@ exports[`Dashboard > render in sm 1`] = `
               </div>
             </div>
             <div
-              class="md:max-md:self-end w-full md:w-auto"
+              class="w-full md:w-auto md:max-md:self-end"
             >
               <div
                 class="md:flex"
@@ -22639,7 +22639,7 @@ exports[`Dashboard > render in xl 1`] = `
                       </div>
                     </div>
                     <div
-                      class="md:max-md:self-end w-full md:w-auto"
+                      class="w-full md:w-auto md:max-md:self-end"
                     >
                       <div
                         class="md:flex"
@@ -23043,7 +23043,7 @@ exports[`Dashboard > render in xl 1`] = `
               </div>
             </div>
             <div
-              class="md:max-md:self-end w-full md:w-auto"
+              class="w-full md:w-auto md:max-md:self-end"
             >
               <div
                 class="md:flex"
@@ -30441,7 +30441,7 @@ exports[`Dashboard > render in xs 1`] = `
                       </div>
                     </div>
                     <div
-                      class="md:max-md:self-end w-full md:w-auto"
+                      class="w-full md:w-auto md:max-md:self-end"
                     >
                       <div
                         class="md:flex"
@@ -30845,7 +30845,7 @@ exports[`Dashboard > render in xs 1`] = `
               </div>
             </div>
             <div
-              class="md:max-md:self-end w-full md:w-auto"
+              class="w-full md:w-auto md:max-md:self-end"
             >
               <div
                 class="md:flex"
@@ -35377,7 +35377,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="md:max-md:self-end w-full md:w-auto"
+                      class="w-full md:w-auto md:max-md:self-end"
                     >
                       <div
                         class="md:flex"
@@ -35727,7 +35727,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="md:max-md:self-end w-full md:w-auto"
+              class="w-full md:w-auto md:max-md:self-end"
             >
               <div
                 class="md:flex"
@@ -43310,7 +43310,7 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                       </div>
                     </div>
                     <div
-                      class="md:max-md:self-end w-full md:w-auto"
+                      class="w-full md:w-auto md:max-md:self-end"
                     >
                       <div
                         class="md:flex"
@@ -43808,7 +43808,7 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
               </div>
             </div>
             <div
-              class="md:max-md:self-end w-full md:w-auto"
+              class="w-full md:w-auto md:max-md:self-end"
             >
               <div
                 class="md:flex"
