@@ -169,48 +169,6 @@
 		"vitest": "^4.1.7",
 		"workbox-window": "^7.4.1"
 	},
-	"vite": {
-		"optimizeDeps": {
-			"include": [
-				"@ardenthq/arkvault-crypto",
-				"@faustbrian/node-haveibeenpwned",
-				"@ardenthq/arkvault-url",
-				"assert",
-				"browser-fs-access",
-				"classnames",
-				"cross-fetch",
-				"downshift",
-				"focus-visible",
-				"framer-motion",
-				"i18next",
-				"locale-currency",
-				"p-retry",
-				"qr-scanner",
-				"react",
-				"react-datepicker",
-				"react-dom",
-				"react-error-boundary",
-				"react-hook-form",
-				"react-i18next",
-				"react-idle-timer",
-				"react-loading-skeleton",
-				"react-qr-reader",
-				"react-resize-detector",
-				"react-responsive",
-				"react-router",
-				"react-router-dom",
-				"react-table",
-				"react-toastify",
-				"semver",
-				"socks-proxy-agent",
-				"string-hash",
-				"react-zendesk",
-				"@ledgerhq/hw-app-eth",
-				"@ledgerhq/hw-transport-webhid",
-				"@ledgerhq/hw-transport-webusb"
-			]
-		}
-	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
 			"@ardenthq/arkvault-url",
