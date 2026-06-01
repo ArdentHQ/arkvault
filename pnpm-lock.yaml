@@ -277,8 +277,8 @@ importers:
         specifier: ^13.0.0
         version: 13.0.0(eslint@10.4.1(jiti@2.7.0))
       eslint-plugin-sonarjs:
-        specifier: ^3.0.7
-        version: 3.0.7(eslint@10.4.1(jiti@2.7.0))
+        specifier: ^4.0.3
+        version: 4.0.3(eslint@10.4.1(jiti@2.7.0))
       eslint-plugin-sort-imports-es6-autofix:
         specifier: ^0.6.0
         version: 0.6.0(eslint@10.4.1(jiti@2.7.0))
@@ -1533,14 +1533,6 @@ packages:
     peerDependenciesMeta:
       '@types/node':
         optional: true
-
-  '@isaacs/balanced-match@4.0.1':
-    resolution: {integrity: sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==}
-    engines: {node: 20 || >=22}
-
-  '@isaacs/brace-expansion@5.0.1':
-    resolution: {integrity: sha512-WMz71T1JS624nWj2n2fnYAuPovhv7EUhk69R6i9dsVyzxt5eM3bjwvgk9L+APE1TRscGysAVMANkB0jh0LQZrQ==}
-    engines: {node: 20 || >=22}
 
   '@isaacs/cliui@9.0.0':
     resolution: {integrity: sha512-AokJm4tuBHillT+FpMtxQ60n8ObyXBatq7jD2/JA9dxbDDokKQm8KMht5ibGzLVU9IJDIKK4TPKgMHEYMn3lMg==}
@@ -3215,10 +3207,10 @@ packages:
     peerDependencies:
       eslint: '>=5.0.0'
 
-  eslint-plugin-sonarjs@3.0.7:
-    resolution: {integrity: sha512-62jB20krIPvcwBLAyG3VVKa2ce2j2lL1yCb8Y0ylMRR/dLvCCTiQx8gQbXb+G81k1alPZ2/I3muZinqWQdBbzw==}
+  eslint-plugin-sonarjs@4.0.3:
+    resolution: {integrity: sha512-5drkJKLC9qQddIiaATV0e8+ygbUc7b0Ti6VB7M2d3jmKNh3X0RaiIJYTs3dr9xnlhlrxo+/s1FoO3Jgv6O/c7g==}
     peerDependencies:
-      eslint: ^8.0.0 || ^9.0.0
+      eslint: ^8.0.0 || ^9.0.0 || ^10.0.0
 
   eslint-plugin-sort-imports-es6-autofix@0.6.0:
     resolution: {integrity: sha512-2NVaBGF9NN+727Fyq+jJYihdIeegjXeUUrZED9Q8FVB8MsV3YQEyXG96GVnXqWt0pmn7xfCZOZf3uKnIhBrfeQ==}
@@ -3592,6 +3584,10 @@ packages:
 
   globals@16.5.0:
     resolution: {integrity: sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==}
+    engines: {node: '>=18'}
+
+  globals@17.6.0:
+    resolution: {integrity: sha512-sepffkT8stwnIYbsMBpoCHJuJM5l98FUF2AnE07hfvE0m/qp3R586hw4jF4uadbhvg1ooIdzuu7CsfD2jzCaNA==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -4430,10 +4426,6 @@ packages:
 
   minimalistic-crypto-utils@1.0.1:
     resolution: {integrity: sha512-JIYlbt6g8i5jKfJ3xz7rF0LXmv2TkDxBLUkiBeZ7bAx4GnnNMr8xFpGnOxn6GhTEHx3SjRrZEoU+j04prX1ktg==}
-
-  minimatch@10.1.2:
-    resolution: {integrity: sha512-fu656aJ0n2kcXwsnwnv9g24tkU5uSmOlTjd6WyyaKm2Z+h1qmY6bAjrcaIxF/BslFqbZ8UBtbJi7KgQOZD2PTw==}
-    engines: {node: 20 || >=22}
 
   minimatch@10.2.5:
     resolution: {integrity: sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==}
@@ -7794,12 +7786,6 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.9.1
 
-  '@isaacs/balanced-match@4.0.1': {}
-
-  '@isaacs/brace-expansion@5.0.1':
-    dependencies:
-      '@isaacs/balanced-match': 4.0.1
-
   '@isaacs/cliui@9.0.0': {}
 
   '@istanbuljs/schema@0.1.6': {}
@@ -9716,18 +9702,20 @@ snapshots:
     dependencies:
       eslint: 10.4.1(jiti@2.7.0)
 
-  eslint-plugin-sonarjs@3.0.7(eslint@10.4.1(jiti@2.7.0)):
+  eslint-plugin-sonarjs@4.0.3(eslint@10.4.1(jiti@2.7.0)):
     dependencies:
       '@eslint-community/regexpp': 4.12.2
       builtin-modules: 3.3.0
       bytes: 3.1.2
       eslint: 10.4.1(jiti@2.7.0)
       functional-red-black-tree: 1.0.1
+      globals: 17.6.0
       jsx-ast-utils-x: 0.1.0
       lodash.merge: 4.6.2
-      minimatch: 10.1.2
+      minimatch: 10.2.5
       scslre: 0.3.0
-      semver: 7.7.4
+      semver: 7.8.1
+      ts-api-utils: 2.5.0(typescript@5.9.3)
       typescript: 5.9.3
 
   eslint-plugin-sort-imports-es6-autofix@0.6.0(eslint@10.4.1(jiti@2.7.0)):
@@ -10185,6 +10173,8 @@ snapshots:
       ini: 2.0.0
 
   globals@16.5.0: {}
+
+  globals@17.6.0: {}
 
   globalthis@1.0.4:
     dependencies:
@@ -10959,10 +10949,6 @@ snapshots:
   minimalistic-assert@1.0.1: {}
 
   minimalistic-crypto-utils@1.0.1: {}
-
-  minimatch@10.1.2:
-    dependencies:
-      '@isaacs/brace-expansion': 5.0.1
 
   minimatch@10.2.5:
     dependencies:
