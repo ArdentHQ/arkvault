@@ -7,7 +7,6 @@ import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenNameInitials } from "@/domains/portfolio/components/Tokens/TokensSummary";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
-import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { Button } from "@/app/components/Button";
