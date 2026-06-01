@@ -187,7 +187,6 @@ export default defineConfig(async () => {
 		optimizeDeps: {
 			include: [
 				"@ardenthq/arkvault-crypto",
-				"rollup-plugin-polyfill-node/polyfills/util",
 				"@faustbrian/node-haveibeenpwned",
 				"@ardenthq/arkvault-url",
 				"assert",
@@ -217,7 +216,6 @@ export default defineConfig(async () => {
 				"react-table",
 				"react-toastify",
 				"semver",
-				"socks-proxy-agent",
 				"string-hash",
 				"react-zendesk",
 				"@ledgerhq/hw-app-eth",
