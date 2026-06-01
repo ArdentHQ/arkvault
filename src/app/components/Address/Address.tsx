@@ -1,9 +1,8 @@
 import cn from "classnames";
-import React, { useMemo, useRef, useState, useLayoutEffect, JSX } from "react";
+import React, { useRef, JSX } from "react";
 
-import { useResizeDetector } from "react-resize-detector";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { MiddleTruncation } from "@/app/components/MiddleTruncation";
 import { Size } from "@/types";
 import { Clipboard } from "@/app/components/Clipboard";
 import { useTranslation } from "react-i18next";
@@ -75,21 +74,12 @@ export const Address = ({
 	showCopyButton,
 	showTooltip = true,
 }: Properties) => {
-	const aliasReference = useRef<HTMLSpanElement>(null);
+	const wrapperRef = useRef<HTMLDivElement>(null);
 	const { t } = useTranslation();
-	const [aliasWidth, setAliasWidth] = useState(0);
-
-	const { ref, width } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
-
-	useLayoutEffect(() => {
-		if (aliasReference.current) {
-			setAliasWidth(aliasReference.current.getBoundingClientRect().width);
-		}
-	}, [walletName, width]);
 
 	return (
 		<div
-			ref={ref}
+			ref={wrapperRef}
 			className={twMerge(
 				"flex overflow-hidden whitespace-nowrap",
 				cn(
@@ -104,7 +94,6 @@ export const Address = ({
 		>
 			{walletName && (
 				<span
-					ref={aliasReference}
 					data-testid="Address__alias"
 					className={cn(getFontWeight(fontWeight), getFontSize(size), walletNameClass || "text-theme-text", {
 						"w-full truncate": orientation === "vertical",
@@ -120,9 +109,8 @@ export const Address = ({
 			{address && (
 				<>
 					<AddressWrapper alignment={alignment} truncateOnTable={truncateOnTable}>
-						<TruncateMiddleDynamic
+						<MiddleTruncation
 							data-testid="Address__address"
-							value={address}
 							className={cn(
 								addressClass ||
 									(walletName
@@ -130,11 +118,13 @@ export const Address = ({
 										: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),
-								{ "absolute w-full overflow-visible": truncateOnTable },
+								{ "no-ligatures absolute w-full overflow-visible": truncateOnTable },
 							)}
-							showTooltip={showTooltip}
-						/>
+						>
+							{address}
+						</MiddleTruncation>
 					</AddressWrapper>
+
 					{showCopyButton && (
 						<Clipboard
 							variant="icon"
