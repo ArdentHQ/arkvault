@@ -87,17 +87,6 @@ export const Address = ({
 		}
 	}, [walletName, width]);
 
-	const availableWidth = useMemo(() => {
-		if (width) {
-			if (orientation === "horizontal") {
-				return width - (walletName ? aliasWidth + 8 : 0) - (showCopyButton ? 8 : 0);
-			} else {
-				return width;
-			}
-		}
-		return 0;
-	}, [width, orientation, showCopyButton, walletName, aliasWidth]);
-
 	return (
 		<div
 			ref={ref}
@@ -134,7 +123,6 @@ export const Address = ({
 						<TruncateMiddleDynamic
 							data-testid="Address__address"
 							value={address}
-							availableWidth={availableWidth}
 							className={cn(
 								addressClass ||
 									(walletName
@@ -142,7 +130,7 @@ export const Address = ({
 										: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),
-								{ "absolute w-full": truncateOnTable },
+								{ "absolute w-full overflow-visible": truncateOnTable },
 							)}
 							showTooltip={showTooltip}
 						/>
