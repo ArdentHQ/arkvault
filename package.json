@@ -109,7 +109,6 @@
 	},
 	"devDependencies": {
 		"@cucumber/cucumber": "^12.9.0",
-		"@eslint/compat": "^2.1.0",
 		"@eslint/js": "^10.0.1",
 		"@ledgerhq/hw-transport-mocker": "^6.34.2",
 		"@testing-library/dom": "^10.4.1",
