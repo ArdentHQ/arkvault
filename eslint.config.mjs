@@ -38,7 +38,7 @@ export default [
 			},
 		},
 		settings: {
-			react: { version: "detect" },
+			react: { version: "19.2.6" },
 		},
 		plugins: {
 			"@typescript-eslint": tseslint.plugin,
