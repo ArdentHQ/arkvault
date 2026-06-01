@@ -34,8 +34,8 @@ export default defineConfig(async () => {
 		},
 		build: {
 			target: "esnext",
-			rollupOptions: {
-				// https://rollupjs.org/guide/en/#big-list-of-options
+			rolldownOptions: {
+				// https://rolldown.rs/guide/in-depth/options
 				output: {
 					manualChunks: {
 						ledger: [
