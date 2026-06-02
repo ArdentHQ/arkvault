@@ -1,3 +1,4 @@
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { useMemo } from "react";
 
 export const useSelectedTokenContractAddress = ({
@@ -8,7 +9,7 @@ export const useSelectedTokenContractAddress = ({
 }: {
 	tokenContractAddress?: string;
 	isTokenTransfer?: boolean;
-	tokens: unknown[];
+	tokens: WalletToken[];
 	ticker?: string;
 }): string | undefined =>
 	useMemo(() => {
