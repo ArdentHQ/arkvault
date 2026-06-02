@@ -11,9 +11,9 @@ interface Properties {
 }
 
 export const WalletAddress = ({ walletName, address, showCopyButton }: Properties) => (
-	<div className="flex w-full min-w-0 items-center gap-2 overflow-hidden whitespace-nowrap">
+	<div className="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap">
 		{walletName && (
-			<span data-testid="WalletAddress__alias" className="text-base font-semibold text-theme-text">
+			<span data-testid="WalletAddress__alias" className="mr-2 text-base font-semibold text-theme-text">
 				<TruncateEnd text={walletName} maxChars={16} showTooltip={walletName.length > 16} />
 			</span>
 		)}
@@ -32,7 +32,7 @@ export const WalletAddress = ({ walletName, address, showCopyButton }: Propertie
 		</div>
 
 		{showCopyButton && (
-			<div className="shrink-0">
+			<div className="ml-1 shrink-0">
 				<CopyButton value={address} />
 			</div>
 		)}

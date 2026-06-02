@@ -3,7 +3,7 @@
 exports[`WalletAddress > should render address only 1`] = `
 <div>
   <div
-    class="flex w-full min-w-0 items-center gap-2 overflow-hidden whitespace-nowrap"
+    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
   >
     <div
       class="min-w-0 grow"
@@ -27,7 +27,7 @@ exports[`WalletAddress > should render address only 1`] = `
 exports[`WalletAddress > should render copy button 1`] = `
 <div>
   <div
-    class="flex w-full min-w-0 items-center gap-2 overflow-hidden whitespace-nowrap"
+    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
   >
     <div
       class="min-w-0 grow"
@@ -45,7 +45,7 @@ exports[`WalletAddress > should render copy button 1`] = `
       </span>
     </div>
     <div
-      class="shrink-0"
+      class="ml-1 shrink-0"
     >
       <span>
         <span>
@@ -98,10 +98,10 @@ exports[`WalletAddress > should render copy button 1`] = `
 exports[`WalletAddress > should render with wallet name 1`] = `
 <div>
   <div
-    class="flex w-full min-w-0 items-center gap-2 overflow-hidden whitespace-nowrap"
+    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
   >
     <span
-      class="text-base font-semibold text-theme-text"
+      class="mr-2 text-base font-semibold text-theme-text"
       data-testid="WalletAddress__alias"
     >
       <span>
@@ -137,10 +137,10 @@ exports[`WalletAddress > should render with wallet name 1`] = `
 exports[`WalletAddress > should render with wallet name and copy button 1`] = `
 <div>
   <div
-    class="flex w-full min-w-0 items-center gap-2 overflow-hidden whitespace-nowrap"
+    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
   >
     <span
-      class="text-base font-semibold text-theme-text"
+      class="mr-2 text-base font-semibold text-theme-text"
       data-testid="WalletAddress__alias"
     >
       <span>
@@ -170,7 +170,7 @@ exports[`WalletAddress > should render with wallet name and copy button 1`] = `
       </span>
     </div>
     <div
-      class="shrink-0"
+      class="ml-1 shrink-0"
     >
       <span>
         <span>
@@ -223,10 +223,10 @@ exports[`WalletAddress > should render with wallet name and copy button 1`] = `
 exports[`WalletAddress > should truncate long wallet names 1`] = `
 <div>
   <div
-    class="flex w-full min-w-0 items-center gap-2 overflow-hidden whitespace-nowrap"
+    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
   >
     <span
-      class="text-base font-semibold text-theme-text"
+      class="mr-2 text-base font-semibold text-theme-text"
       data-testid="WalletAddress__alias"
     >
       <span>
