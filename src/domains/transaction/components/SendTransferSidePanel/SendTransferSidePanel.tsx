@@ -72,8 +72,7 @@ export const SendTransferSidePanel = ({
 	const tokens = wallet?.tokens().values() ?? [];
 
 	const selectedTokenContractAddress = useSelectedTokenContractAddress({
-		isTokenTransfer,
-		ticker: activeNetwork?.ticker(),
+		defaultTicker: activeNetwork?.ticker(),
 		tokenContractAddress,
 		tokens,
 	});
