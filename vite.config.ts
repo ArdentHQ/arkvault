@@ -8,9 +8,7 @@ import pkg from "./package.json";
 
 export default defineConfig(async () => {
 	const tailwindcss = (await import("@tailwindcss/vite")).default;
-	const visualizer = process.env.ANALYZE_BUNDLE
-		? (await import("rollup-plugin-visualizer")).visualizer
-		: null;
+	const visualizer = process.env.ANALYZE_BUNDLE ? (await import("rollup-plugin-visualizer")).visualizer : null;
 
 	return {
 		resolve: {
