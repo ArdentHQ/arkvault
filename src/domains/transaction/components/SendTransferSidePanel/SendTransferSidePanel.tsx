@@ -6,6 +6,7 @@ import { TransferLedgerReview } from "@/domains/transaction/components/SendTrans
 import { ReviewStep } from "@/domains/transaction/components/SendTransferSidePanel/ReviewStep";
 import { SendTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.contracts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
+import { useSelectedTokenContractAddress } from "@/domains/transaction/hooks/use-selected-token-contract-address";
 import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { QRModal } from "@/app/components/QRModal";
@@ -70,6 +71,13 @@ export const SendTransferSidePanel = ({
 
 	const tokens = wallet?.tokens().values() ?? [];
 
+	const selectedTokenContractAddress = useSelectedTokenContractAddress({
+		tokenContractAddress,
+		isTokenTransfer,
+		tokens,
+		ticker: activeNetwork?.ticker(),
+	});
+
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
@@ -99,7 +107,7 @@ export const SendTransferSidePanel = ({
 		getValues,
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
-	} = useSendTransferForm({ tokenContractAddress, tokens, wallet });
+	} = useSendTransferForm({ tokenContractAddress: selectedTokenContractAddress, tokens, wallet });
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
