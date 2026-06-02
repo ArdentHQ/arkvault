@@ -1,5 +1,5 @@
 import React, { RefObject } from "react";
-import { UseResizeDetectorReturn } from "react-resize-detector"
+import { UseResizeDetectorReturn } from "react-resize-detector";
 
 type OnRefChangeType<T> = UseResizeDetectorReturn<T>["ref"];
 
