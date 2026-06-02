@@ -4,6 +4,7 @@
 	"engines": {
 		"node": "24.x"
 	},
+	"type": "module",
 	"private": true,
 	"description": "ARK Vault",
 	"homepage": "./",
