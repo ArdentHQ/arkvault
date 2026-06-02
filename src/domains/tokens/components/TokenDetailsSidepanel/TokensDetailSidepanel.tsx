@@ -161,7 +161,7 @@ export const TokenDetailSidepanel = ({
 									{t("COMMON.CONTRACT")}
 								</DetailTitle>
 
-								<div className="flex flex-1 flex-col justify-end gap-2 sm:w-full sm:justify-start md:flex-row md:items-center">
+								<div className="flex max-w-[33.5rem] flex-1 flex-col justify-end gap-2 sm:w-full sm:justify-start md:flex-row md:items-center">
 									<WalletAddress address={walletToken.token().address()} showCopyButton />
 									<div className="hidden md:block">
 										<Divider type="vertical" />
