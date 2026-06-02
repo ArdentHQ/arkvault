@@ -1,8 +1,8 @@
 import { Networks } from "@/app/lib/mainsail";
-import { TransactionFees } from "types";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { BigNumber } from "@/app/lib/helpers";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TransactionFees } from "@/types";
 
 export enum SendTransferStep {
 	NetworkStep,
