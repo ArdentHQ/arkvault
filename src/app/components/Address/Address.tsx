@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useMemo, useRef } from "react";
+import React, { useMemo, useRef, useState, useLayoutEffect, JSX } from "react";
 
 import { useResizeDetector } from "react-resize-detector";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
@@ -8,7 +8,7 @@ import { Size } from "@/types";
 import { Clipboard } from "@/app/components/Clipboard";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
-import { useTheme } from "@/app/hooks";
+import { twMerge } from "tailwind-merge";
 
 interface Properties {
 	walletName?: string;
@@ -23,6 +23,7 @@ interface Properties {
 	truncateOnTable?: boolean;
 	orientation?: "horizontal" | "vertical";
 	showCopyButton?: boolean;
+	showTooltip?: boolean;
 }
 
 const AddressWrapper = ({
@@ -54,7 +55,6 @@ const getFontSize = (size?: Size) => {
 		sm: "text-sm",
 		xl: "text-xl",
 	};
-
 	return fontSizes[size as keyof typeof fontSizes] || fontSizes.default;
 };
 
@@ -73,41 +73,43 @@ export const Address = ({
 	truncateOnTable,
 	orientation = "horizontal",
 	showCopyButton,
+	showTooltip = true,
 }: Properties) => {
 	const aliasReference = useRef<HTMLSpanElement>(null);
 	const { t } = useTranslation();
-
-	const { isDarkMode } = useTheme();
+	const [aliasWidth, setAliasWidth] = useState(0);
 
 	const { ref, width } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
+
+	useLayoutEffect(() => {
+		if (aliasReference.current) {
+			setAliasWidth(aliasReference.current.getBoundingClientRect().width);
+		}
+	}, [walletName, width]);
 
 	const availableWidth = useMemo(() => {
 		if (width) {
 			if (orientation === "horizontal") {
-				/* istanbul ignore next -- @preserve */
-				return (
-					width -
-					(aliasReference.current ? aliasReference.current.getBoundingClientRect().width + 8 : 0) -
-					(showCopyButton ? 22 : 0)
-				);
+				return width - (walletName ? aliasWidth + 8 : 0) - (showCopyButton ? 22 : 0);
 			} else {
 				return width;
 			}
 		}
-
 		return 0;
-	}, [ref, aliasReference, width]);
+	}, [width, orientation, showCopyButton, walletName, aliasWidth]);
 
 	return (
 		<div
 			ref={ref}
-			className={cn(
+			className={twMerge(
 				"flex overflow-hidden whitespace-nowrap",
-				orientation === "horizontal" ? "items-center space-x-2" : "flex-col items-start",
-				alignment === "center" ? "min-w-0" : "w-full",
-				{
-					"justify-end": alignment === "right",
-				},
+				cn(
+					orientation === "horizontal" ? "items-center space-x-2" : "flex-col items-start",
+					alignment === "center" ? "min-w-0" : "w-full",
+					{
+						"justify-end": alignment === "right",
+					},
+				),
 				wrapperClass,
 			)}
 		>
@@ -122,7 +124,7 @@ export const Address = ({
 					<TruncateEnd
 						text={walletName}
 						maxChars={maxNameChars}
-						showTooltip={!!maxNameChars && walletName.length > maxNameChars}
+						showTooltip={showTooltip ? !!maxNameChars && walletName.length > maxNameChars : false}
 					/>
 				</span>
 			)}
@@ -136,24 +138,20 @@ export const Address = ({
 							className={cn(
 								addressClass ||
 									(walletName
-										? "text-theme-secondary-500 dark:text-theme-secondary-700"
+										? "text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
 										: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),
 								{ "absolute w-full": truncateOnTable },
 							)}
+							showTooltip={showTooltip}
 						/>
 					</AddressWrapper>
 					{showCopyButton && (
-						<Clipboard
-							variant="icon"
-							data={address}
-							tooltip={t("COMMON.COPY_ADDRESS")}
-							tooltipDarkTheme={isDarkMode}
-						>
+						<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")}>
 							<Icon
 								name="Copy"
-								className="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+								className="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
 							/>
 						</Clipboard>
 					)}
