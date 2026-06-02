@@ -35,7 +35,7 @@ export default defineConfig(async () => {
 		build: {
 			target: "esnext",
 			rolldownOptions: {
-				// https://rolldown.rs/guide/in-depth/options
+				// https://rolldown.rs/reference/Function.defineConfig
 				output: {
 					manualChunks: (id) => {
 						const chunks: Record<string, string[]> = {
