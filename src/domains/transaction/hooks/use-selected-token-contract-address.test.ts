@@ -8,9 +8,9 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should return tokenContractAddress when provided and enabled", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: "0xabc123",
 				defaultTicker,
 				enabled: true,
+				tokenContractAddress: "0xabc123",
 			}),
 		);
 
@@ -20,9 +20,9 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should fall back to defaultTicker when tokenContractAddress is undefined but enabled", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: undefined,
 				defaultTicker,
 				enabled: true,
+				tokenContractAddress: undefined,
 			}),
 		);
 
@@ -32,9 +32,9 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should return undefined when enabled is false", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: "0xabc123",
 				defaultTicker,
 				enabled: false,
+				tokenContractAddress: "0xabc123",
 			}),
 		);
 
@@ -44,9 +44,9 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should return undefined when both tokenContractAddress and defaultTicker are undefined", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: undefined,
 				defaultTicker: undefined,
 				enabled: true,
+				tokenContractAddress: undefined,
 			}),
 		);
 
@@ -56,9 +56,9 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should return undefined when nothing is provided and not enabled", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: undefined,
 				defaultTicker: undefined,
 				enabled: false,
+				tokenContractAddress: undefined,
 			}),
 		);
 

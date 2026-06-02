@@ -11,7 +11,7 @@ export const useSelectedTokenContractAddress = ({
 }): string | undefined =>
 	useMemo(() => {
 		if (!enabled) {
-			return undefined;
+			return;
 		}
 
 		return tokenContractAddress ?? defaultTicker;
