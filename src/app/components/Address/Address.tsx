@@ -1,13 +1,14 @@
 import cn from "classnames";
-import React, { useRef, JSX } from "react";
+import React, { useMemo, useRef } from "react";
 
+import { useResizeDetector } from "react-resize-detector";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
-import { MiddleTruncation } from "@/app/components/MiddleTruncation";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Size } from "@/types";
 import { Clipboard } from "@/app/components/Clipboard";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
-import { twMerge } from "tailwind-merge";
+import { useTheme } from "@/app/hooks";
 
 interface Properties {
 	walletName?: string;
@@ -22,7 +23,6 @@ interface Properties {
 	truncateOnTable?: boolean;
 	orientation?: "horizontal" | "vertical";
 	showCopyButton?: boolean;
-	showTooltip?: boolean;
 }
 
 const AddressWrapper = ({
@@ -54,6 +54,7 @@ const getFontSize = (size?: Size) => {
 		sm: "text-sm",
 		xl: "text-xl",
 	};
+
 	return fontSizes[size as keyof typeof fontSizes] || fontSizes.default;
 };
 
@@ -72,28 +73,47 @@ export const Address = ({
 	truncateOnTable,
 	orientation = "horizontal",
 	showCopyButton,
-	showTooltip = true,
 }: Properties) => {
-	const wrapperRef = useRef<HTMLDivElement>(null);
+	const aliasReference = useRef<HTMLSpanElement>(null);
 	const { t } = useTranslation();
+
+	const { isDarkMode } = useTheme();
+
+	const { ref, width } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
+
+	const availableWidth = useMemo(() => {
+		if (width) {
+			if (orientation === "horizontal") {
+				/* istanbul ignore next -- @preserve */
+				return (
+					width -
+					(aliasReference.current ? aliasReference.current.getBoundingClientRect().width + 8 : 0) -
+					(showCopyButton ? 22 : 0)
+				);
+			} else {
+				return width;
+			}
+		}
+
+		return 0;
+	}, [ref, aliasReference, width]);
 
 	return (
 		<div
-			ref={wrapperRef}
-			className={twMerge(
+			ref={ref}
+			className={cn(
 				"flex overflow-hidden whitespace-nowrap",
-				cn(
-					orientation === "horizontal" ? "items-center space-x-2" : "flex-col items-start",
-					alignment === "center" ? "min-w-0" : "w-full",
-					{
-						"justify-end": alignment === "right",
-					},
-				),
+				orientation === "horizontal" ? "items-center space-x-2" : "flex-col items-start",
+				alignment === "center" ? "min-w-0" : "w-full",
+				{
+					"justify-end": alignment === "right",
+				},
 				wrapperClass,
 			)}
 		>
 			{walletName && (
 				<span
+					ref={aliasReference}
 					data-testid="Address__alias"
 					className={cn(getFontWeight(fontWeight), getFontSize(size), walletNameClass || "text-theme-text", {
 						"w-full truncate": orientation === "vertical",
@@ -102,39 +122,38 @@ export const Address = ({
 					<TruncateEnd
 						text={walletName}
 						maxChars={maxNameChars}
-						showTooltip={showTooltip ? !!maxNameChars && walletName.length > maxNameChars : false}
+						showTooltip={!!maxNameChars && walletName.length > maxNameChars}
 					/>
 				</span>
 			)}
 			{address && (
 				<>
 					<AddressWrapper alignment={alignment} truncateOnTable={truncateOnTable}>
-						<MiddleTruncation
+						<TruncateMiddleDynamic
 							data-testid="Address__address"
+							value={address}
+							availableWidth={availableWidth}
 							className={cn(
 								addressClass ||
 									(walletName
-										? "text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+										? "text-theme-secondary-500 dark:text-theme-secondary-700"
 										: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),
-								{ "no-ligatures absolute w-full overflow-visible": truncateOnTable },
+								{ "absolute w-full": truncateOnTable },
 							)}
-						>
-							{address}
-						</MiddleTruncation>
+						/>
 					</AddressWrapper>
-
 					{showCopyButton && (
 						<Clipboard
 							variant="icon"
 							data={address}
 							tooltip={t("COMMON.COPY_ADDRESS")}
-							iconButtonClassName="flex items-center"
+							tooltipDarkTheme={isDarkMode}
 						>
 							<Icon
 								name="Copy"
-								className="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+								className="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
 							/>
 						</Clipboard>
 					)}
