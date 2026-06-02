@@ -18,7 +18,7 @@ export const WalletAddress = ({ walletName, address, showCopyButton }: Propertie
 			</span>
 		)}
 
-		<div className="min-w-0 max-w-[25rem] grow">
+		<div className="min-w-0 grow">
 			<MiddleTruncation
 				data-testid="WalletAddress__address"
 				className={cn("font-semibold", {

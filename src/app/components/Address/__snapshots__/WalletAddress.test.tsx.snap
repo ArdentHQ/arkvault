@@ -6,7 +6,7 @@ exports[`WalletAddress > should render address only 1`] = `
     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
   >
     <div
-      class="min-w-0 max-w-[25rem] grow"
+      class="min-w-0 grow"
     >
       <span
         class="block w-full"
@@ -30,7 +30,7 @@ exports[`WalletAddress > should render copy button 1`] = `
     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
   >
     <div
-      class="min-w-0 max-w-[25rem] grow"
+      class="min-w-0 grow"
     >
       <span
         class="block w-full"
@@ -116,7 +116,7 @@ exports[`WalletAddress > should render with wallet name 1`] = `
       </span>
     </span>
     <div
-      class="min-w-0 max-w-[25rem] grow"
+      class="min-w-0 grow"
     >
       <span
         class="block w-full"
@@ -155,7 +155,7 @@ exports[`WalletAddress > should render with wallet name and copy button 1`] = `
       </span>
     </span>
     <div
-      class="min-w-0 max-w-[25rem] grow"
+      class="min-w-0 grow"
     >
       <span
         class="block w-full"
@@ -241,7 +241,7 @@ exports[`WalletAddress > should truncate long wallet names 1`] = `
       </span>
     </span>
     <div
-      class="min-w-0 max-w-[25rem] grow"
+      class="min-w-0 grow"
     >
       <span
         class="block w-full"
