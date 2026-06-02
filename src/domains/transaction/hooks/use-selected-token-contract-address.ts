@@ -1,16 +1,18 @@
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { useMemo } from "react";
 
 export const useSelectedTokenContractAddress = ({
 	tokenContractAddress,
 	defaultTicker,
+	enabled,
 }: {
 	tokenContractAddress?: string;
-	tokens: WalletToken[];
 	defaultTicker?: string;
-}): string | undefined => {
-	if (tokenContractAddress) {
-		return tokenContractAddress;
-	}
+	enabled?: boolean;
+}): string | undefined =>
+	useMemo(() => {
+		if (!enabled) {
+			return undefined;
+		}
 
-	return defaultTicker;
-};
+		return tokenContractAddress ?? defaultTicker;
+	}, [tokenContractAddress, defaultTicker, enabled]);

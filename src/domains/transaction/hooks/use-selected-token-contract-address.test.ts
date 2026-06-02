@@ -3,79 +3,62 @@ import { describe, expect, it } from "vitest";
 import { useSelectedTokenContractAddress } from "./use-selected-token-contract-address";
 
 describe("useSelectedTokenContractAddress", () => {
-	const ticker = "ARK";
-	it("should return tokenContractAddress when provided", () => {
+	const defaultTicker = "ARK";
+
+	it("should return tokenContractAddress when provided and enabled", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				isTokenTransfer: true,
-				ticker,
 				tokenContractAddress: "0xabc123",
-				tokens: [{ token: { address: "0xdef456" } }],
+				defaultTicker,
+				enabled: true,
 			}),
 		);
 
 		expect(result.current).toBe("0xabc123");
 	});
 
-	it("should default to ticker when isTokenTransfer and no tokens", () => {
+	it("should fall back to defaultTicker when tokenContractAddress is undefined but enabled", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				isTokenTransfer: true,
-				ticker,
 				tokenContractAddress: undefined,
-				tokens: [],
+				defaultTicker,
+				enabled: true,
 			}),
 		);
 
 		expect(result.current).toBe("ARK");
 	});
 
-	it("should return undefined when isTokenTransfer and has one token", () => {
+	it("should return undefined when enabled is false", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				isTokenTransfer: true,
-				ticker,
-				tokenContractAddress: undefined,
-				tokens: [{ token: { address: "0xdef456" } }],
+				tokenContractAddress: "0xabc123",
+				defaultTicker,
+				enabled: false,
 			}),
 		);
 
 		expect(result.current).toBe(undefined);
 	});
 
-	it("should return undefined when isTokenTransfer and has multiple tokens", () => {
+	it("should return undefined when both tokenContractAddress and defaultTicker are undefined", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				isTokenTransfer: true,
-				ticker,
 				tokenContractAddress: undefined,
-				tokens: [{ token: { address: "0xdef456" } }, { token: { address: "0x789ghi" } }],
+				defaultTicker: undefined,
+				enabled: true,
 			}),
 		);
 
 		expect(result.current).toBe(undefined);
 	});
 
-	it("should return undefined when not a token transfer", () => {
+	it("should return undefined when nothing is provided and not enabled", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				isTokenTransfer: false,
-				ticker,
 				tokenContractAddress: undefined,
-				tokens: [],
-			}),
-		);
-
-		expect(result.current).toBe(undefined);
-	});
-
-	it("should return undefined when ticker is undefined", () => {
-		const { result } = renderHook(() =>
-			useSelectedTokenContractAddress({
-				isTokenTransfer: true,
-				ticker: undefined,
-				tokenContractAddress: undefined,
-				tokens: [],
+				defaultTicker: undefined,
+				enabled: false,
 			}),
 		);
 

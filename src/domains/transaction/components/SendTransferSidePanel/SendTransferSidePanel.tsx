@@ -71,10 +71,10 @@ export const SendTransferSidePanel = ({
 
 	const tokens = wallet?.tokens().values() ?? [];
 
-	const selectedTokenContractAddress = useSelectedTokenContractAddress({
-		defaultTicker: activeNetwork?.ticker(),
+	const selectedTokenContract = useSelectedTokenContractAddress({
 		tokenContractAddress,
-		tokens,
+		defaultTicker: activeNetwork.ticker(),
+		enabled: open,
 	});
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
@@ -106,7 +106,7 @@ export const SendTransferSidePanel = ({
 		getValues,
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
-	} = useSendTransferForm({ tokenContractAddress: selectedTokenContractAddress, tokens, wallet });
+	} = useSendTransferForm({ tokenContractAddress: selectedTokenContract, tokens, wallet });
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
