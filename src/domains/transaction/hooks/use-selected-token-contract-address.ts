@@ -10,8 +10,8 @@ export const useSelectedTokenContractAddress = ({
 	isTokenTransfer?: boolean;
 	tokens: unknown[];
 	ticker?: string;
-}): string | undefined => {
-	return useMemo(() => {
+}): string | undefined =>
+	useMemo(() => {
 		if (tokenContractAddress) {
 			return tokenContractAddress;
 		}
@@ -20,6 +20,5 @@ export const useSelectedTokenContractAddress = ({
 			return ticker;
 		}
 
-		return undefined;
+		return;
 	}, [tokenContractAddress, isTokenTransfer, tokens, ticker]);
-};

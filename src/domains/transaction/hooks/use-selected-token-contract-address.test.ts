@@ -7,10 +7,10 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should return tokenContractAddress when provided", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: "0xabc123",
 				isTokenTransfer: true,
-				tokens: [{ token: { address: "0xdef456" } }],
 				ticker,
+				tokenContractAddress: "0xabc123",
+				tokens: [{ token: { address: "0xdef456" } }],
 			}),
 		);
 
@@ -20,10 +20,10 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should default to ticker when isTokenTransfer and no tokens", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: undefined,
 				isTokenTransfer: true,
-				tokens: [],
 				ticker,
+				tokenContractAddress: undefined,
+				tokens: [],
 			}),
 		);
 
@@ -33,10 +33,10 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should return undefined when isTokenTransfer and has one token", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: undefined,
 				isTokenTransfer: true,
-				tokens: [{ token: { address: "0xdef456" } }],
 				ticker,
+				tokenContractAddress: undefined,
+				tokens: [{ token: { address: "0xdef456" } }],
 			}),
 		);
 
@@ -46,10 +46,10 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should return undefined when isTokenTransfer and has multiple tokens", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: undefined,
 				isTokenTransfer: true,
-				tokens: [{ token: { address: "0xdef456" } }, { token: { address: "0x789ghi" } }],
 				ticker,
+				tokenContractAddress: undefined,
+				tokens: [{ token: { address: "0xdef456" } }, { token: { address: "0x789ghi" } }],
 			}),
 		);
 
@@ -59,10 +59,10 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should return undefined when not a token transfer", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: undefined,
 				isTokenTransfer: false,
-				tokens: [],
 				ticker,
+				tokenContractAddress: undefined,
+				tokens: [],
 			}),
 		);
 
@@ -72,10 +72,10 @@ describe("useSelectedTokenContractAddress", () => {
 	it("should return undefined when ticker is undefined", () => {
 		const { result } = renderHook(() =>
 			useSelectedTokenContractAddress({
-				tokenContractAddress: undefined,
 				isTokenTransfer: true,
-				tokens: [],
 				ticker: undefined,
+				tokenContractAddress: undefined,
+				tokens: [],
 			}),
 		);
 
