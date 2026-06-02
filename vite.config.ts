@@ -39,8 +39,26 @@ export default defineConfig(async () => {
 				output: {
 					manualChunks: (id) => {
 						const chunks: Record<string, string[]> = {
-							ledger: ["@ledgerhq/hw-app-eth", "@ledgerhq/hw-transport-webhid", "@ledgerhq/hw-transport-webusb"],
-							react: ["react", "react-dom", "react-datepicker", "react-error-boundary", "react-hook-form", "react-i18next", "react-idle-timer", "react-loading-skeleton", "react-qr-reader", "react-router", "react-router-dom", "react-table", "react-toastify"],
+							ledger: [
+								"@ledgerhq/hw-app-eth",
+								"@ledgerhq/hw-transport-webhid",
+								"@ledgerhq/hw-transport-webusb",
+							],
+							react: [
+								"react",
+								"react-dom",
+								"react-datepicker",
+								"react-error-boundary",
+								"react-hook-form",
+								"react-i18next",
+								"react-idle-timer",
+								"react-loading-skeleton",
+								"react-qr-reader",
+								"react-router",
+								"react-router-dom",
+								"react-table",
+								"react-toastify",
+							],
 							"arkvault-crypto": ["@ardenthq/arkvault-crypto"],
 						};
 
