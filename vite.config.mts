@@ -6,16 +6,12 @@ import path from "path";
 import react from "@vitejs/plugin-react";
 import svgrPlugin from "vite-plugin-svgr";
 import tailwindcss from "@tailwindcss/vite";
+import { visualizer } from "rollup-plugin-visualizer";
 import pkg from "./package.json";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export default defineConfig(async () => {
-	const visualizer = process.env.ANALYZE_BUNDLE
-		? (await import("rollup-plugin-visualizer")).visualizer
-		: null;
-
-	return {
+export default defineConfig({
 	resolve: {
 		alias: {
 			"@": path.resolve(__dirname, "./src/"),
@@ -178,7 +174,7 @@ export default defineConfig(async () => {
 				process: false,
 			},
 		}),
-		visualizer?.({ open: true, brotliSize: true, gzipSize: true, template: "treemap" }),
+		process.env.ANALYZE_BUNDLE && visualizer({ open: true, brotliSize: true, gzipSize: true, template: "treemap" }),
 	],
 	optimizeDeps: {
 		include: [
@@ -219,5 +215,4 @@ export default defineConfig(async () => {
 			"@ledgerhq/hw-transport-webusb",
 		],
 	},
-	};
 });

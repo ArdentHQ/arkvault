@@ -24,11 +24,11 @@ const toCoverageGlob = (p: string) => {
 	return `${trimmed}/**/*.{ts,tsx}`;
 };
 
-export default defineConfig(async (env) => {
+export default defineConfig(async () => {
 	const tailwindcss = (await import("@tailwindcss/vite")).default;
 
 	return mergeConfig(
-		viteConfig(env),
+		viteConfig,
 		defineConfig({
 			define: {
 				"process.env.APP_VERSION": JSON.stringify(pkg.version),
