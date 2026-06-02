@@ -1,7 +1,7 @@
 import path from "path";
 import { mergeConfig } from "vite";
 import { defineConfig } from "vitest/config";
-import viteConfig from "./vite.config.ts";
+import viteConfig from "./vite.config";
 import svgr from "vite-plugin-svgr";
 import { VitePWA } from "vite-plugin-pwa";
 import pkg from "./package.json";
