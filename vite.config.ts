@@ -184,6 +184,7 @@ export default defineConfig(async () => {
 					process: false,
 				},
 			}),
+			visualizer?.({ open: true, brotliSize: true, gzipSize: true, template: "treemap" }),
 		],
 		optimizeDeps: {
 			include: [
