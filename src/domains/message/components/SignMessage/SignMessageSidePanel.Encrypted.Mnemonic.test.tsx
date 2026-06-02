@@ -4,11 +4,10 @@ import React from "react";
 import { afterAll, expect, vi, MockInstance } from "vitest";
 import * as ReactRouter from "react-router";
 import { translations as messageTranslations } from "@/domains/message/i18n";
-import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { env, render, screen, waitFor, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 
 let profile: Contracts.IProfile;
-let wallet: Contracts.IReadWriteWallet;
 let useSearchParamsMock: MockInstance;
 
 const mnemonic = MAINSAIL_MNEMONICS[0];
@@ -34,8 +33,6 @@ describe("SignMessage with encrypted mnemonic", () => {
 			.mockReturnValue([new URLSearchParams(), vi.fn()]);
 
 		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
-
-		await triggerMessageSignOnce(wallet);
 	});
 
 	afterAll(() => {
