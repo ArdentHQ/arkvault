@@ -38,35 +38,16 @@ export default defineConfig(async () => {
 				// https://rolldown.rs/guide/in-depth/options
 				output: {
 					manualChunks: (id) => {
-						if (
-							id.includes("@ledgerhq/hw-app-eth") ||
-							id.includes("@ledgerhq/hw-transport-webhid") ||
-							id.includes("@ledgerhq/hw-transport-webusb")
-						) {
-							return "ledger";
-						}
-						if (id.includes("@ardenthq/arkvault-crypto")) {
-							return "arkvault-crypto";
-						}
-						const reactPackages = [
-							"react-datepicker",
-							"react-error-boundary",
-							"react-hook-form",
-							"react-i18next",
-							"react-idle-timer",
-							"react-loading-skeleton",
-							"react-qr-reader",
-							"react-router",
-							"react-router-dom",
-							"react-table",
-							"react-toastify",
-						];
-						if (
-							id.includes("/node_modules/react/") ||
-							id.includes("/node_modules/react-dom/") ||
-							reactPackages.some((pkg) => id.includes(`/node_modules/${pkg}/`))
-						) {
-							return "react";
+						const chunks: Record<string, string[]> = {
+							ledger: ["@ledgerhq/hw-app-eth", "@ledgerhq/hw-transport-webhid", "@ledgerhq/hw-transport-webusb"],
+							react: ["react", "react-dom", "react-datepicker", "react-error-boundary", "react-hook-form", "react-i18next", "react-idle-timer", "react-loading-skeleton", "react-qr-reader", "react-router", "react-router-dom", "react-table", "react-toastify"],
+							"arkvault-crypto": ["@ardenthq/arkvault-crypto"],
+						};
+
+						for (const [chunk, packages] of Object.entries(chunks)) {
+							if (packages.some((pkg) => id.includes(`/node_modules/${pkg}/`))) {
+								return chunk;
+							}
 						}
 					},
 				},
