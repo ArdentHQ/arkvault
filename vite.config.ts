@@ -4,11 +4,13 @@ import { nodePolyfills } from "vite-plugin-node-polyfills";
 import path from "path";
 import react from "@vitejs/plugin-react";
 import svgrPlugin from "vite-plugin-svgr";
-import { visualizer } from "rollup-plugin-visualizer";
 import pkg from "./package.json";
 
 export default defineConfig(async () => {
 	const tailwindcss = (await import("@tailwindcss/vite")).default;
+	const visualizer = process.env.ANALYZE_BUNDLE
+		? (await import("rollup-plugin-visualizer")).visualizer
+		: null;
 
 	return {
 		resolve: {
