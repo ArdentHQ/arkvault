@@ -1,10 +1,15 @@
 import path from "path";
+import { fileURLToPath } from "url";
+import { createRequire } from "module";
 import { mergeConfig } from "vite";
 import { defineConfig } from "vitest/config";
-import viteConfig from "./vite.config";
+import viteConfig from "./vite.config.mts";
 import svgr from "vite-plugin-svgr";
 import { VitePWA } from "vite-plugin-pwa";
 import pkg from "./package.json";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const require = createRequire(import.meta.url);
 
 const coverageThresholdLines = Number(process.env.COVERAGE_THRESHOLD_LINES || 100);
 const coverageThresholdFunctions = Number(process.env.COVERAGE_THRESHOLD_FUNCTIONS || 100);
