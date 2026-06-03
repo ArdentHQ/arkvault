@@ -20,11 +20,11 @@ export const AccordionWrapper = ({ isInactive, isCollapsed, className, ...props 
 		className={twMerge(
 			"flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0",
 			cn({
+				"not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 transition-shadow":
+					isCollapsed,
 				"ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2": !isInactive,
 				"ring-theme-secondary-300 dark:ring-theme-secondary-800 md:ring-1": isInactive,
 				"transition-all": !isCollapsed,
-				"transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800":
-					isCollapsed,
 			}),
 			className,
 		)}
@@ -37,7 +37,7 @@ interface AccordionToggleWrapperProps extends React.HTMLAttributes<HTMLDivElemen
 const AccordionToggleWrapper = ({ ...props }: AccordionToggleWrapperProps) => (
 	<div
 		className={twMerge(
-			"flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800",
+			"not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8",
 		)}
 		{...props}
 	/>
@@ -78,7 +78,7 @@ export const AccordionHeader = ({
 			{!!onClick && (
 				<div
 					className={cn(
-						"ml-4 flex shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700",
+						"not-all-hover-none:dark:group-hover:border-theme-secondary-700 ml-4 flex shrink-0 items-center self-stretch",
 						{
 							"transition-all duration-100": !isExpanded,
 						},

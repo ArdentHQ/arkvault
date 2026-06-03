@@ -34,31 +34,39 @@ export default defineConfig(async () => {
 		},
 		build: {
 			target: "esnext",
-			rollupOptions: {
-				// https://rollupjs.org/guide/en/#big-list-of-options
+			rolldownOptions: {
+				// https://rolldown.rs/reference/Function.defineConfig
 				output: {
-					manualChunks: {
-						ledger: [
-							"@ledgerhq/hw-app-eth",
-							"@ledgerhq/hw-transport-webhid",
-							"@ledgerhq/hw-transport-webusb",
-						],
-						react: [
-							"react",
-							"react-datepicker",
-							"react-dom",
-							"react-error-boundary",
-							"react-hook-form",
-							"react-i18next",
-							"react-idle-timer",
-							"react-loading-skeleton",
-							"react-qr-reader",
-							"react-router",
-							"react-router-dom",
-							"react-table",
-							"react-toastify",
-						],
-						"arkvault-crypto": ["@ardenthq/arkvault-crypto"],
+					manualChunks: (id) => {
+						const chunks: Record<string, string[]> = {
+							ledger: [
+								"@ledgerhq/hw-app-eth",
+								"@ledgerhq/hw-transport-webhid",
+								"@ledgerhq/hw-transport-webusb",
+							],
+							react: [
+								"react",
+								"react-dom",
+								"react-datepicker",
+								"react-error-boundary",
+								"react-hook-form",
+								"react-i18next",
+								"react-idle-timer",
+								"react-loading-skeleton",
+								"react-qr-reader",
+								"react-router",
+								"react-router-dom",
+								"react-table",
+								"react-toastify",
+							],
+							"arkvault-crypto": ["@ardenthq/arkvault-crypto"],
+						};
+
+						for (const [chunk, packages] of Object.entries(chunks)) {
+							if (packages.some((pkg) => id.includes(`/node_modules/${pkg}/`))) {
+								return chunk;
+							}
+						}
 					},
 				},
 				plugins: [
@@ -178,7 +186,6 @@ export default defineConfig(async () => {
 		optimizeDeps: {
 			include: [
 				"@ardenthq/arkvault-crypto",
-				"rollup-plugin-polyfill-node/polyfills/util",
 				"@faustbrian/node-haveibeenpwned",
 				"@ardenthq/arkvault-url",
 				"assert",
@@ -208,7 +215,6 @@ export default defineConfig(async () => {
 				"react-table",
 				"react-toastify",
 				"semver",
-				"socks-proxy-agent",
 				"string-hash",
 				"react-zendesk",
 				"@ledgerhq/hw-app-eth",
