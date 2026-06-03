@@ -103,7 +103,7 @@ jobs:
                   sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
                   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
                   sudo apt update
-                  sudo apt install microsoft-edge-beta
+                  sudo apt install -y microsoft-edge-stable
 
             - name: Download Build Artifact
               uses: actions/download-artifact@v6
@@ -169,7 +169,7 @@ jobs:
                   sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
                   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
                   sudo apt update
-                  sudo apt install microsoft-edge-beta
+                  sudo apt install -y microsoft-edge-stable
 
             - name: Download Build Artifact
               uses: actions/download-artifact@v6
@@ -235,7 +235,7 @@ jobs:
                   sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
                   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
                   sudo apt update
-                  sudo apt install microsoft-edge-beta
+                  sudo apt install -y microsoft-edge-stable
 
             - name: Download Build Artifact
               uses: actions/download-artifact@v6
@@ -301,7 +301,7 @@ jobs:
                   sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
                   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
                   sudo apt update
-                  sudo apt install microsoft-edge-beta
+                  sudo apt install -y microsoft-edge-stable
 
             - name: Download Build Artifact
               uses: actions/download-artifact@v6
@@ -367,7 +367,7 @@ jobs:
                   sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
                   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
                   sudo apt update
-                  sudo apt install microsoft-edge-beta
+                  sudo apt install -y microsoft-edge-stable
 
             - name: Download Build Artifact
               uses: actions/download-artifact@v6
@@ -433,7 +433,7 @@ jobs:
                   sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
                   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
                   sudo apt update
-                  sudo apt install microsoft-edge-beta
+                  sudo apt install -y microsoft-edge-stable
 
             - name: Download Build Artifact
               uses: actions/download-artifact@v6
@@ -499,7 +499,7 @@ jobs:
                   sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
                   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
                   sudo apt update
-                  sudo apt install microsoft-edge-beta
+                  sudo apt install -y microsoft-edge-stable
 
             - name: Download Build Artifact
               uses: actions/download-artifact@v6
@@ -565,7 +565,7 @@ jobs:
                   sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
                   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
                   sudo apt update
-                  sudo apt install microsoft-edge-beta
+                  sudo apt install -y microsoft-edge-stable
 
             - name: Download Build Artifact
               uses: actions/download-artifact@v6
@@ -631,7 +631,7 @@ jobs:
                   sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
                   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
                   sudo apt update
-                  sudo apt install microsoft-edge-beta
+                  sudo apt install -y microsoft-edge-stable
 
             - name: Download Build Artifact
               uses: actions/download-artifact@v6
