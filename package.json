@@ -39,7 +39,7 @@
 		"test:e2e": "E2E_HOST='http://localhost:5001' gherkin-testcafe 'chrome --disable-features=LocalNetworkAccessChecks' --config-file=.testcaferc.json",
 		"test:e2e:ci": "E2E_HOST='http://localhost:5001' gherkin-testcafe --config-file=.testcaferc.json 'chrome:headless --disable-features=LocalNetworkAccessChecks' -q attemptLimit=3,successThreshold=1",
 		"test:e2e:ci:firefox": "E2E_HOST='http://localhost:5001' gherkin-testcafe --config-file=.testcaferc.json firefox:headless -q attemptLimit=3,successThreshold=1",
-		"test:e2e:ci:edge": "E2E_HOST='http://localhost:5001' gherkin-testcafe --config-file=.testcaferc.json edge:headless -q attemptLimit=3,successThreshold=1",
+		"test:e2e:ci:edge": "E2E_HOST='http://localhost:5001' gherkin-testcafe --config-file=.testcaferc.json edge:headless --browser-init-timeout 120000 -q attemptLimit=3,successThreshold=1",
 		"sdk:install-local": "node scripts/install-local-sdk.js",
 		"sdk:check-updates": "npx npm-check-updates \"/^@ardenthq.*$/\" -u",
 		"unused": "npx knip --config ./knip.json"
