@@ -1,5 +1,6 @@
 import {
 	AbiEncoder,
+	BatchTransferBuilder,
 	ContractAddresses,
 	EvmCallBuilder,
 	MultipaymentBuilder,
@@ -37,7 +38,8 @@ type TransactionsInputs =
 	| Services.TransferInput
 	| Services.VoteInput
 	| Services.ValidatorRegistrationInput
-	| Services.ValidatorResignationInput;
+	| Services.ValidatorResignationInput
+	| Services.BatchTransferInput;
 
 export class TransactionService {
 	readonly #ledgerService!: LedgerService;
@@ -142,6 +144,60 @@ export class TransactionService {
 						value: amount.toFixed(0),
 					},
 				],
+			},
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	public async batchTransfer(input: Services.BatchTransferInput): Promise<SignedTransactionData> {
+		this.#assertGasFee(input);
+
+		if (!input.data.payments || input.data.payments.length === 0) {
+			throw new Error(
+				`[TransactionService#batchTransfer] Expected payments to be defined and non-empty but received ${typeof input.data.payments} with length ${input.data.payments?.length ?? 0}`,
+			);
+		}
+
+		const token = input.token;
+		assertToken(token);
+
+		const nonce = await this.#generateNonce(input);
+
+		//TODO: remove hardcoded contract address.
+		const batchTransferContractAddress = "0x0f6B0a8a50E12b554ceb20e909d3F627A1DCC3F6";
+
+		const builder = BatchTransferBuilder.new({
+			senderPublicKey: input.signatory.publicKey(),
+		})
+			.contractAddress(batchTransferContractAddress)
+			.nonce(nonce)
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
+			.gasLimit(input.gasLimit.toString());
+
+		for (const payment of input.data.payments) {
+			const amount = BigNumber.make(payment.amount, token.token().decimals()).toSatoshi();
+			builder.addRecipient(payment.to, BigInt(amount.toFixed(0)));
+		}
+
+		builder.tokenAddress(token.token().address());
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			{
+				...builder.transaction.data,
+				tokens: input.data.payments.map((payment, index) => ({
+					from: input.signatory.address(),
+					index,
+					metadata: {
+						tokenAddress: token.token().address(),
+						tokenDecimals: token.token().decimals(),
+						tokenName: token.token().name(),
+						tokenSymbol: token.token().symbol(),
+					},
+					to: payment.to,
+					value: BigNumber.make(payment.amount, token.token().decimals()).toFixed(0),
+				})),
 			},
 			builder.transaction.serialize().toString("hex"),
 		);

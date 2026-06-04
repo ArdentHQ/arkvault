@@ -8,6 +8,7 @@ export interface TransactionService {
 	transfer(input: TransferInput): Promise<SignedTransactionData>;
 	secondSignature(input: SecondSignatureInput): Promise<SignedTransactionData>;
 	validatorRegistration(input: ValidatorRegistrationInput): Promise<SignedTransactionData>;
+	batchTransfer(input: BatchTransferInput): Promise<SignedTransactionData>;
 	usernameRegistration(input: UsernameRegistrationInput): Promise<SignedTransactionData>;
 	usernameResignation(input: UsernameResignationInput): Promise<SignedTransactionData>;
 	vote(input: VoteInput): Promise<SignedTransactionData>;
@@ -70,6 +71,13 @@ export interface MultiPaymentInput extends TransactionInput {
 		memo?: string;
 		payments: { to: string; amount: number }[];
 	};
+}
+
+export interface BatchTransferInput extends TransactionInput {
+	data: {
+		payments: { to: string; amount: number }[];
+	};
+	token: WalletToken;
 }
 
 export interface ContractDeploymentInput extends TransactionInput {
