@@ -166,6 +166,7 @@ export class TransactionService {
 		const builder = BatchTransferBuilder.new({
 			senderPublicKey: input.signatory.publicKey(),
 		})
+			.tokenAddress(token.token().address())
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());
@@ -174,8 +175,6 @@ export class TransactionService {
 			const amount = BigNumber.make(payment.amount, token.token().decimals()).toSatoshi();
 			builder.addRecipient(payment.to, BigInt(amount.toFixed(0)));
 		}
-
-		builder.tokenAddress(token.token().address());
 
 		await this.#sign(input, builder);
 
