@@ -178,6 +178,7 @@ export default defineConfig({
 	],
 	optimizeDeps: {
 		include: [
+			"@arkecosystem/typescript-crypto",
 			"@ardenthq/arkvault-crypto",
 			"@faustbrian/node-haveibeenpwned",
 			"@ardenthq/arkvault-url",
