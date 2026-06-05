@@ -163,13 +163,9 @@ export class TransactionService {
 
 		const nonce = await this.#generateNonce(input);
 
-		//TODO: remove hardcoded contract address.
-		const batchTransferContractAddress = "0x0f6B0a8a50E12b554ceb20e909d3F627A1DCC3F6";
-
 		const builder = BatchTransferBuilder.new({
 			senderPublicKey: input.signatory.publicKey(),
 		})
-			.contractAddress(batchTransferContractAddress)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());
