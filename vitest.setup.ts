@@ -6,7 +6,6 @@ import { createLedgerTransportFactoryMock } from "@/utils/vitest-mocks";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import crypto from "crypto";
-import "jest-styled-components";
 import { server } from "./src/tests/mocks/server";
 import { pwnedMock } from "./src/tests/mocks/handlers/pwned";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";

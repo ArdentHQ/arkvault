@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "jest-styled-components";
 import { ExchangeSidePanel } from "./ExchangeSidePanel";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";

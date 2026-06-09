@@ -91,7 +91,7 @@ cucumber(
 			await t.expect(Selector("h1").withText(translations.SETTINGS.GENERAL.TITLE).exists).ok();
 		},
 		"When she saves a new currency setting": async (t: TestController) => {
-			await t.click(Selector("[aria-owns=select-currency-menu] [data-testid=SelectDropdown__caret]"));
+			await t.click(Selector("[id=select-currency-toggle-button]"));
 			await t.click(Selector(".select-list-option").withText("ETH (Ξ)"));
 			await saveSettings(t);
 		},

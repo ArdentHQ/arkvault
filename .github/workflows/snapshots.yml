@@ -44,7 +44,7 @@ jobs:
 
             - name: Update Snapshots
               continue-on-error: true # Continue on error to allow the commit action to run
-              run: LC_ALL=en_US.UTF-8 vitest -u
+              run: pnpm test
 
             - uses: stefanzweifel/git-auto-commit-action@v6
               with:
