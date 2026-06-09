@@ -12,6 +12,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { useValidatorRegistrationLockedFee } from "./hooks/useValidatorRegistrationLockedFee";
 import { Alert } from "@/app/components/Alert";
 import { BigNumber } from "@/app/lib/helpers";
+import { deriveBlsPublicKey } from "@arkecosystem/typescript-crypto";
 
 export const ReviewStep = ({
 	wallet,
@@ -24,7 +25,9 @@ export const ReviewStep = ({
 
 	const { getValues, unregister, errors, trigger } = useFormContext();
 
-	const { validatorPublicKey } = getValues();
+	const { validatorPassphrase } = getValues();
+
+	const validatorPublicKey = useMemo(() => deriveBlsPublicKey(validatorPassphrase), [validatorPassphrase])
 
 	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
 
@@ -47,7 +50,7 @@ export const ReviewStep = ({
 
 	useEffect(() => {
 		trigger("lockedFee");
-	}, [gasPrice, gasLimit]);
+	}, [gasPrice.toString(), gasLimit.toString()]);
 
 	return (
 		<section data-testid="ValidatorRegistrationForm__review-step">

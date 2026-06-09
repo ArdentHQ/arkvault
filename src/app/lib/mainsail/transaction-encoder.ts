@@ -31,7 +31,7 @@ export interface EncodeInputData {
 	recipientAddress?: string;
 	recipients?: RecipientPaymentItem[];
 	username?: string;
-	validatorPublicKey?: string;
+	validatorPassphrase?: string;
 	voteAddresses?: string[];
 	tokenContractAddress?: string;
 }
@@ -96,11 +96,11 @@ export class TransactionEncoder {
 		};
 	}
 
-	public validatorRegistration(validatorPublicKey: string): EncodedData & { value: Hex } {
+	public validatorRegistration(validatorPassphrase: string): EncodedData & { value: Hex } {
 		const value = this.#network.milestone()["validatorRegistrationFee"] ?? 0;
 
 		return {
-			data: TransactionDataEncoder.validatorRegistration(validatorPublicKey),
+			data: TransactionDataEncoder.validatorRegistration(validatorPassphrase),
 			to: ContractAddresses.CONSENSUS,
 			value: numberToHex(BigNumber.make(value).toBigInt()),
 		};
@@ -177,8 +177,8 @@ export class TransactionEncoder {
 			return this.vote(inputData.voteAddresses);
 		}
 
-		if (type === "validatorRegistration" && inputData.validatorPublicKey) {
-			return this.validatorRegistration(inputData.validatorPublicKey);
+		if (type === "validatorRegistration" && inputData.validatorPassphrase) {
+			return this.validatorRegistration(inputData.validatorPassphrase);
 		}
 
 		if (type === "validatorResignation") {
@@ -197,8 +197,8 @@ export class TransactionEncoder {
 			return this.contractDeployment(inputData.bytecode as Hex);
 		}
 
-		if (type === "updateValidator" && inputData.validatorPublicKey) {
-			return this.updateValidator(inputData.validatorPublicKey);
+		if (type === "updateValidator" && inputData.validatorPassphrase) {
+			return this.updateValidator(inputData.validatorPassphrase);
 		}
 
 		if (type === "multiPayment" && inputData.recipients) {
