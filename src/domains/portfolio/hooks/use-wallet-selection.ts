@@ -54,8 +54,8 @@ export const useWalletSelection = (profile: Contracts.IProfile) => {
 				.map((wallet) => wallet.address()),
 		);
 
+		await profile.tokens().sync();
 		await persist();
-		void profile.tokens().sync();
 	};
 
 	/**
@@ -71,8 +71,8 @@ export const useWalletSelection = (profile: Contracts.IProfile) => {
 			wallet.mutator().isSelected(selected.includes(wallet.address()));
 		}
 
+		await profile.tokens().sync();
 		await persist();
-		void profile.tokens().sync();
 	};
 
 	/**
