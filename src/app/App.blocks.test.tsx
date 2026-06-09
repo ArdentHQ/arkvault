@@ -14,20 +14,33 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-vi.mock("@/domains/profile/routing", async () => {
-	const page = await vi.importActual("@/domains/profile/pages/Welcome");
-	const { ProfilePaths } = await vi.importActual("@/router/paths");
+vi.mock("@/domains/contact/routing", () => ({
+	ContactRoutes: [],
+}));
 
-	return {
-		ProfileRoutes: [
-			{
-				component: page.default,
-				exact: true,
-				path: ProfilePaths.Welcome,
-			},
-		],
-	};
-});
+vi.mock("@/domains/exchange/routing", () => ({
+	ExchangeRoutes: [],
+}));
+
+vi.mock("@/domains/portfolio/routing", () => ({
+	PortfolioRoutes: [],
+}));
+
+vi.mock("@/domains/setting/routing", () => ({
+	SettingRoutes: [],
+}));
+
+vi.mock("@/domains/vote/routing", () => ({
+	VoteRoutes: [],
+}));
+
+vi.mock("@/domains/profile/routing", () => ({
+	ProfileRoutes: [],
+}));
+
+vi.mock("@/domains/tokens/routing", () => ({
+	TokenRoutes: [],
+}));
 
 describe("App Router", () => {
 	beforeEach(() => {

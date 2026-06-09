@@ -27,7 +27,7 @@ export function FormLabel({ textClassName = "text-sm", ...properties }: FormLabe
 		<label
 			data-testid="FormLabel"
 			className={cn(
-				"FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100",
+				"FormLabel hover:text-theme-primary-600! mb-2 flex font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100",
 				textClassName,
 			)}
 			htmlFor={fieldContext?.name}
@@ -40,7 +40,7 @@ export function FormLabel({ textClassName = "text-sm", ...properties }: FormLabe
 					<Tooltip content={t("COMMON.VALIDATION.OPTIONAL")}>
 						<span
 							data-testid="FormLabel__optional"
-							className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1"
+							className="ml-1 text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-secondary-700"
 						>
 							{t("COMMON.OPTIONAL")}
 						</span>

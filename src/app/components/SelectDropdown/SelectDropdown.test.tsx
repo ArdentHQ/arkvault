@@ -342,6 +342,7 @@ describe("SelectDropdown", () => {
 			expect(selectDropdown).toHaveValue("Option 1");
 
 			await keyboardArrowDown();
+			await keyboardArrowDown();
 			await userEvent.keyboard("{enter}");
 
 			expect(selectDropdown).toHaveValue("Option 2");

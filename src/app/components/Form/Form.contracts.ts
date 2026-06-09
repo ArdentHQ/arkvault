@@ -1,6 +1,5 @@
 import React from "react";
-import { SubmitHandler, UseFormMethods } from "react-hook-form";
-import { FieldValues } from "react-hook-form/dist/types/fields";
+import { FieldValues, SubmitHandler, UseFormMethods } from "react-hook-form";
 
 export type FormProperties<T extends FieldValues = any> = {
 	onSubmit?: SubmitHandler<T>;

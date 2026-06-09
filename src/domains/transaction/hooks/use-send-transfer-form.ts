@@ -1,8 +1,7 @@
 import { Networks, Services } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useForm } from "react-hook-form";
-import { DefaultValues } from "react-hook-form/dist/types/form";
+import { DefaultValues, useForm } from "react-hook-form";
 import { assertWallet } from "@/utils/assertions";
 import { lowerCaseEquals } from "@/utils/equals";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -121,6 +120,7 @@ export const useSendTransferForm = ({
 				data,
 				gasLimit,
 				gasPrice,
+				nonce: wallet.isLegacyCold() ? wallet.legacyNonce().toFixed(0) : undefined,
 				signatory,
 				token,
 			};

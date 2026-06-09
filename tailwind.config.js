@@ -26,7 +26,6 @@ module.exports = {
 			"md-lg": "960px",
 			lg: "1024px",
 			xl: "1280px",
-			"not-all-hover-none": { raw: "not all and (hover: none)" },
 		},
 		colors: {
 			black: "#121213",

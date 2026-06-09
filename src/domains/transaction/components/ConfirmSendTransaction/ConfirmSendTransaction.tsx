@@ -26,7 +26,7 @@ export const ConfirmSendTransaction = ({
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_CONFIRM_SEND_TRANSACTION.TITLE")} isOpen={isOpen} onClose={onClose}>
-			<div className="text-theme-secondary-text my-8">
+			<div className="my-8 text-theme-secondary-text">
 				{t("TRANSACTION.MODAL_CONFIRM_SEND_TRANSACTION.DESCRIPTION")}
 			</div>
 

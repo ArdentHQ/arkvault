@@ -37,12 +37,12 @@ const AlertHeader = ({ variant, collapsible, ...props }: AlertProperties) => (
 	<div
 		{...props}
 		className={twMerge(
-			"dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white",
+			"flex items-center space-x-2 px-4 py-2 text-sm font-semibold dim:text-white dark:text-white",
 			cn({
 				"bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500": variant === "danger",
 				"bg-theme-danger-500 text-white": variant === "danger-dark",
 				"bg-theme-hint-100 text-theme-hint-700 dark:bg-theme-hint-700": variant === "hint",
-				"bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700 dim:bg-theme-dim-navy-600":
+				"bg-theme-info-100 text-theme-info-700 dim:bg-theme-dim-navy-600 dark:bg-theme-info-700":
 					variant === "info",
 				"bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700": variant === "success",
 				"bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700":
@@ -58,7 +58,7 @@ const AlertBody = ({ variant, ...props }: AlertProperties) => (
 	<div
 		{...props}
 		className={twMerge(
-			"dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words",
+			"w-full break-words p-4 text-left text-sm leading-relaxed dim:bg-theme-dim-800 dim:text-theme-dim-50 dark:bg-theme-secondary-800",
 			cn({
 				"bg-theme-danger-50": variant === "danger",
 				"bg-theme-hint-50": variant === "hint",

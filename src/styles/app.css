@@ -18,6 +18,8 @@
 @import "slick-carousel/slick/slick.css" layer(utilities);
 
 @config "../../tailwind.config.js";
+
+@custom-variant not-all-hover-none (@media (hover: hover));
 /** Tailwind **/
 
 /*

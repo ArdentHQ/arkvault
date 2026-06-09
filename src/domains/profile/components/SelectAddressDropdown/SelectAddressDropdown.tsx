@@ -71,7 +71,7 @@ export const OptionLabel = ({
 					"cursor-not-allowed": option.isDisabled,
 				})}
 			>
-				<div className="flex w-full items-center space-x-2 leading-5 whitespace-nowrap">
+				<div className="flex w-full items-center space-x-2 whitespace-nowrap leading-5">
 					<Address
 						address={address}
 						walletName={alias}
@@ -104,9 +104,9 @@ export const OptionLabel = ({
 							value={wallet.balance()}
 							ticker={wallet.network().ticker()}
 							className={cn("hidden flex-1 text-right font-semibold sm:inline-block", {
-								"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+								"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500":
 									option.isDisabled,
-								"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+								"text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
 									!option.isDisabled,
 							})}
 						/>
@@ -118,9 +118,9 @@ export const OptionLabel = ({
 								name="CheckmarkDouble"
 								size="md"
 								className={cn({
-									"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50":
+									"text-theme-primary-600 dim:text-theme-dim-50 dark:text-theme-secondary-50":
 										!option.isDisabled,
-									"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+									"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500":
 										option.isDisabled,
 								})}
 							/>
@@ -133,9 +133,9 @@ export const OptionLabel = ({
 						value={wallet.balance()}
 						ticker={wallet.network().ticker()}
 						className={cn("mt-2 flex-1 text-sm font-semibold sm:hidden", {
-							"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+							"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500":
 								option.isDisabled,
-							"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+							"text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
 								!option.isDisabled,
 						})}
 					/>
@@ -254,7 +254,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 											<div
 												data-testid="SelectRecipient__select-recipient"
 												className={cn("flex items-center", {
-													"text-theme-secondary-700 hover:bg-theme-navy-200 hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:hover:bg-theme-dark-700 dim:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:hover:text-theme-dark-50 cursor-pointer rounded bg-transparent p-1 transition-colors":
+													"cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50":
 														!disabled,
 												})}
 												onClick={openRecipients}

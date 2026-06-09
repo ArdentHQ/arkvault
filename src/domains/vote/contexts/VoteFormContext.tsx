@@ -4,7 +4,7 @@ import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTab
 import { Networks } from "@/app/lib/mainsail";
 import { useDeeplinkActionHandler } from "@/app/hooks";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
-import { useSearchParams } from "react-router";
+import { useSearchParams } from "react-router-dom";
 
 interface Properties {
 	children: React.ReactNode;

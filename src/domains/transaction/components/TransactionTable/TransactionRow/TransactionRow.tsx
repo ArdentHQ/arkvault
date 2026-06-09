@@ -68,7 +68,7 @@ export const TransactionRow = memo(
 				>
 					<div className="flex flex-col gap-1 font-semibold">
 						<TransactionRowId transaction={transaction} />
-						<span className="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden">
+						<span className="text-xs text-theme-secondary-700 dim:text-theme-dim-200 xl:hidden">
 							{timeStamp ? (
 								<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
 							) : (
@@ -137,7 +137,7 @@ export const TransactionRow = memo(
 				<TableCell
 					className={cn({
 						hidden: hideSender,
-						"md-lg:table-cell hidden": !hideSender,
+						"hidden md-lg:table-cell": !hideSender,
 					})}
 					innerClassName={cn("space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11", {
 						"min-h-16 my-1 py-2 lg:min-w-36": !hideSender,
@@ -175,7 +175,7 @@ export const TransactionRow = memo(
 							decimals={decimals}
 						/>
 						<span
-							className="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
 						>
 							<TransactionFiatAmount
@@ -215,7 +215,7 @@ export const TransactionRow = memo(
 								profile={profile}
 							/>
 							<span
-								className="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+								className="text-xs font-semibold text-theme-secondary-700 xl:hidden"
 								data-testid="TransactionRow__exchange-currency"
 							>
 								<TransactionFiatAmount

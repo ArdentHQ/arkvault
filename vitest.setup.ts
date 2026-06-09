@@ -1,16 +1,21 @@
 import "@testing-library/jest-dom";
 import MockDate from "mockdate";
 import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
+import { createLedgerTransportFactoryMock } from "@/utils/vitest-mocks";
+
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import crypto from "crypto";
-import "jest-styled-components";
 import { server } from "./src/tests/mocks/server";
 import { pwnedMock } from "./src/tests/mocks/handlers/pwned";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
 
 expect.extend(matchers);
+
+vi.mock("@/app/contexts/Ledger/ledger.transport.factory", () => {
+	return { LedgerTransportFactory: createLedgerTransportFactoryMock() };
+});
 
 vi.mock("@faustbrian/node-haveibeenpwned", () => ({
 	pwned: async () => pwnedMock(),

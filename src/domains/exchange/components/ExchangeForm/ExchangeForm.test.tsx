@@ -1579,6 +1579,7 @@ describe("ReviewStep", () => {
 		const { result: form } = renderHook(() =>
 			useForm({
 				defaultValues: {
+					exchangeRate: "5",
 					fromCurrency: {
 						addressExplorerMask: "https://blockchair.com/bitcoin/address/{}?from=changenow",
 						coin: "btc",

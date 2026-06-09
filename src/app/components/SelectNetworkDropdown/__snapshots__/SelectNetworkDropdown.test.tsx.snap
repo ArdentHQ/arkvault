@@ -7,14 +7,14 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
+      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+          class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -27,18 +27,14 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
       class="w-full"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-owns="downshift-4-menu"
         class="w-full"
-        role="combobox"
       >
         <span>
           <span>
             <div>
               <label
-                for="downshift-4-input"
-                id="downshift-4-label"
+                for="downshift-_r_6_-input"
+                id="downshift-_r_6_-label"
               />
               <div
                 class="invisible fixed w-auto whitespace-nowrap"
@@ -47,20 +43,23 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
                 …
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
-                    aria-controls="downshift-4-menu"
-                    aria-labelledby="downshift-4-label"
+                    aria-controls="downshift-_r_6_-menu"
+                    aria-expanded="false"
+                    aria-labelledby="downshift-_r_6_-label"
                     autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                    class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
                     data-testid="SelectDropdown__input"
-                    id="downshift-4-input"
+                    id="downshift-_r_6_-input"
                     placeholder="Select option"
+                    role="combobox"
                     type="text"
                     value="Mainsail Devnet"
                   />
@@ -76,7 +75,7 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
                   </span>
                 </div>
                 <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  class="flex items-center divide-x divide-theme-secondary-300 dim:divide-theme-dim-700 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
                   data-testid="Input__addon-end"
                 >
                   <div
@@ -86,8 +85,12 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
                       class="flex items-center"
                     >
                       <div
+                        aria-controls="downshift-_r_6_-menu"
+                        aria-expanded="false"
                         class="flex items-center justify-center"
                         data-testid="SelectDropdown__caret"
+                        id="downshift-_r_6_-toggle-button"
+                        tabindex="-1"
                       >
                         <div
                           class="absolute inset-0 block cursor-pointer md:hidden"
@@ -125,8 +128,8 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
               </div>
             </div>
             <div
-              aria-labelledby="downshift-4-label"
-              id="downshift-4-menu"
+              aria-labelledby="downshift-_r_6_-label"
+              id="downshift-_r_6_-menu"
               role="listbox"
             />
           </span>
@@ -146,14 +149,14 @@ exports[`SelectNetworkDropdown > should render 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
+      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+          class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -166,40 +169,39 @@ exports[`SelectNetworkDropdown > should render 1`] = `
       class="w-full"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-owns="downshift-0-menu"
         class="w-full"
-        role="combobox"
       >
         <span>
           <span>
             <div>
               <label
-                for="downshift-0-input"
-                id="downshift-0-label"
+                for="downshift-_r_0_-input"
+                id="downshift-_r_0_-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
-                    aria-controls="downshift-0-menu"
-                    aria-labelledby="downshift-0-label"
+                    aria-controls="downshift-_r_0_-menu"
+                    aria-expanded="false"
+                    aria-labelledby="downshift-_r_0_-label"
                     autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default"
                     data-testid="SelectDropdown__input"
-                    id="downshift-0-input"
+                    id="downshift-_r_0_-input"
                     placeholder="Select option"
+                    role="combobox"
                     type="text"
                     value=""
                   />
                 </div>
                 <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  class="flex items-center divide-x divide-theme-secondary-300 dim:divide-theme-dim-700 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
                   data-testid="Input__addon-end"
                 >
                   <div
@@ -209,8 +211,12 @@ exports[`SelectNetworkDropdown > should render 1`] = `
                       class="flex items-center"
                     >
                       <div
+                        aria-controls="downshift-_r_0_-menu"
+                        aria-expanded="false"
                         class="flex items-center justify-center"
                         data-testid="SelectDropdown__caret"
+                        id="downshift-_r_0_-toggle-button"
+                        tabindex="-1"
                       >
                         <div
                           class="absolute inset-0 block cursor-pointer md:hidden"
@@ -248,8 +254,8 @@ exports[`SelectNetworkDropdown > should render 1`] = `
               </div>
             </div>
             <div
-              aria-labelledby="downshift-0-label"
-              id="downshift-0-menu"
+              aria-labelledby="downshift-_r_0_-label"
+              id="downshift-_r_0_-menu"
               role="listbox"
             />
           </span>
@@ -267,14 +273,14 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
+      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+          class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -287,40 +293,39 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
       class="w-full"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-owns="downshift-2-menu"
         class="w-full"
-        role="combobox"
       >
         <span>
           <span>
             <div>
               <label
-                for="downshift-2-input"
-                id="downshift-2-label"
+                for="downshift-_r_3_-input"
+                id="downshift-_r_3_-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    aria-activedescendant=""
                     aria-autocomplete="list"
-                    aria-controls="downshift-2-menu"
-                    aria-labelledby="downshift-2-label"
+                    aria-controls="downshift-_r_3_-menu"
+                    aria-expanded="false"
+                    aria-labelledby="downshift-_r_3_-label"
                     autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 cursor-default"
                     data-testid="SelectDropdown__input"
-                    id="downshift-2-input"
+                    id="downshift-_r_3_-input"
                     placeholder="Select option"
+                    role="combobox"
                     type="text"
                     value=""
                   />
                 </div>
                 <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  class="flex items-center divide-x divide-theme-secondary-300 dim:divide-theme-dim-700 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
                   data-testid="Input__addon-end"
                 >
                   <div
@@ -330,8 +335,12 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
                       class="flex items-center"
                     >
                       <div
+                        aria-controls="downshift-_r_3_-menu"
+                        aria-expanded="false"
                         class="flex items-center justify-center"
                         data-testid="SelectDropdown__caret"
+                        id="downshift-_r_3_-toggle-button"
+                        tabindex="-1"
                       >
                         <div
                           class="absolute inset-0 block cursor-pointer md:hidden"
@@ -369,8 +378,8 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
               </div>
             </div>
             <div
-              aria-labelledby="downshift-2-label"
-              id="downshift-2-menu"
+              aria-labelledby="downshift-_r_3_-label"
+              id="downshift-_r_3_-menu"
               role="listbox"
             />
           </span>

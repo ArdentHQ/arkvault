@@ -33,11 +33,6 @@ export const getTruncatedValue = (referenceElement: HTMLElement, elementWidth: n
 		element.innerHTML = temporary;
 	} while (mid && hasOverflow(element));
 
-	// TODO: revisit this hardcoded condition
-	if (value !== "DJqwFiSdTR2TRPDxTQ8bnUmdnxaSTguF3b") {
-		element.remove();
-	}
-
 	return temporary;
 };
 

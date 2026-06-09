@@ -61,7 +61,7 @@ export const LedgerMigrationOverview = ({
 							data-testid="LedgerMigration__Review-edit"
 							variant="transparent"
 							onClick={() => setEditingWallet(transfer.recipient()!)}
-							className="text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
+							className="p-0! text-theme-primary-600 dim:text-theme-dim-500 dark:text-theme-secondary-500"
 						>
 							<Icon name="Pencil" />
 							<span>{t("COMMON.EDIT")}</span>
@@ -72,7 +72,7 @@ export const LedgerMigrationOverview = ({
 				<DetailWrapper
 					label={t("TRANSACTION.TRANSACTION_DETAILS")}
 					footer={
-						<DetailTitle className="w-auto leading-4! sm:min-w-36 sm:text-sm">
+						<DetailTitle className="leading-4! w-auto sm:min-w-36 sm:text-sm">
 							{t("COMMON.LEDGER_MIGRATION.DETAILS_IN_ARKSCAN")}
 						</DetailTitle>
 					}

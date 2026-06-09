@@ -1,7 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import "jest-styled-components";
 import { ContactForm } from "./ContactForm";
 import {
 	env,

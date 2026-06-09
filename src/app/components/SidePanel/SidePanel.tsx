@@ -74,7 +74,7 @@ export const SidepanelFooter = ({ className, isScrolled, ...properties }: Sidepa
 	<div
 		data-testid="SidePanel__footer"
 		className={cn(
-			"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
+			"flex w-full flex-col border-t border-theme-secondary-300 bg-theme-background px-6 py-4 dim:border-theme-dim-700 dark:border-theme-dark-700",
 			{ "shadow-footer-side-panel": isScrolled },
 			className,
 		)}
@@ -248,7 +248,7 @@ const SidePanelContent = ({
 					<>
 						<div
 							className={cn(
-								"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl duration-300 dark:bg-[#191d22]/90 dark:backdrop-blur-none",
+								"fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl duration-300 dim:bg-[#101627CC]/90 dim:backdrop-blur-sm dark:bg-[#191d22]/90 dark:backdrop-blur-none",
 								{
 									"opacity-100": !isMinimized,
 									"pointer-events-none opacity-0": isMinimized,
@@ -291,26 +291,26 @@ const SidePanelContent = ({
 										<div
 											data-testid="SidePanel__scrollable-content"
 											className={cn(
-												"navy-scroll bg-theme-background text-theme-text flex h-dvh w-full flex-col shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] transition-colors duration-300",
+												"navy-scroll flex h-dvh w-full flex-col bg-theme-background text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] transition-colors duration-300",
 												{
-													"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-tl-sm rounded-tr-sm border-t border-r border-l sm:rounded-tl-xl sm:rounded-tr-none sm:border-r-0":
-														isMinimized,
 													"border-transparent": !isMinimized,
+													"rounded-tl-sm rounded-tr-sm border-l border-r border-t border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:rounded-tl-xl sm:rounded-tr-none sm:border-r-0":
+														isMinimized,
 												},
 											)}
 											ref={scrollRef}
 										>
 											<div className="relative">
-												<div className="bg-theme-background rounded-tl-sm rounded-tr-sm sm:rounded-tl-xl sm:rounded-tr-none">
+												<div className="rounded-tl-sm rounded-tr-sm bg-theme-background sm:rounded-tl-xl sm:rounded-tr-none">
 													<div className="relative flex flex-col">
 														<div
 															onClick={isMinimized ? () => toggleMinimize() : undefined}
 															className={cn(
 																"flex justify-between transition-all duration-150",
 																{
-																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
+																	"border-b border-b-theme-secondary-300 dim:border-b-theme-dim-700 dark:border-b-theme-secondary-800":
 																		!hasSteps,
-																	"cursor-pointer items-center py-3.5 pr-6 pl-6":
+																	"cursor-pointer items-center py-3.5 pl-6 pr-6":
 																		isMinimized,
 																	"items-start px-6 py-3.5": !isMinimized,
 																},
@@ -318,7 +318,7 @@ const SidePanelContent = ({
 														>
 															<div
 																className={cn(
-																	"mx-auto flex w-full justify-between transition-all duration-300 lg:w-4xl",
+																	"lg:w-4xl mx-auto flex w-full justify-between transition-all duration-300",
 																	{
 																		"lg:px-6": isExpanded,
 																	},
@@ -328,7 +328,7 @@ const SidePanelContent = ({
 																	{titleIcon && (
 																		<div
 																			className={cn(
-																				"text-theme-primary-600 dark:text-theme-navy-500 hidden shrink-0 sm:block [&_svg]:transition-all [&_svg]:duration-300",
+																				"hidden shrink-0 text-theme-primary-600 dark:text-theme-navy-500 sm:block [&_svg]:transition-all [&_svg]:duration-300",
 																				{
 																					"[&_:has(svg)]:h-5!": isMinimized,
 																				},
@@ -356,7 +356,7 @@ const SidePanelContent = ({
 																<div className="flex flex-row items-center gap-3">
 																	<div
 																		className={cn(
-																			"text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700",
+																			"text-theme-secondary-700 hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
 																			"rounded transition-all duration-100 ease-linear",
 																		)}
 																	>
@@ -380,7 +380,7 @@ const SidePanelContent = ({
 																	{minimizeable && (
 																		<div
 																			className={cn(
-																				"text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700",
+																				"text-theme-secondary-700 hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
 																				"rounded transition-all duration-100 ease-linear",
 																				{
 																					"h-5 w-5": isMinimized,
@@ -404,7 +404,7 @@ const SidePanelContent = ({
 																							size="xs"
 																							variant="transparent"
 																							data-testid="SidePanel__minimize-button-hint"
-																							className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 whitespace-nowrap sm:w-auto"
+																							className="w-full whitespace-nowrap bg-theme-primary-500 px-4 py-1.5 dim:bg-theme-dim-navy-600 sm:w-auto"
 																							onClick={() => {
 																								persistMinimizedHint(
 																									true,
@@ -442,7 +442,7 @@ const SidePanelContent = ({
 
 																	<div
 																		className={cn(
-																			"text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700",
+																			"text-theme-secondary-700 hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
 																			"rounded transition-all duration-100 ease-linear",
 																			{
 																				"h-5 w-5": isMinimized,
@@ -487,13 +487,13 @@ const SidePanelContent = ({
 											<div
 												ref={scrollContainerRef}
 												className={cn(
-													"mx-auto flex w-full max-w-full flex-1 flex-col gap-4 overflow-y-auto px-6 py-4 lg:w-4xl",
+													"lg:w-4xl mx-auto flex w-full max-w-full flex-1 flex-col gap-4 overflow-y-auto px-6 py-4",
 												)}
 												data-testid="SidePanel__content"
 												inert={isMinimized}
 											>
 												{subtitle && (
-													<div className="text-theme-secondary-text text-sm leading-[21px] font-normal md:text-base md:leading-7">
+													<div className="text-sm font-normal leading-[21px] text-theme-secondary-text md:text-base md:leading-7">
 														{subtitle}
 													</div>
 												)}

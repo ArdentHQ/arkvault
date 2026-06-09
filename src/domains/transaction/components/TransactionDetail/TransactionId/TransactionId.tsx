@@ -36,9 +36,9 @@ export const TransactionId = ({ transaction, isConfirmed, label }: Properties): 
 	return (
 		<div
 			data-testid="TransactionId"
-			className="sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 sm:dim:border-theme-dim-700 flex-row items-center sm:flex sm:rounded-lg sm:border"
+			className="flex-row items-center sm:flex sm:rounded-lg sm:border sm:border-theme-secondary-300 sm:dim:border-theme-dim-700 sm:dark:border-theme-secondary-800"
 		>
-			<div className="text-theme-secondary-700 sm:bg-theme-secondary-200 dark:text-theme-secondary-500 sm:dim:bg-theme-dim-950 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold whitespace-nowrap sm:mb-0 sm:h-full sm:rounded-l-lg sm:px-4 sm:py-3 sm:text-base sm:leading-5 sm:dark:bg-black">
+			<div className="mb-2 whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:mb-0 sm:h-full sm:rounded-l-lg sm:bg-theme-secondary-200 sm:px-4 sm:py-3 sm:text-base sm:leading-5 sm:dim:bg-theme-dim-950 sm:dark:bg-black">
 				{label ?? t("TRANSACTION.TRANSACTION_ID")}
 			</div>
 
@@ -46,7 +46,7 @@ export const TransactionId = ({ transaction, isConfirmed, label }: Properties): 
 				<TruncateMiddleDynamic value={transaction.hash()} parentRef={reference} />
 			</div>
 
-			<div className="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4">
+			<div className="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0">
 				<Clipboard
 					variant={isSmAndAbove ? "icon" : "button"}
 					data={transaction.hash()}
@@ -67,7 +67,7 @@ export const TransactionId = ({ transaction, isConfirmed, label }: Properties): 
 					icon="ArrowExternal"
 					variant="secondary"
 					size="icon"
-					className="border-theme-secondary-300 dark:border-theme-secondary-800 dark:hover:border-theme-primary-500 dim:bg-transparent dim:border-theme-dim-700 dim:text-theme-dim-navy-600 dim-hover:border-theme-dim-navy-700 h-8 w-8 border bg-transparent p-2 hover:border-transparent dark:bg-transparent"
+					className="h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dim:border-theme-dim-700 dim:bg-transparent dim:text-theme-dim-navy-600 dim-hover:border-theme-dim-navy-700 dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
 					disabled={[!isConfirmed, !transaction.isConfirmed()].every(Boolean)}
 					onClick={() => {
 						openExternal(transaction.explorerLink());

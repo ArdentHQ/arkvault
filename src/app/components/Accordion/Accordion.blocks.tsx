@@ -18,7 +18,7 @@ interface AccordionWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
 export const AccordionWrapper = ({ isInactive, isCollapsed, className, ...props }: AccordionWrapperProps) => (
 	<div
 		className={twMerge(
-			"border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background flex flex-col gap-x-3 border-b duration-200 md:mb-4 md:rounded-xl md:border-0",
+			"flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0",
 			cn({
 				"not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 transition-shadow":
 					isCollapsed,
@@ -37,7 +37,7 @@ interface AccordionToggleWrapperProps extends React.HTMLAttributes<HTMLDivElemen
 const AccordionToggleWrapper = ({ ...props }: AccordionToggleWrapperProps) => (
 	<div
 		className={twMerge(
-			"text-theme-secondary-700 ring-theme-primary-100 dark:text-theme-secondary-500 dark:ring-theme-secondary-700 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg ring-2 transition-all sm:h-8",
+			"not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8",
 		)}
 		{...props}
 	/>
@@ -100,7 +100,7 @@ export const AccordionHeader = ({
 export const AccordionContent = ({ children, className, ...properties }: AccordionContentProperties) => (
 	<div
 		data-testid="AccordionContent"
-		className={twMerge("px-8 pb-6 md:px-4 md:pt-6 md:pb-0", className)}
+		className={twMerge("px-8 pb-6 md:px-4 md:pb-0 md:pt-6", className)}
 		{...properties}
 	>
 		{children}
@@ -118,8 +118,8 @@ export const AccordionHeaderSkeletonWrapper = ({
 	>
 		{children}
 
-		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 flex h-full items-center pl-4">
-			<div className="bg-theme-background text-theme-secondary-500 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800 flex h-8 w-8 content-center items-center justify-center rounded-lg ring-1">
+		<div className="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700">
+			<div className="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800">
 				<Icon name="ChevronDownSmall" size="sm" />
 			</div>
 		</div>
