@@ -366,7 +366,7 @@ describe("TransactionService", () => {
 		} as any;
 
 		await expect(transactionService.updateValidator(input)).rejects.toThrow(
-			"[TransactionService#updateValidator] Expected validatorPassphrase to be defined but received undefined"
+			"[TransactionService#updateValidator] Expected validatorPassphrase to be defined but received undefined",
 		);
 	});
 
