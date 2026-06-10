@@ -31,7 +31,7 @@ const renderComponent = (properties?: any) => {
 			form.register("inputFeeSettings");
 			form.register("gasPrice");
 			form.register("gasLimit");
-			form.register("validatorPublicKey");
+			form.register("validatorPassphrase");
 		}, [form]);
 
 		return (
