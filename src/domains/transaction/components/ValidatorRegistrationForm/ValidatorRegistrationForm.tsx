@@ -55,7 +55,7 @@ transactionDetails.displayName = "ValidatorRegistrationFormTransactionDetails";
 
 export const ValidatorRegistrationForm: SendRegistrationForm = {
 	component,
-	formFields: ["validatorPublicKey"],
+	formFields: ["validatorPassphrase"],
 	tabSteps: 2,
 	transactionDetails,
 };
@@ -66,7 +66,7 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
-	const { network, senderAddress, validatorPublicKey, gasPrice, gasLimit } = getValues();
+	const { network, senderAddress, validatorPassphrase, gasPrice, gasLimit } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 	httpClient.forgetWalletCache(senderWallet);
@@ -76,7 +76,7 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 	if (senderWallet.isValidator()) {
 		transactionId = await senderWallet.transaction().signUpdateValidator({
 			data: {
-				validatorPublicKey,
+				validatorPassphrase,
 			},
 			gasLimit,
 			gasPrice,
@@ -86,7 +86,7 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 	} else {
 		transactionId = await senderWallet.transaction().signValidatorRegistration({
 			data: {
-				validatorPublicKey,
+				validatorPassphrase,
 				value: profile.activeNetwork().milestone()["validatorRegistrationFee"] ?? 0,
 			},
 			gasLimit,

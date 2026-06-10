@@ -110,9 +110,9 @@ describe("ConfirmedTransactionData", () => {
 		const mockTransaction = new ConfirmedTransactionData();
 
 		// Use real encoded data for registerValidator with bytes parameter (BLS public key)
-		// Method identifier for registerValidator(bytes): 602a9eee + encoded bytes data
+		// Method identifier for registerValidator(bytes,bytes): 226f2645 + encoded bytes data
 		const realEncodedData =
-			"0x602a9eee00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000020abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890";
+			"0x226f264500000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000020abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890";
 
 		mockTransaction.configure({
 			...commonData,

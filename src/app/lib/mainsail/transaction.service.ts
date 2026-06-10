@@ -1,7 +1,5 @@
 import {
-	AbiEncoder,
 	BatchTransferBuilder,
-	ContractAddresses,
 	EvmCallBuilder,
 	MultipaymentBuilder,
 	Network,
@@ -10,6 +8,7 @@ import {
 	UnvoteBuilder,
 	UsernameRegistrationBuilder,
 	UsernameResignationBuilder,
+	ValidatorUpdateBuilder,
 	ValidatorRegistrationBuilder,
 	ValidatorResignationBuilder,
 	VoteBuilder,
@@ -201,17 +200,17 @@ export class TransactionService {
 	public async validatorRegistration(input: Services.ValidatorRegistrationInput): Promise<SignedTransactionData> {
 		this.#assertGasFee(input);
 
-		if (!input.data.validatorPublicKey) {
+		if (!input.data.validatorPassphrase) {
 			throw new Error(
-				`[TransactionService#validatorRegistration] Expected validatorPublicKey to be defined but received ${typeof input
-					.data.validatorPublicKey}`,
+				`[TransactionService#validatorRegistration] Expected validatorPassphrase to be defined but received ${typeof input
+					.data.validatorPassphrase}`,
 			);
 		}
 
 		const nonce = await this.#generateNonce(input);
 
 		const builder = await ValidatorRegistrationBuilder.new()
-			.validatorPublicKey(`0x${input.data.validatorPublicKey}`)
+			.validatorPassphrase(input.data.validatorPassphrase)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString())
@@ -228,22 +227,17 @@ export class TransactionService {
 	public async updateValidator(input: Services.UpdateValidatorInput): Promise<SignedTransactionData> {
 		this.#assertGasFee(input);
 
-		if (!input.data.validatorPublicKey) {
+		if (!input.data.validatorPassphrase) {
 			throw new Error(
-				`[TransactionService#updateValidator] Expected validatorPublicKey to be defined but received ${typeof input
-					.data.validatorPublicKey}`,
+				`[TransactionService#updateValidator] Expected validatorPassphrase to be defined but received ${typeof input
+					.data.validatorPassphrase}`,
 			);
 		}
 
 		const nonce = await this.#generateNonce(input);
 
-		const builder = await EvmCallBuilder.new({
-			senderPublicKey: "",
-			value: "0",
-		})
-
-			.to(ContractAddresses.CONSENSUS)
-			.payload(new AbiEncoder().encodeFunctionCall("updateValidator", [`0x${input.data.validatorPublicKey}`]))
+		const builder = await ValidatorUpdateBuilder.new()
+			.validatorPassphrase(input.data.validatorPassphrase)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());

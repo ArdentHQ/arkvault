@@ -29,20 +29,10 @@ cucumber(
 		...preSteps,
 		"When she enters valid public key": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
-			await t.typeText(
-				Selector("[data-testid=Input__validator_public_key]"),
-				"b387dc09d41dc443a0bb972f5bcce2b06620e2f1711a0596e96275c5ab38d4c85ccbe2d5f92d6f02dee4853acf1a14d9",
-				{ replace: true },
-			);
+			await t.typeText(Selector("[data-testid=Input__validator_passphrase]"), MNEMONICS[2], { replace: true });
 			await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).notOk();
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
-			await t
-				.expect(
-					Selector("[data-testid=DetailWrapper]").withText(
-						"b387dc09d41dc443a0bb972f5bcce2b06620e2f1711a0596e96275c5ab38d4c85ccbe2d5f92d6f02dee4853acf1a14d9",
-					).exists,
-				)
-				.ok();
+			await t.expect(Selector("[data-testid=DetailWrapper]").withText("ab7f44008fc01a84b52a82acd49").exists).ok();
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 		},
 		"And sends the validator registration transaction": async (t: TestController) => {
@@ -63,7 +53,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: `${E2E_PUBLIC_API_URL}wallets?attributes.validatorPublicKey=b387dc09d41dc443a0bb972f5bcce2b06620e2f1711a0596e96275c5ab38d4c85ccbe2d5f92d6f02dee4853acf1a14d9`,
+				url: `${E2E_PUBLIC_API_URL}wallets?attributes.validatorPublicKey=ab7f44008fc01a84b52a82acd49cbd5f3387b008147c447f06faec5c638a02b7058db1451f0691d8089d6df543bab8cf`,
 			},
 			{},
 			404,
@@ -89,7 +79,7 @@ cucumber("@validatorRegistration-invalidName", {
 	...preSteps,
 	"When she enters an invalid public key": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
-		await t.typeText(Selector("[data-testid=Input__validator_public_key]"), "TEST KEY");
+		await t.typeText(Selector("[data-testid=Input__validator_passphrase]"), "TEST KEY");
 	},
 	"Then an error is displayed on the name field": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
@@ -105,11 +95,7 @@ cucumber(
 		...preSteps,
 		"When she enters a public key that already used": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
-			await t.typeText(
-				Selector("[data-testid=Input__validator_public_key]"),
-				"d387dc09d41dc443a0bb972f5bcce2b06620e2f1711a0596e96275c5ab38d4c85ccbe2d5f92d6f02dee4853acf1a14d9",
-				{ replace: true },
-			);
+			await t.typeText(Selector("[data-testid=Input__validator_passphrase]"), MNEMONICS[2], { replace: true });
 		},
 		"Then an error is displayed on the name field": async (t: TestController) => {
 			await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
@@ -122,7 +108,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: `${E2E_PUBLIC_API_URL}wallets?attributes.validatorPublicKey=d387dc09d41dc443a0bb972f5bcce2b06620e2f1711a0596e96275c5ab38d4c85ccbe2d5f92d6f02dee4853acf1a14d9`,
+				url: `${E2E_PUBLIC_API_URL}wallets?attributes.validatorPublicKey=ab7f44008fc01a84b52a82acd49cbd5f3387b008147c447f06faec5c638a02b7058db1451f0691d8089d6df543bab8cf`,
 			},
 			{},
 			200,

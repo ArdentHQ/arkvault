@@ -7,6 +7,7 @@ import * as useFeesHook from "@/app/hooks/use-fees";
 import { BigNumber } from "@/app/lib/helpers";
 import { env, getDefaultProfileId, render, screen, syncValidators } from "@/utils/testing-library";
 import { vi } from "vitest";
+import { MNEMONICS } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -18,7 +19,7 @@ const renderComponent = (properties?: any) => {
 		fee: "2",
 		gasLimit: "1",
 		gasPrice: "1",
-		validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+		validatorPassphrase: MNEMONICS[2],
 	};
 
 	const Component = () => {
@@ -30,7 +31,7 @@ const renderComponent = (properties?: any) => {
 			form.register("inputFeeSettings");
 			form.register("gasPrice");
 			form.register("gasLimit");
-			form.register("validatorPublicKey");
+			form.register("validatorPassphrase");
 		}, [form]);
 
 		return (
