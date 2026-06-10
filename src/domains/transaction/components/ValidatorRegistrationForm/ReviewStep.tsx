@@ -29,7 +29,7 @@ export const ReviewStep = ({
 
 	const validatorPublicKey = useMemo(() => {
 		try {
-			return deriveBlsPublicKey(validatorPassphrase)
+			return deriveBlsPublicKey(validatorPassphrase);
 		} catch {
 			return "";
 		}
