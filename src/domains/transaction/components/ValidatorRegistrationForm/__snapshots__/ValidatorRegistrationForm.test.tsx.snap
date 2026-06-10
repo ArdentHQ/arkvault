@@ -190,7 +190,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                 data-testid="FormLabel"
                 for="validatorPassphrase"
               >
-                TRANSACTION.VALIDATOR_PASSPHRASE
+                Validator Passphrase
               </label>
               <span>
                 <span>
