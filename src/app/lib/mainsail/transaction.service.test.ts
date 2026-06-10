@@ -725,6 +725,29 @@ describe("TransactionService", () => {
 		);
 	});
 
+	it("should throw when batchTransfer input has undefined payments", async () => {
+		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
+		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
+		const walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: tokenDTO,
+			walletToken: walletTokenDTO,
+		});
+
+		const input = {
+			data: {},
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+			token: walletToken,
+		} as any;
+
+		await expect(transactionService.batchTransfer(input)).rejects.toThrow(
+			"[TransactionService#batchTransfer] Expected payments to be defined and non-empty but received undefined with length 0",
+		);
+	});
+
 	it("should throw when batchTransfer input is missing token", async () => {
 		const input = {
 			data: {
