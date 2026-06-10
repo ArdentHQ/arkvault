@@ -173,9 +173,7 @@ exports[`ReviewStep > should render review step 1`] = `
                 </div>
                 <div
                   class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
-                >
-                  02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de
-                </div>
+                />
               </div>
             </div>
           </div>
