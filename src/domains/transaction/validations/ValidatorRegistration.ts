@@ -72,7 +72,7 @@ export const validatorRegistration = (t: any) => ({
 		}),
 		validate: {
 			pattern: (validatorPassphrase: string) => {
-				const isValid = BIP39.validate(validatorPassphrase)
+				const isValid = BIP39.validate(validatorPassphrase);
 
 				if (!isValid) {
 					return t("COMMON.INPUT_ADDRESS.VALIDATION.NOT_VALID");

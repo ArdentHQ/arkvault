@@ -27,7 +27,7 @@ export const ReviewStep = ({
 
 	const { validatorPassphrase } = getValues();
 
-	const validatorPublicKey = useMemo(() => deriveBlsPublicKey(validatorPassphrase), [validatorPassphrase])
+	const validatorPublicKey = useMemo(() => deriveBlsPublicKey(validatorPassphrase), [validatorPassphrase]);
 
 	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
 
