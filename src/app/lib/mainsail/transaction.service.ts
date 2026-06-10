@@ -178,7 +178,7 @@ export class TransactionService {
 
 		if (!input.data.validatorPassphrase) {
 			throw new Error(
-				`[TransactionService#updateValidator] Expected validatorPublicKey to be defined but received ${typeof input
+				`[TransactionService#updateValidator] Expected validatorPassphrase to be defined but received ${typeof input
 					.data.validatorPassphrase}`,
 			);
 		}
