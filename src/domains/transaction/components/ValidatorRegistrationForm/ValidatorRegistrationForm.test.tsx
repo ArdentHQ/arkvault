@@ -106,6 +106,14 @@ describe("ValidatorRegistrationForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render review step", async () => {
+		const { asFragment } = renderComponent({ activeTab: 2 });
+
+		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should error if validator passphrase is invalid", async () => {
 		renderComponent();
 
@@ -142,7 +150,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPassphrase: validatorPassphrase,
+				validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -166,7 +174,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
-				validatorPassphrase: validatorPassphrase,
+				validatorPassphrase,
 				value: 250_000_000_000_000_000_000,
 			},
 			gasLimit: "1",
@@ -226,7 +234,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPassphrase: validatorPassphrase,
+				validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -249,7 +257,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
-				validatorPassphrase: validatorPassphrase,
+				validatorPassphrase,
 				value: 250_000_000_000_000_000_000,
 			},
 			gasLimit: "1",
@@ -282,7 +290,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPassphrase: validatorPassphrase,
+				validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -305,7 +313,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
-				validatorPassphrase: validatorPassphrase,
+				validatorPassphrase,
 				value: 0,
 			},
 			gasLimit: "1",
@@ -338,7 +346,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPassphrase: validatorPassphrase,
+				validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -361,7 +369,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signUpdateValidatorMock).toHaveBeenCalledWith({
 			data: {
-				validatorPassphrase: validatorPassphrase,
+				validatorPassphrase,
 			},
 			gasLimit: "1",
 			gasPrice: "1",
@@ -395,7 +403,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPassphrase: validatorPassphrase,
+				validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -441,7 +449,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPassphrase: validatorPassphrase,
+				validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
