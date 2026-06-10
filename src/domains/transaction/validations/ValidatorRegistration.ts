@@ -1,11 +1,11 @@
-import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { Networks } from "@/app/lib/mainsail";
 import { debounceAsync } from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
 import { Contracts, Helpers } from "@/app/lib/profiles";
 import { BigNumber } from "@/app/lib/helpers";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { deriveBlsPublicKey, UnitConverter } from "@arkecosystem/typescript-crypto";
+import { BIP39 } from "@ardenthq/arkvault-crypto";
 
 export const validatorRegistration = (t: any) => ({
 	lockedFee: (wallet: Contracts.IReadWriteWallet | undefined, getValues: () => object) => ({
@@ -66,30 +66,26 @@ export const validatorRegistration = (t: any) => ({
 			},
 		},
 	}),
-	validatorPublicKey: (profile: IProfile, network: Networks.Network) => ({
-		maxLength: {
-			message: t("COMMON.VALIDATION.MAX_LENGTH", {
-				field: t("TRANSACTION.VALIDATOR_PUBLIC_KEY"),
-				maxLength: 96,
-			}),
-			value: 96,
-		},
+	validatorPassphrase: (profile: IProfile, network: Networks.Network) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-			field: t("TRANSACTION.VALIDATOR_PUBLIC_KEY"),
+			field: t("TRANSACTION.VALIDATOR_PASSPHRASE"),
 		}),
-
 		validate: {
-			pattern: (publicKey: string) => {
-				const isValid = new PublicKeyService().verifyPublicKeyWithBLS(publicKey);
+			pattern: (validatorPassphrase: string) => {
+				const isValid = BIP39.validate(validatorPassphrase);
 
 				if (!isValid) {
-					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.INVALID_BLS_PUBLIC_KEY");
+					return t("COMMON.INPUT_ADDRESS.VALIDATION.NOT_VALID");
 				}
 
 				return true;
 			},
-			unique: debounceAsync(async (publicKey: string) => {
+			unique: debounceAsync(async (validatorPassphrase: string) => {
+				let publicKey: string | undefined;
+
 				try {
+					publicKey = deriveBlsPublicKey(validatorPassphrase);
+
 					const exists = await profile.validators().publicKeyExists(publicKey, network);
 
 					if (exists) {

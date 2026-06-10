@@ -14,6 +14,7 @@ import { LedgerSignatory } from "./ledger.signatory";
 import { Bip44MnemonicSignatory } from "./bip44-mnemonic.signatory";
 import { HDWalletService } from "./hd-wallet.service";
 import { LedgerService } from "./ledger.service";
+import { MNEMONICS } from "@/utils/testing-library";
 
 describe("TransactionService", () => {
 	let config: ConfigRepository;
@@ -102,7 +103,7 @@ describe("TransactionService", () => {
 
 		const input = {
 			data: {
-				validatorPublicKey: "659A76be283644AEc2003aa8ba26485047fd1BFB",
+				validatorPassphrase: MNEMONICS[2],
 				value: "1000000000",
 			},
 			gasLimit: BigNumber.make(21000),
@@ -126,7 +127,7 @@ describe("TransactionService", () => {
 
 		const input = {
 			data: {
-				validatorPublicKey: "659A76be283644AEc2003aa8ba26485047fd1BFB",
+				validatorPassphrase: MNEMONICS[2],
 			},
 			gasLimit: BigNumber.make(21000),
 			gasPrice: BigNumber.make(20000000000),
@@ -343,7 +344,7 @@ describe("TransactionService", () => {
 		await expect(transactionService.transfer(input)).rejects.toThrow("Expected amount to be defined");
 	});
 
-	it("should throw error when validatorRegistration input is missing validatorPublicKey", async () => {
+	it("should throw error when validatorRegistration input is missing validatorPassphrase", async () => {
 		const input = {
 			data: { value: "100" },
 			gasLimit: BigNumber.make(21000),
@@ -352,11 +353,11 @@ describe("TransactionService", () => {
 		} as any;
 
 		await expect(transactionService.validatorRegistration(input)).rejects.toThrow(
-			"Expected validatorPublicKey to be defined",
+			"Expected validatorPassphrase to be defined",
 		);
 	});
 
-	it("should throw error when updateValidator input is missing validatorPublicKey", async () => {
+	it("should throw error when updateValidator input is missing validatorPassphrase", async () => {
 		const input = {
 			data: {},
 			gasLimit: BigNumber.make(21000),
@@ -365,7 +366,7 @@ describe("TransactionService", () => {
 		} as any;
 
 		await expect(transactionService.updateValidator(input)).rejects.toThrow(
-			"Expected validatorPublicKey to be defined",
+			"[TransactionService#updateValidator] Expected validatorPassphrase to be defined but received undefined",
 		);
 	});
 

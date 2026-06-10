@@ -39,13 +39,13 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { validatorRegistration } = useValidation();
 
 	const { getValues, register, setValue, errors } = useFormContext();
-	const validatorPublicKey = getValues("validatorPublicKey");
+	const validatorPassphrase = getValues("validatorPassphrase");
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
 	const { env } = useEnvironmentContext();
 
 	useEffect(() => {
-		register("validatorPublicKey", validatorRegistration.validatorPublicKey(profile, network));
+		register("validatorPassphrase", validatorRegistration.validatorPassphrase(profile, network));
 	}, [register, validatorRegistration, profile, network.id(), env]);
 
 	const onSelectSender = (address: any) => {
@@ -77,11 +77,11 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 			</FormField>
 
 			<div className="mt-3 space-y-4 sm:mt-4">
-				<FormField name="validatorPublicKey">
+				<FormField name="validatorPassphrase">
 					<div className="flex flex-1 flex-row justify-between">
 						<FormLabel
 							textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
-							label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}
+							label={t("TRANSACTION.VALIDATOR_PASSPHRASE")}
 						/>
 						<Link
 							isExternal
@@ -109,10 +109,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 						</Link>
 					</div>
 					<InputDefault
-						data-testid="Input__validator_public_key"
-						defaultValue={validatorPublicKey}
+						data-testid="Input__validator_passphrase"
+						defaultValue={validatorPassphrase}
 						onChange={(event: ChangeEvent<HTMLInputElement>) =>
-							setValue("validatorPublicKey", event.target.value, {
+							setValue("validatorPassphrase", event.target.value, {
 								shouldDirty: true,
 								shouldValidate: true,
 							})
