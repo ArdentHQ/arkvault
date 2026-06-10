@@ -81,9 +81,11 @@ export const validatorRegistration = (t: any) => ({
 				return true;
 			},
 			unique: debounceAsync(async (validatorPassphrase: string) => {
-				const publicKey = deriveBlsPublicKey(validatorPassphrase);
+				let publicKey: string;
 
 				try {
+					publicKey = deriveBlsPublicKey(validatorPassphrase);
+
 					const exists = await profile.validators().publicKeyExists(publicKey, network);
 
 					if (exists) {
