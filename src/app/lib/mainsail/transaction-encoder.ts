@@ -75,9 +75,9 @@ export class TransactionEncoder {
 		};
 	}
 
-	public updateValidator(validatorPublicKey: string): EncodedData {
+	public updateValidator(validatorPassphrase: string): EncodedData {
 		return {
-			data: TransactionDataEncoder.updateValidator(validatorPublicKey),
+			data: TransactionDataEncoder.updateValidator(validatorPassphrase),
 			to: ContractAddresses.CONSENSUS,
 		};
 	}
