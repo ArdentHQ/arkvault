@@ -13,7 +13,6 @@ import {
 	within,
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
-
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { DateTime } from "@/app/lib/intl";
@@ -21,9 +20,10 @@ import React from "react";
 import { SendRegistrationSidePanel } from "./SendRegistrationSidePanel";
 import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import userEvent from "@testing-library/user-event";
-import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { afterAll, vi } from "vitest";
 import * as ReactRouter from "react-router";
+import { MNEMONICS } from "@/utils/testing-library";
+
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
@@ -153,8 +153,6 @@ describe("SendRegistrationSidePanel", () => {
 		vi.spyOn(wallet, "isValidator").mockImplementation(() => false);
 		vi.spyOn(secondWallet, "isValidator").mockImplementation(() => false);
 
-		vi.spyOn(PublicKeyService.prototype, "verifyPublicKeyWithBLS").mockReturnValue(true);
-
 		await wallet.synchroniser().identity();
 		await secondWallet.synchroniser().identity();
 
@@ -213,7 +211,7 @@ describe("SendRegistrationSidePanel", () => {
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();
 
-		await inputValidatorPublicKey();
+		await inputValidatorPassphrase();
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -280,7 +278,10 @@ describe("SendRegistrationSidePanel", () => {
 		await waitFor(() => {
 			expect(signMock).toHaveBeenCalledWith(
 				expect.objectContaining({
-					data: { validatorPublicKey: "validator-public-key", value: 0 },
+					data: {
+						validatorPassphrase: MNEMONICS[2],
+						value: 0,
+					},
 				}),
 			);
 		});
@@ -320,7 +321,7 @@ describe("SendRegistrationSidePanel", () => {
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();
 
-		await inputValidatorPublicKey();
+		await inputValidatorPassphrase();
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -387,7 +388,7 @@ describe("SendRegistrationSidePanel", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await inputValidatorPublicKey();
+		await inputValidatorPassphrase();
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
@@ -434,7 +435,7 @@ describe("SendRegistrationSidePanel", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await inputValidatorPublicKey();
+		await inputValidatorPassphrase();
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
@@ -472,7 +473,7 @@ describe("SendRegistrationSidePanel", () => {
 		await waitFor(() =>
 			expect(signMock).toHaveBeenCalledWith(
 				expect.objectContaining({
-					data: { validatorPublicKey: "validator-public-key", value: 0 },
+					data: { validatorPassphrase: MNEMONICS[2], value: 0 },
 				}),
 			),
 		);
@@ -553,7 +554,7 @@ describe("SendRegistrationSidePanel", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await inputValidatorPublicKey();
+		await inputValidatorPassphrase();
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
@@ -608,7 +609,7 @@ describe("SendRegistrationSidePanel", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await inputValidatorPublicKey();
+		await inputValidatorPassphrase();
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
@@ -628,8 +629,8 @@ describe("SendRegistrationSidePanel", () => {
 	});
 });
 
-const inputValidatorPublicKey = async (key: string = "validator-public-key") => {
-	await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
-	await userEvent.type(screen.getByTestId("Input__validator_public_key"), key);
-	await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(key));
+const inputValidatorPassphrase = async (key: string = MNEMONICS[2]) => {
+	await userEvent.clear(screen.getByTestId("Input__validator_passphrase"));
+	await userEvent.type(screen.getByTestId("Input__validator_passphrase"), key);
+	await waitFor(() => expect(screen.getByTestId("Input__validator_passphrase")).toHaveValue(key));
 };

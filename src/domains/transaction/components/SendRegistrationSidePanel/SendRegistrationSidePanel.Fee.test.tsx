@@ -20,6 +20,8 @@ import { server, requestMock } from "@/tests/mocks/server";
 
 import * as ReactRouter from "react-router";
 import { afterAll, vi } from "vitest";
+import { MNEMONICS } from "@/utils/testing-library";
+
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
@@ -84,7 +86,9 @@ describe("SendRegistrationSidePanel Fee", () => {
 	beforeEach(() => {
 		server.use(
 			requestMock("https://dwallets-evm.mainsailhq.com/api/wallets?attributes.validatorPublicKey=*", {
-				result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" },
+				result: {
+					id: "a3e98fdd447160dc521a0bf01fea1d08a0797decc2d833c9889ca5c0c2114cb9094356684bf8601d742d603492e1902a",
+				},
 			}),
 		);
 	});
@@ -95,8 +99,7 @@ describe("SendRegistrationSidePanel Fee", () => {
 
 	it("should set fee", async () => {
 		vi.spyOn(PublicKeyService.prototype, "verifyPublicKeyWithBLS").mockReturnValue(true);
-		const validatorPublicKey =
-			"a4dc0d9080e2542b4e5347af8cebe6327d8814dabda373fbee570165661f2e39b100723009e0fad9da6f207de81cea12";
+		const validatorPassphrase = MNEMONICS[2];
 
 		const nanoXTransportMock = mockNanoXTransport();
 		const selectedWalletSpy = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
@@ -106,10 +109,10 @@ describe("SendRegistrationSidePanel Fee", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const user = userEvent.setup();
-		await user.clear(screen.getByTestId("Input__validator_public_key"));
-		await user.paste(validatorPublicKey);
+		await user.clear(screen.getByTestId("Input__validator_passphrase"));
+		await user.paste(validatorPassphrase);
 
-		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(validatorPublicKey));
+		await waitFor(() => expect(screen.getByTestId("Input__validator_passphrase")).toHaveValue(validatorPassphrase));
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 

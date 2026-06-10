@@ -59,8 +59,7 @@ const renderComponent = (properties?: any) => {
 	return { ...utils, form };
 };
 
-const validatorPublicKey =
-	"a4dc0d9080e2542b4e5347af8cebe6327d8814dabda373fbee570165661f2e39b100723009e0fad9da6f207de81cea12";
+const validatorPassphrase = MNEMONICS[2];
 
 const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 	// @ts-ignore
@@ -100,43 +99,34 @@ describe("ValidatorRegistrationForm", () => {
 	});
 
 	it("should render form step", async () => {
-		const { asFragment } = renderComponent();
+		const { asFragment } = renderComponent(undefined, {validatorPassphrase: MNEMONICS[2]});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render review step", async () => {
-		const { asFragment } = renderComponent({ activeTab: 2 });
-
-		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should error if public key is too long", async () => {
+	it("should error if validator passphrase is invalid", async () => {
 		renderComponent();
 
-		const validatorPublicKey =
-			"invalidPublicKey02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268dea90be1c6e04eb9c630232268de";
+		const validatorPassphrase = "invalid";
 
-		await userEvent.type(screen.getByTestId("Input__validator_public_key"), validatorPublicKey);
+		await userEvent.type(screen.getByTestId("Input__validator_passphrase"), validatorPassphrase);
 
-		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(validatorPublicKey));
+		await waitFor(() => expect(screen.getByTestId("Input__validator_passphrase")).toHaveValue(validatorPassphrase));
 
-		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveAttribute("aria-invalid"));
+		await waitFor(() => expect(screen.getByTestId("Input__validator_passphrase")).toHaveAttribute("aria-invalid"));
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 	});
 
-	it("should set public key", async () => {
+	it("should set validator passphrase", async () => {
 		const { form } = renderComponent();
 
-		await userEvent.type(screen.getByTestId("Input__validator_public_key"), validatorPublicKey);
+		await userEvent.type(screen.getByTestId("Input__validator_passphrase"), validatorPassphrase);
 
-		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(validatorPublicKey));
-		await waitFor(() => expect(form?.getValues("validatorPublicKey")).toBe(validatorPublicKey));
+		await waitFor(() => expect(screen.getByTestId("Input__validator_passphrase")).toHaveValue(validatorPassphrase));
+		await waitFor(() => expect(form?.getValues("validatorPassphrase")).toBe(validatorPassphrase));
 	});
 
 	it("should sign transaction", async () => {
@@ -152,7 +142,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey,
+				validatorPassphrase: validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -176,7 +166,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
-				validatorPublicKey,
+				validatorPassphrase: validatorPassphrase,
 				value: 250_000_000_000_000_000_000,
 			},
 			gasLimit: "1",
@@ -236,7 +226,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey,
+				validatorPassphrase: validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -259,7 +249,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
-				validatorPublicKey,
+				validatorPassphrase: validatorPassphrase,
 				value: 250_000_000_000_000_000_000,
 			},
 			gasLimit: "1",
@@ -292,7 +282,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey,
+				validatorPassphrase: validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -315,7 +305,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
-				validatorPublicKey,
+				validatorPassphrase: validatorPassphrase,
 				value: 0,
 			},
 			gasLimit: "1",
@@ -348,7 +338,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey,
+				validatorPassphrase: validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -371,7 +361,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signUpdateValidatorMock).toHaveBeenCalledWith({
 			data: {
-				validatorPublicKey,
+				validatorPassphrase: validatorPassphrase,
 			},
 			gasLimit: "1",
 			gasPrice: "1",
@@ -405,7 +395,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey,
+				validatorPassphrase: validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -451,7 +441,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey,
+				validatorPassphrase: validatorPassphrase,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),

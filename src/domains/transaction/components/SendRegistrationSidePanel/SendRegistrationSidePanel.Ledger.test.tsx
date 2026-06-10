@@ -18,13 +18,14 @@ import userEvent from "@testing-library/user-event";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { afterAll, vi } from "vitest";
 import * as ReactRouter from "react-router";
+import { MNEMONICS } from "@/utils/testing-library";
+
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 let useSearchParamsMock;
 
-const defaultValidatorPublicKey =
-	"9572d4dacfb9f44314f1091abb4c58b7d9a3c4af00d57de16c3d54f1a5e4d7c45712624842a9dc8303d8ae9db434a27c";
+const defaultValidatorPassphrase = MNEMONICS[2];
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -126,10 +127,10 @@ describe("SendRegistrationSidePanel", () => {
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
-		await userEvent.type(screen.getByTestId("Input__validator_public_key"), defaultValidatorPublicKey);
+		await userEvent.clear(screen.getByTestId("Input__validator_passphrase"));
+		await userEvent.type(screen.getByTestId("Input__validator_passphrase"), defaultValidatorPassphrase);
 		await waitFor(() =>
-			expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(defaultValidatorPublicKey),
+			expect(screen.getByTestId("Input__validator_passphrase")).toHaveValue(defaultValidatorPassphrase),
 		);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
