@@ -99,7 +99,7 @@ describe("ValidatorRegistrationForm", () => {
 	});
 
 	it("should render form step", async () => {
-		const { asFragment } = renderComponent(undefined, {validatorPassphrase: MNEMONICS[2]});
+		const { asFragment } = renderComponent(undefined, { validatorPassphrase: MNEMONICS[2] });
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
