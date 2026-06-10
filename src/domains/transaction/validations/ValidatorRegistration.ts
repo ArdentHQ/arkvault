@@ -81,7 +81,7 @@ export const validatorRegistration = (t: any) => ({
 				return true;
 			},
 			unique: debounceAsync(async (validatorPassphrase: string) => {
-				let publicKey: string;
+				let publicKey: string|undefined;
 
 				try {
 					publicKey = deriveBlsPublicKey(validatorPassphrase);
