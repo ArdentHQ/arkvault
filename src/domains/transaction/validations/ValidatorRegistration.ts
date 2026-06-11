@@ -92,10 +92,14 @@ export const validatorRegistration = (t: any) => ({
 					const exists = await profile.validators().publicKeyExists(publicKey, network);
 
 					if (exists) {
-						return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey: displayPublicKey });
+						return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", {
+							publicKey: displayPublicKey,
+						});
 					}
 				} catch {
-					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey: displayPublicKey });
+					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", {
+						publicKey: displayPublicKey,
+					});
 				}
 			}, 300) as () => Promise<ValidateResult>,
 		},
