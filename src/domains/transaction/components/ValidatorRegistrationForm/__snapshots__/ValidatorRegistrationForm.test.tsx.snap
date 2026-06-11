@@ -263,8 +263,117 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                   class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
                   data-testid="Input__validator_passphrase"
                   name="validatorPassphrase"
-                  type="text"
+                  type="password"
                 />
+              </div>
+              <div
+                class="flex items-center divide-x divide-theme-secondary-300 dim:divide-theme-dim-700 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
+              >
+                <div
+                  class=""
+                >
+                  <button
+                    class="ring-focus focus:outline-hidden relative flex h-full w-full items-center justify-center text-2xl"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="InputPassword__toggle"
+                    type="button"
+                  >
+                    <div
+                      class="text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
+                      >
+                        <svg
+                          id="eye"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                            />
+                            <path
+                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-b border border-t-0 border-theme-secondary-300 bg-theme-secondary-100 p-4 dim:border-theme-dim-700 dim:bg-theme-dim-950 dark:border-theme-dark-700 dark:bg-theme-dark-950 mt-0"
+            >
+              <div
+                class="space-y-4"
+                data-testid="Rules"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                  data-testid="MnemonicRule-HAS_VALID_WORD_COUNT-0"
+                >
+                  <span
+                    class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-primary-600 dim:text-theme-dim-navy-400 dark:text-theme-dark-navy-400 border-2 border-theme-secondary-700 dim:border-theme-dim-500 dark:border-theme-dark-500"
+                  />
+                  <span
+                    class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                  >
+                    12 or 24 words
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-2"
+                  data-testid="MnemonicRule-LOWERCASE-0"
+                >
+                  <span
+                    class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-primary-600 dim:text-theme-dim-navy-400 dark:text-theme-dark-navy-400 border-2 border-theme-secondary-700 dim:border-theme-dim-500 dark:border-theme-dark-500"
+                  />
+                  <span
+                    class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                  >
+                    Lowercase characters only
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-2"
+                  data-testid="MnemonicRule-HAS_VALID_SPACING-0"
+                >
+                  <span
+                    class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-primary-600 dim:text-theme-dim-navy-400 dark:text-theme-dark-navy-400 border-2 border-theme-secondary-700 dim:border-theme-dim-500 dark:border-theme-dark-500"
+                  />
+                  <span
+                    class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                  >
+                    Spaces between words
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-2"
+                  data-testid="MnemonicRule-NO_TRAILING_SPACE-0"
+                >
+                  <span
+                    class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-primary-600 dim:text-theme-dim-navy-400 dark:text-theme-dark-navy-400 border-2 border-theme-secondary-700 dim:border-theme-dim-500 dark:border-theme-dark-500"
+                  />
+                  <span
+                    class="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                  >
+                    No trailing spaces
+                  </span>
+                </div>
               </div>
             </div>
           </fieldset>
