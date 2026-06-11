@@ -146,6 +146,15 @@ export interface ITransactionService {
 	signMultiPayment(input: Services.MultiPaymentInput): Promise<string>;
 
 	/**
+	 * Sign a Batch Token Transfer transaction.
+	 *
+	 * @param {Services.BatchTransferInput} input
+	 * @return {Promise<string>}
+	 * @memberof ITransactionService
+	 */
+	signBatchTransfer(input: Services.BatchTransferInput): Promise<string>;
+
+	/**
 	 * Sign a Delegate Resignation transaction.
 	 *
 	 * @deprecated
