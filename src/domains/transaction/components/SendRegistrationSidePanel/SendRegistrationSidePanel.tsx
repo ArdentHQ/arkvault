@@ -46,10 +46,12 @@ export const SendRegistrationSidePanel = ({
 	open,
 	onOpenChange,
 	registrationType,
+	onMountChange: _onMountChange,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	registrationType: "validatorRegistration" | "usernameRegistration" | "contractDeployment";
+	onMountChange?: (mounted: boolean) => void;
 }) => {
 	const { t } = useTranslation();
 
@@ -235,6 +237,7 @@ export const SendRegistrationSidePanel = ({
 
 	const onMountChange = useCallback((mounted: boolean) => {
 		setMounted(mounted);
+		_onMountChange?.(mounted);
 
 		if (!mounted) {
 			setActiveTab(FORM_STEP);
