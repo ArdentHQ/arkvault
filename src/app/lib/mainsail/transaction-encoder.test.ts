@@ -7,6 +7,7 @@ import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 import { ContractAddresses } from "@arkecosystem/typescript-crypto";
+import { MNEMONICS } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -14,8 +15,7 @@ describe("TransactionEncoder", () => {
 	let walletTokenDTO: WalletTokenDTO;
 	let tokenDTO: TokenDTO;
 	let walletToken: WalletToken;
-	const validatorPublicKey =
-		"a08058db53e2665c84a40f5152e76dd2b652125a6079130d4c315e728bcf4dd1dfb44ac26e82302331d61977d3141118";
+	const validatorPassphrase = MNEMONICS[2];
 
 	beforeAll(async () => {
 		const fixtureData = Fixtures.ByContractAddress.data;
@@ -86,7 +86,7 @@ describe("TransactionEncoder", () => {
 
 	it("should encode updateValidator", async () => {
 		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
-		const result = encoder.updateValidator(validatorPublicKey);
+		const result = encoder.updateValidator(validatorPassphrase);
 
 		expect(result.to).toBe(ContractAddresses.CONSENSUS);
 		expect(result.data).toBeDefined();
@@ -113,7 +113,7 @@ describe("TransactionEncoder", () => {
 
 	it("should encode validatorRegistration", async () => {
 		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
-		const result = encoder.validatorRegistration(validatorPublicKey);
+		const result = encoder.validatorRegistration(validatorPassphrase);
 
 		expect(result.to).toBe(ContractAddresses.CONSENSUS);
 		expect(result.data).toBeDefined();
@@ -242,7 +242,7 @@ describe("TransactionEncoder", () => {
 		const result = encoder.byType(
 			{
 				senderAddress: "0x1234",
-				validatorPublicKey: validatorPublicKey,
+				validatorPassphrase,
 			},
 			"validatorRegistration",
 		);
@@ -317,7 +317,7 @@ describe("TransactionEncoder", () => {
 		const result = encoder.byType(
 			{
 				senderAddress: "0x1234",
-				validatorPublicKey,
+				validatorPassphrase,
 			},
 			"updateValidator",
 		);

@@ -469,6 +469,7 @@ export const translations = {
 	},
 	VALIDATOR: "Validator",
 	VALIDATOR_NAME: "Validator Name",
+	VALIDATOR_PASSPHRASE: "Validator Passphrase",
 	VALIDATOR_PUBLIC_KEY: "Validator Public Key",
 	VALIDATOR_REGISTERED_WITHOUT_FEE: "This validator was registered without locking any funds.",
 	VIEW_FULL: "View Full",

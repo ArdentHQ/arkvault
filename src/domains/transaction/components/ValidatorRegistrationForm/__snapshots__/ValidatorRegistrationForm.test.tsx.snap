@@ -188,9 +188,9 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
               <label
                 class="FormLabel hover:text-theme-primary-600! mb-2 flex font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 text-sm leading-[17px] sm:text-base sm:leading-5"
                 data-testid="FormLabel"
-                for="validatorPublicKey"
+                for="validatorPassphrase"
               >
-                Validator Public Key
+                Validator Passphrase
               </label>
               <span>
                 <span>
@@ -261,8 +261,8 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                 <input
                   autocomplete="off"
                   class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
-                  data-testid="Input__validator_public_key"
-                  name="validatorPublicKey"
+                  data-testid="Input__validator_passphrase"
+                  name="validatorPassphrase"
                   type="text"
                 />
               </div>

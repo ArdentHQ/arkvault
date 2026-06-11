@@ -52,10 +52,10 @@ export interface UsernameRegistrationInput extends TransactionInput {
 export declare type UsernameResignationInput = TransactionInput;
 
 export interface ValidatorRegistrationInput extends TransactionInput {
-	data: { validatorPublicKey: string; value: number };
+	data: { validatorPassphrase: string; value: number };
 }
 export interface UpdateValidatorInput extends TransactionInput {
-	data: { validatorPublicKey: string };
+	data: { validatorPassphrase: string };
 }
 
 export interface VoteInput extends TransactionInput {
