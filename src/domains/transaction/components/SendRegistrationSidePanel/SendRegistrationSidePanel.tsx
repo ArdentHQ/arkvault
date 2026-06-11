@@ -37,6 +37,7 @@ import {
 	ContractDeploymentForm,
 	signContractDeployment,
 } from "@/domains/transaction/components/ContractDeploymentForm";
+import { useIsMounted } from "usehooks-ts";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
@@ -89,8 +90,10 @@ export const SendRegistrationSidePanel = ({
 	const summaryStep = stepCount;
 	const isAuthenticationStep = activeTab === authenticationStep;
 
+	const isMounted = useIsMounted()();
+
 	const { activeWallet } = useSelectsTransactionSender({
-		active: open,
+		active: isMounted,
 		onWalletChange: (wallet) => {
 			setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: true });
 
@@ -121,10 +124,10 @@ export const SendRegistrationSidePanel = ({
 	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration, registrationType]);
 
 	useEffect(() => {
-		if (open) {
+		if (isMounted) {
 			trigger("lockedFee");
 		}
-	}, [senderAddress, open]);
+	}, [senderAddress, isMounted]);
 
 	useToggleFeeFields({
 		activeTab,
