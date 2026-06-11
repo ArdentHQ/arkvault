@@ -37,7 +37,6 @@ import {
 	ContractDeploymentForm,
 	signContractDeployment,
 } from "@/domains/transaction/components/ContractDeploymentForm";
-import { useIsMounted } from "usehooks-ts";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
