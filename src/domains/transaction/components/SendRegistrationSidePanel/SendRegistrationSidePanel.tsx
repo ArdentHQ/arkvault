@@ -51,7 +51,7 @@ export const SendRegistrationSidePanel = ({
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	registrationType: "validatorRegistration" | "usernameRegistration" | "contractDeployment";
-	onMountChange: (mounted: boolean) => void;
+	onMountChange?: (mounted: boolean) => void;
 }) => {
 	const { t } = useTranslation();
 
