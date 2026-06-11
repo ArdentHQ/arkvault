@@ -47,12 +47,10 @@ export const SendRegistrationSidePanel = ({
 	open,
 	onOpenChange,
 	registrationType,
-	onMountChange,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	registrationType: "validatorRegistration" | "usernameRegistration" | "contractDeployment";
-	onMountChange?: (mounted: boolean) => void;
 }) => {
 	const { t } = useTranslation();
 
@@ -80,7 +78,7 @@ export const SendRegistrationSidePanel = ({
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, watch, getValues, trigger } = form;
+	const { formState, register, setValue, watch, getValues, trigger, unregister } = form;
 	const { isDirty, isSubmitting, isValidating, isValid, dirtyFields } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
@@ -90,10 +88,10 @@ export const SendRegistrationSidePanel = ({
 	const summaryStep = stepCount;
 	const isAuthenticationStep = activeTab === authenticationStep;
 
-	const isMounted = useIsMounted()();
+	const [mounted, setMounted] = useState(false);
 
 	const { activeWallet } = useSelectsTransactionSender({
-		active: isMounted,
+		active: mounted,
 		onWalletChange: (wallet) => {
 			setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: true });
 
@@ -124,10 +122,10 @@ export const SendRegistrationSidePanel = ({
 	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration, registrationType]);
 
 	useEffect(() => {
-		if (isMounted) {
+		if (mounted) {
 			trigger("lockedFee");
 		}
-	}, [senderAddress, isMounted]);
+	}, [senderAddress, mounted]);
 
 	useToggleFeeFields({
 		activeTab,
@@ -235,6 +233,23 @@ export const SendRegistrationSidePanel = ({
 		},
 		[onOpenChange],
 	);
+
+	const onMountChange = useCallback((mounted: boolean) => {
+		setMounted(mounted);
+
+		if (!mounted) {
+			setActiveTab(FORM_STEP);
+			setErrorMessage(undefined);
+
+			const fieldKeyMap = {
+				contractDeployment: "bytecode",
+				usernameRegistration: "username",
+				validatorRegistration: "validatorPublicKey",
+			};
+
+			unregister(fieldKeyMap[registrationType as string]);
+		}
+	}, []);
 
 	const hasSynced = activeWallet && activeWallet.hasSyncedWithNetwork();
 
