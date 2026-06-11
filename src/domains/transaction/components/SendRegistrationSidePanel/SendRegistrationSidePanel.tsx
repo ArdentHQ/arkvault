@@ -46,10 +46,12 @@ export const SendRegistrationSidePanel = ({
 	open,
 	onOpenChange,
 	registrationType,
+	onMountChange,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	registrationType: "validatorRegistration" | "usernameRegistration" | "contractDeployment";
+	onMountChange: (mounted: boolean) => void;
 }) => {
 	const { t } = useTranslation();
 
@@ -87,9 +89,8 @@ export const SendRegistrationSidePanel = ({
 	const summaryStep = stepCount;
 	const isAuthenticationStep = activeTab === authenticationStep;
 
-	const [mounted, setMounted] = useState(false);
 	const { activeWallet } = useSelectsTransactionSender({
-		active: mounted,
+		active: open,
 		onWalletChange: (wallet) => {
 			setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: true });
 
@@ -120,10 +121,10 @@ export const SendRegistrationSidePanel = ({
 	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration, registrationType]);
 
 	useEffect(() => {
-		if (mounted) {
+		if (open) {
 			trigger("lockedFee");
 		}
-	}, [senderAddress, mounted]);
+	}, [senderAddress, open]);
 
 	useToggleFeeFields({
 		activeTab,
@@ -231,23 +232,6 @@ export const SendRegistrationSidePanel = ({
 		},
 		[onOpenChange],
 	);
-
-	const onMountChange = useCallback((mounted: boolean) => {
-		setMounted(mounted);
-
-		if (!mounted) {
-			setActiveTab(FORM_STEP);
-			setErrorMessage(undefined);
-
-			const fieldKeyMap = {
-				contractDeployment: "bytecode",
-				usernameRegistration: "username",
-				validatorRegistration: "validatorPublicKey",
-			};
-
-			unregister(fieldKeyMap[registrationType as string]);
-		}
-	}, []);
 
 	const hasSynced = activeWallet && activeWallet.hasSyncedWithNetwork();
 
