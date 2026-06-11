@@ -79,8 +79,8 @@ export const SendRegistrationSidePanel = ({
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, watch, getValues, trigger, unregister } = form;
-	const { isDirty, isSubmitting, isValid, dirtyFields } = formState;
+	const { formState, register, setValue, watch, getValues, trigger } = form;
+	const { isDirty, isSubmitting, isValidating, isValid, dirtyFields } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
 
@@ -395,7 +395,7 @@ export const SendRegistrationSidePanel = ({
 						<Button
 							data-testid="SendRegistration__continue-button"
 							onClick={handleNext}
-							disabled={isNextDisabled || isSubmitting}
+							disabled={isNextDisabled || isSubmitting || isValidating}
 						>
 							{t("COMMON.CONTINUE")}
 						</Button>
