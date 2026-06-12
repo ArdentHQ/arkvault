@@ -78,7 +78,7 @@ export const SendRegistrationSidePanel = ({
 	const form = useForm({ mode: "onChange" });
 
 	const { formState, register, setValue, watch, getValues, trigger, unregister } = form;
-	const { isDirty, isSubmitting, isValid, dirtyFields } = formState;
+	const { isDirty, isSubmitting, isValidating, isValid, dirtyFields } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
 
@@ -88,6 +88,7 @@ export const SendRegistrationSidePanel = ({
 	const isAuthenticationStep = activeTab === authenticationStep;
 
 	const [mounted, setMounted] = useState(false);
+
 	const { activeWallet } = useSelectsTransactionSender({
 		active: mounted,
 		onWalletChange: (wallet) => {
@@ -242,7 +243,7 @@ export const SendRegistrationSidePanel = ({
 			const fieldKeyMap = {
 				contractDeployment: "bytecode",
 				usernameRegistration: "username",
-				validatorRegistration: "validatorPublicKey",
+				validatorRegistration: "validatorPassphrase",
 			};
 
 			unregister(fieldKeyMap[registrationType as string]);
@@ -411,7 +412,7 @@ export const SendRegistrationSidePanel = ({
 						<Button
 							data-testid="SendRegistration__continue-button"
 							onClick={handleNext}
-							disabled={isNextDisabled || isSubmitting}
+							disabled={isNextDisabled || isSubmitting || isValidating}
 						>
 							{t("COMMON.CONTINUE")}
 						</Button>

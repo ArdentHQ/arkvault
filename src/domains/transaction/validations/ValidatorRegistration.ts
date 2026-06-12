@@ -6,6 +6,7 @@ import { Contracts, Helpers } from "@/app/lib/profiles";
 import { BigNumber } from "@/app/lib/helpers";
 import { deriveBlsPublicKey, UnitConverter } from "@arkecosystem/typescript-crypto";
 import { BIP39 } from "@ardenthq/arkvault-crypto";
+import { Utils } from "@/app/components/MiddleTruncation";
 
 export const validatorRegistration = (t: any) => ({
 	lockedFee: (wallet: Contracts.IReadWriteWallet | undefined, getValues: () => object) => ({
@@ -81,18 +82,24 @@ export const validatorRegistration = (t: any) => ({
 				return true;
 			},
 			unique: debounceAsync(async (validatorPassphrase: string) => {
-				let publicKey: string | undefined;
+				let displayPublicKey: string | undefined;
 
 				try {
-					publicKey = deriveBlsPublicKey(validatorPassphrase);
+					const publicKey = deriveBlsPublicKey(validatorPassphrase);
+
+					displayPublicKey = Utils.buildTruncatedText(publicKey, 8, 8);
 
 					const exists = await profile.validators().publicKeyExists(publicKey, network);
 
 					if (exists) {
-						return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
+						return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", {
+							publicKey: displayPublicKey,
+						});
 					}
 				} catch {
-					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
+					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", {
+						publicKey: displayPublicKey,
+					});
 				}
 			}, 300) as () => Promise<ValidateResult>,
 		},

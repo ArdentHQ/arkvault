@@ -631,6 +631,6 @@ describe("SendRegistrationSidePanel", () => {
 
 const inputValidatorPassphrase = async (key: string = MNEMONICS[2]) => {
 	await userEvent.clear(screen.getByTestId("Input__validator_passphrase"));
-	await userEvent.type(screen.getByTestId("Input__validator_passphrase"), key);
+	await userEvent.paste(key);
 	await waitFor(() => expect(screen.getByTestId("Input__validator_passphrase")).toHaveValue(key));
 };
