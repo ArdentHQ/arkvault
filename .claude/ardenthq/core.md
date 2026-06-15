@@ -46,11 +46,11 @@ Exact commands are repo-defined (see the repo's `CLAUDE.md` / `composer.json` / 
 - No comments unless explaining a non-obvious **why** (a hidden constraint, a subtle invariant, a workaround for a specific bug)
 - Well-named identifiers > a comment explaining the "what"
 - **Don't document changes in comments.** Comments describe the code as it is, not how it got there:
-  - ❌ `// moved from backend to frontend`
-  - ❌ `// renamed from foo to bar`
-  - ❌ `// replaces the previous logic that used X`
-  - ❌ `// added for issue #123`
-  - ✅ omit the comment — git log / PR tells the story
+    - ❌ `// moved from backend to frontend`
+    - ❌ `// renamed from foo to bar`
+    - ❌ `// replaces the previous logic that used X`
+    - ❌ `// added for issue #123`
+    - ✅ omit the comment — git log / PR tells the story
 - Don't reference callers or temporal context: no `// used by X`, `// for the Y flow`, `// added in sprint Z`
 
 ## Claude reply style
