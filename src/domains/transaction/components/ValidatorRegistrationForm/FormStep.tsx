@@ -3,7 +3,7 @@ import { Icon } from "@/app/components/Icon";
 import React, { ChangeEvent, useEffect } from "react";
 import { Alert } from "@/app/components/Alert";
 import { FormStepProperties } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
-import { InputDefault } from "@/app/components/Input";
+import { InputPassword } from "@/app/components/Input";
 import { Link } from "@/app/components/Link";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 import { Contracts } from "@/app/lib/profiles";
+import { MnemonicRules } from "@/domains/transaction/components/MnemonicRules/MnemonicRules";
 
 export const getWalletAddress = (wallet: { address: () => string } | null | undefined): string =>
 	wallet?.address() ?? "";
@@ -108,7 +109,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 							</span>
 						</Link>
 					</div>
-					<InputDefault
+
+					<InputPassword
 						data-testid="Input__validator_passphrase"
 						defaultValue={validatorPassphrase}
 						onChange={(event: ChangeEvent<HTMLInputElement>) =>
@@ -118,6 +120,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 							})
 						}
 					/>
+
+					<MnemonicRules mnemonic={validatorPassphrase} wrapperClass="mt-0" />
 				</FormField>
 			</div>
 		</section>

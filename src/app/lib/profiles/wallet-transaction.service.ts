@@ -105,6 +105,11 @@ export class TransactionService implements ITransactionService {
 		return this.#signTransaction("multiPayment", input);
 	}
 
+	/** {@inheritDoc ITransactionService.signBatchTransfer} */
+	public async signBatchTransfer(input: Services.BatchTransferInput): Promise<string> {
+		return this.#signTransaction("batchTransfer", input);
+	}
+
 	/** {@inheritDoc ITransactionService.signDelegateResignation} */
 	public async signDelegateResignation(input: Services.ValidatorResignationInput): Promise<string> {
 		return this.#signTransaction("delegateResignation", input);
