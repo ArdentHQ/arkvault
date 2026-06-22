@@ -82,7 +82,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					<div className="flex flex-1 flex-row justify-between">
 						<FormLabel
 							textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
-							label={t("TRANSACTION.VALIDATOR_PASSPHRASE")}
+							label={t("TRANSACTION.VALIDATOR_MNEMONIC")}
 						/>
 						<Link
 							isExternal
