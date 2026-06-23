@@ -126,13 +126,6 @@ export const AddRecipient = ({
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
 
-	// Force single send when a token is selected.
-	useEffect(() => {
-		if (selectedToken && !isSingle) {
-			setIsSingle(true);
-		}
-	}, [selectedToken, isSingle]);
-
 	const clearFields = useCallback(() => {
 		setValue("amount", undefined);
 		setValue("recipientAddress", undefined);
@@ -242,7 +235,12 @@ export const AddRecipient = ({
 		});
 	}, [isSendAllSelected, remainingBalance, setValue]);
 
-	const { assets } = useTransferAssets({ isSingle, profile, tokens });
+	const { assets } = useTransferAssets({
+		addedAsset: recipients.length > 0 ? selectedAsset : undefined,
+		isSingle,
+		profile,
+		tokens,
+	});
 
 	const singleRecipientOnChange = ({
 		address,
@@ -321,7 +319,7 @@ export const AddRecipient = ({
 					<TransferType
 						maxRecipients={maxRecipients}
 						isSingle={isSingle}
-						disableMultiple={!!selectedToken || !selectedAsset}
+						disableMultiple={!selectedAsset}
 						onChange={(isSingle) => {
 							setIsSingle(isSingle);
 						}}
