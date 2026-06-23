@@ -233,7 +233,7 @@ export const AddRecipient = ({
 			alias: recipientAlias,
 			amount: balance,
 		});
-	}, [isSendAllSelected, remainingBalance, setValue]);
+	}, [isSendAllSelected, remainingBalance.toString(), setValue]);
 
 	const { assets } = useTransferAssets({
 		addedAsset: recipients.length > 0 ? selectedAsset : undefined,
