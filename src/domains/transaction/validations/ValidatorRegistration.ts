@@ -69,11 +69,11 @@ export const validatorRegistration = (t: any) => ({
 	}),
 	validatorPassphrase: (profile: IProfile, network: Networks.Network) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-			field: t("TRANSACTION.VALIDATOR_PASSPHRASE"),
+			field: t("TRANSACTION.VALIDATOR_MNEMONIC"),
 		}),
 		validate: {
 			pattern: (validatorPassphrase: string) => {
-				const isValid = BIP39.validate(validatorPassphrase);
+				const isValid = BIP39.compatible(validatorPassphrase);
 
 				if (!isValid) {
 					return t("COMMON.INPUT_ADDRESS.VALIDATION.NOT_VALID");

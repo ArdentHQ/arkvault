@@ -190,7 +190,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                 data-testid="FormLabel"
                 for="validatorPassphrase"
               >
-                Validator Passphrase
+                Validator Mnemonic
               </label>
               <span>
                 <span>
@@ -422,7 +422,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                   class="flex items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0"
                 >
                   <div
-                    class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                    class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-44"
                     data-testid="DetailTitle"
                   >
                     From
