@@ -1,5 +1,5 @@
 import { DTO } from "@/app/lib/profiles";
-import React, { useCallback, useEffect, useMemo, useRef, useState, JSX } from "react";
+import React, { JSX, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FormStep } from "@/domains/transaction/components/SendTransferSidePanel/FormStep";
 import { TransferLedgerReview } from "@/domains/transaction/components/SendTransferSidePanel/LedgerReview";
@@ -22,28 +22,27 @@ import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
-import cn from "classnames";
 import {
 	TransferFormData,
 	TransferOverwriteModal,
 } from "@/domains/transaction/components/SendTransferSidePanel/TransferOverwriteModal";
 import {
+	handleQRCodeReadError,
 	isSendTransferNextDisabled,
 	parseQRCodeUrl,
-	handleQRCodeReadError,
 } from "@/domains/transaction/components/SendTransferSidePanel/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
-import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
-import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
-import { Image } from "@/app/components/Image";
+import { BatchTransferTabs } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs";
+import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
+import { useSendTransferStepConfig } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
 
 const MAX_TABS = 5;
 
@@ -90,6 +89,10 @@ export const SendTransferSidePanel = ({
 	const firstTabIndex = SendTransferStep.FormStep;
 	const [activeTab, setActiveTab] = useState<SendTransferStep>(firstTabIndex);
 
+	const [batchTransferActiveTab, setBatchTransferActiveTab] = useState<BatchTransferTabStep>(
+		BatchTransferTabStep.ReviewStep,
+	);
+
 	const [unconfirmedTransactions, setUnconfirmedTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
@@ -107,6 +110,9 @@ export const SendTransferSidePanel = ({
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
 	} = useSendTransferForm({ tokenContractAddress: selectedTokenContract, tokens, wallet });
+
+	const { recipients, tokenContractAddress: contractAddress } = getValues();
+	const isBatchTransfer = recipients?.length > 1 && contractAddress !== "ARK";
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -335,97 +341,11 @@ export const SendTransferSidePanel = ({
 		wallet: wallet,
 	});
 
-	const getTitle = () => {
-		if (activeTab === SendTransferStep.ErrorStep) {
-			return t("TRANSACTION.ERROR.TITLE");
-		}
-
-		if (activeTab === SendTransferStep.AuthenticationStep) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
-		}
-
-		if (activeTab === SendTransferStep.ReviewStep) {
-			return t("TRANSACTION.REVIEW_STEP.TITLE");
-		}
-
-		if (activeTab === SendTransferStep.SummaryStep) {
-			return isConfirmed ? t("TRANSACTION.SUCCESS.CREATED") : t("TRANSACTION.PENDING.TITLE");
-		}
-
-		return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE");
-	};
-
-	const getSubtitle = () => {
-		if (activeTab === SendTransferStep.ReviewStep) {
-			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
-		}
-
-		if (activeTab === SendTransferStep.AuthenticationStep) {
-			return getAuthenticationStepSubtitle({ t, wallet });
-		}
-
-		if (activeTab === SendTransferStep.FormStep) {
-			return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION");
-		}
-
-		return;
-	};
-
-	const getTitleIcon = () => {
-		if (activeTab === SendTransferStep.ErrorStep) {
-			return <Image name="ErrorHeaderIcon" domain="transaction" className="block h-[20px] w-[20px]" />;
-		}
-
-		if (activeTab === SendTransferStep.SummaryStep) {
-			return (
-				<ThemeIcon
-					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
-					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
-					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
-					dimensions={[24, 24]}
-					className={cn({
-						"text-theme-primary-600": !isConfirmed,
-						"text-theme-success-600": isConfirmed,
-					})}
-				/>
-			);
-		}
-
-		if (activeTab === SendTransferStep.AuthenticationStep) {
-			if (wallet?.isLedger()) {
-				return (
-					<ThemeIcon
-						lightIcon="LedgerLight"
-						darkIcon="LedgerDark"
-						dimIcon="LedgerDim"
-						dimensions={[24, 24]}
-					/>
-				);
-			}
-
-			return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
-		}
-
-		if (activeTab === SendTransferStep.ReviewStep) {
-			return (
-				<ThemeIcon
-					lightIcon="DocumentView"
-					darkIcon="DocumentView"
-					dimIcon="DocumentView"
-					dimensions={[24, 24]}
-				/>
-			);
-		}
-
-		return (
-			<ThemeIcon
-				lightIcon="SendTransactionLight"
-				darkIcon="SendTransactionDark"
-				dimIcon="SendTransactionDim"
-				dimensions={[24, 24]}
-			/>
-		);
-	};
+	const { getTitle, getTitleIcon, getSubtitle } = useSendTransferStepConfig({
+		activeTab,
+		isConfirmed,
+		wallet,
+	});
 
 	const preventAccidentalClosing = useMemo(
 		() => dirtyFields.amount || dirtyFields.recipientAddress || activeTab !== SendTransferStep.FormStep,
@@ -455,7 +375,11 @@ export const SendTransferSidePanel = ({
 			disableEscapeKey={preventAccidentalClosing}
 			shakeWhenClosing={preventAccidentalClosing}
 			footer={
-				<SidePanelButtons hidden={isLedgerAuthenticationStep}>
+				<SidePanelButtons
+					hidden={
+						isLedgerAuthenticationStep || (isBatchTransfer && activeTab === SendTransferStep.ReviewStep)
+					}
+				>
 					{!isLastStep && (
 						<Button
 							data-testid="SendTransfer__back-button"
@@ -517,7 +441,10 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ReviewStep}>
-							<ReviewStep wallet={wallet!} network={activeNetwork} />
+							{!isBatchTransfer && <ReviewStep wallet={wallet!} network={activeNetwork} />}
+							{isBatchTransfer && (
+								<BatchTransferTabs wallet={wallet!} onStepChange={setBatchTransferActiveTab} />
+							)}
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.AuthenticationStep}>
