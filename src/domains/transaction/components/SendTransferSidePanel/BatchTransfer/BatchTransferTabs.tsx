@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
+import { DTO } from "@/app/lib/mainsail";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import {
@@ -19,6 +20,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import {
 	calculateTotalAmount
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 export const BatchTransferTabs = ({
 	onStepChange,
@@ -34,13 +36,15 @@ export const BatchTransferTabs = ({
 	const { formState, handleSubmit, getValues, register, unregister } = useFormContext();
 	const { isValid, isSubmitting, isDirty } = formState;
 
+	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
+
 	const [activeTab, setActiveTab] = useState<BatchTransferTabStep>(BatchTransferTabStep.ReviewStep);
 
 	const isNextDisabled = false;
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
-		const isComponentChild = target.closest("#HDWalletTabs") !== null || target.tagName === "BODY";
+		const isComponentChild = target.closest("#BatchTransferTabs") !== null || target.tagName === "BODY";
 
 		if (isComponentChild && !isNextDisabled && !isSubmitting) {
 			if (activeTab < BatchTransferTabStep.SummaryStep) {
@@ -89,11 +93,11 @@ export const BatchTransferTabs = ({
 						gasLimit,
 						gasPrice,
 						nonce: wallet.isLegacyCold() ? wallet.legacyNonce().toFixed(0) : undefined,
-						signatory,
 						data: {
-							spender: wallet.address(),
 							amount: calculateTotalAmount(recipients),
+							spender: wallet.address(),
 						},
+						signatory,
 						token,
 					});
 
@@ -106,9 +110,9 @@ export const BatchTransferTabs = ({
 					const transactionData = wallet.transaction().transaction(signedTransactionId);
 
 					console.log(transactionData);
-					// setTransaction(transactionData);
+					setTransaction(transactionData);
 
-					handleNext();
+					setActiveTab(BatchTransferTabStep.SummaryStep);
 				} catch (error) {
 					// setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 					// setActiveTab(Step.ErrorStep);
@@ -128,8 +132,8 @@ export const BatchTransferTabs = ({
 	return (
 		<>
 			<div className="h-full pb-20">
-				<Tabs id="ApproveContractTabs" activeId={activeTab}>
-					<div data-testid="ApproveContractTabs--child" className="h-full">
+				<Tabs id="BatchTransferTabs" activeId={activeTab}>
+					<div data-testid="BatchTransferTabs--child" className="h-full">
 						<div className="h-full">
 							<TabPanel tabId={BatchTransferTabStep.ReviewStep}>
 								<ReviewStep wallet={wallet} />
@@ -139,7 +143,14 @@ export const BatchTransferTabs = ({
 								<ApproveStep wallet={wallet} />
 							</TabPanel>
 
-							<TabPanel tabId={BatchTransferTabStep.SummaryStep}>tab summary</TabPanel>
+							<TabPanel tabId={BatchTransferTabStep.SummaryStep}>
+								<TransactionSuccessful
+									transaction={transaction!}
+									senderWallet={wallet!}
+									skipConfirmationCheck={false}
+									noHeading
+								/>
+							</TabPanel>
 
 							<TabPanel tabId={BatchTransferTabStep.ErrorStep}>tab error</TabPanel>
 						</div>

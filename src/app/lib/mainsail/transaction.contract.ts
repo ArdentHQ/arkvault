@@ -88,7 +88,7 @@ export interface ContractDeploymentInput extends TransactionInput {
 export interface ApproveContractInput extends TransactionInput {
 	data: {
 		spender: string;
-		amount: number;
+		amount: BigNumber;
 	};
 	token: WalletToken;
 }
