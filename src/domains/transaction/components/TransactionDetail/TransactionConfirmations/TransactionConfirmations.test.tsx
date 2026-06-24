@@ -139,7 +139,7 @@ describe("TransactionConfirmations", () => {
 		);
 
 		expect(screen.getByTestId("TransactionFailedAlert")).toBeInTheDocument();
-		expect(screen.getByText("Error encountered during contract execution.")).toBeInTheDocument();
+		expect(screen.getByText(/Error encountered during contract execution:/)).toBeInTheDocument();
 	});
 
 	it("should render failed transaction with error and pretty error message", () => {
