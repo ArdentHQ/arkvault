@@ -128,6 +128,15 @@ export interface ITransactionService {
 	signContractDeployment(input: Services.ContractDeploymentInput): Promise<string>;
 
 	/**
+	 * Sign a Approve Contract transaction
+	 *
+	 * @param {Services.ApproveContractInput} input
+	 * @return {Promise<string>}
+	 * @memberof ITransactionService
+	 */
+	signApproveContract(input: Services.ApproveContractInput): Promise<string>;
+
+	/**
 	 * Sign a Vote transaction.
 	 *
 	 * @param {Services.VoteInput} input

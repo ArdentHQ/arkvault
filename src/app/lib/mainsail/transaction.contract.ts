@@ -14,6 +14,7 @@ export interface TransactionService {
 	vote(input: VoteInput): Promise<SignedTransactionData>;
 	multiPayment(input: MultiPaymentInput): Promise<SignedTransactionData>;
 	validatorResignation(input: ValidatorResignationInput): Promise<SignedTransactionData>;
+	approveContract(input: ApproveContractInput): Promise<SignedTransactionData>;
 
 	// Estimations
 	estimateExpiration(value?: string): Promise<string | undefined>;
@@ -82,6 +83,14 @@ export interface BatchTransferInput extends TransactionInput {
 
 export interface ContractDeploymentInput extends TransactionInput {
 	data: { bytecode: string };
+}
+
+export interface ApproveContractInput extends TransactionInput {
+	data: {
+		spender: string;
+		amount: number;
+	};
+	token: WalletToken;
 }
 
 export type ValidatorResignationInput = TransactionInput;
