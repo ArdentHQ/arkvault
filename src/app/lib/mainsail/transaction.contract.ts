@@ -72,6 +72,7 @@ export interface MultiPaymentInput extends TransactionInput {
 		memo?: string;
 		payments: { to: string; amount: number }[];
 	};
+	token?: WalletToken;
 }
 
 export interface BatchTransferInput extends TransactionInput {

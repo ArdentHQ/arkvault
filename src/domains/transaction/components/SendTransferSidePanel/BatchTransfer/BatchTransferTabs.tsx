@@ -122,7 +122,7 @@ export const BatchTransferTabs = ({
 				}
 			},
 			[BatchTransferTabStep.SummaryStep]: async () => {
-				setActiveTab(BatchTransferTabStep.ApproveStep);
+				setActiveTab(BatchTransferTabStep.ConfirmTransferStep);
 			},
 			[BatchTransferTabStep.ConfirmTransferStep]: async () => {
 				onSubmit();

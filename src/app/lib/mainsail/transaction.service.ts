@@ -293,6 +293,10 @@ export class TransactionService {
 	 * @inheritDoc
 	 */
 	public async multiPayment(input: Services.MultiPaymentInput): Promise<SignedTransactionData> {
+		if (input.token) {
+			return await this.batchTransfer(input);
+		}
+
 		this.#assertGasFee(input);
 
 		if (!input.data.payments) {
