@@ -10,8 +10,9 @@ export enum BatchTransferTabStep {
 
 export interface BatchTransferTabsProperties {
 	onBack?: () => void;
-	onSubmit?: () => void;
+	onSubmit: () => void;
 	onCancel?: () => void;
+	onError: (error: string) => void;
 	onStepChange?: (step: BatchTransferTabStep) => void;
 	activeIndex?: BatchTransferTabStep;
 	wallet: Contracts.IReadWriteWallet;

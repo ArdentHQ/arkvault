@@ -21,6 +21,9 @@ import {
 	calculateTotalAmount
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import {
+	ConfirmTransferStep
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
 
 export const BatchTransferTabs = ({
 	onStepChange,
@@ -118,7 +121,12 @@ export const BatchTransferTabs = ({
 					// setActiveTab(Step.ErrorStep);
 				}
 			},
-			[BatchTransferTabStep.SummaryStep]: async () => {},
+			[BatchTransferTabStep.SummaryStep]: async () => {
+				setActiveTab(BatchTransferTabStep.ApproveStep);
+			},
+			[BatchTransferTabStep.ConfirmTransferStep]: async () => {
+				onSubmit();
+			},
 		})[activeTab as Exclude<BatchTransferTabStep, BatchTransferTabStep.SummaryStep>]();
 
 	const handleBack = useCallback(() => {
@@ -152,7 +160,9 @@ export const BatchTransferTabs = ({
 								/>
 							</TabPanel>
 
-							<TabPanel tabId={BatchTransferTabStep.ErrorStep}>tab error</TabPanel>
+							<TabPanel tabId={BatchTransferTabStep.ConfirmTransferStep}>
+								<ConfirmTransferStep wallet={wallet} />
+							</TabPanel>
 						</div>
 					</div>
 				</Tabs>

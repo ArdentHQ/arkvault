@@ -443,7 +443,17 @@ export const SendTransferSidePanel = ({
 						<TabPanel tabId={SendTransferStep.ReviewStep}>
 							{!isBatchTransfer && <ReviewStep wallet={wallet!} network={activeNetwork} />}
 							{isBatchTransfer && (
-								<BatchTransferTabs wallet={wallet!} onStepChange={setBatchTransferActiveTab} />
+								<BatchTransferTabs
+									wallet={wallet!}
+									onStepChange={setBatchTransferActiveTab}
+									onError={(error) => {
+										setErrorMessage(error);
+										setActiveTab(SendTransferStep.ErrorStep);
+									}}
+									onSubmit={() => {
+										void handleSubmit(() => submit())();
+									}}
+								/>
 							)}
 						</TabPanel>
 
