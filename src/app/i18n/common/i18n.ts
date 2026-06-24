@@ -533,6 +533,7 @@ export const translations = {
 	TRANSACTIONS: "Transactions",
 	TRANSACTION_HISTORY: "Transaction History",
 	TRANSACTION_INFORMATION: "Transaction Information",
+	TRANSACTION_STEPS: "Transaction Steps",
 	TRANSACTION_SUMMARY: "Transaction Summary",
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSFER: "Transfer",
