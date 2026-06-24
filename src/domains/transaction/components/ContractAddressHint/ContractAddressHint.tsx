@@ -13,20 +13,26 @@ export const ContractAddressHint = ({ token, link }: { token: WalletToken; link:
 				{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.CONTRACT_ADDRESS_ENDING")}
 			</div>
 
-			<Link isExternal to={link} showExternalIcon={false}>
-				<span className="flex flex-row items-center gap-2">
-					<span className="text-theme-navy-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400">
-						…{token.token().address().slice(-5)}
-					</span>
-
-					<Icon
-						data-testid="Link__external"
-						name="ArrowExternal"
-						dimensions={[12, 12]}
-						className="shrink-0 align-middle text-theme-secondary-500 duration-200 dim:text-theme-dim-400 dark:text-theme-dark-400"
-					/>
-				</span>
-			</Link>
+			<TruncatedContractAddress token={token} link={link} />
 		</div>
+	);
+};
+
+export const TruncatedContractAddress = ({ token, link }: { token: WalletToken; link: string }) => {
+	return (
+		<Link isExternal to={link} showExternalIcon={false}>
+			<span className="flex flex-row items-center gap-2">
+				<span className="text-theme-navy-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400">
+					…{token.token().address().slice(-5)}
+				</span>
+
+				<Icon
+					data-testid="Link__external"
+					name="ArrowExternal"
+					dimensions={[12, 12]}
+					className="shrink-0 align-middle text-theme-secondary-500 duration-200 dim:text-theme-dim-400 dark:text-theme-dark-400"
+				/>
+			</span>
+		</Link>
 	);
 };
