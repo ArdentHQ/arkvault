@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
 import { DTO } from "@/app/lib/mainsail";
@@ -17,13 +17,10 @@ import { httpClient } from "@/app/services";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { useEnvironmentContext } from "@/app/contexts";
-import {
-	calculateTotalAmount
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import { calculateTotalAmount } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
-import {
-	ConfirmTransferStep
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
+import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
+import { useAllowance } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/use-allowance";
 
 export const BatchTransferTabs = ({
 	onStepChange,
@@ -36,14 +33,24 @@ export const BatchTransferTabs = ({
 	const { persist } = useEnvironmentContext();
 
 	const { t } = useTranslation();
-	const { formState, handleSubmit, getValues, register, unregister } = useFormContext();
+	const { formState, getValues } = useFormContext();
 	const { isValid, isSubmitting, isDirty } = formState;
 
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const [activeTab, setActiveTab] = useState<BatchTransferTabStep>(BatchTransferTabStep.ReviewStep);
 
-	const isNextDisabled = false;
+	const { recipients, tokenContractAddress } = getValues();
+
+	const { isLoading: isAllowanceLoading, allowance } = useAllowance({
+		enabled: activeTab === BatchTransferTabStep.ReviewStep,
+		tokenAddress: tokenContractAddress,
+		wallet,
+	});
+
+	const totalAmount = calculateTotalAmount(recipients);
+	const requiresContractApproval = !isAllowanceLoading && totalAmount.isGreaterThan(allowance);
+	const isNextDisabled = isAllowanceLoading && activeTab === BatchTransferTabStep.ReviewStep;
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
@@ -61,7 +68,10 @@ export const BatchTransferTabs = ({
 	const handleNext = () =>
 		({
 			[BatchTransferTabStep.ReviewStep]: async () => {
-				setActiveTab(BatchTransferTabStep.ApproveStep);
+				const nextStep = requiresContractApproval
+					? BatchTransferTabStep.ApproveStep
+					: BatchTransferTabStep.ConfirmTransferStep;
+				setActiveTab(nextStep);
 			},
 			[BatchTransferTabStep.ApproveStep]: async () => {
 				const {
@@ -112,7 +122,6 @@ export const BatchTransferTabs = ({
 
 					const transactionData = wallet.transaction().transaction(signedTransactionId);
 
-					console.log(transactionData);
 					setTransaction(transactionData);
 
 					setActiveTab(BatchTransferTabStep.SummaryStep);
@@ -144,7 +153,11 @@ export const BatchTransferTabs = ({
 					<div data-testid="BatchTransferTabs--child" className="h-full">
 						<div className="h-full">
 							<TabPanel tabId={BatchTransferTabStep.ReviewStep}>
-								<ReviewStep wallet={wallet} />
+								<ReviewStep
+									wallet={wallet}
+									isLoading={isAllowanceLoading}
+									requiresContractApproval={requiresContractApproval}
+								/>
 							</TabPanel>
 
 							<TabPanel tabId={BatchTransferTabStep.ApproveStep}>

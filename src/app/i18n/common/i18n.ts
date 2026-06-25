@@ -1,6 +1,7 @@
 export const translations = {
 	ACCOUNT_NAME: "Account Name",
 	ACTION: "Action",
+	ACTIVE: "Active",
 	ADAPTER: "Adapter",
 	ADD: "Add",
 	ADDRESS: "Address",
@@ -31,6 +32,7 @@ export const translations = {
 	AND: "and",
 	APPEARANCE: "Appearance",
 	APPROVE: "Approve",
+	APPROVED: "Approved",
 	APP_NAME: "<strong>ARK</strong>Vault",
 	ARK: "ARK",
 	ARKVAULT: "ARK Vault",

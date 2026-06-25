@@ -7,14 +7,15 @@ import { useActiveProfile } from "@/app/hooks";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount } from "@/app/components/Amount";
 import { ExchangeCurrencyAmount } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
-import { Label } from "@/app/components/Label";
-import { useTransferDetails } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import { TransactionSteps, useTransferDetails } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
+	isLoading: boolean;
+	requiresContractApproval: boolean;
 }
 
-export const ReviewStep = ({ wallet }: ReviewStepProperties) => {
+export const ReviewStep = ({ wallet, isLoading, requiresContractApproval }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
 	const { unregister, getValues } = useFormContext();
@@ -32,6 +33,14 @@ export const ReviewStep = ({ wallet }: ReviewStepProperties) => {
 		tokenContractAddress,
 		wallet,
 	});
+
+	const approvalStatus = () => {
+		if (isLoading) {
+			return "loading";
+		}
+
+		return requiresContractApproval ? "awaiting" : "approved";
+	}
 
 	return (
 		<section data-testid="BatchTransfer__review-step">
@@ -77,31 +86,7 @@ export const ReviewStep = ({ wallet }: ReviewStepProperties) => {
 					</div>
 
 					<div className="mx-0">
-						<DetailWrapper label={t("COMMON.TRANSACTION_STEPS")} className="rounded-xl">
-							<div className="flex flex-col gap-3">
-								<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-									<DetailTitle className="w-44 sm:min-w-44 sm:pr-6">Approve Contract</DetailTitle>
-
-									<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
-										<Label color="secondary" size="xs">
-											{t("COMMON.AWAITING")}
-										</Label>
-									</div>
-								</div>
-							</div>
-
-							<div className="mt-3 flex flex-col gap-3">
-								<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-									<DetailTitle className="w-44 sm:min-w-44 sm:pr-6">Multiple Transfer</DetailTitle>
-
-									<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
-										<Label color="secondary" size="xs">
-											{t("COMMON.AWAITING")}
-										</Label>
-									</div>
-								</div>
-							</div>
-						</DetailWrapper>
+						<TransactionSteps approvalStatus={approvalStatus()} transferStatus="awaiting" />
 					</div>
 				</div>
 			</div>
