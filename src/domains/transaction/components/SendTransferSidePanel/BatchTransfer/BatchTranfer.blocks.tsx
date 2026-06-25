@@ -11,7 +11,7 @@ interface TransferDetailsProperties {
 	tokenContractAddress: string;
 }
 
-export const calculateTotalAmount = (recipients: RecipientItem[]) => {
+export const calculateTotalAmount = (recipients: {amount?: number}[]) => {
 	let amount = BigNumber.make(0);
 
 	for (const recipient of recipients) {
