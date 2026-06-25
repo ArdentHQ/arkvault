@@ -18,6 +18,8 @@ export interface EstimateGasPayload {
 
 export interface TransactionFees {
 	// Core
+	approve: TransactionFee;
+	batchTransfer: TransactionFee;
 	contractDeployment: TransactionFee;
 	transfer: TransactionFee;
 	secondSignature: TransactionFee;

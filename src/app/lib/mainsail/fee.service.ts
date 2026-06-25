@@ -36,6 +36,8 @@ export class FeeService {
 		const fees = this.#transform(node.data.evmCall);
 
 		return {
+			approve: fees,
+			batchTransfer: fees,
 			contractDeployment: fees,
 			evmCall: fees,
 			validatorRegistration: fees,
