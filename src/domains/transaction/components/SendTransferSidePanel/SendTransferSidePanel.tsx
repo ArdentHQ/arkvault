@@ -36,13 +36,21 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
-import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import {
+	useConfirmedTransaction
+} from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
-import { BatchTransferTabs } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs";
-import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
-import { useSendTransferStepConfig } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
+import {
+	BatchTransferTabs
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs";
+import {
+	BatchTransferTabStep
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
+import {
+	useSendTransferStepConfig
+} from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
 
 const MAX_TABS = 5;
 
@@ -112,7 +120,7 @@ export const SendTransferSidePanel = ({
 	} = useSendTransferForm({ tokenContractAddress: selectedTokenContract, tokens, wallet });
 
 	const { recipients, tokenContractAddress: contractAddress } = getValues();
-	const isBatchTransfer = recipients?.length > 1 && contractAddress !== "ARK";
+	const isBatchTransfer = contractAddress && contractAddress !== "ARK" && recipients?.length > 1;
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
