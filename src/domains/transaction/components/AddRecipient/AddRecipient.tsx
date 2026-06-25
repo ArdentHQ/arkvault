@@ -89,7 +89,7 @@ export const AddRecipient = ({
 	const selectedAsset = tokenContractAddress;
 	const selectedToken = tokens.find((token) => token.token().address() === selectedAsset);
 
-	const ticker = network?.ticker();
+	const ticker = selectedToken ? selectedToken.token().displaySymbol() : network?.ticker();
 	const exchangeTicker = profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
