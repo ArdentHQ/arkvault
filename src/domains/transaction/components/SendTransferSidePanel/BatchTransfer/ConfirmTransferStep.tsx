@@ -96,7 +96,7 @@ export const ConfirmTransferStep= ({ wallet }: ApproveStepProperties) => {
 
 						<FeeField
 							type="batchTransfer"
-							data={{walletToken}}
+							data={{token: walletToken.token()}}
 							network={network}
 							profile={profile}
 						/>

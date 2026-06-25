@@ -6,10 +6,10 @@ import { Hex, numberToHex } from "viem";
 import { ContractAddresses, UnitConverter, TransactionDataEncoder } from "@arkecosystem/typescript-crypto";
 import { IProfile } from "@/app/lib/profiles/contracts";
 import { assertToken } from "@/utils/assertions";
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import {
 	calculateTotalAmount
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 interface RecipientPaymentItem {
 	address: string;
@@ -40,7 +40,7 @@ export interface EncodeInputData {
 	validatorPassphrase?: string;
 	voteAddresses?: string[];
 	tokenContractAddress?: string;
-	walletToken?: WalletToken;
+	token?: TokenDTO;
 }
 
 interface EncodedData {
@@ -127,9 +127,7 @@ export class TransactionEncoder {
 		};
 	}
 
-	public approveContract(walletToken: WalletToken, recipients: RecipientPaymentItem[]): EncodedData {
-		const token = walletToken.token();
-
+	public approveContract(token: TokenDTO, recipients: RecipientPaymentItem[]): EncodedData {
 		const amount = BigNumber.make(calculateTotalAmount(recipients), token.decimals()).toSatoshi().toFixed(0);
 
 		return {
@@ -138,10 +136,8 @@ export class TransactionEncoder {
 		};
 	}
 
-	public batchTransfer(walletToken: WalletToken, recipients: RecipientPaymentItem[]): EncodedData {
-		const token = walletToken.token();
-
-		const amounts: BigInt[] = [];
+	public batchTransfer(token: TokenDTO, recipients: RecipientPaymentItem[]): EncodedData {
+		const amounts: bigint[] = [];
 		const addresses: string[] = [];
 
 		for (const recipient of recipients) {
@@ -241,12 +237,12 @@ export class TransactionEncoder {
 			return this.multiPayment(inputData.recipients);
 		}
 
-		if (type === "approve" && inputData.walletToken && inputData.recipients) {
-			return this.approveContract(inputData.walletToken, inputData.recipients);
+		if (type === "approve" && inputData.token && inputData.recipients) {
+			return this.approveContract(inputData.token, inputData.recipients);
 		}
 
-		if (type === "batchTransfer" && inputData.walletToken && inputData.recipients) {
-			return this.batchTransfer(inputData.walletToken, inputData.recipients);
+		if (type === "batchTransfer" && inputData.token && inputData.recipients) {
+			return this.batchTransfer(inputData.token, inputData.recipients);
 		}
 
 		throw new Exceptions.Exception(
