@@ -78,17 +78,20 @@ describe("LedgerScannerTest", () => {
 		expect(result).toHaveLength(5);
 	});
 
-	it.each([{ byAccountIndex: false }, { byAccountIndex: true }])("should scan all that have balance (byAccountIndex: %s)", async ({ byAccountIndex }) => {
-		const scanner = profile.ledger().scanner({ scannedWallets: [] });
-		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValueOnce(profile.wallets().first());
+	it.each([{ byAccountIndex: false }, { byAccountIndex: true }])(
+		"should scan all that have balance (byAccountIndex: %s)",
+		async ({ byAccountIndex }) => {
+			const scanner = profile.ledger().scanner({ scannedWallets: [] });
+			vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValueOnce(profile.wallets().first());
 
-		const result = await scanner.scanAllWithBalance({
-			byAccountIndex,
-			slip44: 111,
-		});
+			const result = await scanner.scanAllWithBalance({
+				byAccountIndex,
+				slip44: 111,
+			});
 
-		expect(result).toHaveLength(1);
-	});
+			expect(result).toHaveLength(1);
+		},
+	);
 
 	it("should handle regular scan", async () => {
 		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValueOnce(profile.wallets().first());

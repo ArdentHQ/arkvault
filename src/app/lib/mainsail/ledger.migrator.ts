@@ -58,11 +58,11 @@ export class LedgerMigrator {
 		// Map ARK address index to new Eth account index.
 		// Example: m/44'/111'/0'/0/1 (addressIndex=1) to m/44'/60'/1'/0/0 (account=1)
 		return BIP44.stringify({
-			purpose: existingPath.purpose,
 			account: newAccountIndex,
 			change: existingPath.change,
 			coinType: slip44,
 			index: 0,
+			purpose: existingPath.purpose,
 		});
 	}
 

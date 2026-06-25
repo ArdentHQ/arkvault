@@ -165,9 +165,9 @@ export class LedgerScanner {
 		});
 
 		const startPath = this.#computeLastPath({
+			byAccountIndex: config.byAccountIndex,
 			importedLedgerAddresses: [...addressesWithBalance, ...this.#wallets],
 			slip44: this.#ledgerService.slip44Eth(),
-			byAccountIndex: config.byAccountIndex,
 		});
 
 		const ledgerData = await this.scanWithPager({
@@ -187,9 +187,9 @@ export class LedgerScanner {
 			byAccountIndex: true,
 			slip44: this.#ledgerService.slip44Legacy(),
 			startPath: this.#computeLastPath({
+				byAccountIndex: true,
 				importedLedgerAddresses: this.#wallets,
 				slip44: this.#ledgerService.slip44Legacy(),
-				byAccountIndex: true,
 			}),
 		});
 

@@ -20,11 +20,7 @@ export interface LedgerService {
 
 	signMessage(path: string, payload: string): Promise<string>;
 
-	scan(options?: {
-		startPath?: string;
-		pageSize?: number;
-		slip44?: number;
-	}): Promise<Record<string, WalletData>>;
+	scan(options?: { startPath?: string; pageSize?: number; slip44?: number }): Promise<Record<string, WalletData>>;
 
 	scanByAccountIndex(options?: {
 		startPath?: string;
