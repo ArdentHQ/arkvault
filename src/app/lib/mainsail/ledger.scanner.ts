@@ -214,9 +214,9 @@ export class LedgerScanner {
 			pageSize: legacyWithBalance.length === 0 ? pageSize : remainingSize,
 			slip44: this.#ledgerService.slip44Eth(),
 			startPath: this.#computeLastPath({
+				byAccountIndex: true,
 				importedLedgerAddresses: this.#wallets,
 				slip44: this.#ledgerService.slip44Eth(),
-				byAccountIndex: true,
 			}),
 		});
 
