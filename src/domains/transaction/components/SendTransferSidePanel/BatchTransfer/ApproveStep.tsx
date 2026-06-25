@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -9,8 +9,6 @@ import { Amount } from "@/app/components/Amount";
 import { ExchangeCurrencyAmount } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { getFeeType } from "@/domains/transaction/components/SendTransferSidePanel/utils";
-import { buildTransferData } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.helpers";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { useTransferDetails } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TruncatedContractAddress } from "@/domains/transaction/components/ContractAddressHint/ContractAddressHint";
@@ -42,20 +40,6 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 		register("gasPrice", commonValidation.gasPrice(nativeTokenBalance, getValues, wallet.network()));
 		register("gasLimit", commonValidation.gasLimit(nativeTokenBalance, getValues, wallet.network()));
 	}, [commonValidation, register, nativeTokenBalance.toString()]);
-
-	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
-
-	useEffect(() => {
-		const updateFeeTransactionData = () => {
-			const transferData = buildTransferData({
-				recipients,
-			});
-
-			setFeeTransactionData(transferData);
-		};
-
-		void updateFeeTransactionData();
-	}, [recipients]);
 
 	const network = profile.activeNetwork();
 
@@ -111,11 +95,8 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 						/>
 
 						<FeeField
-							type={getFeeType(recipients?.length)}
-							data={{
-								...feeTransactionData,
-								recipientsCount: recipients.length,
-							}}
+							type="approve"
+							data={{walletToken}}
 							network={network}
 							profile={profile}
 						/>
