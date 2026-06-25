@@ -6,6 +6,10 @@ import { Hex, numberToHex } from "viem";
 import { ContractAddresses, UnitConverter, TransactionDataEncoder } from "@arkecosystem/typescript-crypto";
 import { IProfile } from "@/app/lib/profiles/contracts";
 import { assertToken } from "@/utils/assertions";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import {
+	calculateTotalAmount
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 
 interface RecipientPaymentItem {
 	address: string;
@@ -23,7 +27,9 @@ export type EncodeTransactionType =
 	| "usernameRegistration"
 	| "usernameResignation"
 	| "updateValidator"
-	| "contractDeployment";
+	| "contractDeployment"
+	| "approve"
+	| "batchTransfer";
 
 export interface EncodeInputData {
 	bytecode?: string;
@@ -34,6 +40,7 @@ export interface EncodeInputData {
 	validatorPassphrase?: string;
 	voteAddresses?: string[];
 	tokenContractAddress?: string;
+	walletToken?: WalletToken;
 }
 
 interface EncodedData {
@@ -120,6 +127,35 @@ export class TransactionEncoder {
 		};
 	}
 
+	public approveContract(walletToken: WalletToken, recipients: RecipientPaymentItem[]): EncodedData {
+		const token = walletToken.token();
+
+		const amount = BigNumber.make(calculateTotalAmount(recipients), token.decimals()).toSatoshi().toFixed(0);
+
+		return {
+			data: TransactionDataEncoder.approveContract(BigInt(amount)),
+			to: token.address(),
+		};
+	}
+
+	public batchTransfer(walletToken: WalletToken, recipients: RecipientPaymentItem[]): EncodedData {
+		const token = walletToken.token();
+
+		const amounts: BigInt[] = [];
+		const addresses: string[] = [];
+
+		for (const recipient of recipients) {
+			const amount = BigNumber.make(recipient.amount, token.decimals()).toSatoshi();
+			addresses.push(recipient.address);
+			amounts.push(BigInt(amount.toFixed(0)));
+		}
+
+		return {
+			data: TransactionDataEncoder.batchTransfer(token.address(), addresses, amounts),
+			to: ContractAddresses.BATCH_TRANSFER,
+		};
+	}
+
 	public tokenTransfer(tokenContractAddress: string, inputData: EncodeInputData): EncodedData {
 		const token = this.#profile
 			.tokens()
@@ -203,6 +239,14 @@ export class TransactionEncoder {
 
 		if (type === "multiPayment" && inputData.recipients) {
 			return this.multiPayment(inputData.recipients);
+		}
+
+		if (type === "approve" && inputData.walletToken && inputData.recipients) {
+			return this.approveContract(inputData.walletToken, inputData.recipients);
+		}
+
+		if (type === "batchTransfer" && inputData.walletToken && inputData.recipients) {
+			return this.batchTransfer(inputData.walletToken, inputData.recipients);
 		}
 
 		throw new Exceptions.Exception(
