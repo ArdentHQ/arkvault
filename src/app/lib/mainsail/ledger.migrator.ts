@@ -53,12 +53,16 @@ export class LedgerMigrator {
 		this.#currentTransaction = undefined;
 	}
 
-	public migratePath(path: string, slip44: number, newIndex: number): string {
+	public migratePath(path: string, slip44: number, newAccountIndex: number): string {
 		const existingPath = BIP44.parse(path);
+		// Map ARK address index to new Eth account index.
+		// Example: m/44'/111'/0'/0/1 (addressIndex=1) to m/44'/60'/1'/0/0 (account=1)
 		return BIP44.stringify({
-			...existingPath,
+			purpose: existingPath.purpose,
+			account: newAccountIndex,
+			change: existingPath.change,
 			coinType: slip44,
-			index: newIndex,
+			index: 0,
 		});
 	}
 
