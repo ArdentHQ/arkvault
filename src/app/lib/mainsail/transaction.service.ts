@@ -14,6 +14,7 @@ import {
 	VoteBuilder,
 	TokenTransferBuilder,
 	TokenApproveBuilder,
+	ERC20BatchTransferContract, ContractAddresses,
 } from "@arkecosystem/typescript-crypto";
 import { BigNumber, get } from "@/app/lib/helpers";
 
@@ -438,7 +439,7 @@ export class TransactionService {
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString())
 			.contractAddress(token.token().address())
-			.spender(input.data.spender, BigInt(amount.toFixed(0)))
+			.spender(ContractAddresses.BATCH_TRANSFER, BigInt(amount.toFixed(0)))
 			.sign(input.signatory.signingKey());
 
 		await this.#sign(input, builder);
