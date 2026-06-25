@@ -107,6 +107,13 @@ export class LedgerMigrator {
 			? await this.createWallet(cachedRecipient, recipientPath)
 			: await this.generateFromLedger(recipientPath);
 
+		console.log("Migration Wallet", {
+			fromAddress: senderAddress,
+			fromPath: senderPath,
+			destinationPath: recipientPath,
+			destinationAddress: recipientWallet.address(),
+		});
+
 		this.#generatedAddresses.set(recipientPath, recipientWallet.address());
 
 		const transaction = new MigrationTransaction({ env: this.#env, profile: this.#profile });

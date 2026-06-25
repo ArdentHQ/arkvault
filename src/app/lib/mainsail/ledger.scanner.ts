@@ -219,6 +219,8 @@ export class LedgerScanner {
 			}),
 		});
 
+		console.log("Scanned Addresses by slip44:", { 1: legacyAddresses, 111: arkAddresses, 60: ledgerAddresses });
+
 		return [...legacyWithBalance, ...ledgerAddresses];
 	}
 }
