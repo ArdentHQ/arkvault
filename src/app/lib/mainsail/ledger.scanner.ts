@@ -188,7 +188,6 @@ export class LedgerScanner {
 			byAccountIndex: false,
 			slip44: this.#ledgerService.slip44Legacy(),
 			startPath: this.#computeLastPath({
-				byAccountIndex: true,
 				importedLedgerAddresses: this.#wallets,
 				slip44: this.#ledgerService.slip44Legacy(),
 			}),
