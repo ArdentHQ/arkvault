@@ -42,7 +42,8 @@ export const ReviewStep = ({ wallet }: ReviewStepProperties) => {
 					profile={profile}
 					network={wallet.network()}
 					labelClassName="w-14 sm:min-w-[168px] sm:pr-6"
-					isMultiPayment={recipients.length > 1}
+					isMultiPayment
+					ticker={walletToken.token().displaySymbol()}
 				/>
 
 				<div className="space-y-3 sm:space-y-4">
