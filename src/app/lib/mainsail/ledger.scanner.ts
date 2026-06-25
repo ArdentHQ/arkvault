@@ -11,7 +11,7 @@ import { LedgerService } from "./ledger.service";
 interface LedgerImportOptions {
 	slip44: number;
 	startPath?: string;
-	isLegacy: boolean;
+	byAccountIndex: boolean;
 	pageSize?: number;
 	skipZeroBalance?: boolean;
 }
@@ -30,12 +30,12 @@ export class LedgerScanner {
 
 	#computeLastPath({
 		slip44,
-		useLegacy,
+		byAccountIndex,
 		importedLedgerAddresses,
 	}: {
 		importedLedgerAddresses: LedgerData[];
 		slip44: number;
-		useLegacy?: boolean;
+		byAccountIndex?: boolean;
 	}): string | undefined {
 		const currentlyScannedWalletPaths = importedLedgerAddresses.map(({ path }) => path);
 		const profileWalletsPaths = [...this.#profile.wallets().values()].map((wallet) =>
@@ -46,7 +46,7 @@ export class LedgerScanner {
 			(path) => path && BIP44.parse(path).coinType === slip44,
 		);
 
-		if (useLegacy) {
+		if (byAccountIndex) {
 			return sort(filteredBySlip44)
 				.desc((path) => BIP44.parse(path!).account)
 				.at(0);
@@ -75,8 +75,8 @@ export class LedgerScanner {
 
 		while (true) {
 			try {
-				const wallets = config.isLegacy
-					? await this.#ledgerService.scanLegacy({ ...config, pageSize: 1, startPath })
+				const wallets = config.byAccountIndex
+					? await this.#ledgerService.scanByAccountIndex({ ...config, pageSize: 1, startPath })
 					: await this.#ledgerService.scan({ ...config, pageSize: 1, startPath });
 
 				const ledgerAddress = Object.entries(wallets)[0];
@@ -100,7 +100,7 @@ export class LedgerScanner {
 					//
 					// The scanning stops when we encounter 5 consecutive without transaction history.
 					const next5 = await this.scanWithPager({
-						isLegacy: config.isLegacy,
+						byAccountIndex: config.byAccountIndex,
 						pageSize: this.#defaultPageSize,
 						slip44: config.slip44,
 						startPath: path,
@@ -137,8 +137,8 @@ export class LedgerScanner {
 	async scanWithPager(config: LedgerImportOptions): Promise<LedgerData[]> {
 		let ledgerData: LedgerData[] = [];
 
-		const wallets = config.isLegacy
-			? await this.#ledgerService.scanLegacy(config)
+		const wallets = config.byAccountIndex
+			? await this.#ledgerService.scanByAccountIndex(config)
 			: await this.#ledgerService.scan(config);
 
 		for (const [path, data] of Object.entries(wallets)) {
@@ -159,7 +159,7 @@ export class LedgerScanner {
 
 	async scanNewAddresses(config: LedgerImportOptions): Promise<LedgerData[]> {
 		const addressesWithBalance = await this.scanAllWithBalance({
-			isLegacy: config.isLegacy,
+			byAccountIndex: config.byAccountIndex,
 			slip44: config.slip44,
 			startPath: config.startPath,
 		});
@@ -167,11 +167,11 @@ export class LedgerScanner {
 		const startPath = this.#computeLastPath({
 			importedLedgerAddresses: [...addressesWithBalance, ...this.#wallets],
 			slip44: this.#ledgerService.slip44Eth(),
-			useLegacy: config.isLegacy,
+			byAccountIndex: config.byAccountIndex,
 		});
 
 		const ledgerData = await this.scanWithPager({
-			isLegacy: config.isLegacy,
+			byAccountIndex: config.byAccountIndex,
 			pageSize: config.pageSize,
 			slip44: config.slip44,
 			startPath,
@@ -184,17 +184,17 @@ export class LedgerScanner {
 		const pageSize = options?.pageSize ?? this.#defaultPageSize;
 
 		const legacyAddresses = await this.scanAllWithBalance({
-			isLegacy: true,
+			byAccountIndex: true,
 			slip44: this.#ledgerService.slip44Legacy(),
 			startPath: this.#computeLastPath({
 				importedLedgerAddresses: this.#wallets,
 				slip44: this.#ledgerService.slip44Legacy(),
-				useLegacy: true,
+				byAccountIndex: true,
 			}),
 		});
 
 		const arkAddresses = await this.scanAllWithBalance({
-			isLegacy: false,
+			byAccountIndex: false,
 			slip44: this.#ledgerService.slip44(),
 			startPath: this.#computeLastPath({
 				importedLedgerAddresses: this.#wallets,
@@ -207,7 +207,7 @@ export class LedgerScanner {
 		// Ensure at least 1 new empty address is generated.
 		const remainingSize = Math.max(1, pageSize - legacyWithBalance.length);
 		const ledgerAddresses = await this.scanNewAddresses({
-			isLegacy: false,
+			byAccountIndex: false,
 			pageSize: legacyWithBalance.length === 0 ? pageSize : remainingSize,
 			slip44: this.#ledgerService.slip44Eth(),
 			startPath: this.#computeLastPath({

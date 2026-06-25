@@ -105,7 +105,7 @@ describe("LedgerService", () => {
 			// Mock getExtendedPublicKey to return a valid public key
 			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(publicKeyMock);
 
-			const result = await ledgerService.scan({ pageSize: 1, useLegacy: false });
+			const result = await ledgerService.scan({ pageSize: 1 });
 
 			expect(result).toBeDefined();
 			expect(Object.keys(result)).toHaveLength(1);
@@ -116,11 +116,11 @@ describe("LedgerService", () => {
 			expect(wallet.balance()).toBeDefined();
 		});
 
-		it("should scan legacy path and create wallet data when getExtendedPublicKey works", async () => {
+		it("should scan by account index and create wallet data when getExtendedPublicKey works", async () => {
 			// Mock getExtendedPublicKey to return a valid public key
 			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(publicKeyMock);
 
-			const result = await ledgerService.scanLegacy({ pageSize: 1 });
+			const result = await ledgerService.scanByAccountIndex({ pageSize: 1 });
 
 			expect(result).toBeDefined();
 			expect(Object.keys(result)).toHaveLength(1);
@@ -131,10 +131,10 @@ describe("LedgerService", () => {
 			expect(wallet.balance()).toBeDefined();
 		});
 
-		it("should scan legacy path with default page size when not provided", async () => {
+		it("should scan by account index with default page size when not provided", async () => {
 			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(publicKeyMock);
 
-			const result = await ledgerService.scanLegacy({});
+			const result = await ledgerService.scanByAccountIndex({});
 
 			expect(result).toBeDefined();
 			expect(Object.keys(result)).toHaveLength(5);
@@ -262,7 +262,7 @@ describe("LedgerService", () => {
 			const mockBIP44Parse = { addressIndex: mockAddressIndex };
 			const spyBIP44 = vi.spyOn(BIP44, "parse").mockReturnValue(mockBIP44Parse as any);
 
-			await expect(ledgerService.scan({ startPath, useLegacy: false })).rejects.toThrow();
+			await expect(ledgerService.scan({ startPath })).rejects.toThrow();
 			expect(spyBIP44).toHaveBeenCalledWith(startPath);
 
 			spyBIP44.mockRestore();
