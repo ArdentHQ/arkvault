@@ -82,7 +82,6 @@ describe("Wallet Options Hook", () => {
 			options: [
 				{ label: "Delegate", value: "delegate-registration" },
 				{ label: "Second Signature", value: "second-signature" },
-				{ label: "Multisignature", value: "multi-signature" },
 			],
 			title: "Register",
 		});
@@ -98,7 +97,6 @@ describe("Wallet Options Hook", () => {
 			key: "registrations",
 			options: [
 				{ label: "Delegate", value: "delegate-registration" },
-				{ label: "Multisignature", value: "multi-signature" },
 			],
 			title: "Register",
 		});

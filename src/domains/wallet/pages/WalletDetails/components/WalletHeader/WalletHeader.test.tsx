@@ -280,31 +280,6 @@ describe("WalletHeader", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should handle multisignature registration", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-		history.push(walletUrl);
-
-		const historySpy = vi.spyOn(history, "push");
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<WalletHeader profile={profile} wallet={wallet} />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
-
-		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE);
-
-		expect(historySpy).toHaveBeenCalledWith(
-			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/multiSignature`,
-		);
-
-		historySpy.mockRestore();
-	});
-
 	it("should handle second signature registration", async () => {
 		history.push(walletUrl);
 
