@@ -6,6 +6,9 @@ import { Contracts } from "@/app/lib/profiles";
 import { MigrationLedgerScanStep } from "./LedgerMigrationScanStep";
 import { Networks } from "@/app/lib/mainsail";
 
+const TEST_ADDRESS = "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
+const TEST_PATH = "m/44'/1'/0'/0/1";
+
 vi.mock("@/app/contexts/Ledger", () => ({
 	useLedgerScanner: vi.fn().mockReturnValue({
 		abortScanner: vi.fn(),
@@ -15,14 +18,14 @@ vi.mock("@/app/contexts/Ledger", () => ({
 		isSelected: vi.fn().mockReturnValue(false),
 		loadedWallets: [
 			{
-				address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+				address: TEST_ADDRESS,
 				balance: "0",
 				path: "m/44'/1'/0'/0/0",
 			},
 			{
-				address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+				address: TEST_ADDRESS,
 				balance: "100",
-				path: "m/44'/1'/0'/0/1",
+				path: TEST_PATH,
 			},
 			{
 				address: "0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f",
@@ -33,14 +36,14 @@ vi.mock("@/app/contexts/Ledger", () => ({
 		scan: vi.fn(),
 		selectedWallets: [
 			{
-				address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+				address: TEST_ADDRESS,
 				balance: "0",
 				path: "m/44'/1'/0'/0/0",
 			},
 			{
-				address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+				address: TEST_ADDRESS,
 				balance: "100",
-				path: "m/44'/1'/0'/0/1",
+				path: TEST_PATH,
 			},
 			{
 				address: "0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f",
@@ -50,9 +53,9 @@ vi.mock("@/app/contexts/Ledger", () => ({
 		],
 		wallets: [
 			{
-				address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+				address: TEST_ADDRESS,
 				balance: "100",
-				path: "m/44'/1'/0'/0/1",
+				path: TEST_PATH,
 			},
 		],
 	}),
@@ -111,17 +114,17 @@ describe("MigrationLedgerScanStep", () => {
 			isSelected: vi.fn().mockReturnValue(false),
 			loadedWallets: [
 				{
-					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+					address: TEST_ADDRESS,
 					balance: "100",
-					path: "m/44'/1'/0'/0/1",
+					path: TEST_PATH,
 				},
 			],
 			scan: vi.fn(),
 			selectedWallets: [
 				{
-					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+					address: TEST_ADDRESS,
 					balance: "100",
-					path: "m/44'/1'/0'/0/1",
+					path: TEST_PATH,
 				},
 			],
 			wallets: [],
