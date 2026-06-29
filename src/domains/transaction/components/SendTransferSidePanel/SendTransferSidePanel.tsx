@@ -98,10 +98,6 @@ export const SendTransferSidePanel = ({
 	const firstTabIndex = SendTransferStep.FormStep;
 	const [activeTab, setActiveTab] = useState<SendTransferStep>(firstTabIndex);
 
-	const [batchTransferActiveTab, setBatchTransferActiveTab] = useState<BatchTransferTabStep>(
-		BatchTransferTabStep.ReviewStep,
-	);
-
 	const [unconfirmedTransactions, setUnconfirmedTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
@@ -119,6 +115,12 @@ export const SendTransferSidePanel = ({
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
 	} = useSendTransferForm({ tokenContractAddress: selectedTokenContract, tokens, wallet });
+
+	const [batchTransferActiveTab, setBatchTransferActiveTab] = useState<BatchTransferTabStep>(
+		BatchTransferTabStep.ReviewStep,
+	);
+
+	const [isApproveTransactionConfirmed, setIsApproveTransactionConfirmed] = useState(false);
 
 	const { recipients, tokenContractAddress: contractAddress } = getValues();
 	const isBatchTransfer = contractAddress && contractAddress !== "ARK" && recipients?.length > 1;
@@ -358,7 +360,7 @@ export const SendTransferSidePanel = ({
 
 	const batchTransferStepConfig = useBatchTransferStepConfig({
 		activeTab: batchTransferActiveTab,
-		isConfirmed,
+		isConfirmed: isApproveTransactionConfirmed,
 		wallet,
 	});
 
@@ -464,6 +466,9 @@ export const SendTransferSidePanel = ({
 									wallet={wallet!}
 									activeTab={batchTransferActiveTab}
 									setActiveTab={setBatchTransferActiveTab}
+									onApproveConfirmed={() => {
+										setIsApproveTransactionConfirmed(true);
+									}}
 									onError={(error) => {
 										setErrorMessage(error);
 										setActiveTab(SendTransferStep.ErrorStep);

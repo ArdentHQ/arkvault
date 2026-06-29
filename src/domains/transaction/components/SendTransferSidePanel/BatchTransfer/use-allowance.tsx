@@ -7,9 +7,10 @@ interface RequiresApprovalProperties {
 	wallet: Contracts.IReadWriteWallet;
 	tokenAddress: string;
 	enabled?: boolean;
+	totalAmount: string;
 }
 
-export const useAllowance = ({ wallet, tokenAddress, enabled = true }: RequiresApprovalProperties) => {
+export const useAllowance = ({ wallet, tokenAddress, totalAmount, enabled = true }: RequiresApprovalProperties) => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [allowance, setAllowance] = useState<BigNumber>(BigNumber.ZERO);
 
@@ -33,7 +34,7 @@ export const useAllowance = ({ wallet, tokenAddress, enabled = true }: RequiresA
 		};
 
 		void fetchAllowance();
-	}, [wallet, tokenAddress, enabled]);
+	}, [wallet, tokenAddress, enabled, totalAmount]);
 
 	return {
 		allowance,

@@ -154,7 +154,7 @@ export const useBatchTransferStepConfig = ({ activeTab, wallet, isConfirmed }: B
 		}
 
 		if (activeTab === BatchTransferTabStep.SummaryStep) {
-			return "Approving Contract";
+			return isConfirmed ? "Contract Approved" : "Approving Contract";
 		}
 
 		return "Confirm Transfer";
@@ -170,7 +170,9 @@ export const useBatchTransferStepConfig = ({ activeTab, wallet, isConfirmed }: B
 		}
 
 		if (activeTab === BatchTransferTabStep.SummaryStep) {
-			return "Waiting for spend approval to be confirmed on the blockchain.";
+			return isConfirmed
+				? "Contract approval confirmed."
+				: "Waiting for spend approval to be confirmed on the blockchain.";
 		}
 
 		return "Transfer tokens to multiple recipients.";
@@ -203,18 +205,7 @@ export const useBatchTransferStepConfig = ({ activeTab, wallet, isConfirmed }: B
 			);
 		}
 
-		if (activeTab === BatchTransferTabStep.ConfirmTransferStep) {
-			return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
-		}
-
-		return (
-			<ThemeIcon
-				lightIcon="SendTransactionLight"
-				darkIcon="SendTransactionDark"
-				dimIcon="SendTransactionDim"
-				dimensions={[24, 24]}
-			/>
-		);
+		return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
 	};
 
 	return { getSubtitle, getTitle, getTitleIcon };

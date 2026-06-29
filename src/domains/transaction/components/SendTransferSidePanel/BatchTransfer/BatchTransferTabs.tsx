@@ -21,6 +21,9 @@ import { calculateTotalAmount } from "@/domains/transaction/components/SendTrans
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
 import { useAllowance } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/use-allowance";
+import {
+	useConfirmedTransaction
+} from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 export const BatchTransferTabs = ({
 	setActiveTab,
@@ -29,26 +32,43 @@ export const BatchTransferTabs = ({
 	onBack,
 	activeTab,
 	wallet,
+	onApproveConfirmed,
 }: BatchTransferTabsProperties) => {
 	const { persist } = useEnvironmentContext();
 
 	const { t } = useTranslation();
 	const { formState, getValues } = useFormContext();
-	const { isValid, isSubmitting, isDirty } = formState;
+	const { isSubmitting, isValid } = formState;
 
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const { recipients, tokenContractAddress } = getValues();
 
+	const totalAmount = calculateTotalAmount(recipients);
+
 	const { isLoading: isAllowanceLoading, allowance } = useAllowance({
 		enabled: activeTab === BatchTransferTabStep.ReviewStep,
 		tokenAddress: tokenContractAddress,
-		wallet,
+		totalAmount: totalAmount.toFixed(0),
+		wallet
 	});
 
-	const totalAmount = calculateTotalAmount(recipients);
+	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
+		transactionId: transaction?.hash(),
+		wallet: wallet,
+	});
+
+	useEffect(() => {
+		if (isConfirmed) {
+			onApproveConfirmed();
+		}
+	}, [isConfirmed, onApproveConfirmed]);
+
 	const requiresContractApproval = !isAllowanceLoading && totalAmount.isGreaterThan(allowance);
-	const isNextDisabled = isAllowanceLoading && activeTab === BatchTransferTabStep.ReviewStep;
+	const isNextDisabled = (
+		!isValid ||
+		(isAllowanceLoading && activeTab === BatchTransferTabStep.ReviewStep)
+	);
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
@@ -165,9 +185,9 @@ export const BatchTransferTabs = ({
 
 							<TabPanel tabId={BatchTransferTabStep.SummaryStep}>
 								<TransactionSuccessful
-									transaction={transaction!}
+									transaction={confirmedTransaction || transaction}
 									senderWallet={wallet!}
-									skipConfirmationCheck={false}
+									skipConfirmationCheck
 									noHeading
 								/>
 							</TabPanel>
@@ -188,7 +208,11 @@ export const BatchTransferTabs = ({
 							{t("COMMON.BACK")}
 						</Button>
 
-						<Button onClick={handleNext} data-testid="BatchTranfer__continue-button">
+						<Button
+							onClick={handleNext}
+							data-testid="BatchTranfer__continue-button"
+							disabled={isNextDisabled}
+						>
 							{t("COMMON.CONTINUE")}
 						</Button>
 					</SidePanelButtons>

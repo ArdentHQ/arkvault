@@ -16,4 +16,5 @@ export interface BatchTransferTabsProperties {
 	setActiveTab: (step: BatchTransferTabStep) => void;
 	activeTab: BatchTransferTabStep;
 	wallet: Contracts.IReadWriteWallet;
+	onApproveConfirmed: () => void;
 }
