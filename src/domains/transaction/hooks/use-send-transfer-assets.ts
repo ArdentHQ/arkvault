@@ -27,7 +27,9 @@ export const useTransferAssets = ({
 	if (!isSingle && selectedAsset) {
 		return {
 			assets:
-				selectedAsset === "ARK" ? [mainsailAsset] : [assetOptions.find((option) => option.value === selectedAsset)],
+				selectedAsset === "ARK"
+					? [mainsailAsset]
+					: [assetOptions.find((option) => option.value === selectedAsset)],
 		};
 	}
 

@@ -19,7 +19,7 @@ export const TransactionStepLabel = ({ status }: { status: Status }): React.Reac
 	}
 
 	if (status === "active") {
-		return <LabelActive/>;
+		return <LabelActive />;
 	}
 
 	return <LabelAwaiting />;
@@ -37,7 +37,8 @@ const labelBorderClasses = ({ status }: { status: Status }) =>
 		"border border-theme-warning-50 dim:border-theme-dim-700 dark:border-theme-dark-700": status === "loading",
 		"border dim:border-theme-success-900 border-theme-success-100 dark:border-theme-success-900":
 			status === "approved",
-		"dim:border-theme-dim-700 border border-transparent dark:border-theme-dark-700": status === "awaiting" || status === "active",
+		"dim:border-theme-dim-700 border border-transparent dark:border-theme-dark-700":
+			status === "awaiting" || status === "active",
 	});
 
 export const LabelApproved = ({ className }: { className?: string }): React.ReactElement => {

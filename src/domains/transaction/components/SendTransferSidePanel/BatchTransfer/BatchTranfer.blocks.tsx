@@ -77,9 +77,9 @@ export const TransactionSteps = ({ approvalStatus, transferStatus }: Transaction
 					<TransactionStepLabel status={transferStatus} />
 				</div>
 
-				<div className="-mx-4 -mb-3 rounded-b-xl bg-theme-secondary-100 px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6 mt-2">
+				<div className="-mx-4 -mb-3 mt-2 rounded-b-xl bg-theme-secondary-100 px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6">
 					<div className="flex items-center gap-2 text-theme-secondary-700">
-						<p className="text-sm font-semibold leading-4.25">
+						<p className="leading-4.25 text-sm font-semibold">
 							Approval needs to be confirmed before your transfer is sent.
 						</p>
 					</div>

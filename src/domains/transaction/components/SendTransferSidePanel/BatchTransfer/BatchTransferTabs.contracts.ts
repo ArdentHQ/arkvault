@@ -5,7 +5,6 @@ export enum BatchTransferTabStep {
 	ApproveStep = 2,
 	SummaryStep,
 	ConfirmTransferStep,
-	ErrorStep,
 }
 
 export interface BatchTransferTabsProperties {

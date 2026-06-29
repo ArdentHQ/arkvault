@@ -14,7 +14,7 @@ import {
 	VoteBuilder,
 	TokenTransferBuilder,
 	TokenApproveBuilder,
-	ERC20BatchTransferContract, ContractAddresses,
+	ContractAddresses,
 } from "@arkecosystem/typescript-crypto";
 import { BigNumber, get } from "@/app/lib/helpers";
 

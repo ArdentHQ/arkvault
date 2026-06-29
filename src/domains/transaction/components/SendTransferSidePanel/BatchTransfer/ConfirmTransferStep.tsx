@@ -20,7 +20,7 @@ interface ApproveStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 }
 
-export const ConfirmTransferStep= ({ wallet }: ApproveStepProperties) => {
+export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 	const { t } = useTranslation();
 
 	const { register, getValues } = useFormContext();

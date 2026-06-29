@@ -5,8 +5,8 @@ import { DTO } from "@/app/lib/mainsail";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import {
-	BatchTransferTabStep,
 	BatchTransferTabsProperties,
+	BatchTransferTabStep,
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 import { ReviewStep } from "./ReviewStep";
 import { SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
@@ -21,13 +21,11 @@ import { calculateTotalAmount } from "@/domains/transaction/components/SendTrans
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
 import { useAllowance } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/use-allowance";
-import {
-	useConfirmedTransaction
-} from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 export const BatchTransferTabs = ({
 	setActiveTab,
-	onCancel,
+	onError,
 	onSubmit,
 	onBack,
 	activeTab,
@@ -36,7 +34,6 @@ export const BatchTransferTabs = ({
 }: BatchTransferTabsProperties) => {
 	const { persist } = useEnvironmentContext();
 
-	const { t } = useTranslation();
 	const { formState, getValues } = useFormContext();
 	const { isSubmitting, isValid } = formState;
 
@@ -50,7 +47,7 @@ export const BatchTransferTabs = ({
 		enabled: activeTab === BatchTransferTabStep.ReviewStep,
 		tokenAddress: tokenContractAddress,
 		totalAmount: totalAmount.toFixed(0),
-		wallet
+		wallet,
 	});
 
 	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
@@ -65,10 +62,7 @@ export const BatchTransferTabs = ({
 	}, [isConfirmed, onApproveConfirmed]);
 
 	const requiresContractApproval = !isAllowanceLoading && totalAmount.isGreaterThan(allowance);
-	const isNextDisabled = (
-		!isValid ||
-		(isAllowanceLoading && activeTab === BatchTransferTabStep.ReviewStep)
-	);
+	const isNextDisabled = !isValid || (isAllowanceLoading && activeTab === BatchTransferTabStep.ReviewStep);
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
@@ -83,6 +77,63 @@ export const BatchTransferTabs = ({
 		}
 	});
 
+	const sendApprovalTransaction = async () => {
+		const {
+			mnemonic,
+			secondMnemonic,
+			encryptionPassword,
+			secret,
+			secondSecret,
+			gasLimit,
+			gasPrice,
+			recipients,
+			tokenContractAddress,
+		} = getValues();
+
+		try {
+			httpClient.forgetWalletCache(wallet);
+
+			const signatory = await wallet.signatoryFactory().make({
+				encryptionPassword,
+				mnemonic,
+				secondMnemonic,
+				secondSecret,
+				secret,
+			});
+
+			const token = wallet
+				.tokens()
+				.values()
+				.find((token) => token.token().address() === tokenContractAddress) as WalletToken;
+
+			const signedTransactionId = await wallet.transaction().signApproveContract({
+				gasLimit,
+				gasPrice,
+				nonce: wallet.isLegacyCold() ? wallet.legacyNonce().toFixed(0) : undefined,
+				data: {
+					amount: calculateTotalAmount(recipients),
+					spender: wallet.address(),
+				},
+				signatory,
+				token,
+			});
+
+			const response = await wallet.transaction().broadcast(signedTransactionId);
+
+			handleBroadcastError(response);
+
+			await persist();
+
+			const transactionData = wallet.transaction().transaction(signedTransactionId);
+
+			setTransaction(transactionData);
+
+			setActiveTab(BatchTransferTabStep.SummaryStep);
+		} catch (error) {
+			onError(JSON.stringify({ message: error.message, type: error.name }));
+		}
+	};
+
 	const handleNext = () =>
 		({
 			[BatchTransferTabStep.ReviewStep]: async () => {
@@ -92,61 +143,7 @@ export const BatchTransferTabs = ({
 				setActiveTab(nextStep);
 			},
 			[BatchTransferTabStep.ApproveStep]: async () => {
-				const {
-					mnemonic,
-					secondMnemonic,
-					encryptionPassword,
-					secret,
-					secondSecret,
-					gasLimit,
-					gasPrice,
-					recipients,
-					tokenContractAddress,
-				} = getValues();
-
-				try {
-					httpClient.forgetWalletCache(wallet);
-
-					const signatory = await wallet.signatoryFactory().make({
-						encryptionPassword,
-						mnemonic,
-						secondMnemonic,
-						secondSecret,
-						secret,
-					});
-
-					const token = wallet
-						.tokens()
-						.values()
-						.find((token) => token.token().address() === tokenContractAddress) as WalletToken;
-
-					const signedTransactionId = await wallet.transaction().signApproveContract({
-						gasLimit,
-						gasPrice,
-						nonce: wallet.isLegacyCold() ? wallet.legacyNonce().toFixed(0) : undefined,
-						data: {
-							amount: calculateTotalAmount(recipients),
-							spender: wallet.address(),
-						},
-						signatory,
-						token,
-					});
-
-					const response = await wallet.transaction().broadcast(signedTransactionId);
-
-					handleBroadcastError(response);
-
-					await persist();
-
-					const transactionData = wallet.transaction().transaction(signedTransactionId);
-
-					setTransaction(transactionData);
-
-					setActiveTab(BatchTransferTabStep.SummaryStep);
-				} catch (error) {
-					// setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
-					// setActiveTab(Step.ErrorStep);
-				}
+				void sendApprovalTransaction();
 			},
 			[BatchTransferTabStep.SummaryStep]: async () => {
 				setActiveTab(BatchTransferTabStep.ConfirmTransferStep);
@@ -154,7 +151,7 @@ export const BatchTransferTabs = ({
 			[BatchTransferTabStep.ConfirmTransferStep]: async () => {
 				onSubmit();
 			},
-		})[activeTab as Exclude<BatchTransferTabStep, BatchTransferTabStep.SummaryStep>]();
+		})[activeTab]();
 
 	const handleBack = useCallback(() => {
 		if (activeTab === BatchTransferTabStep.ReviewStep || activeTab === BatchTransferTabStep.ConfirmTransferStep) {
@@ -203,21 +200,49 @@ export const BatchTransferTabs = ({
 			{/* Normal toolbar footer (no error) */}
 			<div className="absolute bottom-0 left-0 right-0 flex w-full flex-col border-t border-theme-secondary-300 bg-theme-background px-6 py-4 dark:border-theme-dark-700">
 				<div className="absolute bottom-0 left-0 right-0 flex w-full flex-col border-t border-theme-secondary-300 bg-theme-background px-6 py-4 dark:border-theme-dark-700">
-					<SidePanelButtons>
-						<Button variant="secondary" onClick={handleBack} data-testid="BatchTranfer__back-button">
-							{t("COMMON.BACK")}
-						</Button>
-
-						<Button
-							onClick={handleNext}
-							data-testid="BatchTranfer__continue-button"
-							disabled={isNextDisabled}
-						>
-							{t("COMMON.CONTINUE")}
-						</Button>
-					</SidePanelButtons>
+					<Actions
+						activeTab={activeTab}
+						handleNext={handleNext}
+						isNextDisabled={isNextDisabled}
+						handleBack={handleBack}
+						isConfirmed={isConfirmed}
+					/>
 				</div>
 			</div>
 		</>
+	);
+};
+
+interface ActionsProperties {
+	activeTab: BatchTransferTabStep;
+	isConfirmed: boolean;
+	handleNext: () => Promise<void>;
+	handleBack: () => void;
+	isNextDisabled: boolean;
+}
+
+const Actions = ({ activeTab, isConfirmed, handleBack, handleNext, isNextDisabled }: ActionsProperties) => {
+	const { t } = useTranslation();
+	return (
+		<SidePanelButtons>
+			{activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed ? (
+				<div>loading</div>
+			) : (
+				<>
+					{activeTab !== BatchTransferTabStep.SummaryStep && (
+						<Button variant="secondary" onClick={handleBack} data-testid="BatchTranfer__back-button">
+							{t("COMMON.BACK")}
+						</Button>
+					)}
+
+					<Button onClick={handleNext} data-testid="BatchTranfer__continue-button" disabled={isNextDisabled}>
+						{activeTab === BatchTransferTabStep.ReviewStep && t("COMMON.CONTINUE")}
+						{activeTab === BatchTransferTabStep.ApproveStep && t("COMMON.APPROVE")}
+						{activeTab === BatchTransferTabStep.SummaryStep && isConfirmed && t("COMMON.CONTINUE_NOW")}
+						{activeTab === BatchTransferTabStep.ConfirmTransferStep && t("COMMON.CONFIRM_TRANSACTION")}
+					</Button>
+				</>
+			)}
+		</SidePanelButtons>
 	);
 };

@@ -36,18 +36,12 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
-import {
-	useConfirmedTransaction
-} from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
-import {
-	BatchTransferTabs
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs";
-import {
-	BatchTransferTabStep
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
+import { BatchTransferTabs } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs";
+import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 import {
 	useBatchTransferStepConfig,
 	useSendTransferStepConfig,
@@ -364,7 +358,8 @@ export const SendTransferSidePanel = ({
 		wallet,
 	});
 
-	const config = isBatchTransfer && activeTab === SendTransferStep.ReviewStep ? batchTransferStepConfig : sendTransferStepConfig;
+	const config =
+		isBatchTransfer && activeTab === SendTransferStep.ReviewStep ? batchTransferStepConfig : sendTransferStepConfig;
 
 	const preventAccidentalClosing = useMemo(
 		() => dirtyFields.amount || dirtyFields.recipientAddress || activeTab !== SendTransferStep.FormStep,

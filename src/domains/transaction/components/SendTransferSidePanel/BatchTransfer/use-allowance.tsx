@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts, } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 interface RequiresApprovalProperties {
@@ -39,5 +39,5 @@ export const useAllowance = ({ wallet, tokenAddress, totalAmount, enabled = true
 	return {
 		allowance,
 		isLoading,
-	}
-}
+	};
+};

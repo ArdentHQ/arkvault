@@ -7,7 +7,10 @@ import { useActiveProfile } from "@/app/hooks";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount } from "@/app/components/Amount";
 import { ExchangeCurrencyAmount } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
-import { TransactionSteps, useTransferDetails } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import {
+	TransactionSteps,
+	useTransferDetails,
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -40,7 +43,7 @@ export const ReviewStep = ({ wallet, isLoading, requiresContractApproval }: Revi
 		}
 
 		return requiresContractApproval ? "awaiting" : "approved";
-	}
+	};
 
 	return (
 		<section data-testid="BatchTransfer__review-step">

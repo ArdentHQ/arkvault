@@ -96,7 +96,7 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 
 						<FeeField
 							type="approve"
-							data={{token: walletToken.token()}}
+							data={{ token: walletToken.token() }}
 							network={network}
 							profile={profile}
 						/>
