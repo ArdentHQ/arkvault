@@ -19,7 +19,7 @@ interface TransferDetailsProperties {
 	tokenContractAddress: string;
 }
 
-export const calculateTotalAmount = (recipients: { amount?: number|string }[]) => {
+export const calculateTotalAmount = (recipients: { amount?: number | string }[]) => {
 	let amount = BigNumber.make(0);
 
 	for (const recipient of recipients) {
@@ -66,17 +66,23 @@ export const TransactionSteps = ({ approvalStatus, transferStatus }: Transaction
 
 	return (
 		<DetailWrapper label={t("COMMON.TRANSACTION_STEPS")} className="rounded-xl">
-			<div className="flex flex-col gap-3">
+			<div className="space-y-3">
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle className="w-44 sm:min-w-44 sm:pr-6">Approve Contract</DetailTitle>
 					<TransactionStepLabel status={approvalStatus} />
 				</div>
-			</div>
 
-			<div className="mt-3 flex flex-col gap-3">
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle className="w-44 sm:min-w-44 sm:pr-6">Multiple Transfer</DetailTitle>
 					<TransactionStepLabel status={transferStatus} />
+				</div>
+
+				<div className="-mx-4 -mb-3 rounded-b-xl bg-theme-secondary-100 px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6 mt-2">
+					<div className="flex items-center gap-2 text-theme-secondary-700">
+						<p className="text-sm font-semibold leading-4.25">
+							Approval needs to be confirmed before your transfer is sent.
+						</p>
+					</div>
 				</div>
 			</div>
 		</DetailWrapper>
