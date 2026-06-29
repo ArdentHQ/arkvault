@@ -49,7 +49,8 @@ import {
 	BatchTransferTabStep
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 import {
-	useSendTransferStepConfig
+	useBatchTransferStepConfig,
+	useSendTransferStepConfig,
 } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
 
 const MAX_TABS = 5;
@@ -349,11 +350,19 @@ export const SendTransferSidePanel = ({
 		wallet: wallet,
 	});
 
-	const { getTitle, getTitleIcon, getSubtitle } = useSendTransferStepConfig({
+	const sendTransferStepConfig = useSendTransferStepConfig({
 		activeTab,
 		isConfirmed,
 		wallet,
 	});
+
+	const batchTransferStepConfig = useBatchTransferStepConfig({
+		activeTab: batchTransferActiveTab,
+		isConfirmed,
+		wallet,
+	});
+
+	const config = isBatchTransfer && activeTab === SendTransferStep.ReviewStep ? batchTransferStepConfig : sendTransferStepConfig;
 
 	const preventAccidentalClosing = useMemo(
 		() => dirtyFields.amount || dirtyFields.recipientAddress || activeTab !== SendTransferStep.FormStep,
@@ -370,9 +379,9 @@ export const SendTransferSidePanel = ({
 			minimizeable={!isLastStep}
 			onOpenChange={onOpenChange}
 			onMountChange={onMountChange}
-			title={getTitle()}
-			subtitle={getSubtitle()}
-			titleIcon={getTitleIcon()}
+			title={config.getTitle()}
+			subtitle={config.getSubtitle()}
+			titleIcon={config.getTitleIcon()}
 			dataTestId="SendTransferSidePanel"
 			hasSteps
 			totalSteps={MAX_TABS - 1}
@@ -453,10 +462,15 @@ export const SendTransferSidePanel = ({
 							{isBatchTransfer && (
 								<BatchTransferTabs
 									wallet={wallet!}
-									onStepChange={setBatchTransferActiveTab}
+									activeTab={batchTransferActiveTab}
+									setActiveTab={setBatchTransferActiveTab}
 									onError={(error) => {
 										setErrorMessage(error);
 										setActiveTab(SendTransferStep.ErrorStep);
+									}}
+									onBack={() => {
+										setActiveTab(SendTransferStep.FormStep);
+										setBatchTransferActiveTab(BatchTransferTabStep.ReviewStep);
 									}}
 									onSubmit={() => {
 										void handleSubmit(() => submit())();

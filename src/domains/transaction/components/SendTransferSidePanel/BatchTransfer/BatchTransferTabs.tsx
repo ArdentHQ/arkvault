@@ -23,11 +23,11 @@ import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransf
 import { useAllowance } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/use-allowance";
 
 export const BatchTransferTabs = ({
-	onStepChange,
+	setActiveTab,
 	onCancel,
 	onSubmit,
 	onBack,
-	activeIndex,
+	activeTab,
 	wallet,
 }: BatchTransferTabsProperties) => {
 	const { persist } = useEnvironmentContext();
@@ -37,8 +37,6 @@ export const BatchTransferTabs = ({
 	const { isValid, isSubmitting, isDirty } = formState;
 
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
-
-	const [activeTab, setActiveTab] = useState<BatchTransferTabStep>(BatchTransferTabStep.ReviewStep);
 
 	const { recipients, tokenContractAddress } = getValues();
 
@@ -139,12 +137,13 @@ export const BatchTransferTabs = ({
 		})[activeTab as Exclude<BatchTransferTabStep, BatchTransferTabStep.SummaryStep>]();
 
 	const handleBack = useCallback(() => {
-		if (onBack) {
-			return onBack();
+		if (activeTab === BatchTransferTabStep.ReviewStep || activeTab === BatchTransferTabStep.ConfirmTransferStep) {
+			onBack?.();
+			return;
 		}
 
-		return onCancel?.();
-	}, [activeTab, onBack, onCancel, onStepChange]);
+		setActiveTab(activeTab - 1);
+	}, [activeTab, onBack, setActiveTab]);
 
 	return (
 		<>

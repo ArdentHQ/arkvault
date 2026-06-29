@@ -13,7 +13,7 @@ export interface BatchTransferTabsProperties {
 	onSubmit: () => void;
 	onCancel?: () => void;
 	onError: (error: string) => void;
-	onStepChange?: (step: BatchTransferTabStep) => void;
-	activeIndex?: BatchTransferTabStep;
+	setActiveTab: (step: BatchTransferTabStep) => void;
+	activeTab: BatchTransferTabStep;
 	wallet: Contracts.IReadWriteWallet;
 }

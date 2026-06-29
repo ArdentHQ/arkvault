@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { ThemeIcon } from "@/app/components/Icon";
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import cn from "classnames";
+import { Image } from "@/app/components/Image";
 import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 
 export const ExchangeCurrencyAmount = ({
@@ -137,16 +138,13 @@ export const useSendTransferStepConfig = ({ activeTab, wallet, isConfirmed }: Se
 interface BatchTransferStepConfigProperties {
 	activeTab: BatchTransferTabStep;
 	wallet?: Contracts.IReadWriteWallet;
+	isConfirmed: boolean;
 }
 
-export const useBatchTransferStepConfig = ({ activeTab, wallet }: BatchTransferStepConfigProperties) => {
+export const useBatchTransferStepConfig = ({ activeTab, wallet, isConfirmed }: BatchTransferStepConfigProperties) => {
 	const { t } = useTranslation();
 
 	const getTitle = () => {
-		if (activeTab === BatchTransferTabStep.ErrorStep) {
-			return t("TRANSACTION.ERROR.TITLE");
-		}
-
 		if (activeTab === BatchTransferTabStep.ReviewStep) {
 			return t("TRANSACTION.REVIEW_STEP.TITLE");
 		}
@@ -155,31 +153,42 @@ export const useBatchTransferStepConfig = ({ activeTab, wallet }: BatchTransferS
 			return "Approve Contract";
 		}
 
-		return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE");
+		if (activeTab === BatchTransferTabStep.SummaryStep) {
+			return "Approving Contract";
+		}
+
+		return "Confirm Transfer";
 	};
 
 	const getSubtitle = () => {
-		if (activeTab === SendTransferStep.ReviewStep) {
+		if (activeTab === BatchTransferTabStep.ReviewStep) {
 			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
 		}
 
-		if (activeTab === SendTransferStep.AuthenticationStep) {
-			return getAuthenticationStepSubtitle({ t, wallet });
+		if (activeTab === BatchTransferTabStep.ApproveStep) {
+			return "Before sending tokens to multiple recipients, you need to approve the spend amount for the multiple transfer contract.";
 		}
 
-		if (activeTab === SendTransferStep.FormStep) {
-			return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION");
+		if (activeTab === BatchTransferTabStep.SummaryStep) {
+			return "Waiting for spend approval to be confirmed on the blockchain.";
 		}
 
-		return;
+		return "Transfer tokens to multiple recipients.";
 	};
 
 	const getTitleIcon = () => {
-		if (activeTab === SendTransferStep.ErrorStep) {
-			return <Image name="ErrorHeaderIcon" domain="transaction" className="block h-[20px] w-[20px]" />;
+		if (activeTab === BatchTransferTabStep.ReviewStep) {
+			return (
+				<ThemeIcon
+					lightIcon="DocumentView"
+					darkIcon="DocumentView"
+					dimIcon="DocumentView"
+					dimensions={[24, 24]}
+				/>
+			);
 		}
 
-		if (activeTab === SendTransferStep.SummaryStep) {
+		if (activeTab === BatchTransferTabStep.SummaryStep) {
 			return (
 				<ThemeIcon
 					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
@@ -194,30 +203,8 @@ export const useBatchTransferStepConfig = ({ activeTab, wallet }: BatchTransferS
 			);
 		}
 
-		if (activeTab === SendTransferStep.AuthenticationStep) {
-			if (wallet?.isLedger()) {
-				return (
-					<ThemeIcon
-						lightIcon="LedgerLight"
-						darkIcon="LedgerDark"
-						dimIcon="LedgerDim"
-						dimensions={[24, 24]}
-					/>
-				);
-			}
-
+		if (activeTab === BatchTransferTabStep.ConfirmTransferStep) {
 			return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
-		}
-
-		if (activeTab === SendTransferStep.ReviewStep) {
-			return (
-				<ThemeIcon
-					lightIcon="DocumentView"
-					darkIcon="DocumentView"
-					dimIcon="DocumentView"
-					dimensions={[24, 24]}
-				/>
-			);
 		}
 
 		return (
