@@ -46,7 +46,7 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 	return (
 		<section data-testid="BatchTransfer__approve-step">
 			<div className="space-y-3 sm:space-y-4">
-				<DetailWrapper label={t("COMMON.DETAILS")} className="rounded-xl">
+				<DetailWrapper label={t("COMMON.AUTHORIZATION_DETAILS")} className="rounded-xl">
 					<div className="space-y-3">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 							<DetailTitle className="w-auto sm:min-w-40 sm:pr-6">{t("COMMON.TOKEN")}</DetailTitle>
@@ -57,7 +57,9 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 						</div>
 
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-							<DetailTitle className="w-auto sm:min-w-40 sm:pr-6">Approval Amount</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-40 sm:pr-6">
+								{t("TRANSACTION.BATCH_TRANSFER.APPROVAL_AMOUNT")}
+							</DetailTitle>
 
 							<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
 								<Amount

@@ -42,6 +42,7 @@ export const translations = {
 	ASSET_TYPE: "Asset Type",
 	AT: "at",
 	AUTHOR: "Author",
+	AUTHORIZATION_DETAILS: "Authorization Details",
 	AVAILABLE: "Available",
 	AVATAR: "Avatar",
 	AWAITING: "Awaiting",

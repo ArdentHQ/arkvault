@@ -36,6 +36,8 @@ export const translations = {
 			DESCRIPTION: "Waiting for spend approval to be confirmed on the blockchain.",
 			TITLE: "Approving Contract",
 		},
+		APPROVAL_AMOUNT: "Approval Amount",
+
 	},
 	BROADCASTING: "Broadcasting transaction to the network",
 	CONFIRMATIONS: "Confirmations",
