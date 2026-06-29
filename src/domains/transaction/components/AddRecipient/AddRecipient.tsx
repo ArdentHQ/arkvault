@@ -236,9 +236,9 @@ export const AddRecipient = ({
 	}, [isSendAllSelected, remainingBalance.toString(), setValue]);
 
 	const { assets } = useTransferAssets({
-		selectedAsset: recipients.length > 0 ? selectedAsset : undefined,
 		isSingle,
 		profile,
+		selectedAsset: recipients.length > 0 ? selectedAsset : undefined,
 		tokens,
 	});
 

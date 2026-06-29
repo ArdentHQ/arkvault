@@ -223,7 +223,11 @@ const Actions = ({ activeTab, isConfirmed, handleBack, handleNext, isNextDisable
 	const { t } = useTranslation();
 
 	if (activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed) {
-		return <div className="w-full text-center text-sm leading-11 text-theme-secondary-700">Once confirmed, you'll be taken to the next step automatically.</div>;
+		return (
+			<div className="leading-11 w-full text-center text-sm text-theme-secondary-700">
+				Once confirmed, you'll be taken to the next step automatically.
+			</div>
+		);
 	}
 
 	return (

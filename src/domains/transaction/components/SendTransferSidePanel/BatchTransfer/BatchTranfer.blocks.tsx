@@ -11,9 +11,7 @@ import {
 	TransactionStepLabel,
 	TransferStatus,
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/TransactionStepLabel";
-import {
-	BatchTransferTabStep
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
+import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 import { ThemeIcon } from "@/app/components/Icon";
 import cn from "classnames";
 
