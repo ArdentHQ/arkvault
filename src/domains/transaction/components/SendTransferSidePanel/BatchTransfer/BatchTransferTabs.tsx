@@ -50,7 +50,11 @@ export const BatchTransferTabs = ({
 		wallet,
 	});
 
-	const { isConfirmed, isLoading: isRefreshingTransaction, transaction: confirmedTransaction } = useConfirmedTransaction({
+	const {
+		isConfirmed,
+		isLoading: isRefreshingTransaction,
+		transaction: confirmedTransaction,
+	} = useConfirmedTransaction({
 		transactionId: transaction?.hash(),
 		wallet: wallet,
 	});
