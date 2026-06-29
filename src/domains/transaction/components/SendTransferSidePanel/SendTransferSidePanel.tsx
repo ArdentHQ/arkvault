@@ -43,9 +43,11 @@ import { createPortal } from "react-dom";
 import { BatchTransferTabs } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs";
 import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 import {
-	useBatchTransferStepConfig,
 	useSendTransferStepConfig,
 } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
+import {
+	useBatchTransferStepConfig
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 
 const MAX_TABS = 5;
 
@@ -119,10 +121,12 @@ export const SendTransferSidePanel = ({
 	const { recipients, tokenContractAddress: contractAddress } = getValues();
 	const isBatchTransfer = contractAddress && contractAddress !== "ARK" && recipients?.length > 1;
 
+	const isInBatchTransferFlow = isBatchTransfer && activeTab === SendTransferStep.ReviewStep;
+
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
-		if (isButton || isNextDisabled || activeTab >= SendTransferStep.AuthenticationStep) {
+		if (isInBatchTransferFlow || isButton || isNextDisabled || activeTab >= SendTransferStep.AuthenticationStep) {
 			return;
 		}
 
@@ -358,8 +362,7 @@ export const SendTransferSidePanel = ({
 		wallet,
 	});
 
-	const config =
-		isBatchTransfer && activeTab === SendTransferStep.ReviewStep ? batchTransferStepConfig : sendTransferStepConfig;
+	const config =  isInBatchTransferFlow ? batchTransferStepConfig : sendTransferStepConfig;
 
 	const preventAccidentalClosing = useMemo(
 		() => dirtyFields.amount || dirtyFields.recipientAddress || activeTab !== SendTransferStep.FormStep,

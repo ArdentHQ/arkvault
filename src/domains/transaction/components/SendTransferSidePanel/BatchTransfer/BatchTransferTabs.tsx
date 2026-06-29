@@ -69,11 +69,7 @@ export const BatchTransferTabs = ({
 		const isComponentChild = target.closest("#BatchTransferTabs") !== null || target.tagName === "BODY";
 
 		if (isComponentChild && !isNextDisabled && !isSubmitting) {
-			if (activeTab < BatchTransferTabStep.SummaryStep) {
-				handleNext();
-			} else {
-				// navigate
-			}
+			void handleNext();
 		}
 	});
 

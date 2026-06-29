@@ -7,7 +7,6 @@ import { ThemeIcon } from "@/app/components/Icon";
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import cn from "classnames";
 import { Image } from "@/app/components/Image";
-import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 
 export const ExchangeCurrencyAmount = ({
 	convertedAmount,
@@ -130,84 +129,6 @@ export const useSendTransferStepConfig = ({ activeTab, wallet, isConfirmed }: Se
 				dimensions={[24, 24]}
 			/>
 		);
-	};
-
-	return { getSubtitle, getTitle, getTitleIcon };
-};
-
-interface BatchTransferStepConfigProperties {
-	activeTab: BatchTransferTabStep;
-	wallet?: Contracts.IReadWriteWallet;
-	isConfirmed: boolean;
-}
-
-export const useBatchTransferStepConfig = ({ activeTab, isConfirmed }: BatchTransferStepConfigProperties) => {
-	const { t } = useTranslation();
-
-	const getTitle = () => {
-		if (activeTab === BatchTransferTabStep.ReviewStep) {
-			return t("TRANSACTION.REVIEW_STEP.TITLE");
-		}
-
-		if (activeTab === BatchTransferTabStep.ApproveStep) {
-			return t("TRANSACTION.APPROVE_CONTRACT_STEP.TITLE");
-		}
-
-		if (activeTab === BatchTransferTabStep.SummaryStep) {
-			return isConfirmed
-				? t("TRANSACTION.SUMMARY_CONFIRMED_STEP.TITLE")
-				: t("TRANSACTION.SUMMARY_PENDING_STEP.TITLE");
-		}
-
-		return t("TRANSACTION.CONFIRM_TRANSFER_STEP.TITLE");
-	};
-
-	const getSubtitle = () => {
-		if (activeTab === BatchTransferTabStep.ReviewStep) {
-			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
-		}
-
-		if (activeTab === BatchTransferTabStep.ApproveStep) {
-			return t("TRANSACTION.APPROVE_CONTRACT_STEP.DESCRIPTION");
-		}
-
-		if (activeTab === BatchTransferTabStep.SummaryStep) {
-			return isConfirmed
-				? t("TRANSACTION.SUMMARY_CONFIRMED_STEP.DESCRIPTION")
-				: t("TRANSACTION.SUMMARY_PENDING_STEP.DESCRIPTION");
-		}
-
-		return t("TRANSACTION.CONFIRM_TRANSFER_STEP.DESCRIPTION");
-	};
-
-	const getTitleIcon = () => {
-		if (activeTab === BatchTransferTabStep.ReviewStep) {
-			return (
-				<ThemeIcon
-					lightIcon="DocumentView"
-					darkIcon="DocumentView"
-					dimIcon="DocumentView"
-					dimensions={[24, 24]}
-				/>
-			);
-		}
-
-		if (activeTab === BatchTransferTabStep.SummaryStep) {
-			return (
-				<ThemeIcon
-					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
-					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
-					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
-					dimensions={[24, 24]}
-					className={cn({
-						"text-theme-primary-600": !isConfirmed,
-						"text-theme-success-600": isConfirmed,
-					})}
-				/>
-			);
-		}
-
-		return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
 	};
 
 	return { getSubtitle, getTitle, getTitleIcon };
