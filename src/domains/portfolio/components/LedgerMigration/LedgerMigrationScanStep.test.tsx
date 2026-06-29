@@ -1,4 +1,6 @@
 import { env, getMainsailProfileId, mockNanoSTransport, render, screen, waitFor } from "@/utils/testing-library";
+import { useLedgerScanner } from "@/app/contexts/Ledger";
+import userEvent from "@testing-library/user-event";
 import { expect, it, describe, beforeEach, afterAll, vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { MigrationLedgerScanStep } from "./LedgerMigrationScanStep";
@@ -96,5 +98,54 @@ describe("MigrationLedgerScanStep", () => {
 		await waitFor(() => {
 			expect(createTransactionsSpy).toHaveBeenCalled();
 		});
+	});
+
+	it("should call onContinue when clicking the continue button", async () => {
+		const onContinueMock = vi.fn();
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			abortScanner: vi.fn(),
+			canRetry: true,
+			error: null,
+			isScanning: false,
+			isSelected: vi.fn().mockReturnValue(false),
+			loadedWallets: [
+				{
+					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+					balance: "100",
+					path: "m/44'/1'/0'/0/1",
+				},
+			],
+			scan: vi.fn(),
+			selectedWallets: [
+				{
+					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+					balance: "100",
+					path: "m/44'/1'/0'/0/1",
+				},
+			],
+			wallets: [],
+		});
+
+		render(
+			<MigrationLedgerScanStep
+				migrator={migrator as any}
+				profile={profile}
+				network={network}
+				onContinue={onContinueMock}
+			/>,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerScanStep__continue-button")).not.toBeDisabled();
+		});
+
+		await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+
+		expect(onContinueMock).toHaveBeenCalled();
 	});
 });
