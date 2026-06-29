@@ -23,6 +23,8 @@ import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransf
 import { useAllowance } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/use-allowance";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
+const NAVIGATE_TO_CONFIRM_TRANSFER_DELAY_MS = 5000;
+
 export const BatchTransferTabs = ({
 	setActiveTab,
 	onError,
@@ -64,6 +66,20 @@ export const BatchTransferTabs = ({
 			onApproveConfirmed();
 		}
 	}, [isConfirmed, onApproveConfirmed]);
+
+	useEffect(() => {
+		let timeoutId: NodeJS.Timeout;
+
+		if (activeTab === BatchTransferTabStep.SummaryStep && isConfirmed) {
+			timeoutId = setTimeout(() => {
+				void handleNext();
+			}, NAVIGATE_TO_CONFIRM_TRANSFER_DELAY_MS);
+		}
+
+		return () => {
+			clearTimeout(timeoutId);
+		};
+	}, [isConfirmed, activeTab]);
 
 	const requiresContractApproval = !isAllowanceLoading && totalAmount.isGreaterThan(allowance);
 	const isNextDisabled = !isValid || (isAllowanceLoading && activeTab === BatchTransferTabStep.ReviewStep);
