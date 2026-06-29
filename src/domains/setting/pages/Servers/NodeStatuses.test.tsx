@@ -1,9 +1,12 @@
+import { ARK } from "@ardenthq/sdk-ark";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import { expect, vi } from "vitest";
 import ServersSettings from "@/domains/setting/pages/Servers";
+import { ConfigurationProvider } from "@/app/contexts";
+import { NodeStatusNode } from "@/domains/setting/pages/Servers/blocks/NodesStatus";
 import {
 	env,
 	getDefaultProfileId,
@@ -44,6 +47,34 @@ describe("Servers Settings > Node statuses", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+	});
+
+	it("should initialize server status for unknown networks", async () => {
+		const arkNetwork = new Networks.Network(ARK.manifest, ARK.manifest.networks["ark.devnet"]);
+
+		render(
+			<ConfigurationProvider defaultConfiguration={{ serverStatus: {} }}>
+				<NodeStatusNode network={arkNetwork} host={arkNetwork.toObject().hosts[0]} lastRow />
+			</ConfigurationProvider>,
+		);
+
+		expect(screen.getByTestId("NodeStatus--statusloading")).toBeInTheDocument();
+	});
+
+	it("should append multisig label when host type is musig", async () => {
+		const arkNetwork = new Networks.Network(ARK.manifest, ARK.manifest.networks["ark.devnet"]);
+
+		// Create a mock musig host (type 'musig' instead of 'full')
+		const musigHost = { host: "https://musig.example.com", type: "musig" as const };
+
+		render(
+			<ConfigurationProvider defaultConfiguration={{ serverStatus: {} }}>
+				<NodeStatusNode network={arkNetwork} host={musigHost} lastRow />
+			</ConfigurationProvider>,
+		);
+
+		// Should show "ARK Devnet MultiSig" in the display name
+		expect(screen.getByText(/ARK Devnet.*Multisig/i)).toBeInTheDocument();
 	});
 
 	describe("default peers", () => {
