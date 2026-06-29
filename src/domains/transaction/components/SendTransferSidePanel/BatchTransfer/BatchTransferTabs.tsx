@@ -50,7 +50,7 @@ export const BatchTransferTabs = ({
 		wallet,
 	});
 
-	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
+	const { isConfirmed, isLoading: isRefreshingTransaction, transaction: confirmedTransaction } = useConfirmedTransaction({
 		transactionId: transaction?.hash(),
 		wallet: wallet,
 	});
@@ -182,6 +182,7 @@ export const BatchTransferTabs = ({
 									senderWallet={wallet!}
 									skipConfirmationCheck
 									noHeading
+									isRefreshingTransaction={isRefreshingTransaction}
 								/>
 							</TabPanel>
 

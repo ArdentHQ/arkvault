@@ -316,6 +316,7 @@ export const Transactions = memo(function Transactions({
 							/* istanbul ignore next -- @preserve */
 							closePanel().then(() => setTransactionModalItem(undefined));
 						}}
+						wallets={profile.wallets().values()}
 					/>
 				)}
 			</TableWrapper>
