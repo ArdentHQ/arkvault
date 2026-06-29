@@ -10,7 +10,10 @@ import { ExchangeCurrencyAmount } from "@/domains/transaction/components/SendTra
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
-import { useTransferDetails } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import {
+	TransactionSteps,
+	useTransferDetails,
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TruncatedContractAddress } from "@/domains/transaction/components/ContractAddressHint/ContractAddressHint";
 
 interface ApproveStepProperties {
@@ -87,6 +90,10 @@ export const ConfirmTransferStep= ({ wallet }: ApproveStepProperties) => {
 					</div>
 				</DetailWrapper>
 
+				<div className="mx-0">
+					<TransactionSteps approvalStatus="approved" transferStatus="awaiting" />
+				</div>
+
 				<div className="border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0">
 					<FormField name="fee" disableStateHints>
 						<FormLabel
@@ -96,7 +103,7 @@ export const ConfirmTransferStep= ({ wallet }: ApproveStepProperties) => {
 
 						<FeeField
 							type="batchTransfer"
-							data={{token: walletToken.token()}}
+							data={{ token: walletToken.token() }}
 							network={network}
 							profile={profile}
 						/>
