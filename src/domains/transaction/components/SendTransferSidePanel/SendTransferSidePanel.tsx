@@ -42,12 +42,8 @@ import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
 import { BatchTransferTabs } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs";
 import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
-import {
-	useSendTransferStepConfig,
-} from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
-import {
-	useBatchTransferStepConfig
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import { useSendTransferStepConfig } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
+import { useBatchTransferStepConfig } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 
 const MAX_TABS = 5;
 
@@ -362,7 +358,7 @@ export const SendTransferSidePanel = ({
 		wallet,
 	});
 
-	const config =  isInBatchTransferFlow ? batchTransferStepConfig : sendTransferStepConfig;
+	const config = isInBatchTransferFlow ? batchTransferStepConfig : sendTransferStepConfig;
 
 	const preventAccidentalClosing = useMemo(
 		() => dirtyFields.amount || dirtyFields.recipientAddress || activeTab !== SendTransferStep.FormStep,

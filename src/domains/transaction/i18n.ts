@@ -19,6 +19,7 @@ export const translations = {
 		TITLE: "Authenticate",
 	},
 	BATCH_TRANSFER: {
+		APPROVAL_AMOUNT: "Approval Amount",
 		APPROVE_CONTRACT_STEP: {
 			DESCRIPTION:
 				"Before sending tokens to multiple recipients, you need to approve the spend amount for the multiple transfer contract.",
@@ -36,8 +37,6 @@ export const translations = {
 			DESCRIPTION: "Waiting for spend approval to be confirmed on the blockchain.",
 			TITLE: "Approving Contract",
 		},
-		APPROVAL_AMOUNT: "Approval Amount",
-
 	},
 	BROADCASTING: "Broadcasting transaction to the network",
 	CONFIRMATIONS: "Confirmations",
