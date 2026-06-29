@@ -1,4 +1,3 @@
-import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -15,19 +14,16 @@ import {
 	within,
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
 import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
-let network: Networks.Network;
 
 const musigHostLive = "https://ark-live-musig.arkvault.io";
 const musigHostTest = "https://ark-test-musig.arkvault.io";
 
 const peerHostLive = "https://ark-live.arkvault.io";
-const peerHostTest = "https://ark-test.arkvault.io";
 
 const networksStub: any = {
 	ark: {
@@ -80,7 +76,6 @@ const peerResponseHeight = {
 	},
 };
 
-const arkDevnet = "ark.devnet";
 const serverFormSaveButtonTestingId = "ServerFormModal--save";
 const addNewPeerButtonTestId = "CustomPeers--addnew";
 const peerStatusOkTestId = "CustomPeersPeer--statusok";
@@ -91,8 +86,7 @@ const serverDeleteConfirmationTestId = "ServersSettings--delete-confirmation";
 const customPeerListTestId = "CustomPeers--list";
 const networkAccordionIconTestId = "Accordion__toggle";
 const CustomPeersNetworkItem = "CustomPeers-network-item";
-const nodeStatusNodeItemTestId = "NodesStatus--node";
-const nodeStatusLoadingTestId = "NodeStatus--statusloading";
+
 const customPeersToggleTestId = "CustomPeers-toggle";
 const modalAlertTestId = "ServerFormModal-alert";
 
@@ -146,11 +140,6 @@ describe("Servers Settings", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		network = profile
-			.wallets()
-			.findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", arkDevnet)!
-			.network();
 	});
 
 	beforeEach(() => {
@@ -226,8 +215,6 @@ describe("Servers Settings", () => {
 
 		expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
 	});
-
-
 
 	describe("New server", () => {
 		let profileHostsSpy;

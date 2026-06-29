@@ -33,7 +33,7 @@ const nodeStatusLoadingTestId = "NodeStatus--statusloading";
 describe("Servers Settings > Node statuses", () => {
 	let resetProfileNetworksMock: () => void;
 
-	beforeAll(async () => {
+	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		network = profile
 			.wallets()
@@ -49,7 +49,7 @@ describe("Servers Settings > Node statuses", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should initialize server status for unknown networks", async () => {
+	it("should initialize server status for unknown networks", () => {
 		const arkNetwork = new Networks.Network(ARK.manifest, ARK.manifest.networks["ark.devnet"]);
 
 		render(
@@ -61,7 +61,7 @@ describe("Servers Settings > Node statuses", () => {
 		expect(screen.getByTestId("NodeStatus--statusloading")).toBeInTheDocument();
 	});
 
-	it("should append multisig label when host type is musig", async () => {
+	it("should append multisig label when host type is musig", () => {
 		const arkNetwork = new Networks.Network(ARK.manifest, ARK.manifest.networks["ark.devnet"]);
 
 		// Create a mock musig host (type 'musig' instead of 'full')
@@ -74,7 +74,7 @@ describe("Servers Settings > Node statuses", () => {
 		);
 
 		// Should show "ARK Devnet MultiSig" in the display name
-		expect(screen.getByText(/ARK Devnet.*Multisig/i)).toBeInTheDocument();
+		expect(screen.getByText(/ark devnet.*multisig/i)).toBeInTheDocument();
 	});
 
 	describe("default peers", () => {
