@@ -38,9 +38,9 @@ export class LedgerScanner {
 		byAccountIndex?: boolean;
 	}): string | undefined {
 		const currentlyScannedWalletPaths = importedLedgerAddresses.map(({ path }) => path);
-		const profileWalletsPaths = [...this.#profile.wallets().values()].map((wallet) =>
-			wallet.data().get<string>(Contracts.WalletData.DerivationPath),
-		);
+		const profileWalletsPaths = [...this.#profile.wallets().values()]
+			.map((wallet) => wallet.data().get<string>(Contracts.WalletData.DerivationPath))
+			.filter((path) => BIP44.parse(path!).coinType === this.#ledgerService.slip44Eth());
 
 		const filteredBySlip44 = [...profileWalletsPaths, ...currentlyScannedWalletPaths].filter(
 			(path) => path && BIP44.parse(path).coinType === slip44,
