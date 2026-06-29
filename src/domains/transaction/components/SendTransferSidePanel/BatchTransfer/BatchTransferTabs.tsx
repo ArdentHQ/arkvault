@@ -107,13 +107,13 @@ export const BatchTransferTabs = ({
 				.find((token) => token.token().address() === tokenContractAddress) as WalletToken;
 
 			const signedTransactionId = await wallet.transaction().signApproveContract({
-				gasLimit,
-				gasPrice,
-				nonce: wallet.isLegacyCold() ? wallet.legacyNonce().toFixed(0) : undefined,
 				data: {
 					amount: calculateTotalAmount(recipients),
 					spender: wallet.address(),
 				},
+				gasLimit,
+				gasPrice,
+				nonce: wallet.isLegacyCold() ? wallet.legacyNonce().toFixed(0) : undefined,
 				signatory,
 				token,
 			});
@@ -200,13 +200,15 @@ export const BatchTransferTabs = ({
 			{/* Normal toolbar footer (no error) */}
 			<div className="absolute bottom-0 left-0 right-0 flex w-full flex-col border-t border-theme-secondary-300 bg-theme-background px-6 py-4 dark:border-theme-dark-700">
 				<div className="absolute bottom-0 left-0 right-0 flex w-full flex-col border-t border-theme-secondary-300 bg-theme-background px-6 py-4 dark:border-theme-dark-700">
-					<Actions
-						activeTab={activeTab}
-						handleNext={handleNext}
-						isNextDisabled={isNextDisabled}
-						handleBack={handleBack}
-						isConfirmed={isConfirmed}
-					/>
+					<SidePanelButtons>
+						<Actions
+							activeTab={activeTab}
+							handleNext={handleNext}
+							isNextDisabled={isNextDisabled}
+							handleBack={handleBack}
+							isConfirmed={isConfirmed}
+						/>
+					</SidePanelButtons>
 				</div>
 			</div>
 		</>
@@ -223,26 +225,27 @@ interface ActionsProperties {
 
 const Actions = ({ activeTab, isConfirmed, handleBack, handleNext, isNextDisabled }: ActionsProperties) => {
 	const { t } = useTranslation();
-	return (
-		<SidePanelButtons>
-			{activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed ? (
-				<div>loading</div>
-			) : (
-				<>
-					{activeTab !== BatchTransferTabStep.SummaryStep && (
-						<Button variant="secondary" onClick={handleBack} data-testid="BatchTranfer__back-button">
-							{t("COMMON.BACK")}
-						</Button>
-					)}
 
-					<Button onClick={handleNext} data-testid="BatchTranfer__continue-button" disabled={isNextDisabled}>
-						{activeTab === BatchTransferTabStep.ReviewStep && t("COMMON.CONTINUE")}
-						{activeTab === BatchTransferTabStep.ApproveStep && t("COMMON.APPROVE")}
-						{activeTab === BatchTransferTabStep.SummaryStep && isConfirmed && t("COMMON.CONTINUE_NOW")}
-						{activeTab === BatchTransferTabStep.ConfirmTransferStep && t("COMMON.CONFIRM_TRANSACTION")}
-					</Button>
-				</>
+	if (activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed) {
+		return <div>Once confirmed, you'll be taken to the next step automatically.</div>;
+	}
+
+	return (
+		<>
+			{activeTab !== BatchTransferTabStep.SummaryStep && (
+				<Button variant="secondary" onClick={handleBack} data-testid="BatchTranfer__back-button">
+					{t("COMMON.BACK")}
+				</Button>
 			)}
-		</SidePanelButtons>
+
+			{activeTab === BatchTransferTabStep.SummaryStep && <div>Continuing to transfer in 2s...</div>}
+
+			<Button onClick={handleNext} data-testid="BatchTranfer__continue-button" disabled={isNextDisabled}>
+				{activeTab === BatchTransferTabStep.ReviewStep && t("COMMON.CONTINUE")}
+				{activeTab === BatchTransferTabStep.ApproveStep && t("COMMON.APPROVE")}
+				{activeTab === BatchTransferTabStep.SummaryStep && t("COMMON.CONTINUE_NOW")}
+				{activeTab === BatchTransferTabStep.ConfirmTransferStep && t("COMMON.CONFIRM_TRANSACTION")}
+			</Button>
+		</>
 	);
 };
