@@ -18,6 +18,25 @@ export const translations = {
 		DESCRIPTION_WIF: "Enter your WIF to authenticate the transaction.",
 		TITLE: "Authenticate",
 	},
+	BATCH_TRANSFER: {
+		APPROVE_CONTRACT_STEP: {
+			DESCRIPTION:
+				"Before sending tokens to multiple recipients, you need to approve the spend amount for the multiple transfer contract.",
+			TITLE: "Approve Contract",
+		},
+		CONFIRM_TRANSFER_STEP: {
+			DESCRIPTION: "Transfer tokens to multiple recipients.",
+			TITLE: "Confirm Transfer",
+		},
+		SUMMARY_CONFIRMED_STEP: {
+			DESCRIPTION: "Contract approval confirmed.",
+			TITLE: "Contract Approved",
+		},
+		SUMMARY_PENDING_STEP: {
+			DESCRIPTION: "Waiting for spend approval to be confirmed on the blockchain.",
+			TITLE: "Approving Contract",
+		},
+	},
 	BROADCASTING: "Broadcasting transaction to the network",
 	CONFIRMATIONS: "Confirmations",
 	CONFIRMATIONS_COUNT: "{{count}} Confirmations",

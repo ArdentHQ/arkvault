@@ -141,7 +141,7 @@ interface BatchTransferStepConfigProperties {
 	isConfirmed: boolean;
 }
 
-export const useBatchTransferStepConfig = ({ activeTab, wallet, isConfirmed }: BatchTransferStepConfigProperties) => {
+export const useBatchTransferStepConfig = ({ activeTab, isConfirmed }: BatchTransferStepConfigProperties) => {
 	const { t } = useTranslation();
 
 	const getTitle = () => {
@@ -150,14 +150,16 @@ export const useBatchTransferStepConfig = ({ activeTab, wallet, isConfirmed }: B
 		}
 
 		if (activeTab === BatchTransferTabStep.ApproveStep) {
-			return "Approve Contract";
+			return t("TRANSACTION.APPROVE_CONTRACT_STEP.TITLE");
 		}
 
 		if (activeTab === BatchTransferTabStep.SummaryStep) {
-			return isConfirmed ? "Contract Approved" : "Approving Contract";
+			return isConfirmed
+				? t("TRANSACTION.SUMMARY_CONFIRMED_STEP.TITLE")
+				: t("TRANSACTION.SUMMARY_PENDING_STEP.TITLE");
 		}
 
-		return "Confirm Transfer";
+		return t("TRANSACTION.CONFIRM_TRANSFER_STEP.TITLE");
 	};
 
 	const getSubtitle = () => {
@@ -166,16 +168,16 @@ export const useBatchTransferStepConfig = ({ activeTab, wallet, isConfirmed }: B
 		}
 
 		if (activeTab === BatchTransferTabStep.ApproveStep) {
-			return "Before sending tokens to multiple recipients, you need to approve the spend amount for the multiple transfer contract.";
+			return t("TRANSACTION.APPROVE_CONTRACT_STEP.DESCRIPTION");
 		}
 
 		if (activeTab === BatchTransferTabStep.SummaryStep) {
 			return isConfirmed
-				? "Contract approval confirmed."
-				: "Waiting for spend approval to be confirmed on the blockchain.";
+				? t("TRANSACTION.SUMMARY_CONFIRMED_STEP.DESCRIPTION")
+				: t("TRANSACTION.SUMMARY_PENDING_STEP.DESCRIPTION");
 		}
 
-		return "Transfer tokens to multiple recipients.";
+		return t("TRANSACTION.CONFIRM_TRANSFER_STEP.DESCRIPTION");
 	};
 
 	const getTitleIcon = () => {
