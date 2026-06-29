@@ -227,7 +227,7 @@ const Actions = ({ activeTab, isConfirmed, handleBack, handleNext, isNextDisable
 	const { t } = useTranslation();
 
 	if (activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed) {
-		return <div>Once confirmed, you'll be taken to the next step automatically.</div>;
+		return <div className="w-full text-center text-sm leading-11 text-theme-secondary-700">Once confirmed, you'll be taken to the next step automatically.</div>;
 	}
 
 	return (
@@ -238,7 +238,11 @@ const Actions = ({ activeTab, isConfirmed, handleBack, handleNext, isNextDisable
 				</Button>
 			)}
 
-			{activeTab === BatchTransferTabStep.SummaryStep && <div>Continuing to transfer in 2s...</div>}
+			{activeTab === BatchTransferTabStep.SummaryStep && (
+				<div className="leading-5.25 w-full text-sm text-theme-secondary-700">
+					Continuing to transfer in 2s...
+				</div>
+			)}
 
 			<Button onClick={handleNext} data-testid="BatchTranfer__continue-button" disabled={isNextDisabled}>
 				{activeTab === BatchTransferTabStep.ReviewStep && t("COMMON.CONTINUE")}
