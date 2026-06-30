@@ -399,7 +399,7 @@ export class ClientService {
 				to: tokenAddress,
 			});
 
-			return BigNumber.make(hexToBigInt(response.result ?? 0));
+			return BigNumber.make(hexToBigInt(response.result));
 		} catch (error) {
 			if (error instanceof Error) {
 				throw error;
