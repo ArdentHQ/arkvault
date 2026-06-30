@@ -252,7 +252,7 @@ describe("LedgerMigration LedgerScanStep", () => {
 				path,
 			});
 
-			wallets.push({ address: ledgerWallet.address(), balance: "0", path });
+			wallets.push({ address: ledgerWallet.address(), balance: "100", path });
 		}
 
 		vi.mocked(useLedgerScanner).mockReturnValue({
