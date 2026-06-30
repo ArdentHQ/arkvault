@@ -86,7 +86,7 @@ export const BatchTransferActions = ({
 				</div>
 			)}
 
-			<Button onClick={handleNext} data-testid="BatchTranfer__continue-button" disabled={isNextDisabled}>
+			<Button onClick={handleNext} data-testid="BatchTransfer__continue-button" disabled={isNextDisabled}>
 				{activeTab === BatchTransferTabStep.ReviewStep && t("COMMON.CONTINUE")}
 				{activeTab === BatchTransferTabStep.ApproveStep && t("COMMON.APPROVE")}
 				{activeTab === BatchTransferTabStep.SummaryStep && t("COMMON.CONTINUE_NOW")}
