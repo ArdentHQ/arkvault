@@ -113,7 +113,7 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 					</FormField>
 				</div>
 
-				<div className="px-4 pt-1 sm:px-0 sm:pt-0">
+				<div className="px-3 pt-1 sm:px-0 sm:pt-0">
 					<AuthenticationStep wallet={wallet!} noHeading />
 				</div>
 			</div>

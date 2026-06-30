@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -11,8 +11,10 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { TransactionSteps } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
-import { TruncatedContractAddress } from "@/domains/transaction/components/ContractAddressHint/ContractAddressHint";
 import { useBatchTransferDetails } from "@/domains/transaction/hooks/use-batch-transfer-details";
+import { Divider } from "@/app/components/Divider";
+import { Button } from "@/app/components/Button";
+import { RecipientsModal } from "@/domains/transaction/components/RecipientsModal";
 
 interface ApproveStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -20,6 +22,8 @@ interface ApproveStepProperties {
 
 export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 	const { t } = useTranslation();
+
+	const [showModal, setShowModal] = useState(false);
 
 	const { register, getValues } = useFormContext();
 	const { recipients, tokenContractAddress } = getValues();
@@ -32,6 +36,8 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 		tokenContractAddress,
 		wallet,
 	});
+
+	const ticker = walletToken.token().displaySymbol();
 
 	const { common: commonValidation } = useValidation();
 
@@ -50,7 +56,7 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 				<DetailWrapper label={t("COMMON.DETAILS")} className="rounded-xl">
 					<div className="space-y-3">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-							<DetailTitle className="w-auto sm:min-w-40 sm:pr-6">{t("COMMON.TOKEN")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-44 sm:pr-6">{t("COMMON.TOKEN")}</DetailTitle>
 
 							<div className="whitespace-normal break-all text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 								{walletToken.token().name()}
@@ -58,11 +64,36 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 						</div>
 
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-							<DetailTitle className="w-auto sm:min-w-40 sm:pr-6">Approval Amount</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-44 sm:pr-6">{t("COMMON.RECIPIENTS")}</DetailTitle>
+
+							<div className="whitespace-normal break-all text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+								<div className="flex items-center">
+									<span className="inline-flex items-center gap-1 text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+										{recipients.length}
+									</span>
+
+									<div className="h-5 leading-5">
+										<Divider type="vertical" size="md" />
+									</div>
+
+									<Button
+										onClick={() => setShowModal(true)}
+										variant="transparent"
+										data-testid="TransactionRecipientsModal--ShowList"
+										className="p-0 text-sm leading-[17px] text-theme-navy-600 underline decoration-theme-navy-600 decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
+									>
+										{t("TRANSACTION.VIEW_RECIPIENTS_LIST")}
+									</Button>
+								</div>
+							</div>
+						</div>
+
+						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+							<DetailTitle className="w-auto sm:min-w-44 sm:pr-6">{t("COMMON.AMOUNT")}</DetailTitle>
 
 							<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
 								<Amount
-									ticker={walletToken.token().displaySymbol()}
+									ticker={ticker}
 									value={amount}
 									decimals={walletToken.token().decimals()}
 									className="whitespace-normal break-all text-sm font-semibold md:text-base"
@@ -74,22 +105,11 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 								/>
 							</div>
 						</div>
-
-						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-							<DetailTitle className="w-auto sm:min-w-40 sm:pr-6">{t("COMMON.CONTRACT")}</DetailTitle>
-
-							<div className="whitespace-normal break-all text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
-								<TruncatedContractAddress
-									token={walletToken}
-									link={wallet.link().wallet(walletToken.token().address())}
-								/>
-							</div>
-						</div>
 					</div>
 				</DetailWrapper>
 
 				<div className="mx-0">
-					<TransactionSteps approvalStatus="approved" transferStatus="awaiting" />
+					<TransactionSteps approvalStatus="approved" transferStatus="active" />
 				</div>
 
 				<div className="border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0">
@@ -108,10 +128,16 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 					</FormField>
 				</div>
 
-				<div className="px-4 sm:px-0 pt-1 sm:pt-0">
+				<div className="px-3 pt-1 sm:px-0 sm:pt-0">
 					<AuthenticationStep wallet={wallet!} noHeading />
 				</div>
 			</div>
+			<RecipientsModal
+				isOpen={showModal}
+				onClose={() => setShowModal(false)}
+				recipients={recipients}
+				ticker={ticker}
+			/>
 		</section>
 	);
 };
