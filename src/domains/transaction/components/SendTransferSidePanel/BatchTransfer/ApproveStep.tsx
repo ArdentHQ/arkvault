@@ -89,8 +89,8 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 
 						<div className="-mb-3 mt-3 rounded bg-theme-secondary-100 px-4 py-2 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:-mx-6 sm:-mb-5 sm:rounded-b-xl sm:px-6">
 							<div className="flex items-center gap-2 text-theme-secondary-700 dim:text-theme-dim-100 dark:text-theme-dark-100">
-								<p className="leading-4.25 text-sm font-semibold">
-									{t("TRANSACTION.APPROVE_CONTRACT_STEP.DETAILS_HINT")}
+								<p className="leading-4.25 sm:leading-5.25 text-sm font-semibold">
+									{t("TRANSACTION.BATCH_TRANSFER.APPROVE_CONTRACT_STEP.DETAILS_HINT")}
 								</p>
 							</div>
 						</div>
