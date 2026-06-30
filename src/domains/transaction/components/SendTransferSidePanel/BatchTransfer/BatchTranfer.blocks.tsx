@@ -19,7 +19,7 @@ export const TransactionSteps = ({ approvalStatus, transferStatus }: Transaction
 
 	return (
 		<DetailWrapper label={t("COMMON.TRANSACTION_STEPS")} className="rounded-xl">
-			<div className="space-y-3">
+			<div className="space-y-2 sm:space-y-3">
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle className="w-44 sm:min-w-44 sm:pr-6">
 						{t("TRANSACTION.BATCH_TRANSFER.APPROVE_CONTRACT")}
@@ -34,8 +34,8 @@ export const TransactionSteps = ({ approvalStatus, transferStatus }: Transaction
 					<TransactionStepLabel status={transferStatus} />
 				</div>
 
-				<div className="-mx-4 -mb-3 mt-2 rounded-b-xl bg-theme-secondary-100 px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6">
-					<div className="flex items-center gap-2 text-theme-secondary-700">
+				<div className="rounded -mb-3 mt-3 sm:rounded-b-xl bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 px-4 py-2 sm:-mx-6 sm:-mb-5 sm:px-6">
+					<div className="flex items-center gap-2 text-theme-secondary-700 dark:text-theme-dark-100 dim:text-theme-dim-100">
 						<p className="leading-4.25 text-sm font-semibold">
 							{transferStatus === "awaiting" && t("TRANSACTION.BATCH_TRANSFER.AWAITING_APPROVAL_HINT")}
 							{transferStatus === "active" && t("TRANSACTION.BATCH_TRANSFER.AWAITING_TRANSFER_HINT")}

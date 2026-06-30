@@ -24,6 +24,7 @@ export const translations = {
 		APPROVE_CONTRACT_STEP: {
 			DESCRIPTION:
 				"Before sending tokens to multiple recipients, you need to approve the spend amount for the multiple transfer contract.",
+			DETAILS_HINT: "Only this amount will be approved for spending.",
 			TITLE: "Approve Contract",
 		},
 		AWAITING_APPROVAL_HINT: "Approval needs to be confirmed before your transfer is sent.",

@@ -108,7 +108,9 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 					</FormField>
 				</div>
 
-				<AuthenticationStep wallet={wallet!} noHeading />
+				<div className="px-4 sm:px-0 pt-1 sm:pt-0">
+					<AuthenticationStep wallet={wallet!} noHeading />
+				</div>
 			</div>
 		</section>
 	);
