@@ -6,6 +6,7 @@ import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 import { DTO } from "@/app/lib/mainsail";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
+import { TransactionConfirmationErrors } from "./TransactionConfirmationErrors";
 
 export const TransactionConfirmations = ({
 	isConfirmed,
@@ -43,19 +44,7 @@ export const TransactionConfirmations = ({
 					</p>
 				</div>
 
-				{transaction.data().receipt().hasUnknownError() && (
-					<p className="border-t border-theme-danger-200 px-3 pt-2 font-semibold text-theme-secondary-700 dim:border-theme-danger-400 dim:text-theme-dim-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 sm:px-6 sm:pt-4">
-						{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR")}
-					</p>
-				)}
-
-				{transaction.data().receipt().error() && (
-					<p className="border-t border-theme-danger-200 px-3 pt-2 font-semibold text-theme-secondary-700 dim:border-theme-danger-400 dim:text-theme-dim-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 sm:px-6 sm:pt-4">
-						{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR_WITH_MESSAGE", {
-							error: transaction.data().receipt().prettyError(),
-						})}
-					</p>
-				)}
+				<TransactionConfirmationErrors transaction={transaction} />
 			</div>
 		);
 	}
