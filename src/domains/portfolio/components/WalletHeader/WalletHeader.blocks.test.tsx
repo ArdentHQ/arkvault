@@ -69,4 +69,14 @@ describe("WalletActions", () => {
 
 		result.unmount();
 	});
+
+	it("should not call update when isUpdatingTransactions is set", async () => {
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+
+		const onUpdate = vi.fn();
+
+		render(<WalletActions profile={profile} wallet={wallet} isUpdatingTransactions={true} onUpdate={onUpdate} />);
+
+		expect(onUpdate).not.toHaveBeenCalled();
+	});
 });
