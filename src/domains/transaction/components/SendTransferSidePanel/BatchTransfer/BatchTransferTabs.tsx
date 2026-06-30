@@ -198,7 +198,7 @@ export const BatchTransferTabs = ({
 
 							<TabPanel tabId={BatchTransferTabStep.SummaryStep}>
 								<TransactionSuccessful
-									transaction={confirmedTransaction || transaction}
+									transaction={confirmedTransaction || transaction!}
 									senderWallet={wallet!}
 									skipConfirmationCheck
 									noHeading
