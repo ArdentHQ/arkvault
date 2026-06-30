@@ -10,14 +10,15 @@ import {
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 import { ReviewStep } from "./ReviewStep";
 import { SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
-import { Button } from "@/app/components/Button";
-import { useTranslation } from "react-i18next";
 import { ApproveStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ApproveStep";
 import { httpClient } from "@/app/services";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { useEnvironmentContext } from "@/app/contexts";
-import { calculateTotalAmount } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import {
+	BatchTransferActions,
+	calculateTotalAmount,
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
 import { useAllowance } from "@/domains/transaction/hooks/use-allowance";
@@ -218,7 +219,7 @@ export const BatchTransferTabs = ({
 			<div className="absolute bottom-0 left-0 right-0 flex w-full flex-col border-t border-theme-secondary-300 bg-theme-background px-6 py-4 dark:border-theme-dark-700">
 				<div className="absolute bottom-0 left-0 right-0 flex w-full flex-col border-t border-theme-secondary-300 bg-theme-background px-6 py-4 dark:border-theme-dark-700">
 					<SidePanelButtons>
-						<Actions
+						<BatchTransferActions
 							activeTab={activeTab}
 							handleNext={handleNext}
 							isNextDisabled={isNextDisabled}
@@ -228,49 +229,6 @@ export const BatchTransferTabs = ({
 					</SidePanelButtons>
 				</div>
 			</div>
-		</>
-	);
-};
-
-interface ActionsProperties {
-	activeTab: BatchTransferTabStep;
-	isConfirmed: boolean;
-	handleNext: () => Promise<void>;
-	handleBack: () => void;
-	isNextDisabled: boolean;
-}
-
-const Actions = ({ activeTab, isConfirmed, handleBack, handleNext, isNextDisabled }: ActionsProperties) => {
-	const { t } = useTranslation();
-
-	if (activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed) {
-		return (
-			<div className="leading-11 w-full text-center text-sm text-theme-secondary-700">
-				Once confirmed, you'll be taken to the next step automatically.
-			</div>
-		);
-	}
-
-	return (
-		<>
-			{activeTab !== BatchTransferTabStep.SummaryStep && (
-				<Button variant="secondary" onClick={handleBack} data-testid="BatchTranfer__back-button">
-					{t("COMMON.BACK")}
-				</Button>
-			)}
-
-			{activeTab === BatchTransferTabStep.SummaryStep && (
-				<div className="leading-5.25 w-full text-sm text-theme-secondary-700">
-					Continuing to transfer in 2s...
-				</div>
-			)}
-
-			<Button onClick={handleNext} data-testid="BatchTranfer__continue-button" disabled={isNextDisabled}>
-				{activeTab === BatchTransferTabStep.ReviewStep && t("COMMON.CONTINUE")}
-				{activeTab === BatchTransferTabStep.ApproveStep && t("COMMON.APPROVE")}
-				{activeTab === BatchTransferTabStep.SummaryStep && t("COMMON.CONTINUE_NOW")}
-				{activeTab === BatchTransferTabStep.ConfirmTransferStep && t("COMMON.CONFIRM_TRANSACTION")}
-			</Button>
 		</>
 	);
 };

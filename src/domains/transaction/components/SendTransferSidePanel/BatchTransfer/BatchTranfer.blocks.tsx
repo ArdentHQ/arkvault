@@ -11,6 +11,10 @@ import {
 	TransactionStepLabel,
 	TransferStatus,
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/TransactionStepLabel";
+import {
+	BatchTransferTabStep
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
+import { Button } from "@/app/components/Button";
 
 interface TransferDetailsProperties {
 	profile: Contracts.IProfile;
@@ -86,5 +90,48 @@ export const TransactionSteps = ({ approvalStatus, transferStatus }: Transaction
 				</div>
 			</div>
 		</DetailWrapper>
+	);
+};
+
+interface ActionsProperties {
+	activeTab: BatchTransferTabStep;
+	isConfirmed: boolean;
+	handleNext: () => Promise<void>;
+	handleBack: () => void;
+	isNextDisabled: boolean;
+}
+
+export const BatchTransferActions = ({ activeTab, isConfirmed, handleBack, handleNext, isNextDisabled }: ActionsProperties) => {
+	const { t } = useTranslation();
+
+	if (activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed) {
+		return (
+			<div className="leading-11 w-full text-center text-sm text-theme-secondary-700">
+				Once confirmed, you'll be taken to the next step automatically.
+			</div>
+		);
+	}
+
+	return (
+		<>
+			{activeTab !== BatchTransferTabStep.SummaryStep && (
+				<Button variant="secondary" onClick={handleBack} data-testid="BatchTranfer__back-button">
+					{t("COMMON.BACK")}
+				</Button>
+			)}
+
+			{activeTab === BatchTransferTabStep.SummaryStep && (
+				<div className="leading-5.25 w-full text-sm text-theme-secondary-700">
+					Continuing to transfer in 2s...
+				</div>
+			)}
+
+			<Button onClick={handleNext} data-testid="BatchTranfer__continue-button" disabled={isNextDisabled}>
+				{activeTab === BatchTransferTabStep.ReviewStep && t("COMMON.CONTINUE")}
+				{activeTab === BatchTransferTabStep.ApproveStep && t("COMMON.APPROVE")}
+				{activeTab === BatchTransferTabStep.SummaryStep && t("COMMON.CONTINUE_NOW")}
+				{activeTab === BatchTransferTabStep.ConfirmTransferStep && t("COMMON.CONFIRM_TRANSACTION")}
+			</Button>
+		</>
 	);
 };
