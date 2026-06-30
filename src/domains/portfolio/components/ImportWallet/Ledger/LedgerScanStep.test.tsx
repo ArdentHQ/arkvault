@@ -325,7 +325,7 @@ describe("LedgerScanStep", () => {
 			]),
 		).toMatchInlineSnapshot(`
 			<div>
-			  Loaded
+			  Loaded 
 			  2
 			   wallets
 			</div>
