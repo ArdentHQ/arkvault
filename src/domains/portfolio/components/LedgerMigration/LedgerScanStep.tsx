@@ -51,9 +51,9 @@ export const LedgerScanStep = ({
 
 	const ledgerScanner = useLedgerScanner({ pageSize });
 
-	const walletsWithBalance = ledgerScanner.wallets.filter((address) => {
-		return BigNumber.make(address.balance ?? 0).isGreaterThanOrEqualTo(dustAmount);
-	});
+	const walletsWithBalance = ledgerScanner.wallets.filter((address) =>
+		BigNumber.make(address.balance ?? 0).isGreaterThanOrEqualTo(dustAmount),
+	);
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets } = ledgerScanner;
 	const scanMore = useCallback(() => {
