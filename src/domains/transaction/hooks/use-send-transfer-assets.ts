@@ -28,10 +28,7 @@ export const useTransferAssets = ({
 		const token = assetOptions.find((option) => option.value === selectedAsset)!;
 
 		return {
-			assets:
-				selectedAsset === "ARK"
-					? [mainsailAsset]
-					: [token]
+			assets: selectedAsset === "ARK" ? [mainsailAsset] : [token],
 		};
 	}
 
