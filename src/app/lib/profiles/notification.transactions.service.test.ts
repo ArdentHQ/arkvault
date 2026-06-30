@@ -517,5 +517,19 @@ describe("ProfileTransactionNotificationService", () => {
 			expect(result).toHaveLength(1);
 			expect(result[0].hash()).toBe("tx-deleted-notification");
 		});
+
+		it("should exclude removed notifications from active", async () => {
+			const mockTx = mockTransaction("tx-removed");
+			vi.spyOn(service, "transactions").mockReturnValue([mockTx]);
+
+			notificationRepository.push({
+				meta: { transactionId: "tx-removed" },
+				type: INotificationTypes.Transaction,
+			});
+			service.markAsRemoved("tx-removed");
+
+			const result = service.active();
+			expect(result).toHaveLength(0);
+		});
 	});
 });
