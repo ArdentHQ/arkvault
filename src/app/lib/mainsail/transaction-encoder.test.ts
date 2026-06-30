@@ -358,4 +358,64 @@ describe("TransactionEncoder", () => {
 			),
 		).toThrow();
 	});
+
+	it("should encode approveContract", () => {
+		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
+		const recipients = [{ address: tokenDTO.address(), amount: 100 }];
+
+		const result = encoder.approveContract(tokenDTO, recipients);
+
+		expect(result.to).toBe(tokenDTO.address());
+		expect(result.data).toBeDefined();
+	});
+
+	it("should encode approveContract via byType", () => {
+		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
+		const recipients = [{ address: tokenDTO.address(), amount: 100 }];
+
+		const result = encoder.byType(
+			{
+				recipients,
+				senderAddress: "0x1234",
+				token: tokenDTO,
+			},
+			"approve",
+		);
+
+		expect(result.to).toBe(tokenDTO.address());
+		expect(result.data).toBeDefined();
+	});
+
+	it("should encode batchTransfer", () => {
+		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
+		const recipients = [
+			{ address: `0x${"1".repeat(40)}`, amount: 1 },
+			{ address: `0x${"2".repeat(40)}`, amount: 2 },
+		];
+
+		const result = encoder.batchTransfer(tokenDTO, recipients);
+
+		expect(result.to).toBe(ContractAddresses.BATCH_TRANSFER);
+		expect(result.data).toBeDefined();
+	});
+
+	it("should encode batchTransfer via byType", () => {
+		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
+		const recipients = [
+			{ address: `0x${"1".repeat(40)}`, amount: 1 },
+			{ address: `0x${"2".repeat(40)}`, amount: 2 },
+		];
+
+		const result = encoder.byType(
+			{
+				recipients,
+				senderAddress: "0x1234",
+				token: tokenDTO,
+			},
+			"batchTransfer",
+		);
+
+		expect(result.to).toBe(ContractAddresses.BATCH_TRANSFER);
+		expect(result.data).toBeDefined();
+	});
 });
