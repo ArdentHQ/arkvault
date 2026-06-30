@@ -51,7 +51,7 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 	const network = profile.activeNetwork();
 
 	return (
-		<section data-testid="BatchTransfer__approve-step">
+		<section data-testid="BatchTransfer__confirm-transfer-step">
 			<div className="space-y-3 sm:space-y-4">
 				<DetailWrapper label={t("COMMON.DETAILS")} className="rounded-xl">
 					<div className="space-y-3">
