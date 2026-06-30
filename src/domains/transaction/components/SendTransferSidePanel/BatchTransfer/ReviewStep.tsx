@@ -7,9 +7,7 @@ import { useActiveProfile } from "@/app/hooks";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount } from "@/app/components/Amount";
 import { ExchangeCurrencyAmount } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
-import {
-	TransactionSteps,
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import { TransactionSteps } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { useBatchTransferDetails } from "@/domains/transaction/hooks/use-batch-transfer-details";
 
 interface ReviewStepProperties {

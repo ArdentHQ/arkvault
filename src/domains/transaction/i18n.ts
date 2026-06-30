@@ -34,8 +34,8 @@ export const translations = {
 		MULTIPLE_TRANSFER: "Multiple Transfer",
 		SUMMARY_CONFIRMED_STEP: {
 			DESCRIPTION: "Contract approval confirmed.",
-			TITLE: "Contract Approved",
 			NAVIGATING_HINT: "Continuing to transfer in 2s...",
+			TITLE: "Contract Approved",
 		},
 		SUMMARY_PENDING_STEP: {
 			AWAITING_HINT: "Once confirmed, you'll be taken to the next step automatically.",
