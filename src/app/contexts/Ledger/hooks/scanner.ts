@@ -6,7 +6,7 @@ import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection"
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 
-export const useLedgerScanner = (options?: { pageSize?: number }) => {
+export const useLedgerScanner = (options?: { pageSize?: number; importedLedgerPaths: string[] }) => {
 	const { setBusy, setIdle, resetConnectionState, disconnect } = useLedgerContext();
 
 	const [state, dispatch] = useReducer(scannerReducer, {
@@ -52,7 +52,7 @@ export const useLedgerScanner = (options?: { pageSize?: number }) => {
 		const ledgerData = await profile
 			.ledger()
 			.scanner({ scannedWallets: wallets })
-			.scan({ isLoadingMore, pageSize: options?.pageSize });
+			.scan({ importedLedgerPaths: options?.importedLedgerPaths, isLoadingMore, pageSize: options?.pageSize });
 
 		dispatch({ payload: ledgerData, type: "success" });
 

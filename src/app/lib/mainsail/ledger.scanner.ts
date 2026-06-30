@@ -2,7 +2,6 @@
 import { omitBy, uniqBy } from "@/app/lib/helpers";
 
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
-import { Contracts } from "@/app/lib/profiles";
 import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { sort } from "@/app/lib/helpers/fast-sort";
 import { IProfile } from "@/app/lib/profiles/contracts";
@@ -31,20 +30,13 @@ export class LedgerScanner {
 	#computeLastPath({
 		slip44,
 		byAccountIndex,
-		importedLedgerAddresses,
+		importedLedgerPaths,
 	}: {
-		importedLedgerAddresses: LedgerData[];
+		importedLedgerPaths: string[];
 		slip44: number;
 		byAccountIndex?: boolean;
 	}): string | undefined {
-		const currentlyScannedWalletPaths = importedLedgerAddresses.map(({ path }) => path);
-		const profileWalletsPaths = [...this.#profile.wallets().values()]
-			.map((wallet) => wallet.data().get<string>(Contracts.WalletData.DerivationPath))
-			.filter((path) => BIP44.parse(path!).coinType === this.#ledgerService.slip44Eth());
-
-		const filteredBySlip44 = [...profileWalletsPaths, ...currentlyScannedWalletPaths].filter(
-			(path) => path && BIP44.parse(path).coinType === slip44,
-		);
+		const filteredBySlip44 = importedLedgerPaths.filter((path) => path && BIP44.parse(path).coinType === slip44);
 
 		if (byAccountIndex) {
 			return sort(filteredBySlip44)
@@ -57,7 +49,11 @@ export class LedgerScanner {
 			.at(0);
 	}
 
-	async scan(options?: { isLoadingMore?: boolean; pageSize?: number }): Promise<LedgerData[]> {
+	async scan(options?: {
+		isLoadingMore?: boolean;
+		pageSize?: number;
+		importedLedgerPaths?: string[];
+	}): Promise<LedgerData[]> {
 		let ledgerData = await this.scanWithBalancePriority(options);
 
 		if (options?.isLoadingMore) {
@@ -164,9 +160,14 @@ export class LedgerScanner {
 			startPath: config.startPath,
 		});
 
+		const importedLedgerPaths = [
+			...this.#wallets.map((wallet) => wallet.path),
+			...addressesWithBalance.map((address) => address.path),
+		];
+
 		const startPath = this.#computeLastPath({
 			byAccountIndex: config.byAccountIndex,
-			importedLedgerAddresses: [...addressesWithBalance, ...this.#wallets],
+			importedLedgerPaths,
 			slip44: this.#ledgerService.slip44Eth(),
 		});
 
@@ -180,15 +181,22 @@ export class LedgerScanner {
 		return [...addressesWithBalance, ...ledgerData];
 	}
 
-	async scanWithBalancePriority(options?: { pageSize?: number }): Promise<LedgerData[]> {
+	async scanWithBalancePriority(options?: {
+		pageSize?: number;
+		importedLedgerPaths?: string[];
+	}): Promise<LedgerData[]> {
 		const pageSize = options?.pageSize ?? this.#defaultPageSize;
+		const importedLedgerPaths = [
+			...this.#wallets.map((wallet) => wallet.path),
+			...(options?.importedLedgerPaths ?? []),
+		];
 
 		// Scan legacy ARK addresses (slip44=1) by address index.
 		const legacyAddresses = await this.scanAllWithBalance({
 			byAccountIndex: false,
 			slip44: this.#ledgerService.slip44Legacy(),
 			startPath: this.#computeLastPath({
-				importedLedgerAddresses: this.#wallets,
+				importedLedgerPaths,
 				slip44: this.#ledgerService.slip44Legacy(),
 			}),
 		});
@@ -198,7 +206,7 @@ export class LedgerScanner {
 			byAccountIndex: false,
 			slip44: this.#ledgerService.slip44(),
 			startPath: this.#computeLastPath({
-				importedLedgerAddresses: this.#wallets,
+				importedLedgerPaths,
 				slip44: this.#ledgerService.slip44(),
 			}),
 		});
@@ -214,7 +222,7 @@ export class LedgerScanner {
 			slip44: this.#ledgerService.slip44Eth(),
 			startPath: this.#computeLastPath({
 				byAccountIndex: true,
-				importedLedgerAddresses: this.#wallets,
+				importedLedgerPaths,
 				slip44: this.#ledgerService.slip44Eth(),
 			}),
 		});
