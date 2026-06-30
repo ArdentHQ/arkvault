@@ -37,7 +37,8 @@ export const TransactionSteps = ({ approvalStatus, transferStatus }: Transaction
 				<div className="-mx-4 -mb-3 mt-2 rounded-b-xl bg-theme-secondary-100 px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6">
 					<div className="flex items-center gap-2 text-theme-secondary-700">
 						<p className="leading-4.25 text-sm font-semibold">
-							{t("TRANSACTION.BATCH_TRANSFER.AWAITING_APPROVAL_HINT")}
+							{transferStatus === "awaiting" && t("TRANSACTION.BATCH_TRANSFER.AWAITING_APPROVAL_HINT")}
+							{transferStatus === "active" && t("TRANSACTION.BATCH_TRANSFER.AWAITING_TRANSFER_HINT")}
 						</p>
 					</div>
 				</div>

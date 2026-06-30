@@ -22,7 +22,7 @@ import { useAllowance } from "@/domains/transaction/hooks/use-allowance";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { calculateTotalAmount } from "@/domains/transaction/hooks/use-batch-transfer-details";
 
-const NAVIGATE_TO_CONFIRM_TRANSFER_DELAY_MS = 5000;
+const NAVIGATE_TO_CONFIRM_TRANSFER_DELAY_MS = 2000;
 
 export const BatchTransferTabs = ({
 	setActiveTab,

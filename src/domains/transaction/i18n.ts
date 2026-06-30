@@ -27,6 +27,7 @@ export const translations = {
 			TITLE: "Approve Contract",
 		},
 		AWAITING_APPROVAL_HINT: "Approval needs to be confirmed before your transfer is sent.",
+		AWAITING_TRANSFER_HINT: "Approval confirmed, transfer is ready to send.",
 		CONFIRM_TRANSFER_STEP: {
 			DESCRIPTION: "Transfer tokens to multiple recipients.",
 			TITLE: "Confirm Transfer",

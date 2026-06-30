@@ -45,7 +45,7 @@ export const ReviewStep = ({ wallet, isLoading, requiresContractApproval }: Revi
 
 	return (
 		<section data-testid="BatchTransfer__review-step">
-			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
+			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses
 					senderAddress={wallet.address()}
 					recipients={recipients}
