@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import { DTO } from "@/app/lib/mainsail";
+import { DTO } from "@/app/lib/profiles";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import {
