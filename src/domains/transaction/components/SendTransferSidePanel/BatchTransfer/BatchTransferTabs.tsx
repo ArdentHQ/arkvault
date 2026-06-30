@@ -17,12 +17,12 @@ import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { useEnvironmentContext } from "@/app/contexts";
 import {
 	BatchTransferActions,
-	calculateTotalAmount,
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
 import { useAllowance } from "@/domains/transaction/hooks/use-allowance";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { calculateTotalAmount } from "@/domains/transaction/hooks/use-batch-transfer-details";
 
 const NAVIGATE_TO_CONFIRM_TRANSFER_DELAY_MS = 5000;
 

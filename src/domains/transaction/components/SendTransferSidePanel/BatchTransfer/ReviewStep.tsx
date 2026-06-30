@@ -9,8 +9,8 @@ import { Amount } from "@/app/components/Amount";
 import { ExchangeCurrencyAmount } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
 import {
 	TransactionSteps,
-	useTransferDetails,
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import { useBatchTransferDetails } from "@/domains/transaction/hooks/use-batch-transfer-details";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -30,7 +30,7 @@ export const ReviewStep = ({ wallet, isLoading, requiresContractApproval }: Revi
 		unregister("mnemonic");
 	}, [unregister]);
 
-	const { amount, convertedAmount, walletToken, exchangeTicker } = useTransferDetails({
+	const { amount, convertedAmount, walletToken, exchangeTicker } = useBatchTransferDetails({
 		profile,
 		recipients,
 		tokenContractAddress,

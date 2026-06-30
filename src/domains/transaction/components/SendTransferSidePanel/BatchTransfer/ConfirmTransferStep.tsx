@@ -12,9 +12,9 @@ import { FeeField } from "@/domains/transaction/components/FeeField";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
 	TransactionSteps,
-	useTransferDetails,
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TruncatedContractAddress } from "@/domains/transaction/components/ContractAddressHint/ContractAddressHint";
+import { useBatchTransferDetails } from "@/domains/transaction/hooks/use-batch-transfer-details";
 
 interface ApproveStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -28,7 +28,7 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 
 	const profile = useActiveProfile();
 
-	const { amount, convertedAmount, walletToken, exchangeTicker } = useTransferDetails({
+	const { amount, convertedAmount, walletToken, exchangeTicker } = useBatchTransferDetails({
 		profile,
 		recipients,
 		tokenContractAddress,

@@ -20,20 +20,25 @@ export const translations = {
 	},
 	BATCH_TRANSFER: {
 		APPROVAL_AMOUNT: "Approval Amount",
+		APPROVE_CONTRACT: "Approve Contract",
 		APPROVE_CONTRACT_STEP: {
 			DESCRIPTION:
 				"Before sending tokens to multiple recipients, you need to approve the spend amount for the multiple transfer contract.",
 			TITLE: "Approve Contract",
 		},
+		AWAITING_APPROVAL_HINT: "Approval needs to be confirmed before your transfer is sent.",
 		CONFIRM_TRANSFER_STEP: {
 			DESCRIPTION: "Transfer tokens to multiple recipients.",
 			TITLE: "Confirm Transfer",
 		},
+		MULTIPLE_TRANSFER: "Multiple Transfer",
 		SUMMARY_CONFIRMED_STEP: {
 			DESCRIPTION: "Contract approval confirmed.",
 			TITLE: "Contract Approved",
+			NAVIGATING_HINT: "Continuing to transfer in 2s...",
 		},
 		SUMMARY_PENDING_STEP: {
+			AWAITING_HINT: "Once confirmed, you'll be taken to the next step automatically.",
 			DESCRIPTION: "Waiting for spend approval to be confirmed on the blockchain.",
 			TITLE: "Approving Contract",
 		},

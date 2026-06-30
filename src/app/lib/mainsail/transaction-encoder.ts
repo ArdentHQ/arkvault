@@ -6,8 +6,8 @@ import { Hex, numberToHex } from "viem";
 import { ContractAddresses, UnitConverter, TransactionDataEncoder } from "@arkecosystem/typescript-crypto";
 import { IProfile } from "@/app/lib/profiles/contracts";
 import { assertToken } from "@/utils/assertions";
-import { calculateTotalAmount } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { calculateTotalAmount } from "@/domains/transaction/hooks/use-batch-transfer-details";
 
 interface RecipientPaymentItem {
 	address: string;
