@@ -11,9 +11,7 @@ import {
 	TransactionStepLabel,
 	TransferStatus,
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/TransactionStepLabel";
-import {
-	BatchTransferTabStep
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
+import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 import { Button } from "@/app/components/Button";
 
 interface TransferDetailsProperties {
@@ -101,7 +99,13 @@ interface ActionsProperties {
 	isNextDisabled: boolean;
 }
 
-export const BatchTransferActions = ({ activeTab, isConfirmed, handleBack, handleNext, isNextDisabled }: ActionsProperties) => {
+export const BatchTransferActions = ({
+	activeTab,
+	isConfirmed,
+	handleBack,
+	handleNext,
+	isNextDisabled,
+}: ActionsProperties) => {
 	const { t } = useTranslation();
 
 	if (activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed) {
