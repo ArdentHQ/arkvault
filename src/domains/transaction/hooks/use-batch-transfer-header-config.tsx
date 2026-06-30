@@ -3,9 +3,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { ThemeIcon } from "@/app/components/Icon";
 import cn from "classnames";
 import React from "react";
-import {
-	BatchTransferTabStep
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
+import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 
 interface BatchTransferStepConfigProperties {
 	activeTab: BatchTransferTabStep;
