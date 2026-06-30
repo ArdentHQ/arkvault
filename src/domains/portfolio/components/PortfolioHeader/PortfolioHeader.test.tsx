@@ -548,6 +548,21 @@ describe("PortfolioHeader", () => {
 		});
 	});
 
+	it("should render tokens section when profile has tokens", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+		vi.spyOn(profile.tokens(), "selectedCount").mockReturnValue(3);
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+
+		expect(screen.getAllByText(/Token Holdings/).length).toBeGreaterThan(0);
+	});
+
 	it("should render the account name label when wallet is HD and only one selected", async () => {
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);

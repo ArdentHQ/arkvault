@@ -296,4 +296,23 @@ describe("LedgerMigration LedgerScanStep", () => {
 
 		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith("m/44'/1'/0'/0/1");
 	});
+
+	it("should use 0 as default balance when balance is null", async () => {
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			wallets: [
+				{
+					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+					balance: 0.002,
+					path: "m/44'/1'/0'/0/1",
+				},
+			],
+		});
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerMobileItem__checkbox")).toBeInTheDocument();
+		});
+	});
 });

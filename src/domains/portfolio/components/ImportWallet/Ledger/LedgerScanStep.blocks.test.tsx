@@ -70,6 +70,22 @@ describe("LedgerMobileItem", () => {
 		expect(screen.getByTestId("LedgerMobileItem__checkbox")).toBeDisabled();
 	});
 
+	it("should render additional loader overlay for index greater than zero", () => {
+		render(
+			<AddressMobileItem
+				isLoading={true}
+				address={sampleAddress}
+				balance={sampleBalance}
+				coin={sampleCoin}
+				isSelected={false}
+				handleClick={() => {}}
+				index={1}
+			/>,
+		);
+
+		expect(screen.getByTestId("AddressMobileItem__skeleton")).toBeInTheDocument();
+	});
+
 	it("should call handleClick", async () => {
 		const handleClick = vi.fn();
 

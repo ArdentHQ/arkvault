@@ -69,4 +69,21 @@ describe("WalletActions", () => {
 
 		result.unmount();
 	});
+
+	it("should not reset syncing state when isUpdatingTransactions is provided", async () => {
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+
+		const result = render(
+			<WalletActions profile={profile} wallet={wallet} isUpdatingTransactions={true} onUpdate={() => {}} />,
+		);
+
+		const refreshButton = screen.getByTestId("WalletHeader__refresh");
+
+		const user = userEvent.setup();
+		await user.click(refreshButton);
+
+		expect(refreshButton).toBeDisabled();
+
+		result.unmount();
+	});
 });

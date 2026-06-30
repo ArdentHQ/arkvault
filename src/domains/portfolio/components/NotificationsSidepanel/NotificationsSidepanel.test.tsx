@@ -239,4 +239,6 @@ describe("NotificationsSidepanel", () => {
 			expect(screen.getByTestId("NotificationRow")).toBeInTheDocument();
 		});
 	});
+
+
 });
