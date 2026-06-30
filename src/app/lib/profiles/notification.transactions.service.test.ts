@@ -5,6 +5,8 @@ import { INotificationTypes } from "./notification.repository.contract";
 import { IProfile } from "./contracts";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
+const REMOVED_TX = "tx-removed";
+
 const mockTransaction = (hash: string, overrides: Record<string, any> = {}) => ({
 	confirmations: () => ({ isGreaterThan: () => false }),
 	hash: () => hash,
@@ -338,7 +340,7 @@ describe("ProfileTransactionNotificationService", () => {
 
 			notificationRepository.push({
 				isRemoved: true,
-				meta: { transactionId: "tx-removed" },
+				meta: { transactionId: REMOVED_TX },
 				type: INotificationTypes.Transaction,
 			});
 
@@ -346,7 +348,7 @@ describe("ProfileTransactionNotificationService", () => {
 				() =>
 					({
 						all: vi.fn().mockResolvedValue({
-							items: () => [mockTransaction("tx-removed")],
+							items: () => [mockTransaction(REMOVED_TX)],
 						}),
 						flush: vi.fn(),
 					}) as any,
@@ -519,14 +521,14 @@ describe("ProfileTransactionNotificationService", () => {
 		});
 
 		it("should exclude removed notifications from active", async () => {
-			const mockTx = mockTransaction("tx-removed");
+			const mockTx = mockTransaction(REMOVED_TX);
 			vi.spyOn(service, "transactions").mockReturnValue([mockTx]);
 
 			notificationRepository.push({
-				meta: { transactionId: "tx-removed" },
+				meta: { transactionId: REMOVED_TX },
 				type: INotificationTypes.Transaction,
 			});
-			service.markAsRemoved("tx-removed");
+			service.markAsRemoved(REMOVED_TX);
 
 			const result = service.active();
 			expect(result).toHaveLength(0);

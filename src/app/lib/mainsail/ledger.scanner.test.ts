@@ -209,8 +209,8 @@ describe("LedgerScannerTest", () => {
 
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanWithBalancePriority({
-			pageSize: 3,
 			byAccountIndex: false,
+			pageSize: 3,
 		});
 
 		expect(result.length).toBeGreaterThan(0);
@@ -223,8 +223,8 @@ describe("LedgerScannerTest", () => {
 
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanWithBalancePriority({
-			pageSize: 3,
 			importedLedgerPaths: ["m/44'/60'/0'/0/0", "m/44'/60'/0'/0/1"],
+			pageSize: 3,
 		});
 
 		expect(result).toBeDefined();
