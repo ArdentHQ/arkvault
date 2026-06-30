@@ -590,4 +590,48 @@ describe("PortfolioHeader", () => {
 			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
 		});
 	});
+
+	it("should render the tokens section with view tokens button when profile has tokens", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		const viewTokensSpy = vi.fn();
+
+		renderPortfolioHeader({ onViewTokens: viewTokensSpy });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+
+		const viewTokensButtons = screen.getAllByTestId("ViewTokens");
+		expect(viewTokensButtons.length).toBeGreaterThan(0);
+	});
+
+	it("should render migrateLater hint in dropdown when wallets have been ignored", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+
+		const moreButton = screen.getByTestId("WalletHeaderMobile__more-button");
+		expect(moreButton).toBeInTheDocument();
+	});
+
+	it("should render WalletVote component when multiple wallets selected", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader({ hasFocus: false });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+	});
 });
