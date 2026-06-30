@@ -20,7 +20,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { calculateTotalAmount } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
-import { useAllowance } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/use-allowance";
+import { useAllowance } from "@/domains/transaction/hooks/use-allowance";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const NAVIGATE_TO_CONFIRM_TRANSFER_DELAY_MS = 5000;

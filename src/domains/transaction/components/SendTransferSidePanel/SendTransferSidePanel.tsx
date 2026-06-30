@@ -42,8 +42,8 @@ import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
 import { BatchTransferTabs } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs";
 import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
-import { useSendTransferStepConfig } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidepanel.blocks";
-import { useBatchTransferStepConfig } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import { useSendTransferStepConfig } from "@/domains/transaction/hooks/use-send-transfer-header-config";
+import { useBatchTransferStepConfig } from "@/domains/transaction/hooks/use-batch-transfer-header-config";
 
 const MAX_TABS = 5;
 
