@@ -221,10 +221,10 @@ describe("NotificationsSidepanel", () => {
 			isSuccess: (): boolean => true,
 			isTokenTransfer: (): boolean => false,
 			isTransfer: (): boolean => true,
-			isVote: (): boolean => false,
 			isUnvote: (): boolean => false,
 			isValidatorRegistration: (): boolean => false,
 			isValidatorResignation: (): boolean => false,
+			isVote: (): boolean => false,
 			timestamp: () => ({ toUNIX: (): number => 1743669254 }),
 			wallet: () => ({ alias: (): string => "TestWallet" }),
 		};

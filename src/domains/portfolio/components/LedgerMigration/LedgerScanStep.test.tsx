@@ -16,6 +16,8 @@ vi.mock("@/app/services", () => ({
 	},
 }));
 
+const testDerivationPath = "m/44'/1'/0'/0/1";
+
 const defaultScannerState = {
 	abortScanner: vi.fn(),
 	canRetry: true,
@@ -27,7 +29,7 @@ const defaultScannerState = {
 		{
 			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 			balance: "100",
-			path: "m/44'/1'/0'/0/1",
+			path: testDerivationPath,
 		},
 	],
 	scan: vi.fn(),
@@ -38,7 +40,7 @@ const defaultScannerState = {
 		{
 			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 			balance: "100",
-			path: "m/44'/1'/0'/0/1",
+			path: testDerivationPath,
 		},
 	],
 };
@@ -235,7 +237,7 @@ describe("LedgerMigration LedgerScanStep", () => {
 
 		await user.click(screen.getByTestId("LedgerScanStep__checkbox-row"));
 
-		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith("m/44'/1'/0'/0/1");
+		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith(testDerivationPath);
 	});
 
 	it("should show all wallets after clicking the load-more button", async () => {
@@ -294,7 +296,7 @@ describe("LedgerMigration LedgerScanStep", () => {
 
 		await user.click(screen.getByTestId("LedgerMobileItem__checkbox"));
 
-		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith("m/44'/1'/0'/0/1");
+		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith(testDerivationPath);
 	});
 
 	it("should use 0 as default balance when balance is null", async () => {
@@ -304,7 +306,7 @@ describe("LedgerMigration LedgerScanStep", () => {
 				{
 					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 					balance: 0.002,
-					path: "m/44'/1'/0'/0/1",
+					path: testDerivationPath,
 				},
 			],
 		});
