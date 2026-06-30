@@ -47,6 +47,8 @@ describe("FeeService", () => {
 			const result = await feeService.all();
 
 			expect(result).toEqual({
+				approve: expect.any(Object),
+				batchTransfer: expect.any(Object),
 				contractDeployment: expect.any(Object),
 				evmCall: expect.any(Object),
 				multiPayment: expect.any(Object),
