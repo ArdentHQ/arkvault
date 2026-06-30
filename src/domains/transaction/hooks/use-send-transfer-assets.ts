@@ -25,11 +25,13 @@ export const useTransferAssets = ({
 	};
 
 	if (!isSingle && selectedAsset) {
+		const token = assetOptions.find((option) => option.value === selectedAsset)!;
+
 		return {
 			assets:
 				selectedAsset === "ARK"
 					? [mainsailAsset]
-					: [assetOptions.find((option) => option.value === selectedAsset)],
+					: [token]
 		};
 	}
 
