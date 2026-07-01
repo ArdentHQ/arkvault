@@ -65,8 +65,8 @@ export class DraftTransfer {
 		assertNumber(fee);
 
 		// Buffer to prevent insufficient balance when actual gas exceeds estimate.
-		const DUST_AMOUNT = 0.00000015;
-		const remainingAmount = BigNumber.make(this.sender().balance()).minus(fee).minus(DUST_AMOUNT);
+		const dustAmount = this.sender()!.network().constants().dustAmount;
+		const remainingAmount = BigNumber.make(this.sender().balance()).minus(fee).minus(dustAmount);
 
 		this.setAmount(remainingAmount.toNumber());
 	}
