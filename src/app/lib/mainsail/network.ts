@@ -4,6 +4,7 @@ import {
 	CoinManifest,
 	ExpirationType,
 	NetworkManifest,
+	NetworkManifestConstants,
 	NetworkManifestImportMethods,
 	NetworkManifestToken,
 	VotingMethod,
@@ -341,8 +342,8 @@ export class Network {
 	 * @return {NetworkManifestConstants}
 	 * @memberof Network
 	 */
-	public constants(): Networks.NetworkManifestConstants {
-		return get(this.#network, "constants", {});
+	public constants(): NetworkManifestConstants {
+		return get(this.#network, "constants", {}) as NetworkManifestConstants;
 	}
 
 	/**
