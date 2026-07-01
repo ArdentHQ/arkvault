@@ -265,6 +265,9 @@ describe("#BatchTransfer", () => {
 
 		await expect(screen.findByTestId(confirmTransferStepID)).resolves.toBeVisible();
 
+		await userEvent.click(screen.getByTestId("TransactionRecipientsModal--ShowList"));
+		await expect(screen.findByTestId("RecipientsModal")).resolves.toBeVisible();
+
 		await fillMnemonic();
 
 		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
