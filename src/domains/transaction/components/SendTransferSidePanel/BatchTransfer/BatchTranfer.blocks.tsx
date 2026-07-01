@@ -75,7 +75,7 @@ export const BatchTransferActions = ({
 	return (
 		<>
 			{activeTab !== BatchTransferTabStep.SummaryStep && (
-				<Button variant="secondary" onClick={handleBack} data-testid="BatchTranfer__back-button">
+				<Button variant="secondary" onClick={handleBack} data-testid="BatchTransfer__back-button">
 					{t("COMMON.BACK")}
 				</Button>
 			)}

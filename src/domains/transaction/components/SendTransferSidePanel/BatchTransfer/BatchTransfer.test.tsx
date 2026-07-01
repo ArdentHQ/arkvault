@@ -69,6 +69,40 @@ const selectFirstSenderAddress = async () => selectNthSenderAddress(0);
 
 const continueButton = () => screen.getByTestId("SendTransfer__continue-button");
 const batchTransferContinueButton = () => screen.getByTestId("BatchTransfer__continue-button");
+const backButton = () => screen.getByTestId("BatchTransfer__back-button");
+
+const fillFormStep = async (): Promise<void> => {
+	await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+	await selectFirstSenderAddress();
+
+	await userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
+
+	await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
+
+	await addRecipient(profile.wallets().first().address(), "1");
+
+	await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
+
+	await addRecipient(profile.wallets().last().address(), "1");
+
+	await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
+}
+
+const mockAllowanceCall = (once = true) => {
+	server.use(
+		http.post(
+			"https://dwallets-evm.mainsailhq.com/evm/api",
+			async () =>
+				HttpResponse.json({
+					id: 1,
+					jsonrpc: "2.0",
+					result: "0x00000000000000000000000000000000000000000000000caf67003701680000",
+				}),
+			{ once },
+		),
+	);
+}
 
 describe("#BatchTransfer", () => {
 	beforeAll(async () => {
@@ -118,21 +152,7 @@ describe("#BatchTransfer", () => {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
 
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		await selectFirstSenderAddress();
-
-		await userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
-
-		await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
-
-		await addRecipient(profile.wallets().first().address(), "1");
-
-		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
-
-		await addRecipient(profile.wallets().last().address(), "1");
-
-		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
+		await fillFormStep();
 
 		// Navigate to review step
 		await waitFor(() => expect(continueButton()).toBeEnabled());
@@ -225,35 +245,9 @@ describe("#BatchTransfer", () => {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
 
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+		await fillFormStep();
 
-		await selectFirstSenderAddress();
-
-		await userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
-
-		await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
-
-		await addRecipient(profile.wallets().first().address(), "1");
-
-		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
-
-		await addRecipient(profile.wallets().last().address(), "1");
-
-		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
-
-		// Mock `allowance` call
-		server.use(
-			http.post(
-				"https://dwallets-evm.mainsailhq.com/evm/api",
-				async () =>
-					HttpResponse.json({
-						id: 1,
-						jsonrpc: "2.0",
-						result: "0x00000000000000000000000000000000000000000000000caf67003701680000",
-					}),
-				{ once: true },
-			),
-		);
+		mockAllowanceCall();
 
 		// Navigate to review step
 		await waitFor(() => expect(continueButton()).toBeEnabled());
@@ -298,6 +292,38 @@ describe("#BatchTransfer", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+	});
+
+	it("should navigate back properly", async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
+			route: `/profiles/${getDefaultProfileId()}/dashboard`,
+		});
+
+		await fillFormStep();
+
+		mockAllowanceCall(false)
+
+		// Navigate to review step
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Go back to form step
+		await userEvent.click(backButton());
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		// Navigate to review step
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Navigate to confirm step
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+		await userEvent.click(batchTransferContinueButton());
+		await expect(screen.findByTestId(confirmTransferStepID)).resolves.toBeVisible();
+
+		await userEvent.click(backButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 	});
 });
 

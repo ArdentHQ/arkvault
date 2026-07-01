@@ -169,8 +169,13 @@ export const BatchTransferTabs = ({
 		})[activeTab]();
 
 	const handleBack = useCallback(() => {
-		if (activeTab === BatchTransferTabStep.ReviewStep || activeTab === BatchTransferTabStep.ConfirmTransferStep) {
+		if (activeTab === BatchTransferTabStep.ReviewStep) {
 			onBack?.();
+			return;
+		}
+
+		if (activeTab === BatchTransferTabStep.ConfirmTransferStep) {
+			setActiveTab(BatchTransferTabStep.ReviewStep);
 			return;
 		}
 
