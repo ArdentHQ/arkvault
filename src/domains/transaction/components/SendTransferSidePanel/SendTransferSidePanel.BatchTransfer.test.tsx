@@ -324,4 +324,4 @@ const batchTransferTransactionData = (wallet: Contracts.IReadWriteWallet) => {
 			tokens: [token, token],
 		},
 	};
-}
+};
