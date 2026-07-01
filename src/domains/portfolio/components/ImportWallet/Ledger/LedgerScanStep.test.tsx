@@ -286,6 +286,14 @@ describe("LedgerScanStep", () => {
 		}
 
 		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
+
+		const existingWallet = profile.wallets().first();
+		vi.spyOn(existingWallet, "isLedger").mockReturnValue(true);
+		existingWallet.data().set(Contracts.WalletData.DerivationPath, "m/44'/1'/0'/0/0");
+	});
+
+	afterEach(() => {
+		vi.restoreAllMocks();
 	});
 
 	const Component = ({ isCancelling = false }: { isCancelling?: boolean }) => {

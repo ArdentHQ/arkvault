@@ -414,8 +414,8 @@ describe("LedgerMigrationSidepanel", () => {
 
 			const extendedKeyPaths = new Map([
 				...publicKeyPaths,
-				["m/44'/1'/0'/0/1", profile.wallets().last().publicKey()!],
-				["m/44'/60'/0'/0/1", profile.wallets().last().publicKey()!],
+				["m/44'/1'/1'/0/0", profile.wallets().last().publicKey()!],
+				["m/44'/60'/1'/0/0", profile.wallets().last().publicKey()!],
 			]);
 			const publicKeySpy = vi
 				.spyOn(wallet.ledger(), "getExtendedPublicKey")

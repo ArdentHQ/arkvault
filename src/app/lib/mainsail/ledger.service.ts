@@ -169,29 +169,29 @@ export class LedgerService {
 	}
 
 	/**
-	 * Scans for legacy Ledger wallets using BIP44 derivation paths.
+	 * Scans Ledger wallets by incrementing the account index (Ledger Live style).
 	 *
-	 * Increments the account index (3rd part of BIP44 path) instead of the address
-	 * index, allowing wallets with old (legacy) paths to be scanne.
+	 * Each new address increments the account index (3rd part of BIP44 path)
+	 * instead of the address index, matching Ledger Live
 	 *
 	 * Example:
-	 *   m/44'/111'/0/0/0
-	 *   m/44'/111'/1/0/0
-	 *   m/44'/111'/2/0/0
-	 *   m/44'/111'/3/0/0
+	 *   m/44'/60'/0'/0/0
+	 *   m/44'/60'/1'/0/0
+	 *   m/44'/60'/2'/0/0
+	 *   m/44'/60'/3'/0/0
 	 *
 	 * @param options.startPath - Starting path for initial account index
 	 * @param options.pageSize - Number of accounts to scan.
 	 * @param options.slip44
 	 * @returns Promise<Services.LedgerWalletList>
 	 */
-	public async scanLegacy(options: {
+	public async scanByAccountIndex(options: {
 		startPath?: string;
 		pageSize?: number;
 		slip44?: number;
 	}): Promise<Services.LedgerWalletList> {
 		const pageSize = options?.pageSize ?? 5;
-		const path = `m/44'/${options?.slip44 ?? this.slip44Legacy()}'`;
+		const path = `m/44'/${options?.slip44 ?? this.slip44Eth()}'`;
 		let initialAccountIndex = 0;
 
 		if (options?.startPath) {
@@ -225,10 +225,6 @@ export class LedgerService {
 
 	public slip44(): number {
 		return this.#config.get(ConfigKey.Slip44);
-	}
-
-	public slip44Legacy(): number {
-		return this.#config.get(ConfigKey.Slip44Legacy);
 	}
 
 	public slip44Eth(): number {

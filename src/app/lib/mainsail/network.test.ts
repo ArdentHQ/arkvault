@@ -315,6 +315,19 @@ describe("Network", () => {
 		expect(result.data).toBe("first");
 	});
 
+	it("should handle milestone where passed height is below initial milestone", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+			{ data: "third", height: 20 },
+		];
+		networkInstance.config().set("height", null);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone(5);
+		expect(result.data).toBe("first");
+	});
+
 	it("should use current height from config when no height is provided", () => {
 		const milestones = [
 			{ data: "first", height: 1 },

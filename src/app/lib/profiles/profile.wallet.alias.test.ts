@@ -115,4 +115,13 @@ describe("WalletAliasProvider", () => {
 		const result = provider.generateAlias(wallet);
 		expect(result).toBe("Ledger #1");
 	});
+
+	it("should return undefined alias when wallet is not found for address", () => {
+		vi.spyOn(profile.knownWallets(), "is").mockReturnValue(false);
+		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(undefined as any);
+		vi.spyOn(profile.validators(), "all").mockReturnValue([]);
+
+		const result = provider.findAliasByAddress("0xnonexistent");
+		expect(result).toBeUndefined();
+	});
 });
