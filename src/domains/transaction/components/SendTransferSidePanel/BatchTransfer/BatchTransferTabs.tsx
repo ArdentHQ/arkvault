@@ -81,7 +81,7 @@ export const BatchTransferTabs = ({
 	}, [isConfirmed, activeTab]);
 
 	const requiresContractApproval = !isAllowanceLoading && totalAmount.isGreaterThan(allowance);
-	const isNextDisabled = !isValid || (isAllowanceLoading && activeTab === BatchTransferTabStep.ReviewStep);
+	const isNextDisabled = !isValid || isAllowanceLoading;
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;

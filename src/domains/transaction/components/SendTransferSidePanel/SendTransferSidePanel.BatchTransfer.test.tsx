@@ -22,6 +22,7 @@ import { expect } from "vitest";
 import { requestMock, server } from "@/tests/mocks/server";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
+import { http, HttpResponse } from "msw";
 
 const formStepID = "SendTransfer__form-step";
 const reviewStepID = "BatchTransfer__review-step";
@@ -56,6 +57,12 @@ const addRecipient = async (recipientAddress: string, amount: string) => {
 	await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(amount));
 	await waitFor(() => expect(screen.getByTestId(recipientAddButton)).toBeEnabled());
 	await userEvent.click(screen.getByTestId(recipientAddButton));
+};
+
+const fillMnemonic = async () => {
+	await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+	await userEvent.paste(passphrase);
+	await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 };
 
 const selectFirstSenderAddress = async () => selectNthSenderAddress(0);
@@ -137,12 +144,6 @@ describe("#BatchTransfer", () => {
 		await userEvent.click(batchTransferContinueButton());
 		await expect(screen.findByTestId(approveStepID)).resolves.toBeVisible();
 
-		const fillMnemonic = async () => {
-			await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
-			await userEvent.paste(passphrase);
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-		};
-
 		await fillMnemonic();
 
 		// Mock requests and methods
@@ -206,6 +207,82 @@ describe("#BatchTransfer", () => {
 		signMock = vi.spyOn(wallet.transaction(), "signMultiPayment").mockReturnValue(Promise.resolve(hash));
 
 		broadcastMock = vi
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [hash], errors: {}, rejected: [] });
+
+		// Send batch transfer transaction
+		await userEvent.click(batchTransferContinueButton());
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+	});
+
+	it("should send batch transfer transaction without contract approval", { timeout: 8000 }, async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
+			route: `/profiles/${getDefaultProfileId()}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await selectFirstSenderAddress();
+
+		await userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
+
+		await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
+
+		await addRecipient(profile.wallets().first().address(), "1");
+
+		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
+
+		await addRecipient(profile.wallets().last().address(), "1");
+
+		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
+
+		server.use(
+			http.post("https://dwallets-evm.mainsailhq.com/evm/api", async () => HttpResponse.json({
+					id: 1,
+					jsonrpc: "2.0",
+					result: "0x00000000000000000000000000000000000000000000000caf67003701680000",
+				}), {once: true}),
+		);
+
+		// Navigate to review step
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Navigate to confirm transfer step
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+		await userEvent.click(batchTransferContinueButton());
+
+		await expect(screen.findByTestId(confirmTransferStepID)).resolves.toBeVisible();
+
+		await fillMnemonic();
+
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+
+		// Mock requests and methods
+		const batchTransferTxData = batchTransferTransactionData(wallet);
+
+		const signedTx = new ExtendedSignedTransactionData(
+			new SignedTransactionData().configure(batchTransferTxData.signed),
+			wallet,
+		);
+
+		const transactionMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTx);
+
+		const hash = signedTx.hash();
+
+		server.use(
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/transactions/${hash}`, batchTransferTxData.confirmed),
+		);
+
+		const signMock = vi.spyOn(wallet.transaction(), "signMultiPayment").mockReturnValue(Promise.resolve(hash));
+
+		const broadcastMock = vi
 			.spyOn(wallet.transaction(), "broadcast")
 			.mockResolvedValue({ accepted: [hash], errors: {}, rejected: [] });
 
