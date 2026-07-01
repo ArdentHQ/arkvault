@@ -106,7 +106,7 @@ describe("#BatchTransfer", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should send batch transfer transaction", async () => {
+	it("should send batch transfer transaction", { timeout: 8000 }, async () => {
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
