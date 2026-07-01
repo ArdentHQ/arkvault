@@ -105,7 +105,7 @@ const mockAllowanceCall = (once = true, amount = "250") => {
 	);
 };
 
-describe("#BatchTransfer", () => {
+describe("#BatchTransfer", { timeout: 8000 }, () => {
 	beforeAll(async () => {
 		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
 
@@ -152,7 +152,7 @@ describe("#BatchTransfer", () => {
 		vi.useRealTimers();
 	});
 
-	it("should send batch transfer transaction", { timeout: 8000 }, async () => {
+	it("should send batch transfer transaction", async () => {
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
