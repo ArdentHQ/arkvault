@@ -294,6 +294,37 @@ describe("#BatchTransfer", () => {
 		transactionMock.mockRestore();
 	});
 
+	it("should display error when sending contract approval transaction fails", async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
+			route: `/profiles/${getDefaultProfileId()}/dashboard`,
+		});
+
+		await fillFormStep();
+
+		// Navigate to review step
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Navigate to approve contract step
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+		await userEvent.click(batchTransferContinueButton());
+		await expect(screen.findByTestId(approveStepID)).resolves.toBeVisible();
+
+		await fillMnemonic();
+
+		const signMock = vi.spyOn(wallet.transaction(), "signApproveContract").mockImplementation(() => {
+			throw new Error("error");
+		});
+
+		// Try to send approve contract transaction
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+		await userEvent.click(batchTransferContinueButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+		signMock.mockRestore();
+	});
+
 	it("should navigate back properly", async () => {
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
