@@ -191,17 +191,7 @@ export class LedgerScanner {
 			...(options?.importedLedgerPaths ?? []),
 		];
 
-		// Scan legacy ARK addresses (slip44=1) by address index.
-		const legacyAddresses = await this.scanAllWithBalance({
-			byAccountIndex: false,
-			slip44: this.#ledgerService.slip44Legacy(),
-			startPath: this.#computeLastPath({
-				importedLedgerPaths,
-				slip44: this.#ledgerService.slip44Legacy(),
-			}),
-		});
-
-		// Scan legacy ARK addresses (slip44=111) by address index.
+		// Scan legacy ARK addresses by address index.
 		const arkAddresses = await this.scanAllWithBalance({
 			byAccountIndex: false,
 			slip44: this.#ledgerService.slip44(),
@@ -211,14 +201,12 @@ export class LedgerScanner {
 			}),
 		});
 
-		const legacyWithBalance = [...legacyAddresses, ...arkAddresses];
-
 		// Scan ETH addresses (slip44=60) by account index
 		// Ensure at least 1 new empty address is generated.
-		const remainingSize = Math.max(1, pageSize - legacyWithBalance.length);
+		const remainingSize = Math.max(1, pageSize - arkAddresses.length);
 		const ledgerAddresses = await this.scanNewAddresses({
 			byAccountIndex: true,
-			pageSize: legacyWithBalance.length === 0 ? pageSize : remainingSize,
+			pageSize: arkAddresses.length === 0 ? pageSize : remainingSize,
 			slip44: this.#ledgerService.slip44Eth(),
 			startPath: this.#computeLastPath({
 				byAccountIndex: true,
@@ -227,7 +215,7 @@ export class LedgerScanner {
 			}),
 		});
 
-		return [...legacyWithBalance, ...ledgerAddresses];
+		return [...arkAddresses, ...ledgerAddresses];
 	}
 }
 

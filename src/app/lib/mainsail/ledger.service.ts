@@ -227,10 +227,6 @@ export class LedgerService {
 		return this.#config.get(ConfigKey.Slip44);
 	}
 
-	public slip44Legacy(): number {
-		return this.#config.get(ConfigKey.Slip44Legacy);
-	}
-
 	public slip44Eth(): number {
 		return this.#config.get(ConfigKey.Slip44Eth);
 	}

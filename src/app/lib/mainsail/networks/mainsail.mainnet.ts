@@ -8,7 +8,6 @@ const network: Networks.NetworkManifest = {
 		epoch: "2017-03-21T13:00:00.000Z",
 		slip44: 111,
 		slip44Eth: 60,
-		slip44Legacy: 1,
 	},
 	currency: {
 		decimals: 18,
