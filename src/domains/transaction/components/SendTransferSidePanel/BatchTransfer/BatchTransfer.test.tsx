@@ -10,6 +10,7 @@ import {
 	screen,
 	waitFor,
 	within,
+	act,
 	getDefaultWalletMnemonic,
 } from "@/utils/testing-library";
 import * as ReactRouter from "react-router";
@@ -147,6 +148,10 @@ describe("#BatchTransfer", () => {
 		vi.restoreAllMocks();
 	});
 
+	afterEach(() => {
+		vi.useRealTimers();
+	});
+
 	it("should send batch transfer transaction", { timeout: 8000 }, async () => {
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
@@ -240,7 +245,7 @@ describe("#BatchTransfer", () => {
 		transactionMock.mockRestore();
 	});
 
-	it("should send batch transfer transaction without contract approval", { timeout: 8000 }, async () => {
+	it("should send batch transfer transaction without contract approval", async () => {
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
@@ -292,6 +297,71 @@ describe("#BatchTransfer", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+	});
+
+	it("should send batch contract approval transaction with keyboard", async () => {
+		vi.useFakeTimers({ shouldAdvanceTime: true });
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
+			route: `/profiles/${getDefaultProfileId()}/dashboard`,
+		});
+
+		await fillFormStep();
+
+		screen.getByTestId("SendTransferSidePanel").focus();
+
+		// Navigate to review step
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.keyboard("{enter}");
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Navigate to approve contract step
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+		screen.getByTestId("SendTransferSidePanel").blur();
+		await userEvent.keyboard("{enter}");
+		await expect(screen.findByTestId(approveStepID)).resolves.toBeVisible();
+
+		await fillMnemonic();
+
+		// Mock requests and methods
+		const approveTxData = approveTransactionData(wallet);
+
+		const signedTx = new ExtendedSignedTransactionData(
+			new SignedTransactionData().configure(approveTxData.signed),
+			wallet,
+		);
+
+		const transactionMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTx);
+
+		const hash = signedTx.hash();
+
+		server.use(
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/transactions/${hash}`, approveTxData.confirmed),
+		);
+
+		const signMock = vi.spyOn(wallet.transaction(), "signApproveContract").mockReturnValue(Promise.resolve(hash));
+
+		const broadcastMock = vi
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [hash], errors: {}, rejected: [] });
+
+		// Send approve contract transaction
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+		await userEvent.keyboard("{enter}");
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+
+		await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toBeVisible());
+
+		act(() => {
+			vi.advanceTimersByTime(2000);
+		});
+
+		await waitFor(() => expect(screen.getByTestId(confirmTransferStepID)).toBeVisible());
 	});
 
 	it("should display error when sending contract approval transaction fails", async () => {
