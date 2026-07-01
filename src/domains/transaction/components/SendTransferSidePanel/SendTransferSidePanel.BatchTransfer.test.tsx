@@ -241,6 +241,7 @@ describe("#BatchTransfer", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
 
+		// Mock `allowance` call
 		server.use(
 			http.post(
 				"https://dwallets-evm.mainsailhq.com/evm/api",
