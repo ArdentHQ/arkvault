@@ -23,6 +23,7 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { http, HttpResponse } from "msw";
+import { numberToHex, parseUnits } from "viem";
 
 const formStepID = "SendTransfer__form-step";
 const reviewStepID = "BatchTransfer__review-step";
@@ -88,8 +89,7 @@ const fillFormStep = async (): Promise<void> => {
 
 	await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
 };
-
-const mockAllowanceCall = (once = true) => {
+const mockAllowanceCall = (once = true, amount = '250') => {
 	server.use(
 		http.post(
 			"https://dwallets-evm.mainsailhq.com/evm/api",
@@ -97,7 +97,7 @@ const mockAllowanceCall = (once = true) => {
 				HttpResponse.json({
 					id: 1,
 					jsonrpc: "2.0",
-					result: "0x00000000000000000000000000000000000000000000000caf67003701680000",
+					result: numberToHex(parseUnits(amount, 18), { size: 32 }),
 				}),
 			{ once },
 		),
@@ -308,20 +308,37 @@ describe("#BatchTransfer", () => {
 		await userEvent.click(continueButton());
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		// Go back to form step
+		// Navigate to confirm step
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+		await userEvent.click(batchTransferContinueButton());
+		await expect(screen.findByTestId(confirmTransferStepID)).resolves.toBeVisible();
+
+		// Should go back to review step when active tab is Confirm Transfer step
+		await userEvent.click(backButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Should go back to form step when active tab is Review step
 		await userEvent.click(backButton());
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		// Add a new recipient
+		await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
+		await addRecipient(profile.wallets().first().address(), "3");
+		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(3));
+
+		mockAllowanceCall(false, "0");
 
 		// Navigate to review step
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		await userEvent.click(continueButton());
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		// Navigate to confirm step
+		// Navigate to approve step
 		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
 		await userEvent.click(batchTransferContinueButton());
-		await expect(screen.findByTestId(confirmTransferStepID)).resolves.toBeVisible();
+		await expect(screen.findByTestId(approveStepID)).resolves.toBeVisible();
 
+		// Should go back to previous step - activeTab - 1
 		await userEvent.click(backButton());
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 	});
