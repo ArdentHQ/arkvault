@@ -5,6 +5,7 @@ import { Networks } from "@/app/lib/mainsail";
 const network: Networks.NetworkManifest = {
 	coin: "Mainsail",
 	constants: {
+		dustAmount: "0.001",
 		epoch: "2017-03-21T13:00:00.000Z",
 		slip44: 111,
 		slip44Eth: 60,

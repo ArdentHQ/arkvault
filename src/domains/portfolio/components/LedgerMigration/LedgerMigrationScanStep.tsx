@@ -77,7 +77,7 @@ export const MigrationLedgerScanStep = ({
 				network={network}
 				onSelect={async (ledgerAddresses) => {
 					const withBalance = ledgerAddresses.filter((address) =>
-						BigNumber.make(address.balance ?? 0).isGreaterThan(0),
+						BigNumber.make(address.balance ?? 0).isGreaterThanOrEqualTo(network.constants().dustAmount),
 					);
 					setSelectedLedgerAddresses(withBalance);
 					handleSelectedAddresses(withBalance, shouldMigrateToOne);

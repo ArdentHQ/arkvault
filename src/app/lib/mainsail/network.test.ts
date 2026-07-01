@@ -223,6 +223,10 @@ describe("Network", () => {
 		expect(networkInstance.tokens()).toEqual([]);
 	});
 
+	it("should return the network constants", () => {
+		expect(networkInstance.constants()).toBeDefined();
+	});
+
 	it("should return an empty array if no tokens are defined", () => {
 		const noTokensNetwork = new Network(manifest, { ...networkManifest, tokens: undefined }, profile);
 		expect(noTokensNetwork.tokens()).toEqual([]);
