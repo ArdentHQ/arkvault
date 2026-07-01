@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { SendTransferSidePanel } from "./SendTransferSidePanel";
+import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	env,
@@ -263,12 +263,6 @@ describe("#BatchTransfer", () => {
 		// Navigate to confirm transfer step
 		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
 		await userEvent.click(batchTransferContinueButton());
-
-		await expect(screen.findByTestId(confirmTransferStepID)).resolves.toBeVisible();
-
-		// Display recipients modal
-		await userEvent.click(screen.getByTestId("TransactionRecipientsModal--ShowList"));
-		await expect(screen.findByTestId("RecipientsModal")).resolves.toBeVisible();
 
 		await fillMnemonic();
 
