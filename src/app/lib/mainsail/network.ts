@@ -336,6 +336,16 @@ export class Network {
 	}
 
 	/**
+	 * Returns the network constants.
+	 *
+	 * @return {NetworkManifestConstants}
+	 * @memberof Network
+	 */
+	public constants(): Networks.NetworkManifestConstants {
+		return get(this.#network, "constants", {});
+	}
+
+	/**
 	 * Return the object representation of the network.
 	 *
 	 * @memberof Network

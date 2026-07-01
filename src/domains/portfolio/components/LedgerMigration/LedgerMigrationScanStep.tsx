@@ -12,8 +12,6 @@ import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { LedgerData } from "@/app/contexts";
 import { BigNumber } from "@/app/lib/helpers";
 
-const dustAmount = 0.001;
-
 const MigrateToOneCheckbox = ({
 	onChange,
 	isDisabled,
@@ -79,7 +77,7 @@ export const MigrationLedgerScanStep = ({
 				network={network}
 				onSelect={async (ledgerAddresses) => {
 					const withBalance = ledgerAddresses.filter((address) =>
-						BigNumber.make(address.balance ?? 0).isGreaterThanOrEqualTo(dustAmount),
+						BigNumber.make(address.balance ?? 0).isGreaterThanOrEqualTo(network.constants().dustAmount),
 					);
 					setSelectedLedgerAddresses(withBalance);
 					handleSelectedAddresses(withBalance, shouldMigrateToOne);

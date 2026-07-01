@@ -33,6 +33,7 @@ describe("Mainsail Mainnet Network Configuration", () => {
 
 	it("should have correct constants", () => {
 		expect(network.constants).toEqual({
+			dustAmount: "0.001",
 			epoch: "2017-03-21T13:00:00.000Z",
 			slip44: 111,
 			slip44Eth: 60,
