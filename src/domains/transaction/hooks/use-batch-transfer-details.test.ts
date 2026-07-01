@@ -50,7 +50,10 @@ describe("useBatchTransferDetails", () => {
 		const { result } = renderHook(() =>
 			useBatchTransferDetails({
 				profile,
-				recipients: [{ address: "0x000001", amount: "1" }, { address: "0x000002", amount: "2" }],
+				recipients: [
+					{ address: "0x000001", amount: "1" },
+					{ address: "0x000002", amount: "2" },
+				],
 				tokenContractAddress,
 				wallet,
 			}),
