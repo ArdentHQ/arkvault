@@ -87,7 +87,7 @@ const fillFormStep = async (): Promise<void> => {
 	await addRecipient(profile.wallets().last().address(), "1");
 
 	await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
-}
+};
 
 const mockAllowanceCall = (once = true) => {
 	server.use(
@@ -102,7 +102,7 @@ const mockAllowanceCall = (once = true) => {
 			{ once },
 		),
 	);
-}
+};
 
 describe("#BatchTransfer", () => {
 	beforeAll(async () => {
@@ -301,7 +301,7 @@ describe("#BatchTransfer", () => {
 
 		await fillFormStep();
 
-		mockAllowanceCall(false)
+		mockAllowanceCall(false);
 
 		// Navigate to review step
 		await waitFor(() => expect(continueButton()).toBeEnabled());
