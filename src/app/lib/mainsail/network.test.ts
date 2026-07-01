@@ -223,6 +223,15 @@ describe("Network", () => {
 		expect(networkInstance.tokens()).toEqual([]);
 	});
 
+	it("should return the network constants", () => {
+		expect(networkInstance.constants()).toEqual({
+			dustAmount: "0.001",
+			epoch: "2023-12-21T00:00:00.000Z",
+			slip44: 1,
+			slip44Eth: 60,
+		});
+	});
+
 	it("should return an empty array if no tokens are defined", () => {
 		const noTokensNetwork = new Network(manifest, { ...networkManifest, tokens: undefined }, profile);
 		expect(noTokensNetwork.tokens()).toEqual([]);
