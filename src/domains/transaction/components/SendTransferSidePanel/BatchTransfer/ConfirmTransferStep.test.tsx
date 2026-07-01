@@ -1,7 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-import * as ReactRouter from "react-router";
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
