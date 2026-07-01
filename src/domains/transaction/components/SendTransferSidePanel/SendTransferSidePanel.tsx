@@ -155,6 +155,7 @@ export const SendTransferSidePanel = ({
 
 	const resetState = useCallback(() => {
 		setActiveTab(firstTabIndex);
+		setBatchTransferActiveTab(BatchTransferTabStep.ReviewStep);
 
 		resetForm(() => {
 			setErrorMessage(undefined);
