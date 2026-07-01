@@ -89,7 +89,7 @@ const fillFormStep = async (): Promise<void> => {
 
 	await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
 };
-const mockAllowanceCall = (once = true, amount = '250') => {
+const mockAllowanceCall = (once = true, amount = "250") => {
 	server.use(
 		http.post(
 			"https://dwallets-evm.mainsailhq.com/evm/api",
