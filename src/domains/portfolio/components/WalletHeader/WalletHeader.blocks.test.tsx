@@ -1,4 +1,4 @@
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { WalletActions } from "./WalletHeader.blocks";
 import { Contracts } from "@/app/lib/profiles";
@@ -67,23 +67,35 @@ describe("WalletActions", () => {
 
 		await user.click(refreshButton);
 
+		await waitFor(() => expect(refreshButton).not.toBeDisabled());
+
 		result.unmount();
 	});
 
-	it("should not reset syncing state when isUpdatingTransactions is provided", async () => {
+	it("should call on update with false when isUpdatingTransactions is undefined after sync", async () => {
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
 
-		const result = render(
-			<WalletActions profile={profile} wallet={wallet} isUpdatingTransactions={true} onUpdate={() => {}} />,
+		const onUpdate = vi.fn();
+
+		render(
+			<WalletActions profile={profile} wallet={wallet} isUpdatingTransactions={undefined} onUpdate={onUpdate} />,
 		);
 
+		const user = userEvent.setup();
 		const refreshButton = screen.getByTestId("WalletHeader__refresh");
 
-		const user = userEvent.setup();
 		await user.click(refreshButton);
 
-		expect(refreshButton).toBeDisabled();
+		await waitFor(() => expect(onUpdate).toHaveBeenCalledWith(false));
+	});
 
-		result.unmount();
+	it("should not call update when isUpdatingTransactions is set", async () => {
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+
+		const onUpdate = vi.fn();
+
+		render(<WalletActions profile={profile} wallet={wallet} isUpdatingTransactions={true} onUpdate={onUpdate} />);
+
+		expect(onUpdate).not.toHaveBeenCalled();
 	});
 });

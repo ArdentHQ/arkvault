@@ -196,6 +196,26 @@ describe("SelectAccountStep", () => {
 		unmount();
 	});
 
+	it("should handle new account row click", async () => {
+		const user = userEvent.setup();
+
+		const { unmount } = render(
+			<FormWrapper>
+				<SelectAccountStep profile={profile} />
+			</FormWrapper>,
+			{ route },
+		);
+
+		// Click the NewAccountRow div directly
+		const newAccountRow = screen.getByTestId("NewAccountRow");
+		await user.click(newAccountRow);
+
+		const newWalletRow = screen.getByTestId("NewAccountRow--radio");
+		expect(newWalletRow).toBeChecked();
+
+		unmount();
+	});
+
 	it("should display mnemonic import method", () => {
 		const { unmount } = render(
 			<FormWrapper>

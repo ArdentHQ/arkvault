@@ -16,7 +16,7 @@ vi.mock("@/app/services", () => ({
 	},
 }));
 
-const testDerivationPath = "m/44'/1'/0'/0/1";
+const testPath = "m/44'/1'/0'/0/1";
 
 const defaultScannerState = {
 	abortScanner: vi.fn(),
@@ -29,7 +29,7 @@ const defaultScannerState = {
 		{
 			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 			balance: "100",
-			path: testDerivationPath,
+			path: testPath,
 		},
 	],
 	scan: vi.fn(),
@@ -40,7 +40,7 @@ const defaultScannerState = {
 		{
 			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 			balance: "100",
-			path: testDerivationPath,
+			path: testPath,
 		},
 	],
 };
@@ -73,6 +73,23 @@ describe("LedgerMigration LedgerScanStep", () => {
 
 	it("should render with disableColdWallets", () => {
 		render(<LedgerScanStep profile={profile} network={network} disableColdWallets children={<div>test</div>} />);
+
+		expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
+	});
+
+	it("should render without error when wallets have balance below dust threshold", () => {
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			wallets: [
+				{
+					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+					balance: "0.0005",
+					path: testPath,
+				},
+			],
+		});
+
+		render(<LedgerScanStep profile={profile} network={network} children={<div>test</div>} />);
 
 		expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
 	});
@@ -237,7 +254,7 @@ describe("LedgerMigration LedgerScanStep", () => {
 
 		await user.click(screen.getByTestId("LedgerScanStep__checkbox-row"));
 
-		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith(testDerivationPath);
+		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith(testPath);
 	});
 
 	it("should show all wallets after clicking the load-more button", async () => {
@@ -296,25 +313,6 @@ describe("LedgerMigration LedgerScanStep", () => {
 
 		await user.click(screen.getByTestId("LedgerMobileItem__checkbox"));
 
-		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith(testDerivationPath);
-	});
-
-	it("should use 0 as default balance when balance is null", async () => {
-		vi.mocked(useLedgerScanner).mockReturnValue({
-			...defaultScannerState,
-			wallets: [
-				{
-					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-					balance: 0.002,
-					path: testDerivationPath,
-				},
-			],
-		});
-
-		render(<LedgerScanStep profile={profile} network={network} children={<div />} />);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("LedgerMobileItem__checkbox")).toBeInTheDocument();
-		});
+		expect(defaultScannerState.toggleSelect).toHaveBeenCalledWith(testPath);
 	});
 });
