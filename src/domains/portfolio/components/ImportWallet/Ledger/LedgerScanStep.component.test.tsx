@@ -85,6 +85,14 @@ describe("ImportWallet LedgerScanStep component", () => {
 		expect(result).toMatchSnapshot();
 	});
 
+	it("should show loaded wallets message for multiple wallets", () => {
+		const result = showLoadedLedgerWalletsMessage([
+			{ address: "0x123", balance: "100" } as any,
+			{ address: "0x456", balance: "200" } as any,
+		]);
+		expect(result).toMatchSnapshot();
+	});
+
 	it("should render LedgerCancelling when cancelling is true", () => {
 		render(<Component cancelling />);
 

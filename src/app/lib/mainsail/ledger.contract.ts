@@ -20,10 +20,12 @@ export interface LedgerService {
 
 	signMessage(path: string, payload: string): Promise<string>;
 
-	scan(options?: {
-		useLegacy: boolean;
+	scan(options?: { startPath?: string; pageSize?: number; slip44?: number }): Promise<Record<string, WalletData>>;
+
+	scanByAccountIndex(options?: {
 		startPath?: string;
-		onProgress?: (wallet: WalletData) => void;
+		pageSize?: number;
+		slip44?: number;
 	}): Promise<Record<string, WalletData>>;
 
 	isNanoS(): Promise<boolean>;

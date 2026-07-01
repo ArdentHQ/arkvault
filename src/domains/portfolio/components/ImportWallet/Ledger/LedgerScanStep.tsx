@@ -302,7 +302,14 @@ export const LedgerScanStep = ({
 	setRetryFn?: (function_?: () => void) => void;
 }) => {
 	const { register, unregister, setValue } = useFormContext();
-	const ledgerScanner = useLedgerScanner();
+
+	const importedLedgerPaths = profile
+		.wallets()
+		.values()
+		.filter((wallet) => wallet.isLedger())
+		.map((wallet) => wallet.data().get<string>(ProfilesContracts.WalletData.DerivationPath))
+		.filter((path) => typeof path === "string");
+	const ledgerScanner = useLedgerScanner({ importedLedgerPaths });
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets } = ledgerScanner;
 

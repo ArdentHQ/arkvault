@@ -204,6 +204,16 @@ describe("TransferNotification", () => {
 			expect(screen.getByText(/multipayment/)).toBeInTheDocument();
 		});
 	});
+
+	it("should render token transfer notification for token transfers", async () => {
+		const tokenTransferTx = createMockTransaction({
+			isTokenTransfer: (): boolean => true,
+		});
+
+		render(<NotificationLeftSide transaction={tokenTransferTx} />);
+
+		expect(screen.getByText(/Received/)).toBeInTheDocument();
+	});
 });
 
 describe("NotificationLeftSide empty return", () => {
