@@ -265,6 +265,7 @@ describe("#BatchTransfer", () => {
 
 		await expect(screen.findByTestId(confirmTransferStepID)).resolves.toBeVisible();
 
+		// Display recipients modal
 		await userEvent.click(screen.getByTestId("TransactionRecipientsModal--ShowList"));
 		await expect(screen.findByTestId("RecipientsModal")).resolves.toBeVisible();
 
