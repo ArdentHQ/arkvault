@@ -33,10 +33,10 @@ describe("Mainsail Devnet Network Configuration", () => {
 
 	it("should have correct constants", () => {
 		expect(network.constants).toEqual({
+			dustAmount: "0.001",
 			epoch: "2023-12-21T00:00:00.000Z",
 			slip44: 1,
 			slip44Eth: 60,
-			slip44Legacy: 1,
 		});
 	});
 

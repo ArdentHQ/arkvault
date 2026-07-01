@@ -24,10 +24,8 @@ export const useLedgerMigrationStatus = (profile: Contracts.IProfile) => {
 				.some((wallet) => {
 					if (wallet.isLedger()) {
 						const slip44 = profile.activeNetwork().config().get(ConfigKey.Slip44);
-						const slip44Legacy = profile.activeNetwork().config().get(ConfigKey.Slip44Legacy);
-
 						const path = wallet.data().get<string>(WalletData.DerivationPath) ?? "";
-						return [slip44, slip44Legacy].includes(BIP44.parse(path).coinType);
+						return [slip44].includes(BIP44.parse(path).coinType);
 					}
 
 					return false;

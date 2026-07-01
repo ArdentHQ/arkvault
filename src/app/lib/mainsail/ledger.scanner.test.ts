@@ -45,7 +45,7 @@ describe("LedgerScannerTest", () => {
 	it.each([60, 111])("should scan for slip44 %i", async (slip44) => {
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanWithPager({
-			isLegacy: false,
+			byAccountIndex: false,
 			pageSize: 2,
 			slip44,
 		});
@@ -54,12 +54,12 @@ describe("LedgerScannerTest", () => {
 		expect(result[1].path).toBe(`m/44'/${slip44}'/0'/0/1`);
 	});
 
-	it("should scan legacy by incrementing the account index instead of address index", async () => {
+	it("should scan by incrementing the account index", async () => {
 		const slip44 = 1;
 
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanWithPager({
-			isLegacy: true,
+			byAccountIndex: true,
 			pageSize: 2,
 			slip44,
 		});
@@ -71,24 +71,27 @@ describe("LedgerScannerTest", () => {
 	it("should scan new addresses only", async () => {
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanNewAddresses({
-			isLegacy: false,
+			byAccountIndex: false,
 			slip44: 111,
 		});
 
 		expect(result).toHaveLength(5);
 	});
 
-	it.each([{ isLegacy: false }, { isLegacy: true }])("should scan all that have balance %s", async ({ isLegacy }) => {
-		const scanner = profile.ledger().scanner({ scannedWallets: [] });
-		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValueOnce(profile.wallets().first());
+	it.each([{ byAccountIndex: false }, { byAccountIndex: true }])(
+		"should scan all that have balance (byAccountIndex: %s)",
+		async ({ byAccountIndex }) => {
+			const scanner = profile.ledger().scanner({ scannedWallets: [] });
+			vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValueOnce(profile.wallets().first());
 
-		const result = await scanner.scanAllWithBalance({
-			isLegacy,
-			slip44: 111,
-		});
+			const result = await scanner.scanAllWithBalance({
+				byAccountIndex,
+				slip44: 111,
+			});
 
-		expect(result).toHaveLength(1);
-	});
+			expect(result).toHaveLength(1);
+		},
+	);
 
 	it("should handle regular scan", async () => {
 		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValueOnce(profile.wallets().first());
@@ -112,11 +115,11 @@ describe("LedgerScannerTest", () => {
 
 	it("should skip when no more wallets found", async () => {
 		vi.spyOn(profile.ledger(), "scan").mockResolvedValueOnce({});
-		vi.spyOn(profile.ledger(), "scanLegacy").mockResolvedValueOnce({});
+		vi.spyOn(profile.ledger(), "scanByAccountIndex").mockResolvedValueOnce({});
 
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanAllWithBalance({
-			isLegacy: false,
+			byAccountIndex: false,
 			slip44: 111,
 		});
 
@@ -133,7 +136,7 @@ describe("LedgerScannerTest", () => {
 
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanAllWithBalance({
-			isLegacy: false,
+			byAccountIndex: false,
 			slip44: 111,
 		});
 
@@ -169,7 +172,7 @@ describe("LedgerScannerTest", () => {
 
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanAllWithBalance({
-			isLegacy: false,
+			byAccountIndex: false,
 			slip44: 111,
 		});
 
@@ -178,7 +181,7 @@ describe("LedgerScannerTest", () => {
 		scanSpy.mockRestore();
 	});
 
-	it("should compute last path with legacy sorting when profile has ledger wallets", async () => {
+	it("should compute last path with account index sorting when profile has ledger wallets", async () => {
 		const syncedWallet = profile.wallets().first();
 		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
 		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(syncedWallet);
@@ -189,13 +192,41 @@ describe("LedgerScannerTest", () => {
 		expect(result.length).toBeGreaterThan(0);
 	});
 
-	it("should compute last path with legacy slip44", async () => {
+	it("should compute last path with account index slip44", async () => {
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanAllWithBalance({
-			isLegacy: true,
+			byAccountIndex: true,
 			slip44: 1,
 		});
 
 		expect(result).toHaveLength(0);
+	});
+
+	it("should compute last path with address index", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(syncedWallet);
+
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const result = await scanner.scanWithBalancePriority({
+			byAccountIndex: false,
+			pageSize: 3,
+		});
+
+		expect(result.length).toBeGreaterThan(0);
+	});
+
+	it("should handle existing imported wallets in scan", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(syncedWallet);
+
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const result = await scanner.scanWithBalancePriority({
+			importedLedgerPaths: ["m/44'/60'/0'/0/0", "m/44'/60'/0'/0/1"],
+			pageSize: 3,
+		});
+
+		expect(result).toBeDefined();
 	});
 });
