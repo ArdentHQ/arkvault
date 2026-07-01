@@ -242,11 +242,16 @@ describe("#BatchTransfer", () => {
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
 
 		server.use(
-			http.post("https://dwallets-evm.mainsailhq.com/evm/api", async () => HttpResponse.json({
-					id: 1,
-					jsonrpc: "2.0",
-					result: "0x00000000000000000000000000000000000000000000000caf67003701680000",
-				}), {once: true}),
+			http.post(
+				"https://dwallets-evm.mainsailhq.com/evm/api",
+				async () =>
+					HttpResponse.json({
+						id: 1,
+						jsonrpc: "2.0",
+						result: "0x00000000000000000000000000000000000000000000000caf67003701680000",
+					}),
+				{ once: true },
+			),
 		);
 
 		// Navigate to review step
