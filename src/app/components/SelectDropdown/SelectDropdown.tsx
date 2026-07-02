@@ -164,6 +164,11 @@ const SelectDropdown = ({
 			return;
 		}
 
+		if (selectedItem && selectedItem.label === inputValue) {
+			closeMenu();
+			return;
+		}
+
 		const firstMatch = mainOptions.find((option) => isMatch(inputValue, option));
 
 		if (inputValue && firstMatch) {
