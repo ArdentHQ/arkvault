@@ -122,7 +122,7 @@ export const FormStep = ({
 							<div>{t("COMMON.ASSET")}</div>
 						</FormLabel>
 						<SelectToken
-							disabled={!isSingle && recipients.length >= 1 && tokenContractAddress}
+							disabled={!isSingle && recipients.length > 0 && tokenContractAddress}
 							className={cn({ "rounded-b-none focus-within:rounded hover:rounded": selectedToken })}
 							value={tokenContractAddress}
 							tokens={assets}
