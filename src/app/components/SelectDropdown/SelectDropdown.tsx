@@ -228,10 +228,7 @@ const SelectDropdown = ({
 						floatingWrapperClass="min-w-full"
 						content={
 							<div>
-								<ul
-									className="select-options-list"
-									{...getMenuProps({}, { suppressRefError: true })}
-								>
+								<ul className="select-options-list" {...getMenuProps({}, { suppressRefError: true })}>
 									<RenderOptions
 										data={data}
 										getItemProps={getItemProps}

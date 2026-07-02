@@ -28,9 +28,7 @@ const AddRecipientWrapper = ({
 }: Omit<AddRecipientProperties, "isSingle" | "onIsSingleChange">) => {
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 
-	return (
-		<AddRecipient {...properties} recipients={recipients} isSingle={isSingle} onIsSingleChange={setIsSingle} />
-	);
+	return <AddRecipient {...properties} recipients={recipients} isSingle={isSingle} onIsSingleChange={setIsSingle} />;
 };
 
 const renderWithFormProvider = (children: any, defaultValues?: any) => {
@@ -213,7 +211,9 @@ describe("AddRecipient", () => {
 	});
 
 	it("should select recipient", async () => {
-		renderWithFormProvider(<AddRecipientWrapper profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
+		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -599,7 +599,9 @@ describe("AddRecipient", () => {
 	// });
 
 	it("should show error for low balance", async () => {
-		renderWithFormProvider(<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />);
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
+		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -620,7 +622,9 @@ describe("AddRecipient", () => {
 	it("should show error for zero balance", async () => {
 		const mockWalletBalance = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(0));
 
-		renderWithFormProvider(<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />);
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
+		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -641,7 +645,9 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for invalid address", async () => {
-		renderWithFormProvider(<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />);
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
+		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
