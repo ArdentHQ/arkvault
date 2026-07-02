@@ -223,7 +223,7 @@ const SelectDropdown = ({
 						floatingWrapperClass="min-w-full"
 						content={
 							<div>
-								<ul className="select-options-list">
+								<ul className="select-options-list" {...getMenuProps()}>
 									<RenderOptions
 										data={data}
 										getItemProps={getItemProps}
@@ -256,7 +256,6 @@ const SelectDropdown = ({
 								})}
 							/>
 						</div>
-						<div {...getMenuProps()} />
 					</Tooltip>
 				</div>
 			</div>
