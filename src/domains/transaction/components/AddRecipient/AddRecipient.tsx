@@ -94,22 +94,12 @@ export const AddRecipient = ({
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
 
 	const remainingBalance = useMemo(() => {
-		if (wallet) {
-			const token = wallet
-				.tokens()
-				.values()
-				.find((token) => token.token().address() === selectedAsset);
+		const token = wallet
+			?.tokens()
+			.values()
+			.find((token) => token.token().address() === selectedAsset);
 
-			if (token) {
-				return token.balance();
-			}
-
-			if (!selectedAsset) {
-				return BigNumber.ZERO;
-			}
-		}
-
-		let senderBalance = BigNumber.make(wallet?.balance() || 0);
+		let senderBalance = token ? token.balance() : BigNumber.make(wallet?.balance() || 0);
 
 		if (isSingle) {
 			return senderBalance;
@@ -365,12 +355,26 @@ export const AddRecipient = ({
 									</span>
 								</div>
 								<div className="flex flex-row items-center gap-2">
-									{isSenderFilled && (
+									{isSenderFilled && isSingle && (
 										<div
 											data-testid="AddRecipient__available"
 											className="hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:flex"
 										>
 											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
+											<Amount
+												value={remainingBalance.decimalPlaces(DISPLAY_DECIMALS)}
+												ticker={ticker}
+												showTicker
+												showCompactFormat
+											/>
+										</div>
+									)}
+									{isSenderFilled && !isSingle && (
+										<div
+											data-testid="AddRecipient__remaining"
+											className="hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:flex"
+										>
+											<span className="hidden pr-1 sm:inline">{t("COMMON.REMAINING")}:</span>
 											<Amount
 												value={remainingBalance.decimalPlaces(DISPLAY_DECIMALS)}
 												ticker={ticker}
