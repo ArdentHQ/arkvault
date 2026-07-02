@@ -12,12 +12,14 @@ export const SelectToken = ({
 	onChange,
 	value,
 	wallet,
+	disabled,
 }: {
 	tokens: { label: string; value: string; data: any }[];
 	className?: string;
 	onChange?: (selected: { label?: string; value?: string | number }) => void;
 	value?: string;
 	wallet?: Contracts.IReadWriteWallet;
+	disabled?: boolean;
 }) => {
 	const { t } = useTranslation();
 	const selectedToken = value ? tokens.find((token) => token.value === value) : undefined;
@@ -28,6 +30,7 @@ export const SelectToken = ({
 			defaultValue={selectedToken?.value}
 			showCaret={true}
 			options={tokens}
+			disabled={disabled}
 			placeholder={t("TOKENS.SELECT_TOKEN")}
 			allowFreeInput={false}
 			wrapperClassName="w-full"
