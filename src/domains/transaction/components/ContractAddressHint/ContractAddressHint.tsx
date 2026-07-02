@@ -8,7 +8,7 @@ export const ContractAddressHint = ({ token, link }: { token: WalletToken; link:
 	const { t } = useTranslation();
 
 	return (
-		<div className="-mt-2 flex h-[33px] items-center justify-between rounded bg-theme-secondary-200 px-3 py-2 text-xs leading-[15px] dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:px-4 sm:text-sm sm:leading-[17px]">
+		<div className="flex h-[33px] items-center justify-between rounded-b border border-t-0 border-theme-secondary-400 bg-theme-secondary-200 px-3 py-2 text-xs leading-[15px] dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:px-4 sm:text-sm sm:leading-[17px]">
 			<div className="font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 				{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.CONTRACT_ADDRESS_ENDING")}
 			</div>
