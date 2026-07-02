@@ -21,7 +21,7 @@ export interface SelectDropdownItemProperties {
 	index: number;
 	getItemProps: (options: UseComboboxGetItemPropsOptions<OptionProperties | null>) => any;
 	highlightedIndex: number;
-	inputValue: string;
+	selectedValue?: string | number;
 	onMouseDown: (item: OptionProperties) => void;
 	renderLabel?: (option: OptionProperties) => JSX.Element;
 }
@@ -30,7 +30,7 @@ export interface SelectDropdownRenderOptionsProperties {
 	data: OptionProperties[] | OptionGroupProperties[];
 	getItemProps: (options: UseComboboxGetItemPropsOptions<OptionProperties | null>) => any;
 	highlightedIndex: number;
-	inputValue: string;
+	selectedValue?: string | number;
 	onMouseDown: (item: OptionProperties) => void;
 	renderLabel?: (option: OptionProperties) => JSX.Element;
 }

@@ -114,11 +114,6 @@ exports[`SelectToken > should render 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="SelectToken__dropdown-label"
-              id="SelectToken__dropdown-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -241,11 +236,6 @@ exports[`SelectToken > should render multiple  1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="SelectToken__dropdown-label"
-              id="SelectToken__dropdown-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -393,11 +383,6 @@ exports[`SelectToken > should render with default value  1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="SelectToken__dropdown-label"
-              id="SelectToken__dropdown-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>

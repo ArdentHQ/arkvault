@@ -228,7 +228,7 @@ const SelectDropdown = ({
 										data={data}
 										getItemProps={getItemProps}
 										highlightedIndex={highlightedIndex}
-										inputValue={inputValue}
+										selectedValue={selectedItem?.value}
 										onMouseDown={onMouseDown}
 										renderLabel={renderLabel}
 									/>
