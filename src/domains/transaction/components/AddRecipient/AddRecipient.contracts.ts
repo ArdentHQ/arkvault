@@ -11,7 +11,6 @@ export interface AddRecipientProperties {
 	wallet?: Contracts.IReadWriteWallet;
 	withDeeplink?: boolean;
 	isTokenTransfer?: boolean;
-	onTokenChange?: (token?: WalletToken) => void;
 	tokens?: WalletToken[];
 	isSingle: boolean;
 	onIsSingleChange: (isSingle: boolean) => void;

@@ -408,7 +408,6 @@ export const AddRecipient = ({
 						<div className="relative flex">
 							<div className="flex-1">
 								<InputCurrency
-									className="sm:rounded-l-none"
 									network={network}
 									disabled={!isSenderFilled}
 									data-testid="AddRecipient__amount"
