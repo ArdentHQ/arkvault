@@ -1,6 +1,6 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -50,6 +50,8 @@ export const FormStep = ({
 	}, [unregister]);
 
 	const { recipients } = getValues();
+
+	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 
 	const handleSelectSender = async (address: string) => {
 		const sender = profile.wallets().findByAddressWithNetwork(address, network.id());
@@ -120,6 +122,7 @@ export const FormStep = ({
 							<div>{t("COMMON.ASSET")}</div>
 						</FormLabel>
 						<SelectToken
+							disabled={!isSingle && recipients.length >= 1 && tokenContractAddress}
 							className={cn({ "rounded-b-none focus-within:rounded hover:rounded": selectedToken })}
 							value={tokenContractAddress}
 							tokens={assets}
@@ -156,6 +159,8 @@ export const FormStep = ({
 						profile={profile}
 						recipients={getRecipientsFromDeeplink(recipients, deeplinkProps)}
 						wallet={senderWallet}
+						isSingle={isSingle}
+						onIsSingleChange={setIsSingle}
 					/>
 				</div>
 			</div>

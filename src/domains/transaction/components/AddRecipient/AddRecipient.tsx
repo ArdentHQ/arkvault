@@ -57,10 +57,11 @@ export const AddRecipient = ({
 	wallet,
 	tokens = [],
 	isTokenTransfer,
+	isSingle,
+	onIsSingleChange,
 }: AddRecipientProperties) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
-	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 	const isMountedReference = useRef(false);
 
 	const {
@@ -310,9 +311,7 @@ export const AddRecipient = ({
 						maxRecipients={maxRecipients}
 						isSingle={isSingle}
 						disableMultiple={!selectedAsset}
-						onChange={(isSingle) => {
-							setIsSingle(isSingle);
-						}}
+						onChange={onIsSingleChange}
 					/>
 				)}
 			</div>

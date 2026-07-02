@@ -13,6 +13,8 @@ export interface AddRecipientProperties {
 	isTokenTransfer?: boolean;
 	onTokenChange?: (token?: WalletToken) => void;
 	tokens?: WalletToken[];
+	isSingle: boolean;
+	onIsSingleChange: (isSingle: boolean) => void;
 }
 
 export interface ToggleButtonProperties {
