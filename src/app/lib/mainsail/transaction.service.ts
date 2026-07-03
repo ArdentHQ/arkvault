@@ -13,6 +13,8 @@ import {
 	ValidatorResignationBuilder,
 	VoteBuilder,
 	TokenTransferBuilder,
+	TokenApproveBuilder,
+	ContractAddresses,
 } from "@arkecosystem/typescript-crypto";
 import { BigNumber, get } from "@/app/lib/helpers";
 
@@ -292,6 +294,10 @@ export class TransactionService {
 	 * @inheritDoc
 	 */
 	public async multiPayment(input: Services.MultiPaymentInput): Promise<SignedTransactionData> {
+		if (input.token) {
+			return await this.batchTransfer(input as Services.BatchTransferInput);
+		}
+
 		this.#assertGasFee(input);
 
 		if (!input.data.payments) {
@@ -394,6 +400,46 @@ export class TransactionService {
 			.payload(input.data.bytecode)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString())
+			.sign(input.signatory.signingKey());
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	public async approveContract(input: Services.ApproveContractInput): Promise<SignedTransactionData> {
+		this.#assertGasFee(input);
+
+		if (!input.data.spender) {
+			throw new Error(
+				`[TransactionService#approveContract] Expected spender to be defined but received ${typeof input.data
+					.spender}`,
+			);
+		}
+
+		if (!input.data.amount) {
+			throw new Error(
+				`[TransactionService#approveContract] Expected amount to be defined but received ${typeof input.data
+					.amount}`,
+			);
+		}
+
+		const token = input.token;
+		assertToken(token);
+
+		const amount = BigNumber.make(input.data.amount, token.token().decimals()).toSatoshi();
+
+		const nonce = await this.#generateNonce(input);
+
+		const builder = await TokenApproveBuilder.new()
+			.nonce(nonce)
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
+			.gasLimit(input.gasLimit.toString())
+			.contractAddress(token.token().address())
+			.spender(ContractAddresses.BATCH_TRANSFER, BigInt(amount.toFixed(0)))
 			.sign(input.signatory.signingKey());
 
 		await this.#sign(input, builder);

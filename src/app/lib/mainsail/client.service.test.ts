@@ -528,6 +528,46 @@ describe("ClientService", () => {
 		});
 	});
 
+	describe("allowance", () => {
+		let evmCallSpy: any;
+		const tokenAddress = `0x${"b".repeat(40)}`;
+
+		beforeEach(() => {
+			evmCallSpy = vi.spyOn(clientService, "evmCall");
+		});
+
+		it("should return BigNumber allowance decoded from evmCall hex result", async () => {
+			// 0xa = 10
+			evmCallSpy.mockResolvedValue({
+				id: 1,
+				jsonrpc: "2.0",
+				result: "0x000000000000000000000000000000000000000000000000000000000000000a",
+			});
+
+			const result = await clientService.allowance(validAddress, tokenAddress);
+
+			expect(evmCallSpy).toHaveBeenCalledWith({
+				data: expect.any(String),
+				to: tokenAddress,
+			});
+			expect(result.toNumber()).toBe(10);
+		});
+
+		it("should rethrow Error from evmCall", async () => {
+			evmCallSpy.mockRejectedValue(new Error("evm call failed"));
+
+			await expect(clientService.allowance(validAddress, tokenAddress)).rejects.toThrow("evm call failed");
+		});
+
+		it("should throw TypeError for non-Error thrown from evmCall", async () => {
+			evmCallSpy.mockRejectedValue({});
+
+			await expect(clientService.allowance(validAddress, tokenAddress)).rejects.toThrow(
+				"Failed to fetch allowance: Unknown error occurred",
+			);
+		});
+	});
+
 	describe("#createSearchParams", () => {
 		let spy: vi.SpyInstance;
 

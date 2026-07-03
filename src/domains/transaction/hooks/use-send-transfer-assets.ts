@@ -5,10 +5,12 @@ export const useTransferAssets = ({
 	profile,
 	tokens,
 	isSingle,
+	selectedAsset,
 }: {
 	profile: Contracts.IProfile;
 	tokens: WalletToken[];
 	isSingle?: boolean;
+	selectedAsset?: string;
 }) => {
 	const assetOptions = tokens.map((token) => ({
 		data: token,
@@ -22,7 +24,15 @@ export const useTransferAssets = ({
 		value: profile.activeNetwork().ticker(),
 	};
 
+	if (!isSingle && selectedAsset) {
+		const token = assetOptions.find((option) => option.value === selectedAsset)!;
+
+		return {
+			assets: selectedAsset === "ARK" ? [mainsailAsset] : [token],
+		};
+	}
+
 	return {
-		assets: isSingle ? [mainsailAsset, ...assetOptions] : [mainsailAsset],
+		assets: [mainsailAsset, ...assetOptions],
 	};
 };

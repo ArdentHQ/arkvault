@@ -1,4 +1,5 @@
 import { Amount } from "@/app/components/Amount";
+import React from "react";
 
 export const ExchangeCurrencyAmount = ({
 	convertedAmount,

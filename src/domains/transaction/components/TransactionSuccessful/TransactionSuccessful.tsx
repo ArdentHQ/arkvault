@@ -16,6 +16,7 @@ interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;
 	noHeading?: boolean;
 	skipConfirmationCheck?: boolean;
+	isRefreshingTransaction?: boolean;
 }
 
 export const TransactionSuccessful = ({
@@ -23,6 +24,7 @@ export const TransactionSuccessful = ({
 	senderWallet,
 	noHeading = false,
 	skipConfirmationCheck = false,
+	isRefreshingTransaction,
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
@@ -76,7 +78,7 @@ export const TransactionSuccessful = ({
 						confirmedTransaction?.confirmations().toNumber() ?? transaction.confirmations().toNumber()
 					}
 					containerClassname="-mx-3 sm:mx-0"
-					isRefreshingTransaction={isLoading}
+					isRefreshingTransaction={isLoading || isRefreshingTransaction}
 				/>
 			</div>
 		</section>

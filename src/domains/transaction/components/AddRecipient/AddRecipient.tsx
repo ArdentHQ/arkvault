@@ -89,7 +89,7 @@ export const AddRecipient = ({
 	const selectedAsset = tokenContractAddress;
 	const selectedToken = tokens.find((token) => token.token().address() === selectedAsset);
 
-	const ticker = network?.ticker();
+	const ticker = selectedToken ? selectedToken.token().displaySymbol() : network?.ticker();
 	const exchangeTicker = profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
@@ -125,13 +125,6 @@ export const AddRecipient = ({
 	}, [addedRecipients, wallet, isSingle, selectedAsset]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
-
-	// Force single send when a token is selected.
-	useEffect(() => {
-		if (selectedToken && !isSingle) {
-			setIsSingle(true);
-		}
-	}, [selectedToken, isSingle]);
 
 	const clearFields = useCallback(() => {
 		setValue("amount", undefined);
@@ -240,9 +233,14 @@ export const AddRecipient = ({
 			alias: recipientAlias,
 			amount: balance,
 		});
-	}, [isSendAllSelected, remainingBalance, setValue]);
+	}, [isSendAllSelected, remainingBalance.toString(), setValue]);
 
-	const { assets } = useTransferAssets({ isSingle, profile, tokens });
+	const { assets } = useTransferAssets({
+		isSingle,
+		profile,
+		selectedAsset: recipients.length > 0 ? selectedAsset : undefined,
+		tokens,
+	});
 
 	const singleRecipientOnChange = ({
 		address,
@@ -321,7 +319,7 @@ export const AddRecipient = ({
 					<TransferType
 						maxRecipients={maxRecipients}
 						isSingle={isSingle}
-						disableMultiple={!!selectedToken || !selectedAsset}
+						disableMultiple={!selectedAsset}
 						onChange={(isSingle) => {
 							setIsSingle(isSingle);
 						}}

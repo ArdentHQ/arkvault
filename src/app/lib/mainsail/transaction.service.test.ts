@@ -22,6 +22,8 @@ describe("TransactionService", () => {
 	let transactionService: TransactionService;
 	let wallet: any;
 	let signatory: any;
+	let walletToken: WalletToken;
+	let tokenDTO: TokenDTO;
 
 	beforeEach(async () => {
 		config = new ConfigRepository({
@@ -62,6 +64,14 @@ describe("TransactionService", () => {
 
 		signatory = await wallet.signatoryFactory().make({
 			mnemonic: MAINSAIL_MNEMONICS[0],
+		});
+
+		tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
+		walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: tokenDTO,
+			walletToken: new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]),
 		});
 	});
 
@@ -505,15 +515,6 @@ describe("TransactionService", () => {
 	});
 
 	it("should sign token transfer and return SignedTransactionData for contractDeployment", async () => {
-		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
-		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
-		const walletToken = new WalletToken({
-			network: profile.activeNetwork(),
-			profile,
-			token: tokenDTO,
-			walletToken: walletTokenDTO,
-		});
-
 		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken]);
 
 		server.use(
@@ -575,15 +576,6 @@ describe("TransactionService", () => {
 	});
 
 	it("should call tokenTransfer when transfer input has token", async () => {
-		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
-		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
-		const walletToken = new WalletToken({
-			network: profile.activeNetwork(),
-			profile,
-			token: tokenDTO,
-			walletToken: walletTokenDTO,
-		});
-
 		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken]);
 
 		server.use(
@@ -650,15 +642,6 @@ describe("TransactionService", () => {
 	});
 
 	it("should call builder chain and return SignedTransactionData for batchTransfer", async () => {
-		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
-		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
-		const walletToken = new WalletToken({
-			network: profile.activeNetwork(),
-			profile,
-			token: tokenDTO,
-			walletToken: walletTokenDTO,
-		});
-
 		server.use(
 			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
 				data: {},
@@ -704,15 +687,6 @@ describe("TransactionService", () => {
 	});
 
 	it("should throw when batchTransfer input has empty payments", async () => {
-		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
-		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
-		const walletToken = new WalletToken({
-			network: profile.activeNetwork(),
-			profile,
-			token: tokenDTO,
-			walletToken: walletTokenDTO,
-		});
-
 		const input = {
 			data: { payments: [] },
 			gasLimit: BigNumber.make(21000),
@@ -727,15 +701,6 @@ describe("TransactionService", () => {
 	});
 
 	it("should throw when batchTransfer input has undefined payments", async () => {
-		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
-		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
-		const walletToken = new WalletToken({
-			network: profile.activeNetwork(),
-			profile,
-			token: tokenDTO,
-			walletToken: walletTokenDTO,
-		});
-
 		const input = {
 			data: {},
 			gasLimit: BigNumber.make(21000),
@@ -760,6 +725,103 @@ describe("TransactionService", () => {
 		} as any;
 
 		await expect(transactionService.batchTransfer(input)).rejects.toThrow(
+			"Expected 'token' to be WalletToken, but received undefined",
+		);
+	});
+
+	it("should delegate to batchTransfer when multiPayment input has token", async () => {
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: {
+				payments: [
+					{ amount: 1, to: "0x0000000000000000000000000000000000000001" },
+					{ amount: 2, to: "0x0000000000000000000000000000000000000002" },
+				],
+			},
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+			token: walletToken,
+		} as any;
+
+		const result = await transactionService.multiPayment(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+
+		const data = result.data();
+		expect(data.tokens).toHaveLength(2);
+	});
+
+	it("should call builder chain and return SignedTransactionData for approveContract", async () => {
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: {
+				amount: BigNumber.make("1000000000000000000"),
+				spender: "0x0000000000000000000000000000000000000001",
+			},
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+			token: walletToken,
+		} as any;
+
+		const result = await transactionService.approveContract(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+	});
+
+	it("should throw when approveContract input is missing spender", async () => {
+		const input = {
+			data: { amount: BigNumber.make("1000000000000000000") },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+			token: walletToken,
+		} as any;
+
+		await expect(transactionService.approveContract(input)).rejects.toThrow(
+			"[TransactionService#approveContract] Expected spender to be defined",
+		);
+	});
+
+	it("should throw when approveContract input is missing amount", async () => {
+		const input = {
+			data: { spender: "0x0000000000000000000000000000000000000001" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+			token: walletToken,
+		} as any;
+
+		await expect(transactionService.approveContract(input)).rejects.toThrow(
+			"[TransactionService#approveContract] Expected amount to be defined",
+		);
+	});
+
+	it("should throw when approveContract input is missing token", async () => {
+		const input = {
+			data: {
+				amount: BigNumber.make("1000000000000000000"),
+				spender: "0x0000000000000000000000000000000000000001",
+			},
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+		} as any;
+
+		await expect(transactionService.approveContract(input)).rejects.toThrow(
 			"Expected 'token' to be WalletToken, but received undefined",
 		);
 	});

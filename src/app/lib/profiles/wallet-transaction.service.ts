@@ -125,6 +125,11 @@ export class TransactionService implements ITransactionService {
 		return this.#signTransaction("contractDeployment", input);
 	}
 
+	/** {@inheritDoc ITransactionService.signApproveContract} */
+	public async signApproveContract(input: Services.ApproveContractInput): Promise<string> {
+		return this.#signTransaction("approveContract", input);
+	}
+
 	/** {@inheritDoc ITransactionService.signUpdateValidator} */
 	public async signUpdateValidator(input: Services.UpdateValidatorInput): Promise<string> {
 		return this.#signTransaction("updateValidator", input);

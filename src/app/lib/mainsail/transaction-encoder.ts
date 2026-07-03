@@ -6,6 +6,8 @@ import { Hex, numberToHex } from "viem";
 import { ContractAddresses, UnitConverter, TransactionDataEncoder } from "@arkecosystem/typescript-crypto";
 import { IProfile } from "@/app/lib/profiles/contracts";
 import { assertToken } from "@/utils/assertions";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { calculateTotalAmount } from "@/domains/transaction/hooks/use-batch-transfer-details";
 
 interface RecipientPaymentItem {
 	address: string;
@@ -23,7 +25,9 @@ export type EncodeTransactionType =
 	| "usernameRegistration"
 	| "usernameResignation"
 	| "updateValidator"
-	| "contractDeployment";
+	| "contractDeployment"
+	| "approve"
+	| "batchTransfer";
 
 export interface EncodeInputData {
 	bytecode?: string;
@@ -34,6 +38,7 @@ export interface EncodeInputData {
 	validatorPassphrase?: string;
 	voteAddresses?: string[];
 	tokenContractAddress?: string;
+	token?: TokenDTO;
 }
 
 interface EncodedData {
@@ -120,6 +125,31 @@ export class TransactionEncoder {
 		};
 	}
 
+	public approveContract(token: TokenDTO, recipients: RecipientPaymentItem[]): EncodedData {
+		const amount = BigNumber.make(calculateTotalAmount(recipients), token.decimals()).toSatoshi().toFixed(0);
+
+		return {
+			data: TransactionDataEncoder.approveContract(BigInt(amount)),
+			to: token.address(),
+		};
+	}
+
+	public batchTransfer(token: TokenDTO, recipients: RecipientPaymentItem[]): EncodedData {
+		const amounts: bigint[] = [];
+		const addresses: string[] = [];
+
+		for (const recipient of recipients) {
+			const amount = BigNumber.make(recipient.amount, token.decimals()).toSatoshi();
+			addresses.push(recipient.address);
+			amounts.push(BigInt(amount.toFixed(0)));
+		}
+
+		return {
+			data: TransactionDataEncoder.batchTransfer(token.address(), addresses, amounts),
+			to: ContractAddresses.BATCH_TRANSFER,
+		};
+	}
+
 	public tokenTransfer(tokenContractAddress: string, inputData: EncodeInputData): EncodedData {
 		const token = this.#profile
 			.tokens()
@@ -203,6 +233,14 @@ export class TransactionEncoder {
 
 		if (type === "multiPayment" && inputData.recipients) {
 			return this.multiPayment(inputData.recipients);
+		}
+
+		if (type === "approve" && inputData.token && inputData.recipients) {
+			return this.approveContract(inputData.token, inputData.recipients);
+		}
+
+		if (type === "batchTransfer" && inputData.token && inputData.recipients) {
+			return this.batchTransfer(inputData.token, inputData.recipients);
 		}
 
 		throw new Exceptions.Exception(

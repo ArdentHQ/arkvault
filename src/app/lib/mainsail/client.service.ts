@@ -2,7 +2,7 @@
 
 import { Collections, Contracts, DTO, Services } from "@/app/lib/mainsail";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
-import { decodeFunctionResult, encodeFunctionData } from "viem";
+import { decodeFunctionResult, encodeFunctionData, hexToBigInt } from "viem";
 
 import { Client } from "@arkecosystem/typescript-client";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
@@ -26,8 +26,11 @@ import {
 	TransactionFunctionSigs,
 	TransactionTypeIdentifier,
 	UsernamesContract,
+	TokenContract,
+	ContractAddresses,
 } from "@arkecosystem/typescript-crypto";
 import { Cache } from "@/app/lib/mainsail/cache";
+import { BigNumber } from "@/app/lib/helpers";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -380,6 +383,28 @@ export class ClientService {
 				throw error;
 			}
 			throw new TypeError("Failed to fetch usernames: Unknown error occurred");
+		}
+	}
+
+	public async allowance(walletAddress: string, tokenAddress: string): Promise<BigNumber> {
+		try {
+			const data = encodeFunctionData({
+				abi: TokenContract.abi,
+				args: [walletAddress, ContractAddresses.BATCH_TRANSFER],
+				functionName: "allowance",
+			});
+
+			const response = await this.evmCall({
+				data,
+				to: tokenAddress,
+			});
+
+			return BigNumber.make(hexToBigInt(response.result));
+		} catch (error) {
+			if (error instanceof Error) {
+				throw error;
+			}
+			throw new TypeError("Failed to fetch allowance: Unknown error occurred");
 		}
 	}
 
