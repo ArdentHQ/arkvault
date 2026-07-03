@@ -163,11 +163,6 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                             </div>
                           </div>
                         </div>
-                        <div
-                          aria-labelledby="SelectAddressDropdown__dropdown-label"
-                          id="SelectAddressDropdown__dropdown-menu"
-                          role="listbox"
-                        />
                       </span>
                     </span>
                   </div>
