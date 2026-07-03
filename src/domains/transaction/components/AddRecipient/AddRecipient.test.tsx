@@ -846,4 +846,33 @@ describe("AddRecipient", () => {
 
 		expect(screen.getByTestId("AddRecipient__amount")).toBeInTheDocument();
 	});
+
+	it("should render without a recipients prop", async () => {
+		renderWithFormProvider(
+			<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} isSingle onIsSingleChange={vi.fn()} />,
+		);
+
+		expect(screen.getByTestId("AddRecipient__amount")).toBeInTheDocument();
+	});
+
+	it("should use the selected token's display symbol as ticker", async () => {
+		const selectedToken = profile.tokens().selected().first();
+
+		renderWithFormProvider(
+			<AddRecipientWrapper
+				profile={profile}
+				wallet={wallet}
+				recipients={[]}
+				onChange={vi.fn()}
+				tokens={profile.tokens().selected().items()}
+			/>,
+			{ tokenContractAddress: selectedToken.token().address() },
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("AddRecipient__available")).toHaveTextContent(
+				selectedToken.token().displaySymbol(),
+			);
+		});
+	});
 });
