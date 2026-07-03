@@ -405,6 +405,10 @@ describe("AddRecipient", () => {
 		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue("");
 
 		expect(onChange).toHaveBeenCalledWith([]);
+
+		await userEvent.click(multipleButton);
+
+		await waitFor(() => expect(screen.queryAllByTestId("AddRecipientItem")).toHaveLength(0));
 	});
 
 	it("should keep values while toggling between single and multiple recipients", async () => {

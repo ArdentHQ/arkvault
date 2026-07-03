@@ -161,8 +161,6 @@ export const AddRecipient = ({
 
 				singleRecipientOnChange({ address, amount });
 
-				setAddedRecipients([]);
-
 				// Clear the fields and update the recipient item(s) when switch between transfer type.
 				// This is made to prevent enabling or disabling the "continue" button.
 				// If there is no recipients there is no need to clear since it can
@@ -170,7 +168,6 @@ export const AddRecipient = ({
 			} else if (addedRecipients.length > 1) {
 				clearFields();
 				onChange([]);
-				setAddedRecipients([]);
 			} else {
 				singleRecipientOnChange({ address: recipientAddress, alias: recipientAlias, amount });
 			}
@@ -184,6 +181,16 @@ export const AddRecipient = ({
 			onChange([]);
 		}
 	}, [isSingle, clearErrors, clearFields, addedRecipients, setValue]);
+
+	useEffect(() => {
+		if (!isMountedReference.current) {
+			return;
+		}
+
+		if (isSingle) {
+			setAddedRecipients([]);
+		}
+	}, [isSingle]);
 
 	useEffect(() => {
 		if (!isSingle) {
