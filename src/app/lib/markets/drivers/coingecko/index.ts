@@ -151,7 +151,7 @@ export class CoinGecko implements PriceTracker {
 
 		for (const value of Object.values(body)) {
 			// @ts-ignore
-			this.tokenLookup[value.symbol.toUpperCase()] = value.id;
+			this.tokenLookup[value.id.toUpperCase()] = value.id;
 		}
 
 		return this.tokenLookup[token.toUpperCase()];
