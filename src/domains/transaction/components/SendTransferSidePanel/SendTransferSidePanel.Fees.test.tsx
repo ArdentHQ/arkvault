@@ -42,24 +42,6 @@ const selectNthSenderAddress = async (index = 0) => {
 
 const selectFirstSenderAddress = async () => selectNthSenderAddress(0);
 
-const setupTokenSelection = async (index: number, tokenName: string) => {
-	const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-	const tokenSelection = dropdowns[index];
-
-	if (!tokenSelection) {
-		return;
-	}
-
-	const user = userEvent.setup();
-	await user.clear(tokenSelection);
-	await userEvent.paste(tokenName);
-	await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
-
-	await waitFor(() => {
-		expect(tokenSelection).toHaveValue(tokenName);
-	});
-};
-
 describe("SendTransferSidePanel Fee Handling", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -120,7 +102,6 @@ describe("SendTransferSidePanel Fee Handling", () => {
 		await waitFor(() =>
 			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(profile.wallets().first().address()),
 		);
-		await setupTokenSelection(2, selectedAsset);
 
 		await userEvent.click(screen.getByTestId(sendAllID));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"));

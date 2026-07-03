@@ -51,8 +51,8 @@ const selectNthSenderAddress = async (index = 0) => {
 };
 
 const addRecipient = async (recipientAddress: string, amount: string) => {
-	await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
-	await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[1], recipientAddress);
+	await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[2]);
+	await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[2], recipientAddress);
 	await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 	await userEvent.type(screen.getByTestId("AddRecipient__amount"), amount);
 
