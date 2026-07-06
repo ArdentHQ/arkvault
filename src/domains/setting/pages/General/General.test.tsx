@@ -684,8 +684,7 @@ describe("General Settings", () => {
 		await userEvent.click(coinGeckoOption);
 
 		await waitFor(() => {
-			expect(toastSpy).toHaveBeenCalled();
-			const warningMessage = toastSpy.mock.calls[0][0] as string;
+			const warningMessage = toastSpy.mock.calls?.[0]?.[0] as string;
 			expect(warningMessage).toContain("VND");
 		});
 
