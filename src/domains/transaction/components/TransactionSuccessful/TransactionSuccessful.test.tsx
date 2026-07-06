@@ -41,6 +41,7 @@ describe("TransactionSuccessful", () => {
 	it("should render", async () => {
 		const transaction = {
 			...TransactionFixture,
+			isConfirmed: () => true,
 			wallet: () => wallet,
 		};
 
