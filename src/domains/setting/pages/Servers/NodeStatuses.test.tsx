@@ -156,7 +156,7 @@ describe("Servers Settings > Node statuses", () => {
 			render(
 				<ConfigurationProvider defaultConfiguration={{ serverStatus: {} }}>
 					<NodesStatus networks={[mockNetwork]} />
-			</ConfigurationProvider>,
+				</ConfigurationProvider>,
 			);
 
 			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
