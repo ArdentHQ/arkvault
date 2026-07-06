@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 import { expect, vi } from "vitest";
 import ServersSettings from "@/domains/setting/pages/Servers";
 import { ConfigurationProvider } from "@/app/contexts";
-import { NodeStatusNode } from "@/domains/setting/pages/Servers/blocks/NodesStatus";
+import { NodeStatusNode, NodesStatus } from "@/domains/setting/pages/Servers/blocks/NodesStatus";
 import {
 	env,
 	getDefaultProfileId,
@@ -114,6 +114,32 @@ describe("Servers Settings > Node statuses", () => {
 			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
 
 			resetProfileNetworksMock();
+		});
+
+		it("should render node statuses with multiple hosts and apply lastRow correctly for even counts", () => {
+			const arkManifest = ARK.manifest;
+			const networkConfig = { ...ARK.manifest.networks["ark.devnet"] };
+
+			// Override hosts to have 2 full peers
+			const mockNetwork = new Networks.Network(arkManifest, networkConfig);
+			vi.spyOn(mockNetwork, "toObject").mockReturnValue({
+				...mockNetwork.toObject(),
+				hosts: [
+					{ host: "https://full1.example.com", type: "full" },
+					{ host: "https://full2.example.com", type: "full" },
+				],
+			});
+
+			render(
+				<ConfigurationProvider defaultConfiguration={{ serverStatus: {} }}>
+					<NodesStatus networks={[mockNetwork]} />
+				</ConfigurationProvider>,
+			);
+
+			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
+
+			const nodes = screen.getAllByTestId(nodeStatusNodeItemTestId);
+			expect(nodes).toHaveLength(2);
 		});
 
 		describe("Node statuses", () => {

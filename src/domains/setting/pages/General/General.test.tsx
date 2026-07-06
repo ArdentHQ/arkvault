@@ -651,6 +651,50 @@ describe("General Settings", () => {
 		PlatformSdkChoices.marketProviders = originalMarketProviders;
 	});
 
+	it("should show a toast warning and default to USD when the selected market provider does not support the current currency", async () => {
+		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+
+		const originalExchangeCurrency = profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency);
+		const originalMarketProvider = profile.settings().get(Contracts.ProfileSetting.MarketProvider);
+
+		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, "VND");
+		profile.settings().set(Contracts.ProfileSetting.MarketProvider, undefined);
+
+		const originalMarketProviders = PlatformSdkChoices.marketProviders;
+		PlatformSdkChoices.marketProviders = [
+			{ label: "CoinGecko", unsupportedCurrencies: ["VND"], value: "coingecko" },
+		];
+
+		render(
+			<Route path="/profiles/:profileId/settings">
+				<GeneralSettings />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/settings`,
+			},
+		);
+
+		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
+
+		const marketPriceContainer: HTMLElement = screen.getAllByRole("combobox")[3];
+
+		await userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
+
+		const coinGeckoOption = screen.getByTestId("SelectDropdown__option--0");
+		await userEvent.click(coinGeckoOption);
+
+		await waitFor(() => {
+			expect(toastSpy).toHaveBeenCalled();
+			const warningMessage = toastSpy.mock.calls[0][0] as string;
+			expect(warningMessage).toContain("VND");
+		});
+
+		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, originalExchangeCurrency);
+		profile.settings().set(Contracts.ProfileSetting.MarketProvider, originalMarketProvider);
+		toastSpy.mockRestore();
+		PlatformSdkChoices.marketProviders = originalMarketProviders;
+	});
+
 	it("should show confirmation modal when auto logoff field is changed", async () => {
 		const settingsURL = `/profiles/${profile.id()}/settings`;
 
