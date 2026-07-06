@@ -142,6 +142,26 @@ describe("Servers Settings > Node statuses", () => {
 			expect(nodes).toHaveLength(2);
 		});
 
+		it("should render nothing when network has no full hosts", () => {
+			const arkManifest = ARK.manifest;
+			const networkConfig = { ...ARK.manifest.networks["ark.devnet"] };
+
+			const mockNetwork = new Networks.Network(arkManifest, networkConfig);
+			vi.spyOn(mockNetwork, "toObject").mockReturnValue({
+				...mockNetwork.toObject(),
+				hosts: [{ host: "https://explorer.example.com", type: "explorer" }],
+			});
+
+			render(
+				<ConfigurationProvider defaultConfiguration={{ serverStatus: {} }}>
+					<NodesStatus networks={[mockNetwork]} />
+			</ConfigurationProvider>,
+			);
+
+			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
+			expect(screen.queryByTestId(nodeStatusNodeItemTestId)).not.toBeInTheDocument();
+		});
+
 		describe("Node statuses", () => {
 			let availableNetworksSpy: vi.SpyInstance;
 
