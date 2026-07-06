@@ -22,6 +22,7 @@ let profile: Contracts.IProfile;
 let network: Networks.Network;
 
 const peerHostTest = "https://ark-test.arkvault.io";
+const devnetNetworkId = "ark.devnet";
 
 const peerResponse = {
 	data: "Hello World!",
@@ -37,7 +38,7 @@ describe("Servers Settings > Node statuses", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		network = profile
 			.wallets()
-			.findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", "ark.devnet")!
+			.findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", devnetNetworkId)!
 			.network();
 	});
 
@@ -50,7 +51,7 @@ describe("Servers Settings > Node statuses", () => {
 	});
 
 	it("should initialize server status for unknown networks", () => {
-		const arkNetwork = new Networks.Network(ARK.manifest, ARK.manifest.networks["ark.devnet"]);
+		const arkNetwork = new Networks.Network(ARK.manifest, ARK.manifest.networks[devnetNetworkId]);
 
 		render(
 			<ConfigurationProvider defaultConfiguration={{ serverStatus: {} }}>
@@ -62,7 +63,7 @@ describe("Servers Settings > Node statuses", () => {
 	});
 
 	it("should append multisig label when host type is musig", () => {
-		const arkNetwork = new Networks.Network(ARK.manifest, ARK.manifest.networks["ark.devnet"]);
+		const arkNetwork = new Networks.Network(ARK.manifest, ARK.manifest.networks[devnetNetworkId]);
 
 		// Create a mock musig host (type 'musig' instead of 'full')
 		const musigHost = { host: "https://musig.example.com", type: "musig" as const };
@@ -118,7 +119,7 @@ describe("Servers Settings > Node statuses", () => {
 
 		it("should render node statuses with multiple hosts and apply lastRow correctly for even counts", () => {
 			const arkManifest = ARK.manifest;
-			const networkConfig = { ...ARK.manifest.networks["ark.devnet"] };
+			const networkConfig = { ...ARK.manifest.networks[devnetNetworkId] };
 
 			// Override hosts to have 2 full peers
 			const mockNetwork = new Networks.Network(arkManifest, networkConfig);
@@ -144,7 +145,7 @@ describe("Servers Settings > Node statuses", () => {
 
 		it("should render nothing when network has no full hosts", () => {
 			const arkManifest = ARK.manifest;
-			const networkConfig = { ...ARK.manifest.networks["ark.devnet"] };
+			const networkConfig = { ...ARK.manifest.networks[devnetNetworkId] };
 
 			const mockNetwork = new Networks.Network(arkManifest, networkConfig);
 			vi.spyOn(mockNetwork, "toObject").mockReturnValue({
