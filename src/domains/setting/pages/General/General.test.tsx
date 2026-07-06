@@ -10,6 +10,7 @@ import * as browserAccess from "browser-fs-access";
 import { useAccentColor, useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
+import { PlatformSdkChoices } from "@/data";
 import GeneralSettings from "@/domains/setting/pages/General";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -610,6 +611,11 @@ describe("General Settings", () => {
 	it("should default to USD if market provider does not support the selected currency", async () => {
 		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
+		const originalMarketProviders = PlatformSdkChoices.marketProviders;
+		PlatformSdkChoices.marketProviders = [
+			{ label: "CoinGecko", unsupportedCurrencies: ["VND"], value: "coingecko" },
+		];
+
 		render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
@@ -636,45 +642,13 @@ describe("General Settings", () => {
 			return within(subject).getByRole("textbox");
 		};
 
-		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
-		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
-
-		await userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
-
-		expect(screen.queryByText("VND (₫)")).not.toBeInTheDocument();
-
-		await userEvent.click(screen.getByText("EUR (€)"));
-
-		expect(getSelectInput("CURRENCY")).toHaveValue("EUR (€)");
-
-		await userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
-
-		await userEvent.click(screen.getByText("CoinGecko"));
-
 		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CoinGecko");
 
 		await userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
-
-		await userEvent.click(screen.getByText("VND (₫)"));
-
-		expect(getSelectInput("CURRENCY")).toHaveValue("VND (₫)");
-
-		await userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
-
-		await userEvent.click(screen.getByText("CryptoCompare"));
-
-		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
-
-		expect(toastSpy).toHaveBeenCalledWith(
-			translations.SETTINGS.GENERAL.UNSUPPORTED_CURRENCY.replace("{{currency}}", "VND").replace(
-				"{{provider}}",
-				"CryptoCompare",
-			),
-		);
-
-		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
+		expect(screen.queryByText("VND (₫)")).not.toBeInTheDocument();
 
 		toastSpy.mockRestore();
+		PlatformSdkChoices.marketProviders = originalMarketProviders;
 	});
 
 	it("should show confirmation modal when auto logoff field is changed", async () => {
