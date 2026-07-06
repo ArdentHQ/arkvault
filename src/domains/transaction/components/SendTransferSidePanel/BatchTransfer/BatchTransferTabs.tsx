@@ -14,7 +14,7 @@ import { ApproveStep } from "@/domains/transaction/components/SendTransferSidePa
 import { httpClient } from "@/app/services";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
-import { useEnvironmentContext } from "@/app/contexts";
+import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { BatchTransferActions } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
@@ -34,6 +34,8 @@ export const BatchTransferTabs = ({
 	onApproveConfirmed,
 }: BatchTransferTabsProperties) => {
 	const { persist } = useEnvironmentContext();
+
+	const profile = wallet.profile();
 
 	const { formState, getValues } = useFormContext();
 	const { isSubmitting, isValid } = formState;
@@ -79,6 +81,29 @@ export const BatchTransferTabs = ({
 			clearTimeout(timeoutId);
 		};
 	}, [isConfirmed, activeTab]);
+
+	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
+	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
+	console.log({hasDeviceAvailable, isConnected, ledgerDevice});
+
+	useEffect(() => {
+		console.log("in ue", {isConnected, ledgerDevice, isWaitingLedger});
+		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
+			console.log("in ue - connectLedger()")
+			void connectLedger();
+		}
+
+		if (isConnected && isWaitingLedger) {
+			console.log("sending tx");
+			activeTab === BatchTransferTabStep.ApproveStep ? sendApprovalTransaction() : onSubmit();
+		}
+	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
+
+	const connectLedger = useCallback(async () => {
+		console.log("connectLedger called");
+		await connect(profile);
+		setIsWaitingLedger(true);
+	}, [wallet, profile, connect]);
 
 	const requiresContractApproval = !isAllowanceLoading && totalAmount.isGreaterThan(allowance);
 	const isNextDisabled = !isValid || isAllowanceLoading;
@@ -156,6 +181,11 @@ export const BatchTransferTabs = ({
 					? BatchTransferTabStep.ApproveStep
 					: BatchTransferTabStep.ConfirmTransferStep;
 				setActiveTab(nextStep);
+
+				if (wallet.isLedger()) {
+					console.log("in review step, wallet is ledger, calling connect ledger");
+					await connectLedger();
+				}
 			},
 			[BatchTransferTabStep.ApproveStep]: async () => {
 				void sendApprovalTransaction();
@@ -197,7 +227,11 @@ export const BatchTransferTabs = ({
 							</TabPanel>
 
 							<TabPanel tabId={BatchTransferTabStep.ApproveStep}>
-								<ApproveStep wallet={wallet} />
+								<ApproveStep
+									wallet={wallet}
+									ledgerIsAwaitingDevice={!hasDeviceAvailable}
+									ledgerIsAwaitingApp={!isConnected}
+								/>
 							</TabPanel>
 
 							<TabPanel tabId={BatchTransferTabStep.SummaryStep}>

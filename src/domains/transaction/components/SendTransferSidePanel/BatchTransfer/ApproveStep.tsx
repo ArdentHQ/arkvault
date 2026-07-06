@@ -12,18 +12,22 @@ import { FeeField } from "@/domains/transaction/components/FeeField";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { TruncatedContractAddress } from "@/domains/transaction/components/ContractAddressHint/ContractAddressHint";
 import { useBatchTransferDetails } from "@/domains/transaction/hooks/use-batch-transfer-details";
+import { TransferLedgerReview } from "@/domains/transaction/components/SendTransferSidePanel/LedgerReview";
 
 interface ApproveStepProperties {
 	wallet: Contracts.IReadWriteWallet;
+	ledgerIsAwaitingDevice?: boolean;
+	ledgerIsAwaitingApp?: boolean;
 }
 
-export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
+export const ApproveStep = ({ wallet, ledgerIsAwaitingDevice, ledgerIsAwaitingApp }: ApproveStepProperties) => {
 	const { t } = useTranslation();
 
 	const { register, getValues } = useFormContext();
 	const { recipients, tokenContractAddress } = getValues();
 
 	const profile = useActiveProfile();
+	console.log({ledgerIsAwaitingApp, ledgerIsAwaitingDevice})
 
 	const { amount, convertedAmount, walletToken, exchangeTicker } = useBatchTransferDetails({
 		profile,
@@ -31,6 +35,7 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 		tokenContractAddress,
 		wallet,
 	});
+
 
 	const { common: commonValidation } = useValidation();
 
@@ -114,7 +119,22 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 				</div>
 
 				<div className="px-3 pt-1 sm:px-0 sm:pt-0">
-					<AuthenticationStep wallet={wallet!} noHeading />
+					<AuthenticationStep
+						wallet={wallet!}
+						noHeading
+						ledgerDetails={
+							<TransferLedgerReview
+								wallet={wallet!}
+								estimatedExpiration={undefined}
+								profile={profile}
+							/>
+						}
+						ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
+						ledgerIsAwaitingApp={ledgerIsAwaitingApp}
+						onDeviceNotAvailable={() => {
+							// keep waiting when it is not available
+						}}
+					/>
 				</div>
 			</div>
 		</section>
