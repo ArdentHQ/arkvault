@@ -439,8 +439,7 @@ export class TransactionService {
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString())
 			.contractAddress(token.token().address())
-			.spender(ContractAddresses.BATCH_TRANSFER, BigInt(amount.toFixed(0)))
-			.sign(input.signatory.signingKey());
+			.spender(ContractAddresses.BATCH_TRANSFER, BigInt(amount.toFixed(0)));
 
 		await this.#sign(input, builder);
 

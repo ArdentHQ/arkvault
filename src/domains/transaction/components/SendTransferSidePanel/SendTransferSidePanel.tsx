@@ -473,7 +473,7 @@ export const SendTransferSidePanel = ({
 										setBatchTransferActiveTab(BatchTransferTabStep.ReviewStep);
 									}}
 									onSubmit={() => {
-										void handleSubmit(() => submit())();
+										void handleSubmit(() => submit(!!wallet?.isLedger()))();
 									}}
 								/>
 							)}
