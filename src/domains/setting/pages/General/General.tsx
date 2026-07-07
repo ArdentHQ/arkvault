@@ -14,7 +14,7 @@ import { ListDivided } from "@/app/components/ListDivided";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useAccentColor, useActiveProfile, useBreakpoint, useProfileJobs, useTheme, useValidation } from "@/app/hooks";
+import { useAccentColor, useActiveProfile, useBreakpoint, useTheme, useValidation } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { toasts } from "@/app/services";
 import { PlatformSdkChoices } from "@/data";
@@ -35,7 +35,6 @@ export const GeneralSettings: React.FC = () => {
 	const { isXs } = useBreakpoint();
 
 	const { persist } = useEnvironmentContext();
-	const { syncExchangeRates } = useProfileJobs(profile);
 
 	const { resetProfileTheme } = useTheme();
 	const { resetAccentColor } = useAccentColor();

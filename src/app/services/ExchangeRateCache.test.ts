@@ -7,6 +7,8 @@ import {
 } from "@/utils/testing-library";
 import { ExchangeRateCache } from "./ExchangeRateCache";
 
+const RATE_LIMIT_ERROR = "Rate limit exceeded";
+
 let subject: ExchangeRateCache;
 let profile: Contracts.IProfile;
 
@@ -74,19 +76,19 @@ describe("ExchangeRateCache", () => {
 		await subject.syncAll(env, profile, "BTC");
 		expect(syncAllSpy).toHaveBeenCalledTimes(1);
 
-		vi.spyOn(env.exchangeRates(), "syncAll").mockImplementationOnce(async () => {
-			throw new Error("Rate limit exceeded");
+		vi.spyOn(env.exchangeRates(), "syncAll").mockImplementationOnce(() => {
+			throw new Error(RATE_LIMIT_ERROR);
 		});
 
 		await expect(subject.syncAll(env, profile, "BTC")).resolves.toBeUndefined();
 	});
 
 	it("should throw on error when no previous success data exists", async () => {
-		vi.spyOn(env.exchangeRates(), "syncAll").mockImplementationOnce(async () => {
-			throw new Error("Rate limit exceeded");
+		vi.spyOn(env.exchangeRates(), "syncAll").mockImplementationOnce(() => {
+			throw new Error(RATE_LIMIT_ERROR);
 		});
 
-		await expect(subject.syncAll(env, profile, "BTC")).rejects.toThrow("Rate limit exceeded");
+		await expect(subject.syncAll(env, profile, "BTC")).rejects.toThrow(RATE_LIMIT_ERROR);
 	});
 
 	it("should throw on error when cache has expired", async () => {
@@ -97,10 +99,10 @@ describe("ExchangeRateCache", () => {
 
 		subject.flush();
 
-		vi.spyOn(env.exchangeRates(), "syncAll").mockImplementationOnce(async () => {
-			throw new Error("Rate limit exceeded");
+		vi.spyOn(env.exchangeRates(), "syncAll").mockImplementationOnce(() => {
+			throw new Error(RATE_LIMIT_ERROR);
 		});
 
-		await expect(subject.syncAll(env, profile, "BTC")).rejects.toThrow("Rate limit exceeded");
+		await expect(subject.syncAll(env, profile, "BTC")).rejects.toThrow(RATE_LIMIT_ERROR);
 	});
 });
