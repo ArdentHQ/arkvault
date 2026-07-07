@@ -185,8 +185,6 @@ export const GeneralSettings: React.FC = () => {
 		profile.settings().set(Contracts.ProfileSetting.TimeFormat, timeFormat);
 		profile.settings().set(Contracts.ProfileSetting.Avatar, avatar);
 
-		await syncExchangeRates();
-
 		await persist();
 
 		reset(getDefaultValues());
