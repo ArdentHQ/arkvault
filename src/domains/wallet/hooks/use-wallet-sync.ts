@@ -9,8 +9,6 @@ interface WalletImportTypes {
 const syncBalance = async (wallet: Contracts.IReadWriteWallet) => wallet.synchroniser().identity();
 
 export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
-
-
 	const syncFees = async (wallet: Contracts.IReadWriteWallet) => {
 		const network = wallet.network();
 		try {
