@@ -27,7 +27,7 @@ const baseSettings = {
 	EXCHANGE_CURRENCY: "BTC",
 	FALLBACK_TO_DEFAULT_NODES: true,
 	LOCALE: "en-US",
-	MARKET_PROVIDER: "cryptocompare",
+	MARKET_PROVIDER: "coingecko",
 	NAME: profileName,
 	THEME: "light",
 	TIME_FORMAT: "h:mm A",

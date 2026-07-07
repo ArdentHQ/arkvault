@@ -20,8 +20,10 @@ describe("useCurrencyOptions", () => {
 	it("returns only supported currencies if market provider is specified and has unsupported currencies", () => {
 		const {
 			result: { current: currencyOptions },
-		} = renderHook(() => useCurrencyOptions("cryptocompare"), { wrapper: WithProviders });
+		} = renderHook(() => useCurrencyOptions("coingecko"), { wrapper: WithProviders });
 
-		expect(currencyOptions[0].options.map((option) => option.value)).not.toContain("VND");
+		expect(currencyOptions[0].options.map((option) => option.value)).toHaveLength(
+			PlatformSdkChoices.currencies.fiat.length,
+		);
 	});
 });

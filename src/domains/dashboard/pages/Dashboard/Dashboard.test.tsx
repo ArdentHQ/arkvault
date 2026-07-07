@@ -106,7 +106,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("Balance__value")).toBeInTheDocument();
+			expect(screen.getByTestId("Portfolio__Header")).toBeInTheDocument();
 		});
 
 		expect(asFragment()).toMatchSnapshot();
