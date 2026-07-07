@@ -177,6 +177,8 @@ export class TransactionService {
 			builder.addRecipient(payment.to, BigInt(amount.toFixed(0)));
 		}
 
+		builder.build();
+
 		await this.#sign(input, builder);
 
 		return new SignedTransactionData().configure(
