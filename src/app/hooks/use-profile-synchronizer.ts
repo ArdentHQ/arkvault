@@ -111,7 +111,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 
 				return allRates;
 			},
-			interval: Intervals.Long,
+			interval: Intervals.Medium,
 		};
 
 		const syncNotifications = {
