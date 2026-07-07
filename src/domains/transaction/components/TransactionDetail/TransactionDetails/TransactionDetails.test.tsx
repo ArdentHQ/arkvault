@@ -38,7 +38,7 @@ describe("TransactionDetails", () => {
 					wallet: () => wallet,
 				}}
 				isConfirmed={true}
-			/>
+			/>,
 		);
 
 		expect(clientMock).not.toHaveBeenCalled();
@@ -54,15 +54,13 @@ describe("TransactionDetails", () => {
 			}),
 		};
 
-		const clientMock = vi
-			.spyOn(wallet.coin().client(), "transaction")
-			.mockResolvedValue(confirmedTransaction);
+		const clientMock = vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue(confirmedTransaction);
 
 		render(
 			<TransactionDetails
 				transaction={{ ...TransactionFixture, isConfirmed: () => false, wallet: () => wallet }}
 				isConfirmed={true}
-			/>
+			/>,
 		);
 
 		await vi.waitFor(() => expect(clientMock).toHaveBeenCalled());
