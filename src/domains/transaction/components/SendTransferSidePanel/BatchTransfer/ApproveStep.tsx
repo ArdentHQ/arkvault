@@ -35,7 +35,6 @@ export const ApproveStep = ({ wallet, ledgerIsAwaitingDevice, ledgerIsAwaitingAp
 		wallet,
 	});
 
-
 	const { common: commonValidation } = useValidation();
 
 	const nativeTokenBalance = wallet.balance();
@@ -122,11 +121,7 @@ export const ApproveStep = ({ wallet, ledgerIsAwaitingDevice, ledgerIsAwaitingAp
 						wallet={wallet!}
 						noHeading
 						ledgerDetails={
-							<TransferLedgerReview
-								wallet={wallet!}
-								estimatedExpiration={undefined}
-								profile={profile}
-							/>
+							<TransferLedgerReview wallet={wallet!} estimatedExpiration={undefined} profile={profile} />
 						}
 						ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
 						ledgerIsAwaitingApp={ledgerIsAwaitingApp}
