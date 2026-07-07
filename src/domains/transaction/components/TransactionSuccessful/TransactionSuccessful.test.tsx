@@ -95,7 +95,7 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("TransactionPending")).toBeInTheDocument());
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeInTheDocument();
 
 		vi.restoreAllMocks();
 	});
