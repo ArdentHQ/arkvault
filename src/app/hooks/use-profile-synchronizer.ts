@@ -102,14 +102,15 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 			callback: async () => {
 				setConfiguration({ profileIsSyncingExchangeRates: true });
 
-				const currencies = Object.keys(profile.coins().all());
-				const allRates = await Promise.all(
-					currencies.map((currency) => exchangeRateCache.syncAll(env, profile, currency)),
-				);
-
-				setConfiguration({ profileIsSyncingExchangeRates: false });
-
-				return allRates;
+				try {
+					const currencies = Object.keys(profile.coins().all());
+					await Promise.all(currencies.map((currency) => exchangeRateCache.syncAll(env, profile, currency)));
+				} catch {
+					// Rate limit or network error. The cache will fall back
+					// to previously synced rates.
+				} finally {
+					setConfiguration({ profileIsSyncingExchangeRates: false });
+				}
 			},
 			interval: Intervals.Medium,
 		};

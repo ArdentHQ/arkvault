@@ -13,7 +13,16 @@ export class ExchangeRateCache {
 	public async syncAll(env: Environment, profile: Contracts.IProfile, currency: string): Promise<void> {
 		const cacheKey = `exchangeRates.syncAll:${profile.id()}:${currency}`;
 
-		await this.cache.remember(cacheKey, async () => env.exchangeRates().syncAll(profile, currency));
+		try {
+			await this.cache.remember(cacheKey, async () => env.exchangeRates().syncAll(profile, currency));
+		} catch (error) {
+			const cachedValue = this.cache.get(cacheKey);
+			if (cachedValue !== undefined) {
+				return cachedValue;
+			}
+
+			throw error;
+		}
 	}
 
 	public flush() {
