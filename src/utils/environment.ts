@@ -27,8 +27,9 @@ export const initializeEnvironment = (): Environment => {
 			"1.1.0": updateArkConstants,
 			"1.2.0": updateArkNethashes,
 			"1.3.0": updateMarketProvider,
+			"1.3.1": updateMarketProvider,
 		},
-		"1.3.0",
+		"1.3.1",
 	);
 
 	return env;
