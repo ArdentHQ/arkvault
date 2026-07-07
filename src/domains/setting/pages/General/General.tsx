@@ -22,6 +22,7 @@ import { ResetProfile } from "@/domains/profile/components/ResetProfile";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
+import { exchangeRateCache } from "@/app/services/ExchangeRateCache";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
@@ -281,12 +282,13 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={currencyOptions}
 									defaultValue={exchangeCurrency}
-									onChange={(exchangeCurrency: SettingsOption) =>
+									onChange={(exchangeCurrency: SettingsOption) => {
+										exchangeRateCache.flush();
 										setValue("exchangeCurrency", exchangeCurrency.value, {
 											shouldDirty: true,
 											shouldValidate: true,
-										})
-									}
+										});
+									}}
 								/>
 							</FormField>
 						</div>

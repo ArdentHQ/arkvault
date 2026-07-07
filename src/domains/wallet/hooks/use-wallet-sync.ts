@@ -1,4 +1,5 @@
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { exchangeRateCache } from "@/app/services/ExchangeRateCache";
 
 interface WalletImportTypes {
 	profile: Contracts.IProfile;
@@ -8,6 +9,8 @@ interface WalletImportTypes {
 const syncBalance = async (wallet: Contracts.IReadWriteWallet) => wallet.synchroniser().identity();
 
 export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
+
+
 	const syncFees = async (wallet: Contracts.IReadWriteWallet) => {
 		const network = wallet.network();
 		try {
@@ -18,8 +21,8 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 		}
 	};
 
-	const syncRates = (profile: Contracts.IProfile, wallet: Contracts.IReadWriteWallet) =>
-		env.exchangeRates().syncAll(profile, wallet.currency());
+	const syncRates = (wallet: Contracts.IReadWriteWallet) =>
+		exchangeRateCache.syncAll(env, profile, wallet.currency());
 
 	const syncVotes = async (wallet: Contracts.IReadWriteWallet) => {
 		const network = wallet.network();
@@ -39,7 +42,7 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 	};
 
 	const syncAll = async (wallet: Contracts.IReadWriteWallet) =>
-		Promise.allSettled([syncVotes(wallet), syncRates(profile, wallet), syncFees(wallet), syncBalance(wallet)]);
+		Promise.allSettled([syncVotes(wallet), syncRates(wallet), syncFees(wallet), syncBalance(wallet)]);
 
 	return { syncAll };
 };

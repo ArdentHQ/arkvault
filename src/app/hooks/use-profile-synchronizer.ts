@@ -15,6 +15,7 @@ import {
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { exchangeRateCache } from "@/app/services/ExchangeRateCache";
 
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { ProfilePeers } from "@/utils/profile-peers";
@@ -103,7 +104,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 
 				const currencies = Object.keys(profile.coins().all());
 				const allRates = await Promise.all(
-					currencies.map((currency) => env.exchangeRates().syncAll(profile, currency)),
+					currencies.map((currency) => exchangeRateCache.syncAll(env, profile, currency)),
 				);
 
 				setConfiguration({ profileIsSyncingExchangeRates: false });
