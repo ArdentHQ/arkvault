@@ -84,23 +84,18 @@ export const BatchTransferTabs = ({
 
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
-	console.log({hasDeviceAvailable, isConnected, ledgerDevice});
 
 	useEffect(() => {
-		console.log("in ue", {isConnected, ledgerDevice, isWaitingLedger});
 		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
-			console.log("in ue - connectLedger()")
 			void connectLedger();
 		}
 
 		if (isConnected && isWaitingLedger) {
-			console.log("sending tx");
 			activeTab === BatchTransferTabStep.ApproveStep ? sendApprovalTransaction() : onSubmit();
 		}
 	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
 
 	const connectLedger = useCallback(async () => {
-		console.log("connectLedger called");
 		await connect(profile);
 		setIsWaitingLedger(true);
 	}, [wallet, profile, connect]);
@@ -183,7 +178,6 @@ export const BatchTransferTabs = ({
 				setActiveTab(nextStep);
 
 				if (wallet.isLedger()) {
-					console.log("in review step, wallet is ledger, calling connect ledger");
 					await connectLedger();
 				}
 			},
@@ -192,6 +186,9 @@ export const BatchTransferTabs = ({
 			},
 			[BatchTransferTabStep.SummaryStep]: async () => {
 				setActiveTab(BatchTransferTabStep.ConfirmTransferStep);
+				if (wallet.isLedger()) {
+					await connectLedger();
+				}
 			},
 			[BatchTransferTabStep.ConfirmTransferStep]: async () => {
 				onSubmit();
@@ -245,7 +242,11 @@ export const BatchTransferTabs = ({
 							</TabPanel>
 
 							<TabPanel tabId={BatchTransferTabStep.ConfirmTransferStep}>
-								<ConfirmTransferStep wallet={wallet} />
+								<ConfirmTransferStep
+									wallet={wallet}
+									ledgerIsAwaitingDevice={!hasDeviceAvailable}
+									ledgerIsAwaitingApp={!isConnected}
+								/>
 							</TabPanel>
 						</div>
 					</div>

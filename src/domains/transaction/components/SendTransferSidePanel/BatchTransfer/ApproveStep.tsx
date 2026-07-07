@@ -27,7 +27,6 @@ export const ApproveStep = ({ wallet, ledgerIsAwaitingDevice, ledgerIsAwaitingAp
 	const { recipients, tokenContractAddress } = getValues();
 
 	const profile = useActiveProfile();
-	console.log({ledgerIsAwaitingApp, ledgerIsAwaitingDevice})
 
 	const { amount, convertedAmount, walletToken, exchangeTicker } = useBatchTransferDetails({
 		profile,

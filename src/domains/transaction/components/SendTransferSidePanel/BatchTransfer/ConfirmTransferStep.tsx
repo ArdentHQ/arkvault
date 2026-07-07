@@ -15,12 +15,15 @@ import { useBatchTransferDetails } from "@/domains/transaction/hooks/use-batch-t
 import { Divider } from "@/app/components/Divider";
 import { Button } from "@/app/components/Button";
 import { RecipientsModal } from "@/domains/transaction/components/RecipientsModal";
+import { TransferLedgerReview } from "@/domains/transaction/components/SendTransferSidePanel/LedgerReview";
 
 interface ApproveStepProperties {
 	wallet: Contracts.IReadWriteWallet;
+	ledgerIsAwaitingDevice?: boolean;
+	ledgerIsAwaitingApp?: boolean;
 }
 
-export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
+export const ConfirmTransferStep = ({ wallet, ledgerIsAwaitingDevice, ledgerIsAwaitingApp }: ApproveStepProperties) => {
 	const { t } = useTranslation();
 
 	const [showModal, setShowModal] = useState(false);
@@ -129,7 +132,18 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 				</div>
 
 				<div className="px-3 pt-1 sm:px-0 sm:pt-0">
-					<AuthenticationStep wallet={wallet!} noHeading />
+					<AuthenticationStep
+						wallet={wallet!}
+						noHeading
+						ledgerDetails={
+							<TransferLedgerReview wallet={wallet!} estimatedExpiration={undefined} profile={profile} />
+						}
+						ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
+						ledgerIsAwaitingApp={ledgerIsAwaitingApp}
+						onDeviceNotAvailable={() => {
+							// keep waiting when it is not available
+						}}
+					/>
 				</div>
 			</div>
 			<RecipientsModal
