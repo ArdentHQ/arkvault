@@ -33,6 +33,16 @@ export class Cache {
 		return result;
 	}
 
+	public get(key: string): any {
+		const cacheItem = this.store[key];
+
+		if (cacheItem && DateTime.make().isBefore(cacheItem.expires_at)) {
+			return cacheItem.value;
+		}
+
+		return undefined;
+	}
+
 	public flush() {
 		this.store = {};
 	}

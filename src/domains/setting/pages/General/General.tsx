@@ -281,7 +281,12 @@ export const GeneralSettings: React.FC = () => {
 									options={currencyOptions}
 									defaultValue={exchangeCurrency}
 									onChange={(exchangeCurrency: SettingsOption) => {
-										exchangeRateCache.flush();
+										if (
+											exchangeCurrency?.value !==
+											profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency)
+										) {
+											exchangeRateCache.flush();
+										}
 										setValue("exchangeCurrency", exchangeCurrency.value, {
 											shouldDirty: true,
 											shouldValidate: true,
