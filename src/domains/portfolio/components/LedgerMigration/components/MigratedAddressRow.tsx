@@ -34,7 +34,11 @@ export const MigratedAddressRow = ({
 							addressClass="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px]"
 						/>
 						<div className="mt-1 flex items-center">
-							<Link to={transaction.signedTransaction()?.explorerLink()!} isExternal>
+							<Link
+								to={transaction.signedTransaction()?.explorerLink()!}
+								isExternal
+								className="text-nowrap"
+							>
 								{t("COMMON.TX_ID")}
 							</Link>
 							<Divider type="vertical" />
