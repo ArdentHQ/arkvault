@@ -17,7 +17,7 @@ import cn from "classnames";
 interface ApproveStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 	ledgerIsAwaitingDevice?: boolean;
-	displayAuth?: boolean;
+	isAwaitingLedgerAction?: boolean;
 	ledgerIsAwaitingApp?: boolean;
 }
 
@@ -25,9 +25,12 @@ export const ApproveStep = ({
 	wallet,
 	ledgerIsAwaitingDevice,
 	ledgerIsAwaitingApp,
-	displayAuth,
+	isAwaitingLedgerAction,
 }: ApproveStepProperties) => {
 	const { t } = useTranslation();
+
+	const isFeeDisabled = wallet.isLedger() && isAwaitingLedgerAction;
+	const showAuthenticationStep = isFeeDisabled || !wallet.isLedger();
 
 	const { register, getValues } = useFormContext();
 	const { recipients, tokenContractAddress } = getValues();
@@ -110,7 +113,7 @@ export const ApproveStep = ({
 					className={cn(
 						"border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0",
 						{
-							"blur-xs pointer-events-none mb-0": displayAuth,
+							"blur-xs pointer-events-none mb-0": isFeeDisabled,
 						},
 					)}
 				>
@@ -122,7 +125,7 @@ export const ApproveStep = ({
 
 						<FeeField
 							type="approve"
-							hideBody={displayAuth}
+							hideBody={isFeeDisabled}
 							data={{ token: walletToken.token() }}
 							network={network}
 							profile={profile}
@@ -130,7 +133,7 @@ export const ApproveStep = ({
 					</FormField>
 				</div>
 
-				{displayAuth && (
+				{showAuthenticationStep && (
 					<div className="px-3 pt-1 sm:px-0 sm:pt-0">
 						<AuthenticationStep
 							wallet={wallet!}

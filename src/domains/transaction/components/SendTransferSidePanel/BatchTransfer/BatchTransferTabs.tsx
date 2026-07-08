@@ -103,8 +103,8 @@ export const BatchTransferTabs = ({
 
 	const requiresContractApproval = !isAllowanceLoading && totalAmount.isGreaterThan(allowance);
 
-	const isLedgerApproveDisabled = wallet.isLedger() ? isAwaitingConnection || isWaitingLedger : false;
-	const isNextDisabled = !isValid || isAllowanceLoading || isWaitingLedger || isLedgerApproveDisabled;
+	const isAwaitingLedgerAction = wallet.isLedger() ? isAwaitingConnection || isWaitingLedger : false;
+	const isNextDisabled = !isValid || isAllowanceLoading || isWaitingLedger || isAwaitingLedgerAction;
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
@@ -238,7 +238,7 @@ export const BatchTransferTabs = ({
 							<TabPanel tabId={BatchTransferTabStep.ApproveStep}>
 								<ApproveStep
 									wallet={wallet}
-									displayAuth={wallet.isLedger() ? isAwaitingConnection || isWaitingLedger : true}
+									isAwaitingLedgerAction={isAwaitingLedgerAction}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
 								/>
@@ -257,7 +257,7 @@ export const BatchTransferTabs = ({
 							<TabPanel tabId={BatchTransferTabStep.ConfirmTransferStep}>
 								<ConfirmTransferStep
 									wallet={wallet}
-									displayAuth={wallet.isLedger() ? isAwaitingConnection || isWaitingLedger : true}
+									isAwaitingLedgerAction={isAwaitingLedgerAction}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
 								/>
