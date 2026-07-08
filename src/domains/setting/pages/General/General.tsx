@@ -14,7 +14,7 @@ import { ListDivided } from "@/app/components/ListDivided";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useAccentColor, useActiveProfile, useBreakpoint, useProfileJobs, useTheme, useValidation } from "@/app/hooks";
+import { useAccentColor, useActiveProfile, useBreakpoint, useTheme, useValidation } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { toasts } from "@/app/services";
 import { PlatformSdkChoices } from "@/data";
@@ -22,6 +22,7 @@ import { ResetProfile } from "@/domains/profile/components/ResetProfile";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
+import { exchangeRateCache } from "@/app/services/ExchangeRateCache";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
@@ -34,7 +35,6 @@ export const GeneralSettings: React.FC = () => {
 	const { isXs } = useBreakpoint();
 
 	const { persist } = useEnvironmentContext();
-	const { syncExchangeRates } = useProfileJobs(profile);
 
 	const { resetProfileTheme } = useTheme();
 	const { resetAccentColor } = useAccentColor();
@@ -184,8 +184,6 @@ export const GeneralSettings: React.FC = () => {
 		profile.settings().set(Contracts.ProfileSetting.TimeFormat, timeFormat);
 		profile.settings().set(Contracts.ProfileSetting.Avatar, avatar);
 
-		await syncExchangeRates();
-
 		await persist();
 
 		reset(getDefaultValues());
@@ -281,12 +279,18 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={currencyOptions}
 									defaultValue={exchangeCurrency}
-									onChange={(exchangeCurrency: SettingsOption) =>
+									onChange={(exchangeCurrency: SettingsOption) => {
+										if (
+											exchangeCurrency?.value !==
+											profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency)
+										) {
+											exchangeRateCache.flush();
+										}
 										setValue("exchangeCurrency", exchangeCurrency.value, {
 											shouldDirty: true,
 											shouldValidate: true,
-										})
-									}
+										});
+									}}
 								/>
 							</FormField>
 						</div>
