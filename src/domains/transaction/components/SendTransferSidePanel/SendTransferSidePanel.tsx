@@ -467,6 +467,7 @@ export const SendTransferSidePanel = ({
 									onError={(error) => {
 										setErrorMessage(error);
 										setActiveTab(SendTransferStep.ErrorStep);
+										setBatchTransferActiveTab(BatchTransferTabStep.ReviewStep);
 									}}
 									onBack={() => {
 										setActiveTab(SendTransferStep.FormStep);
