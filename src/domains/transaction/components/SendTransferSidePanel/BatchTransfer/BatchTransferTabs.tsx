@@ -15,17 +15,11 @@ import { httpClient } from "@/app/services";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import {
-	BatchTransferActions
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import { BatchTransferActions } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
-import {
-	ConfirmTransferStep
-} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
+import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
 import { useAllowance } from "@/domains/transaction/hooks/use-allowance";
-import {
-	useConfirmedTransaction
-} from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { calculateTotalAmount } from "@/domains/transaction/hooks/use-batch-transfer-details";
 
 const NAVIGATE_TO_CONFIRM_TRANSFER_DELAY_MS = 2000;
@@ -240,7 +234,7 @@ export const BatchTransferTabs = ({
 							<TabPanel tabId={BatchTransferTabStep.ApproveStep}>
 								<ApproveStep
 									wallet={wallet}
-									displayAuth={wallet.isLedger() ? (isAwaitingConnection || isWaitingLedger) : true}
+									displayAuth={wallet.isLedger() ? isAwaitingConnection || isWaitingLedger : true}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
 								/>

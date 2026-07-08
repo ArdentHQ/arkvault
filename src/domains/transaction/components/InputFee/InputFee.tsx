@@ -58,6 +58,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		onChangeGasLimit,
 		gasPrice,
 		gasLimit,
+		hideBody,
 		...properties
 	}: InputFeeProperties) => {
 		const { t } = useTranslation();
@@ -153,7 +154,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 					/>
 				</div>
 
-				{viewType === InputFeeViewType.Simple && (
+				{!hideBody && viewType === InputFeeViewType.Simple && (
 					<InputFeeSimple
 						blockTime={blockTime}
 						options={options}
@@ -166,7 +167,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 					/>
 				)}
 
-				{viewType === InputFeeViewType.Advanced && renderAdvanced()}
+				{!hideBody && viewType === InputFeeViewType.Advanced && renderAdvanced()}
 			</div>
 		);
 	},

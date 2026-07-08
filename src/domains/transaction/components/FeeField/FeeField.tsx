@@ -14,6 +14,7 @@ interface Properties {
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
+	hideBody?: boolean;
 }
 
 const gasLimit21k = BigNumber.make(21_000);
@@ -32,7 +33,7 @@ export const GasLimit: Record<Properties["type"], BigNumber> = {
 	vote: BigNumber.make(200_000),
 };
 
-export const FeeField: React.FC<Properties> = ({ type, network, profile, data }: Properties) => {
+export const FeeField: React.FC<Properties> = ({ type, network, profile, data, hideBody }: Properties) => {
 	const { calculate, estimateGas } = useFees(profile);
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
@@ -108,6 +109,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, data }:
 			estimatedGasLimit={estimatedGasLimit}
 			network={network}
 			profile={profile}
+			hideBody={hideBody}
 			onChangeGasPrice={(value) => {
 				setValue("gasPrice", value, { shouldDirty: true, shouldValidate: true });
 			}}
