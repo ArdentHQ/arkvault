@@ -83,7 +83,8 @@ export const BatchTransferTabs = ({
 	}, [isConfirmed, activeTab]);
 
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
-	const { hasDeviceAvailable, isConnected, connect, isAwaitingConnection, ledgerDevice } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, isAwaitingConnection, disconnect, ledgerDevice } =
+		useLedgerContext();
 
 	useEffect(() => {
 		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
@@ -117,8 +118,9 @@ export const BatchTransferTabs = ({
 	useEffect(() => {
 		if (activeTab === BatchTransferTabStep.ReviewStep) {
 			setIsWaitingLedger(false);
+			void disconnect();
 		}
-	}, [activeTab]);
+	}, [activeTab, disconnect]);
 
 	const sendApprovalTransaction = async () => {
 		const {
@@ -171,6 +173,7 @@ export const BatchTransferTabs = ({
 
 			setTransaction(transactionData);
 
+			setIsWaitingLedger(false);
 			setActiveTab(BatchTransferTabStep.SummaryStep);
 		} catch (error) {
 			onError(JSON.stringify({ message: error.message, type: error.name }));
@@ -194,12 +197,13 @@ export const BatchTransferTabs = ({
 			},
 			[BatchTransferTabStep.SummaryStep]: async () => {
 				setActiveTab(BatchTransferTabStep.ConfirmTransferStep);
-				if (wallet.isLedger()) {
-					await connectLedger();
-				}
 			},
 			[BatchTransferTabStep.ConfirmTransferStep]: async () => {
-				onSubmit();
+				if (wallet.isLedger()) {
+					await connectLedger();
+				} else {
+					onSubmit();
+				}
 			},
 		})[activeTab]();
 
@@ -253,6 +257,7 @@ export const BatchTransferTabs = ({
 							<TabPanel tabId={BatchTransferTabStep.ConfirmTransferStep}>
 								<ConfirmTransferStep
 									wallet={wallet}
+									displayAuth={wallet.isLedger() ? isAwaitingConnection || isWaitingLedger : true}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
 								/>
