@@ -101,10 +101,17 @@ export const BatchTransferTabs = ({
 		setIsWaitingLedger(true);
 	}, [wallet, profile, connect]);
 
-	const requiresContractApproval = !isAllowanceLoading && totalAmount.isGreaterThan(allowance);
-
 	const isAwaitingLedgerAction = wallet.isLedger() ? isAwaitingConnection || isWaitingLedger : false;
-	const isNextDisabled = !isValid || isAllowanceLoading || isWaitingLedger || isAwaitingLedgerAction;
+
+	// reset ledger state when active tab is ReviewStep
+	useEffect(() => {
+		if (activeTab === BatchTransferTabStep.ReviewStep) {
+			setIsWaitingLedger(false);
+			void disconnect();
+		}
+	}, [activeTab, disconnect]);
+
+	const isNextDisabled = !isValid || isAllowanceLoading || isAwaitingLedgerAction;
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
@@ -115,12 +122,7 @@ export const BatchTransferTabs = ({
 		}
 	});
 
-	useEffect(() => {
-		if (activeTab === BatchTransferTabStep.ReviewStep) {
-			setIsWaitingLedger(false);
-			void disconnect();
-		}
-	}, [activeTab, disconnect]);
+	const requiresContractApproval = !isAllowanceLoading && totalAmount.isGreaterThan(allowance);
 
 	const sendApprovalTransaction = async () => {
 		const {
