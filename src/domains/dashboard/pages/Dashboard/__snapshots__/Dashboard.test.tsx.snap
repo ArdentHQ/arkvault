@@ -498,7 +498,7 @@ exports[`Dashboard > should render 1`] = `
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -506,20 +506,14 @@ exports[`Dashboard > should render 1`] = `
                 Your Balance
               </div>
               <div
-                class="py-1"
+                class="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 md:text-theme-secondary-text md:dark:text-theme-text"
+                data-testid="Balance__value"
               >
                 <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
                 >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 60px; height: 16px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
+                  0 BTC
                 </span>
               </div>
             </div>
@@ -816,8 +810,8 @@ exports[`Dashboard > should render 1`] = `
             </div>
           </div>
           <div
-            class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
-            data-testid="PortfolioBreakdownSkeleton"
+            class="-mx-6 flex flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:mx-0 sm:rounded-xl lg:flex-row"
+            data-testid="PortfolioBreakdown"
           >
             <div
               class="flex"
@@ -830,26 +824,15 @@ exports[`Dashboard > should render 1`] = `
                 >
                   Your Balance
                 </span>
-                <div
-                  class="flex h-7 items-center"
+                <span
+                  class="whitespace-nowrap text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                  data-testid="Amount"
                 >
-                  <span
-                    aria-busy="true"
-                    aria-live="polite"
-                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                  >
-                    <span
-                      class="react-loading-skeleton"
-                      style="width: 100px; height: 18px;"
-                    >
-                      ‌
-                    </span>
-                    <br />
-                  </span>
-                </div>
+                  0 BTC
+                </span>
               </div>
               <div
-                class="ml-auto flex space-x-4 divide-x divide-theme-secondary-300 border-theme-secondary-300 pl-4 dark:divide-theme-secondary-800 dark:border-theme-secondary-800 lg:ml-4 lg:border-l"
+                class="ml-auto flex space-x-4 divide-x divide-theme-secondary-300 border-theme-secondary-300 pl-4 text-right dark:divide-theme-secondary-800 dark:border-theme-secondary-800 lg:ml-4 lg:border-l lg:text-left"
               >
                 <div
                   class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
@@ -859,23 +842,12 @@ exports[`Dashboard > should render 1`] = `
                   >
                     Assets
                   </span>
-                  <div
-                    class="flex h-7 items-center justify-end lg:justify-start"
+                  <span
+                    class="text-lg text-theme-secondary-700 dark:text-theme-secondary-200 lg:text-theme-secondary-900"
+                    data-testid="PortfolioBreakdown__assets"
                   >
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                    >
-                      <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 18px;"
-                      >
-                        ‌
-                      </span>
-                      <br />
-                    </span>
-                  </div>
+                    1
+                  </span>
                 </div>
                 <div
                   class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
@@ -885,42 +857,46 @@ exports[`Dashboard > should render 1`] = `
                   >
                     Wallets
                   </span>
-                  <div
-                    class="flex h-7 items-center justify-end lg:justify-start"
+                  <span
+                    class="text-lg text-theme-secondary-700 dark:text-theme-secondary-200 lg:text-theme-secondary-900"
+                    data-testid="PortfolioBreakdown__wallets"
                   >
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                    >
-                      <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 18px;"
-                      >
-                        ‌
-                      </span>
-                      <br />
-                    </span>
-                  </div>
+                    1
+                  </span>
                 </div>
               </div>
             </div>
             <div
-              class="mt-3 w-full max-w-full border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-4 sm:border-t sm:pt-4 lg:ml-12 lg:mt-0 lg:flex-1 lg:border-0 lg:pt-0"
+              class="mt-3 w-full border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-4 sm:border-t sm:pt-4 lg:ml-12 lg:mt-0 lg:flex-1 lg:border-0 lg:pt-0 hidden lg:block"
             >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              <div
+                class="flex flex-col-reverse sm:flex-col"
               >
-                <span
-                  class="react-loading-skeleton"
-                  style="height: 8px;"
+                <div
+                  class="absolute z-10 hidden opacity-0 transition-opacity duration-200"
+                  data-testid="TooltipContainer"
+                />
+                <div
+                  class="mt-3 flex justify-center sm:mb-1 sm:mt-0 sm:justify-start lg:justify-end"
+                  data-testid="LineGraph__legend"
                 >
-                  ‌
-                </span>
-                <br />
-              </span>
+                  <div
+                    class="mb-1 flex w-full justify-between lg:justify-end"
+                  >
+                    <button
+                      class="mx-auto text-sm font-semibold sm:mx-0 cursor-not-allowed text-theme-secondary-500 dark:text-theme-secondary-700"
+                      disabled=""
+                      type="button"
+                    >
+                      More Details
+                    </button>
+                  </div>
+                </div>
+                <svg
+                  class="h-5 w-full"
+                  data-testid="LineGraph__svg"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -1001,23 +977,12 @@ exports[`Dashboard > should render 1`] = `
                   <span
                     class="text-xs text-theme-secondary-500"
                   >
-                    <div
-                      class="flex items-center justify-end sm:h-6 h-4"
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
                     >
-                      <span
-                        aria-busy="true"
-                        aria-live="polite"
-                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                      >
-                        <span
-                          class="react-loading-skeleton sm:h-4.5 h-3.5"
-                          style="width: 110px;"
-                        >
-                          ‌
-                        </span>
-                        <br />
-                      </span>
-                    </div>
+                      0 BTC
+                    </span>
                   </span>
                 </div>
                 <div
@@ -1070,23 +1035,12 @@ exports[`Dashboard > should render 1`] = `
                     <span
                       class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex items-center justify-end sm:h-6 h-4"
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
                       >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton sm:h-4.5 h-3.5"
-                            style="width: 110px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
+                        0 BTC
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -1614,17 +1568,10 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                           >
                             <span
-                              aria-busy="true"
-                              aria-live="polite"
-                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                              class="whitespace-nowrap text-xs font-semibold text-theme-navy-200 dark:text-white md:text-base md:text-theme-secondary-700 dark:md:text-theme-secondary-500"
+                              data-testid="Amount"
                             >
-                              <span
-                                class="react-loading-skeleton"
-                                style="width: 100px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              <br />
+                              0 BTC
                             </span>
                           </div>
                         </td>
