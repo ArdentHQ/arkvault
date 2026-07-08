@@ -53,6 +53,7 @@ interface ActionsProperties {
 	handleNext: () => Promise<void>;
 	handleBack: () => void;
 	isNextDisabled: boolean;
+	hideBackButton: boolean;
 }
 
 export const BatchTransferActions = ({
@@ -61,6 +62,7 @@ export const BatchTransferActions = ({
 	handleBack,
 	handleNext,
 	isNextDisabled,
+	hideBackButton,
 }: ActionsProperties) => {
 	const { t } = useTranslation();
 
@@ -74,7 +76,7 @@ export const BatchTransferActions = ({
 
 	return (
 		<>
-			{activeTab !== BatchTransferTabStep.SummaryStep && (
+			{activeTab !== BatchTransferTabStep.SummaryStep && !hideBackButton && (
 				<Button variant="secondary" onClick={handleBack} data-testid="BatchTransfer__back-button">
 					{t("COMMON.BACK")}
 				</Button>

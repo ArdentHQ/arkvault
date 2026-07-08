@@ -30,7 +30,7 @@ export const ApproveStep = ({
 	const { t } = useTranslation();
 
 	const isFeeDisabled = wallet.isLedger() && isAwaitingLedgerAction;
-	const showAuthenticationStep = isFeeDisabled || !wallet.isLedger();
+	const showAuthenticationStep = wallet.isLedger() ? isAwaitingLedgerAction : true;
 
 	const { register, getValues } = useFormContext();
 	const { recipients, tokenContractAddress } = getValues();

@@ -33,7 +33,7 @@ export const ConfirmTransferStep = ({
 	const { t } = useTranslation();
 
 	const isFeeDisabled = wallet.isLedger() && isAwaitingLedgerAction;
-	const showAuthenticationStep = isFeeDisabled || !wallet.isLedger();
+	const showAuthenticationStep = wallet.isLedger() ? isAwaitingLedgerAction : true;
 
 	const [showModal, setShowModal] = useState(false);
 

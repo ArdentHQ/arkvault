@@ -277,6 +277,7 @@ export const BatchTransferTabs = ({
 							isNextDisabled={isNextDisabled}
 							handleBack={handleBack}
 							isConfirmed={isConfirmed}
+							hideBackButton={isAwaitingLedgerAction}
 						/>
 					</SidePanelButtons>
 				</div>
