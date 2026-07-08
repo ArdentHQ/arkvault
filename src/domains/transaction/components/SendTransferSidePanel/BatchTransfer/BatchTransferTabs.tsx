@@ -15,11 +15,17 @@ import { httpClient } from "@/app/services";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { BatchTransferActions } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
+import {
+	BatchTransferActions
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTranfer.blocks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
-import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
+import {
+	ConfirmTransferStep
+} from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/ConfirmTransferStep";
 import { useAllowance } from "@/domains/transaction/hooks/use-allowance";
-import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import {
+	useConfirmedTransaction
+} from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { calculateTotalAmount } from "@/domains/transaction/hooks/use-batch-transfer-details";
 
 const NAVIGATE_TO_CONFIRM_TRANSFER_DELAY_MS = 2000;
@@ -83,7 +89,7 @@ export const BatchTransferTabs = ({
 	}, [isConfirmed, activeTab]);
 
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
-	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, isAwaitingConnection, ledgerDevice } = useLedgerContext();
 
 	useEffect(() => {
 		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
@@ -101,7 +107,9 @@ export const BatchTransferTabs = ({
 	}, [wallet, profile, connect]);
 
 	const requiresContractApproval = !isAllowanceLoading && totalAmount.isGreaterThan(allowance);
-	const isNextDisabled = !isValid || isAllowanceLoading;
+
+	const isLedgerApproveDisabled = wallet.isLedger() ? isAwaitingConnection || isWaitingLedger : false;
+	const isNextDisabled = !isValid || isAllowanceLoading || isWaitingLedger || isLedgerApproveDisabled;
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
@@ -111,6 +119,12 @@ export const BatchTransferTabs = ({
 			void handleNext();
 		}
 	});
+
+	useEffect(() => {
+		if (activeTab === BatchTransferTabStep.ReviewStep) {
+			setIsWaitingLedger(false);
+		}
+	}, [activeTab]);
 
 	const sendApprovalTransaction = async () => {
 		const {
@@ -176,13 +190,13 @@ export const BatchTransferTabs = ({
 					? BatchTransferTabStep.ApproveStep
 					: BatchTransferTabStep.ConfirmTransferStep;
 				setActiveTab(nextStep);
-
-				if (wallet.isLedger()) {
-					await connectLedger();
-				}
 			},
 			[BatchTransferTabStep.ApproveStep]: async () => {
-				void sendApprovalTransaction();
+				if (wallet.isLedger()) {
+					await connectLedger();
+				} else {
+					void sendApprovalTransaction();
+				}
 			},
 			[BatchTransferTabStep.SummaryStep]: async () => {
 				setActiveTab(BatchTransferTabStep.ConfirmTransferStep);
@@ -226,6 +240,7 @@ export const BatchTransferTabs = ({
 							<TabPanel tabId={BatchTransferTabStep.ApproveStep}>
 								<ApproveStep
 									wallet={wallet}
+									displayAuth={wallet.isLedger() ? (isAwaitingConnection || isWaitingLedger) : true}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
 								/>

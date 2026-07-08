@@ -17,10 +17,11 @@ import { TransferLedgerReview } from "@/domains/transaction/components/SendTrans
 interface ApproveStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 	ledgerIsAwaitingDevice?: boolean;
+	displayAuth?: boolean;
 	ledgerIsAwaitingApp?: boolean;
 }
 
-export const ApproveStep = ({ wallet, ledgerIsAwaitingDevice, ledgerIsAwaitingApp }: ApproveStepProperties) => {
+export const ApproveStep = ({ wallet, ledgerIsAwaitingDevice, ledgerIsAwaitingApp, displayAuth }: ApproveStepProperties) => {
 	const { t } = useTranslation();
 
 	const { register, getValues } = useFormContext();
@@ -116,7 +117,7 @@ export const ApproveStep = ({ wallet, ledgerIsAwaitingDevice, ledgerIsAwaitingAp
 					</FormField>
 				</div>
 
-				<div className="px-3 pt-1 sm:px-0 sm:pt-0">
+				{displayAuth && <div className="px-3 pt-1 sm:px-0 sm:pt-0">
 					<AuthenticationStep
 						wallet={wallet!}
 						noHeading
@@ -129,7 +130,7 @@ export const ApproveStep = ({ wallet, ledgerIsAwaitingDevice, ledgerIsAwaitingAp
 							// keep waiting when it is not available
 						}}
 					/>
-				</div>
+				</div>}
 			</div>
 		</section>
 	);
