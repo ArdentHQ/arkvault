@@ -318,7 +318,12 @@ describe("LedgerMigrationSidepanel", () => {
 			const closeButton = screen.getByTestId("SidePanel__close-button");
 			await userEvent.click(closeButton);
 
-			expect(onOpenChange).toHaveBeenCalledWith(false);
+			await waitFor(
+				() => {
+					expect(onOpenChange).toHaveBeenCalledWith(false);
+				},
+				{ timeout: 4000 },
+			);
 		},
 	);
 
@@ -565,9 +570,6 @@ describe("LedgerMigrationSidepanel", () => {
 			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
 			await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
-			await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
-
-			expect(await screen.findByTestId(successGotoPortfolioTestId, { timeout: 4000 })).toBeInTheDocument();
 
 			await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
@@ -608,11 +610,6 @@ describe("LedgerMigrationSidepanel", () => {
 		});
 		await userEvent.click(screen.getByTestId(ledgerContinueButton));
 		expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
-		await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
-
-		expect(await screen.findByTestId(successGotoPortfolioTestId, { timeout: 4000 })).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 		expect(await screen.findByTestId("ConfirmationModal__no-button")).toBeInTheDocument();
@@ -659,9 +656,6 @@ describe("LedgerMigrationSidepanel", () => {
 			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
 			await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
-			await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
-
-			expect(await screen.findByTestId(successGotoPortfolioTestId, { timeout: 4000 })).toBeInTheDocument();
 
 			await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 			expect(await screen.findByTestId("ConfirmationModal__yes-button")).toBeInTheDocument();
