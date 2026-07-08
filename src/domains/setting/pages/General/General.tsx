@@ -286,7 +286,7 @@ export const GeneralSettings: React.FC = () => {
 										) {
 											exchangeRateCache.flush();
 										}
-                    
+
 										setValue("exchangeCurrency", exchangeCurrency?.value, {
 											shouldDirty: true,
 											shouldValidate: true,
