@@ -84,8 +84,7 @@ export const BatchTransferTabs = ({
 
 	const [authenticatingLedger, setAuthenticatingLedger] = useState<boolean>(false);
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
-	const { hasDeviceAvailable, isConnected, connect, disconnect, ledgerDevice } =
-		useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, disconnect, ledgerDevice } = useLedgerContext();
 
 	useEffect(() => {
 		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
