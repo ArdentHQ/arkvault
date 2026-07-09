@@ -66,11 +66,11 @@ export const BatchTransferActions = ({
 	hideBackButton,
 }: ActionsProperties) => {
 	const { t } = useTranslation();
-	const {isSmAndAbove} = useBreakpoint();
+	const { isSmAndAbove } = useBreakpoint();
 
 	if (activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed) {
 		return (
-			<div className="h-11 w-full flex items-center justify-center text-center text-sm text-theme-secondary-700">
+			<div className="flex h-11 w-full items-center justify-center text-center text-sm text-theme-secondary-700">
 				{t("TRANSACTION.BATCH_TRANSFER.SUMMARY_PENDING_STEP.AWAITING_HINT")}
 			</div>
 		);
