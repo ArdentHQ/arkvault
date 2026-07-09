@@ -57,7 +57,7 @@ export const ApproveStep = ({
 
 	return (
 		<section data-testid="BatchTransfer__approve-step">
-			<div className="space-y-3 sm:space-y-4">
+			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<DetailWrapper label={t("COMMON.AUTHORIZATION_DETAILS")} className="rounded-xl">
 					<div className="space-y-3">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
@@ -136,7 +136,7 @@ export const ApproveStep = ({
 				</div>
 
 				{showAuthenticationStep && (
-					<div className="px-3 sm:px-0">
+					<div className="px-3 pt-1 sm:px-0 sm:pt-0">
 						<AuthenticationStep
 							wallet={wallet!}
 							noHeading
