@@ -58,7 +58,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		onChangeGasLimit,
 		gasPrice,
 		gasLimit,
-		hideBody,
+		isDisabled,
 		...properties
 	}: InputFeeProperties) => {
 		const { t } = useTranslation();
@@ -139,7 +139,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 			<div data-testid="InputFee" className="relative">
 				<div className="absolute right-0 -mt-7">
 					<Switch
-						disabled={loading}
+						disabled={loading || disabled}
 						size="sm"
 						value={viewType}
 						onChange={onChangeViewType}
@@ -154,7 +154,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 					/>
 				</div>
 
-				{!hideBody && viewType === InputFeeViewType.Simple && (
+				{!isDisabled && viewType === InputFeeViewType.Simple && (
 					<InputFeeSimple
 						blockTime={blockTime}
 						options={options}
@@ -167,7 +167,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 					/>
 				)}
 
-				{!hideBody && viewType === InputFeeViewType.Advanced && renderAdvanced()}
+				{!isDisabled && viewType === InputFeeViewType.Advanced && renderAdvanced()}
 			</div>
 		);
 	},

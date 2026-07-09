@@ -125,7 +125,7 @@ export const ApproveStep = ({
 
 						<FeeField
 							type="approve"
-							hideBody={isFeeDisabled}
+							isDisabled={isFeeDisabled}
 							data={{ token: walletToken.token() }}
 							network={network}
 							profile={profile}

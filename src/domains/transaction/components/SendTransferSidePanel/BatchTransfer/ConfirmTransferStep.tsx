@@ -140,7 +140,7 @@ export const ConfirmTransferStep = ({
 
 						<FeeField
 							type="batchTransfer"
-							hideBody={isFeeDisabled}
+							isDisabled={isFeeDisabled}
 							data={{ token: walletToken.token() }}
 							network={network}
 							profile={profile}
