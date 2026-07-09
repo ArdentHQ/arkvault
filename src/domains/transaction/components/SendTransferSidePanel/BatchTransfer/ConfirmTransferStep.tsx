@@ -126,7 +126,7 @@ export const ConfirmTransferStep = ({
 
 				<div
 					className={cn(
-						"border-t border-theme-secondary-300 px-3 mt-6 sm:mt-0 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0",
+						"mt-6 border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:mt-0 sm:border-none sm:px-0 sm:pt-0",
 						{
 							"blur-xs pointer-events-none mb-0": isFeeDisabled,
 						},
