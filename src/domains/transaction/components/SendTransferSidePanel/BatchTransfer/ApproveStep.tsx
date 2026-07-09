@@ -111,7 +111,7 @@ export const ApproveStep = ({
 
 				<div
 					className={cn(
-						"border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0",
+						"mt-6 border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:mt-0 sm:border-none sm:px-0 sm:pt-0",
 						{
 							"blur-xs pointer-events-none mb-0": isFeeDisabled,
 						},
@@ -119,9 +119,11 @@ export const ApproveStep = ({
 				>
 					<FormField name="fee" disableStateHints>
 						<FormLabel
-							textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+							textClassName="hidden sm:block sm:text-base leading-5"
 							label={t("TRANSACTION.TRANSACTION_FEE")}
 						/>
+
+						<FormLabel textClassName="sm:hidden text-sm leading-[17px]" label={t("COMMON.FEE")} />
 
 						<FeeField
 							type="approve"
@@ -134,7 +136,7 @@ export const ApproveStep = ({
 				</div>
 
 				{showAuthenticationStep && (
-					<div className="px-3 pt-1 sm:px-0 sm:pt-0">
+					<div className="px-3 sm:px-0">
 						<AuthenticationStep
 							wallet={wallet!}
 							noHeading

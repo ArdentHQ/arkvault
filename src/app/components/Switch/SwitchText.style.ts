@@ -17,9 +17,9 @@ const getVariant = (disabled: boolean) => {
 
 const getSize = (size?: Size) => {
 	const sizes = {
-		default: () => "text-sm sm:text-base first:mr-3 last:ml-3",
+		default: () => "leading-[17px] sm:leading-5 text-sm sm:text-base first:mr-3 last:ml-3",
 		lg: () => "text-sm sm:text-lg first:mr-4 last:ml-4",
-		sm: () => "text-sm first:mr-2 last:ml-2",
+		sm: () => "text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2",
 	};
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition

@@ -68,7 +68,7 @@ export const BatchTransferActions = ({
 
 	if (activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed) {
 		return (
-			<div className="leading-11 w-full text-center text-sm text-theme-secondary-700">
+			<div className="h-11 w-full text-center text-sm text-theme-secondary-700">
 				{t("TRANSACTION.BATCH_TRANSFER.SUMMARY_PENDING_STEP.AWAITING_HINT")}
 			</div>
 		);
