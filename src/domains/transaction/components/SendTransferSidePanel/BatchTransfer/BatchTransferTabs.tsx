@@ -82,8 +82,9 @@ export const BatchTransferTabs = ({
 		};
 	}, [isConfirmed, activeTab]);
 
+	const [authenticatingLedger, setAuthenticatingLedger] = useState<boolean>(false);
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
-	const { hasDeviceAvailable, isConnected, connect, isAwaitingConnection, disconnect, ledgerDevice } =
+	const { hasDeviceAvailable, isConnected, connect, disconnect, ledgerDevice } =
 		useLedgerContext();
 
 	useEffect(() => {
@@ -97,21 +98,21 @@ export const BatchTransferTabs = ({
 	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
 
 	const connectLedger = useCallback(async () => {
+		setAuthenticatingLedger(true);
 		await connect(profile);
 		setIsWaitingLedger(true);
 	}, [wallet, profile, connect]);
 
-	const isAwaitingLedgerAction = wallet.isLedger() ? isAwaitingConnection || isWaitingLedger : false;
-
 	// reset ledger state when active tab is ReviewStep
 	useEffect(() => {
 		if (activeTab === BatchTransferTabStep.ReviewStep) {
+			setAuthenticatingLedger(false);
 			setIsWaitingLedger(false);
 			void disconnect();
 		}
 	}, [activeTab, disconnect]);
 
-	const isNextDisabled = !isValid || isAllowanceLoading || isAwaitingLedgerAction;
+	const isNextDisabled = !isValid || isAllowanceLoading || authenticatingLedger;
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
@@ -175,6 +176,7 @@ export const BatchTransferTabs = ({
 
 			setTransaction(transactionData);
 
+			setAuthenticatingLedger(false);
 			setIsWaitingLedger(false);
 			setActiveTab(BatchTransferTabStep.SummaryStep);
 		} catch (error) {
@@ -240,7 +242,7 @@ export const BatchTransferTabs = ({
 							<TabPanel tabId={BatchTransferTabStep.ApproveStep}>
 								<ApproveStep
 									wallet={wallet}
-									isAwaitingLedgerAction={isAwaitingLedgerAction}
+									isAwaitingLedgerAction={authenticatingLedger}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
 								/>
@@ -259,7 +261,7 @@ export const BatchTransferTabs = ({
 							<TabPanel tabId={BatchTransferTabStep.ConfirmTransferStep}>
 								<ConfirmTransferStep
 									wallet={wallet}
-									isAwaitingLedgerAction={isAwaitingLedgerAction}
+									isAwaitingLedgerAction={authenticatingLedger}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
 								/>
@@ -279,7 +281,7 @@ export const BatchTransferTabs = ({
 							isNextDisabled={isNextDisabled}
 							handleBack={handleBack}
 							isConfirmed={isConfirmed}
-							hideBackButton={isAwaitingLedgerAction}
+							hideBackButton={authenticatingLedger}
 						/>
 					</SidePanelButtons>
 				</div>
