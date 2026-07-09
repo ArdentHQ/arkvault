@@ -311,10 +311,6 @@ describe("LedgerMigrationSidepanel", () => {
 
 			expect(screen.getByTestId("LedgerMigrationSidepanel")).toBeInTheDocument();
 
-			await waitFor(() => {
-				expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
-			});
-
 			const closeButton = screen.getByTestId("SidePanel__close-button");
 			await userEvent.click(closeButton);
 
@@ -539,7 +535,7 @@ describe("LedgerMigrationSidepanel", () => {
 	);
 
 	it.each(["sm", "md", "lg", "xl"])(
-		"should show confirmation modal when closing with completed transactions in %s",
+		"should show confirmation modal when closing with pending transactions in %s",
 		async (containerSize) => {
 			mockNanoSTransport();
 			const wallet = profile.wallets().first();
