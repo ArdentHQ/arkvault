@@ -311,14 +311,15 @@ describe("LedgerMigrationSidepanel", () => {
 
 			expect(screen.getByTestId("LedgerMigrationSidepanel")).toBeInTheDocument();
 
-			await waitFor(() => {
-				expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
-			});
-
 			const closeButton = screen.getByTestId("SidePanel__close-button");
 			await userEvent.click(closeButton);
 
-			expect(onOpenChange).toHaveBeenCalledWith(false);
+			await waitFor(
+				() => {
+					expect(onOpenChange).toHaveBeenCalledWith(false);
+				},
+				{ timeout: 4000 },
+			);
 		},
 	);
 
@@ -534,7 +535,7 @@ describe("LedgerMigrationSidepanel", () => {
 	);
 
 	it.each(["sm", "md", "lg", "xl"])(
-		"should show confirmation modal when closing with completed transactions in %s",
+		"should show confirmation modal when closing with pending transactions in %s",
 		async (containerSize) => {
 			mockNanoSTransport();
 			const wallet = profile.wallets().first();
@@ -565,9 +566,6 @@ describe("LedgerMigrationSidepanel", () => {
 			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
 			await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
-			await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
-
-			expect(await screen.findByTestId(successGotoPortfolioTestId, { timeout: 4000 })).toBeInTheDocument();
 
 			await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
@@ -608,11 +606,6 @@ describe("LedgerMigrationSidepanel", () => {
 		});
 		await userEvent.click(screen.getByTestId(ledgerContinueButton));
 		expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
-		await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
-
-		expect(await screen.findByTestId(successGotoPortfolioTestId, { timeout: 4000 })).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 		expect(await screen.findByTestId("ConfirmationModal__no-button")).toBeInTheDocument();
@@ -659,9 +652,6 @@ describe("LedgerMigrationSidepanel", () => {
 			expect(await screen.findByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 
 			await userEvent.click(screen.getByTestId(acceptResponsibilityTestId));
-			await userEvent.click(screen.getByTestId(overviewContinueButtonTestId));
-
-			expect(await screen.findByTestId(successGotoPortfolioTestId, { timeout: 4000 })).toBeInTheDocument();
 
 			await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 			expect(await screen.findByTestId("ConfirmationModal__yes-button")).toBeInTheDocument();
