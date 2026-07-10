@@ -14,6 +14,7 @@ import {
 	getDefaultWalletMnemonic,
 } from "@/utils/testing-library";
 import * as ReactRouter from "react-router";
+import * as AppContexts from "@/app/contexts";
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
@@ -243,6 +244,127 @@ describe("#BatchTransfer", { timeout: 8000 }, () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+	});
+
+	it("should send approve contract and batch transfer transaction with ledger", async () => {
+		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		const originalDataGet = wallet.data().get.bind(wallet.data());
+		const dataGetSpy = vi.spyOn(wallet.data(), "get").mockImplementation((key: any) => {
+			if (key === Contracts.WalletData.DerivationPath) {
+				return "m/44'/1'/1'/0/0";
+			}
+			return originalDataGet(key);
+		});
+
+		const connectMock = vi.fn().mockResolvedValue(undefined);
+		const disconnectMock = vi.fn().mockResolvedValue(undefined);
+
+		const ledgerCtxSpy = vi.spyOn(AppContexts, "useLedgerContext").mockReturnValue({
+			connect: connectMock,
+			disconnect: disconnectMock,
+			hasDeviceAvailable: true,
+			isAwaitingConnection: false,
+			isConnected: true,
+			ledgerDevice: { id: "nanoSP" },
+			listenDevice: vi.fn(),
+		} as any);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
+			route: `/profiles/${getDefaultProfileId()}/dashboard`,
+		});
+
+		await fillFormStep();
+
+		// Navigate to review step
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Navigate to approve contract step
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+		await userEvent.click(batchTransferContinueButton());
+		await expect(screen.findByTestId(approveStepID)).resolves.toBeVisible();
+
+		// Mock requests and methods for the approve contract transaction
+		const approveTxData = approveTransactionData(wallet);
+
+		let signedTx = new ExtendedSignedTransactionData(
+			new SignedTransactionData().configure(approveTxData.signed),
+			wallet,
+		);
+
+		let transactionMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTx);
+
+		let hash = signedTx.hash();
+
+		server.use(
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/transactions/${hash}`, approveTxData.confirmed),
+		);
+
+		let signMock = vi.spyOn(wallet.transaction(), "signApproveContract").mockReturnValue(Promise.resolve(hash));
+
+		let broadcastMock = vi
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [hash], errors: {}, rejected: [] });
+
+		// Connect ledger and send approve contract transaction
+		await waitFor(() => expect(batchTransferContinueButton()).not.toBeDisabled());
+		await userEvent.click(batchTransferContinueButton());
+
+		await waitFor(() => expect(connectMock).toHaveBeenCalledTimes(1));
+		await waitFor(() => expect(signMock).toHaveBeenCalled());
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+
+		// Navigate to confirm transfer step
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+		await userEvent.click(batchTransferContinueButton());
+		await expect(screen.findByTestId(confirmTransferStepID)).resolves.toBeVisible();
+
+		// Mock requests and methods for the batch transfer transaction
+		const batchTransferTxData = batchTransferTransactionData(wallet);
+
+		signedTx = new ExtendedSignedTransactionData(
+			new SignedTransactionData().configure(batchTransferTxData.signed),
+			wallet,
+		);
+
+		transactionMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTx);
+
+		hash = signedTx.hash();
+
+		server.use(
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/transactions/${hash}`, batchTransferTxData.confirmed),
+		);
+
+		signMock = vi.spyOn(wallet.transaction(), "signMultiPayment").mockReturnValue(Promise.resolve(hash));
+
+		broadcastMock = vi
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [hash], errors: {}, rejected: [] });
+
+		// Connect ledger and send batch transfer transaction
+		await waitFor(() => expect(batchTransferContinueButton()).not.toBeDisabled());
+		await userEvent.click(batchTransferContinueButton());
+
+		await waitFor(() => expect(connectMock).toHaveBeenCalledTimes(2));
+		await waitFor(() => expect(signMock).toHaveBeenCalled());
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		dataGetSpy.mockRestore();
+		isLedgerSpy.mockRestore();
+		ledgerCtxSpy.mockRestore();
 	});
 
 	it("should send batch transfer transaction without contract approval", async () => {
