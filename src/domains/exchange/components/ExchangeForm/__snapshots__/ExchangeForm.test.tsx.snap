@@ -745,11 +745,6 @@ exports[`FormStep > should render 1`] = `
                             </div>
                           </div>
                         </div>
-                        <div
-                          aria-labelledby="fromCurrency-label"
-                          id="fromCurrency-menu"
-                          role="listbox"
-                        />
                       </span>
                     </span>
                   </div>
@@ -995,11 +990,6 @@ exports[`FormStep > should render 1`] = `
                               </div>
                             </div>
                           </div>
-                          <div
-                            aria-labelledby="toCurrency-label"
-                            id="toCurrency-menu"
-                            role="listbox"
-                          />
                         </span>
                       </span>
                     </div>
@@ -1185,11 +1175,6 @@ exports[`FormStep > should render 1`] = `
                           </div>
                         </div>
                       </div>
-                      <div
-                        aria-labelledby="SelectRecipient__dropdown-label"
-                        id="SelectRecipient__dropdown-menu"
-                        role="listbox"
-                      />
                     </span>
                   </span>
                 </div>

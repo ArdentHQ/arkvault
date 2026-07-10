@@ -112,11 +112,6 @@ exports[`SelectAddressDropdown > should render disabled 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="SelectAddressDropdown__dropdown-label"
-                  id="SelectAddressDropdown__dropdown-menu"
-                  role="listbox"
-                />
               </span>
             </span>
           </div>
@@ -238,11 +233,6 @@ exports[`SelectAddressDropdown > should render empty 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="SelectAddressDropdown__dropdown-label"
-                  id="SelectAddressDropdown__dropdown-menu"
-                  role="listbox"
-                />
               </span>
             </span>
           </div>
@@ -491,11 +481,6 @@ exports[`SelectAddressDropdown > should render invalid 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="SelectAddressDropdown__dropdown-label"
-                  id="SelectAddressDropdown__dropdown-menu"
-                  role="listbox"
-                />
               </span>
             </span>
           </div>
@@ -633,11 +618,6 @@ exports[`SelectAddressDropdown > should render with preselected address 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="SelectAddressDropdown__dropdown-label"
-                  id="SelectAddressDropdown__dropdown-menu"
-                  role="listbox"
-                />
               </span>
             </span>
           </div>

@@ -69,6 +69,7 @@ interface InputFeeProperties {
 	onChangeGasLimit: OnGasLimitChange;
 	onChangeViewType?: (value: InputFeeViewType) => void;
 	onChangeFeeOption?: (value: InputFeeOption) => void;
+	isDisabled?: boolean;
 }
 
 export { DEFAULT_FEE_OPTION, DEFAULT_VIEW_TYPE, InputFeeOption, InputFeeViewType };

@@ -32,6 +32,7 @@ type AuthenticationStepProperties = {
 	ledgerDetails?: React.ReactNode;
 	subject?: "transaction" | "message";
 	noHeading?: boolean;
+	noDescription?: boolean;
 	requireLedgerConfirmation?: boolean;
 } & LedgerStates;
 
@@ -104,6 +105,7 @@ export const LedgerAuthentication = ({
 	ledgerSupportedModels,
 	onDeviceNotAvailable,
 	noHeading,
+	noDescription,
 	requireLedgerConfirmation = true,
 }: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
@@ -152,7 +154,11 @@ export const LedgerAuthentication = ({
 						/>
 					)}
 
-					{requireLedgerConfirmation && <LedgerConfirmation noHeading>{ledgerDetails}</LedgerConfirmation>}
+					{requireLedgerConfirmation && (
+						<LedgerConfirmation noHeading noDescription={noDescription}>
+							{ledgerDetails}
+						</LedgerConfirmation>
+					)}
 
 					{!requireLedgerConfirmation && subject === "message" && (
 						<Loader
@@ -192,6 +198,7 @@ export const AuthenticationStep = ({
 	onDeviceNotAvailable,
 	subject = "transaction",
 	noHeading,
+	noDescription,
 	requireLedgerConfirmation,
 }: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
@@ -211,6 +218,7 @@ export const AuthenticationStep = ({
 				wallet={wallet}
 				subject={subject}
 				noHeading={noHeading}
+				noDescription={noDescription}
 				requireLedgerConfirmation={requireLedgerConfirmation}
 			/>
 		);

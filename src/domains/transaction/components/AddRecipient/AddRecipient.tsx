@@ -18,11 +18,8 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { SelectToken } from "@/domains/tokens/components/SelectToken";
 import { Enums } from "@/app/lib/mainsail";
-import { useTransferAssets } from "@/domains/transaction/hooks/use-send-transfer-assets";
 import { DISPLAY_DECIMALS } from "@/domains/transaction/utils";
-import { ContractAddressHint } from "@/domains/transaction/components/ContractAddressHint/ContractAddressHint";
 
 const TransferType = ({ isSingle, onChange, maxRecipients, disableMultiple }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -58,13 +55,13 @@ export const AddRecipient = ({
 	profile,
 	recipients = [],
 	wallet,
-	onTokenChange,
 	tokens = [],
 	isTokenTransfer,
+	isSingle,
+	onIsSingleChange,
 }: AddRecipientProperties) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
-	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 	const isMountedReference = useRef(false);
 
 	const {
@@ -85,6 +82,7 @@ export const AddRecipient = ({
 		isSendAllSelected,
 		tokenContractAddress,
 	} = watch();
+
 	const { sendTransfer } = useValidation();
 	const selectedAsset = tokenContractAddress;
 	const selectedToken = tokens.find((token) => token.token().address() === selectedAsset);
@@ -96,22 +94,12 @@ export const AddRecipient = ({
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
 
 	const remainingBalance = useMemo(() => {
-		if (wallet) {
-			const token = wallet
-				.tokens()
-				.values()
-				.find((token) => token.token().address() === selectedAsset);
+		const token = wallet
+			?.tokens()
+			.values()
+			.find((token) => token.token().address() === selectedAsset);
 
-			if (token) {
-				return token.balance();
-			}
-
-			if (!selectedAsset) {
-				return BigNumber.ZERO;
-			}
-		}
-
-		let senderBalance = BigNumber.make(wallet?.balance() || 0);
+		let senderBalance = token ? token.balance() : BigNumber.make(wallet?.balance() || 0);
 
 		if (isSingle) {
 			return senderBalance;
@@ -195,6 +183,16 @@ export const AddRecipient = ({
 	}, [isSingle, clearErrors, clearFields, addedRecipients, setValue]);
 
 	useEffect(() => {
+		if (!isMountedReference.current) {
+			return;
+		}
+
+		if (isSingle) {
+			setAddedRecipients([]);
+		}
+	}, [isSingle]);
+
+	useEffect(() => {
 		if (!isSingle) {
 			setValue("isSendAllSelected", false);
 		}
@@ -234,13 +232,6 @@ export const AddRecipient = ({
 			amount: balance,
 		});
 	}, [isSendAllSelected, remainingBalance.toString(), setValue]);
-
-	const { assets } = useTransferAssets({
-		isSingle,
-		profile,
-		selectedAsset: recipients.length > 0 ? selectedAsset : undefined,
-		tokens,
-	});
 
 	const singleRecipientOnChange = ({
 		address,
@@ -320,9 +311,7 @@ export const AddRecipient = ({
 						maxRecipients={maxRecipients}
 						isSingle={isSingle}
 						disableMultiple={!selectedAsset}
-						onChange={(isSingle) => {
-							setIsSingle(isSingle);
-						}}
+						onChange={onIsSingleChange}
 					/>
 				)}
 			</div>
@@ -356,44 +345,14 @@ export const AddRecipient = ({
 								}}
 							/>
 						</FormField>
-
-						<FormField name="asset">
-							<div className="relative block space-y-2 sm:hidden">
-								<FormLabel>
-									<div>{t("COMMON.ASSET")}</div>
-								</FormLabel>
-								<SelectToken
-									value={selectedAsset}
-									tokens={assets}
-									wallet={wallet}
-									onChange={({ value }) => {
-										const tokenAddress = value;
-										const token = tokens.find((token) => token.token().address() === tokenAddress);
-
-										if (amount) {
-											void trigger("amount");
-										}
-
-										setValue("tokenContractAddress", tokenAddress, {
-											shouldDirty: true,
-											shouldValidate: true,
-										});
-
-										onTokenChange?.(token);
-									}}
-								/>
-							</div>
-						</FormField>
 					</div>
 
 					<FormField name="amount">
 						<FormLabel>
 							<span className="items-centers flex w-full justify-between">
 								<div className="flex flex-row items-center gap-1.5">
-									<span className="sm:hidden">{t("COMMON.AMOUNT")}</span>
-									<span className="hidden text-base leading-5 sm:block">
-										{t("COMMON.ASSET_AMOUNT")}
-									</span>
+									<span>{t("COMMON.AMOUNT")}</span>
+
 									<span className="text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:hidden">
 										(
 										<Amount
@@ -406,7 +365,7 @@ export const AddRecipient = ({
 									</span>
 								</div>
 								<div className="flex flex-row items-center gap-2">
-									{isSenderFilled && (
+									{isSenderFilled && isSingle && (
 										<div
 											data-testid="AddRecipient__available"
 											className="hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:flex"
@@ -420,7 +379,21 @@ export const AddRecipient = ({
 											/>
 										</div>
 									)}
-									{isSenderFilled && !!remainingBalance && isSingle && (
+									{isSenderFilled && !isSingle && (
+										<div
+											data-testid="AddRecipient__remaining"
+											className="hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 sm:flex"
+										>
+											<span className="hidden pr-1 sm:inline">{t("COMMON.REMAINING")}:</span>
+											<Amount
+												value={remainingBalance.decimalPlaces(DISPLAY_DECIMALS)}
+												ticker={ticker}
+												showTicker
+												showCompactFormat
+											/>
+										</div>
+									)}
+									{isSenderFilled && !remainingBalance.isZero() && isSingle && (
 										<div
 											className="hidden h-3 w-px bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700 sm:flex"
 											data-testid="AddRecipient__divider"
@@ -447,32 +420,8 @@ export const AddRecipient = ({
 						</FormLabel>
 
 						<div className="relative flex">
-							<div className="hidden w-full sm:block sm:max-w-44">
-								<SelectToken
-									wallet={wallet}
-									value={selectedAsset}
-									tokens={assets}
-									className="sm:rounded-r-none sm:border-r-transparent"
-									onChange={({ value }) => {
-										const tokenAddress = value;
-										const token = tokens.find((token) => token.token().address() === tokenAddress);
-
-										if (amount) {
-											void trigger("amount");
-										}
-
-										setValue("tokenContractAddress", tokenAddress, {
-											shouldDirty: true,
-											shouldValidate: true,
-										});
-
-										onTokenChange?.(token);
-									}}
-								/>
-							</div>
 							<div className="flex-1">
 								<InputCurrency
-									className="sm:rounded-l-none"
 									network={network}
 									disabled={!isSenderFilled}
 									data-testid="AddRecipient__amount"
@@ -497,13 +446,6 @@ export const AddRecipient = ({
 							</div>
 						</div>
 					</FormField>
-
-					{selectedToken && wallet && (
-						<ContractAddressHint
-							token={selectedToken}
-							link={wallet.link().wallet(selectedToken.token().address())}
-						/>
-					)}
 
 					{!isSingle && (
 						<Button

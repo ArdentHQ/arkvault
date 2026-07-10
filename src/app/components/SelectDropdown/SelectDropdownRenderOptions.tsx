@@ -13,7 +13,7 @@ export const SelectDropdownRenderOptions = ({
 	data,
 	getItemProps,
 	highlightedIndex,
-	inputValue,
+	selectedValue,
 	onMouseDown,
 	renderLabel,
 }: SelectDropdownRenderOptionsProperties) => {
@@ -33,7 +33,7 @@ export const SelectDropdownRenderOptions = ({
 						item={item}
 						getItemProps={getItemProps}
 						renderLabel={renderLabel}
-						inputValue={inputValue}
+						selectedValue={selectedValue}
 						onMouseDown={onMouseDown}
 						highlightedIndex={highlightedIndex}
 					/>
@@ -59,7 +59,7 @@ export const SelectDropdownRenderOptions = ({
 							item={item}
 							getItemProps={getItemProps}
 							renderLabel={renderLabel}
-							inputValue={inputValue}
+							selectedValue={selectedValue}
 							onMouseDown={onMouseDown}
 							highlightedIndex={highlightedIndex}
 						/>

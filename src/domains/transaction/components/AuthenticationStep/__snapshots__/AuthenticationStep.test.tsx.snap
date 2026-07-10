@@ -801,7 +801,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
         </div>
       </div>
       <div
-        class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-4 py-5 dark:border-theme-warning-600 dark:bg-transparent"
         data-testid="LedgerWaitingApp-loading_message"
       >
         <div
@@ -811,7 +811,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
           class="h-5 w-px border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
         />
         <span
-          class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 md:text-base"
+          class="leading-4.25 text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 sm:leading-5 md:text-base"
           data-testid="Loader__text"
         >
           Open the Mainsail app on your device ...
@@ -859,7 +859,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         </div>
       </div>
       <div
-        class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-4 py-5 dark:border-theme-warning-600 dark:bg-transparent"
         data-testid="LedgerWaitingDevice-loading_message"
       >
         <div
@@ -869,7 +869,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           class="h-5 w-px border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
         />
         <span
-          class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 md:text-base"
+          class="leading-4.25 text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 sm:leading-5 md:text-base"
           data-testid="Loader__text"
         >
           Waiting for Ledger ...
@@ -917,7 +917,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-4 py-5 dark:border-theme-warning-600 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -927,7 +927,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="leading-4.25 font-semibold text-theme-secondary-700 dark:text-theme-warning-600 sm:leading-5"
         >
           This transaction is pending approval on your Ledger device.
         </p>
@@ -974,7 +974,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-4 py-5 dark:border-theme-warning-600 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -984,7 +984,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="leading-4.25 font-semibold text-theme-secondary-700 dark:text-theme-warning-600 sm:leading-5"
         >
           This transaction is pending approval on your Ledger device.
         </p>
@@ -1031,7 +1031,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-4 py-5 dark:border-theme-warning-600 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -1041,7 +1041,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
           class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="leading-4.25 font-semibold text-theme-secondary-700 dark:text-theme-warning-600 sm:leading-5"
         >
           This transaction is pending approval on your Ledger device.
         </p>
@@ -1146,7 +1146,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
         </div>
       </div>
       <div
-        class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-4 py-5 dark:border-theme-warning-600 dark:bg-transparent"
         data-testid="LedgerWaitingDevice-loading_message"
       >
         <div
@@ -1156,7 +1156,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
           class="h-5 w-px border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
         />
         <span
-          class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 md:text-base"
+          class="leading-4.25 text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 sm:leading-5 md:text-base"
           data-testid="Loader__text"
         >
           Waiting for Ledger ...
@@ -2288,7 +2288,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-4 py-5 dark:border-theme-warning-600 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -2298,7 +2298,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
           class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="leading-4.25 font-semibold text-theme-secondary-700 dark:text-theme-warning-600 sm:leading-5"
         >
           This transaction is pending approval on your Ledger device.
         </p>
@@ -2345,7 +2345,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-4 py-5 dark:border-theme-warning-600 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -2355,7 +2355,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
           class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="leading-4.25 font-semibold text-theme-secondary-700 dark:text-theme-warning-600 sm:leading-5"
         >
           This transaction is pending approval on your Ledger device.
         </p>
@@ -2402,7 +2402,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-4 py-5 dark:border-theme-warning-600 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -2412,7 +2412,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
           class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="leading-4.25 font-semibold text-theme-secondary-700 dark:text-theme-warning-600 sm:leading-5"
         >
           This transaction is pending approval on your Ledger device.
         </p>
