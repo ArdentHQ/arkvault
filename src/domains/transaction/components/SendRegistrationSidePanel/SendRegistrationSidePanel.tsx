@@ -136,12 +136,24 @@ export const SendRegistrationSidePanel = ({
 		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
 	}, [validatorRegistrationFee, registrationType]);
 
-	// Reset ledger authentication steps after reconnecting supported ledger
-	useEffect(() => {
-		if (isAuthenticationStep && activeWallet?.isLedger() && isLedgerModelSupported) {
-			handleSubmit();
+	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
+
+	const connectLedger = useCallback(async () => {
+		if (activeWallet) {
+			await connect(activeProfile);
+			setIsWaitingLedger(true);
 		}
-	}, [ledgerDevice]);
+	}, [activeWallet, activeProfile, connect]);
+
+	useEffect(() => {
+		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
+			void connectLedger();
+		}
+
+		if (isConnected && isWaitingLedger) {
+			void handleSubmit();
+		}
+	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -158,10 +170,6 @@ export const SendRegistrationSidePanel = ({
 
 		try {
 			const { mnemonic, secondMnemonic, encryptionPassword, secret, secondSecret } = getValues();
-
-			if (activeWallet.isLedger()) {
-				await connect(activeProfile);
-			}
 
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
@@ -211,9 +219,8 @@ export const SendRegistrationSidePanel = ({
 		const nextStep = activeTab + 1;
 		const isNextStepAuthentication = nextStep === authenticationStep;
 
-		// Skip authentication step
-		if (isNextStepAuthentication && activeWallet?.isLedger() && isLedgerModelSupported) {
-			handleSubmit();
+		if (isNextStepAuthentication && activeWallet?.isLedger()) {
+			void connectLedger();
 		}
 
 		setActiveTab(nextStep);
@@ -459,6 +466,9 @@ export const SendRegistrationSidePanel = ({
 										wallet={activeWallet!}
 										ledgerIsAwaitingDevice={!hasDeviceAvailable}
 										ledgerIsAwaitingApp={!isConnected}
+										onDeviceNotAvailable={() => {
+											// keep waiting when it is not available
+										}}
 										ledgerSupportedModels={[
 											Contracts.WalletLedgerModel.NanoX,
 											Contracts.WalletLedgerModel.NanoSP,
