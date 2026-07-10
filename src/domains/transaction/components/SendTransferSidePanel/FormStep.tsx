@@ -1,6 +1,6 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -13,6 +13,10 @@ import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddres
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { getRecipientsFromDeeplink } from "./utils";
+import { SelectToken } from "@/domains/tokens/components/SelectToken";
+import { useTransferAssets } from "@/domains/transaction/hooks/use-send-transfer-assets";
+import { ContractAddressHint } from "@/domains/transaction/components/ContractAddressHint/ContractAddressHint";
+import cn from "classnames";
 
 export const FormStep = ({
 	network,
@@ -35,7 +39,9 @@ export const FormStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { setValue, getValues, unregister } = useFormContext();
+	const { setValue, getValues, unregister, watch, trigger } = useFormContext();
+
+	const { amount, tokenContractAddress } = watch();
 
 	const { activeNetwork } = useActiveNetwork({ profile });
 
@@ -44,6 +50,8 @@ export const FormStep = ({
 	}, [unregister]);
 
 	const { recipients } = getValues();
+
+	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 
 	const handleSelectSender = async (address: string) => {
 		const sender = profile.wallets().findByAddressWithNetwork(address, network.id());
@@ -57,6 +65,15 @@ export const FormStep = ({
 			sender,
 		});
 	};
+
+	const selectedToken = tokens.find((token) => token.token().address() === tokenContractAddress);
+
+	const { assets } = useTransferAssets({
+		isSingle: recipients.length === 1,
+		profile,
+		selectedAsset: recipients.length > 0 ? tokenContractAddress : undefined,
+		tokens,
+	});
 
 	return (
 		<section data-testid="SendTransfer__form-step">
@@ -99,6 +116,39 @@ export const FormStep = ({
 					</div>
 				</FormField>
 
+				<FormField name="asset">
+					<div className="relative block space-y-2">
+						<FormLabel>
+							<div>{t("COMMON.ASSET")}</div>
+						</FormLabel>
+						<SelectToken
+							disabled={!isSingle && recipients.length > 0 && tokenContractAddress}
+							className={cn({ "rounded-b-none focus-within:rounded hover:rounded": selectedToken })}
+							value={tokenContractAddress}
+							tokens={assets}
+							wallet={senderWallet}
+							onChange={({ value }) => {
+								const tokenAddress = value;
+
+								if (amount) {
+									void trigger("amount");
+								}
+
+								setValue("tokenContractAddress", tokenAddress, {
+									shouldDirty: true,
+									shouldValidate: true,
+								});
+							}}
+						/>
+					</div>
+					{selectedToken && senderWallet && (
+						<ContractAddressHint
+							token={selectedToken}
+							link={senderWallet.link().wallet(selectedToken.token().address())}
+						/>
+					)}
+				</FormField>
+
 				<div data-testid="recipient-address">
 					<AddRecipient
 						tokens={tokens}
@@ -109,6 +159,8 @@ export const FormStep = ({
 						profile={profile}
 						recipients={getRecipientsFromDeeplink(recipients, deeplinkProps)}
 						wallet={senderWallet}
+						isSingle={isSingle}
+						onIsSingleChange={setIsSingle}
 					/>
 				</div>
 			</div>

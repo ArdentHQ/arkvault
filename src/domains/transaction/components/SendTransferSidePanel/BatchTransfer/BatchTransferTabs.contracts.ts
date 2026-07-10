@@ -16,4 +16,6 @@ export interface BatchTransferTabsProperties {
 	activeTab: BatchTransferTabStep;
 	wallet: Contracts.IReadWriteWallet;
 	onApproveConfirmed: () => void;
+	ledgerIsAwaitingDevice?: boolean;
+	ledgerIsAwaitingApp?: boolean;
 }

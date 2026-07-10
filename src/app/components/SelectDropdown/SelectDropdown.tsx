@@ -164,6 +164,11 @@ const SelectDropdown = ({
 			return;
 		}
 
+		if (selectedItem && selectedItem.label === inputValue) {
+			closeMenu();
+			return;
+		}
+
 		const firstMatch = mainOptions.find((option) => isMatch(inputValue, option));
 
 		if (inputValue && firstMatch) {
@@ -223,12 +228,12 @@ const SelectDropdown = ({
 						floatingWrapperClass="min-w-full"
 						content={
 							<div>
-								<ul className="select-options-list">
+								<ul className="select-options-list" {...getMenuProps({}, { suppressRefError: true })}>
 									<RenderOptions
 										data={data}
 										getItemProps={getItemProps}
 										highlightedIndex={highlightedIndex}
-										inputValue={inputValue}
+										selectedValue={selectedItem?.value}
 										onMouseDown={onMouseDown}
 										renderLabel={renderLabel}
 									/>
@@ -256,7 +261,6 @@ const SelectDropdown = ({
 								})}
 							/>
 						</div>
-						<div {...getMenuProps()} />
 					</Tooltip>
 				</div>
 			</div>

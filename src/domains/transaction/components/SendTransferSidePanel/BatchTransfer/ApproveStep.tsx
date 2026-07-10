@@ -12,13 +12,25 @@ import { FeeField } from "@/domains/transaction/components/FeeField";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { TruncatedContractAddress } from "@/domains/transaction/components/ContractAddressHint/ContractAddressHint";
 import { useBatchTransferDetails } from "@/domains/transaction/hooks/use-batch-transfer-details";
+import cn from "classnames";
 
 interface ApproveStepProperties {
 	wallet: Contracts.IReadWriteWallet;
+	ledgerIsAwaitingDevice?: boolean;
+	isAwaitingLedgerAction?: boolean;
+	ledgerIsAwaitingApp?: boolean;
 }
 
-export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
+export const ApproveStep = ({
+	wallet,
+	ledgerIsAwaitingDevice,
+	ledgerIsAwaitingApp,
+	isAwaitingLedgerAction,
+}: ApproveStepProperties) => {
 	const { t } = useTranslation();
+
+	const isFeeDisabled = wallet.isLedger() && isAwaitingLedgerAction;
+	const showAuthenticationStep = wallet.isLedger() ? isAwaitingLedgerAction : true;
 
 	const { register, getValues } = useFormContext();
 	const { recipients, tokenContractAddress } = getValues();
@@ -97,7 +109,14 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 					</div>
 				</DetailWrapper>
 
-				<div className="border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0">
+				<div
+					className={cn(
+						"border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0",
+						{
+							"blur-xs pointer-events-none mb-0": isFeeDisabled,
+						},
+					)}
+				>
 					<FormField name="fee" disableStateHints>
 						<FormLabel
 							textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
@@ -106,6 +125,7 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 
 						<FeeField
 							type="approve"
+							isDisabled={isFeeDisabled}
 							data={{ token: walletToken.token() }}
 							network={network}
 							profile={profile}
@@ -113,9 +133,21 @@ export const ApproveStep = ({ wallet }: ApproveStepProperties) => {
 					</FormField>
 				</div>
 
-				<div className="px-3 pt-1 sm:px-0 sm:pt-0">
-					<AuthenticationStep wallet={wallet!} noHeading />
-				</div>
+				{showAuthenticationStep && (
+					<div className="px-3 pt-1 sm:px-0 sm:pt-0">
+						<AuthenticationStep
+							wallet={wallet!}
+							noHeading
+							noDescription
+							subject="message"
+							ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
+							ledgerIsAwaitingApp={ledgerIsAwaitingApp}
+							onDeviceNotAvailable={() => {
+								// keep waiting when it is not available
+							}}
+						/>
+					</div>
+				)}
 			</div>
 		</section>
 	);

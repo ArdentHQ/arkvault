@@ -215,7 +215,7 @@ describe("SendTransferSidePanel", () => {
 		await selectRecipient();
 		undefinedAddressMock.mockRestore();
 
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(""));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[2]).toHaveValue(""));
 		walletSyncedMock.mockRestore();
 	});
 
@@ -234,7 +234,7 @@ describe("SendTransferSidePanel", () => {
 		await selectRecipient();
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[2]).toHaveValue(firstWalletAddress));
 
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
@@ -299,7 +299,7 @@ describe("SendTransferSidePanel", () => {
 		await selectRecipient();
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[2]).toHaveValue(firstWalletAddress));
 
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
@@ -359,7 +359,7 @@ describe("SendTransferSidePanel", () => {
 		await selectRecipient();
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[2]).toHaveValue(firstWalletAddress));
 
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
