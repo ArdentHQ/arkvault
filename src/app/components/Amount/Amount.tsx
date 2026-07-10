@@ -56,7 +56,7 @@ const Amount = ({
 	if (showCompactFormat) {
 		const tooltipText = tooltipContent ?? fullAmount;
 		return (
-			<Tooltip content={tooltipText} className="sm:whitespace-normal">
+			<Tooltip content={tooltipText} className="sm:whitespace-normal" usePortal>
 				<span data-testid="Amount" className={twMerge("whitespace-nowrap", className)}>
 					{formattedAmount}
 				</span>
