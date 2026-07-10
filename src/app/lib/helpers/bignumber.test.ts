@@ -74,6 +74,7 @@ describe("BigNumber", () => {
 		expect(BigNumber.make("42").countDecimalPlaces()).toBe(0);
 		expect(BigNumber.make(0.00000001).countDecimalPlaces()).toBe(8);
 		expect(BigNumber.make("1.1000").countDecimalPlaces()).toBe(1);
+		expect(BigNumber.make(Infinity).countDecimalPlaces()).toBe(0);
 	});
 
 	it("#plus", () => {

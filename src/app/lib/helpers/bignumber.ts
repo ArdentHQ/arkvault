@@ -99,7 +99,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public countDecimalPlaces(): number {
-		return this.#value.dp();
+		return this.#value.dp() ?? 0;
 	}
 
 	/**
