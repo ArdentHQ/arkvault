@@ -6,13 +6,24 @@ export const useConnectLedger = ({
 	onReady,
 	profile,
 	isLedgerModelSupported = true,
+	canConnect = true,
 }: {
 	onReady: () => void;
 	profile: Contracts.IProfile;
 	isLedgerModelSupported?: boolean;
+	canConnect?: boolean;
 }) => {
 	const { isConnected, ledgerDevice, connect } = useLedgerContext();
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
+
+	const connectLedger = useCallback(async () => {
+		if (!canConnect) {
+			return;
+		}
+
+		await connect(profile);
+		setIsWaitingLedger(true);
+	}, [canConnect, profile, connect]);
 
 	useEffect(() => {
 		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
@@ -24,11 +35,6 @@ export const useConnectLedger = ({
 			setIsWaitingLedger(false);
 		}
 	}, [isConnected, ledgerDevice?.id, isWaitingLedger, isLedgerModelSupported]);
-
-	const connectLedger = useCallback(async () => {
-		setIsWaitingLedger(true);
-		await connect(profile);
-	}, [profile, connect]);
 
 	return { connectLedger };
 };

@@ -44,6 +44,7 @@ import { BatchTransferTabs } from "@/domains/transaction/components/SendTransfer
 import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 import { useSendTransferStepConfig } from "@/domains/transaction/hooks/use-send-transfer-header-config";
 import { useBatchTransferStepConfig } from "@/domains/transaction/hooks/use-batch-transfer-header-config";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 
 const MAX_TABS = 5;
 
@@ -78,7 +79,7 @@ export const SendTransferSidePanel = ({
 	});
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
-	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
@@ -95,8 +96,6 @@ export const SendTransferSidePanel = ({
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const { buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
-
-	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
 	const {
 		form,
@@ -129,22 +128,11 @@ export const SendTransferSidePanel = ({
 		return handleNext();
 	});
 
-	useEffect(() => {
-		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
-			void connectLedger();
-		}
-
-		if (isConnected && isWaitingLedger) {
-			void handleSubmit(() => submit(true))();
-		}
-	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
-
-	const connectLedger = useCallback(async () => {
-		if (wallet) {
-			await connect(activeProfile);
-			setIsWaitingLedger(true);
-		}
-	}, [wallet, activeProfile, connect]);
+	const { connectLedger } = useConnectLedger({
+		canConnect: !!wallet,
+		onReady: () => void handleSubmit(() => submit(true))(),
+		profile: activeProfile,
+	});
 
 	useEffect(() => {
 		if (activeProfile.wallets().count() === 1 && !wallet) {

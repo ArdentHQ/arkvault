@@ -24,6 +24,7 @@ import {
 	UsernameRegistrationForm,
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
@@ -68,7 +69,7 @@ export const SendRegistrationSidePanel = ({
 	const { common, validatorRegistration } = useValidation();
 	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
-	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, ledgerDevice } = useLedgerContext();
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
@@ -136,24 +137,12 @@ export const SendRegistrationSidePanel = ({
 		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
 	}, [validatorRegistrationFee, registrationType]);
 
-	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
-
-	const connectLedger = useCallback(async () => {
-		if (activeWallet) {
-			await connect(activeProfile);
-			setIsWaitingLedger(true);
-		}
-	}, [activeWallet, activeProfile, connect]);
-
-	useEffect(() => {
-		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
-			void connectLedger();
-		}
-
-		if (isConnected && isWaitingLedger) {
-			void handleSubmit();
-		}
-	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
+	const { connectLedger } = useConnectLedger({
+		canConnect: !!activeWallet,
+		isLedgerModelSupported,
+		onReady: () => void handleSubmit(),
+		profile: activeProfile,
+	});
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";

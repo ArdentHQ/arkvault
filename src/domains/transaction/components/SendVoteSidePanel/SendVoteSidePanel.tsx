@@ -23,6 +23,7 @@ import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
@@ -69,7 +70,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const form = useForm({ mode: "onChange" });
 	const { senderAddress } = form.watch();
 
-	const { hasDeviceAvailable, isConnected, ledgerDevice, connect } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
@@ -81,24 +82,12 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const abortReference = useRef(new AbortController());
 	const transactionBuilder = useTransactionBuilder();
-	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
-	const connectLedger = useCallback(async () => {
-		if (senderAddress) {
-			await connect(activeProfile);
-			setIsWaitingLedger(true);
-		}
-	}, [senderAddress, activeProfile, connect]);
-
-	useEffect(() => {
-		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
-			void connectLedger();
-		}
-
-		if (isConnected && isWaitingLedger) {
-			void handleSubmit(submitForm)();
-		}
-	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
+	const { connectLedger } = useConnectLedger({
+		canConnect: !!senderAddress,
+		onReady: () => void handleSubmit(submitForm)(),
+		profile: activeProfile,
+	});
 
 	const activeWallet = useMemo(
 		() => activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id()),
