@@ -6,6 +6,7 @@ import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { sort } from "@/app/lib/helpers/fast-sort";
 import { IProfile } from "@/app/lib/profiles/contracts";
 import { LedgerService } from "./ledger.service";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface LedgerImportOptions {
 	slip44: number;
@@ -13,6 +14,7 @@ interface LedgerImportOptions {
 	byAccountIndex: boolean;
 	pageSize?: number;
 	skipZeroBalance?: boolean;
+	skipDust?: boolean;
 }
 
 export class LedgerScanner {
@@ -65,6 +67,44 @@ export class LedgerScanner {
 		return ledgerData;
 	}
 
+	async scanLegacy(options?: {
+		isLoadingMore?: boolean;
+		pageSize?: number;
+		importedLedgerPaths?: string[];
+	}): Promise<LedgerData[]> {
+		const importedLedgerPaths = [
+			...this.#wallets.map((wallet) => wallet.path),
+			...(options?.importedLedgerPaths ?? []),
+		];
+
+		// Scan legacy ARK addresses by address index.
+		let ledgerData = await this.scanAllWithBalance({
+			byAccountIndex: false,
+			slip44: this.#ledgerService.slip44(),
+			startPath: this.#computeLastPath({
+				importedLedgerPaths,
+				slip44: this.#ledgerService.slip44(),
+			}),
+			skipDust: true,
+		});
+
+		if (options?.isLoadingMore) {
+			ledgerData = omitBy(ledgerData, (wallet) => this.#wallets.some((w) => w.address === wallet.address));
+		} else {
+			ledgerData = uniqBy([...this.#wallets, ...ledgerData], (wallet) => wallet.address);
+		}
+
+		return ledgerData;
+	}
+
+	#isDustAmount(amount?: string | number | BigNumber, dustAmount: string | number | BigNumber | undefined = 0) {
+		const dust = BigNumber.make(dustAmount);
+		const decimals = dust.countDecimalPlaces();
+
+		const balance = BigNumber.make(amount ?? 0);
+		return balance.decimalPlaces(decimals).isLessThanOrEqualTo(dust.decimalPlaces(decimals));
+	}
+
 	async scanAllWithBalance(config: LedgerImportOptions): Promise<LedgerData[]> {
 		const ledgerData: LedgerData[] = [];
 		let startPath = config.startPath;
@@ -111,6 +151,15 @@ export class LedgerScanner {
 						break;
 					}
 
+					startPath = path;
+					continue;
+				}
+
+				// Exclude wallets with dust-level balances.
+				if (
+					config.skipDust != null &&
+					this.#isDustAmount(wallet.balance(), wallet.network().constants().dustAmount)
+				) {
 					startPath = path;
 					continue;
 				}

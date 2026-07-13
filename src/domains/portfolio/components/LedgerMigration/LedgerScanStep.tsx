@@ -7,7 +7,6 @@ import { Alert } from "@/app/components/Alert";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
 import { LedgerTable } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerScanStep";
-import { BigNumber } from "@/app/lib/helpers";
 
 export const showLoadedLedgerWalletsMessage = (wallets: Contracts.WalletData[]) => {
 	if (wallets.length === 1) {
@@ -20,16 +19,6 @@ export const showLoadedLedgerWalletsMessage = (wallets: Contracts.WalletData[]) 
 			values={{ count: wallets.length }}
 		/>
 	);
-};
-
-const filterByDustAmount = (wallets: LedgerData[], dustAmount: number | string | bigint) => {
-	const dust = BigNumber.make(dustAmount);
-	const decimals = dust.countDecimalPlaces();
-
-	return wallets.filter((wallet) => {
-		const balance = BigNumber.make(wallet.balance ?? 0);
-		return balance.decimalPlaces(decimals).isGreaterThan(dust.decimalPlaces(decimals));
-	});
 };
 
 export const LedgerScanStep = ({
@@ -58,8 +47,6 @@ export const LedgerScanStep = ({
 	const legacyPageSize = 5;
 
 	const ledgerScanner = useLedgerScanner({ pageSize });
-
-	const walletsWithBalance = filterByDustAmount(ledgerScanner.wallets, network.constants().dustAmount);
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets } = ledgerScanner;
 	const scanMore = useCallback(() => {
@@ -138,7 +125,6 @@ export const LedgerScanStep = ({
 					<LedgerTable
 						network={network}
 						{...ledgerScanner}
-						wallets={walletsWithBalance}
 						scanMore={scanMore}
 						pageSize={pageSize + legacyPageSize}
 						isScanning={isScanning || !!isLoading}
