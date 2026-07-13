@@ -1,10 +1,11 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { BigNumber } from "@/app/lib/helpers";
 import { AddRecipient } from "./AddRecipient";
+import { AddRecipientProperties } from "./AddRecipient.contracts";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
@@ -20,6 +21,15 @@ const translations = buildTranslations();
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let network: Networks.Network;
+
+const AddRecipientWrapper = ({
+	recipients = [],
+	...properties
+}: Omit<AddRecipientProperties, "isSingle" | "onIsSingleChange">) => {
+	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
+
+	return <AddRecipient {...properties} recipients={recipients} isSingle={isSingle} onIsSingleChange={setIsSingle} />;
+};
 
 const renderWithFormProvider = (children: any, defaultValues?: any) => {
 	const Wrapper = () => {
@@ -63,16 +73,6 @@ const fillFieldsWithValidAddressAndAmount = async (address: string, amount: stri
 };
 
 const selectRecipientID = "SelectRecipient__select-recipient";
-
-const setupTokenSelection = async (index: number, tokenName: string) => {
-	const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-	const tokenSelection = dropdowns[index];
-
-	const user = userEvent.setup();
-	await user.clear(tokenSelection);
-	await userEvent.paste(tokenName);
-	await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
-};
 
 describe("AddRecipient", () => {
 	beforeAll(async () => {
@@ -131,7 +131,7 @@ describe("AddRecipient", () => {
 
 		return (
 			<FormProvider {...form}>
-				<AddRecipient
+				<AddRecipientWrapper
 					profile={profile}
 					wallet={wallet}
 					onChange={vi.fn()}
@@ -145,27 +145,15 @@ describe("AddRecipient", () => {
 
 	it("should render", async () => {
 		const { container } = renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
+			<AddRecipientWrapper profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
 		);
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should render with assets field", async () => {
-		const { container } = renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} isTokenTransfer />,
-		);
-
-		await waitFor(() => {
-			expect(screen.getAllByTestId("SelectDropdown")).toHaveLength(3);
-		});
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with empty array of recipients as default", async () => {
 		const { container } = renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} />,
+			<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} />,
 		);
 
 		expect(container).toMatchSnapshot();
@@ -178,7 +166,7 @@ describe("AddRecipient", () => {
 		};
 
 		const { container } = renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
+			<AddRecipientWrapper profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
 			values,
 		);
 
@@ -194,7 +182,7 @@ describe("AddRecipient", () => {
 
 	it("should render with multiple recipients switch", async () => {
 		const { container } = renderWithFormProvider(
-			<AddRecipient
+			<AddRecipientWrapper
 				onChange={vi.fn()}
 				profile={profile}
 				recipients={[]}
@@ -210,7 +198,7 @@ describe("AddRecipient", () => {
 
 	it("should render without the single & multiple switch", async () => {
 		const { container } = renderWithFormProvider(
-			<AddRecipient
+			<AddRecipientWrapper
 				onChange={vi.fn()}
 				profile={profile}
 				recipients={[]}
@@ -222,60 +210,10 @@ describe("AddRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it.each([1, 2])("should select a token", async (index: number) => {
-		const onChange = vi.fn();
-		renderWithFormProvider(
-			<AddRecipient
-				tokens={profile.tokens().selected().items()}
-				profile={profile}
-				wallet={wallet}
-				recipients={[
-					{
-						address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
-						amount: 1,
-					},
-					{
-						address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ay",
-						amount: 1,
-					},
-				]}
-				onChange={vi.fn()}
-				isTokenTransfer
-				onTokenChange={onChange}
-			/>,
-			{
-				tokenContractAddress: profile.tokens().selected().items().at(0).token().address(),
-			},
-		);
-
-		await setupTokenSelection(index, "DARK2");
-
-		const amount = 1;
-		const amountInput = screen.getByTestId("AddRecipient__amount");
-		const addressInput = screen.getAllByTestId("SelectDropdown__input")[2];
-
-		await userEvent.clear(amountInput);
-		await userEvent.type(amountInput, String(amount));
-
-		await waitFor(() => expect(amountInput).toHaveValue(String(amount)));
-
-		await userEvent.clear(addressInput);
-		await userEvent.type(addressInput, wallet.address());
-
-		await waitFor(() => expect(addressInput).toHaveValue(wallet.address()));
-
-		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-		await waitFor(() => {
-			expect(dropdowns).toHaveLength(3);
-		});
-
-		await waitFor(() => {
-			expect(onChange).toHaveBeenCalled();
-		});
-	});
-
 	it("should select recipient", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
+		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -294,16 +232,17 @@ describe("AddRecipient", () => {
 
 	it("should set available amount", async () => {
 		const { container } = renderWithFormProvider(
-			<AddRecipient
+			<AddRecipientWrapper
 				profile={profile}
 				wallet={wallet}
 				recipients={[]}
 				onChange={vi.fn()}
 				tokens={profile.tokens().selected().items()}
 			/>,
+			{
+				tokenContractAddress: "ARK",
+			},
 		);
-
-		await setupTokenSelection(2, "ARK");
 
 		await userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
@@ -315,7 +254,10 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show divider only if single recipient and sender has balance", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
+			{ tokenContractAddress: "ARK" },
+		);
 
 		expect(screen.getByTestId("AddRecipient__divider")).toBeInTheDocument();
 	});
@@ -336,7 +278,7 @@ describe("AddRecipient", () => {
 		emptyProfile.wallets().push(emptyWallet);
 
 		const { container } = renderWithFormProvider(
-			<AddRecipient profile={emptyProfile} wallet={emptyWallet} recipients={[]} onChange={vi.fn()} />,
+			<AddRecipientWrapper profile={emptyProfile} wallet={emptyWallet} recipients={[]} onChange={vi.fn()} />,
 		);
 
 		await userEvent.click(screen.getByTestId("AddRecipient__send-all"));
@@ -351,7 +293,7 @@ describe("AddRecipient", () => {
 		vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
 
 		const { container } = renderWithFormProvider(
-			<AddRecipient
+			<AddRecipientWrapper
 				profile={profile}
 				wallet={wallet}
 				recipients={[]}
@@ -360,24 +302,25 @@ describe("AddRecipient", () => {
 			/>,
 			{
 				fee: 12.1,
+				tokenContractAddress: "ARK",
 			},
 		);
 
-		await setupTokenSelection(2, "ARK");
 		await waitFor(() => expect(screen.queryByText("AddRecipient__available")).not.toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should toggle between single and multiple recipients", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
+			{ tokenContractAddress: "ARK" },
+		);
 
 		const singleButton = screen.getByText(translations.TRANSACTION.SINGLE);
 		const multipleButton = screen.getByText(translations.TRANSACTION.MULTIPLE);
 
 		const recipientLabel = "Recipient #1";
-
-		await setupTokenSelection(2, "ARK");
 
 		expect(screen.queryByText(recipientLabel)).not.toBeInTheDocument();
 
@@ -397,7 +340,12 @@ describe("AddRecipient", () => {
 
 		const Component = () => {
 			form = useForm({
-				defaultValues: { fee: 0, network, senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
+				defaultValues: {
+					fee: 0,
+					network,
+					senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+					tokenContractAddress: "ARK",
+				},
 				mode: "onChange",
 				shouldUnregister: false,
 			});
@@ -409,7 +357,7 @@ describe("AddRecipient", () => {
 
 			return (
 				<FormProvider {...form}>
-					<AddRecipient
+					<AddRecipientWrapper
 						profile={profile}
 						wallet={wallet}
 						onChange={onChange}
@@ -431,8 +379,6 @@ describe("AddRecipient", () => {
 		render(<Component />, {
 			route: `/profiles/${profile.id()}`,
 		});
-
-		await setupTokenSelection(2, "ARK");
 
 		const singleButton = screen.getByText(translations.TRANSACTION.SINGLE);
 		const multipleButton = screen.getByText(translations.TRANSACTION.MULTIPLE);
@@ -459,12 +405,17 @@ describe("AddRecipient", () => {
 		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue("");
 
 		expect(onChange).toHaveBeenCalledWith([]);
+
+		await userEvent.click(multipleButton);
+
+		await waitFor(() => expect(screen.queryAllByTestId("AddRecipientItem")).toHaveLength(0));
 	});
 
 	it("should keep values while toggling between single and multiple recipients", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
-
-		await setupTokenSelection(2, "ARK");
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
+			{ tokenContractAddress: "ARK" },
+		);
 
 		const singleButton = screen.getByText(translations.TRANSACTION.SINGLE);
 		const multipleButton = screen.getByText(translations.TRANSACTION.MULTIPLE);
@@ -498,7 +449,12 @@ describe("AddRecipient", () => {
 
 		const Component = () => {
 			form = useForm({
-				defaultValues: { fee: 0, network, senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
+				defaultValues: {
+					fee: 0,
+					network,
+					senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+					tokenContractAddress: "ARK",
+				},
 				mode: "onChange",
 				shouldUnregister: false,
 			});
@@ -510,7 +466,7 @@ describe("AddRecipient", () => {
 
 			return (
 				<FormProvider {...form}>
-					<AddRecipient
+					<AddRecipientWrapper
 						profile={profile}
 						wallet={wallet}
 						onChange={vi.fn()}
@@ -536,8 +492,6 @@ describe("AddRecipient", () => {
 		render(<Component />, {
 			route: `/profiles/${profile.id()}`,
 		});
-
-		await setupTokenSelection(2, "ARK");
 
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
@@ -575,7 +529,7 @@ describe("AddRecipient", () => {
 		};
 
 		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
+			<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
 			values,
 		);
 
@@ -593,7 +547,7 @@ describe("AddRecipient", () => {
 		};
 
 		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
+			<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
 			values,
 		);
 
@@ -649,7 +603,9 @@ describe("AddRecipient", () => {
 	// });
 
 	it("should show error for low balance", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />);
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
+		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -670,7 +626,9 @@ describe("AddRecipient", () => {
 	it("should show error for zero balance", async () => {
 		const mockWalletBalance = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(0));
 
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />);
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
+		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -691,7 +649,9 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for invalid address", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />);
+		renderWithFormProvider(
+			<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
+		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -724,7 +684,12 @@ describe("AddRecipient", () => {
 
 		const Component = () => {
 			form = useForm({
-				defaultValues: { fee: 0, network, senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
+				defaultValues: {
+					fee: 0,
+					network,
+					senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+					tokenContractAddress: "ARK",
+				},
 				mode: "onChange",
 			});
 
@@ -735,7 +700,7 @@ describe("AddRecipient", () => {
 
 			return (
 				<FormProvider {...form}>
-					<AddRecipient
+					<AddRecipientWrapper
 						profile={profile}
 						wallet={wallet}
 						onChange={vi.fn()}
@@ -757,8 +722,6 @@ describe("AddRecipient", () => {
 		render(<Component />, {
 			route: `/profiles/${profile.id()}`,
 		});
-
-		await setupTokenSelection(2, "ARK");
 
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
@@ -800,7 +763,7 @@ describe("AddRecipient", () => {
 
 			return (
 				<FormProvider {...form}>
-					<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />
+					<AddRecipientWrapper profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />
 				</FormProvider>
 			);
 		};
@@ -820,7 +783,6 @@ describe("AddRecipient", () => {
 			route: `/profiles/${profile.id()}`,
 		});
 
-		await setupTokenSelection(2, "ARK");
 		await userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
 		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
@@ -842,7 +804,7 @@ describe("AddRecipient", () => {
 		const mockMultiPaymentRecipients = vi.spyOn(wallet.network(), "multiPaymentRecipients").mockReturnValue(1);
 
 		renderWithFormProvider(
-			<AddRecipient
+			<AddRecipientWrapper
 				recipients={[
 					{
 						address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
@@ -854,9 +816,9 @@ describe("AddRecipient", () => {
 				onChange={vi.fn()}
 				tokens={[]}
 			/>,
+			{ tokenContractAddress: "ARK" },
 		);
 
-		await setupTokenSelection(2, "ARK");
 		await userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
 		await expect(screen.findByTestId(selectRecipientID)).resolves.toBeVisible();
@@ -877,11 +839,40 @@ describe("AddRecipient", () => {
 
 	it("should render without wallet and show zero balance", async () => {
 		const { container } = renderWithFormProvider(
-			<AddRecipient profile={profile} recipients={[]} onChange={vi.fn()} />,
+			<AddRecipientWrapper profile={profile} recipients={[]} onChange={vi.fn()} />,
 		);
 
 		await waitFor(() => expect(container).toBeInTheDocument());
 
 		expect(screen.getByTestId("AddRecipient__amount")).toBeInTheDocument();
+	});
+
+	it("should render without a recipients prop", async () => {
+		renderWithFormProvider(
+			<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} isSingle onIsSingleChange={vi.fn()} />,
+		);
+
+		expect(screen.getByTestId("AddRecipient__amount")).toBeInTheDocument();
+	});
+
+	it("should use the selected token's display symbol as ticker", async () => {
+		const selectedToken = profile.tokens().selected().first();
+
+		renderWithFormProvider(
+			<AddRecipientWrapper
+				profile={profile}
+				wallet={wallet}
+				recipients={[]}
+				onChange={vi.fn()}
+				tokens={profile.tokens().selected().items()}
+			/>,
+			{ tokenContractAddress: selectedToken.token().address() },
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("AddRecipient__available")).toHaveTextContent(
+				selectedToken.token().displaySymbol(),
+			);
+		});
 	});
 });

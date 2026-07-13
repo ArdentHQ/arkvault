@@ -79,7 +79,7 @@ export const SendTransferSidePanel = ({
 	});
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
-	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+	const { abortConnectionRetry, hasDeviceAvailable, isConnected, } = useLedgerContext();
 	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
@@ -144,6 +144,7 @@ export const SendTransferSidePanel = ({
 	const resetState = useCallback(() => {
 		setActiveTab(firstTabIndex);
 		setBatchTransferActiveTab(BatchTransferTabStep.ReviewStep);
+		abortConnectionRetry();
 
 		resetForm(() => {
 			setErrorMessage(undefined);
@@ -455,13 +456,14 @@ export const SendTransferSidePanel = ({
 									onError={(error) => {
 										setErrorMessage(error);
 										setActiveTab(SendTransferStep.ErrorStep);
+										setBatchTransferActiveTab(BatchTransferTabStep.ReviewStep);
 									}}
 									onBack={() => {
 										setActiveTab(SendTransferStep.FormStep);
 										setBatchTransferActiveTab(BatchTransferTabStep.ReviewStep);
 									}}
 									onSubmit={() => {
-										void handleSubmit(() => submit())();
+										void handleSubmit(() => submit(!!wallet?.isLedger()))();
 									}}
 								/>
 							)}

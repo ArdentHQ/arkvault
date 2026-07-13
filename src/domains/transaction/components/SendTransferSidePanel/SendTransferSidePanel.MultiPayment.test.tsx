@@ -65,8 +65,8 @@ describe("SendTransferSidePanel MultiPayment", () => {
 
 		await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
-		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().first().address());
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[2]);
+		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[2], profile.wallets().first().address());
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 
@@ -75,8 +75,8 @@ describe("SendTransferSidePanel MultiPayment", () => {
 		await userEvent.click(screen.getByTestId(recipientAddButton));
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
 
-		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
-		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().last().address());
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[2]);
+		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[2], profile.wallets().last().address());
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 
@@ -101,8 +101,8 @@ describe("SendTransferSidePanel MultiPayment", () => {
 
 		await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
-		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().first().address());
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[2]);
+		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[2], profile.wallets().first().address());
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "24");
 
@@ -111,8 +111,8 @@ describe("SendTransferSidePanel MultiPayment", () => {
 		await userEvent.click(screen.getByTestId(recipientAddButton));
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
 
-		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
-		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().last().address());
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[2]);
+		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[2], profile.wallets().last().address());
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "26");
 

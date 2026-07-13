@@ -1329,11 +1329,6 @@ exports[`General Settings > should disable submit button when profile is not res
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-passphrase-language-label"
-                                        id="select-passphrase-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -1476,11 +1471,6 @@ exports[`General Settings > should disable submit button when profile is not res
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-currency-label"
-                                        id="select-currency-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -1627,11 +1617,6 @@ exports[`General Settings > should disable submit button when profile is not res
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-language-label"
-                                        id="select-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -1774,11 +1759,6 @@ exports[`General Settings > should disable submit button when profile is not res
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-market-provider-label"
-                                        id="select-market-provider-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -1921,11 +1901,6 @@ exports[`General Settings > should disable submit button when profile is not res
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-time-format-label"
-                                        id="select-time-format-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -2100,11 +2075,6 @@ exports[`General Settings > should disable submit button when profile is not res
                                             </div>
                                           </div>
                                         </div>
-                                        <div
-                                          aria-labelledby="select-auto-signout-label"
-                                          id="select-auto-signout-menu"
-                                          role="listbox"
-                                        />
                                       </span>
                                     </span>
                                   </div>
@@ -4064,11 +4034,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-passphrase-language-label"
-                                        id="select-passphrase-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -4211,11 +4176,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-currency-label"
-                                        id="select-currency-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -4362,11 +4322,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-language-label"
-                                        id="select-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -4509,11 +4464,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-market-provider-label"
-                                        id="select-market-provider-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -4656,11 +4606,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-time-format-label"
-                                        id="select-time-format-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -4835,11 +4780,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                             </div>
                                           </div>
                                         </div>
-                                        <div
-                                          aria-labelledby="select-auto-signout-label"
-                                          id="select-auto-signout-menu"
-                                          role="listbox"
-                                        />
                                       </span>
                                     </span>
                                   </div>
@@ -6753,11 +6693,6 @@ exports[`General Settings > should render 1`] = `
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-passphrase-language-label"
-                                        id="select-passphrase-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -6900,11 +6835,6 @@ exports[`General Settings > should render 1`] = `
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-currency-label"
-                                        id="select-currency-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -7051,11 +6981,6 @@ exports[`General Settings > should render 1`] = `
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-language-label"
-                                        id="select-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -7198,11 +7123,6 @@ exports[`General Settings > should render 1`] = `
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-market-provider-label"
-                                        id="select-market-provider-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -7345,11 +7265,6 @@ exports[`General Settings > should render 1`] = `
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-time-format-label"
-                                        id="select-time-format-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -7524,11 +7439,6 @@ exports[`General Settings > should render 1`] = `
                                             </div>
                                           </div>
                                         </div>
-                                        <div
-                                          aria-labelledby="select-auto-signout-label"
-                                          id="select-auto-signout-menu"
-                                          role="listbox"
-                                        />
                                       </span>
                                     </span>
                                   </div>
@@ -9514,11 +9424,6 @@ exports[`General Settings > should update profile 1`] = `
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-passphrase-language-label"
-                                        id="select-passphrase-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -9661,11 +9566,6 @@ exports[`General Settings > should update profile 1`] = `
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-currency-label"
-                                        id="select-currency-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -9812,11 +9712,6 @@ exports[`General Settings > should update profile 1`] = `
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-language-label"
-                                        id="select-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -9959,11 +9854,6 @@ exports[`General Settings > should update profile 1`] = `
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-market-provider-label"
-                                        id="select-market-provider-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -10106,11 +9996,6 @@ exports[`General Settings > should update profile 1`] = `
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-time-format-label"
-                                        id="select-time-format-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -10285,11 +10170,6 @@ exports[`General Settings > should update profile 1`] = `
                                             </div>
                                           </div>
                                         </div>
-                                        <div
-                                          aria-labelledby="select-auto-signout-label"
-                                          id="select-auto-signout-menu"
-                                          role="listbox"
-                                        />
                                       </span>
                                     </span>
                                   </div>
@@ -12204,11 +12084,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-passphrase-language-label"
-                                        id="select-passphrase-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -12351,11 +12226,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-currency-label"
-                                        id="select-currency-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -12502,11 +12372,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-language-label"
-                                        id="select-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -12649,11 +12514,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-market-provider-label"
-                                        id="select-market-provider-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -12796,11 +12656,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-time-format-label"
-                                        id="select-time-format-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -12975,11 +12830,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             </div>
                                           </div>
                                         </div>
-                                        <div
-                                          aria-labelledby="select-auto-signout-label"
-                                          id="select-auto-signout-menu"
-                                          role="listbox"
-                                        />
                                       </span>
                                     </span>
                                   </div>
@@ -14996,11 +14846,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-passphrase-language-label"
-                                        id="select-passphrase-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -15143,11 +14988,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-currency-label"
-                                        id="select-currency-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -15294,11 +15134,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-language-label"
-                                        id="select-language-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -15441,11 +15276,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-market-provider-label"
-                                        id="select-market-provider-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -15588,11 +15418,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </div>
                                         </div>
                                       </div>
-                                      <div
-                                        aria-labelledby="select-time-format-label"
-                                        id="select-time-format-menu"
-                                        role="listbox"
-                                      />
                                     </span>
                                   </span>
                                 </div>
@@ -15767,11 +15592,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             </div>
                                           </div>
                                         </div>
-                                        <div
-                                          aria-labelledby="select-auto-signout-label"
-                                          id="select-auto-signout-menu"
-                                          role="listbox"
-                                        />
                                       </span>
                                     </span>
                                   </div>

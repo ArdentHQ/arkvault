@@ -15,13 +15,25 @@ import { useBatchTransferDetails } from "@/domains/transaction/hooks/use-batch-t
 import { Divider } from "@/app/components/Divider";
 import { Button } from "@/app/components/Button";
 import { RecipientsModal } from "@/domains/transaction/components/RecipientsModal";
+import cn from "classnames";
 
 interface ApproveStepProperties {
 	wallet: Contracts.IReadWriteWallet;
+	ledgerIsAwaitingDevice?: boolean;
+	ledgerIsAwaitingApp?: boolean;
+	isAwaitingLedgerAction?: boolean;
 }
 
-export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
+export const ConfirmTransferStep = ({
+	wallet,
+	ledgerIsAwaitingDevice,
+	ledgerIsAwaitingApp,
+	isAwaitingLedgerAction,
+}: ApproveStepProperties) => {
 	const { t } = useTranslation();
+
+	const isFeeDisabled = wallet.isLedger() && isAwaitingLedgerAction;
+	const showAuthenticationStep = wallet.isLedger() ? isAwaitingLedgerAction : true;
 
 	const [showModal, setShowModal] = useState(false);
 
@@ -112,7 +124,14 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 					<TransactionSteps approvalStatus="approved" transferStatus="active" />
 				</div>
 
-				<div className="border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0">
+				<div
+					className={cn(
+						"border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0",
+						{
+							"blur-xs pointer-events-none mb-0": isFeeDisabled,
+						},
+					)}
+				>
 					<FormField name="fee" disableStateHints>
 						<FormLabel
 							textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
@@ -121,6 +140,7 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 
 						<FeeField
 							type="batchTransfer"
+							isDisabled={isFeeDisabled}
 							data={{ token: walletToken.token() }}
 							network={network}
 							profile={profile}
@@ -128,9 +148,21 @@ export const ConfirmTransferStep = ({ wallet }: ApproveStepProperties) => {
 					</FormField>
 				</div>
 
-				<div className="px-3 pt-1 sm:px-0 sm:pt-0">
-					<AuthenticationStep wallet={wallet!} noHeading />
-				</div>
+				{showAuthenticationStep && (
+					<div className="px-3 pt-1 sm:px-0 sm:pt-0">
+						<AuthenticationStep
+							wallet={wallet!}
+							noHeading
+							noDescription
+							subject="message"
+							ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
+							ledgerIsAwaitingApp={ledgerIsAwaitingApp}
+							onDeviceNotAvailable={() => {
+								// keep waiting when it is not available
+							}}
+						/>
+					</div>
+				)}
 			</div>
 			<RecipientsModal
 				isOpen={showModal}
