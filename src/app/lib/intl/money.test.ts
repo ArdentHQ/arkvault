@@ -76,8 +76,6 @@ describe("Money", () => {
 	});
 
 	it("should throw for unknown currency code", () => {
-		expect(() => Money.make(1000, "XXX")).toThrow(
-		"Unknown currency code: XXX",
-		);
+		expect(() => Money.make(1000, "XXX")).toThrow("Unknown currency code: XXX");
 	});
 });
