@@ -554,6 +554,92 @@ describe("LedgerMigrator", () => {
 		migrator.nextTransaction();
 		expect(migrator.currentTransactionIndex()).toBe(0);
 	});
+
+	it("should return false for isPendingCompletion when there are no transactions", () => {
+		const migrator = new LedgerMigrator({ env, profile });
+		expect(migrator.isPendingCompletion()).toBe(false);
+	});
+
+	it("should return false for isPendingCompletion when all transactions are completed", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+		const transactionSpy1 = await createTransactionMocks(wallet);
+
+		await migrator.createTransactions([
+			{
+				address: wallet.address(),
+				path: senderPath,
+			},
+		]);
+
+		migrator.nextTransaction();
+		const currentTransaction = migrator.currentTransaction();
+
+		await currentTransaction?.calculateFees();
+		currentTransaction?.selectFee("avg");
+		currentTransaction?.setSenderMaxAmount();
+		currentTransaction?.setIsPending(true);
+		await currentTransaction?.signAndBroadcast();
+		currentTransaction?.setIsCompleted(true);
+
+		expect(migrator.isPendingCompletion()).toBe(false);
+
+		transactionSpy1.restoreAll();
+	});
+
+	it("should return true for isPendingCompletion when some transactions are not completed", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+
+		await migrator.createTransactions([
+			{
+				address: wallet.address(),
+				path: senderPath,
+			},
+			{
+				address: profile.wallets().last().address(),
+				path: recipientPath,
+			},
+		]);
+
+		expect(migrator.isPendingCompletion()).toBe(true);
+	});
+
+	it("should return true for isPendingCompletion when one of multiple transactions is completed", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+		const transactionSpy1 = await createTransactionMocks(wallet);
+
+		await migrator.createTransactions([
+			{
+				address: wallet.address(),
+				path: senderPath,
+			},
+			{
+				address: profile.wallets().last().address(),
+				path: recipientPath,
+			},
+		]);
+
+		migrator.nextTransaction();
+		const currentTransaction = migrator.currentTransaction();
+
+		await currentTransaction?.calculateFees();
+		currentTransaction?.selectFee("avg");
+		currentTransaction?.setSenderMaxAmount();
+		currentTransaction?.setIsPending(true);
+		await currentTransaction?.signAndBroadcast();
+		currentTransaction?.setIsCompleted(true);
+
+		expect(migrator.isPendingCompletion()).toBe(true);
+		expect(migrator.completedTransactions().length).toBe(1);
+		expect(migrator.transactions().length).toBe(2);
+
+		transactionSpy1.restoreAll();
+	});
 });
 
 describe("MigrationTransaction", () => {
