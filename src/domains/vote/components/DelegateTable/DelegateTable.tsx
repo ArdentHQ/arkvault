@@ -62,7 +62,9 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 		}
 	}, [hasVotes, maxVotes, selectedVotes]);
 
-	useEffect(() => window.scrollTo({ behavior: "smooth", top: 0 }), [currentPage]);
+	useEffect(() => {
+		window.scrollTo({ behavior: "smooth", top: 0 });
+	}, [currentPage]);
 
 	useEffect(() => {
 		if (!resignedDelegateVotes?.length) {
