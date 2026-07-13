@@ -79,7 +79,7 @@ export const SendTransferSidePanel = ({
 	});
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
-	const { abortConnectionRetry, hasDeviceAvailable, isConnected, } = useLedgerContext();
+	const { abortConnectionRetry, hasDeviceAvailable, isConnected } = useLedgerContext();
 	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
