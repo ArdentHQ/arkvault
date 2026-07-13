@@ -62,7 +62,6 @@ export const LedgerScanStep = ({
 	const walletsWithBalance = filterByDustAmount(ledgerScanner.wallets, network.constants().dustAmount);
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets } = ledgerScanner;
-	console.log({ loadedWallets });
 	const scanMore = useCallback(() => {
 		scan(profile);
 	}, [scan, profile]);
