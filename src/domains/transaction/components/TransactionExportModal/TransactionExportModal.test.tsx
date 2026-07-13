@@ -91,6 +91,28 @@ describe("TransactionExportModal", () => {
 		walletSpy.mockRestore();
 	});
 
+	it("should not render with fiat column on test network", async () => {
+		const walletSpy = vi.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(false);
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		expect(screen.queryByTestId("TransactionExportForm__toggle-include-fiat-amount")).not.toBeInTheDocument();
+
+		walletSpy.mockRestore();
+	});
+
 	it("should render progress status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">

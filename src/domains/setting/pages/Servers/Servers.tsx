@@ -13,7 +13,7 @@ import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
 import { useActiveProfile, useBreakpoint, useNetworks, useProfileJobs } from "@/app/hooks";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
-import NodesStatus from "@/domains/setting/pages/Servers/blocks/NodesStatus";
+import { NodesStatus } from "@/domains/setting/pages/Servers/blocks/NodesStatus";
 import CustomPeers from "@/domains/setting/pages/Servers/blocks/CustomPeers";
 import ServerFormModal from "@/domains/setting/pages/Servers/blocks/ServerFormModal";
 import { toasts } from "@/app/services";

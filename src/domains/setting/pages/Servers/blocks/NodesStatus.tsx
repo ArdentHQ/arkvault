@@ -12,7 +12,7 @@ import { useConfiguration } from "@/app/contexts";
 import { pingServerAddress } from "@/utils/peers";
 import { useBreakpoint } from "@/app/hooks";
 
-const NodeStatusNode: React.VFC<{
+export const NodeStatusNode: React.VFC<{
 	network: Networks.Network;
 	host: Networks.NetworkHost;
 	lastRow: boolean;
@@ -130,14 +130,14 @@ const NodeStatusNode: React.VFC<{
 	);
 };
 
-const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) => {
+export const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) => {
 	let count = 0;
 	let index = 0;
 
 	const hostGroups: { network: Networks.Network; hosts: Networks.NetworkHost[] }[] = [];
 
 	for (const network of networks) {
-		const networkHosts = network.toObject().hosts.filter((host) => host.type === "full" || host.type === "musig");
+		const networkHosts = network.toObject().hosts.filter((host) => host.type === "full");
 
 		if (networkHosts.length > 0) {
 			hostGroups.push({ hosts: networkHosts, network });
@@ -165,5 +165,3 @@ const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) 
 		</div>
 	);
 };
-
-export default NodesStatus;

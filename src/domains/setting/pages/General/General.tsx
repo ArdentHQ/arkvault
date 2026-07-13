@@ -14,7 +14,7 @@ import { ListDivided } from "@/app/components/ListDivided";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useAccentColor, useActiveProfile, useBreakpoint, useProfileJobs, useTheme, useValidation } from "@/app/hooks";
+import { useAccentColor, useActiveProfile, useBreakpoint, useTheme, useValidation } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { toasts } from "@/app/services";
 import { PlatformSdkChoices } from "@/data";
@@ -22,6 +22,7 @@ import { ResetProfile } from "@/domains/profile/components/ResetProfile";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
+import { exchangeRateCache } from "@/app/services/ExchangeRateCache";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
@@ -34,7 +35,6 @@ export const GeneralSettings: React.FC = () => {
 	const { isXs } = useBreakpoint();
 
 	const { persist } = useEnvironmentContext();
-	const { syncExchangeRates } = useProfileJobs(profile);
 
 	const { resetProfileTheme } = useTheme();
 	const { resetAccentColor } = useAccentColor();
@@ -137,7 +137,7 @@ export const GeneralSettings: React.FC = () => {
 							value: `${count}`,
 						}))}
 						onChange={(signOutPeriod: SettingsOption) => {
-							setValue("automaticSignOutPeriod", signOutPeriod.value, {
+							setValue("automaticSignOutPeriod", signOutPeriod?.value, {
 								shouldDirty: true,
 								shouldValidate: true,
 							});
@@ -183,8 +183,6 @@ export const GeneralSettings: React.FC = () => {
 		profile.settings().set(Contracts.ProfileSetting.Name, name);
 		profile.settings().set(Contracts.ProfileSetting.TimeFormat, timeFormat);
 		profile.settings().set(Contracts.ProfileSetting.Avatar, avatar);
-
-		await syncExchangeRates();
 
 		await persist();
 
@@ -257,7 +255,7 @@ export const GeneralSettings: React.FC = () => {
 										}).toString(),
 									})}
 									onChange={(bip39Locale: SettingsOption) =>
-										setValue("bip39Locale", bip39Locale.value, {
+										setValue("bip39Locale", bip39Locale?.value, {
 											shouldDirty: true,
 											shouldValidate: true,
 										})
@@ -281,12 +279,19 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={currencyOptions}
 									defaultValue={exchangeCurrency}
-									onChange={(exchangeCurrency: SettingsOption) =>
-										setValue("exchangeCurrency", exchangeCurrency.value, {
+									onChange={(exchangeCurrency: SettingsOption) => {
+										if (
+											exchangeCurrency?.value !==
+											profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency)
+										) {
+											exchangeRateCache.flush();
+										}
+
+										setValue("exchangeCurrency", exchangeCurrency?.value, {
 											shouldDirty: true,
 											shouldValidate: true,
-										})
-									}
+										});
+									}}
 								/>
 							</FormField>
 						</div>
@@ -307,7 +312,7 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.languages}
 									defaultValue={getDefaultValues().locale}
 									onChange={(locale: SettingsOption) =>
-										setValue("locale", locale.value, { shouldDirty: true, shouldValidate: true })
+										setValue("locale", locale?.value, { shouldDirty: true, shouldValidate: true })
 									}
 								/>
 							</FormField>
@@ -327,7 +332,7 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.marketProviders}
 									defaultValue={marketProvider}
 									onChange={(marketProvider: SettingsOption) => {
-										if (marketProvider.unsupportedCurrencies?.includes(exchangeCurrency)) {
+										if (marketProvider?.unsupportedCurrencies?.includes(exchangeCurrency)) {
 											toasts.warning(
 												t("SETTINGS.GENERAL.UNSUPPORTED_CURRENCY", {
 													currency: exchangeCurrency,
@@ -341,7 +346,7 @@ export const GeneralSettings: React.FC = () => {
 											});
 										}
 
-										setValue("marketProvider", marketProvider.value, {
+										setValue("marketProvider", marketProvider?.value, {
 											shouldDirty: true,
 											shouldValidate: true,
 										});
@@ -364,7 +369,7 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.timeFormats}
 									defaultValue={getDefaultValues().timeFormat}
 									onChange={(timeFormat: SettingsOption) =>
-										setValue("timeFormat", timeFormat.value, {
+										setValue("timeFormat", timeFormat?.value, {
 											shouldDirty: true,
 											shouldValidate: true,
 										})

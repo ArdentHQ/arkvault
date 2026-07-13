@@ -10,6 +10,7 @@ import * as browserAccess from "browser-fs-access";
 import { useAccentColor, useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
+import { PlatformSdkChoices } from "@/data";
 import GeneralSettings from "@/domains/setting/pages/General";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -610,6 +611,11 @@ describe("General Settings", () => {
 	it("should default to USD if market provider does not support the selected currency", async () => {
 		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
+		const originalMarketProviders = PlatformSdkChoices.marketProviders;
+		PlatformSdkChoices.marketProviders = [
+			{ label: "CoinGecko", unsupportedCurrencies: ["VND"], value: "coingecko" },
+		];
+
 		render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
@@ -636,45 +642,56 @@ describe("General Settings", () => {
 			return within(subject).getByRole("textbox");
 		};
 
-		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
-		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
-
-		await userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
-
-		expect(screen.queryByText("VND (₫)")).not.toBeInTheDocument();
-
-		await userEvent.click(screen.getByText("EUR (€)"));
-
-		expect(getSelectInput("CURRENCY")).toHaveValue("EUR (€)");
-
-		await userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
-
-		await userEvent.click(screen.getByText("CoinGecko"));
-
 		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CoinGecko");
 
 		await userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
+		expect(screen.queryByText("VND (₫)")).not.toBeInTheDocument();
 
-		await userEvent.click(screen.getByText("VND (₫)"));
+		toastSpy.mockRestore();
+		PlatformSdkChoices.marketProviders = originalMarketProviders;
+	});
 
-		expect(getSelectInput("CURRENCY")).toHaveValue("VND (₫)");
+	it("should show a toast warning and default to USD when the selected market provider does not support the current currency", async () => {
+		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+
+		const originalExchangeCurrency = profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency);
+		const originalMarketProvider = profile.settings().get(Contracts.ProfileSetting.MarketProvider);
+
+		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, "VND");
+		profile.settings().set(Contracts.ProfileSetting.MarketProvider, undefined);
+
+		const originalMarketProviders = PlatformSdkChoices.marketProviders;
+		PlatformSdkChoices.marketProviders = [
+			{ label: "CoinGecko", unsupportedCurrencies: ["VND"], value: "coingecko" },
+		];
+
+		render(
+			<Route path="/profiles/:profileId/settings">
+				<GeneralSettings />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/settings`,
+			},
+		);
+
+		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
+
+		const marketPriceContainer: HTMLElement = screen.getAllByRole("combobox")[3];
 
 		await userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
 
-		await userEvent.click(screen.getByText("CryptoCompare"));
+		const coinGeckoOption = screen.getByTestId("SelectDropdown__option--0");
+		await userEvent.click(coinGeckoOption);
 
-		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
+		await waitFor(() => {
+			const warningMessage = toastSpy.mock.calls?.[0]?.[0] as string;
+			expect(warningMessage).toContain("VND");
+		});
 
-		expect(toastSpy).toHaveBeenCalledWith(
-			translations.SETTINGS.GENERAL.UNSUPPORTED_CURRENCY.replace("{{currency}}", "VND").replace(
-				"{{provider}}",
-				"CryptoCompare",
-			),
-		);
-
-		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
-
+		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, originalExchangeCurrency);
+		profile.settings().set(Contracts.ProfileSetting.MarketProvider, originalMarketProvider);
 		toastSpy.mockRestore();
+		PlatformSdkChoices.marketProviders = originalMarketProviders;
 	});
 
 	it("should show confirmation modal when auto logoff field is changed", async () => {

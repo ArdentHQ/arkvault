@@ -1496,7 +1496,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   readonly=""
                                   tabindex="-1"
                                   type="text"
-                                  value="cryptocompare"
+                                  value="coingecko"
                                 />
                               </div>
                             </div>
@@ -1517,7 +1517,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   <div
                                     class="invisible fixed w-auto whitespace-nowrap"
                                   >
-                                    CryptoCompare…
+                                    CoinGecko…
                                   </div>
                                   <div
                                     class="css-14zfvme"
@@ -1536,7 +1536,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         name="marketProvider"
                                         placeholder="Select Market Data Provider"
                                         type="text"
-                                        value="CryptoCompare"
+                                        value="CoinGecko"
                                       />
                                       <span
                                         class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -1545,7 +1545,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         <span
                                           class="truncate"
                                         >
-                                          CryptoCompare
+                                          CoinGecko
                                         </span>
                                       </span>
                                     </div>
@@ -3543,7 +3543,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   readonly=""
                                   tabindex="-1"
                                   type="text"
-                                  value="cryptocompare"
+                                  value="coingecko"
                                 />
                               </div>
                             </div>
@@ -3564,7 +3564,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   <div
                                     class="invisible fixed w-auto whitespace-nowrap"
                                   >
-                                    CryptoCompare…
+                                    CoinGecko…
                                   </div>
                                   <div
                                     class="css-14zfvme"
@@ -3583,7 +3583,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         name="marketProvider"
                                         placeholder="Select Market Data Provider"
                                         type="text"
-                                        value="CryptoCompare"
+                                        value="CoinGecko"
                                       />
                                       <span
                                         class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -3592,7 +3592,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         <span
                                           class="truncate"
                                         >
-                                          CryptoCompare
+                                          CoinGecko
                                         </span>
                                       </span>
                                     </div>
@@ -5554,7 +5554,7 @@ exports[`General Settings > should render 1`] = `
                                   readonly=""
                                   tabindex="-1"
                                   type="text"
-                                  value="cryptocompare"
+                                  value="coingecko"
                                 />
                               </div>
                             </div>
@@ -5575,7 +5575,7 @@ exports[`General Settings > should render 1`] = `
                                   <div
                                     class="invisible fixed w-auto whitespace-nowrap"
                                   >
-                                    CryptoCompare…
+                                    CoinGecko…
                                   </div>
                                   <div
                                     class="css-14zfvme"
@@ -5594,7 +5594,7 @@ exports[`General Settings > should render 1`] = `
                                         name="marketProvider"
                                         placeholder="Select Market Data Provider"
                                         type="text"
-                                        value="CryptoCompare"
+                                        value="CoinGecko"
                                       />
                                       <span
                                         class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -5603,7 +5603,7 @@ exports[`General Settings > should render 1`] = `
                                         <span
                                           class="truncate"
                                         >
-                                          CryptoCompare
+                                          CoinGecko
                                         </span>
                                       </span>
                                     </div>
@@ -7566,7 +7566,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                   readonly=""
                                   tabindex="-1"
                                   type="text"
-                                  value="cryptocompare"
+                                  value="coingecko"
                                 />
                               </div>
                             </div>
@@ -7587,7 +7587,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                   <div
                                     class="invisible fixed w-auto whitespace-nowrap"
                                   >
-                                    CryptoCompare…
+                                    CoinGecko…
                                   </div>
                                   <div
                                     class="css-14zfvme"
@@ -7606,7 +7606,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         name="marketProvider"
                                         placeholder="Select Market Data Provider"
                                         type="text"
-                                        value="CryptoCompare"
+                                        value="CoinGecko"
                                       />
                                       <span
                                         class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -7615,7 +7615,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         <span
                                           class="truncate"
                                         >
-                                          CryptoCompare
+                                          CoinGecko
                                         </span>
                                       </span>
                                     </div>
@@ -9578,7 +9578,7 @@ exports[`General Settings > should update profile 1`] = `
                                   readonly=""
                                   tabindex="-1"
                                   type="text"
-                                  value="cryptocompare"
+                                  value="coingecko"
                                 />
                               </div>
                             </div>
@@ -9599,7 +9599,7 @@ exports[`General Settings > should update profile 1`] = `
                                   <div
                                     class="invisible fixed w-auto whitespace-nowrap"
                                   >
-                                    CryptoCompare…
+                                    CoinGecko…
                                   </div>
                                   <div
                                     class="css-14zfvme"
@@ -9618,7 +9618,7 @@ exports[`General Settings > should update profile 1`] = `
                                         name="marketProvider"
                                         placeholder="Select Market Data Provider"
                                         type="text"
-                                        value="CryptoCompare"
+                                        value="CoinGecko"
                                       />
                                       <span
                                         class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -9627,7 +9627,7 @@ exports[`General Settings > should update profile 1`] = `
                                         <span
                                           class="truncate"
                                         >
-                                          CryptoCompare
+                                          CoinGecko
                                         </span>
                                       </span>
                                     </div>
@@ -11590,7 +11590,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   readonly=""
                                   tabindex="-1"
                                   type="text"
-                                  value="cryptocompare"
+                                  value="coingecko"
                                 />
                               </div>
                             </div>
@@ -11611,7 +11611,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   <div
                                     class="invisible fixed w-auto whitespace-nowrap"
                                   >
-                                    CryptoCompare…
+                                    CoinGecko…
                                   </div>
                                   <div
                                     class="css-14zfvme"
@@ -11630,7 +11630,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         name="marketProvider"
                                         placeholder="Select Market Data Provider"
                                         type="text"
-                                        value="CryptoCompare"
+                                        value="CoinGecko"
                                       />
                                       <span
                                         class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -11639,7 +11639,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         <span
                                           class="truncate"
                                         >
-                                          CryptoCompare
+                                          CoinGecko
                                         </span>
                                       </span>
                                     </div>
@@ -13642,7 +13642,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   readonly=""
                                   tabindex="-1"
                                   type="text"
-                                  value="cryptocompare"
+                                  value="coingecko"
                                 />
                               </div>
                             </div>
@@ -13663,7 +13663,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   <div
                                     class="invisible fixed w-auto whitespace-nowrap"
                                   >
-                                    CryptoCompare…
+                                    CoinGecko…
                                   </div>
                                   <div
                                     class="css-14zfvme"
@@ -13682,7 +13682,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         name="marketProvider"
                                         placeholder="Select Market Data Provider"
                                         type="text"
-                                        value="CryptoCompare"
+                                        value="CoinGecko"
                                       />
                                       <span
                                         class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -13691,7 +13691,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         <span
                                           class="truncate"
                                         >
-                                          CryptoCompare
+                                          CoinGecko
                                         </span>
                                       </span>
                                     </div>

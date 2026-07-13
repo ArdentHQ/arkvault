@@ -41,6 +41,7 @@ describe("TransactionSuccessful", () => {
 	it("should render", async () => {
 		const transaction = {
 			...TransactionFixture,
+			isConfirmed: () => true,
 			wallet: () => wallet,
 		};
 
@@ -71,9 +72,10 @@ describe("TransactionSuccessful", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should render as pending", () => {
+	it("should render as pending", async () => {
 		const transaction = {
 			...TransactionFixture,
+			isConfirmed: () => false,
 			wallet: () => wallet,
 		};
 
@@ -93,7 +95,7 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		expect(screen.getByTestId("TransactionPending")).toBeInTheDocument();
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeInTheDocument();
 
 		vi.restoreAllMocks();
 	});

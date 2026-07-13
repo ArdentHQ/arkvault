@@ -60,4 +60,36 @@ describe("TransactionExportError", () => {
 		expect(onDownload).toHaveBeenCalled();
 		browserAccessMock.mockRestore();
 	});
+
+	it("should not show the Download button if count is zero", () => {
+		const function_ = vi.fn();
+
+		const file = {
+			content: "",
+			extension: "csv",
+			name: "name",
+		};
+
+		render(<TransactionExportError count={0} file={file} onDownload={function_} onBack={function_} />);
+
+		expect(screen.queryByTestId("TransactionExportError__download")).not.toBeInTheDocument();
+	});
+
+	it("should not call onDownload if download returns falsy", async () => {
+		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockResolvedValue(null as any);
+		const onDownload = vi.fn();
+
+		const file = {
+			content: "",
+			extension: "csv",
+			name: "name",
+		};
+
+		render(<TransactionExportError count={1} file={file} onDownload={onDownload} />);
+
+		await userEvent.click(downloadButton());
+
+		expect(onDownload).not.toHaveBeenCalled();
+		browserAccessMock.mockRestore();
+	});
 });

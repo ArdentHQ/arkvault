@@ -35,10 +35,7 @@ export const PlatformSdkChoices = {
 		],
 	},
 	languages: [{ label: "English", value: "en-US" }],
-	marketProviders: [
-		{ label: "CoinGecko", unsupportedCurrencies: [], value: "coingecko" },
-		{ label: "CryptoCompare", unsupportedCurrencies: ["VND"], value: "cryptocompare" },
-	],
+	marketProviders: [{ label: "CoinGecko", unsupportedCurrencies: [], value: "coingecko" }],
 	passphraseLanguages: [
 		{ label: "Chinese Simplified", value: "chinese_simplified" },
 		{ label: "Chinese Traditional", value: "chinese_traditional" },

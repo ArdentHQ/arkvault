@@ -51,7 +51,7 @@ const defaultPeers = (env: Environment, profile: Contracts.IProfile) => {
 
 	for (const network of profileAllEnabledNetworks(profile)) {
 		for (const host of network.toObject().hosts) {
-			if (host.type === "full" || host.type === "musig") {
+			if (host.type === "full") {
 				peers.push(
 					Peer({
 						address: host.host ?? "",

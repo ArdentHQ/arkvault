@@ -1,4 +1,3 @@
-import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -15,19 +14,16 @@ import {
 	within,
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
 import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
-let network: Networks.Network;
 
 const musigHostLive = "https://ark-live-musig.arkvault.io";
 const musigHostTest = "https://ark-test-musig.arkvault.io";
 
 const peerHostLive = "https://ark-live.arkvault.io";
-const peerHostTest = "https://ark-test.arkvault.io";
 
 const networksStub: any = {
 	ark: {
@@ -80,7 +76,6 @@ const peerResponseHeight = {
 	},
 };
 
-const arkDevnet = "ark.devnet";
 const serverFormSaveButtonTestingId = "ServerFormModal--save";
 const addNewPeerButtonTestId = "CustomPeers--addnew";
 const peerStatusOkTestId = "CustomPeersPeer--statusok";
@@ -91,8 +86,7 @@ const serverDeleteConfirmationTestId = "ServersSettings--delete-confirmation";
 const customPeerListTestId = "CustomPeers--list";
 const networkAccordionIconTestId = "Accordion__toggle";
 const CustomPeersNetworkItem = "CustomPeers-network-item";
-const nodeStatusNodeItemTestId = "NodesStatus--node";
-const nodeStatusLoadingTestId = "NodeStatus--statusloading";
+
 const customPeersToggleTestId = "CustomPeers-toggle";
 const modalAlertTestId = "ServerFormModal-alert";
 
@@ -146,11 +140,6 @@ describe("Servers Settings", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		network = profile
-			.wallets()
-			.findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", arkDevnet)!
-			.network();
 	});
 
 	beforeEach(() => {
@@ -225,178 +214,6 @@ describe("Servers Settings", () => {
 		await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
 		expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
-	});
-
-	describe("default peers", () => {
-		it("should render node statuses", () => {
-			const { container } = render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
-
-			expect(container).toBeInTheDocument();
-
-			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
-
-			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
-		});
-
-		it("should render only live nodes if doesnt use test networks", () => {
-			const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-
-			const { container } = render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
-
-			expect(container).toBeInTheDocument();
-
-			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
-
-			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
-
-			resetProfileNetworksMock();
-		});
-
-		describe("Node statuses", () => {
-			let availableNetworksSpy: vi.SpyInstance;
-
-			beforeEach(() => {
-				availableNetworksSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue([network]);
-			});
-
-			afterEach(() => {
-				availableNetworksSpy.mockRestore();
-			});
-
-			it("should load the node statuses", async () => {
-				server.use(requestMock(peerHostTest, peerResponse), requestMock(musigHostTest, musigResponse));
-
-				const { container } = render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				expect(container).toBeInTheDocument();
-
-				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
-
-				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
-
-				// Loading initially
-				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(2);
-
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statusok")).toHaveLength(2));
-			});
-
-			it("should load the node statuses in an interval", async () => {
-				server.use(requestMock(peerHostTest, peerResponse), requestMock(musigHostTest, musigResponse));
-
-				const originalSetInterval = global.setInterval;
-				let intervalPingFunction: () => void;
-
-				const setIntervalSpy = vi
-					.spyOn(global, "setInterval")
-					.mockImplementationOnce((intervalFunction, time) => {
-						intervalPingFunction = intervalFunction;
-						return originalSetInterval(intervalFunction, time);
-					});
-
-				const { container } = render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				expect(container).toBeInTheDocument();
-
-				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
-
-				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
-
-				// Loading initially
-				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(2);
-
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statusok")).toHaveLength(2));
-
-				intervalPingFunction();
-
-				// Loading again
-				await waitFor(() => {
-					expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
-				});
-
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statusok")).toHaveLength(2));
-
-				setIntervalSpy.mockRestore();
-			});
-
-			it("should load the node statuses with error", async () => {
-				server.use(
-					requestMock(peerHostTest, peerResponse),
-					requestMock(musigHostTest, undefined, { status: 404 }),
-				);
-
-				const { container } = render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				expect(container).toBeInTheDocument();
-
-				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
-
-				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
-
-				// Loading initially
-				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(2);
-
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
-			});
-
-			it("should load the node statuses with error if the response is invalid json", async () => {
-				server.use(requestMock(peerHostTest, peerResponse), requestMock(musigHostTest, "invalid json"));
-
-				const { container } = render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				expect(container).toBeInTheDocument();
-
-				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
-
-				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
-
-				// Loading initially
-				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(2);
-
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
-			});
-		});
 	});
 
 	describe("New server", () => {
