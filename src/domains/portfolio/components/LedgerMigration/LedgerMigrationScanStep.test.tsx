@@ -2,7 +2,6 @@ import { expect, it, describe, beforeEach, afterAll, vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { Networks } from "@/app/lib/mainsail";
 import { env, getMainsailProfileId, mockNanoSTransport, render, screen, waitFor } from "@/utils/testing-library";
-import { BigNumber } from "@/app/lib/helpers";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { MigrationLedgerScanStep } from "./LedgerMigrationScanStep";
 
