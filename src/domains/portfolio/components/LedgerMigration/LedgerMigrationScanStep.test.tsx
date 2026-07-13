@@ -98,7 +98,7 @@ describe("MigrationLedgerScanStep", () => {
 
 		await waitFor(() => {
 			const rows = screen.getAllByTestId("LedgerScanStep__checkbox-row");
-			expect(rows).toHaveLength(1);
+			expect(rows).toHaveLength(2);
 		});
 	});
 });
