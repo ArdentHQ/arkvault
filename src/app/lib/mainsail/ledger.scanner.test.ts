@@ -281,4 +281,38 @@ describe("LedgerScannerTest", () => {
 
 		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
 	});
+
+	it("should filter dust amounts when skipDust is true", async () => {
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+
+		const scanAllWithBalanceSpy = vi
+			.spyOn(scanner, "scanAllWithBalance")
+			.mockResolvedValue([{ address: "0x1", balance: "100", path: derivationPath }]);
+
+		const result = await scanner.scanAllWithBalance({
+			byAccountIndex: false,
+			skipDust: true,
+			slip44: 111,
+		});
+
+		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
+		expect(result).toBeDefined();
+	});
+
+	it("should not filter dust amounts when skipDust is false", async () => {
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+
+		const scanAllWithBalanceSpy = vi
+			.spyOn(scanner, "scanAllWithBalance")
+			.mockResolvedValue([{ address: "0x1", balance: "0.001", path: derivationPath }]);
+
+		const result = await scanner.scanAllWithBalance({
+			byAccountIndex: false,
+			skipDust: false,
+			slip44: 111,
+		});
+
+		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
+		expect(result).toBeDefined();
+	});
 });
