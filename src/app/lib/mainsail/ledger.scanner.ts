@@ -80,12 +80,12 @@ export class LedgerScanner {
 		// Scan legacy ARK addresses by address index.
 		let ledgerData = await this.scanAllWithBalance({
 			byAccountIndex: false,
-			skipDust: true,
 			slip44: this.#ledgerService.slip44(),
 			startPath: this.#computeLastPath({
 				importedLedgerPaths,
 				slip44: this.#ledgerService.slip44(),
 			}),
+			skipDust: true,
 		});
 
 		if (options?.isLoadingMore) {

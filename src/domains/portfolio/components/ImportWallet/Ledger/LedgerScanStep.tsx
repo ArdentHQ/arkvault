@@ -309,7 +309,7 @@ export const LedgerScanStep = ({
 		.filter((wallet) => wallet.isLedger())
 		.map((wallet) => wallet.data().get<string>(ProfilesContracts.WalletData.DerivationPath))
 		.filter((path) => typeof path === "string");
-	const ledgerScanner = useLedgerScanner({ importedLedgerPaths });
+	const ledgerScanner = useLedgerScanner({ importedLedgerPaths, scanSlip44Eth: true });
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets } = ledgerScanner;
 
