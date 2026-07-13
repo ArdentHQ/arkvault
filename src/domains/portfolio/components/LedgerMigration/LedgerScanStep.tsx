@@ -1,6 +1,6 @@
 import { Networks, Contracts } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 import { Trans } from "react-i18next";
 import { toasts } from "@/app/services";
 import { Alert } from "@/app/components/Alert";
@@ -114,6 +114,18 @@ export const LedgerScanStep = ({
 		return <LedgerCancelling />;
 	}
 
+	const hasDustAmount = network.constants().dustAmount !== undefined;
+
+	const displayWallets = useMemo(
+		() =>
+			!hasDustAmount
+				? ledgerScanner.wallets
+				: ledgerScanner.wallets.filter((wallet) =>
+						BigNumber.make(wallet.balance ?? 0).isGreaterThan(network.constants().dustAmount),
+			  ),
+		[ledgerScanner.wallets, network.constants().dustAmount, hasDustAmount],
+	);
+
 	return (
 		<section data-testid="LedgerScanStep" className="space-y-4">
 			<div className="pb-20">
@@ -124,12 +136,19 @@ export const LedgerScanStep = ({
 				) : (
 					<LedgerTable
 						network={network}
-						{...ledgerScanner}
+						wallets={displayWallets}
 						scanMore={scanMore}
 						pageSize={pageSize + legacyPageSize}
 						isScanning={isScanning || !!isLoading}
 						isSelected={isSelected ?? ledgerScanner.isSelected}
 						disableColdWallets={disableColdWallets}
+						selectedWallets={ledgerScanner.selectedWallets}
+						loadedWallets={ledgerScanner.loadedWallets}
+						canRetry={ledgerScanner.canRetry}
+						error={ledgerScanner.error}
+						isScanningMore={ledgerScanner.isScanningMore}
+						toggleSelect={ledgerScanner.toggleSelect}
+						toggleSelectAll={ledgerScanner.toggleSelectAll}
 					/>
 				)}
 				{children}
