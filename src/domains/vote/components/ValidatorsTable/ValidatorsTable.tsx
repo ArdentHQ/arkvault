@@ -50,7 +50,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	}, [hasVotes, selectedVotes]);
 
 	useEffect(() => {
-		window.scrollTo({ behavior: "smooth", top: 0 })
+		window.scrollTo({ behavior: "smooth", top: 0 });
 	}, [currentPage]);
 
 	useEffect(() => {
