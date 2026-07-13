@@ -182,6 +182,43 @@ describe("LedgerScannerTest", () => {
 		scanSpy.mockRestore();
 	});
 
+	it("should break when 5 consecutive empty addresses found in pre-scan", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "hasSyncedWithNetwork").mockReturnValue(false);
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+
+		const fromAddressSpy = vi.spyOn(profile.walletFactory(), "fromAddress");
+		fromAddressSpy.mockResolvedValue(syncedWallet);
+
+		let callCount = 0;
+
+		const scanSpy = vi.spyOn(profile.ledger(), "scan").mockImplementation(() => {
+			callCount++;
+			if (callCount === 1) {
+				return {
+					[derivationPath]: new WalletData({
+						config: profile.wallets().first().network().config(),
+					}).fill({
+						address: profile.wallets().first().address(),
+						balance: 10,
+						publicKey: profile.wallets().first().publicKey(),
+					}),
+				};
+			}
+			return {};
+		});
+
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const result = await scanner.scanAllWithBalance({
+			byAccountIndex: false,
+			slip44: 111,
+		});
+
+		expect(result).toHaveLength(0);
+		fromAddressSpy.mockRestore();
+		scanSpy.mockRestore();
+	});
+
 	it("should compute last path with account index sorting when profile has ledger wallets", async () => {
 		const syncedWallet = profile.wallets().first();
 		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
