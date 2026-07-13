@@ -6,7 +6,6 @@ import {
 	ImportedLedgerMobileItem,
 } from "./LedgerImportStep.blocks";
 import { render, screen, env, getMainsailProfileId, renderResponsiveWithRoute } from "@/utils/testing-library";
-import { vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { BigNumber } from "@/app/lib/helpers";
