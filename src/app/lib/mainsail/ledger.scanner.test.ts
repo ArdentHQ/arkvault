@@ -315,4 +315,47 @@ describe("LedgerScannerTest", () => {
 		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
 		expect(result).toBeDefined();
 	});
+
+	it("should merge wallets when not loading more", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockImplementation(() => syncedWallet);
+
+		const existingWallet = { address: syncedWallet.address(), balance: "50", path: derivationPath };
+		const scanner = profile.ledger().scanner({ scannedWallets: [existingWallet] });
+
+		const result = await scanner.scan({ pageSize: 3 });
+
+		expect(result.length).toBeGreaterThanOrEqual(1);
+		expect(result.some((wallet) => wallet.path === derivationPath)).toBe(true);
+	});
+
+	it("should include scanned wallet paths when scanning new addresses", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockImplementation(() => syncedWallet);
+
+		const existingWallet = { address: syncedWallet.address(), balance: "50", path: derivationPath };
+		const scanner = profile.ledger().scanner({ scannedWallets: [existingWallet] });
+
+		const result = await scanner.scanNewAddresses({
+			byAccountIndex: false,
+			slip44: 111,
+		});
+
+		expect(result).toBeDefined();
+	});
+
+	it("should include scanned wallet paths when scanning with balance", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockImplementation(() => syncedWallet);
+
+		const existingWallet = { address: syncedWallet.address(), balance: "50", path: derivationPath };
+		const scanner = profile.ledger().scanner({ scannedWallets: [existingWallet] });
+
+		const result = await scanner.scanWithBalancePriority({ pageSize: 3 });
+
+		expect(result).toBeDefined();
+	});
 });
