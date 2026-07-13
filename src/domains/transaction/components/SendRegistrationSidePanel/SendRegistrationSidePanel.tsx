@@ -86,7 +86,6 @@ export const SendRegistrationSidePanel = ({
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
 	const authenticationStep = stepCount - 1;
 	const summaryStep = stepCount;
-	const isAuthenticationStep = activeTab === authenticationStep;
 
 	const [mounted, setMounted] = useState(false);
 
