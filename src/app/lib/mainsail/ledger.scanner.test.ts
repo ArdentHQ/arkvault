@@ -318,6 +318,7 @@ describe("LedgerScannerTest", () => {
 
 		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
 	});
+<<<<<<< HEAD
 
 	it("should filter dust amounts when skipDust is true", async () => {
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
@@ -395,4 +396,7 @@ describe("LedgerScannerTest", () => {
 
 		expect(result).toBeDefined();
 	});
+||||||| 524cbae34
+=======
+>>>>>>> feat/mainsail
 });
