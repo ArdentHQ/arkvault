@@ -16,7 +16,7 @@ export const useConnectLedger = ({
 	const { isConnected, ledgerDevice, connect, abortConnectionRetry, disconnect } = useLedgerContext();
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
-	const triggerLedger = useCallback(async () => {
+	const triggerLedger = useCallback(() => {
 		if (!canConnect) {
 			return;
 		}

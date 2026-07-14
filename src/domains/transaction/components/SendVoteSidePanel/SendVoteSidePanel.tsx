@@ -34,6 +34,7 @@ import { useConfirmedTransaction } from "@/domains/transaction/components/Transa
 import classNames from "classnames";
 import { Image } from "@/app/components/Image";
 import { confirmSendVote } from "./SendVoteSidePanel.blocks";
+import { ERROR_STEP } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
 
 enum Step {
 	FormStep = 1,
@@ -83,7 +84,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const abortReference = useRef(new AbortController());
 	const transactionBuilder = useTransactionBuilder();
 
-	const { connectLedger } = useConnectLedger({
+	const { triggerLedger, abort } = useConnectLedger({
 		canConnect: !!senderAddress,
 		onReady: () => void handleSubmit(submitForm)(),
 		profile: activeProfile,
@@ -201,6 +202,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		(mounted: boolean) => {
 			if (!mounted) {
 				setActiveTab(initialStep);
+				abort()
 
 				if (activeTab === Step.SummaryStep) {
 					return navigate(`/profiles/${activeProfile.id()}/dashboard`);
@@ -260,7 +262,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		setActiveTab(newIndex);
 
 		if (isLedgerTransaction) {
-			void connectLedger();
+			triggerLedger();
 		}
 	};
 
@@ -645,7 +647,9 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 								ledgerIsAwaitingApp={!isConnected}
 								noHeading
 								onDeviceNotAvailable={() => {
-									// do nothing, wait for ledger
+									abort();
+									setErrorMessage(t("COMMON.LEDGER_REJECTED"));
+									setActiveTab(Step.ErrorStep);
 								}}
 							/>
 						)}
