@@ -6,6 +6,7 @@ import { translations as transactionTranslations } from "@/domains/transaction/i
 import {
 	env,
 	getDefaultProfileId,
+	mockLedgerTransportError,
 	render,
 	screen,
 	waitFor,
@@ -391,6 +392,38 @@ describe("#BatchTransfer", { timeout: 8000 }, () => {
 		dataGetSpy.mockRestore();
 		isLedgerSpy.mockRestore();
 		ledgerCtxSpy.mockRestore();
+	});
+
+	it("should abort and show an error when the ledger device is not available", async () => {
+		const listenSpy = mockLedgerTransportError("Access denied to use Ledger device");
+		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
+			route: `/profiles/${getDefaultProfileId()}/dashboard`,
+		});
+
+		await fillFormStep();
+
+		// Navigate to review step
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Navigate to approve contract step
+		await waitFor(() => expect(batchTransferContinueButton()).toBeEnabled());
+		await userEvent.click(batchTransferContinueButton());
+		await expect(screen.findByTestId(approveStepID)).resolves.toBeVisible();
+
+		// Attempt to connect ledger
+		await waitFor(() => expect(batchTransferContinueButton()).not.toBeDisabled());
+		await userEvent.click(batchTransferContinueButton());
+
+		await expect(screen.findByTestId("ErrorStep__errorMessage")).resolves.toHaveValue(
+			"Access denied to use Ledger device.",
+		);
+
+		listenSpy.mockRestore();
+		isLedgerSpy.mockRestore();
 	});
 
 	it("should send batch transfer transaction without contract approval", async () => {

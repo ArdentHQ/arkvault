@@ -5,6 +5,7 @@ import {
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
+	mockLedgerTransportError,
 	render,
 	screen,
 	syncFees,
@@ -663,6 +664,46 @@ describe("SendTransferSidePanel", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+	});
+
+	it("should abort and show an error when the ledger device is not available", async () => {
+		server.use(requestMock(`https://dwallets-evm.mainsailhq.com/api/blocks*`, { data: {} }));
+
+		const listenSpy = mockLedgerTransportError("Access denied to use Ledger device");
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await selectFirstSenderAddress();
+
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("ErrorStep__errorMessage")).resolves.toHaveValue(
+			"Access denied to use Ledger device.",
+		);
+
+		listenSpy.mockRestore();
 	});
 
 	it("should auto-select sole wallet when none set", async () => {
