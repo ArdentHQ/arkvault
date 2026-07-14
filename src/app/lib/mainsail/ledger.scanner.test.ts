@@ -396,7 +396,4 @@ describe("LedgerScannerTest", () => {
 
 		expect(result).toBeDefined();
 	});
-||||||| 524cbae34
-=======
->>>>>>> feat/mainsail
 });
