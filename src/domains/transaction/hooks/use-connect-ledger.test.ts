@@ -58,11 +58,13 @@ describe("useConnectLedger", () => {
 		};
 		contextSpy.mockReturnValue(contextValue);
 
-		// `rerender` triggers the effect that awaits `onReady()` and then
-		// resets state / disconnects - flush that within `act` so the
-		// resulting state updates aren't reported as happening outside it.
+		rerender();
+
+		// The effect triggered by `rerender` awaits `onReady()` and then resets
+		// state / disconnects - flush that pending microtask chain so the
+		// resulting state updates aren't reported as happening outside `act`.
 		await act(async () => {
-			rerender();
+			await Promise.resolve();
 		});
 
 		expect(onReady).toHaveBeenCalled();
