@@ -43,5 +43,5 @@ export const useConnectLedger = ({
 		}
 	}, [isConnected, ledgerDevice?.id, isWaitingLedger, isLedgerModelSupported]);
 
-	return { abort, triggerLedger };
+	return { abort, isWaitingLedger, triggerLedger };
 };

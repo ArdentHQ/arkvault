@@ -129,7 +129,7 @@ export const SendTransferSidePanel = ({
 	});
 
 	const { triggerLedger, abort } = useConnectLedger({
-		canConnect: !!wallet,
+		canConnect: !!wallet && !isBatchTransfer,
 		onReady: () => void handleSubmit(() => submit(true))(),
 		profile: activeProfile,
 	});

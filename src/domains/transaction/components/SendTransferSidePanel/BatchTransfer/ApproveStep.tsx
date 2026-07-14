@@ -19,6 +19,7 @@ interface ApproveStepProperties {
 	ledgerIsAwaitingDevice?: boolean;
 	isAwaitingLedgerAction?: boolean;
 	ledgerIsAwaitingApp?: boolean;
+	onDeviceNotAvailable: () => void;
 }
 
 export const ApproveStep = ({
@@ -26,6 +27,7 @@ export const ApproveStep = ({
 	ledgerIsAwaitingDevice,
 	ledgerIsAwaitingApp,
 	isAwaitingLedgerAction,
+	onDeviceNotAvailable,
 }: ApproveStepProperties) => {
 	const { t } = useTranslation();
 
@@ -142,9 +144,7 @@ export const ApproveStep = ({
 							subject="message"
 							ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
 							ledgerIsAwaitingApp={ledgerIsAwaitingApp}
-							onDeviceNotAvailable={() => {
-								// keep waiting when it is not available
-							}}
+							onDeviceNotAvailable={onDeviceNotAvailable}
 						/>
 					</div>
 				)}
