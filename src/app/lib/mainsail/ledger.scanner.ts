@@ -97,14 +97,6 @@ export class LedgerScanner {
 		return ledgerData;
 	}
 
-	#isDustAmount(amount?: string | number | BigNumber, dustAmount: string | number | BigNumber | undefined = 0) {
-		const dust = BigNumber.make(dustAmount);
-		const decimals = dust.countDecimalPlaces();
-
-		const balance = BigNumber.make(amount ?? 0);
-		return balance.decimalPlaces(decimals).isLessThanOrEqualTo(dust.decimalPlaces(decimals));
-	}
-
 	async scanAllWithBalance(config: LedgerImportOptions): Promise<LedgerData[]> {
 		const ledgerData: LedgerData[] = [];
 		let startPath = config.startPath;
@@ -156,10 +148,7 @@ export class LedgerScanner {
 				}
 
 				// Exclude wallets with dust-level balances.
-				if (
-					config.skipDust != null &&
-					this.#isDustAmount(wallet.balance(), wallet.network().constants().dustAmount)
-				) {
+				if (config.skipDust != null && wallet.hasDustAmount()) {
 					startPath = path;
 					continue;
 				}

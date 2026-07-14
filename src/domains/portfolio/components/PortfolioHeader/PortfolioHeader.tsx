@@ -89,7 +89,7 @@ export const PortfolioHeader = ({
 	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
 
 	const { isIgnored, ignore, isLoading, isMigratingLater, migrateLater, hasWalletsToMigrate } =
-		useLedgerMigrationStatus(profile);
+		useLedgerMigrationStatus(profile, selectedWallets);
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;

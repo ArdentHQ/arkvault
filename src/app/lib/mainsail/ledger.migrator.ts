@@ -216,11 +216,11 @@ export class LedgerMigrator {
 			}
 
 			wallet.mutator().alias(wallet.generateAlias());
+			this.#profile.wallets().push(wallet);
 
 			if (this.#profile.wallets().has(oldWallet.id())) {
 				this.#profile.wallets().forget(oldWallet.id());
 			}
-			this.#profile.wallets().push(wallet);
 		}
 	}
 
