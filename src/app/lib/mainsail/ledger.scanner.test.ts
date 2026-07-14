@@ -5,6 +5,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { WalletData } from "@/app/lib/mainsail/wallet.dto";
 
 let profile: Contracts.IProfile;
+const derivationPath = "m/44'/111'/0'/0/0";
 
 describe("LedgerScannerTest", () => {
 	let transportMock: any;
@@ -158,7 +159,7 @@ describe("LedgerScannerTest", () => {
 			callCount++;
 			if (callCount <= 2) {
 				return {
-					"m/44'/111'/0'/0/0": new WalletData({
+					[derivationPath]: new WalletData({
 						config: profile.wallets().first().network().config(),
 					}).fill({
 						address: profile.wallets().first().address(),
@@ -228,5 +229,56 @@ describe("LedgerScannerTest", () => {
 		});
 
 		expect(result).toBeDefined();
+	});
+
+	it("should scan legacy and merge wallets when not loading more", async () => {
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const scanAllWithBalanceSpy = vi
+			.spyOn(scanner, "scanAllWithBalance")
+			.mockResolvedValue([{ address: "0x1", balance: "100", path: derivationPath }]);
+
+		const result = await scanner.scanLegacy();
+
+		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
+		expect(result).toHaveLength(1);
+		expect(result[0].address).toBe("0x1");
+	});
+
+	it("should scan legacy and omit wallets when loading more", async () => {
+		const existingWallet = { address: "0xExistingAddress", balance: "50", path: derivationPath };
+		const scanner = profile.ledger().scanner({ scannedWallets: [existingWallet] });
+		const scanAllWithBalanceSpy = vi.spyOn(scanner, "scanAllWithBalance").mockResolvedValue([
+			{ address: "0xExistingAddress", balance: "100", path: derivationPath },
+			{ address: "0x1", balance: "200", path: "m/44'/111'/0'/0/1" },
+		]);
+
+		const result = await scanner.scanLegacy({ isLoadingMore: true });
+
+		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
+		expect(result).toHaveLength(1);
+		expect(result[0].address).toBe("0x1");
+	});
+
+	it("should scan legacy with importedLedgerPaths", async () => {
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const scanAllWithBalanceSpy = vi
+			.spyOn(scanner, "scanAllWithBalance")
+			.mockResolvedValue([{ address: "0x1", balance: "100", path: derivationPath }]);
+
+		const result = await scanner.scanLegacy({
+			importedLedgerPaths: [derivationPath],
+		});
+
+		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
+		expect(result).toHaveLength(1);
+	});
+
+	it("should scan legacy with pageSize option", async () => {
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const scanAllWithBalanceSpy = vi.spyOn(scanner, "scanAllWithBalance").mockResolvedValue([]);
+
+		await scanner.scanLegacy({ pageSize: 10 });
+
+		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
 	});
 });
