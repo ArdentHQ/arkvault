@@ -257,18 +257,44 @@ describe("#BatchTransfer", { timeout: 8000 }, () => {
 			return originalDataGet(key);
 		});
 
-		const connectMock = vi.fn().mockResolvedValue(undefined);
-		const disconnectMock = vi.fn().mockResolvedValue(undefined);
+		let mockIsConnected = false;
+		let ledgerStoreListeners: (() => void)[] = [];
 
-		const ledgerCtxSpy = vi.spyOn(AppContexts, "useLedgerContext").mockReturnValue({
-			connect: connectMock,
-			disconnect: disconnectMock,
-			hasDeviceAvailable: true,
-			isAwaitingConnection: false,
-			isConnected: true,
-			ledgerDevice: { id: "nanoSP" },
-			listenDevice: vi.fn(),
-		} as any);
+		const setMockIsConnected = (value: boolean) => {
+			mockIsConnected = value;
+			for (const listener of ledgerStoreListeners) {
+				listener();
+			}
+		};
+
+		const subscribeToLedgerStore = (listener: () => void) => {
+			ledgerStoreListeners.push(listener);
+			return () => {
+				ledgerStoreListeners = ledgerStoreListeners.filter((current) => current !== listener);
+			};
+		};
+
+		const connectMock = vi.fn().mockImplementation(async () => {
+			setMockIsConnected(true);
+		});
+		const disconnectMock = vi.fn().mockImplementation(async () => {
+			setMockIsConnected(false);
+		});
+
+		const ledgerCtxSpy = vi.spyOn(AppContexts, "useLedgerContext").mockImplementation(() => {
+			const isConnected = React.useSyncExternalStore(subscribeToLedgerStore, () => mockIsConnected);
+
+			return {
+				abortConnectionRetry: vi.fn(),
+				connect: connectMock,
+				disconnect: disconnectMock,
+				hasDeviceAvailable: true,
+				isAwaitingConnection: false,
+				isConnected,
+				ledgerDevice: { id: "nanoSP" },
+				listenDevice: vi.fn(),
+			} as any;
+		});
 
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,

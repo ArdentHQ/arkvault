@@ -9,6 +9,8 @@ const mockProfile = {
 } as Contracts.IProfile;
 
 const mockConnect = vi.fn();
+const mockDisconnect = vi.fn();
+const mockAbortConnectionRetry = vi.fn();
 
 // Mock the useLedgerContext hook
 vi.mock("@/app/contexts", () => ({
@@ -28,7 +30,9 @@ describe("useConnectLedger", () => {
 
 	it("should call onReady when ledger becomes connected after initiating connection", () => {
 		let contextValue = {
+			abortConnectionRetry: mockAbortConnectionRetry,
 			connect: mockConnect,
+			disconnect: mockDisconnect,
 			isConnected: false,
 			ledgerDevice: { id: "test-device" },
 		};
@@ -60,7 +64,9 @@ describe("useConnectLedger", () => {
 
 	it("should not call onReady when ledger model is not supported", () => {
 		let contextValue = {
+			abortConnectionRetry: mockAbortConnectionRetry,
 			connect: mockConnect,
+			disconnect: mockDisconnect,
 			isConnected: false,
 			ledgerDevice: { id: "test-device" },
 		};
@@ -93,7 +99,9 @@ describe("useConnectLedger", () => {
 
 	it("should not call onReady without user initiating connection", () => {
 		const contextValue = {
+			abortConnectionRetry: mockAbortConnectionRetry,
 			connect: mockConnect,
+			disconnect: mockDisconnect,
 			isConnected: true,
 			ledgerDevice: { id: "test-device" },
 		};

@@ -555,14 +555,44 @@ describe("SendTransferSidePanel", () => {
 		);
 
 		const transportSpy = vi.spyOn(LedgerTransportFactory, "isLedgerTransportSupported").mockReturnValue(true);
-		const connectMock = vi.fn().mockResolvedValue(undefined);
-		const ledgerCtxSpy = vi.spyOn(AppContexts, "useLedgerContext").mockReturnValue({
-			connect: connectMock,
-			hasDeviceAvailable: true,
-			isConnected: true,
-			ledgerDevice: { id: "nanoSP" },
-			listenDevice: vi.fn(),
-		} as any);
+
+		let mockIsConnected = false;
+		let ledgerStoreListeners: (() => void)[] = [];
+
+		const setMockIsConnected = (value: boolean) => {
+			mockIsConnected = value;
+			for (const listener of ledgerStoreListeners) {
+				listener();
+			}
+		};
+
+		const subscribeToLedgerStore = (listener: () => void) => {
+			ledgerStoreListeners.push(listener);
+			return () => {
+				ledgerStoreListeners = ledgerStoreListeners.filter((current) => current !== listener);
+			};
+		};
+
+		const connectMock = vi.fn().mockImplementation(async () => {
+			setMockIsConnected(true);
+		});
+		const disconnectMock = vi.fn().mockImplementation(async () => {
+			setMockIsConnected(false);
+		});
+
+		const ledgerCtxSpy = vi.spyOn(AppContexts, "useLedgerContext").mockImplementation(() => {
+			const isConnected = React.useSyncExternalStore(subscribeToLedgerStore, () => mockIsConnected);
+
+			return {
+				abortConnectionRetry: vi.fn(),
+				connect: connectMock,
+				disconnect: disconnectMock,
+				hasDeviceAvailable: true,
+				isConnected,
+				ledgerDevice: { id: "nanoSP" },
+				listenDevice: vi.fn(),
+			} as any;
+		});
 
 		vi.spyOn(unconfirmedHook, "useUnconfirmedTransactions").mockReturnValue({
 			addUnconfirmedTransactionFromSigned: vi.fn(),
