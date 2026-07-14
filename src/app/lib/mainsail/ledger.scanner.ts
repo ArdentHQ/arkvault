@@ -6,7 +6,6 @@ import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { sort } from "@/app/lib/helpers/fast-sort";
 import { IProfile } from "@/app/lib/profiles/contracts";
 import { LedgerService } from "./ledger.service";
-import { BigNumber } from "@/app/lib/helpers";
 
 interface LedgerImportOptions {
 	slip44: number;

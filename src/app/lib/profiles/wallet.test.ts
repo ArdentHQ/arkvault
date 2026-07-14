@@ -208,13 +208,17 @@ describe("Wallet", () => {
 
 	it("should return true for wallets with dust balances", () => {
 		const dustWallet = new Wallet("dust-wallet", {}, profile);
-		dustWallet.data().set(WalletData.Balance, { available: BigNumber.make("1000000000000000"), fees: BigNumber.make(0) });
+		dustWallet
+			.data()
+			.set(WalletData.Balance, { available: BigNumber.make("1000000000000000"), fees: BigNumber.make(0) });
 		expect(dustWallet.hasDustAmount()).toBe(true);
 	});
 
 	it("should return false for wallets with balances above dust threshold", () => {
 		const healthyWallet = new Wallet("healthy-wallet", {}, profile);
-		healthyWallet.data().set(WalletData.Balance, { available: BigNumber.make("1000000000000000000"), fees: BigNumber.make(0) });
+		healthyWallet
+			.data()
+			.set(WalletData.Balance, { available: BigNumber.make("1000000000000000000"), fees: BigNumber.make(0) });
 		expect(healthyWallet.hasDustAmount()).toBe(false);
 	});
 
