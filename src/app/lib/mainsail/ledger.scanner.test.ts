@@ -318,7 +318,6 @@ describe("LedgerScannerTest", () => {
 
 		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
 	});
-<<<<<<< HEAD
 
 	it("should filter dust amounts when skipDust is true", async () => {
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
