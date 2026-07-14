@@ -79,7 +79,7 @@ export const SendTransferSidePanel = ({
 	});
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
-	const { abortConnectionRetry, hasDeviceAvailable, isConnected } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
@@ -128,7 +128,7 @@ export const SendTransferSidePanel = ({
 		return handleNext();
 	});
 
-	const { connectLedger } = useConnectLedger({
+	const { triggerLedger, abort } = useConnectLedger({
 		canConnect: !!wallet,
 		onReady: () => void handleSubmit(() => submit(true))(),
 		profile: activeProfile,
@@ -144,7 +144,7 @@ export const SendTransferSidePanel = ({
 	const resetState = useCallback(() => {
 		setActiveTab(firstTabIndex);
 		setBatchTransferActiveTab(BatchTransferTabStep.ReviewStep);
-		abortConnectionRetry();
+		abort();
 
 		resetForm(() => {
 			setErrorMessage(undefined);
@@ -252,7 +252,7 @@ export const SendTransferSidePanel = ({
 		setActiveTab(nextStep);
 
 		if (isLedgerTransaction) {
-			await connectLedger();
+			triggerLedger();
 		}
 	};
 
@@ -482,7 +482,9 @@ export const SendTransferSidePanel = ({
 								ledgerIsAwaitingDevice={!hasDeviceAvailable}
 								ledgerIsAwaitingApp={!isConnected}
 								onDeviceNotAvailable={() => {
-									// keep waiting when it is not available
+									abort();
+									setErrorMessage(t("COMMON.LEDGER_REJECTED"));
+									setActiveTab(SendTransferStep.ErrorStep);
 								}}
 								noHeading
 							/>
