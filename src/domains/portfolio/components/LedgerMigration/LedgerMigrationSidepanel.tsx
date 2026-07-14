@@ -49,7 +49,7 @@ export const LedgerMigrationSidepanel = ({
 	}, [open]);
 
 	const handleOpenChange = (open: boolean) => {
-		if (!open && migrator.completedTransactions().length > 0) {
+		if (!open && migrator.isPendingCompletion()) {
 			setShowConfirmationModal(true);
 			return;
 		}

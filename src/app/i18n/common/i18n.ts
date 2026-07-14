@@ -448,6 +448,7 @@ export const translations = {
 	REGISTRATIONS: "Registrations",
 	REGULAR_ADDRESS: "Regular Address",
 	RELOAD: "Reload",
+	REMAINING: "Remaining",
 	REMOVE: "Remove",
 	REMOVE_ALL: "Remove All",
 	REMOVE_NOTIFICATION: "Remove Notification",

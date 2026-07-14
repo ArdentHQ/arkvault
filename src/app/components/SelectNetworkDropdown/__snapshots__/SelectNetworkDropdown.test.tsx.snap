@@ -127,11 +127,6 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_6_-label"
-              id="downshift-_r_6_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -253,11 +248,6 @@ exports[`SelectNetworkDropdown > should render 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_0_-label"
-              id="downshift-_r_0_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -377,11 +367,6 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_3_-label"
-              id="downshift-_r_3_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>

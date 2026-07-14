@@ -168,6 +168,10 @@ export class LedgerMigrator {
 		return this.transactions().filter((transaction) => transaction.isCompleted());
 	}
 
+	public isPendingCompletion(): boolean {
+		return this.transactions().length > 0 && this.transactions().length > this.completedTransactions().length;
+	}
+
 	public currentTransaction(): MigrationTransaction | undefined {
 		return this.#currentTransaction;
 	}

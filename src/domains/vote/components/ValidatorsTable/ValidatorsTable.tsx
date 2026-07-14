@@ -49,7 +49,9 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 		setIsVoteDisabled(hasVotes && selectedVotes.length === 1);
 	}, [hasVotes, selectedVotes]);
 
-	useEffect(() => window.scrollTo({ behavior: "smooth", top: 0 }), [currentPage]);
+	useEffect(() => {
+		window.scrollTo({ behavior: "smooth", top: 0 });
+	}, [currentPage]);
 
 	useEffect(() => {
 		if (!resignedValidatorVotes?.length) {

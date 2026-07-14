@@ -113,11 +113,6 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_1i_-label"
-              id="downshift-_r_1i_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -239,11 +234,6 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_1l_-label"
-              id="downshift-_r_1l_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -474,11 +464,6 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_16_-label"
-              id="downshift-_r_16_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -709,11 +694,6 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_1d_-label"
-              id="downshift-_r_1d_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -833,11 +813,6 @@ exports[`SelectDropdown > should render option base 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_f_-label"
-              id="downshift-_r_f_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -975,11 +950,6 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_o_-label"
-              id="downshift-_r_o_-menu"
-              role="listbox"
-            />
           </span>
           <div
             class="min-w-full"
@@ -999,7 +969,10 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                 <div>
                   <div>
                     <ul
+                      aria-labelledby="downshift-_r_o_-label"
                       class="select-options-list"
+                      id="downshift-_r_o_-menu"
+                      role="listbox"
                     >
                       <li
                         aria-disabled="false"
@@ -1191,11 +1164,6 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_u_-label"
-              id="downshift-_r_u_-menu"
-              role="listbox"
-            />
           </span>
           <div
             class="min-w-full"
@@ -1215,7 +1183,10 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                 <div>
                   <div>
                     <ul
+                      aria-labelledby="downshift-_r_u_-label"
                       class="select-options-list"
+                      id="downshift-_r_u_-menu"
+                      role="listbox"
                     >
                       <li
                         aria-disabled="false"
@@ -1389,11 +1360,6 @@ exports[`SelectDropdown > should render option base with default value when free
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_5s_-label"
-              id="downshift-_r_5s_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -1529,11 +1495,6 @@ exports[`SelectDropdown > should render option base with initial default value 1
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_24_-label"
-              id="downshift-_r_24_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -1653,11 +1614,6 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_2a_-label"
-              id="downshift-_r_2a_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -1726,11 +1682,6 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_1o_-label"
-              id="downshift-_r_1o_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -1850,11 +1801,6 @@ exports[`SelectDropdown > should render option group 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_i_-label"
-              id="downshift-_r_i_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -1992,11 +1938,6 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_r_-label"
-              id="downshift-_r_r_-menu"
-              role="listbox"
-            />
           </span>
           <div
             class="min-w-full"
@@ -2016,7 +1957,10 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                 <div>
                   <div>
                     <ul
+                      aria-labelledby="downshift-_r_r_-label"
                       class="select-options-list"
+                      id="downshift-_r_r_-menu"
+                      role="listbox"
                     >
                       <ul
                         class="select-list-option-group"
@@ -2206,11 +2150,6 @@ exports[`SelectDropdown > should render option group with custom label and allow
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_11_-label"
-              id="downshift-_r_11_-menu"
-              role="listbox"
-            />
           </span>
           <div
             class="min-w-full"
@@ -2230,7 +2169,10 @@ exports[`SelectDropdown > should render option group with custom label and allow
                 <div>
                   <div>
                     <ul
+                      aria-labelledby="downshift-_r_11_-label"
                       class="select-options-list"
+                      id="downshift-_r_11_-menu"
+                      role="listbox"
                     >
                       <ul
                         class="select-list-option-group"
@@ -2402,11 +2344,6 @@ exports[`SelectDropdown > should render option group with default value when fre
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_5v_-label"
-              id="downshift-_r_5v_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -2542,11 +2479,6 @@ exports[`SelectDropdown > should render option group with initial default value 
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_27_-label"
-              id="downshift-_r_27_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -2666,11 +2598,6 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_2d_-label"
-              id="downshift-_r_2d_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -2739,11 +2666,6 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_1r_-label"
-              id="downshift-_r_1r_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -2863,11 +2785,6 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_2m_-label"
-              id="downshift-_r_2m_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -2987,11 +2904,6 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_l_-label"
-              id="downshift-_r_l_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -3111,11 +3023,6 @@ exports[`SelectDropdown > should render with empty options 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_2g_-label"
-              id="downshift-_r_2g_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>
@@ -3235,11 +3142,6 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              aria-labelledby="downshift-_r_2j_-label"
-              id="downshift-_r_2j_-menu"
-              role="listbox"
-            />
           </span>
         </span>
       </div>

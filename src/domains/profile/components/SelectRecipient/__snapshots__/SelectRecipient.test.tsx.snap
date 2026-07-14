@@ -112,11 +112,6 @@ exports[`SelectRecipient > should render disabled 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="SelectRecipient__dropdown-label"
-                  id="SelectRecipient__dropdown-menu"
-                  role="listbox"
-                />
               </span>
             </span>
           </div>
@@ -238,11 +233,6 @@ exports[`SelectRecipient > should render empty 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="SelectRecipient__dropdown-label"
-                  id="SelectRecipient__dropdown-menu"
-                  role="listbox"
-                />
               </span>
             </span>
           </div>
@@ -475,11 +465,6 @@ exports[`SelectRecipient > should render invalid 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="SelectRecipient__dropdown-label"
-                  id="SelectRecipient__dropdown-menu"
-                  role="listbox"
-                />
               </span>
             </span>
           </div>
@@ -601,11 +586,6 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="SelectRecipient__dropdown-label"
-                  id="SelectRecipient__dropdown-menu"
-                  role="listbox"
-                />
               </span>
             </span>
           </div>
