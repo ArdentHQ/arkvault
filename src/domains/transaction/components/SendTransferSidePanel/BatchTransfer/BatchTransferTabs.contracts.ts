@@ -9,7 +9,7 @@ export enum BatchTransferTabStep {
 
 export interface BatchTransferTabsProperties {
 	onBack?: () => void;
-	onSubmit: () => void;
+	onSubmit: () => void | Promise<void>;
 	onCancel?: () => void;
 	onError: (error: string) => void;
 	setActiveTab: (step: BatchTransferTabStep) => void;

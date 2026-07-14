@@ -139,7 +139,7 @@ export const SendRegistrationSidePanel = ({
 	const { triggerLedger, abort } = useConnectLedger({
 		canConnect: !!activeWallet,
 		isLedgerModelSupported,
-		onReady: () => void handleSubmit(),
+		onReady: () => handleSubmit(),
 		profile: activeProfile,
 	});
 

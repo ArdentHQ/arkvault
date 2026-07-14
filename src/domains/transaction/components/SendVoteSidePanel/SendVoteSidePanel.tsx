@@ -85,7 +85,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const { triggerLedger, abort } = useConnectLedger({
 		canConnect: !!senderAddress,
-		onReady: () => void handleSubmit(submitForm)(),
+		onReady: () => handleSubmit(submitForm)(),
 		profile: activeProfile,
 	});
 

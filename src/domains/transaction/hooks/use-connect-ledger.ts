@@ -41,6 +41,9 @@ export const useConnectLedger = ({
 			void (async () => {
 				await onReady();
 				setIsWaitingLedger(false);
+				// Don't trust the connection to still be valid for a later attempt -
+				// force a fresh connect()/app-open verification next time.
+				await disconnect();
 			})();
 		}
 	}, [isConnected, ledgerDevice?.id, isWaitingLedger, isLedgerModelSupported]);

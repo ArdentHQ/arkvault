@@ -94,7 +94,7 @@ export const BatchTransferTabs = ({
 				return sendApprovalTransaction();
 			}
 
-			onSubmit();
+			return onSubmit();
 		},
 		profile,
 	});

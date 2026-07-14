@@ -130,7 +130,7 @@ export const SendTransferSidePanel = ({
 
 	const { triggerLedger, abort } = useConnectLedger({
 		canConnect: !!wallet && !isBatchTransfer,
-		onReady: () => void handleSubmit(() => submit(true))(),
+		onReady: () => handleSubmit(() => submit(true))(),
 		profile: activeProfile,
 	});
 
@@ -462,9 +462,7 @@ export const SendTransferSidePanel = ({
 										setActiveTab(SendTransferStep.FormStep);
 										setBatchTransferActiveTab(BatchTransferTabStep.ReviewStep);
 									}}
-									onSubmit={() => {
-										void handleSubmit(() => submit(!!wallet?.isLedger()))();
-									}}
+									onSubmit={() => handleSubmit(() => submit(!!wallet?.isLedger()))()}
 								/>
 							)}
 						</TabPanel>
