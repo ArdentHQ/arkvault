@@ -136,7 +136,7 @@ export const SendRegistrationSidePanel = ({
 		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
 	}, [validatorRegistrationFee, registrationType]);
 
-	const { triggerLedger, abort, } = useConnectLedger({
+	const { triggerLedger, abort } = useConnectLedger({
 		canConnect: !!activeWallet,
 		isLedgerModelSupported,
 		onReady: () => void handleSubmit(),
@@ -457,7 +457,7 @@ export const SendRegistrationSidePanel = ({
 										ledgerIsAwaitingApp={!isConnected}
 										onDeviceNotAvailable={() => {
 											abort();
-											setErrorMessage(t("COMMON.LEDGER_REJECTED"))
+											setErrorMessage(t("COMMON.LEDGER_REJECTED"));
 											setActiveTab(ERROR_STEP);
 										}}
 										ledgerSupportedModels={[

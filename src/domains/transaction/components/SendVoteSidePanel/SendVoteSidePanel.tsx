@@ -202,7 +202,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		(mounted: boolean) => {
 			if (!mounted) {
 				setActiveTab(initialStep);
-				abort()
+				abort();
 
 				if (activeTab === Step.SummaryStep) {
 					return navigate(`/profiles/${activeProfile.id()}/dashboard`);

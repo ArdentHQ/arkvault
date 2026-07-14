@@ -8,7 +8,7 @@ export const useConnectLedger = ({
 	isLedgerModelSupported = true,
 	canConnect = true,
 }: {
-	onReady: () => void;
+	onReady: () => void | Promise<void>;
 	profile: Contracts.IProfile;
 	isLedgerModelSupported?: boolean;
 	canConnect?: boolean;
@@ -22,13 +22,13 @@ export const useConnectLedger = ({
 		}
 
 		setIsWaitingLedger(true);
-	}, [canConnect ]);
+	}, [canConnect]);
 
 	const abort = () => {
 		abortConnectionRetry();
 		disconnect();
 		setIsWaitingLedger(false);
-	}
+	};
 
 	useEffect(() => {
 		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
@@ -38,8 +38,10 @@ export const useConnectLedger = ({
 
 	useEffect(() => {
 		if (isConnected && isWaitingLedger && isLedgerModelSupported) {
-			void onReady();
-			setIsWaitingLedger(false);
+			void (async () => {
+				await onReady();
+				setIsWaitingLedger(false);
+			})();
 		}
 	}, [isConnected, ledgerDevice?.id, isWaitingLedger, isLedgerModelSupported]);
 

@@ -87,21 +87,21 @@ export const BatchTransferTabs = ({
 	const { t } = useTranslation();
 	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 
-	const {
-		triggerLedger,
-		abort,
-		isWaitingLedger: authenticatingLedger,
-	} = useConnectLedger({
+	const { triggerLedger, abort, isWaitingLedger } = useConnectLedger({
 		canConnect: !!wallet,
 		onReady: () => {
 			if (activeTab === BatchTransferTabStep.ApproveStep) {
-				void sendApprovalTransaction();
-			} else {
-				onSubmit();
+				return sendApprovalTransaction();
 			}
+
+			onSubmit();
 		},
 		profile,
 	});
+
+	const authenticatingLedger = (isWaitingLedger ||
+		(activeTab === BatchTransferTabStep.ApproveStep && isConnected && !transaction) ||
+		(activeTab === BatchTransferTabStep.ConfirmTransferStep && isSubmitting)) as boolean;
 
 	const handleDeviceNotAvailable = useCallback(() => {
 		abort();
