@@ -34,7 +34,6 @@ import { useConfirmedTransaction } from "@/domains/transaction/components/Transa
 import classNames from "classnames";
 import { Image } from "@/app/components/Image";
 import { confirmSendVote } from "./SendVoteSidePanel.blocks";
-import { ERROR_STEP } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
 
 enum Step {
 	FormStep = 1,
