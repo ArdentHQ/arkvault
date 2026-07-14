@@ -121,8 +121,8 @@ describe("SendRegistrationSidePanel", () => {
 	});
 
 	it("should skip authentication step for a ledger wallet", async () => {
-		mockNanoXTransport();
-		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		const nanoXMock = mockNanoXTransport();
+		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 		await renderPanel();
 
 		// Step 1
@@ -162,12 +162,13 @@ describe("SendRegistrationSidePanel", () => {
 
 		await expect(screen.queryByTestId("AuthenticationStep")).not.toBeInTheDocument();
 
-		vi.restoreAllMocks();
+		nanoXMock.mockRestore();
+		isLedgerSpy.mockRestore();
 	});
 
 	it("should abort and show an error when the ledger device is not available", async () => {
 		const listenSpy = mockLedgerTransportError("Access denied to use Ledger device");
-		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 		await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
@@ -190,6 +191,6 @@ describe("SendRegistrationSidePanel", () => {
 		);
 
 		listenSpy.mockRestore();
-		vi.restoreAllMocks();
+		isLedgerSpy.mockRestore();
 	});
 });
