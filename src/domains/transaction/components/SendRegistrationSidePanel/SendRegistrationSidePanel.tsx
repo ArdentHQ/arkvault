@@ -234,6 +234,7 @@ export const SendRegistrationSidePanel = ({
 		if (!mounted) {
 			setActiveTab(FORM_STEP);
 			setErrorMessage(undefined);
+			abort();
 
 			const fieldKeyMap = {
 				contractDeployment: "bytecode",
@@ -456,7 +457,7 @@ export const SendRegistrationSidePanel = ({
 										ledgerIsAwaitingApp={!isConnected}
 										onDeviceNotAvailable={() => {
 											abort();
-											setErrorMessage("User rejected connection!")
+											setErrorMessage(t("COMMON.LEDGER_REJECTED"))
 											setActiveTab(ERROR_STEP);
 										}}
 										ledgerSupportedModels={[
