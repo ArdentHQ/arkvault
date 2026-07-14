@@ -15,7 +15,7 @@ export const VoteList = ({ votes, currency, isNegativeAmount = false }: VoteList
 	if ((votes[0] as Contracts.VoteRegistryItem).amount === undefined) {
 		return (
 			<ListWrapper>
-				{(votes).map((vote, index) => (
+				{votes.map((vote, index) => (
 					<VoteItem currency={currency} wallet={vote.wallet || vote} key={index} />
 				))}
 			</ListWrapper>
