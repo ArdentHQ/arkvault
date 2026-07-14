@@ -13,28 +13,35 @@ export const useConnectLedger = ({
 	isLedgerModelSupported?: boolean;
 	canConnect?: boolean;
 }) => {
-	const { isConnected, ledgerDevice, connect } = useLedgerContext();
+	const { isConnected, ledgerDevice, connect, abortConnectionRetry, disconnect } = useLedgerContext();
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
-	const connectLedger = useCallback(async () => {
+	const triggerLedger = useCallback(async () => {
 		if (!canConnect) {
 			return;
 		}
 
-		await connect(profile);
 		setIsWaitingLedger(true);
-	}, [canConnect, profile, connect]);
+	}, [canConnect ]);
+
+	const abort = () => {
+		abortConnectionRetry();
+		disconnect();
+		setIsWaitingLedger(false);
+	}
 
 	useEffect(() => {
 		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
-			void connectLedger();
+			void connect(profile);
 		}
+	}, [isWaitingLedger, isConnected, ledgerDevice?.id]);
 
+	useEffect(() => {
 		if (isConnected && isWaitingLedger && isLedgerModelSupported) {
 			void onReady();
 			setIsWaitingLedger(false);
 		}
 	}, [isConnected, ledgerDevice?.id, isWaitingLedger, isLedgerModelSupported]);
 
-	return { connectLedger };
+	return { abort, triggerLedger };
 };

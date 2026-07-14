@@ -44,7 +44,7 @@ describe("useConnectLedger", () => {
 
 		// Start connection process
 		act(() => {
-			result.current.connectLedger();
+			result.current.triggerLedger();
 		});
 
 		// Simulate connection success
@@ -77,7 +77,7 @@ describe("useConnectLedger", () => {
 
 		// Start connection process
 		act(() => {
-			result.current.connectLedger();
+			result.current.triggerLedger();
 		});
 
 		// Simulate connection success

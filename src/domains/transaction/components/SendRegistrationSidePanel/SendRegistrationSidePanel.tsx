@@ -136,7 +136,7 @@ export const SendRegistrationSidePanel = ({
 		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
 	}, [validatorRegistrationFee, registrationType]);
 
-	const { connectLedger } = useConnectLedger({
+	const { triggerLedger, abort, } = useConnectLedger({
 		canConnect: !!activeWallet,
 		isLedgerModelSupported,
 		onReady: () => void handleSubmit(),
@@ -208,7 +208,7 @@ export const SendRegistrationSidePanel = ({
 		const isNextStepAuthentication = nextStep === authenticationStep;
 
 		if (isNextStepAuthentication && activeWallet?.isLedger()) {
-			void connectLedger();
+			void triggerLedger();
 		}
 
 		setActiveTab(nextStep);
@@ -455,7 +455,9 @@ export const SendRegistrationSidePanel = ({
 										ledgerIsAwaitingDevice={!hasDeviceAvailable}
 										ledgerIsAwaitingApp={!isConnected}
 										onDeviceNotAvailable={() => {
-											// keep waiting when it is not available
+											abort();
+											setErrorMessage("User rejected connection!")
+											setActiveTab(ERROR_STEP);
 										}}
 										ledgerSupportedModels={[
 											Contracts.WalletLedgerModel.NanoX,
