@@ -28,7 +28,7 @@ describe("useConnectLedger", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should call onReady when ledger becomes connected after initiating connection", () => {
+	it("should call onReady when ledger becomes connected after initiating connection", async () => {
 		let contextValue = {
 			abortConnectionRetry: mockAbortConnectionRetry,
 			connect: mockConnect,
@@ -57,7 +57,13 @@ describe("useConnectLedger", () => {
 			isConnected: true,
 		};
 		contextSpy.mockReturnValue(contextValue);
-		rerender();
+
+		// `rerender` triggers the effect that awaits `onReady()` and then
+		// resets state / disconnects - flush that within `act` so the
+		// resulting state updates aren't reported as happening outside it.
+		await act(async () => {
+			rerender();
+		});
 
 		expect(onReady).toHaveBeenCalled();
 	});
