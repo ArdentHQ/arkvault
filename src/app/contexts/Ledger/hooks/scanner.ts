@@ -6,7 +6,11 @@ import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection"
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 
-export const useLedgerScanner = (options?: { pageSize?: number; importedLedgerPaths?: string[] }) => {
+export const useLedgerScanner = (options?: {
+	pageSize?: number;
+	importedLedgerPaths?: string[];
+	scanSlip44Eth?: boolean;
+}) => {
 	const { setBusy, setIdle, resetConnectionState, disconnect } = useLedgerContext();
 
 	const [state, dispatch] = useReducer(scannerReducer, {
@@ -49,14 +53,19 @@ export const useLedgerScanner = (options?: { pageSize?: number; importedLedgerPa
 			options: { factor: 1, randomize: false, retries: 50 },
 		});
 
-		const ledgerData = await profile
-			.ledger()
-			.scanner({ scannedWallets: wallets })
-			.scan({
-				importedLedgerPaths: options?.importedLedgerPaths ?? [],
-				isLoadingMore,
-				pageSize: options?.pageSize,
-			});
+		const scanner = profile.ledger().scanner({ scannedWallets: wallets });
+
+		const ledgerData = options?.scanSlip44Eth
+			? await scanner.scan({
+					importedLedgerPaths: options?.importedLedgerPaths ?? [],
+					isLoadingMore,
+					pageSize: options?.pageSize,
+				})
+			: await scanner.scanLegacy({
+					importedLedgerPaths: options?.importedLedgerPaths ?? [],
+					isLoadingMore,
+					pageSize: options?.pageSize,
+				});
 
 		dispatch({ payload: ledgerData, type: "success" });
 

@@ -65,6 +65,35 @@ export class LedgerScanner {
 		return ledgerData;
 	}
 
+	async scanLegacy(options?: {
+		isLoadingMore?: boolean;
+		pageSize?: number;
+		importedLedgerPaths?: string[];
+	}): Promise<LedgerData[]> {
+		const importedLedgerPaths = [
+			...this.#wallets.map((wallet) => wallet.path),
+			...(options?.importedLedgerPaths ?? []),
+		];
+
+		// Scan legacy ARK addresses by address index.
+		let ledgerData = await this.scanAllWithBalance({
+			byAccountIndex: false,
+			slip44: this.#ledgerService.slip44(),
+			startPath: this.#computeLastPath({
+				importedLedgerPaths,
+				slip44: this.#ledgerService.slip44(),
+			}),
+		});
+
+		if (options?.isLoadingMore) {
+			ledgerData = omitBy(ledgerData, (wallet) => this.#wallets.some((w) => w.address === wallet.address));
+		} else {
+			ledgerData = uniqBy([...this.#wallets, ...ledgerData], (wallet) => wallet.address);
+		}
+
+		return ledgerData;
+	}
+
 	async scanAllWithBalance(config: LedgerImportOptions): Promise<LedgerData[]> {
 		const ledgerData: LedgerData[] = [];
 		let startPath = config.startPath;
