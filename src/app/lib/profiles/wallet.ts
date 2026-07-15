@@ -728,6 +728,15 @@ export class Wallet implements IReadWriteWallet {
 		return this.#tokens;
 	}
 
+	/** {@inheritDoc IReadWriteWallet.hasDustAmount} */
+	public hasDustAmount(): boolean {
+		const dust = BigNumber.make(this.network().constants().dustAmount);
+		const decimals = dust.countDecimalPlaces();
+
+		const balance = BigNumber.make(this.balance());
+		return balance.decimalPlaces(decimals).isLessThanOrEqualTo(dust.decimalPlaces(decimals));
+	}
+
 	public generateAlias(): string {
 		return new WalletAliasProvider(this.#profile).generateAlias(this);
 	}

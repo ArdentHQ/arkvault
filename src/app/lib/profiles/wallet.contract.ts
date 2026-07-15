@@ -84,6 +84,14 @@ export interface IReadWriteWallet {
 	hasSyncedWithNetwork(): boolean;
 
 	/**
+	 * Determine if the wallet has a dust-level balance.
+	 *
+	 * @return {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	hasDustAmount(): boolean;
+
+	/**
 	 * Get the id.
 	 *
 	 * @return {string}
