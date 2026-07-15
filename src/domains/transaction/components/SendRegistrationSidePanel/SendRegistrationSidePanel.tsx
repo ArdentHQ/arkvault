@@ -13,8 +13,8 @@ import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
-	ValidatorRegistrationForm,
 	signValidatorRegistration,
+	ValidatorRegistrationForm,
 } from "@/domains/transaction/components/ValidatorRegistrationForm";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
@@ -25,11 +25,15 @@ import {
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
-import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
+import {
+	useValidatorRegistrationLockedFee
+} from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { ThemeIcon } from "@/app/components/Icon";
-import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import {
+	useConfirmedTransaction
+} from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import cn from "classnames";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
@@ -38,6 +42,7 @@ import {
 	ContractDeploymentForm,
 	signContractDeployment,
 } from "@/domains/transaction/components/ContractDeploymentForm";
+import { WalletLedgerModel } from "@/app/lib/profiles/wallet.enum";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
@@ -73,7 +78,7 @@ export const SendRegistrationSidePanel = ({
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
-		supportedModels: [Contracts.WalletLedgerModel.NanoX, Contracts.WalletLedgerModel.NanoSP],
+		supportedModels: [Contracts.WalletLedgerModel.NanoX, Contracts.WalletLedgerModel.NanoSP, WalletLedgerModel.NanoS],
 	});
 
 	const form = useForm({ mode: "onChange" });
