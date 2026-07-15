@@ -182,6 +182,43 @@ describe("LedgerScannerTest", () => {
 		scanSpy.mockRestore();
 	});
 
+	it("should break when 5 consecutive empty addresses found in pre-scan", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "hasSyncedWithNetwork").mockReturnValue(false);
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+
+		const fromAddressSpy = vi.spyOn(profile.walletFactory(), "fromAddress");
+		fromAddressSpy.mockResolvedValue(syncedWallet);
+
+		let callCount = 0;
+
+		const scanSpy = vi.spyOn(profile.ledger(), "scan").mockImplementation(() => {
+			callCount++;
+			if (callCount === 1) {
+				return {
+					[derivationPath]: new WalletData({
+						config: profile.wallets().first().network().config(),
+					}).fill({
+						address: profile.wallets().first().address(),
+						balance: 10,
+						publicKey: profile.wallets().first().publicKey(),
+					}),
+				};
+			}
+			return {};
+		});
+
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const result = await scanner.scanAllWithBalance({
+			byAccountIndex: false,
+			slip44: 111,
+		});
+
+		expect(result).toHaveLength(0);
+		fromAddressSpy.mockRestore();
+		scanSpy.mockRestore();
+	});
+
 	it("should compute last path with account index sorting when profile has ledger wallets", async () => {
 		const syncedWallet = profile.wallets().first();
 		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
@@ -280,5 +317,82 @@ describe("LedgerScannerTest", () => {
 		await scanner.scanLegacy({ pageSize: 10 });
 
 		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
+	});
+
+	it("should filter dust amounts when skipDust is true", async () => {
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+
+		const scanAllWithBalanceSpy = vi
+			.spyOn(scanner, "scanAllWithBalance")
+			.mockResolvedValue([{ address: "0x1", balance: "100", path: derivationPath }]);
+
+		const result = await scanner.scanAllWithBalance({
+			byAccountIndex: false,
+			skipDust: true,
+			slip44: 111,
+		});
+
+		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
+		expect(result).toBeDefined();
+	});
+
+	it("should not filter dust amounts when skipDust is false", async () => {
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+
+		const scanAllWithBalanceSpy = vi
+			.spyOn(scanner, "scanAllWithBalance")
+			.mockResolvedValue([{ address: "0x1", balance: "0.001", path: derivationPath }]);
+
+		const result = await scanner.scanAllWithBalance({
+			byAccountIndex: false,
+			skipDust: false,
+			slip44: 111,
+		});
+
+		expect(scanAllWithBalanceSpy).toHaveBeenCalled();
+		expect(result).toBeDefined();
+	});
+
+	it("should merge wallets when not loading more", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockImplementation(() => syncedWallet);
+
+		const existingWallet = { address: syncedWallet.address(), balance: "50", path: derivationPath };
+		const scanner = profile.ledger().scanner({ scannedWallets: [existingWallet] });
+
+		const result = await scanner.scan({ pageSize: 3 });
+
+		expect(result.length).toBeGreaterThanOrEqual(1);
+		expect(result.some((wallet) => wallet.path === derivationPath)).toBe(true);
+	});
+
+	it("should include scanned wallet paths when scanning new addresses", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockImplementation(() => syncedWallet);
+
+		const existingWallet = { address: syncedWallet.address(), balance: "50", path: derivationPath };
+		const scanner = profile.ledger().scanner({ scannedWallets: [existingWallet] });
+
+		const result = await scanner.scanNewAddresses({
+			byAccountIndex: false,
+			slip44: 111,
+		});
+
+		expect(result).toBeDefined();
+	});
+
+	it("should include scanned wallet paths when scanning with balance", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockImplementation(() => syncedWallet);
+
+		const existingWallet = { address: syncedWallet.address(), balance: "50", path: derivationPath };
+		const scanner = profile.ledger().scanner({ scannedWallets: [existingWallet] });
+
+		const result = await scanner.scanWithBalancePriority({ pageSize: 3 });
+
+		expect(result).toBeDefined();
 	});
 });

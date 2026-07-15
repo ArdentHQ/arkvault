@@ -13,6 +13,7 @@ interface LedgerImportOptions {
 	byAccountIndex: boolean;
 	pageSize?: number;
 	skipZeroBalance?: boolean;
+	skipDust?: boolean;
 }
 
 export class LedgerScanner {
@@ -78,6 +79,7 @@ export class LedgerScanner {
 		// Scan legacy ARK addresses by address index.
 		let ledgerData = await this.scanAllWithBalance({
 			byAccountIndex: false,
+			skipDust: true,
 			slip44: this.#ledgerService.slip44(),
 			startPath: this.#computeLastPath({
 				importedLedgerPaths,
@@ -140,6 +142,12 @@ export class LedgerScanner {
 						break;
 					}
 
+					startPath = path;
+					continue;
+				}
+
+				// Exclude wallets with dust-level balances.
+				if (config.skipDust != null && wallet.hasDustAmount()) {
 					startPath = path;
 					continue;
 				}

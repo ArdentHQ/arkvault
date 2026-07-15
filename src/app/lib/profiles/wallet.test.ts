@@ -206,6 +206,22 @@ describe("Wallet", () => {
 		expect(wallet.hasSyncedWithNetwork()).toBe(false);
 	});
 
+	it("should return true for wallets with dust balances", () => {
+		const dustWallet = new Wallet("dust-wallet", {}, profile);
+		dustWallet
+			.data()
+			.set(WalletData.Balance, { available: BigNumber.make("1000000000000000"), fees: BigNumber.make(0) });
+		expect(dustWallet.hasDustAmount()).toBe(true);
+	});
+
+	it("should return false for wallets with balances above dust threshold", () => {
+		const healthyWallet = new Wallet("healthy-wallet", {}, profile);
+		healthyWallet
+			.data()
+			.set(WalletData.Balance, { available: BigNumber.make("1000000000000000000"), fees: BigNumber.make(0) });
+		expect(healthyWallet.hasDustAmount()).toBe(false);
+	});
+
 	it("should have a data repository", () => {
 		expect(wallet.data()).toBeInstanceOf(DataRepository);
 	});

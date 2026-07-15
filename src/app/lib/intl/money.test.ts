@@ -74,4 +74,8 @@ describe("Money", () => {
 	it("should convert to unit", () => {
 		expect(Money.make(123_456, currency).toUnit()).toBe(1234.56);
 	});
+
+	it("should throw for unknown currency code", () => {
+		expect(() => Money.make(1000, "XXX")).toThrow("Unknown currency code: XXX");
+	});
 });

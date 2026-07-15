@@ -124,4 +124,17 @@ describe("WalletAliasProvider", () => {
 		const result = provider.findAliasByAddress("0xnonexistent");
 		expect(result).toBeUndefined();
 	});
+
+	it("should use contactName when localName is undefined and useNetworkWalletNames is false", () => {
+		const wallet = profile.wallets().first();
+		vi.spyOn(profile.knownWallets(), "is").mockReturnValue(false);
+		vi.spyOn(profile.appearance(), "get").mockReturnValue(false);
+		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(wallet);
+		vi.spyOn(wallet, "displayName").mockReturnValue(undefined as any);
+		vi.spyOn(wallet, "username").mockReturnValue(undefined);
+		vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([{ name: () => "Contact Name" }] as any);
+
+		const result = provider.findAliasByAddress(wallet.address());
+		expect(result).toBe("Contact Name");
+	});
 });

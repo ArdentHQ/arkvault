@@ -5,7 +5,10 @@ import { WalletData } from "@/app/lib/profiles/wallet.enum";
 import { ConfigKey } from "@/app/lib/mainsail";
 import { BIP44 } from "@ardenthq/arkvault-crypto";
 
-export const useLedgerMigrationStatus = (profile: Contracts.IProfile) => {
+export const useLedgerMigrationStatus = (
+	profile: Contracts.IProfile,
+	selectedWallets?: Contracts.IReadWriteWallet[],
+) => {
 	const keys = {
 		IsIgnored: `${profile.id()}:MigrationIsIgnored`,
 		IsMigratingLater: `${profile.id()}:MigrationIsMigratingLater`,
@@ -16,22 +19,20 @@ export const useLedgerMigrationStatus = (profile: Contracts.IProfile) => {
 	const [isMigratingLater, setIsMigratingLater] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 
-	const hasWalletsToMigrate = useMemo(
-		() =>
-			profile
-				.wallets()
-				.values()
-				.some((wallet) => {
-					if (wallet.isLedger()) {
-						const slip44 = profile.activeNetwork().config().get(ConfigKey.Slip44);
-						const path = wallet.data().get<string>(WalletData.DerivationPath) ?? "";
-						return [slip44].includes(BIP44.parse(path).coinType);
-					}
+	const hasWalletsToMigrate = useMemo(() => {
+		const walletsToCheck =
+			selectedWallets && selectedWallets.length === 1 ? selectedWallets : profile.wallets().values();
 
-					return false;
-				}),
-		[profile],
-	);
+		return walletsToCheck.some((wallet) => {
+			if (wallet.isLedger() && !wallet.hasDustAmount()) {
+				const slip44 = profile.activeNetwork().config().get(ConfigKey.Slip44);
+				const path = wallet.data().get<string>(WalletData.DerivationPath) ?? "";
+				return [slip44].includes(BIP44.parse(path).coinType);
+			}
+
+			return false;
+		});
+	}, [profile, selectedWallets]);
 
 	useEffect(() => {
 		const loadStatus = async () => {

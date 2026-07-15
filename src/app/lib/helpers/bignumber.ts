@@ -93,6 +93,16 @@ export class BigNumber {
 	}
 
 	/**
+	 * Returns the number of decimal places of the current value.
+	 *
+	 * @returns {number}
+	 * @memberof BigNumber
+	 */
+	public countDecimalPlaces(): number {
+		return this.#value.dp() ?? 0;
+	}
+
+	/**
 	 * Creates an instance of BigNumber with the given value added to the current value.
 	 *
 	 * @param {NumberLike} value

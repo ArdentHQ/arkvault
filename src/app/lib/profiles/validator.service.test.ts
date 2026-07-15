@@ -1,4 +1,4 @@
-import { describe } from "vitest";
+import { describe, vi } from "vitest";
 import { test } from "@/utils/testing-library";
 import { http, HttpResponse } from "msw";
 import { server } from "@/tests/mocks/server";
@@ -111,5 +111,38 @@ describe("Validator Service", () => {
 				profile.activeNetwork(),
 			);
 		expect(exists).toBe(true);
+	});
+
+	test("#publicKeyExists returns false when API returns data with count = 0", async ({ profile }) => {
+		server.use(
+			http.get(/.*\/wallets.*/, () =>
+				HttpResponse.json({
+					data: [],
+					meta: { count: 0 },
+				}),
+			),
+		);
+
+		const exists = await profile
+			.validators()
+			.publicKeyExists(
+				"0375e624da5204a6b1181673d9027b534269a7bdf288bc6067c675f8d144cf8698",
+				profile.activeNetwork(),
+			);
+		expect(exists).toBe(false);
+	});
+
+	test("should sync validators in parallel", async ({ profile }) => {
+		const metaSpy = vi.spyOn(profile.activeNetwork(), "meta");
+		metaSpy.mockReturnValue({
+			...profile.activeNetwork().meta(),
+			fastDelegateSync: true,
+		} as any);
+
+		await profile.validators().sync(profile.activeNetwork().id(), { force: true });
+		const validators = profile.validators().all(profile.activeNetwork().id());
+		expect(validators).toHaveLength(59);
+
+		metaSpy.mockRestore();
 	});
 });

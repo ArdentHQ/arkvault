@@ -3,6 +3,7 @@ import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { Contracts } from "@/app/lib/profiles";
 import {
 	Notifications,
+	Notification,
 	NotificationLeftSide,
 	TransferNotification,
 	FailedTransactionNotification,
@@ -37,6 +38,77 @@ const createMockTransaction = (overrides = {}) => {
 	};
 	return baseTx;
 };
+
+describe("Notification", () => {
+	it("should render notification row with transaction details", async () => {
+		const mockTransaction = createMockTransaction();
+		const onShowDetails = vi.fn();
+		const onMarkAsRead = vi.fn();
+		const onRemove = vi.fn();
+		const toggleExpand = vi.fn();
+
+		render(
+			<Notification
+				transaction={mockTransaction}
+				isUnread={true}
+				onShowDetails={onShowDetails}
+				onMarkAsRead={onMarkAsRead}
+				onRemove={onRemove}
+				isExpanded={false}
+				toggleExpand={toggleExpand}
+			/>,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("NotificationRow")).toBeInTheDocument();
+		});
+	});
+
+	it("should call onMarkAsRead when notification is hovered", async () => {
+		const mockTransaction = createMockTransaction();
+		const onMarkAsRead = vi.fn();
+
+		render(
+			<Notification
+				transaction={mockTransaction}
+				isUnread={true}
+				onShowDetails={vi.fn()}
+				onMarkAsRead={onMarkAsRead}
+				onRemove={vi.fn()}
+				isExpanded={false}
+				toggleExpand={vi.fn()}
+			/>,
+		);
+
+		const user = userEvent.setup();
+		await user.hover(screen.getByTestId("NotificationRow"));
+
+		expect(onMarkAsRead).toHaveBeenCalled();
+	});
+
+	it("should call onRemove when delete button is clicked", async () => {
+		const mockTransaction = createMockTransaction();
+		const onRemove = vi.fn();
+
+		render(
+			<Notification
+				transaction={mockTransaction}
+				isUnread={false}
+				onShowDetails={vi.fn()}
+				onMarkAsRead={vi.fn()}
+				onRemove={onRemove}
+				isExpanded={false}
+				toggleExpand={vi.fn()}
+			/>,
+		);
+
+		const user = userEvent.setup();
+		const deleteButtons = screen.getAllByTestId("Notification--delete-");
+		await user.click(deleteButtons[0]);
+
+		expect(onRemove).toHaveBeenCalled();
+	});
+});
 
 describe("Notifications", () => {
 	it("should render mark all as read button when there are unread notifications", async () => {
