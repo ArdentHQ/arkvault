@@ -8,10 +8,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { InputPassword } from "@/app/components/Input";
 import { useValidation } from "@/app/hooks";
 import { LedgerConfirmation } from "@/domains/transaction/components/LedgerConfirmation";
-import {
-	LedgerWaitingAppContent,
-	LedgerWaitingDeviceContent,
-} from "@/domains/wallet/components/Ledger";
+import { LedgerWaitingAppContent, LedgerWaitingDeviceContent } from "@/domains/wallet/components/Ledger";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Spinner } from "@/app/components/Spinner";
 import { Image } from "@/app/components/Image";
