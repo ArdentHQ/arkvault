@@ -1083,7 +1083,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
             class="mt-0.5 flex items-center text-xs font-semibold leading-5 text-theme-secondary-text sm:mt-1 sm:text-sm sm:font-normal sm:leading-[17px] md:text-base md:leading-5"
             data-testid="header__subtitle"
           >
-            Connect your Ledger Nano S and confirm input.
+            Connect your Ledger and confirm input.
           </div>
         </div>
       </div>
@@ -2396,7 +2396,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
             class="mt-0.5 flex items-center text-xs font-semibold leading-5 text-theme-secondary-text sm:mt-1 sm:text-sm sm:font-normal sm:leading-[17px] md:text-base md:leading-5"
             data-testid="header__subtitle"
           >
-            Connect your Ledger Nano S and confirm input.
+            Connect your Ledger and confirm input.
           </div>
         </div>
       </div>
