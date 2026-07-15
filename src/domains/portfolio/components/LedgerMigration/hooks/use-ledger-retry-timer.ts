@@ -32,5 +32,5 @@ export const useLedgerRetryTimer = ({
 
 	const shouldShowRetry = elapsedSeconds >= thresholdSeconds;
 
-	return { elapsedSeconds, shouldShowRetry, reset, isRetrying };
+	return { elapsedSeconds, isRetrying, reset, shouldShowRetry };
 };
