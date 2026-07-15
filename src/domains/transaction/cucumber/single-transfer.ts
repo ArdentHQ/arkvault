@@ -91,7 +91,7 @@ cucumber(
 			await t.click(Selector("[data-testid=RecipientListItem__select-button-0]"));
 
 			// select token
-			await t.click(Selector("[data-testid=SelectDropdown__input]").nth(3));
+			await t.click(Selector("[data-testid=SelectDropdown__input]").nth(1));
 			await t.click(Selector("[data-testid=SelectDropdown__option--1]"));
 
 			await t.click(Selector("[data-testid=AddRecipient__send-all]"));

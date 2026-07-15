@@ -15,7 +15,7 @@ import { openSendTransferSidePanel } from "../e2e/common";
 
 const translations = buildTranslations();
 const sendButton = Selector("[data-testid=SendTransfer__send-button]");
-const recipientInput = Selector("[data-testid=SelectDropdown__input]").nth(1);
+const recipientInput = Selector("[data-testid=SelectDropdown__input]").nth(2);
 const amountInput = Selector("[data-testid=AddRecipient__amount]");
 
 const preSteps = {
@@ -37,7 +37,7 @@ cucumber(
 			await t.click(Selector("button").withText(translations.TRANSACTION.MULTIPLE));
 			await t.typeText(amountInput, "10", { replace: true });
 			await t.typeText(
-				Selector("[data-testid=SelectDropdown__input]").nth(1),
+				Selector("[data-testid=SelectDropdown__input]").nth(2),
 				"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 				{
 					paste: true,
