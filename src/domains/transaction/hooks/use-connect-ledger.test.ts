@@ -9,6 +9,8 @@ const mockProfile = {
 } as Contracts.IProfile;
 
 const mockConnect = vi.fn();
+const mockDisconnect = vi.fn();
+const mockAbortConnectionRetry = vi.fn();
 
 // Mock the useLedgerContext hook
 vi.mock("@/app/contexts", () => ({
@@ -26,9 +28,11 @@ describe("useConnectLedger", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should call onReady when ledger becomes connected after initiating connection", () => {
+	it("should call onReady when ledger becomes connected after initiating connection", async () => {
 		let contextValue = {
+			abortConnectionRetry: mockAbortConnectionRetry,
 			connect: mockConnect,
+			disconnect: mockDisconnect,
 			isConnected: false,
 			ledgerDevice: { id: "test-device" },
 		};
@@ -44,7 +48,7 @@ describe("useConnectLedger", () => {
 
 		// Start connection process
 		act(() => {
-			result.current.connectLedger();
+			result.current.triggerLedger();
 		});
 
 		// Simulate connection success
@@ -53,14 +57,24 @@ describe("useConnectLedger", () => {
 			isConnected: true,
 		};
 		contextSpy.mockReturnValue(contextValue);
+
 		rerender();
+
+		// The effect triggered by `rerender` awaits `onReady()` and then resets
+		// state / disconnects - flush that pending microtask chain so the
+		// resulting state updates aren't reported as happening outside `act`.
+		await act(async () => {
+			await Promise.resolve();
+		});
 
 		expect(onReady).toHaveBeenCalled();
 	});
 
 	it("should not call onReady when ledger model is not supported", () => {
 		let contextValue = {
+			abortConnectionRetry: mockAbortConnectionRetry,
 			connect: mockConnect,
+			disconnect: mockDisconnect,
 			isConnected: false,
 			ledgerDevice: { id: "test-device" },
 		};
@@ -77,7 +91,7 @@ describe("useConnectLedger", () => {
 
 		// Start connection process
 		act(() => {
-			result.current.connectLedger();
+			result.current.triggerLedger();
 		});
 
 		// Simulate connection success
@@ -93,7 +107,9 @@ describe("useConnectLedger", () => {
 
 	it("should not call onReady without user initiating connection", () => {
 		const contextValue = {
+			abortConnectionRetry: mockAbortConnectionRetry,
 			connect: mockConnect,
+			disconnect: mockDisconnect,
 			isConnected: true,
 			ledgerDevice: { id: "test-device" },
 		};

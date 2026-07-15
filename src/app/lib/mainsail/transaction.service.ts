@@ -360,8 +360,7 @@ export class TransactionService {
 		const builder = await UsernameResignationBuilder.new()
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
-			.gasLimit(input.gasLimit.toString())
-			.sign(input.signatory.signingKey());
+			.gasLimit(input.gasLimit.toString());
 
 		await this.#sign(input, builder);
 
@@ -379,8 +378,7 @@ export class TransactionService {
 		const builder = await ValidatorResignationBuilder.new()
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
-			.gasLimit(input.gasLimit.toString())
-			.sign(input.signatory.signingKey());
+			.gasLimit(input.gasLimit.toString());
 
 		await this.#sign(input, builder);
 
@@ -399,8 +397,7 @@ export class TransactionService {
 			.nonce(nonce)
 			.payload(input.data.bytecode)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
-			.gasLimit(input.gasLimit.toString())
-			.sign(input.signatory.signingKey());
+			.gasLimit(input.gasLimit.toString());
 
 		await this.#sign(input, builder);
 

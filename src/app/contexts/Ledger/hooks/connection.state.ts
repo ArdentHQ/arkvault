@@ -73,6 +73,7 @@ export const connectionReducer = (state: LedgerConnectionState, action: Action):
 			...state,
 			error: undefined,
 			isBusy: false,
+			isConnected: false,
 			isWaiting: true,
 		}),
 	};

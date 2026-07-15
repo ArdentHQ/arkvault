@@ -118,7 +118,7 @@ export const useLedgerConnection = () => {
 
 		const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
 
-		await resetConnectionState();
+		await closeDevices();
 
 		dispatch({ type: "waiting" });
 		abortRetryReference.current = false;
