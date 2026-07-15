@@ -137,7 +137,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		return (
 			<div data-testid="InputFee" className="relative">
-				<div className="absolute right-0 -mt-7">
+				<div className="absolute right-0 -mt-6.5">
 					<Switch
 						disabled={loading || disabled}
 						size="sm"
