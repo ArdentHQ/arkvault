@@ -68,7 +68,7 @@ export const SendRegistrationSidePanel = ({
 	const { common, validatorRegistration } = useValidation();
 	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
-	const { hasDeviceAvailable, isConnected, ledgerDevice } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 
 	const form = useForm({ mode: "onChange" });
 
