@@ -15,11 +15,10 @@ import { Image } from "@/app/components/Image";
 import { Icon } from "@/app/components/Icon";
 import { Loader } from "@/app/components/Loader";
 import { MnemonicRules } from "@/domains/transaction/components/MnemonicRules/MnemonicRules";
-import { LedgerModel } from "@/app/contexts/Ledger/hooks/connection.state";
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
-	ledgerConnectedModel?: LedgerModel;
+	ledgerIsConnected?: boolean;
 	onDeviceNotAvailable?: () => void;
 }
 
@@ -33,9 +32,9 @@ type AuthenticationStepProperties = {
 } & LedgerStates;
 
 const LedgerStateWrapper = ({
-	ledgerConnectedModel,
 	ledgerIsAwaitingApp,
 	ledgerIsAwaitingDevice,
+	ledgerIsConnected,
 	wallet,
 	children,
 	noHeading,
@@ -44,14 +43,12 @@ const LedgerStateWrapper = ({
 	const { t } = useTranslation();
 
 	const subtitle = useMemo(() => {
-		if (!ledgerConnectedModel) {
+		if (!ledgerIsConnected) {
 			return t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE");
 		}
 
-		const niceTitle = t(`WALLETS.MODAL_LEDGER_WALLET.LEDGER_${ledgerConnectedModel.toUpperCase()}`);
-
-		return t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE_MODEL", { model: niceTitle });
-	}, [ledgerConnectedModel, t]);
+		return t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE");
+	}, [ledgerIsConnected, t]);
 
 	if (ledgerIsAwaitingDevice) {
 		return <LedgerWaitingDeviceContent subtitle={subtitle} noHeading={noHeading} subject={subject} />;
@@ -77,7 +74,7 @@ export const LedgerAuthentication = ({
 	ledgerDetails,
 	ledgerIsAwaitingDevice,
 	ledgerIsAwaitingApp,
-	ledgerConnectedModel,
+	ledgerIsConnected,
 	onDeviceNotAvailable,
 	noHeading,
 	noDescription,
@@ -104,7 +101,7 @@ export const LedgerAuthentication = ({
 			<LedgerStateWrapper
 				ledgerIsAwaitingApp={ledgerIsAwaitingApp}
 				ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
-				ledgerConnectedModel={ledgerConnectedModel}
+				ledgerIsConnected={ledgerIsConnected}
 				wallet={wallet}
 				noHeading={noHeading}
 				subject={subject}
@@ -167,7 +164,7 @@ export const AuthenticationStep = ({
 	ledgerDetails,
 	ledgerIsAwaitingDevice,
 	ledgerIsAwaitingApp,
-	ledgerConnectedModel,
+	ledgerIsConnected,
 	onDeviceNotAvailable,
 	subject = "transaction",
 	noHeading,
@@ -185,7 +182,7 @@ export const AuthenticationStep = ({
 				ledgerDetails={ledgerDetails}
 				ledgerIsAwaitingApp={ledgerIsAwaitingApp}
 				ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
-				ledgerConnectedModel={ledgerConnectedModel}
+				ledgerIsConnected={ledgerIsConnected}
 				onDeviceNotAvailable={onDeviceNotAvailable}
 				wallet={wallet}
 				subject={subject}

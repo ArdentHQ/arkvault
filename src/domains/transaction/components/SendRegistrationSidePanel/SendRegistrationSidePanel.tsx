@@ -453,7 +453,7 @@ export const SendRegistrationSidePanel = ({
 											setErrorMessage(t("COMMON.LEDGER_REJECTED"));
 											setActiveTab(ERROR_STEP);
 										}}
-										ledgerConnectedModel={ledgerDevice?.id}
+										ledgerIsConnected={isConnected}
 										noHeading
 									/>
 								</TabPanel>
