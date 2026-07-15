@@ -24,7 +24,6 @@ export const useLedgerRetryTimer = ({
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			console.log("interval");
 			setElapsedSeconds(Math.floor((Date.now() - startTimeRef.current) / 1000));
 		}, 1000);
 		return () => clearInterval(interval);
