@@ -48,10 +48,11 @@ const LedgerStateWrapper = ({
 }: AuthenticationStepProperties & { children: React.ReactNode }) => {
 	const { t } = useTranslation();
 
-	const { isLedgerModelSupported } = useLedgerModelStatus({
-		connectedModel: ledgerConnectedModel,
-		supportedModels: ledgerSupportedModels,
-	});
+	const isLedgerModelSupported = true;
+	// const { isLedgerModelSupported } = useLedgerModelStatus({
+	// 	connectedModel: ledgerConnectedModel,
+	// 	supportedModels: ledgerSupportedModels,
+	// });
 
 	const subtitle = useMemo(() => {
 		if (ledgerSupportedModels.length > 1 || !ledgerConnectedModel) {
