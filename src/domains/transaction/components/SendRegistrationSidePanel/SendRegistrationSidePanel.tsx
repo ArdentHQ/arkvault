@@ -468,7 +468,6 @@ export const SendRegistrationSidePanel = ({
 										ledgerSupportedModels={[
 											Contracts.WalletLedgerModel.NanoX,
 											Contracts.WalletLedgerModel.NanoSP,
-											Contracts.WalletLedgerModel.NanoS,
 										]}
 										ledgerConnectedModel={ledgerDevice?.id}
 										noHeading

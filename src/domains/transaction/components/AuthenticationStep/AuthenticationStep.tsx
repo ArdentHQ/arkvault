@@ -44,7 +44,6 @@ const LedgerStateWrapper = ({
 	children,
 	ledgerSupportedModels = [
 		Contracts.WalletLedgerModel.NanoS,
-		Contracts.WalletLedgerModel.NanoSP,
 		Contracts.WalletLedgerModel.NanoX,
 	],
 	noHeading,
