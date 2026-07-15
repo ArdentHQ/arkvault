@@ -25,15 +25,11 @@ import {
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
-import {
-	useValidatorRegistrationLockedFee
-} from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
+import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { ThemeIcon } from "@/app/components/Icon";
-import {
-	useConfirmedTransaction
-} from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import cn from "classnames";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
@@ -78,7 +74,11 @@ export const SendRegistrationSidePanel = ({
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
-		supportedModels: [Contracts.WalletLedgerModel.NanoX, Contracts.WalletLedgerModel.NanoSP, WalletLedgerModel.NanoS],
+		supportedModels: [
+			Contracts.WalletLedgerModel.NanoX,
+			Contracts.WalletLedgerModel.NanoSP,
+			WalletLedgerModel.NanoS,
+		],
 	});
 
 	const form = useForm({ mode: "onChange" });
