@@ -6,10 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { ListenLedger } from "./Ledger/ListenLedger";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputPassword } from "@/app/components/Input";
-import { LedgerModel, useLedgerModelStatus, useValidation } from "@/app/hooks";
+import { useValidation } from "@/app/hooks";
 import { LedgerConfirmation } from "@/domains/transaction/components/LedgerConfirmation";
 import {
-	LedgerDeviceErrorContent,
 	LedgerWaitingAppContent,
 	LedgerWaitingDeviceContent,
 } from "@/domains/wallet/components/Ledger";
