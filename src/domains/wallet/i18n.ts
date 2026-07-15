@@ -49,6 +49,9 @@ export const translations = {
 			"Unable to connect to Ledger device. Please ensure that all other applications that connect to your Ledger are closed.",
 		INCOMPATIBLE_APP_ERROR:
 			"Incompatible Ledger App. Make sure to open the ARK ledger app and have it updated to the latest version. Click retry to try again.",
+		LEDGER_NANOS: "Ledger Nano S",
+		LEDGER_NANOSP: "Ledger Nano S Plus",
+		LEDGER_NANOX: "Ledger Nano X",
 		LEDGER_NANO_S: "Ledger Nano S",
 		LEDGER_NANO_S_PLUS: "Ledger Nano S Plus",
 		LEDGER_NANO_X: "Ledger Nano X",

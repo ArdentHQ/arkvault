@@ -83,7 +83,6 @@ describe("useConnectLedger", () => {
 
 		const { result, rerender } = renderHook(() =>
 			useConnectLedger({
-				isLedgerModelSupported: false,
 				onReady,
 				profile: mockProfile,
 			}),

@@ -72,15 +72,6 @@ export const SendRegistrationSidePanel = ({
 
 	const { hasDeviceAvailable, isConnected, ledgerDevice } = useLedgerContext();
 
-	const { isLedgerModelSupported } = useLedgerModelStatus({
-		connectedModel: ledgerDevice?.id,
-		supportedModels: [
-			Contracts.WalletLedgerModel.NanoX,
-			Contracts.WalletLedgerModel.NanoSP,
-			WalletLedgerModel.NanoS,
-		],
-	});
-
 	const form = useForm({ mode: "onChange" });
 
 	const { formState, register, setValue, watch, getValues, trigger, unregister } = form;
@@ -143,7 +134,6 @@ export const SendRegistrationSidePanel = ({
 
 	const { triggerLedger, abort } = useConnectLedger({
 		canConnect: !!activeWallet,
-		isLedgerModelSupported,
 		onReady: () => handleSubmit(),
 		profile: activeProfile,
 	});
@@ -465,10 +455,6 @@ export const SendRegistrationSidePanel = ({
 											setErrorMessage(t("COMMON.LEDGER_REJECTED"));
 											setActiveTab(ERROR_STEP);
 										}}
-										ledgerSupportedModels={[
-											Contracts.WalletLedgerModel.NanoX,
-											Contracts.WalletLedgerModel.NanoSP,
-										]}
 										ledgerConnectedModel={ledgerDevice?.id}
 										noHeading
 									/>
