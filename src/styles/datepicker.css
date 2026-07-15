@@ -58,6 +58,10 @@
 	@apply m-0.5 flex h-8 w-8 items-center justify-center text-xs;
 }
 
+/*.react-datepicker__sr-only {*/
+/*	@apply sr-only;*/
+/*}*/
+
 .react-datepicker__week {
 	@apply flex items-center;
 }
