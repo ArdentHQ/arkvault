@@ -35,6 +35,8 @@ export class ArkPricing implements PriceTracker {
 	/**
 	 * The host of the ARK Pricing API.
 	 *
+	 * TODO: placeholder until the service is deployed, update once the final host is known.
+	 *
 	 * @type {string}
 	 * @memberof PriceTracker
 	 */
