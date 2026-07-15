@@ -1,0 +1,9 @@
+{
+	"data": {
+		"coin": "ark",
+		"prices": {
+			"USD": { "price": 0.412, "change24h": 2.31, "timestamp": "2024-01-15T12:00:00Z" },
+			"EUR": { "price": 0.381, "change24h": 2.18, "timestamp": "2024-01-15T12:00:00Z" }
+		}
+	}
+}
