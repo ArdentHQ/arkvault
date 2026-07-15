@@ -42,17 +42,16 @@ const LedgerStateWrapper = ({
 	ledgerIsAwaitingDevice,
 	wallet,
 	children,
-	ledgerSupportedModels = [Contracts.WalletLedgerModel.NanoS, Contracts.WalletLedgerModel.NanoX],
+	ledgerSupportedModels = [Contracts.WalletLedgerModel.NanoS, Contracts.WalletLedgerModel.NanoSP, Contracts.WalletLedgerModel.NanoX],
 	noHeading,
 	subject,
 }: AuthenticationStepProperties & { children: React.ReactNode }) => {
 	const { t } = useTranslation();
 
-	const isLedgerModelSupported = true;
-	// const { isLedgerModelSupported } = useLedgerModelStatus({
-	// 	connectedModel: ledgerConnectedModel,
-	// 	supportedModels: ledgerSupportedModels,
-	// });
+	const { isLedgerModelSupported } = useLedgerModelStatus({
+		connectedModel: ledgerConnectedModel,
+		supportedModels: ledgerSupportedModels,
+	});
 
 	const subtitle = useMemo(() => {
 		if (ledgerSupportedModels.length > 1 || !ledgerConnectedModel) {
