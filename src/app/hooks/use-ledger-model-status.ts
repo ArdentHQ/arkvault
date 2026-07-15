@@ -13,7 +13,11 @@ interface ModelStatusProperties {
 
 export const useLedgerModelStatus = ({
 	connectedModel,
-	supportedModels = [Contracts.WalletLedgerModel.NanoS, Contracts.WalletLedgerModel.NanoSP, Contracts.WalletLedgerModel.NanoX],
+	supportedModels = [
+		Contracts.WalletLedgerModel.NanoS,
+		Contracts.WalletLedgerModel.NanoSP,
+		Contracts.WalletLedgerModel.NanoX,
+	],
 }: ModelStatusProperties) => {
 	const isLedgerModelSupported = useMemo(() => {
 		if (!connectedModel) {

@@ -42,7 +42,11 @@ const LedgerStateWrapper = ({
 	ledgerIsAwaitingDevice,
 	wallet,
 	children,
-	ledgerSupportedModels = [Contracts.WalletLedgerModel.NanoS, Contracts.WalletLedgerModel.NanoSP, Contracts.WalletLedgerModel.NanoX],
+	ledgerSupportedModels = [
+		Contracts.WalletLedgerModel.NanoS,
+		Contracts.WalletLedgerModel.NanoSP,
+		Contracts.WalletLedgerModel.NanoX,
+	],
 	noHeading,
 	subject,
 }: AuthenticationStepProperties & { children: React.ReactNode }) => {
