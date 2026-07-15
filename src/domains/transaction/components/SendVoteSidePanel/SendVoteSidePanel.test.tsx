@@ -6,6 +6,7 @@ import {
 	getMainsailProfileId,
 	getDefaultMainsailWalletId,
 	getDefaultWalletMnemonic,
+	mockLedgerTransportError,
 	mockNanoXTransport,
 	render,
 	screen,
@@ -1201,6 +1202,47 @@ describe("SendVote", () => {
 		voteTransactionMock.mockRestore();
 		nanoXMock.mockRestore();
 		isEthBasedAppSpy.mockRestore();
+
+		process.env.REACT_APP_IS_UNIT = "1";
+	});
+
+	it("should abort and show an error when the ledger device is not available", async () => {
+		const listenSpy = mockLedgerTransportError("Access denied to use Ledger device");
+		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+
+		const unvotes: VoteValidatorProperties[] = [
+			{
+				amount: 10,
+				validatorAddress: validatorData[0].address,
+			},
+		];
+
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={unvotes}
+			/>,
+			{ route: `${voteURL}` },
+		);
+
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("ErrorStep__errorMessage")).resolves.toHaveValue(
+			"Access denied to use Ledger device.",
+		);
+
+		listenSpy.mockRestore();
+		isLedgerSpy.mockRestore();
 	});
 
 	it("should disable send button if the encryption password is not provided", async () => {

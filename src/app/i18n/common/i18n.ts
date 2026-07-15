@@ -303,6 +303,7 @@ export const translations = {
 		VERIFY_MESSAGE_LABEL: "Ledger Verification Message",
 	},
 	LEDGER_NETWORK_NOT_SUPPORTED: "Ledger is not yet supported on this network.",
+	LEDGER_REJECTED: "Access denied to use Ledger device.",
 	LINK: "Link",
 	LOAD: "Load",
 	LOADING: "Loading ...",
