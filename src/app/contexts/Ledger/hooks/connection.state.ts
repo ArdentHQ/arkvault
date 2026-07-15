@@ -1,10 +1,6 @@
-import { Contracts } from "@/app/lib/profiles";
 import { Handlers, OfUnion } from "./reducer.contracts";
 
-export type LedgerModel =
-	| Contracts.WalletLedgerModel.NanoS
-	| Contracts.WalletLedgerModel.NanoX
-	| Contracts.WalletLedgerModel.NanoSP;
+export type LedgerModel = string;
 
 export interface LedgerDevice {
 	path: string;
