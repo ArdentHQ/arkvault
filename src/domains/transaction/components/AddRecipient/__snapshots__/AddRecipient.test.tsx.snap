@@ -20,7 +20,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
           class="flex items-center"
         >
           <button
-            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+            class="font-semibold select-none text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
             type="button"
           >
             Single
@@ -41,7 +41,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             </div>
           </label>
           <button
-            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2"
             type="button"
           >
             Multiple
@@ -369,7 +369,7 @@ exports[`AddRecipient > should render 1`] = `
           class="flex items-center"
         >
           <button
-            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
+            class="font-semibold select-none text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
             type="button"
           >
             Single
@@ -391,7 +391,7 @@ exports[`AddRecipient > should render 1`] = `
             </div>
           </label>
           <button
-            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2 cursor-default"
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 cursor-default"
             type="button"
           >
             Multiple
@@ -704,7 +704,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
           class="flex items-center"
         >
           <button
-            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
+            class="font-semibold select-none text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
             type="button"
           >
             Single
@@ -726,7 +726,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             </div>
           </label>
           <button
-            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2 cursor-default"
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 cursor-default"
             type="button"
           >
             Multiple
@@ -1039,7 +1039,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
           class="flex items-center"
         >
           <button
-            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
+            class="font-semibold select-none text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
             type="button"
           >
             Single
@@ -1061,7 +1061,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             </div>
           </label>
           <button
-            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2 cursor-default"
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 cursor-default"
             type="button"
           >
             Multiple
@@ -1374,7 +1374,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
           class="flex items-center"
         >
           <button
-            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
+            class="font-semibold select-none text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
             type="button"
           >
             Single
@@ -1396,7 +1396,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             </div>
           </label>
           <button
-            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2 cursor-default"
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 cursor-default"
             type="button"
           >
             Multiple
@@ -1725,7 +1725,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
           class="flex items-center"
         >
           <button
-            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
+            class="font-semibold select-none text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
             type="button"
           >
             Single
@@ -1747,7 +1747,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
             </div>
           </label>
           <button
-            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2 cursor-default"
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 cursor-default"
             type="button"
           >
             Multiple
@@ -2060,7 +2060,7 @@ exports[`AddRecipient > should set available amount 1`] = `
           class="flex items-center"
         >
           <button
-            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+            class="font-semibold select-none text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
             type="button"
           >
             Single
@@ -2081,7 +2081,7 @@ exports[`AddRecipient > should set available amount 1`] = `
             </div>
           </label>
           <button
-            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2"
             type="button"
           >
             Multiple
@@ -2394,7 +2394,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
           class="flex items-center"
         >
           <button
-            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
+            class="font-semibold select-none text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
             type="button"
           >
             Single
@@ -2416,7 +2416,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             </div>
           </label>
           <button
-            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2 cursor-default"
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm leading-[17px] sm:leading-5 first:mr-2 last:ml-2 cursor-default"
             type="button"
           >
             Multiple

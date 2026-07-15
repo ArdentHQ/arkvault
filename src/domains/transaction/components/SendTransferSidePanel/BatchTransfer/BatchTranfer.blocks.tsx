@@ -8,6 +8,7 @@ import {
 } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/TransactionStepLabel";
 import { BatchTransferTabStep } from "@/domains/transaction/components/SendTransferSidePanel/BatchTransfer/BatchTransferTabs.contracts";
 import { Button } from "@/app/components/Button";
+import { useBreakpoint } from "@/app/hooks";
 
 interface TransactionStepsProperties {
 	approvalStatus: ApprovalStatus;
@@ -65,10 +66,11 @@ export const BatchTransferActions = ({
 	hideBackButton,
 }: ActionsProperties) => {
 	const { t } = useTranslation();
+	const { isSmAndAbove } = useBreakpoint();
 
 	if (activeTab === BatchTransferTabStep.SummaryStep && !isConfirmed) {
 		return (
-			<div className="leading-11 w-full text-center text-sm text-theme-secondary-700">
+			<div className="flex h-11 w-full items-center justify-center text-center text-sm text-theme-secondary-700">
 				{t("TRANSACTION.BATCH_TRANSFER.SUMMARY_PENDING_STEP.AWAITING_HINT")}
 			</div>
 		);
@@ -83,7 +85,7 @@ export const BatchTransferActions = ({
 			)}
 
 			{activeTab === BatchTransferTabStep.SummaryStep && (
-				<div className="leading-5.25 w-full text-sm text-theme-secondary-700">
+				<div className="leading-5.25 w-auto flex-1 text-sm text-theme-secondary-700">
 					{t("TRANSACTION.BATCH_TRANSFER.SUMMARY_CONFIRMED_STEP.NAVIGATING_HINT")}
 				</div>
 			)}
@@ -92,7 +94,10 @@ export const BatchTransferActions = ({
 				{activeTab === BatchTransferTabStep.ReviewStep && t("COMMON.CONTINUE")}
 				{activeTab === BatchTransferTabStep.ApproveStep && t("COMMON.APPROVE")}
 				{activeTab === BatchTransferTabStep.SummaryStep && t("COMMON.CONTINUE_NOW")}
-				{activeTab === BatchTransferTabStep.ConfirmTransferStep && t("COMMON.CONFIRM_TRANSACTION")}
+				{activeTab === BatchTransferTabStep.ConfirmTransferStep &&
+					isSmAndAbove &&
+					t("COMMON.CONFIRM_TRANSACTION")}
+				{activeTab === BatchTransferTabStep.ConfirmTransferStep && !isSmAndAbove && t("COMMON.CONTINUE")}
 			</Button>
 		</>
 	);

@@ -57,7 +57,7 @@ export const ApproveStep = ({
 
 	return (
 		<section data-testid="BatchTransfer__approve-step">
-			<div className="space-y-3 sm:space-y-4">
+			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<DetailWrapper label={t("COMMON.AUTHORIZATION_DETAILS")} className="rounded-xl">
 					<div className="space-y-3">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
@@ -111,7 +111,7 @@ export const ApproveStep = ({
 
 				<div
 					className={cn(
-						"border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0",
+						"mt-6 border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:mt-0 sm:border-none sm:px-0 sm:pt-0",
 						{
 							"blur-xs pointer-events-none mb-0": isFeeDisabled,
 						},
@@ -119,9 +119,11 @@ export const ApproveStep = ({
 				>
 					<FormField name="fee" disableStateHints>
 						<FormLabel
-							textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+							textClassName="hidden sm:block sm:text-base leading-5"
 							label={t("TRANSACTION.TRANSACTION_FEE")}
 						/>
+
+						<FormLabel textClassName="sm:hidden text-sm leading-[17px]" label={t("COMMON.FEE")} />
 
 						<FeeField
 							type="approve"
