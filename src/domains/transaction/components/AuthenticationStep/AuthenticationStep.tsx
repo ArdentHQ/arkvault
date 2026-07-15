@@ -18,6 +18,7 @@ import { Image } from "@/app/components/Image";
 import { Icon } from "@/app/components/Icon";
 import { Loader } from "@/app/components/Loader";
 import { MnemonicRules } from "@/domains/transaction/components/MnemonicRules/MnemonicRules";
+import { LedgerModel } from "@/app/contexts/Ledger/hooks/connection.state";
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
