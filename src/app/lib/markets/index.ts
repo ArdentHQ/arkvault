@@ -6,6 +6,7 @@ import {
 	MarketDataCollection,
 	PriceTracker,
 } from "./contracts/index";
+import { ArkPricing } from "./drivers/arkpricing";
 import { CoinCap } from "./drivers/coincap";
 import { CoinGecko } from "./drivers/coingecko";
 import { CryptoCompare } from "./drivers/cryptocompare";
@@ -47,6 +48,7 @@ export class MarketService {
 	public static make(name: string, httpClient: Http.HttpClient): MarketService {
 		return new MarketService(
 			{
+				arkpricing: new ArkPricing(httpClient),
 				coincap: new CoinCap(httpClient),
 				coingecko: new CoinGecko(httpClient),
 				cryptocompare: new CryptoCompare(httpClient),
