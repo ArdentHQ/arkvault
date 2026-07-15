@@ -246,7 +246,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 				subject={subject}
 				ledgerIsAwaitingDevice={false}
 				ledgerIsAwaitingApp={false}
-				ledgerConnectedModel={Contracts.WalletLedgerModel.NanoS}
 				wallet={defaultWallet}
 			/>,
 			{
@@ -270,7 +269,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 				subject={subject}
 				ledgerIsAwaitingDevice={false}
 				ledgerIsAwaitingApp={true}
-				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
 				wallet={defaultWallet}
 			/>,
 			{
