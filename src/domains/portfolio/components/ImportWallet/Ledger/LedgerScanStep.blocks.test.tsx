@@ -1,5 +1,5 @@
 import React from "react";
-import { AddressMobileItem } from "./LedgerScanStep.blocks";
+import { AddressMobileItem, AddressTableLoaderOverlay, AmountWrapper } from "./LedgerScanStep.blocks";
 import { render, screen } from "@/utils/testing-library";
 import { vi } from "vitest";
 import userEvent from "@testing-library/user-event";
@@ -104,5 +104,45 @@ describe("LedgerMobileItem", () => {
 
 		await userEvent.click(screen.getByTestId("LedgerMobileItem__checkbox"));
 		expect(handleClick).toHaveBeenCalled();
+	});
+});
+
+describe("AddressTableLoaderOverlay", () => {
+	it("should render overlay without children", () => {
+		render(<AddressTableLoaderOverlay />);
+
+		expect(screen.queryAllByTestId("AddressMobileItem__skeleton")).toHaveLength(0);
+	});
+
+	it("should render overlay with children", () => {
+		render(
+			<AddressTableLoaderOverlay>
+				<span>Loading...</span>
+			</AddressTableLoaderOverlay>,
+		);
+
+		expect(screen.getByText("Loading...")).toBeInTheDocument();
+	});
+});
+
+describe("AmountWrapper", () => {
+	it("should render children when not loading", () => {
+		render(
+			<AmountWrapper isLoading={false}>
+				<span>100.00 ARK</span>
+			</AmountWrapper>,
+		);
+
+		expect(screen.getByText("100.00 ARK")).toBeInTheDocument();
+	});
+
+	it("should render skeleton when loading", () => {
+		render(
+			<AmountWrapper isLoading={true}>
+				<span>100.00 ARK</span>
+			</AmountWrapper>,
+		);
+
+		expect(screen.getByTestId("LedgerScanStep__amount-skeleton")).toBeInTheDocument();
 	});
 });

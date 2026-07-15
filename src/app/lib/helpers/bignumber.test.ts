@@ -69,6 +69,14 @@ describe("BigNumber", () => {
 		expect(BigNumber.make("112.3456789").decimalPlaces(6).valueOf()).toBe("112.345678");
 	});
 
+	it("#countDecimalPlaces", () => {
+		expect(BigNumber.make(0).countDecimalPlaces()).toBe(0);
+		expect(BigNumber.make("42").countDecimalPlaces()).toBe(0);
+		expect(BigNumber.make(0.00000001).countDecimalPlaces()).toBe(8);
+		expect(BigNumber.make("1.1000").countDecimalPlaces()).toBe(1);
+		expect(BigNumber.make(Infinity).countDecimalPlaces()).toBe(0);
+	});
+
 	it("#plus", () => {
 		expect(BigNumber.make(10).plus(1).valueOf()).toBe("11");
 	});
