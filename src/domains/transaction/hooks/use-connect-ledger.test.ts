@@ -70,41 +70,6 @@ describe("useConnectLedger", () => {
 		expect(onReady).toHaveBeenCalled();
 	});
 
-	it("should not call onReady when ledger model is not supported", () => {
-		let contextValue = {
-			abortConnectionRetry: mockAbortConnectionRetry,
-			connect: mockConnect,
-			disconnect: mockDisconnect,
-			isConnected: false,
-			ledgerDevice: { id: "test-device" },
-		};
-
-		const contextSpy = vi.spyOn(AppContexts, "useLedgerContext").mockImplementation(() => contextValue);
-
-		const { result, rerender } = renderHook(() =>
-			useConnectLedger({
-				isLedgerModelSupported: false,
-				onReady,
-				profile: mockProfile,
-			}),
-		);
-
-		// Start connection process
-		act(() => {
-			result.current.triggerLedger();
-		});
-
-		// Simulate connection success
-		contextValue = {
-			...contextValue,
-			isConnected: true,
-		};
-		contextSpy.mockReturnValue(contextValue);
-		rerender();
-
-		expect(onReady).not.toHaveBeenCalled();
-	});
-
 	it("should not call onReady without user initiating connection", () => {
 		const contextValue = {
 			abortConnectionRetry: mockAbortConnectionRetry,

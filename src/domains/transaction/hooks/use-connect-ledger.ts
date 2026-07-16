@@ -5,12 +5,10 @@ import { Contracts } from "@/app/lib/profiles";
 export const useConnectLedger = ({
 	onReady,
 	profile,
-	isLedgerModelSupported = true,
 	canConnect = true,
 }: {
 	onReady: () => void | Promise<void>;
 	profile: Contracts.IProfile;
-	isLedgerModelSupported?: boolean;
 	canConnect?: boolean;
 }) => {
 	const { isConnected, ledgerDevice, connect, abortConnectionRetry, disconnect } = useLedgerContext();
@@ -37,7 +35,7 @@ export const useConnectLedger = ({
 	}, [isWaitingLedger, isConnected, ledgerDevice?.id]);
 
 	useEffect(() => {
-		if (isConnected && isWaitingLedger && isLedgerModelSupported) {
+		if (isConnected && isWaitingLedger) {
 			void (async () => {
 				await onReady();
 				setIsWaitingLedger(false);
@@ -46,7 +44,7 @@ export const useConnectLedger = ({
 				await disconnect();
 			})();
 		}
-	}, [isConnected, ledgerDevice?.id, isWaitingLedger, isLedgerModelSupported]);
+	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
 
 	return { abort, isWaitingLedger, triggerLedger };
 };
