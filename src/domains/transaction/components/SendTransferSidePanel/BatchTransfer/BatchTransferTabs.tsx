@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 import { DTO } from "@/app/lib/profiles";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -21,6 +22,7 @@ import { ConfirmTransferStep } from "@/domains/transaction/components/SendTransf
 import { useAllowance } from "@/domains/transaction/hooks/use-allowance";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { calculateTotalAmount } from "@/domains/transaction/hooks/use-batch-transfer-details";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 
 const NAVIGATE_TO_CONFIRM_TRANSFER_DELAY_MS = 2000;
 
@@ -82,34 +84,36 @@ export const BatchTransferTabs = ({
 		};
 	}, [isConfirmed, activeTab]);
 
-	const [authenticatingLedger, setAuthenticatingLedger] = useState<boolean>(false);
-	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
-	const { hasDeviceAvailable, isConnected, connect, disconnect, ledgerDevice } = useLedgerContext();
+	const { t } = useTranslation();
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 
-	useEffect(() => {
-		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
-			void connectLedger();
-		}
+	const { triggerLedger, abort, isWaitingLedger } = useConnectLedger({
+		canConnect: !!wallet,
+		onReady: () => {
+			if (activeTab === BatchTransferTabStep.ApproveStep) {
+				return sendApprovalTransaction();
+			}
 
-		if (isConnected && isWaitingLedger) {
-			activeTab === BatchTransferTabStep.ApproveStep ? sendApprovalTransaction() : onSubmit();
-		}
-	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
+			return onSubmit();
+		},
+		profile,
+	});
 
-	const connectLedger = useCallback(async () => {
-		setAuthenticatingLedger(true);
-		await connect(profile);
-		setIsWaitingLedger(true);
-	}, [wallet, profile, connect]);
+	const authenticatingLedger = (isWaitingLedger ||
+		(activeTab === BatchTransferTabStep.ApproveStep && isConnected && !transaction) ||
+		(activeTab === BatchTransferTabStep.ConfirmTransferStep && isSubmitting)) as boolean;
+
+	const handleDeviceNotAvailable = useCallback(() => {
+		abort();
+		onError(t("COMMON.LEDGER_REJECTED"));
+	}, [abort, onError, t]);
 
 	// reset ledger state when active tab is ReviewStep
 	useEffect(() => {
 		if (activeTab === BatchTransferTabStep.ReviewStep) {
-			setAuthenticatingLedger(false);
-			setIsWaitingLedger(false);
-			void disconnect();
+			abort();
 		}
-	}, [activeTab, disconnect]);
+	}, [activeTab]);
 
 	const isNextDisabled = !isValid || isAllowanceLoading || authenticatingLedger;
 
@@ -175,8 +179,6 @@ export const BatchTransferTabs = ({
 
 			setTransaction(transactionData);
 
-			setAuthenticatingLedger(false);
-			setIsWaitingLedger(false);
 			setActiveTab(BatchTransferTabStep.SummaryStep);
 		} catch (error) {
 			onError(JSON.stringify({ message: error.message, type: error.name }));
@@ -193,7 +195,7 @@ export const BatchTransferTabs = ({
 			},
 			[BatchTransferTabStep.ApproveStep]: async () => {
 				if (wallet.isLedger()) {
-					await connectLedger();
+					triggerLedger();
 				} else {
 					void sendApprovalTransaction();
 				}
@@ -203,7 +205,7 @@ export const BatchTransferTabs = ({
 			},
 			[BatchTransferTabStep.ConfirmTransferStep]: async () => {
 				if (wallet.isLedger()) {
-					await connectLedger();
+					triggerLedger();
 				} else {
 					onSubmit();
 				}
@@ -244,6 +246,7 @@ export const BatchTransferTabs = ({
 									isAwaitingLedgerAction={authenticatingLedger}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
+									onDeviceNotAvailable={handleDeviceNotAvailable}
 								/>
 							</TabPanel>
 
@@ -263,6 +266,7 @@ export const BatchTransferTabs = ({
 									isAwaitingLedgerAction={authenticatingLedger}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
+									onDeviceNotAvailable={handleDeviceNotAvailable}
 								/>
 							</TabPanel>
 						</div>

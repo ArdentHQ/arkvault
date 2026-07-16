@@ -1,5 +1,6 @@
 import { Handlers, OfUnion } from "./reducer.contracts";
-import { LedgerModel } from "@/app/hooks";
+
+export type LedgerModel = string;
 
 export interface LedgerDevice {
 	path: string;
@@ -73,6 +74,7 @@ export const connectionReducer = (state: LedgerConnectionState, action: Action):
 			...state,
 			error: undefined,
 			isBusy: false,
+			isConnected: false,
 			isWaiting: true,
 		}),
 	};

@@ -1,5 +1,5 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import { Contracts, DTO } from "@/app/lib/profiles";
+import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -8,13 +8,12 @@ import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unco
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useLedgerModelStatus } from "@/app/hooks/use-ledger-model-status";
 import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
-	ValidatorRegistrationForm,
 	signValidatorRegistration,
+	ValidatorRegistrationForm,
 } from "@/domains/transaction/components/ValidatorRegistrationForm";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
@@ -24,6 +23,7 @@ import {
 	UsernameRegistrationForm,
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
@@ -68,12 +68,7 @@ export const SendRegistrationSidePanel = ({
 	const { common, validatorRegistration } = useValidation();
 	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
-	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
-
-	const { isLedgerModelSupported } = useLedgerModelStatus({
-		connectedModel: ledgerDevice?.id,
-		supportedModels: [Contracts.WalletLedgerModel.NanoX, Contracts.WalletLedgerModel.NanoSP],
-	});
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 
 	const form = useForm({ mode: "onChange" });
 
@@ -85,7 +80,6 @@ export const SendRegistrationSidePanel = ({
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
 	const authenticationStep = stepCount - 1;
 	const summaryStep = stepCount;
-	const isAuthenticationStep = activeTab === authenticationStep;
 
 	const [mounted, setMounted] = useState(false);
 
@@ -136,12 +130,11 @@ export const SendRegistrationSidePanel = ({
 		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
 	}, [validatorRegistrationFee, registrationType]);
 
-	// Reset ledger authentication steps after reconnecting supported ledger
-	useEffect(() => {
-		if (isAuthenticationStep && activeWallet?.isLedger() && isLedgerModelSupported) {
-			handleSubmit();
-		}
-	}, [ledgerDevice]);
+	const { triggerLedger, abort } = useConnectLedger({
+		canConnect: !!activeWallet,
+		onReady: () => handleSubmit(),
+		profile: activeProfile,
+	});
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -158,10 +151,6 @@ export const SendRegistrationSidePanel = ({
 
 		try {
 			const { mnemonic, secondMnemonic, encryptionPassword, secret, secondSecret } = getValues();
-
-			if (activeWallet.isLedger()) {
-				await connect(activeProfile);
-			}
 
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
@@ -211,9 +200,8 @@ export const SendRegistrationSidePanel = ({
 		const nextStep = activeTab + 1;
 		const isNextStepAuthentication = nextStep === authenticationStep;
 
-		// Skip authentication step
-		if (isNextStepAuthentication && activeWallet?.isLedger() && isLedgerModelSupported) {
-			handleSubmit();
+		if (isNextStepAuthentication && activeWallet?.isLedger()) {
+			void triggerLedger();
 		}
 
 		setActiveTab(nextStep);
@@ -239,6 +227,7 @@ export const SendRegistrationSidePanel = ({
 		if (!mounted) {
 			setActiveTab(FORM_STEP);
 			setErrorMessage(undefined);
+			abort();
 
 			const fieldKeyMap = {
 				contractDeployment: "bytecode",
@@ -459,11 +448,12 @@ export const SendRegistrationSidePanel = ({
 										wallet={activeWallet!}
 										ledgerIsAwaitingDevice={!hasDeviceAvailable}
 										ledgerIsAwaitingApp={!isConnected}
-										ledgerSupportedModels={[
-											Contracts.WalletLedgerModel.NanoX,
-											Contracts.WalletLedgerModel.NanoSP,
-										]}
-										ledgerConnectedModel={ledgerDevice?.id}
+										onDeviceNotAvailable={() => {
+											abort();
+											setErrorMessage(t("COMMON.LEDGER_REJECTED"));
+											setActiveTab(ERROR_STEP);
+										}}
+										ledgerIsConnected={isConnected}
 										noHeading
 									/>
 								</TabPanel>

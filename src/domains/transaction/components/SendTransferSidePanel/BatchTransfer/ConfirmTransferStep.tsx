@@ -17,11 +17,12 @@ import { Button } from "@/app/components/Button";
 import { RecipientsModal } from "@/domains/transaction/components/RecipientsModal";
 import cn from "classnames";
 
-interface ApproveStepProperties {
+interface ConfirmTransferStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
 	isAwaitingLedgerAction?: boolean;
+	onDeviceNotAvailable: () => void;
 }
 
 export const ConfirmTransferStep = ({
@@ -29,7 +30,8 @@ export const ConfirmTransferStep = ({
 	ledgerIsAwaitingDevice,
 	ledgerIsAwaitingApp,
 	isAwaitingLedgerAction,
-}: ApproveStepProperties) => {
+	onDeviceNotAvailable,
+}: ConfirmTransferStepProperties) => {
 	const { t } = useTranslation();
 
 	const isFeeDisabled = wallet.isLedger() && isAwaitingLedgerAction;
@@ -159,9 +161,7 @@ export const ConfirmTransferStep = ({
 							subject="message"
 							ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
 							ledgerIsAwaitingApp={ledgerIsAwaitingApp}
-							onDeviceNotAvailable={() => {
-								// keep waiting when it is not available
-							}}
+							onDeviceNotAvailable={onDeviceNotAvailable}
 						/>
 					</div>
 				)}

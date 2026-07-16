@@ -1,6 +1,7 @@
 import {
 	env,
 	getMainsailProfileId,
+	mockLedgerTransportError,
 	mockNanoXTransport,
 	render,
 	screen,
@@ -29,10 +30,6 @@ const defaultValidatorPassphrase = MNEMONICS[2];
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
-}));
-
-vi.mock("@/app/hooks/use-ledger-model-status", () => ({
-	useLedgerModelStatus: () => ({ isLedgerModelSupported: true }),
 }));
 
 const renderPanel = async (
@@ -120,8 +117,8 @@ describe("SendRegistrationSidePanel", () => {
 	});
 
 	it("should skip authentication step for a ledger wallet", async () => {
-		mockNanoXTransport();
-		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		const nanoXMock = mockNanoXTransport();
+		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 		await renderPanel();
 
 		// Step 1
@@ -161,6 +158,35 @@ describe("SendRegistrationSidePanel", () => {
 
 		await expect(screen.queryByTestId("AuthenticationStep")).not.toBeInTheDocument();
 
-		vi.restoreAllMocks();
+		nanoXMock.mockRestore();
+		isLedgerSpy.mockRestore();
+	});
+
+	it("should abort and show an error when the ledger device is not available", async () => {
+		const listenSpy = mockLedgerTransportError("Access denied to use Ledger device");
+		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		await userEvent.clear(screen.getByTestId("Input__validator_passphrase"));
+		await userEvent.type(screen.getByTestId("Input__validator_passphrase"), defaultValidatorPassphrase);
+		await waitFor(() =>
+			expect(screen.getByTestId("Input__validator_passphrase")).toHaveValue(defaultValidatorPassphrase),
+		);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("ErrorStep__errorMessage")).resolves.toHaveValue(
+			"Access denied to use Ledger device.",
+		);
+
+		listenSpy.mockRestore();
+		isLedgerSpy.mockRestore();
 	});
 });

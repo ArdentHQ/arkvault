@@ -23,6 +23,7 @@ import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
@@ -69,7 +70,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const form = useForm({ mode: "onChange" });
 	const { senderAddress } = form.watch();
 
-	const { hasDeviceAvailable, isConnected, ledgerDevice, connect } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
@@ -81,24 +82,12 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const abortReference = useRef(new AbortController());
 	const transactionBuilder = useTransactionBuilder();
-	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
-	const connectLedger = useCallback(async () => {
-		if (senderAddress) {
-			await connect(activeProfile);
-			setIsWaitingLedger(true);
-		}
-	}, [senderAddress, activeProfile, connect]);
-
-	useEffect(() => {
-		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
-			void connectLedger();
-		}
-
-		if (isConnected && isWaitingLedger) {
-			void handleSubmit(submitForm)();
-		}
-	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
+	const { triggerLedger, abort } = useConnectLedger({
+		canConnect: !!senderAddress,
+		onReady: () => handleSubmit(submitForm)(),
+		profile: activeProfile,
+	});
 
 	const activeWallet = useMemo(
 		() => activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id()),
@@ -212,6 +201,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		(mounted: boolean) => {
 			if (!mounted) {
 				setActiveTab(initialStep);
+				abort();
 
 				if (activeTab === Step.SummaryStep) {
 					return navigate(`/profiles/${activeProfile.id()}/dashboard`);
@@ -271,7 +261,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		setActiveTab(newIndex);
 
 		if (isLedgerTransaction) {
-			void connectLedger();
+			triggerLedger();
 		}
 	};
 
@@ -656,7 +646,9 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 								ledgerIsAwaitingApp={!isConnected}
 								noHeading
 								onDeviceNotAvailable={() => {
-									// do nothing, wait for ledger
+									abort();
+									setErrorMessage(t("COMMON.LEDGER_REJECTED"));
+									setActiveTab(Step.ErrorStep);
 								}}
 							/>
 						)}
