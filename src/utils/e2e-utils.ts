@@ -235,7 +235,10 @@ export const requestMocks = {
 			/https:\/\/pricing\.ardenthq\.com\/api\/v1\/coins\/ark\/average\?currency=ETH/,
 			"exchange/ark-pricing-eth",
 		),
-		mockRequest(/https:\/\/pricing\.ardenthq\.com\/api\/v1\/coins\/ark\/history/, "exchange/ark-pricing-historical"),
+		mockRequest(
+			/https:\/\/pricing\.ardenthq\.com\/api\/v1\/coins\/ark\/history/,
+			"exchange/ark-pricing-historical",
+		),
 		mockRequest(/https:\/\/pricing\.ardenthq\.com\/api\/v1\/coins\/ark\/price/, "exchange/ark-pricing-price"),
 		mockRequest(/https:\/\/pricing\.ardenthq\.com\/api\/v1\/coins\/ark\/market/, "exchange/ark-pricing-market"),
 		mockRequest(/thumbnail.png$/, () => imageFixture),
