@@ -1,5 +1,5 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import { Contracts, DTO } from "@/app/lib/profiles";
+import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -8,7 +8,6 @@ import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unco
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useLedgerModelStatus } from "@/app/hooks/use-ledger-model-status";
 import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
@@ -38,7 +37,6 @@ import {
 	ContractDeploymentForm,
 	signContractDeployment,
 } from "@/domains/transaction/components/ContractDeploymentForm";
-import { WalletLedgerModel } from "@/app/lib/profiles/wallet.enum";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
@@ -70,16 +68,7 @@ export const SendRegistrationSidePanel = ({
 	const { common, validatorRegistration } = useValidation();
 	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
-	const { hasDeviceAvailable, isConnected, ledgerDevice } = useLedgerContext();
-
-	const { isLedgerModelSupported } = useLedgerModelStatus({
-		connectedModel: ledgerDevice?.id,
-		supportedModels: [
-			Contracts.WalletLedgerModel.NanoX,
-			Contracts.WalletLedgerModel.NanoSP,
-			WalletLedgerModel.NanoS,
-		],
-	});
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 
 	const form = useForm({ mode: "onChange" });
 
@@ -143,7 +132,6 @@ export const SendRegistrationSidePanel = ({
 
 	const { triggerLedger, abort } = useConnectLedger({
 		canConnect: !!activeWallet,
-		isLedgerModelSupported,
 		onReady: () => handleSubmit(),
 		profile: activeProfile,
 	});
@@ -465,11 +453,7 @@ export const SendRegistrationSidePanel = ({
 											setErrorMessage(t("COMMON.LEDGER_REJECTED"));
 											setActiveTab(ERROR_STEP);
 										}}
-										ledgerSupportedModels={[
-											Contracts.WalletLedgerModel.NanoX,
-											Contracts.WalletLedgerModel.NanoSP,
-										]}
-										ledgerConnectedModel={ledgerDevice?.id}
+										ledgerIsConnected={isConnected}
 										noHeading
 									/>
 								</TabPanel>
