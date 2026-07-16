@@ -26,7 +26,7 @@ const SelectDelimiter = ({ value, onSelect }: { value: CsvDelimiter; onSelect?: 
 			<Dropdown
 				variant="options"
 				data-testid="TransactionExportForm--delimiter-options"
-				wrapperClass="z-50"
+				wrapperClass="z-[52]"
 				options={delimiterOptions.options}
 				onSelect={(option) => onSelect?.(option.value as CsvDelimiter)}
 				toggleContent={(isOpen: boolean) => (
