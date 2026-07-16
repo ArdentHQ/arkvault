@@ -79,12 +79,14 @@ export const handleOnMountChange = ({
 	setActiveTab,
 	setErrorMessage,
 	resetForm,
+	abort,
 }: {
 	mounted: boolean;
 	setMounted: (value: boolean) => void;
 	setActiveTab: (step: number) => void;
 	setErrorMessage: (error: string | undefined) => void;
 	resetForm: () => void;
+	abort?: () => void;
 }) => {
 	setMounted(mounted);
 
@@ -92,6 +94,7 @@ export const handleOnMountChange = ({
 		resetForm();
 		setActiveTab(1);
 		setErrorMessage(undefined);
+		abort?.();
 	}
 };
 
