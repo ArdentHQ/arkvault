@@ -6,13 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { ListenLedger } from "./Ledger/ListenLedger";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputPassword } from "@/app/components/Input";
-import { LedgerModel, useLedgerModelStatus, useValidation } from "@/app/hooks";
+import { useValidation } from "@/app/hooks";
 import { LedgerConfirmation } from "@/domains/transaction/components/LedgerConfirmation";
-import {
-	LedgerDeviceErrorContent,
-	LedgerWaitingAppContent,
-	LedgerWaitingDeviceContent,
-} from "@/domains/wallet/components/Ledger";
+import { LedgerWaitingAppContent, LedgerWaitingDeviceContent } from "@/domains/wallet/components/Ledger";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Spinner } from "@/app/components/Spinner";
 import { Image } from "@/app/components/Image";
@@ -22,8 +18,7 @@ import { MnemonicRules } from "@/domains/transaction/components/MnemonicRules/Mn
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
-	ledgerSupportedModels?: LedgerModel[];
-	ledgerConnectedModel?: LedgerModel;
+	ledgerIsConnected?: boolean;
 	onDeviceNotAvailable?: () => void;
 }
 
@@ -37,45 +32,23 @@ type AuthenticationStepProperties = {
 } & LedgerStates;
 
 const LedgerStateWrapper = ({
-	ledgerConnectedModel,
 	ledgerIsAwaitingApp,
 	ledgerIsAwaitingDevice,
+	ledgerIsConnected,
 	wallet,
 	children,
-	ledgerSupportedModels = [Contracts.WalletLedgerModel.NanoS, Contracts.WalletLedgerModel.NanoX],
 	noHeading,
 	subject,
 }: AuthenticationStepProperties & { children: React.ReactNode }) => {
 	const { t } = useTranslation();
 
-	const { isLedgerModelSupported } = useLedgerModelStatus({
-		connectedModel: ledgerConnectedModel,
-		supportedModels: ledgerSupportedModels,
-	});
-
 	const subtitle = useMemo(() => {
-		if (ledgerSupportedModels.length > 1 || !ledgerConnectedModel) {
+		if (!ledgerIsConnected) {
 			return t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE");
 		}
 
-		const modelNames = {
-			[Contracts.WalletLedgerModel.NanoS]: t("WALLETS.MODAL_LEDGER_WALLET.LEDGER_NANO_S"),
-			[Contracts.WalletLedgerModel.NanoX]: t("WALLETS.MODAL_LEDGER_WALLET.LEDGER_NANO_X"),
-		};
-
-		return t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE_MODEL", { model: modelNames[ledgerSupportedModels[0]] });
-	}, [ledgerConnectedModel, ledgerSupportedModels, t]);
-
-	if (ledgerConnectedModel && !isLedgerModelSupported) {
-		return (
-			<LedgerDeviceErrorContent
-				connectedModel={ledgerConnectedModel}
-				supportedModel={ledgerSupportedModels[0]}
-				noHeading={noHeading}
-				subject={subject}
-			/>
-		);
-	}
+		return t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE");
+	}, [ledgerIsConnected, t]);
 
 	if (ledgerIsAwaitingDevice) {
 		return <LedgerWaitingDeviceContent subtitle={subtitle} noHeading={noHeading} subject={subject} />;
@@ -101,8 +74,7 @@ export const LedgerAuthentication = ({
 	ledgerDetails,
 	ledgerIsAwaitingDevice,
 	ledgerIsAwaitingApp,
-	ledgerConnectedModel,
-	ledgerSupportedModels,
+	ledgerIsConnected,
 	onDeviceNotAvailable,
 	noHeading,
 	noDescription,
@@ -129,8 +101,7 @@ export const LedgerAuthentication = ({
 			<LedgerStateWrapper
 				ledgerIsAwaitingApp={ledgerIsAwaitingApp}
 				ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
-				ledgerSupportedModels={ledgerSupportedModels}
-				ledgerConnectedModel={ledgerConnectedModel}
+				ledgerIsConnected={ledgerIsConnected}
 				wallet={wallet}
 				noHeading={noHeading}
 				subject={subject}
@@ -193,8 +164,7 @@ export const AuthenticationStep = ({
 	ledgerDetails,
 	ledgerIsAwaitingDevice,
 	ledgerIsAwaitingApp,
-	ledgerConnectedModel,
-	ledgerSupportedModels,
+	ledgerIsConnected,
 	onDeviceNotAvailable,
 	subject = "transaction",
 	noHeading,
@@ -212,8 +182,7 @@ export const AuthenticationStep = ({
 				ledgerDetails={ledgerDetails}
 				ledgerIsAwaitingApp={ledgerIsAwaitingApp}
 				ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
-				ledgerSupportedModels={ledgerSupportedModels}
-				ledgerConnectedModel={ledgerConnectedModel}
+				ledgerIsConnected={ledgerIsConnected}
 				onDeviceNotAvailable={onDeviceNotAvailable}
 				wallet={wallet}
 				subject={subject}

@@ -32,10 +32,6 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-vi.mock("@/app/hooks/use-ledger-model-status", () => ({
-	useLedgerModelStatus: () => ({ isLedgerModelSupported: true }),
-}));
-
 const renderPanel = async (
 	registrationType: "validatorRegistration" | "usernameRegistration" = "validatorRegistration",
 ) => {
