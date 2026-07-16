@@ -48,6 +48,8 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+const arkPricingLabel = "ARK Pricing";
+
 describe("General Settings", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -538,7 +540,7 @@ describe("General Settings", () => {
 
 		const originalMarketProviders = PlatformSdkChoices.marketProviders;
 		PlatformSdkChoices.marketProviders = [
-			{ label: "ARK Pricing", unsupportedCurrencies: ["VND"], value: "arkpricing" },
+			{ label: arkPricingLabel, unsupportedCurrencies: ["VND"], value: "arkpricing" },
 			{ label: "CoinGecko", unsupportedCurrencies: [], value: "coingecko" },
 		];
 
@@ -563,7 +565,7 @@ describe("General Settings", () => {
 			return within(subject).getByTestId("SelectDropdown__input");
 		};
 
-		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("ARK Pricing");
+		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue(arkPricingLabel);
 		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
 
 		await userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
@@ -588,14 +590,14 @@ describe("General Settings", () => {
 
 		await userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
 
-		await userEvent.click(screen.getByText("ARK Pricing"));
+		await userEvent.click(screen.getByText(arkPricingLabel));
 
-		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("ARK Pricing");
+		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue(arkPricingLabel);
 
 		expect(toastSpy).toHaveBeenCalledWith(
 			translations.SETTINGS.GENERAL.UNSUPPORTED_CURRENCY.replace("{{currency}}", "VND").replace(
 				"{{provider}}",
-				"ARK Pricing",
+				arkPricingLabel,
 			),
 		);
 
