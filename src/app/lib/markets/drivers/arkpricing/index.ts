@@ -35,12 +35,10 @@ export class ArkPricing implements PriceTracker {
 	/**
 	 * The host of the ARK Pricing API.
 	 *
-	 * TODO: placeholder until the service is deployed, update once the final host is known.
-	 *
 	 * @type {string}
 	 * @memberof PriceTracker
 	 */
-	readonly #host: string = "https://pricing.ark.io/api/v1";
+	readonly #host: string = "https://pricing.ardenthq.com/api/v1";
 
 	/**
 	 * Creates an instance of PriceTracker.

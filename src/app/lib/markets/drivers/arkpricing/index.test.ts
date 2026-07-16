@@ -15,7 +15,7 @@ describe("ArkPricing", () => {
 	});
 
 	it("should verify a token", async () => {
-		server.use(requestMock("https://pricing.ark.io/api/v1/coins/ark/price", priceFixture));
+		server.use(requestMock("https://pricing.ardenthq.com/api/v1/coins/ark/price", priceFixture));
 
 		const tracker = new ArkPricing(new Http.HttpClient(0));
 		const result = await tracker.verifyToken("ARK");
@@ -23,7 +23,7 @@ describe("ArkPricing", () => {
 	});
 
 	it("should fail to verify a token", async () => {
-		server.use(requestMock("https://pricing.ark.io/api/v1/coins/invalid/price", {}, { status: 404 }));
+		server.use(requestMock("https://pricing.ardenthq.com/api/v1/coins/invalid/price", {}, { status: 404 }));
 
 		const tracker = new ArkPricing(new Http.HttpClient(0));
 		const result = await tracker.verifyToken("invalid");
@@ -31,7 +31,7 @@ describe("ArkPricing", () => {
 	});
 
 	it("should get market data", async () => {
-		server.use(requestMock("https://pricing.ark.io/api/v1/coins/ark/market", marketFixture));
+		server.use(requestMock("https://pricing.ardenthq.com/api/v1/coins/ark/market", marketFixture));
 
 		const tracker = new ArkPricing(new Http.HttpClient(0));
 		const result = await tracker.marketData("ARK");
@@ -42,7 +42,7 @@ describe("ArkPricing", () => {
 	});
 
 	it("should get market data with an empty response", async () => {
-		server.use(requestMock("https://pricing.ark.io/api/v1/coins/ark/market", {}));
+		server.use(requestMock("https://pricing.ardenthq.com/api/v1/coins/ark/market", {}));
 
 		const tracker = new ArkPricing(new Http.HttpClient(0));
 		const result = await tracker.marketData("ARK");
@@ -50,7 +50,7 @@ describe("ArkPricing", () => {
 	});
 
 	it("should get historical price data", async () => {
-		server.use(requestMock("https://pricing.ark.io/api/v1/coins/ark/history", historyDayFixture));
+		server.use(requestMock("https://pricing.ardenthq.com/api/v1/coins/ark/history", historyDayFixture));
 
 		const tracker = new ArkPricing(new Http.HttpClient(0));
 		const result = await tracker.historicalPrice({
@@ -67,7 +67,7 @@ describe("ArkPricing", () => {
 	});
 
 	it("should get historical volume data", async () => {
-		server.use(requestMock("https://pricing.ark.io/api/v1/coins/ark/history", historyDayFixture));
+		server.use(requestMock("https://pricing.ardenthq.com/api/v1/coins/ark/history", historyDayFixture));
 
 		const tracker = new ArkPricing(new Http.HttpClient(0));
 		const result = await tracker.historicalVolume({
@@ -84,7 +84,7 @@ describe("ArkPricing", () => {
 	});
 
 	it("should get daily average price", async () => {
-		server.use(requestMock("https://pricing.ark.io/api/v1/coins/ark/average", averageFixture));
+		server.use(requestMock("https://pricing.ardenthq.com/api/v1/coins/ark/average", averageFixture));
 
 		const tracker = new ArkPricing(new Http.HttpClient(0));
 		const result = await tracker.dailyAverage({
@@ -96,7 +96,7 @@ describe("ArkPricing", () => {
 	});
 
 	it("should get current price", async () => {
-		server.use(requestMock("https://pricing.ark.io/api/v1/coins/ark/price", priceFixture));
+		server.use(requestMock("https://pricing.ardenthq.com/api/v1/coins/ark/price", priceFixture));
 
 		const tracker = new ArkPricing(new Http.HttpClient(0));
 		const result = await tracker.currentPrice({ currency: "USD", token: "ARK" });

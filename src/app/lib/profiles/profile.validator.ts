@@ -103,7 +103,7 @@ export class ProfileValidator implements IProfileValidator {
 				[ProfileSetting.ExchangeCurrency]: Joi.string().required(),
 				[ProfileSetting.Locale]: Joi.string().required(),
 				[ProfileSetting.MarketProvider]: Joi.string()
-					.allow("arkpricing", "coincap", "cryptocompare", "coingecko")
+					.allow("arkpricing", "coingecko")
 					.required(),
 				[ProfileSetting.Name]: Joi.string().required(),
 				[ProfileSetting.Password]: Joi.string(),

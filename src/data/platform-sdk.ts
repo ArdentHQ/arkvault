@@ -36,9 +36,8 @@ export const PlatformSdkChoices = {
 	},
 	languages: [{ label: "English", value: "en-US" }],
 	marketProviders: [
-		{ label: "ARK Pricing", unsupportedCurrencies: [], value: "arkpricing" },
-		{ label: "CoinGecko", unsupportedCurrencies: [], value: "coingecko" },
-		{ label: "CryptoCompare", unsupportedCurrencies: ["VND"], value: "cryptocompare" },
+		{ label: "ARK Pricing", unsupportedCurrencies: [] as string[], value: "arkpricing" },
+		{ label: "CoinGecko", unsupportedCurrencies: [] as string[], value: "coingecko" },
 	],
 	passphraseLanguages: [
 		{ label: "Chinese Simplified", value: "chinese_simplified" },

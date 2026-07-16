@@ -2,7 +2,7 @@ import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 
 import {
-	cryptoCompareHandlers,
+	arkPricingHandlers,
 	exchangeHandlers,
 	mainsailDevnetHandlers,
 	mainsailMainnetHandlers,
@@ -47,7 +47,7 @@ export const requestMockOnce = (path: string, data: undefined | string | object,
 	requestMock(path, data, { ...options, modifier: "once" });
 
 const restHandlers = [
-	...cryptoCompareHandlers,
+	...arkPricingHandlers,
 	...exchangeHandlers,
 	...mainsailDevnetHandlers,
 	...mainsailMainnetHandlers,

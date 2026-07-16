@@ -227,15 +227,17 @@ export const requestMocks = {
 	exchange: [
 		mockRequest(
 			// eslint-disable-next-line unicorn/better-regex
-			/https:\/\/min-api\.cryptocompare\.com\/data\/dayAvg\?fsym=ARK&tsym=BTC&toTs=[0-9]/,
-			"exchange/cryptocompare",
+			/https:\/\/pricing\.ardenthq\.com\/api\/v1\/coins\/ark\/average\?currency=BTC/,
+			"exchange/ark-pricing-btc",
 		),
 		mockRequest(
 			// eslint-disable-next-line unicorn/better-regex
-			/https:\/\/min-api\.cryptocompare\.com\/data\/dayAvg\?fsym=ARK&tsym=ETH&toTs=[0-9]/,
-			"exchange/cryptocompare-eth",
+			/https:\/\/pricing\.ardenthq\.com\/api\/v1\/coins\/ark\/average\?currency=ETH/,
+			"exchange/ark-pricing-eth",
 		),
-		mockRequest(/https:\/\/min-api\.cryptocompare\.com\/data\/histoday/, "exchange/cryptocompare-historical"),
+		mockRequest(/https:\/\/pricing\.ardenthq\.com\/api\/v1\/coins\/ark\/history/, "exchange/ark-pricing-historical"),
+		mockRequest(/https:\/\/pricing\.ardenthq\.com\/api\/v1\/coins\/ark\/price/, "exchange/ark-pricing-price"),
+		mockRequest(/https:\/\/pricing\.ardenthq\.com\/api\/v1\/coins\/ark\/market/, "exchange/ark-pricing-market"),
 		mockRequest(/thumbnail.png$/, () => imageFixture),
 		mockRequest(/dark.png$/, () => imageFixture),
 		mockRequest(/light.png$/, () => imageFixture),
