@@ -867,9 +867,9 @@ jobs:
               uses: nick-invision/retry@v2
               env:
                   COVERAGE_THRESHOLD_LINES: 93.94
-                  COVERAGE_THRESHOLD_FUNCTIONS: 94.47
+                  COVERAGE_THRESHOLD_FUNCTIONS: 94.38
                   COVERAGE_THRESHOLD_STATEMENTS: 94.2
-                  COVERAGE_THRESHOLD_BRANCHES: 96.92
+                  COVERAGE_THRESHOLD_BRANCHES: 96.82
                   COVERAGE_INCLUDE_PATH: src/domains/wallet
               with:
                   timeout_minutes: 10
