@@ -10,7 +10,7 @@ import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { Transactions } from "./components/Transactions";
 import { LedgerAddressVerification } from "./components/LedgerAddressVerification";
-import { Address } from "@/app/components/Address";
+import { WalletAddress } from "@/app/components/Address/WalletAddress";
 import cn from "classnames";
 
 export const LedgerTransactionOverview = ({
@@ -41,26 +41,18 @@ export const LedgerTransactionOverview = ({
 						<div className="space-y-3">
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle>{t("COMMON.OLD")}</DetailTitle>
-								<Address
+								<WalletAddress
 									address={transfer.sender().address()}
 									walletName={transfer.sender().displayName()}
 									showCopyButton
-									walletNameClass="text-theme-text text-sm sm:text-base"
-									wrapperClass="justify-end sm:justify-start"
-									addressClass={cn("text-sm sm:text-base w-full w-3/4", {
-										"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
-											!!transfer.sender().displayName(),
-									})}
 								/>
 							</div>
 
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle>{t("COMMON.NEW")}</DetailTitle>
-								<Address
-									address={transfer.recipient()?.address()}
+								<WalletAddress
+									address={transfer.recipient()?.address() ?? ""}
 									showCopyButton
-									walletNameClass="text-theme-text text-sm sm:text-base"
-									wrapperClass="justify-end sm:justify-start w-full"
 								/>
 							</div>
 						</div>

@@ -6,7 +6,7 @@ import { Dropdown } from "@/app/components/Dropdown";
 import { useNetworks } from "@/app/hooks";
 import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
 import { useTranslation } from "react-i18next";
-import { Address } from "@/app/components/Address";
+import { WalletAddress } from "@/app/components/Address/WalletAddress";
 import { Button } from "@/app/components/Button";
 import { Tooltip } from "@/app/components/Tooltip";
 
@@ -33,7 +33,7 @@ export const ContactListItemMobile = ({ contact, onSend, options, onAction, hasB
 	}, [hasBalance, profileAvailableNetworks]);
 
 	const renderAddress = useCallback(
-		(address: Contracts.IContactAddress) => <Address address={address.address()} size="sm" showCopyButton />,
+		(address: Contracts.IContactAddress) => <WalletAddress address={address.address()} showCopyButton />,
 		[hasBalance, onSend],
 	);
 

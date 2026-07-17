@@ -2,7 +2,7 @@ import React from "react";
 import { Services } from "@/app/lib/mainsail";
 import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
-import { Address } from "@/app/components/Address";
+import { WalletAddress } from "@/app/components/Address/WalletAddress";
 import { FormField } from "@/app/components/Form";
 import { DetailLabelText, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
@@ -23,8 +23,7 @@ export const SigningMessageInfo = ({
 			<DetailWrapper label={t("COMMON.SIGNING_ADDRESS")}>
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
-					<Address
-						truncateOnTable
+					<WalletAddress
 						address={wallet.address()}
 						walletName={
 							getWalletAlias({
@@ -34,9 +33,6 @@ export const SigningMessageInfo = ({
 							}).alias
 						}
 						showCopyButton
-						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
-						wrapperClass="justify-end sm:justify-start"
 					/>
 				</div>
 			</DetailWrapper>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Address } from "@/app/components/Address";
+import { WalletAddress } from "@/app/components/Address/WalletAddress";
 import { Amount } from "@/app/components/Amount";
 import { Icon } from "@/app/components/Icon";
 import { TransactionFee } from "./components/TransactionFee";
@@ -31,8 +31,8 @@ export const LedgerMigrationOverview = ({
 					<div className="space-y-3">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 							<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
-							<Address
 								address={transfer.recipient()?.address()}
+							<WalletAddress
 								showCopyButton
 								walletNameClass="text-theme-text"
 								wrapperClass="justify-end sm:justify-start"

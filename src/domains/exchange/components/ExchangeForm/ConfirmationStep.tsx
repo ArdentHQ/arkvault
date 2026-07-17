@@ -6,7 +6,7 @@ import { AmountLabel } from "@/app/components/Amount";
 import { DetailLabelText, DetailPadded, DetailsCondensed, DetailWrapper } from "@/app/components/DetailWrapper";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 import { ExtendedTransactionData } from "@/domains/transaction/hooks/use-transaction-total";
-import { Address } from "@/app/components/Address";
+import { WalletAddress } from "@/app/components/Address/WalletAddress";
 import { FormDivider } from "./ExchangeForm.blocks";
 interface ConfirmationStepProperties {
 	exchangeTransaction?: Contracts.IExchangeTransaction;
@@ -72,13 +72,9 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 											</span>
 										</DetailLabelText>
 
-										<Address
-											truncateOnTable
+										<WalletAddress
 											address={inputTransaction.address}
 											showCopyButton
-											walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-											wrapperClass="justify-end sm:justify-start"
-											addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
 										/>
 									</div>
 								</div>
@@ -135,13 +131,9 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 											</span>
 										</DetailLabelText>
 
-										<Address
-											truncateOnTable
+										<WalletAddress
 											address={outputTransaction.address}
 											showCopyButton
-											walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-											wrapperClass="justify-end sm:justify-start"
-											addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
 										/>
 									</div>
 								</div>

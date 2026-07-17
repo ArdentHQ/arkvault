@@ -6,7 +6,7 @@ import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { assertWallet } from "@/utils/assertions";
-import { Address } from "@/app/components/Address";
+import { WalletAddress } from "@/app/components/Address/WalletAddress";
 import { Divider } from "@/app/components/Divider";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
@@ -29,7 +29,7 @@ export const SuccessStep = ({
 				<DetailWrapper label={t("COMMON.IMPORTED")}>
 					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
 						<DetailTitle> {t("COMMON.ADDRESS")} </DetailTitle>
-						<Address
+						<WalletAddress
 							address={importedWallet.address()}
 							addressClass="leading-[17px] sm:leading-5 text-sm sm:text-base"
 							wrapperClass="w-max! sm:w-full! text-sm sm:text-base"

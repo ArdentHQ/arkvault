@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
 import { Checkbox } from "@/app/components/Checkbox";
-import { Address } from "@/app/components/Address";
+import { WalletAddress } from "@/app/components/Address/WalletAddress";
 import { Amount } from "@/app/components/Amount";
 import React, { JSX } from "react";
 import { Button } from "@/app/components/Button";
@@ -186,7 +186,7 @@ export const AddressRow = ({
 								</Label>
 							)}
 						</div>
-						<Address
+						<WalletAddress
 							address={wallet.address()}
 							showCopyButton
 							addressClass="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px]"

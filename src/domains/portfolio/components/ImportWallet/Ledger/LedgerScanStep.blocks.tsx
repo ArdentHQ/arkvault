@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Address } from "@/app/components/Address";
+import { WalletAddress } from "@/app/components/Address/WalletAddress";
 import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
 import { useRandomNumber } from "@/app/hooks";
@@ -99,7 +99,7 @@ export const AddressMobileItem = ({
 
 			<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5">
 				<MobileSection title={t("COMMON.ADDRESS")}>
-					<Address
+					<WalletAddress
 						address={address}
 						showCopyButton
 						addressClass="text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-200"

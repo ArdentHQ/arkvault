@@ -8,12 +8,15 @@ interface Properties {
 	walletName?: string;
 	address: string;
 	showCopyButton?: boolean;
+	wrapperClass?: string;
+	walletNameClass?: string;
+	addressClass?: string;
 }
 
-export const WalletAddress = ({ walletName, address, showCopyButton }: Properties) => (
-	<div className="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap">
+export const WalletAddress = ({ walletName, address, showCopyButton, wrapperClass, walletNameClass, addressClass }: Properties) => (
+	<div className={cn("flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap", wrapperClass)}>
 		{walletName && (
-			<span data-testid="WalletAddress__alias" className="mr-2 text-base font-semibold text-theme-text">
+			<span data-testid="WalletAddress__alias" className={cn("mr-2 text-base font-semibold text-theme-text", walletNameClass)}>
 				<TruncateEnd text={walletName} maxChars={16} showTooltip={walletName.length > 16} />
 			</span>
 		)}
@@ -21,19 +24,19 @@ export const WalletAddress = ({ walletName, address, showCopyButton }: Propertie
 		<div className="min-w-0 grow">
 			<MiddleTruncation
 				data-testid="WalletAddress__address"
-				className={cn("font-semibold", {
+				className={cn("font-semibold", addressClass, {
 					"text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700":
 						walletName,
 					"text-base text-theme-text": !walletName,
 				})}
 			>
-				{address}
+				{address ?? ""}
 			</MiddleTruncation>
 		</div>
 
 		{showCopyButton && (
 			<div className="ml-1 shrink-0">
-				<CopyButton value={address} />
+				<CopyButton value={address!} />
 			</div>
 		)}
 	</div>

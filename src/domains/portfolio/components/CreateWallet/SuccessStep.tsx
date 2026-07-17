@@ -35,7 +35,7 @@ export const SuccessStep = ({
 				<DetailWrapper label={t("COMMON.ADDRESSING")}>
 					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
 						<DetailTitle> {t("COMMON.ADDRESS")} </DetailTitle>
-						<Address
+						<WalletAddress
 							address={wallet.address()}
 							addressClass="leading-[17px] sm:leading-5 text-sm sm:text-base"
 							wrapperClass="w-max! sm:w-full! text-sm sm:text-base"

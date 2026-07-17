@@ -13,7 +13,7 @@ import {
 import { Skeleton } from "@/app/components/Skeleton";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
 import { Button } from "@/app/components/Button";
-import { Address } from "@/app/components/Address";
+import { WalletAddress } from "@/app/components/Address/WalletAddress";
 import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { Contracts } from "@/app/lib/profiles";
@@ -105,11 +105,9 @@ export const RecipientItemMobile = ({
 					}
 					body={
 						<div className="max-w-100">
-							<Address
-								showCopyButton={true}
-								truncateOnTable={true}
+							<WalletAddress
+								showCopyButton
 								address={address}
-								addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
 							/>
 						</div>
 					}
@@ -166,13 +164,9 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 							{name}
 						</div>
 						<div className="flex min-w-0 items-center gap-1 leading-[17px]">
-							<Address
+							<WalletAddress
 								showCopyButton={true}
 								address={address}
-								wrapperClass="w-52 min-w-52 justify-between"
-								addressClass={cn(
-									"text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200",
-								)}
 							/>
 
 							<Divider
@@ -285,11 +279,9 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 							label={t("COMMON.ADDRESS")}
 							body={
 								<div className="max-w-100">
-									<Address
-										showCopyButton={true}
-										truncateOnTable={true}
+									<WalletAddress
+										showCopyButton
 										address={wallet.address()}
-										addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
 									/>
 								</div>
 							}
@@ -370,15 +362,9 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 							>
 								{name}
 							</div>
-							<Address
+							<WalletAddress
 								showCopyButton={true}
 								address={wallet.address()}
-								addressClass={cn("text-sm leading-[17px]", {
-									"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
-										disabled,
-									"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
-										!disabled,
-								})}
 							/>
 						</div>
 						<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-start">
