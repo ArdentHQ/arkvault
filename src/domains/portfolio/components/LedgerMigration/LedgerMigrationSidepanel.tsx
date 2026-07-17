@@ -127,6 +127,7 @@ export const LedgerMigrationSidepanel = ({
 
 								<TabPanel tabId={MigrateLedgerStep.ApproveTransactionStep}>
 									<LedgerTransactionApproveStep
+										profile={profile}
 										migrator={migrator}
 										transfer={transfer.current}
 										onSuccess={() => {
