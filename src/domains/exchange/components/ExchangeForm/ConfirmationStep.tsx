@@ -6,7 +6,7 @@ import { AmountLabel } from "@/app/components/Amount";
 import { DetailLabelText, DetailPadded, DetailsCondensed, DetailWrapper } from "@/app/components/DetailWrapper";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 import { ExtendedTransactionData } from "@/domains/transaction/hooks/use-transaction-total";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import { FormDivider } from "./ExchangeForm.blocks";
 interface ConfirmationStepProperties {
 	exchangeTransaction?: Contracts.IExchangeTransaction;
@@ -72,7 +72,7 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 											</span>
 										</DetailLabelText>
 
-										<WalletAddress
+										<Address
 											address={inputTransaction.address}
 											showCopyButton
 										/>
@@ -131,7 +131,7 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 											</span>
 										</DetailLabelText>
 
-										<WalletAddress
+										<Address
 											address={outputTransaction.address}
 											showCopyButton
 										/>

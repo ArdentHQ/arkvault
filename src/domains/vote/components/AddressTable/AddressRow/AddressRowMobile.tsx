@@ -171,7 +171,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 					bodyClassName="sm:grid-cols-3"
 				>
 					<MobileTableElementRow title={t("COMMON.ADDRESS")}>
-						<Address address={wallet.address()} size="sm" />
+						<Address address={wallet.address()} addressClass="text-sm" />
 					</MobileTableElementRow>
 
 					<MobileTableElementRow title={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}>

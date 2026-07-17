@@ -2,7 +2,7 @@ import React from "react";
 import { Services } from "@/app/lib/mainsail";
 import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import { FormField } from "@/app/components/Form";
 import { DetailLabelText, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
@@ -23,7 +23,7 @@ export const SigningMessageInfo = ({
 			<DetailWrapper label={t("COMMON.SIGNING_ADDRESS")}>
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
-					<WalletAddress
+					<Address
 						address={wallet.address()}
 						walletName={
 							getWalletAlias({

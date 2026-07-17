@@ -6,7 +6,7 @@ import { TableRow } from "@/app/components/Table";
 import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
 import { AmountLabel } from "@/app/components/Amount";
 import { useWalletAlias } from "@/app/hooks";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 
 export const NotificationTransactionItemMobile = ({
 	transaction,
@@ -32,7 +32,7 @@ export const NotificationTransactionItemMobile = ({
 				<RowWrapper>
 					<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
 					<div className="w-40 xs:w-50 min-[480px]:w-2/3">
-						<WalletAddress address={transaction.from()} walletName={alias} />
+						<Address address={transaction.from()} walletName={alias} />
 					</div>
 				</RowWrapper>
 

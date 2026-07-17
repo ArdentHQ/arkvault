@@ -11,7 +11,7 @@ import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { Button } from "@/app/components/Button";
 import { SIDE_PANEL_TRANSITION_DURATION } from "@/app/contexts";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 
 const TokenDetailSidepanelFooter = ({ onClose, onSendToken }: { onClose?: () => void; onSendToken?: () => void }) => {
 	const { t } = useTranslation();
@@ -162,7 +162,7 @@ export const TokenDetailSidepanel = ({
 								</DetailTitle>
 
 								<div className="flex max-w-[33.5rem] flex-1 flex-col justify-end gap-2 sm:w-full sm:justify-start md:flex-row md:items-center">
-									<WalletAddress address={walletToken.token().address()} showCopyButton />
+									<Address address={walletToken.token().address()} showCopyButton />
 									<div className="hidden md:block">
 										<Divider type="vertical" />
 									</div>

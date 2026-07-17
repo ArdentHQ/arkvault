@@ -66,12 +66,10 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 						showTooltip={false}
 						walletName={alias}
 						address={alias ? "" : address}
-						truncateOnTable
-						addressClass={cn({
+						addressClass={cn("text-sm", {
 							"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
 							"text-theme-text": !alias,
 						})}
-						size="sm"
 					/>
 				</div>
 			</Tooltip>

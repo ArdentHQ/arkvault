@@ -72,7 +72,7 @@ export const BaseTransactionRowRecipientLabel = ({
 				walletName={walletName}
 				address={recipient}
 				addressClass={addressClass}
-				alignment={isXs || isSm ? "right" : undefined}
+				wrapperClass={cn(isXs || isSm && "justify-end text-right")}
 			/>
 		);
 	}

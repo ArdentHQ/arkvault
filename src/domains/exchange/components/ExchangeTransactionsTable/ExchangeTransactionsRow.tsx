@@ -9,7 +9,7 @@ import { TableCell, TableRow } from "@/app/components/Table";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import { TimeAgo } from "@/app/components/TimeAgo";
 
 const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
@@ -126,7 +126,7 @@ export const ExchangeTransactionsRow = ({
 						onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
 					>
 						{exchangeTransaction.orderId() ? (
-							<WalletAddress
+							<Address
 								address={exchangeTransaction.orderId()}
 							/>
 						) : (

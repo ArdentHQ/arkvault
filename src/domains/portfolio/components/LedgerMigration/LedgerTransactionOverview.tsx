@@ -10,7 +10,7 @@ import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { Transactions } from "./components/Transactions";
 import { LedgerAddressVerification } from "./components/LedgerAddressVerification";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import cn from "classnames";
 
 export const LedgerTransactionOverview = ({
@@ -41,7 +41,7 @@ export const LedgerTransactionOverview = ({
 						<div className="space-y-3">
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle>{t("COMMON.OLD")}</DetailTitle>
-								<WalletAddress
+								<Address
 									address={transfer.sender().address()}
 									walletName={transfer.sender().displayName()}
 									showCopyButton
@@ -50,7 +50,7 @@ export const LedgerTransactionOverview = ({
 
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle>{t("COMMON.NEW")}</DetailTitle>
-								<WalletAddress
+								<Address
 									address={transfer.recipient()?.address() ?? ""}
 									showCopyButton
 								/>

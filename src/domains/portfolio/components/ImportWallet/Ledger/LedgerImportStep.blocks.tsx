@@ -2,7 +2,7 @@ import React, { useCallback, useMemo } from "react";
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -96,11 +96,7 @@ export const SingleImport = ({
 					<div className="flex flex-col gap-3 px-3 pt-3">
 						<SectionBodyItem title={t("COMMON.ADDRESS")}>
 							<div className="w-32">
-								<WalletAddress
-									address={ledgerWallet.address}
-									showCopyButton
-									wrapperClass="justify-between"
-								/>
+								<Address address={ledgerWallet.address} showCopyButton wrapperClass="justify-between" />
 							</div>
 						</SectionBodyItem>
 
@@ -130,7 +126,7 @@ export const SingleImport = ({
 		<div className="flex flex-col gap-4" data-testid="SingleImport__container">
 			<DesktopImportSection title={t("COMMON.IMPORTED")}>
 				<SectionBodyItem title={t("COMMON.ADDRESS")}>
-					<WalletAddress address={ledgerWallet.address} showCopyButton />
+					<Address address={ledgerWallet.address} showCopyButton />
 				</SectionBodyItem>
 
 				<hr className="w-full border border-dashed border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800" />
@@ -180,6 +176,7 @@ export const ImportedLedgerMobileItem = ({
 
 			<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5">
 				<MobileSection title={t("COMMON.ADDRESS")}>
+					<Address
 						address={address}
 						showCopyButton
 						addressClass="text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-50"
@@ -237,12 +234,7 @@ export const MultipleImport = ({
 				<TableRow className="relative">
 					<TableCell variant="start" innerClassName="justify-center">
 						<div className="flex flex-1 flex-col py-2">
-							<Address
-								walletName={importedWallet.alias()}
-								address={wallet.address}
-								showCopyButton
-								truncateOnTable
-							/>
+							<Address walletName={importedWallet.alias()} address={wallet.address} showCopyButton />
 							<AmountWrapper isLoading={false}>
 								<Amount
 									value={wallet.balance ?? 0}

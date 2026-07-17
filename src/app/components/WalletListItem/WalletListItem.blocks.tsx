@@ -13,7 +13,7 @@ import {
 import { Skeleton } from "@/app/components/Skeleton";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
 import { Button } from "@/app/components/Button";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { Contracts } from "@/app/lib/profiles";
@@ -105,7 +105,7 @@ export const RecipientItemMobile = ({
 					}
 					body={
 						<div className="max-w-100">
-							<WalletAddress
+							<Address
 								showCopyButton
 								address={address}
 							/>
@@ -164,7 +164,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 							{name}
 						</div>
 						<div className="flex min-w-0 items-center gap-1 leading-[17px]">
-							<WalletAddress
+							<Address
 								showCopyButton={true}
 								address={address}
 							/>
@@ -279,7 +279,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 							label={t("COMMON.ADDRESS")}
 							body={
 								<div className="max-w-100">
-									<WalletAddress
+									<Address
 										showCopyButton
 										address={wallet.address()}
 									/>
@@ -362,7 +362,7 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 							>
 								{name}
 							</div>
-							<WalletAddress
+							<Address
 								showCopyButton={true}
 								address={wallet.address()}
 							/>

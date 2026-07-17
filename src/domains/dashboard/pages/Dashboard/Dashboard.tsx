@@ -5,7 +5,7 @@ import { Tab, TabList, TabScroll, Tabs } from "@/app/components/Tabs";
 import { generatePath, useNavigate } from "react-router-dom";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import { Contracts } from "@/app/lib/profiles";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 import { ProfilePaths } from "@/router/paths";
@@ -233,7 +233,7 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 									{t("COMMON.PUBLIC_KEY")}
 								</div>
 								<div className="min-w-4/6 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
-									<WalletAddress
+									<Address
 										address={wallet.publicKey()}
 										showCopyButton
 									/>

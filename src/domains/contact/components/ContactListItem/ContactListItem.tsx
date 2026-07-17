@@ -6,7 +6,7 @@ import {
 	ContactListItemOption,
 	ContactListItemProperties,
 } from "./ContactListItem.contracts";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Dropdown } from "@/app/components/Dropdown";
@@ -67,7 +67,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 			<TableCell data-testid="ContactListItem__address" className={borderClasses()} innerClassName="space-x-4">
 				<div className="w-0 flex-1">
-					<WalletAddress address={address.address()} />
+					<Address address={address.address()} />
 				</div>
 			</TableCell>
 

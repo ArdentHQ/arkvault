@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
 import { Checkbox } from "@/app/components/Checkbox";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import React, { JSX } from "react";
 import { Button } from "@/app/components/Button";
@@ -146,7 +146,7 @@ export const MobileAddressRow = ({
 						<InfoDetail
 							label="Address"
 							body={
-								<WalletAddress
+								<Address
 									address={wallet.address()}
 									addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
 								/>

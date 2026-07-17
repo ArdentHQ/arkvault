@@ -1,2 +1,2 @@
 export * from "./AddressLink";
-export { WalletAddress } from "./WalletAddress";
+export { Address } from "./Address";

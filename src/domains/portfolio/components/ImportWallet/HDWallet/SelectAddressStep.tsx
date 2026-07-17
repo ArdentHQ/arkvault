@@ -4,7 +4,7 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
@@ -115,7 +115,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 
 					<TableCell className="w-2/5" innerClassName="space-x-4">
 						<div className="flex w-32 flex-1">
-							<WalletAddress address={wallet.address} showCopyButton />
+							<Address address={wallet.address} showCopyButton />
 						</div>
 						<span className="hidden">{wallet.path}</span>
 					</TableCell>

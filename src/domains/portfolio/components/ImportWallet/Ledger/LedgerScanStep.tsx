@@ -6,7 +6,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import { LedgerTableProperties } from "./LedgerTabs.contracts";
 import { toasts } from "@/app/services";
-import { WalletAddress } from "@/app/components/Address/WalletAddress";
+import { Address } from "@/app/components/Address";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Alert } from "@/app/components/Alert";
 import { Amount } from "@/app/components/Amount";
@@ -131,7 +131,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 					<TableCell className="w-2/5" innerClassName="space-x-4">
 						<div className="flex w-32 flex-1">
-							<WalletAddress address={wallet.address} showCopyButton />
+							<Address address={wallet.address} showCopyButton />
 						</div>
 						<span className="hidden">{wallet.path}</span>
 					</TableCell>
