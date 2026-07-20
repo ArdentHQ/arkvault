@@ -153,7 +153,7 @@ export const ValidatorName = ({
 	className?: string;
 }) => {
 	if (!isUsername) {
-		return <Address address={validatorName} addressClass={className} />;
+		return <Address address={validatorName} addressClass={className} showCopyButton={false} />;
 	}
 	return <AddressLabel className={className}>{validatorName}</AddressLabel>;
 };

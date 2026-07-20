@@ -49,7 +49,12 @@ export const LedgerTransactionOverview = ({
 
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle>{t("COMMON.NEW")}</DetailTitle>
-								<Address address={transfer.recipient()?.address() ?? ""} showCopyButton />
+								<Address
+									address={transfer.recipient()?.address() ?? ""}
+									showCopyButton
+								walletNameClass="text-theme-text"
+								wrapperClass="justify-end sm:justify-start"
+							/>
 							</div>
 						</div>
 					</DetailWrapper>

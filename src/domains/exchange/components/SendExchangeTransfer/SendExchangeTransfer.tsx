@@ -234,7 +234,12 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 						<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 							<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-16">{t("COMMON.TO")}</DetailTitle>
-								<Address address={exchangeInput.address} showCopyButton />
+								<Address
+							address={exchangeInput.address}
+							addressClass="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] sm:leading-5 sm:text-base"
+							wrapperClass="justify-end sm:justify-start"
+							showCopyButton
+						/>
 							</div>
 						</DetailWrapper>
 					)}
