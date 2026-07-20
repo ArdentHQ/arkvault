@@ -165,7 +165,7 @@ const RecipientRow = ({
 							walletNameClass="leading-5 text-theme-text"
 							addressClass={cn({
 								"leading-5 text-theme-text": !alias,
-								"leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+								"text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
 									alias,
 							})}
 						/>
