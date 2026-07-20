@@ -63,7 +63,6 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 			<Tooltip content={address} wrapperClass="grow">
 				<div className="grow" data-testid="TransactionRowAddressing__address-container">
 					<Address
-						showTooltip={false}
 						walletName={alias}
 						address={alias ? "" : address}
 						addressClass={cn("text-sm", {
@@ -139,7 +138,7 @@ const MultiPaymentAddressing = ({
 	const { t } = useTranslation();
 
 	return (
-		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
+		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
 			<TransactionRowLabel
 				direction={direction}
 				style={isAdvanced && variant === "recipient" ? "return" : direction}

@@ -11,6 +11,7 @@ interface Properties {
 	wrapperClass?: string;
 	walletNameClass?: string;
 	addressClass?: string;
+	showTooltip?: boolean;
 }
 
 export const Address = ({
@@ -20,6 +21,7 @@ export const Address = ({
 	wrapperClass,
 	walletNameClass,
 	addressClass,
+	showTooltip,
 }: Properties) => (
 	<div className={cn("flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap", wrapperClass)}>
 		{walletName && (
@@ -34,6 +36,7 @@ export const Address = ({
 		<div className="min-w-0 grow">
 			<MiddleTruncation
 				data-testid="Address__address"
+				tooltip={showTooltip}
 				className={cn("font-semibold", addressClass, {
 					"text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700":
 						walletName,
