@@ -67,7 +67,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 			<TableCell data-testid="ContactListItem__address" className={borderClasses()} innerClassName="space-x-4">
 				<div className="w-0 flex-1">
-					<Address address={address.address()} />
+					<Address address={address.address()} addressClass="text-sm leading-[17px]" />
 				</div>
 			</TableCell>
 
