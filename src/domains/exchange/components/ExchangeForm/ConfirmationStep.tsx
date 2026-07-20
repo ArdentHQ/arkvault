@@ -73,11 +73,11 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 										</DetailLabelText>
 
 										<Address
-									address={inputTransaction.address}
-									showCopyButton
-									wrapperClass="justify-end sm:justify-start"
-									addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
-								/>
+											address={inputTransaction.address}
+											showCopyButton
+											wrapperClass="justify-end sm:justify-start"
+											addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+										/>
 									</div>
 								</div>
 
@@ -134,11 +134,11 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 										</DetailLabelText>
 
 										<Address
-									address={outputTransaction.address}
-									showCopyButton
-									wrapperClass="justify-end sm:justify-start"
-									addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
-								/>
+											address={outputTransaction.address}
+											showCopyButton
+											wrapperClass="justify-end sm:justify-start"
+											addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+										/>
 									</div>
 								</div>
 

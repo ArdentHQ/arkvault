@@ -52,9 +52,9 @@ export const LedgerTransactionOverview = ({
 								<Address
 									address={transfer.recipient()?.address() ?? ""}
 									showCopyButton
-								walletNameClass="text-theme-text"
-								wrapperClass="justify-end sm:justify-start"
-							/>
+									walletNameClass="text-theme-text"
+									wrapperClass="justify-end sm:justify-start"
+								/>
 							</div>
 						</div>
 					</DetailWrapper>

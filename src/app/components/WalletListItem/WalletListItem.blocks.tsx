@@ -98,10 +98,10 @@ export const RecipientItemMobile = ({
 					body={
 						<div className="max-w-100">
 							<Address
-						showCopyButton={true}
-						address={address}
-						addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
-					/>
+								showCopyButton={true}
+								address={address}
+								addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
+							/>
 						</div>
 					}
 				/>
@@ -156,13 +156,13 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 						</div>
 						<div className="flex min-w-0 items-center gap-1 leading-[17px]">
 							<Address
-						showCopyButton={true}
-						address={address}
-						wrapperClass="w-52 min-w-52 justify-between"
-						addressClass={cn(
-							"text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200",
-						)}
-					/>
+								showCopyButton={true}
+								address={address}
+								wrapperClass="w-52 min-w-52 justify-between"
+								addressClass={cn(
+									"text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200",
+								)}
+							/>
 							<Divider
 								type="vertical"
 								className="border-theme-secondary-300 dim:border-theme-dim-700 group-hover:dim:border-theme-dim-500 dark:border-theme-secondary-800 group-hover:dark:border-theme-dark-500"
@@ -268,10 +268,10 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 							body={
 								<div className="max-w-100">
 									<Address
-							showCopyButton={true}
-							address={wallet.address()}
-							addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
-						/>
+										showCopyButton={true}
+										address={wallet.address()}
+										addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
+									/>
 								</div>
 							}
 						/>
@@ -350,14 +350,15 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 								{name}
 							</div>
 							<Address
-					showCopyButton={true}
-					address={wallet.address()}
-					addressClass={cn("text-sm leading-[17px]", {
-						"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
-							disabled,
-						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200": !disabled,
-					})}
-				/>
+								showCopyButton={true}
+								address={wallet.address()}
+								addressClass={cn("text-sm leading-[17px]", {
+									"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+										disabled,
+									"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+										!disabled,
+								})}
+							/>
 						</div>
 						<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-start">
 							<Amount

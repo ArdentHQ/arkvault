@@ -234,10 +234,10 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 								</div>
 								<div className="min-w-4/6 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 									<Address
-						address={wallet.publicKey()}
-						showCopyButton
-						addressClass="leading-[17px] sm:leading-5"
-					/>
+										address={wallet.publicKey()}
+										showCopyButton
+										addressClass="leading-[17px] sm:leading-5"
+									/>
 								</div>
 							</div>
 						)}
