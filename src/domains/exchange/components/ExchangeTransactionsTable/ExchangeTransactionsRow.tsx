@@ -126,9 +126,7 @@ export const ExchangeTransactionsRow = ({
 						onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
 					>
 						{exchangeTransaction.orderId() ? (
-							<Address
-								address={exchangeTransaction.orderId()}
-							/>
+							<Address address={exchangeTransaction.orderId()} />
 						) : (
 							<span className="text-sm font-semibold text-theme-secondary-500">
 								{t("COMMON.NOT_AVAILABLE")}

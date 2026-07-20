@@ -233,10 +233,7 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 									{t("COMMON.PUBLIC_KEY")}
 								</div>
 								<div className="min-w-4/6 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
-									<Address
-										address={wallet.publicKey()}
-										showCopyButton
-									/>
+									<Address address={wallet.publicKey()} showCopyButton />
 								</div>
 							</div>
 						)}

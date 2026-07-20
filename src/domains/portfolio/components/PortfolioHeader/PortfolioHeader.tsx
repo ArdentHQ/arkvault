@@ -315,8 +315,11 @@ export const PortfolioHeader = ({
 												<div className="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]">
 													<Address
 														address={wallet.address()}
-														addressClass={cn(isXs && "text-sm", "leading-[17px] sm:leading-5")}
-														/>
+														addressClass={cn(
+															isXs && "text-sm",
+															"leading-[17px] sm:leading-5",
+														)}
+													/>
 												</div>
 											</div>
 										</div>

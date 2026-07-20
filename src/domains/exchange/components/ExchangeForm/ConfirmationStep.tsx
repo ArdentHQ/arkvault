@@ -72,10 +72,7 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 											</span>
 										</DetailLabelText>
 
-										<Address
-											address={inputTransaction.address}
-											showCopyButton
-										/>
+										<Address address={inputTransaction.address} showCopyButton />
 									</div>
 								</div>
 
@@ -131,10 +128,7 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 											</span>
 										</DetailLabelText>
 
-										<Address
-											address={outputTransaction.address}
-											showCopyButton
-										/>
+										<Address address={outputTransaction.address} showCopyButton />
 									</div>
 								</div>
 

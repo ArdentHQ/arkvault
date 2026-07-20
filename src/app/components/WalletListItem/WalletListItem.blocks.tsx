@@ -105,10 +105,7 @@ export const RecipientItemMobile = ({
 					}
 					body={
 						<div className="max-w-100">
-							<Address
-								showCopyButton
-								address={address}
-							/>
+							<Address showCopyButton address={address} />
 						</div>
 					}
 				/>
@@ -164,10 +161,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 							{name}
 						</div>
 						<div className="flex min-w-0 items-center gap-1 leading-[17px]">
-							<Address
-								showCopyButton={true}
-								address={address}
-							/>
+							<Address showCopyButton={true} address={address} />
 
 							<Divider
 								type="vertical"
@@ -279,10 +273,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 							label={t("COMMON.ADDRESS")}
 							body={
 								<div className="max-w-100">
-									<Address
-										showCopyButton
-										address={wallet.address()}
-									/>
+									<Address showCopyButton address={wallet.address()} />
 								</div>
 							}
 						/>
@@ -362,10 +353,7 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 							>
 								{name}
 							</div>
-							<Address
-								showCopyButton={true}
-								address={wallet.address()}
-							/>
+							<Address showCopyButton={true} address={wallet.address()} />
 						</div>
 						<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-start">
 							<Amount
