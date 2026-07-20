@@ -65,7 +65,7 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 					<Address
 						walletName={alias}
 						address={alias ? "" : address}
-						addressClass={cn("text-sm", {
+						addressClass={cn({
 							"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
 							"text-theme-text": !alias,
 						})}

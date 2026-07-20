@@ -100,7 +100,7 @@ export const RecipientItemMobile = ({
 							<Address
 								showCopyButton={true}
 								address={address}
-								addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
+								addressClass="leading-[17px] text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
 							/>
 						</div>
 					}
@@ -160,7 +160,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 								address={address}
 								wrapperClass="w-52 min-w-52 justify-between"
 								addressClass={cn(
-									"text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200",
+									"leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200",
 								)}
 							/>
 							<Divider
