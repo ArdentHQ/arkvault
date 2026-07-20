@@ -90,7 +90,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 						{transferTransactionId && (
 							<FormItemRow label={t("EXCHANGE.ARK_TRANSACTION_ID")}>
 								<div className="flex space-x-2 font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
-									<TruncateMiddleDynamic value={transferTransactionId} className="no-ligatures" />
+									<MiddleTruncation>{transferTransactionId}</MiddleTruncation>
 									<span className="flex text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 										<Clipboard variant="icon" data={transferTransactionId}>
 											<Icon name="Copy" />
@@ -118,10 +118,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 
 					<FormItemRow label={t("EXCHANGE.TO_ADDRESS")}>
 						<div className="flex space-x-2 font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
-							<TruncateMiddleDynamic
-								value={exchangeTransaction.output().address}
-								className="no-ligatures"
-							/>
+							<MiddleTruncation>{exchangeTransaction.output().address}</MiddleTruncation>
 							<span className="flex text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 								<Clipboard variant="icon" data={exchangeTransaction.output().address}>
 									<Icon name="Copy" />

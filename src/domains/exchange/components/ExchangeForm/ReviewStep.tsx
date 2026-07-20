@@ -51,7 +51,7 @@ export const ReviewStep = ({
 
 					<FormItemRow label={t("COMMON.ADDRESS")}>
 						<MiddleTruncation className="no-ligatures font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
-							recipientWallet
+							{recipientWallet}
 						</MiddleTruncation>
 					</FormItemRow>
 
