@@ -7,11 +7,11 @@ import { Amount } from "@/app/components/Amount";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 import { delay } from "@/utils/delay";
 import { FormItem, FormItemRow } from "./ExchangeForm.blocks";
+import { MiddleTruncation } from "@/app/components/MiddleTruncation";
 
 interface StatusStepProperties {
 	transferTransactionId: string | undefined;
@@ -79,10 +79,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 						</FormItemRow>
 						<FormItemRow label={t("EXCHANGE.TO_ADDRESS")}>
 							<div className="flex space-x-2 font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
-								<TruncateMiddleDynamic
-									value={exchangeTransaction.input().address}
-									className="no-ligatures"
-								/>
+								<MiddleTruncation>{exchangeTransaction.input().address}</MiddleTruncation>
 								<span className="flex text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 									<Clipboard variant="icon" data={exchangeTransaction.input().address}>
 										<Icon name="Copy" />
