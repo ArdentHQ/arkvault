@@ -33,6 +33,9 @@ export const SigningMessageInfo = ({
 							}).alias
 						}
 						showCopyButton
+						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+						wrapperClass="justify-end sm:justify-start"
 					/>
 				</div>
 			</DetailWrapper>
