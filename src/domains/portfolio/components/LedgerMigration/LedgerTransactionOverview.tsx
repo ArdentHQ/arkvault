@@ -11,7 +11,6 @@ import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { Transactions } from "./components/Transactions";
 import { LedgerAddressVerification } from "./components/LedgerAddressVerification";
 import { Address } from "@/app/components/Address";
-import cn from "classnames";
 
 export const LedgerTransactionOverview = ({
 	migrator,
@@ -50,10 +49,7 @@ export const LedgerTransactionOverview = ({
 
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle>{t("COMMON.NEW")}</DetailTitle>
-								<Address
-									address={transfer.recipient()?.address() ?? ""}
-									showCopyButton
-								/>
+								<Address address={transfer.recipient()?.address() ?? ""} showCopyButton />
 							</div>
 						</div>
 					</DetailWrapper>
