@@ -11,12 +11,15 @@ exports[`Address > should render address only 1`] = `
       <span
         class="block w-full"
       >
-        <span
-          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-text"
-          data-testid="Address__address"
-          title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
-        >
-          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+        <span>
+          <span>
+            <span
+              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-text"
+              data-testid="Address__address"
+            >
+              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            </span>
+          </span>
         </span>
       </span>
     </div>
@@ -35,12 +38,15 @@ exports[`Address > should render copy button 1`] = `
       <span
         class="block w-full"
       >
-        <span
-          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-text"
-          data-testid="Address__address"
-          title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
-        >
-          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+        <span>
+          <span>
+            <span
+              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-text"
+              data-testid="Address__address"
+            >
+              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            </span>
+          </span>
         </span>
       </span>
     </div>
@@ -121,12 +127,15 @@ exports[`Address > should render with wallet name 1`] = `
       <span
         class="block w-full"
       >
-        <span
-          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-          data-testid="Address__address"
-          title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
-        >
-          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+        <span>
+          <span>
+            <span
+              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+              data-testid="Address__address"
+            >
+              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            </span>
+          </span>
         </span>
       </span>
     </div>
@@ -160,12 +169,15 @@ exports[`Address > should render with wallet name and copy button 1`] = `
       <span
         class="block w-full"
       >
-        <span
-          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-          data-testid="Address__address"
-          title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
-        >
-          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+        <span>
+          <span>
+            <span
+              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+              data-testid="Address__address"
+            >
+              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            </span>
+          </span>
         </span>
       </span>
     </div>
@@ -246,12 +258,15 @@ exports[`Address > should truncate long wallet names 1`] = `
       <span
         class="block w-full"
       >
-        <span
-          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-          data-testid="Address__address"
-          title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
-        >
-          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+        <span>
+          <span>
+            <span
+              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+              data-testid="Address__address"
+            >
+              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            </span>
+          </span>
         </span>
       </span>
     </div>

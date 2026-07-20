@@ -33,10 +33,10 @@ exports[`ValidatorFooter > should render 1`] = `
                   class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <span
-                      class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                      class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span>
@@ -50,16 +50,24 @@ exports[`ValidatorFooter > should render 1`] = `
                         </span>
                       </span>
                     </span>
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>

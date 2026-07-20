@@ -64,18 +64,26 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -223,18 +231,26 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0x03BC306C369A55c0336EB003bB07F29E5c150F36
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0x03BC306C369A55c0336EB003bB07F29E5c150F36
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -391,18 +407,26 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0x56F925416Ef2725646442D5E0150088bd7202aCd
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0x56F925416Ef2725646442D5E0150088bd7202aCd
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
