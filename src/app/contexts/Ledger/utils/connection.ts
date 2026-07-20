@@ -15,11 +15,11 @@ export const persistLedgerConnection = async ({
 	hasRequestedAbort,
 }: {
 	ledgerService: LedgerService;
-	options: Options;
-	hasRequestedAbort: () => boolean;
+	options?: Options;
+	hasRequestedAbort?: () => boolean;
 }) => {
 	const retryAccess: any = async (attempts: number) => {
-		if (hasRequestedAbort() && attempts > 1) {
+		if (hasRequestedAbort?.() && attempts > 1) {
 			throw new AbortError("CONNECTION_ERROR");
 		}
 
