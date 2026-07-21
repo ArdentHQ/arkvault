@@ -77,6 +77,7 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 											showCopyButton
 											wrapperClass="justify-end sm:justify-start"
 											addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+											walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 										/>
 									</div>
 								</div>
@@ -138,6 +139,7 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 											showCopyButton
 											wrapperClass="justify-end sm:justify-start"
 											addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+											walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 										/>
 									</div>
 								</div>
