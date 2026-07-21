@@ -194,6 +194,7 @@ export const AddressRow = ({
 					</div>
 					<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2">
 						<Amount
+							showCompactFormat
 							ticker={wallet.network().ticker()}
 							value={wallet.balance()}
 							className={cn("leading-5", {
