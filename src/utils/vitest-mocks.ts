@@ -12,7 +12,7 @@ export function mockCanvas() {
 	document.createElement = ((tag: string) => {
 		if (tag === "canvas") {
 			return {
-				getContext: (_type?: string) => ({
+				getContext: () => ({
 					font: "",
 					measureText: vi.fn(() => ({ width: 0 })),
 				}),
