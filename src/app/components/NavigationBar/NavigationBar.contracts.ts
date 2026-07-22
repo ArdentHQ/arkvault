@@ -1,6 +1,6 @@
 import React from "react";
 
-import { DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/SimpleDropdown";
 import { NavbarVariant } from "@/types";
 
 export interface NavigationBarMenuItem {

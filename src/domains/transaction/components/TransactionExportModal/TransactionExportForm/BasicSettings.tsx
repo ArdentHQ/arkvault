@@ -6,7 +6,7 @@ import { t } from "i18next";
 import { useTransactionTypeOptions, useDateRangeOptions } from "./hooks";
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { CollapseToggleButton } from "@/app/components/Collapse";
-import { Dropdown } from "@/app/components/Dropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { ListDivided } from "@/app/components/ListDivided";
 import { useBreakpoint } from "@/app/hooks";
@@ -95,22 +95,40 @@ const DateRangeOptions = ({ isDisabled }: { isDisabled: boolean }) => {
 
 	return (
 		<FormField name="dateRange">
-			<Dropdown
-				variant="options"
-				wrapperClass="z-[52]"
-				data-testid="TransactionExportForm--daterange-options"
-				options={options}
-				onSelect={(option) => form.setValue("dateRange", option.value)}
-				disableToggle={isDisabled}
-				toggleContent={(isOpen: boolean) => (
-					<CollapseToggleButton
-						isOpen={isOpen}
-						disabled={isDisabled}
-						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-						label={<div className="whitespace-nowrap leading-tight">{selected?.label}</div>}
-					/>
-				)}
-			/>
+			<DropdownRoot>
+				<DropdownToggle>
+					{({ isOpen }: { isOpen: boolean }) => (
+						<CollapseToggleButton
+							isOpen={isOpen}
+							disabled={isDisabled}
+							className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+							label={<div className="whitespace-nowrap leading-tight">{selected?.label}</div>}
+						/>
+					)}
+				</DropdownToggle>
+				<DropdownContent className="z-[52]">
+					{options.map((group) => (
+						<div key={group.key}>
+							{group.hasDivider && (
+								<div>
+									<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
+								</div>
+							)}
+							<ul>
+								{group.options.map((option, index) => (
+									<DropdownListItem
+										key={option.value}
+										data-testid={`dropdown__option--${group.key}-${index}`}
+										onClick={() => form.setValue("dateRange", option.value)}
+									>
+										{option.label}
+									</DropdownListItem>
+								))}
+							</ul>
+						</div>
+					))}
+				</DropdownContent>
+			</DropdownRoot>
 		</FormField>
 	);
 };

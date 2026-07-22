@@ -11,7 +11,8 @@ import { useWalletAlias } from "@/app/hooks";
 import { RadioButton } from "@/app/components/RadioButton";
 import { getMenuOptions } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { useTranslation } from "react-i18next";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 
 export const MobileAddressRow = ({
 	profile,
@@ -118,10 +119,8 @@ export const MobileAddressRow = ({
 
 								<span className="block h-5 w-px bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-secondary-800" />
 
-								<Dropdown
-									disableToggle={isEditing || !!deleteContent}
-									wrapperClass="z-50"
-									toggleContent={
+								<DropdownRoot>
+									<DropdownToggle>
 										<button
 											type="button"
 											className={cn("flex", {
@@ -132,10 +131,37 @@ export const MobileAddressRow = ({
 										>
 											<Icon name="EllipsisVerticalFilled" size="md" />
 										</button>
-									}
-									options={getMenuOptions(t)}
-									onSelect={(action) => onSelectOption(action, wallet)}
-								/>
+									</DropdownToggle>
+									<DropdownContent>
+										<ul>
+											{getMenuOptions(t).map((option, index) => (
+												<DropdownListItem
+													key={option.value}
+													data-testid={`dropdown__option--${index}`}
+													onClick={() => onSelectOption(option, wallet)}
+												>
+													{option.iconPosition === "start" && option.icon && (
+														<Icon
+															name={option.icon}
+															className="dark:text-theme-secondary-600 dim:text-theme-dim-200"
+															size={option.iconSize || "md"}
+														/>
+													)}
+													<span className="flex w-full items-center justify-between">
+														{option.element || option.label}
+													</span>
+													{option.iconPosition !== "start" && option.icon && (
+														<Icon
+															name={option.icon}
+															className="dark:text-theme-secondary-600 dim:text-theme-dim-200"
+															size={option.iconSize || "md"}
+														/>
+													)}
+												</DropdownListItem>
+											))}
+										</ul>
+									</DropdownContent>
+								</DropdownRoot>
 							</div>
 						)}
 					</div>

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { DropdownOptionGroup } from "@/app/components/Dropdown";
+import { DropdownOptionGroup } from "@/app/components/SimpleDropdown";
 import { DateRange } from "@/domains/transaction/components/TransactionExportModal";
 
 export const useDateRangeOptions = ({ selectedValue }: { selectedValue: DateRange }) => {

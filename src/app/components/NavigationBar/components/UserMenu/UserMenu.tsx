@@ -1,8 +1,11 @@
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import cn from "classnames";
 
 import { Avatar } from "@/app/components/Avatar";
-import { Dropdown, DropdownOptionGroup } from "@/app/components/Dropdown";
+import { DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
+import { Icon } from "@/app/components/Icon";
 import { UserMenuProperties } from "@/app/components/NavigationBar";
 import { getUserMenuActions } from "@/app/constants/navigation";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
@@ -13,6 +16,26 @@ import { assertString } from "@/utils/assertions";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetworkMobile } from "@/app/components/NavigationBar/components/SelectNetwork";
 import { Contracts } from "@/app/lib/profiles";
+
+const renderIcon = (option: DropdownOption) => {
+	const { icon, iconClassName, iconSize } = option;
+
+	if (!icon) {
+		return null;
+	}
+
+	const className: Record<string, boolean> = {};
+
+	if (!iconClassName) {
+		className["dark:text-theme-secondary-600 dim:text-theme-dim-200"] = true;
+	} else if (typeof iconClassName === "function") {
+		className[iconClassName(option)] = true;
+	} else {
+		className[iconClassName] = true;
+	}
+
+	return <Icon name={icon} className={cn(className)} size={iconSize || "md"} />;
+};
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();
@@ -63,13 +86,9 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 	);
 
 	return (
-		<Dropdown
-			variant="navbar"
-			placement="bottom-end"
-			onSelect={onUserAction}
-			options={userMenuActions}
-			toggleContent={renderAvatarSection}
-			top={
+		<DropdownRoot>
+			<DropdownToggle>{({ isOpen }) => renderAvatarSection(isOpen)}</DropdownToggle>
+			<DropdownContent>
 				<div className="flex items-center justify-between bg-theme-secondary-100 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-950 dark:text-theme-dark-200 md-lg:hidden">
 					<p>{t("COMMON.BALANCE")}:</p>
 					<div className="flex items-center gap-2">
@@ -77,8 +96,49 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 						<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
 					</div>
 				</div>
-			}
-			bottom={showNetworkToggle ? <SelectNetworkMobile profile={profile} /> : undefined}
-		/>
+				{userMenuActions.map((group) => (
+					<div key={group.key}>
+						{group.hasDivider && (
+							<div>
+								<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
+							</div>
+						)}
+						<ul>
+							{group.title && (
+								<li className="mx-1 my-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-5 py-1 text-left text-xs font-semibold text-theme-secondary-700 dim:bg-theme-dim-navy-900 dim:text-theme-dim-200 dark:bg-theme-dark-800 dark:text-theme-dark-200">
+									{group.title}
+								</li>
+							)}
+							{group.options.map((option, index) => (
+								<DropdownListItem
+									key={option.value}
+									disabled={option.disabled}
+									data-testid={`dropdown__option--${group.key ? group.key + "-" : ""}${index}`}
+									onClick={() => {
+										if (!option.disabled) {
+											onUserAction(option);
+										}
+									}}
+								>
+									{option.iconPosition === "start" && renderIcon(option)}
+									<span className="flex w-full items-center justify-between">
+										{option.element || option.label}
+										{option.secondaryLabel && (
+											<span className="ml-1 pr-4 text-theme-secondary-500 dark:text-theme-secondary-600">
+												{typeof option.secondaryLabel === "function"
+													? option.secondaryLabel(!!option.active)
+													: option.secondaryLabel}
+											</span>
+										)}
+									</span>
+									{option.iconPosition !== "start" && renderIcon(option)}
+								</DropdownListItem>
+							))}
+						</ul>
+					</div>
+				))}
+				{showNetworkToggle ? <SelectNetworkMobile profile={profile} /> : undefined}
+			</DropdownContent>
+		</DropdownRoot>
 	);
 };

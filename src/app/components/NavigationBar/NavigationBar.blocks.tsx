@@ -5,7 +5,8 @@ import { generatePath, NavLink, useLocation, useNavigate } from "react-router-do
 import cn from "classnames";
 import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
 import { Button } from "@/app/components/Button";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { BackButton } from "@/app/components/NavigationBar/components/BackButton";
@@ -286,23 +287,37 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 				data-testid="NavigationBar__menu-toggle"
 				className="mr-auto flex content-center items-center xl:hidden"
 			>
-				<Dropdown
-					variant="navbar"
-					toggleContent={(isOpen) => (
-						<button
-							type="button"
-							className="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
-						>
-							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
-						</button>
-					)}
-					onSelect={handleSelectMenuItem}
-					options={navigationMenu.map((menuItem) => ({
-						disabled: isMenuItemDisabled(menuItem.id),
-						label: menuItem.title,
-						value: menuItem.mountPath(profile.id()),
-					}))}
-				/>
+				<DropdownRoot>
+					<DropdownToggle>
+						{(isOpen) => (
+							<button
+								type="button"
+								className="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+							>
+								<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
+							</button>
+						)}
+					</DropdownToggle>
+					<DropdownContent>
+						<ul>
+							{navigationMenu.map((menuItem, index) => (
+								<DropdownListItem
+									key={menuItem.id}
+									disabled={isMenuItemDisabled(menuItem.id)}
+									data-testid={`dropdown__option--${index}`}
+									onClick={() =>
+										handleSelectMenuItem({
+											value: menuItem.id,
+											label: menuItem.title,
+										} as DropdownOption)
+									}
+								>
+									{menuItem.title}
+								</DropdownListItem>
+							))}
+						</ul>
+					</DropdownContent>
+				</DropdownRoot>
 			</div>
 		</>
 	);

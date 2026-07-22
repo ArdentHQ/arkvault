@@ -1,4 +1,5 @@
-import { Dropdown, DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown";
+import { DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import React, { memo, JSX } from "react";
 
 import { Button } from "@/app/components/Button";
@@ -157,14 +158,8 @@ export const FilterTransactions = memo(
 
 		return (
 			<div className={className} data-testid="FilterTransactions" {...properties}>
-				<Dropdown
-					placement="bottom-end"
-					wrapperClass="sm:max-w-56"
-					options={options}
-					variant="options"
-					disableToggle={isDisabled}
-					closeOnSelect={false}
-					toggleContent={
+				<DropdownRoot>
+					<DropdownToggle>
 						<Button
 							variant="secondary"
 							size="sm"
@@ -176,8 +171,41 @@ export const FilterTransactions = memo(
 						>
 							<span>{t("COMMON.TYPE")}</span>
 						</Button>
-					}
-				/>
+					</DropdownToggle>
+					<DropdownContent className="sm:max-w-56">
+						{options.map((group) => (
+							<div key={group.key}>
+								{group.hasDivider && (
+									<div>
+										<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
+									</div>
+								)}
+								<ul>
+									{group.title && (
+										<li className="mx-1 my-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-5 py-1 text-left text-xs font-semibold text-theme-secondary-700 dim:bg-theme-dim-navy-900 dim:text-theme-dim-200 dark:bg-theme-dark-800 dark:text-theme-dark-200">
+											{group.title}
+										</li>
+									)}
+									{group.options.map((option, index) => (
+										<DropdownListItem
+											key={option.value}
+											data-testid={`dropdown__option--${group.key ? group.key + "-" : ""}${index}`}
+											tabIndex={option.disableFocus ? -1 : 0}
+											disabled={option.disabled}
+											onClick={() => {
+												if (!option.disabled && group.onSelect) {
+													group.onSelect(option);
+												}
+											}}
+										>
+											{option.element || option.label}
+										</DropdownListItem>
+									))}
+								</ul>
+							</div>
+						))}
+					</DropdownContent>
+				</DropdownRoot>
 			</div>
 		);
 	},
