@@ -87,12 +87,7 @@ export const DropdownToggle: FC<DropdownToggleProperties> = ({ children, ...prop
 	);
 };
 
-export const DropdownContent: FC<{
-	children?: ReactNode;
-	className?: string;
-	top?: ReactNode;
-	bottom?: ReactNode;
-}> = ({ children, className, top, bottom }) => {
+export const DropdownContent: FC<{ children?: ReactNode; className?: string }> = ({ children, className }) => {
 	const { open, refs, getFloatingProps, floatingStyles, context } = useDropdown();
 
 	if (!open) {
@@ -112,9 +107,7 @@ export const DropdownContent: FC<{
 						className,
 					)}
 				>
-					{top}
 					{children}
-					{bottom}
 				</div>
 			</FloatingFocusManager>
 		</FloatingPortal>

@@ -71,38 +71,6 @@ describe("SimpleDropdown", () => {
 		});
 	});
 
-	describe("DropdownContent with top/bottom slots", () => {
-		it("should render top content", async () => {
-			render(
-				<DropdownRoot>
-					<DropdownToggle>Menu</DropdownToggle>
-					<DropdownContent top={<div data-testid="top-slot">Top</div>}>
-						<div data-testid="body">Body</div>
-					</DropdownContent>
-				</DropdownRoot>,
-			);
-
-			await userEvent.click(screen.getByTestId("DropdownToggle"));
-			expect(screen.getByTestId("top-slot")).toBeInTheDocument();
-			expect(screen.getByTestId("body")).toBeInTheDocument();
-		});
-
-		it("should render bottom content", async () => {
-			render(
-				<DropdownRoot>
-					<DropdownToggle>Menu</DropdownToggle>
-					<DropdownContent bottom={<div data-testid="bottom-slot">Bottom</div>}>
-						<div data-testid="body">Body</div>
-					</DropdownContent>
-				</DropdownRoot>,
-			);
-
-			await userEvent.click(screen.getByTestId("DropdownToggle"));
-			expect(screen.getByTestId("body")).toBeInTheDocument();
-			expect(screen.getByTestId("bottom-slot")).toBeInTheDocument();
-		});
-	});
-
 	describe("DropdownListItem with close={false}", () => {
 		it("should not close when close is false", async () => {
 			render(
