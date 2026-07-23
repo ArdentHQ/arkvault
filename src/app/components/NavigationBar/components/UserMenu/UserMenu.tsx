@@ -1,6 +1,5 @@
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import cn from "classnames";
 
 import { Avatar } from "@/app/components/Avatar";
 import { DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown/Dropdown.contracts";
@@ -16,26 +15,6 @@ import { assertString } from "@/utils/assertions";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetworkMobile } from "@/app/components/NavigationBar/components/SelectNetwork";
 import { Contracts } from "@/app/lib/profiles";
-
-const renderIcon = (option: DropdownOption) => {
-	const { icon, iconClassName, iconSize } = option;
-
-	if (!icon) {
-		return null;
-	}
-
-	const className: Record<string, boolean> = {};
-
-	if (!iconClassName) {
-		className["dark:text-theme-secondary-600 dim:text-theme-dim-200"] = true;
-	} else if (typeof iconClassName === "function") {
-		className[iconClassName(option)] = true;
-	} else {
-		className[iconClassName] = true;
-	}
-
-	return <Icon name={icon} className={cn(className)} size={iconSize || "md"} />;
-};
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();
@@ -120,7 +99,13 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 										}
 									}}
 								>
-									{option.iconPosition === "start" && renderIcon(option)}
+									{option.iconPosition === "start" && option.icon && (
+										<Icon
+											name={option.icon}
+											className="dark:text-theme-secondary-600 dim:text-theme-dim-200"
+											size={option.iconSize || "md"}
+										/>
+									)}
 									<span className="flex w-full items-center justify-between">
 										{option.element || option.label}
 										{option.secondaryLabel && (
@@ -131,7 +116,13 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 											</span>
 										)}
 									</span>
-									{option.iconPosition !== "start" && renderIcon(option)}
+									{option.iconPosition !== "start" && option.icon && (
+										<Icon
+											name={option.icon}
+											className="dark:text-theme-secondary-600 dim:text-theme-dim-200"
+											size={option.iconSize || "md"}
+										/>
+									)}
 								</DropdownListItem>
 							))}
 						</ul>
