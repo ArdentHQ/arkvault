@@ -64,7 +64,7 @@ export const DropdownListItem = (props: HTMLProps<HTMLLIElement> & { close?: boo
 			data-testid="DropdownListItem"
 			{...props}
 			className={twMerge(
-				"focus:outline-hidden m-1 flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-lg px-5 py-4 text-base font-semibold text-theme-secondary-700 transition-colors-shadow duration-100 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
+				"focus:outline-hidden min-w-35 m-1 flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-lg px-5 py-4 text-base font-semibold text-theme-secondary-700 transition-colors-shadow duration-100 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
 				props.className,
 			)}
 			onClick={(event) => {
