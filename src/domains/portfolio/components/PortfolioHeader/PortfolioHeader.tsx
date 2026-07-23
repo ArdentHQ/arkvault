@@ -579,7 +579,7 @@ export const PortfolioHeader = ({
 															</div>
 														)}
 														<ul>
-															{group.title && (
+															{group.title && group.options.length > 0 && (
 																<li className="mx-1 my-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-5 py-1 text-left text-xs font-semibold text-theme-secondary-700 dim:bg-theme-dim-navy-900 dim:text-theme-dim-200 dark:bg-theme-dark-800 dark:text-theme-dark-200">
 																	{group.title}
 																</li>
