@@ -196,7 +196,7 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
 
-		expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("dropdown__option--1"));
 
