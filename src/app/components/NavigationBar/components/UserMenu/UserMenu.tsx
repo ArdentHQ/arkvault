@@ -78,19 +78,23 @@ export const UserMenu: FC<UserMenuProperties> = ({ avatarImage, userInitials }) 
 						<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
 					</div>
 				</div>
-				<DropdownListItem onClick={() => navigate(generatePath(ProfilePaths.Settings, { profileId: profile.id() }))}>
+				<DropdownListItem
+					onClick={() => navigate(generatePath(ProfilePaths.Settings, { profileId: profile.id() }))}
+				>
 					{t("COMMON.SETTINGS")}
 				</DropdownListItem>
-				<DropdownListItem onClick={() => showSupportChat(profile)}>
-					{t("COMMON.CONTACT_US")}
-				</DropdownListItem>
+				<DropdownListItem onClick={() => showSupportChat(profile)}>{t("COMMON.CONTACT_US")}</DropdownListItem>
 				<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
 				<DropdownListItem onClick={() => openExternal("https://arkvault.io/docs")}>
-					<Icon name="ArrowExternal" className="dark:text-theme-secondary-600 dim:text-theme-dim-200" size="md" />
+					<Icon
+						name="ArrowExternal"
+						className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+						size="md"
+					/>
 					<span className="flex w-full items-center justify-between">{t("COMMON.DOCS")}</span>
 				</DropdownListItem>
 				<DropdownListItem onClick={() => navigate("/")}>
-					<Icon name="SignOut" className="dark:text-theme-secondary-600 dim:text-theme-dim-200" size="md" />
+					<Icon name="SignOut" className="dim:text-theme-dim-200 dark:text-theme-secondary-600" size="md" />
 					<span className="flex w-full items-center justify-between">{t("COMMON.SIGN_OUT")}</span>
 				</DropdownListItem>
 				{showNetworkToggle && <SelectNetworkMobile profile={profile} />}

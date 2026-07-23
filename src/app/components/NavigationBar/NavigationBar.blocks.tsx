@@ -21,11 +21,9 @@ import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
 import { assertString } from "@/utils/assertions";
-import { useLink } from "@/app/hooks/use-link";
 import { ProfilePaths } from "@/router/paths";
 import { Size } from "@/types";
 import { LogoAlpha } from "@/app/components/Logo";
-import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetwork } from "./components/SelectNetwork";
@@ -193,9 +191,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const location = useLocation();
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
-	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
-	const { showSupportChat } = useZendesk();
 	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const modalSize = useMemo<Size>(() => {
@@ -443,10 +439,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 							<div className="ml-1 flex items-center gap-5 sm:ml-0">
 								<HideBalance className="hidden md-lg:flex" profile={profile} />
-								<UserMenu
-									userInitials={userInitials}
-									avatarImage={profile.avatar()}
-								/>
+								<UserMenu userInitials={userInitials} avatarImage={profile.avatar()} />
 							</div>
 						</div>
 					</div>
