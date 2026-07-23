@@ -288,6 +288,8 @@ exports[`Dashboard > render in lg 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -298,14 +300,27 @@ exports[`Dashboard > render in lg 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -384,7 +399,10 @@ exports[`Dashboard > render in lg 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -555,6 +573,8 @@ exports[`Dashboard > render in lg 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -707,6 +727,8 @@ exports[`Dashboard > render in lg 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -1272,6 +1294,8 @@ exports[`Dashboard > render in lg 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
+                            role="button"
+                            tabindex="0"
                           >
                             <span>
                               <span>
@@ -2201,7 +2225,9 @@ exports[`Dashboard > render in lg 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  data-testid="dropdown__toggle-Transactions--filter-dropdown"
+                  data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dim:border-theme-dim-500 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3"
@@ -2216,7 +2242,7 @@ exports[`Dashboard > render in lg 1`] = `
                         style="height: 8px; width: 8px;"
                       >
                         <svg
-                          id="chevron-down-small"
+                          id="chevron-up-small"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 10 10"
                           x="0"
@@ -2225,7 +2251,7 @@ exports[`Dashboard > render in lg 1`] = `
                           y="0"
                         >
                           <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
@@ -2248,6 +2274,8 @@ exports[`Dashboard > render in lg 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -2323,6 +2351,8 @@ exports[`Dashboard > render in lg 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -8370,6 +8400,8 @@ exports[`Dashboard > render in md 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -8380,14 +8412,27 @@ exports[`Dashboard > render in md 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -8466,7 +8511,10 @@ exports[`Dashboard > render in md 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -8637,6 +8685,8 @@ exports[`Dashboard > render in md 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -8789,6 +8839,8 @@ exports[`Dashboard > render in md 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -9354,6 +9406,8 @@ exports[`Dashboard > render in md 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
+                            role="button"
+                            tabindex="0"
                           >
                             <span>
                               <span>
@@ -10283,7 +10337,9 @@ exports[`Dashboard > render in md 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  data-testid="dropdown__toggle-Transactions--filter-dropdown"
+                  data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dim:border-theme-dim-500 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3"
@@ -10298,7 +10354,7 @@ exports[`Dashboard > render in md 1`] = `
                         style="height: 8px; width: 8px;"
                       >
                         <svg
-                          id="chevron-down-small"
+                          id="chevron-up-small"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 10 10"
                           x="0"
@@ -10307,7 +10363,7 @@ exports[`Dashboard > render in md 1`] = `
                           y="0"
                         >
                           <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
@@ -10330,6 +10386,8 @@ exports[`Dashboard > render in md 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -10405,6 +10463,8 @@ exports[`Dashboard > render in md 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -16452,6 +16512,8 @@ exports[`Dashboard > render in sm 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -16462,14 +16524,27 @@ exports[`Dashboard > render in sm 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -16548,7 +16623,10 @@ exports[`Dashboard > render in sm 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -16719,6 +16797,8 @@ exports[`Dashboard > render in sm 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -16871,6 +16951,8 @@ exports[`Dashboard > render in sm 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -17436,6 +17518,8 @@ exports[`Dashboard > render in sm 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
+                            role="button"
+                            tabindex="0"
                           >
                             <span>
                               <span>
@@ -18365,7 +18449,9 @@ exports[`Dashboard > render in sm 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  data-testid="dropdown__toggle-Transactions--filter-dropdown"
+                  data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dim:border-theme-dim-500 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3"
@@ -18380,7 +18466,7 @@ exports[`Dashboard > render in sm 1`] = `
                         style="height: 8px; width: 8px;"
                       >
                         <svg
-                          id="chevron-down-small"
+                          id="chevron-up-small"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 10 10"
                           x="0"
@@ -18389,7 +18475,7 @@ exports[`Dashboard > render in sm 1`] = `
                           y="0"
                         >
                           <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
@@ -18412,6 +18498,8 @@ exports[`Dashboard > render in sm 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -18487,6 +18575,8 @@ exports[`Dashboard > render in sm 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -21387,6 +21477,8 @@ exports[`Dashboard > render in xl 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -21397,14 +21489,27 @@ exports[`Dashboard > render in xl 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -21483,7 +21588,10 @@ exports[`Dashboard > render in xl 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -21654,6 +21762,8 @@ exports[`Dashboard > render in xl 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -21806,6 +21916,8 @@ exports[`Dashboard > render in xl 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -22371,6 +22483,8 @@ exports[`Dashboard > render in xl 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
+                            role="button"
+                            tabindex="0"
                           >
                             <span>
                               <span>
@@ -23300,7 +23414,9 @@ exports[`Dashboard > render in xl 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  data-testid="dropdown__toggle-Transactions--filter-dropdown"
+                  data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dim:border-theme-dim-500 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3"
@@ -23315,7 +23431,7 @@ exports[`Dashboard > render in xl 1`] = `
                         style="height: 8px; width: 8px;"
                       >
                         <svg
-                          id="chevron-down-small"
+                          id="chevron-up-small"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 10 10"
                           x="0"
@@ -23324,7 +23440,7 @@ exports[`Dashboard > render in xl 1`] = `
                           y="0"
                         >
                           <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
@@ -23347,6 +23463,8 @@ exports[`Dashboard > render in xl 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -23422,6 +23540,8 @@ exports[`Dashboard > render in xl 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -29189,6 +29309,8 @@ exports[`Dashboard > render in xs 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -29199,14 +29321,27 @@ exports[`Dashboard > render in xs 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -29285,7 +29420,10 @@ exports[`Dashboard > render in xs 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -29456,6 +29594,8 @@ exports[`Dashboard > render in xs 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -29608,6 +29748,8 @@ exports[`Dashboard > render in xs 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -30173,6 +30315,8 @@ exports[`Dashboard > render in xs 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
+                            role="button"
+                            tabindex="0"
                           >
                             <span>
                               <span>
@@ -31102,7 +31246,9 @@ exports[`Dashboard > render in xs 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  data-testid="dropdown__toggle-Transactions--filter-dropdown"
+                  data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dim:border-theme-dim-500 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3"
@@ -31117,7 +31263,7 @@ exports[`Dashboard > render in xs 1`] = `
                         style="height: 8px; width: 8px;"
                       >
                         <svg
-                          id="chevron-down-small"
+                          id="chevron-up-small"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 10 10"
                           x="0"
@@ -31126,7 +31272,7 @@ exports[`Dashboard > render in xs 1`] = `
                           y="0"
                         >
                           <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
@@ -31149,6 +31295,8 @@ exports[`Dashboard > render in xs 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -31224,6 +31372,8 @@ exports[`Dashboard > render in xs 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -34125,6 +34275,8 @@ exports[`Dashboard > should render 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -34135,14 +34287,27 @@ exports[`Dashboard > should render 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -34221,7 +34386,10 @@ exports[`Dashboard > should render 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -34392,6 +34560,8 @@ exports[`Dashboard > should render 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -34544,6 +34714,8 @@ exports[`Dashboard > should render 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -35109,6 +35281,8 @@ exports[`Dashboard > should render 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
+                            role="button"
+                            tabindex="0"
                           >
                             <span>
                               <span>
@@ -35907,7 +36081,9 @@ exports[`Dashboard > should render 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  data-testid="dropdown__toggle-Transactions--filter-dropdown"
+                  data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dim:border-theme-dim-500 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3"
@@ -35922,7 +36098,7 @@ exports[`Dashboard > should render 1`] = `
                         style="height: 8px; width: 8px;"
                       >
                         <svg
-                          id="chevron-down-small"
+                          id="chevron-up-small"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 10 10"
                           x="0"
@@ -35931,7 +36107,7 @@ exports[`Dashboard > should render 1`] = `
                           y="0"
                         >
                           <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
@@ -35954,6 +36130,8 @@ exports[`Dashboard > should render 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -36029,6 +36207,8 @@ exports[`Dashboard > should render 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -42077,6 +42257,8 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -42087,14 +42269,27 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -42173,7 +42368,10 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -42344,6 +42542,8 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -42496,6 +42696,8 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -42996,6 +43198,8 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
+                            role="button"
+                            tabindex="0"
                           >
                             <span>
                               <span>
@@ -44071,6 +44275,8 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
+                    role="button"
+                    tabindex="0"
                   >
                     <button
                       class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"

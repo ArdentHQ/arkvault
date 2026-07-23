@@ -289,6 +289,8 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -299,14 +301,27 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -385,7 +400,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -556,6 +574,8 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -708,6 +728,8 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -1319,6 +1341,8 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
+                                    role="button"
+                                    tabindex="0"
                                   >
                                     <button
                                       class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1521,6 +1545,8 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
+                                    role="button"
+                                    tabindex="0"
                                   >
                                     <button
                                       class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1723,6 +1749,8 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
+                                    role="button"
+                                    tabindex="0"
                                   >
                                     <button
                                       class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -2078,6 +2106,8 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -2088,14 +2118,27 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -2174,7 +2217,10 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -2345,6 +2391,8 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -2497,6 +2545,8 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -2838,6 +2888,8 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
+                                    role="button"
+                                    tabindex="0"
                                   >
                                     <button
                                       class="flex text-theme-secondary-700 dim:text-theme-dim-200"
@@ -3006,6 +3058,8 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
+                                    role="button"
+                                    tabindex="0"
                                   >
                                     <button
                                       class="flex text-theme-secondary-700 dim:text-theme-dim-200"
@@ -3174,6 +3228,8 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
+                                    role="button"
+                                    tabindex="0"
                                   >
                                     <button
                                       class="flex text-theme-secondary-700 dim:text-theme-dim-200"
@@ -3601,6 +3657,8 @@ exports[`Contacts > should render with contacts 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -3611,14 +3669,27 @@ exports[`Contacts > should render with contacts 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -3690,7 +3761,10 @@ exports[`Contacts > should render with contacts 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -3861,6 +3935,8 @@ exports[`Contacts > should render with contacts 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -4013,6 +4089,8 @@ exports[`Contacts > should render with contacts 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -4624,6 +4702,8 @@ exports[`Contacts > should render with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
+                                    role="button"
+                                    tabindex="0"
                                   >
                                     <button
                                       class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -4826,6 +4906,8 @@ exports[`Contacts > should render with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
+                                    role="button"
+                                    tabindex="0"
                                   >
                                     <button
                                       class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -5028,6 +5110,8 @@ exports[`Contacts > should render with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
+                                    role="button"
+                                    tabindex="0"
                                   >
                                     <button
                                       class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -5383,6 +5467,8 @@ exports[`Contacts > should render without contacts in lg 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -5393,14 +5479,27 @@ exports[`Contacts > should render without contacts in lg 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -5479,7 +5578,10 @@ exports[`Contacts > should render without contacts in lg 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -5650,6 +5752,8 @@ exports[`Contacts > should render without contacts in lg 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -5802,6 +5906,8 @@ exports[`Contacts > should render without contacts in lg 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -6582,6 +6688,8 @@ exports[`Contacts > should render without contacts in md 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -6592,14 +6700,27 @@ exports[`Contacts > should render without contacts in md 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -6678,7 +6799,10 @@ exports[`Contacts > should render without contacts in md 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -6849,6 +6973,8 @@ exports[`Contacts > should render without contacts in md 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -7001,6 +7127,8 @@ exports[`Contacts > should render without contacts in md 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -7781,6 +7909,8 @@ exports[`Contacts > should render without contacts in sm 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -7791,14 +7921,27 @@ exports[`Contacts > should render without contacts in sm 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -7877,7 +8020,10 @@ exports[`Contacts > should render without contacts in sm 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -8048,6 +8194,8 @@ exports[`Contacts > should render without contacts in sm 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -8200,6 +8348,8 @@ exports[`Contacts > should render without contacts in sm 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -8816,6 +8966,8 @@ exports[`Contacts > should render without contacts in xl 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -8826,14 +8978,27 @@ exports[`Contacts > should render without contacts in xl 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -8912,7 +9077,10 @@ exports[`Contacts > should render without contacts in xl 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -9083,6 +9251,8 @@ exports[`Contacts > should render without contacts in xl 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -9235,6 +9405,8 @@ exports[`Contacts > should render without contacts in xl 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -10015,6 +10187,8 @@ exports[`Contacts > should render without contacts in xs 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -10025,14 +10199,27 @@ exports[`Contacts > should render without contacts in xs 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -10111,7 +10298,10 @@ exports[`Contacts > should render without contacts in xs 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -10282,6 +10472,8 @@ exports[`Contacts > should render without contacts in xs 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  role="button"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -10434,6 +10626,8 @@ exports[`Contacts > should render without contacts in xs 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                role="button"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"

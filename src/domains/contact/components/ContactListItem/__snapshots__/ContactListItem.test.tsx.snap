@@ -150,57 +150,59 @@ exports[`ContactListItem > should render 1`] = `
               <div
                 class="visible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -361,57 +363,59 @@ exports[`ContactListItem > should render as validator 1`] = `
               <div
                 class="visible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -572,57 +576,59 @@ exports[`ContactListItem > should render options 1`] = `
               <div
                 class="visible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -755,57 +761,59 @@ exports[`ContactListItem > should render options 1`] = `
               <div
                 class="invisible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -938,57 +946,59 @@ exports[`ContactListItem > should render options 1`] = `
               <div
                 class="invisible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1149,57 +1159,59 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               <div
                 class="visible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1332,57 +1344,59 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               <div
                 class="invisible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1515,57 +1529,59 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               <div
                 class="invisible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1727,57 +1743,59 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
               <div
                 class="visible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1911,57 +1929,59 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
               <div
                 class="invisible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -2095,57 +2115,59 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
               <div
                 class="invisible"
               >
-                <button
+                <div
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  type="button"
-                />
-                <button
-                  class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
-                  type="button"
+                  role="button"
+                  tabindex="0"
                 >
-                  <div
-                    class="flex items-center gap-2"
+                  <button
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
+                    type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                      class="flex items-center gap-2"
                     >
                       <div
-                        style="height: 16px; width: 16px;"
+                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                       >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
