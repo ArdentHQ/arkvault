@@ -59,7 +59,12 @@ describe("SimpleDropdown", () => {
 			const handler = vi.fn();
 			render(
 				<DropdownRoot>
-					<DropdownToggle>{({ isOpen }) => { handler({ isOpen }); return "Toggle"; }}</DropdownToggle>
+					<DropdownToggle>
+						{({ isOpen }) => {
+							handler({ isOpen });
+							return "Toggle";
+						}}
+					</DropdownToggle>
 					<DropdownContent>Content</DropdownContent>
 				</DropdownRoot>,
 			);

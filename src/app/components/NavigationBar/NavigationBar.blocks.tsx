@@ -307,8 +307,8 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									data-testid={`dropdown__option--${index}`}
 									onClick={() =>
 										handleSelectMenuItem({
-											value: menuItem.id,
 											label: menuItem.title,
+											value: menuItem.id,
 										} as DropdownOption)
 									}
 								>

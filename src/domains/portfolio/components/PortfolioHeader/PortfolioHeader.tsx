@@ -562,13 +562,13 @@ export const PortfolioHeader = ({
 													registrationOptions,
 													contractOptions,
 													{
+														hasDivider: additionalOptions.hasDivider,
 														key: additionalOptions.key,
+														onSelect: additionalOptions.onSelect,
 														options: hasWalletsToMigrate
 															? [...additionalOptions.options, ...ledgerMigrationOptions]
 															: additionalOptions.options,
 														title: additionalOptions.title,
-														hasDivider: additionalOptions.hasDivider,
-														onSelect: additionalOptions.onSelect,
 													},
 													secondaryOptions,
 												].map((group) => (
@@ -590,22 +590,28 @@ export const PortfolioHeader = ({
 																	disabled={option.disabled}
 																	data-testid={`dropdown__option--${group.key ? group.key + "-" : ""}${index}`}
 																	onClick={() => {
-																		if (!option.disabled)
+																		if (!option.disabled) {
 																			handleSelectOption(option);
+																		}
 																	}}
 																>
-																	{option.iconPosition === "start" && renderIcon(option)}
+																	{option.iconPosition === "start" &&
+																		renderIcon(option)}
 																	<span className="flex w-full items-center justify-between">
 																		{option.element || option.label}
 																		{option.secondaryLabel && (
 																			<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-600">
-																				{typeof option.secondaryLabel === "function"
-																					? option.secondaryLabel(!!option.active)
+																				{typeof option.secondaryLabel ===
+																				"function"
+																					? option.secondaryLabel(
+																							!!option.active,
+																						)
 																					: option.secondaryLabel}
 																			</span>
 																		)}
 																	</span>
-																	{option.iconPosition !== "start" && renderIcon(option)}
+																	{option.iconPosition !== "start" &&
+																		renderIcon(option)}
 																</DropdownListItem>
 															))}
 														</ul>

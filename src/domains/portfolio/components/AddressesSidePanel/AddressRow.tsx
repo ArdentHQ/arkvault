@@ -247,7 +247,7 @@ export const AddressRow = ({
 										{option.iconPosition === "start" && option.icon && (
 											<Icon
 												name={option.icon}
-												className="dark:text-theme-secondary-600 dim:text-theme-dim-200"
+												className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
 												size={option.iconSize || "md"}
 											/>
 										)}
@@ -257,7 +257,7 @@ export const AddressRow = ({
 										{option.iconPosition !== "start" && option.icon && (
 											<Icon
 												name={option.icon}
-												className="dark:text-theme-secondary-600 dim:text-theme-dim-200"
+												className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
 												size={option.iconSize || "md"}
 											/>
 										)}
