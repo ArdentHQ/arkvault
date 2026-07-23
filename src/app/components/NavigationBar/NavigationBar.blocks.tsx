@@ -299,7 +299,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						)}
 					</DropdownToggle>
 					<DropdownContent>
-						<ul>
+						<ul data-testid="dropdown__options">
 							{navigationMenu.map((menuItem, index) => (
 								<DropdownListItem
 									key={menuItem.id}
