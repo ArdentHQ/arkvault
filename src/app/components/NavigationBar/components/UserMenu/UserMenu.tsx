@@ -1,12 +1,11 @@
-import React, { FC, useCallback, useMemo } from "react";
+import React, { FC, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Avatar } from "@/app/components/Avatar";
-import { DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownOption } from "@/app/components/Dropdown/Dropdown.contracts";
 import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { Icon } from "@/app/components/Icon";
 import { UserMenuProperties } from "@/app/components/NavigationBar";
-import { getUserMenuActions } from "@/app/constants/navigation";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { useConfiguration } from "@/app/contexts";
 import { useProfileBalance } from "@/app/hooks/use-profile-balance";
@@ -18,8 +17,6 @@ import { Contracts } from "@/app/lib/profiles";
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();
-
-	const userMenuActions = useMemo<DropdownOptionGroup[]>(() => getUserMenuActions(t), [t]);
 	const { isXs } = useBreakpoint();
 
 	const profile = useActiveProfile();
@@ -75,60 +72,22 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 						<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
 					</div>
 				</div>
-				{userMenuActions.map((group) => (
-					<div key={group.key}>
-						{group.hasDivider && (
-							<div>
-								<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
-							</div>
-						)}
-						<ul>
-							{group.title && (
-								<li className="mx-1 my-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-5 py-1 text-left text-xs font-semibold text-theme-secondary-700 dim:bg-theme-dim-navy-900 dim:text-theme-dim-200 dark:bg-theme-dark-800 dark:text-theme-dark-200">
-									{group.title}
-								</li>
-							)}
-							{group.options.map((option, index) => (
-								<DropdownListItem
-									key={option.value}
-									disabled={option.disabled}
-									data-testid={`dropdown__option--${group.key ? group.key + "-" : ""}${index}`}
-									onClick={() => {
-										if (!option.disabled) {
-											onUserAction(option);
-										}
-									}}
-								>
-									{option.iconPosition === "start" && option.icon && (
-										<Icon
-											name={option.icon}
-											className="dark:text-theme-secondary-600 dim:text-theme-dim-200"
-											size={option.iconSize || "md"}
-										/>
-									)}
-									<span className="flex w-full items-center justify-between">
-										{option.element || option.label}
-										{option.secondaryLabel && (
-											<span className="ml-1 pr-4 text-theme-secondary-500 dark:text-theme-secondary-600">
-												{typeof option.secondaryLabel === "function"
-													? option.secondaryLabel(!!option.active)
-													: option.secondaryLabel}
-											</span>
-										)}
-									</span>
-									{option.iconPosition !== "start" && option.icon && (
-										<Icon
-											name={option.icon}
-											className="dark:text-theme-secondary-600 dim:text-theme-dim-200"
-											size={option.iconSize || "md"}
-										/>
-									)}
-								</DropdownListItem>
-							))}
-						</ul>
-					</div>
-				))}
-				{showNetworkToggle ? <SelectNetworkMobile profile={profile} /> : undefined}
+				<DropdownListItem onClick={() => onUserAction({ value: "settings", label: t("COMMON.SETTINGS") } as DropdownOption)}>
+					{t("COMMON.SETTINGS")}
+				</DropdownListItem>
+				<DropdownListItem onClick={() => onUserAction({ value: "contact", label: t("COMMON.CONTACT_US") } as DropdownOption)}>
+					{t("COMMON.CONTACT_US")}
+				</DropdownListItem>
+				<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
+				<DropdownListItem onClick={() => onUserAction({ value: "support", label: t("COMMON.DOCS"), icon: "ArrowExternal", iconPosition: "start", isExternal: true } as DropdownOption)}>
+					<Icon name="ArrowExternal" className="dark:text-theme-secondary-600 dim:text-theme-dim-200" size="md" />
+					<span className="flex w-full items-center justify-between">{t("COMMON.DOCS")}</span>
+				</DropdownListItem>
+				<DropdownListItem onClick={() => onUserAction({ value: "sign-out", label: t("COMMON.SIGN_OUT"), icon: "SignOut", iconPosition: "start" } as DropdownOption)}>
+					<Icon name="SignOut" className="dark:text-theme-secondary-600 dim:text-theme-dim-200" size="md" />
+					<span className="flex w-full items-center justify-between">{t("COMMON.SIGN_OUT")}</span>
+				</DropdownListItem>
+				{showNetworkToggle && <SelectNetworkMobile profile={profile} />}
 			</DropdownContent>
 		</DropdownRoot>
 	);
