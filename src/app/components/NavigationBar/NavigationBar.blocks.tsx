@@ -446,17 +446,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								<UserMenu
 									userInitials={userInitials}
 									avatarImage={profile.avatar()}
-									onUserAction={(action: DropdownOption) => {
-										if (action.value === "contact") {
-											return showSupportChat(profile);
-										}
-
-										if (action.isExternal) {
-											return openExternal(action.mountPath());
-										}
-
-										return navigate(action.mountPath(profile.id()));
-									}}
 								/>
 							</div>
 						</div>
