@@ -72,19 +72,46 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 						<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
 					</div>
 				</div>
-				<DropdownListItem onClick={() => onUserAction({ value: "settings", label: t("COMMON.SETTINGS") } as DropdownOption)}>
+				<DropdownListItem
+					onClick={() => onUserAction({ label: t("COMMON.SETTINGS"), value: "settings" } as DropdownOption)}
+				>
 					{t("COMMON.SETTINGS")}
 				</DropdownListItem>
-				<DropdownListItem onClick={() => onUserAction({ value: "contact", label: t("COMMON.CONTACT_US") } as DropdownOption)}>
+				<DropdownListItem
+					onClick={() => onUserAction({ label: t("COMMON.CONTACT_US"), value: "contact" } as DropdownOption)}
+				>
 					{t("COMMON.CONTACT_US")}
 				</DropdownListItem>
 				<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
-				<DropdownListItem onClick={() => onUserAction({ value: "support", label: t("COMMON.DOCS"), icon: "ArrowExternal", iconPosition: "start", isExternal: true } as DropdownOption)}>
-					<Icon name="ArrowExternal" className="dark:text-theme-secondary-600 dim:text-theme-dim-200" size="md" />
+				<DropdownListItem
+					onClick={() =>
+						onUserAction({
+							icon: "ArrowExternal",
+							iconPosition: "start",
+							isExternal: true,
+							label: t("COMMON.DOCS"),
+							value: "support",
+						} as DropdownOption)
+					}
+				>
+					<Icon
+						name="ArrowExternal"
+						className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+						size="md"
+					/>
 					<span className="flex w-full items-center justify-between">{t("COMMON.DOCS")}</span>
 				</DropdownListItem>
-				<DropdownListItem onClick={() => onUserAction({ value: "sign-out", label: t("COMMON.SIGN_OUT"), icon: "SignOut", iconPosition: "start" } as DropdownOption)}>
-					<Icon name="SignOut" className="dark:text-theme-secondary-600 dim:text-theme-dim-200" size="md" />
+				<DropdownListItem
+					onClick={() =>
+						onUserAction({
+							icon: "SignOut",
+							iconPosition: "start",
+							label: t("COMMON.SIGN_OUT"),
+							value: "sign-out",
+						} as DropdownOption)
+					}
+				>
+					<Icon name="SignOut" className="dim:text-theme-dim-200 dark:text-theme-secondary-600" size="md" />
 					<span className="flex w-full items-center justify-between">{t("COMMON.SIGN_OUT")}</span>
 				</DropdownListItem>
 				{showNetworkToggle && <SelectNetworkMobile profile={profile} />}
