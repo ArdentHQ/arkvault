@@ -15,18 +15,25 @@ export const DropdownToggle: FC<DropdownToggleProperties> = ({ children, ...prop
 	const renderChildren = () => (typeof children === "function" ? children({ isOpen: open }) : children);
 
 	return (
-		<button
-			data-testid="DropdownToggle"
+		<div
+			data-testid="dropdown__toggle"
 			ref={refs.setReference}
-			type="button"
+			role="button"
+			tabIndex={0}
 			{...getReferenceProps(props)}
 			onClick={(event) => {
 				event.preventDefault();
 				setOpen((previous) => !previous);
 			}}
+			onKeyDown={(event) => {
+				if (event.key === "Enter" || event.key === " ") {
+					event.preventDefault();
+					setOpen((previous) => !previous);
+				}
+			}}
 		>
 			{renderChildren()}
-		</button>
+		</div>
 	);
 };
 
@@ -41,7 +48,7 @@ export const DropdownContent: FC<{ children?: ReactNode; className?: string }> =
 		<FloatingPortal>
 			<FloatingFocusManager context={context} modal={false}>
 				<div
-					data-testid="DropdownContent"
+					data-testid="dropdown__content"
 					ref={refs.setFloating}
 					style={{ ...floatingStyles }}
 					{...getFloatingProps()}
