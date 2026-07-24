@@ -252,15 +252,8 @@ export const AddressRow = ({
 											/>
 										)}
 										<span className="flex w-full items-center justify-between">
-											{option.element || option.label}
+											{option.label}
 										</span>
-										{option.iconPosition !== "start" && option.icon && (
-											<Icon
-												name={option.icon}
-												className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
-												size={option.iconSize || "md"}
-											/>
-										)}
 									</DropdownListItem>
 								))}
 							</ul>
