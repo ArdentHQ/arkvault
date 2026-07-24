@@ -192,11 +192,6 @@ export const FilterTransactions = memo(
 											data-testid={`dropdown__option--${group.key ? group.key + "-" : ""}${index}`}
 											tabIndex={option.disableFocus ? -1 : 0}
 											disabled={option.disabled}
-											onClick={() => {
-												if (!option.disabled && group.onSelect) {
-													group.onSelect(option);
-												}
-											}}
 										>
 											{option.element || option.label}
 										</DropdownListItem>

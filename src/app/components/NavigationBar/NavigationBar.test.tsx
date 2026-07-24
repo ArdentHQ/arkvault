@@ -241,7 +241,7 @@ describe("NavigationBar", () => {
 			}
 		});
 
-		const { router } = render(<NavigationBar />);
+		render(<NavigationBar />);
 		const toggle = screen.getByTestId("UserMenu");
 
 		await userEvent.click(toggle);

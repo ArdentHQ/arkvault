@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { VotesFilter } from "./VotesFilter";
-import { render, screen, waitFor, act, fireEvent } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 import { within } from "@testing-library/react";
 
 const getContainer = () => screen.getByTestId("VotesFilter");
@@ -73,12 +73,12 @@ describe("VotesFilter", () => {
 		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		const currentCheckbox = within(screen.getByTestId("VotesFilter__option--current")).getByRole("checkbox");
-		fireEvent.keyDown(currentCheckbox, { key: "Enter" });
+		await userEvent.type(currentCheckbox, "{Enter}");
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("current"));
 
 		const allCheckbox = within(screen.getByTestId("VotesFilter__option--all")).getByRole("checkbox");
-		fireEvent.keyDown(allCheckbox, { key: "Enter" });
+		await userEvent.type(allCheckbox, "{Enter}");
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("all"));
 	});

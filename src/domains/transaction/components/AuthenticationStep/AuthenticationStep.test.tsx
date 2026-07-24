@@ -304,6 +304,27 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
+	test("should navigate back when device not available and no handler provided", async ({ defaultWallet }) => {
+		let location: Location | undefined;
+
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		mockLedgerTransportError("Access denied to use Ledger device");
+
+		renderWithForm(
+			<>
+				<LocationTracker onLocationChange={(currentLocation) => (location = currentLocation)} />
+				<AuthenticationStep subject={subject} wallet={defaultWallet} />
+			</>,
+			{
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() => expect(location?.pathname).toBe("/"));
+
+		vi.clearAllMocks();
+	});
+
 	test("should render with encryption password input", async () => {
 		const wallet = profile.wallets().first();
 		mockNanoXTransport();
