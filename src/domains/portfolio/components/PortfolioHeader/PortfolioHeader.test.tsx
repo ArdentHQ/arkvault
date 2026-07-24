@@ -42,50 +42,50 @@ vi.mock("@/domains/wallet/hooks", async (importOriginal) => {
 vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options", () => {
 	const mockUseWalletOptions = vi.fn(() => ({
 		additionalOptions: {
-			key: "additional",
 			hasDivider: true,
-			title: "Additional",
+			key: "additional",
 			options: [
-				{ value: "sign-message", label: "Sign Message", icon: "Sign", iconPosition: "start" },
+				{ icon: "Sign", iconPosition: "start", label: "Sign Message", value: "sign-message" },
 				{
-					value: "additional-secondary",
-					label: "With Secondary",
 					icon: "Info",
 					iconPosition: "end",
+					label: "With Secondary",
 					secondaryLabel: "secondary text",
+					value: "additional-secondary",
 				},
 				{
-					value: "additional-secondary-2",
+					active: true,
 					label: "With Secondary 2",
 					secondaryLabel: (active: boolean) => (active ? "active" : "inactive"),
-					active: true,
+					value: "additional-secondary-2",
 				},
-				{ value: "additional-disabled", label: "Disabled Option", disabled: true },
+				{ disabled: true, label: "Disabled Option", value: "additional-disabled" },
 			],
+			title: "Additional",
 		},
 		contractOptions: {
 			key: "contract",
+			options: [{ icon: "File", label: "Deploy Contract", value: "deploy-contract" }],
 			title: "Contract",
-			options: [{ value: "deploy-contract", label: "Deploy Contract", icon: "File" }],
 		},
 		primaryOptions: {
 			key: "primary",
+			options: [{ icon: "Send", iconPosition: "start" as const, label: "Send", value: "send" }],
 			title: "Primary",
-			options: [{ value: "send", label: "Send", icon: "Send", iconPosition: "start" as const }],
 		},
 		registrationOptions: {
 			key: "registration",
+			options: [{ icon: "Pencil", label: "Register Username", value: "register-username" }],
 			title: "Registration",
-			options: [{ value: "register-username", label: "Register Username", icon: "Pencil" }],
 		},
 		secondaryOptions: {
-			key: "secondary",
 			hasDivider: true,
-			title: "Secondary",
+			key: "secondary",
 			options: [
-				{ value: "delete", label: "Delete Wallet", icon: "Trash" },
-				{ value: "export", label: "Export", icon: "ArrowSquareUpRight", iconPosition: "end" },
+				{ icon: "Trash", label: "Delete Wallet", value: "delete" },
+				{ icon: "ArrowSquareUpRight", iconPosition: "end", label: "Export", value: "export" },
 			],
+			title: "Secondary",
 		},
 	}));
 
