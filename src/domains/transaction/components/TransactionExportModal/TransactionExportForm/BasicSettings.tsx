@@ -107,29 +107,53 @@ const DateRangeOptions = ({ isDisabled }: { isDisabled: boolean }) => {
 					)}
 				</DropdownToggle>
 				<DropdownContent className="z-[52]">
-					<DropdownListItem data-testid="dropdown__option--all-0" onClick={() => form.setValue("dateRange", DateRange.CurrentMonth)}>
+					<DropdownListItem
+						data-testid="dropdown__option--all-0"
+						onClick={() => form.setValue("dateRange", DateRange.CurrentMonth)}
+					>
 						{t("TRANSACTION.EXPORT.FORM.CURRENT_MONTH")}
 					</DropdownListItem>
-					<DropdownListItem data-testid="dropdown__option--all-1" onClick={() => form.setValue("dateRange", DateRange.LastMonth)}>
+					<DropdownListItem
+						data-testid="dropdown__option--all-1"
+						onClick={() => form.setValue("dateRange", DateRange.LastMonth)}
+					>
 						{t("TRANSACTION.EXPORT.FORM.LAST_MONTH")}
 					</DropdownListItem>
-					<DropdownListItem data-testid="dropdown__option--all-2" onClick={() => form.setValue("dateRange", DateRange.CurrentQuarter)}>
+					<DropdownListItem
+						data-testid="dropdown__option--all-2"
+						onClick={() => form.setValue("dateRange", DateRange.CurrentQuarter)}
+					>
 						{t("TRANSACTION.EXPORT.FORM.CURRENT_QUARTER")}
 					</DropdownListItem>
-					<DropdownListItem data-testid="dropdown__option--all-3" onClick={() => form.setValue("dateRange", DateRange.LastQuarter)}>
+					<DropdownListItem
+						data-testid="dropdown__option--all-3"
+						onClick={() => form.setValue("dateRange", DateRange.LastQuarter)}
+					>
 						{t("TRANSACTION.EXPORT.FORM.LAST_QUARTER")}
 					</DropdownListItem>
-					<DropdownListItem data-testid="dropdown__option--all-4" onClick={() => form.setValue("dateRange", DateRange.CurrentYear)}>
+					<DropdownListItem
+						data-testid="dropdown__option--all-4"
+						onClick={() => form.setValue("dateRange", DateRange.CurrentYear)}
+					>
 						{t("TRANSACTION.EXPORT.FORM.CURRENT_YEAR")}
 					</DropdownListItem>
-					<DropdownListItem data-testid="dropdown__option--all-5" onClick={() => form.setValue("dateRange", DateRange.LastYear)}>
+					<DropdownListItem
+						data-testid="dropdown__option--all-5"
+						onClick={() => form.setValue("dateRange", DateRange.LastYear)}
+					>
 						{t("TRANSACTION.EXPORT.FORM.LASTYEAR")}
 					</DropdownListItem>
-					<DropdownListItem data-testid="dropdown__option--all-6" onClick={() => form.setValue("dateRange", DateRange.All)}>
+					<DropdownListItem
+						data-testid="dropdown__option--all-6"
+						onClick={() => form.setValue("dateRange", DateRange.All)}
+					>
 						{t("TRANSACTION.EXPORT.FORM.ALL")}
 					</DropdownListItem>
 					<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
-					<DropdownListItem data-testid="dropdown__option--custom-0" onClick={() => form.setValue("dateRange", DateRange.Custom)}>
+					<DropdownListItem
+						data-testid="dropdown__option--custom-0"
+						onClick={() => form.setValue("dateRange", DateRange.Custom)}
+					>
 						{t("TRANSACTION.EXPORT.FORM.CUSTOM")}
 					</DropdownListItem>
 				</DropdownContent>

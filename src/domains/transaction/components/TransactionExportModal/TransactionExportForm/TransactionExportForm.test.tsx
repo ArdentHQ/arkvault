@@ -156,7 +156,9 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		await userEvent.click(within(screen.getByTestId("TransactionExportForm--delimiter")).getByTestId("dropdown__toggle"));
+		await userEvent.click(
+			within(screen.getByTestId("TransactionExportForm--delimiter")).getByTestId("dropdown__toggle"),
+		);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
