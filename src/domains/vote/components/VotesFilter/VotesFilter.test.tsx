@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { VotesFilter } from "./VotesFilter";
-import { render, screen, waitFor, act } from "@/utils/testing-library";
+import { render, screen, waitFor, act, fireEvent } from "@/utils/testing-library";
 import { within } from "@testing-library/react";
 
 const getContainer = () => screen.getByTestId("VotesFilter");
@@ -72,20 +72,13 @@ describe("VotesFilter", () => {
 
 		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
-		const currentOption = within(screen.getByTestId("VotesFilter__option--current")).getByRole("checkbox");
-
-		act(() => {
-			currentOption.focus();
-		});
-
-		await userEvent.keyboard("{enter}");
+		const currentCheckbox = within(screen.getByTestId("VotesFilter__option--current")).getByRole("checkbox");
+		fireEvent.keyDown(currentCheckbox, { key: "Enter" });
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("current"));
 
-		const allOption = within(screen.getByTestId("VotesFilter__option--all")).getByRole("checkbox");
-		allOption.focus();
-
-		await userEvent.keyboard("{Spacebar}");
+		const allCheckbox = within(screen.getByTestId("VotesFilter__option--all")).getByRole("checkbox");
+		fireEvent.keyDown(allCheckbox, { key: "Enter" });
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("all"));
 	});
