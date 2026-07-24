@@ -7,7 +7,6 @@ import { within } from "@testing-library/react";
 
 const getContainer = () => screen.getByTestId("VotesFilter");
 const getToggle = () => within(getContainer()).getByTestId("dropdown__toggle");
-const getContent = () => within(getContainer()).getByTestId("dropdown__content");
 
 describe("VotesFilter", () => {
 	it("should render", () => {
