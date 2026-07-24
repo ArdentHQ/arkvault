@@ -380,7 +380,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
-		const { form } = renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, { withProviders: true });
+		const { form } = renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, {
+			withProviders: true,
+		});
 
 		await expect(screen.findByTestId("AuthenticationStep__second-mnemonic")).resolves.toBeVisible();
 
@@ -431,7 +433,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
-		const { form } = renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, { withProviders: true });
+		const { form } = renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, {
+			withProviders: true,
+		});
 
 		await expect(screen.findByTestId("AuthenticationStep__second-secret")).resolves.toBeVisible();
 
