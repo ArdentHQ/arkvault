@@ -251,9 +251,7 @@ export const AddressRow = ({
 												size={option.iconSize || "md"}
 											/>
 										)}
-										<span className="flex w-full items-center justify-between">
-											{option.label}
-										</span>
+										<span className="flex w-full items-center justify-between">{option.label}</span>
 									</DropdownListItem>
 								))}
 							</ul>
