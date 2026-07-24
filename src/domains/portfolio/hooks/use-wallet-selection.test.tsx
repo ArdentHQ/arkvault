@@ -260,5 +260,4 @@ describe("useWalletSelection", () => {
 			expect(result.current.selectedAddresses).toEqual([]);
 		});
 	});
-
 });
