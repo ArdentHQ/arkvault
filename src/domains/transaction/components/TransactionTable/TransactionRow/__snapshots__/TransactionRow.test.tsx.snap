@@ -122,10 +122,10 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                         >
                           <span
-                            class="font-semibold text-sm text-theme-text"
+                            class="mr-2 text-base font-semibold text-theme-text"
                             data-testid="Address__alias"
                           >
                             <span>
@@ -139,6 +139,22 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                               </span>
                             </span>
                           </span>
+                          <div
+                            class="min-w-0 grow"
+                          >
+                            <span
+                              class="block w-full"
+                            >
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                    data-testid="Address__address"
+                                  />
+                                </span>
+                              </span>
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </span>
@@ -213,10 +229,10 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -230,6 +246,22 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -311,10 +343,10 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                       >
                         <span
-                          class="font-semibold text-sm text-theme-text"
+                          class="mr-2 text-base font-semibold text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span>
@@ -328,6 +360,22 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                             </span>
                           </span>
                         </span>
+                        <div
+                          class="min-w-0 grow"
+                        >
+                          <span
+                            class="block w-full"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                  data-testid="Address__address"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </span>
@@ -407,10 +455,10 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                       >
                         <span
-                          class="font-semibold text-sm text-theme-text"
+                          class="mr-2 text-base font-semibold text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span>
@@ -424,6 +472,22 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                             </span>
                           </span>
                         </span>
+                        <div
+                          class="min-w-0 grow"
+                        >
+                          <span
+                            class="block w-full"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                  data-testid="Address__address"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </span>
@@ -648,10 +712,10 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                         >
                           <span
-                            class="font-semibold text-sm text-theme-text"
+                            class="mr-2 text-base font-semibold text-theme-text"
                             data-testid="Address__alias"
                           >
                             <span>
@@ -665,6 +729,22 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                               </span>
                             </span>
                           </span>
+                          <div
+                            class="min-w-0 grow"
+                          >
+                            <span
+                              class="block w-full"
+                            >
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                    data-testid="Address__address"
+                                  />
+                                </span>
+                              </span>
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </span>
@@ -739,10 +819,10 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -756,6 +836,22 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -837,10 +933,10 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                       >
                         <span
-                          class="font-semibold text-sm text-theme-text"
+                          class="mr-2 text-base font-semibold text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span>
@@ -854,6 +950,22 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                             </span>
                           </span>
                         </span>
+                        <div
+                          class="min-w-0 grow"
+                        >
+                          <span
+                            class="block w-full"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                  data-testid="Address__address"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </span>
@@ -933,10 +1045,10 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                       >
                         <span
-                          class="font-semibold text-sm text-theme-text"
+                          class="mr-2 text-base font-semibold text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span>
@@ -950,6 +1062,22 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                             </span>
                           </span>
                         </span>
+                        <div
+                          class="min-w-0 grow"
+                        >
+                          <span
+                            class="block w-full"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                  data-testid="Address__address"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </span>
@@ -1193,10 +1321,10 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                         >
                           <span
-                            class="font-semibold text-sm text-theme-text"
+                            class="mr-2 text-base font-semibold text-theme-text"
                             data-testid="Address__alias"
                           >
                             <span>
@@ -1210,6 +1338,22 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                               </span>
                             </span>
                           </span>
+                          <div
+                            class="min-w-0 grow"
+                          >
+                            <span
+                              class="block w-full"
+                            >
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                    data-testid="Address__address"
+                                  />
+                                </span>
+                              </span>
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </span>
@@ -1284,10 +1428,10 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -1301,6 +1445,22 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -1382,10 +1542,10 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                       >
                         <span
-                          class="font-semibold text-sm text-theme-text"
+                          class="mr-2 text-base font-semibold text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span>
@@ -1399,6 +1559,22 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                             </span>
                           </span>
                         </span>
+                        <div
+                          class="min-w-0 grow"
+                        >
+                          <span
+                            class="block w-full"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                  data-testid="Address__address"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </span>
@@ -1478,10 +1654,10 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                       >
                         <span
-                          class="font-semibold text-sm text-theme-text"
+                          class="mr-2 text-base font-semibold text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span>
@@ -1495,6 +1671,22 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                             </span>
                           </span>
                         </span>
+                        <div
+                          class="min-w-0 grow"
+                        >
+                          <span
+                            class="block w-full"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                  data-testid="Address__address"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </span>
@@ -1724,10 +1916,10 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -1741,6 +1933,22 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -1812,10 +2020,10 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -1829,6 +2037,22 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -2054,10 +2278,10 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                         >
                           <span
-                            class="font-semibold text-sm text-theme-text"
+                            class="mr-2 text-base font-semibold text-theme-text"
                             data-testid="Address__alias"
                           >
                             <span>
@@ -2071,6 +2295,22 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                               </span>
                             </span>
                           </span>
+                          <div
+                            class="min-w-0 grow"
+                          >
+                            <span
+                              class="block w-full"
+                            >
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                    data-testid="Address__address"
+                                  />
+                                </span>
+                              </span>
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </span>
@@ -2145,10 +2385,10 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -2162,6 +2402,22 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -2243,10 +2499,10 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                       >
                         <span
-                          class="font-semibold text-sm text-theme-text"
+                          class="mr-2 text-base font-semibold text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span>
@@ -2260,6 +2516,22 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                             </span>
                           </span>
                         </span>
+                        <div
+                          class="min-w-0 grow"
+                        >
+                          <span
+                            class="block w-full"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                  data-testid="Address__address"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </span>
@@ -2339,10 +2611,10 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                       >
                         <span
-                          class="font-semibold text-sm text-theme-text"
+                          class="mr-2 text-base font-semibold text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span>
@@ -2356,6 +2628,22 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                             </span>
                           </span>
                         </span>
+                        <div
+                          class="min-w-0 grow"
+                        >
+                          <span
+                            class="block w-full"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                  data-testid="Address__address"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </span>
@@ -2566,10 +2854,10 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -2583,6 +2871,22 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -2654,10 +2958,10 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -2671,6 +2975,22 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -2882,10 +3202,10 @@ exports[`TransactionRow > should render responsive 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -2899,6 +3219,22 @@ exports[`TransactionRow > should render responsive 1`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -2970,10 +3306,10 @@ exports[`TransactionRow > should render responsive 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -2987,6 +3323,22 @@ exports[`TransactionRow > should render responsive 1`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -3198,10 +3550,10 @@ exports[`TransactionRow > should render responsive 2`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -3215,6 +3567,22 @@ exports[`TransactionRow > should render responsive 2`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -3286,10 +3654,10 @@ exports[`TransactionRow > should render responsive 2`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -3303,6 +3671,22 @@ exports[`TransactionRow > should render responsive 2`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -3528,10 +3912,10 @@ exports[`TransactionRow > should render with currency 1`] = `
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                         >
                           <span
-                            class="font-semibold text-sm text-theme-text"
+                            class="mr-2 text-base font-semibold text-theme-text"
                             data-testid="Address__alias"
                           >
                             <span>
@@ -3545,6 +3929,22 @@ exports[`TransactionRow > should render with currency 1`] = `
                               </span>
                             </span>
                           </span>
+                          <div
+                            class="min-w-0 grow"
+                          >
+                            <span
+                              class="block w-full"
+                            >
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                    data-testid="Address__address"
+                                  />
+                                </span>
+                              </span>
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </span>
@@ -3619,10 +4019,10 @@ exports[`TransactionRow > should render with currency 1`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -3636,6 +4036,22 @@ exports[`TransactionRow > should render with currency 1`] = `
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -3717,10 +4133,10 @@ exports[`TransactionRow > should render with currency 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                       >
                         <span
-                          class="font-semibold text-sm text-theme-text"
+                          class="mr-2 text-base font-semibold text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span>
@@ -3734,6 +4150,22 @@ exports[`TransactionRow > should render with currency 1`] = `
                             </span>
                           </span>
                         </span>
+                        <div
+                          class="min-w-0 grow"
+                        >
+                          <span
+                            class="block w-full"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                  data-testid="Address__address"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </span>
@@ -3813,10 +4245,10 @@ exports[`TransactionRow > should render with currency 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                       >
                         <span
-                          class="font-semibold text-sm text-theme-text"
+                          class="mr-2 text-base font-semibold text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span>
@@ -3830,6 +4262,22 @@ exports[`TransactionRow > should render with currency 1`] = `
                             </span>
                           </span>
                         </span>
+                        <div
+                          class="min-w-0 grow"
+                        >
+                          <span
+                            class="block w-full"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                  data-testid="Address__address"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </span>

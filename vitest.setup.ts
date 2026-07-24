@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import MockDate from "mockdate";
 import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
-import { createLedgerTransportFactoryMock } from "@/utils/vitest-mocks";
+import { createLedgerTransportFactoryMock, mockCanvas } from "@/utils/vitest-mocks";
 
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
@@ -244,3 +244,5 @@ Object.defineProperty(window, "$zopim", {
 });
 
 globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+
+mockCanvas();

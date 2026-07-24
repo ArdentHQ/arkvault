@@ -20,23 +20,24 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="relative grow leading-[17px] sm:leading-5 text-left"
+                class="min-w-0 grow"
               >
-                <span>
+                <span
+                  class="block w-full"
+                >
                   <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold leading-[17px] text-sm w-full text-base text-theme-text"
+                        data-testid="Address__address"
+                      >
+                        0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                      </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
                 </span>
               </div>
             </div>
@@ -163,23 +164,24 @@ exports[`ValidatorRow > should render 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="relative grow leading-[17px] sm:leading-5 text-left"
+                class="min-w-0 grow"
               >
-                <span>
+                <span
+                  class="block w-full"
+                >
                   <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold leading-[17px] text-sm w-full text-base text-theme-text"
+                        data-testid="Address__address"
+                      >
+                        0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                      </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
                 </span>
               </div>
             </div>
@@ -306,23 +308,24 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="relative grow leading-[17px] sm:leading-5 text-left"
+                class="min-w-0 grow"
               >
-                <span>
+                <span
+                  class="block w-full"
+                >
                   <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold leading-[17px] text-sm w-full text-base text-theme-text"
+                        data-testid="Address__address"
+                      >
+                        0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                      </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
                 </span>
               </div>
             </div>
@@ -449,23 +452,24 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="relative grow leading-[17px] sm:leading-5 text-left"
+                class="min-w-0 grow"
               >
-                <span>
+                <span
+                  class="block w-full"
+                >
                   <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold leading-[17px] text-sm w-full text-base text-theme-text"
+                        data-testid="Address__address"
+                      >
+                        0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                      </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
                 </span>
               </div>
             </div>
@@ -583,10 +587,10 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <span
-                class="font-semibold text-base text-theme-text"
+                class="mr-2 text-base font-semibold text-theme-text"
                 data-testid="Address__alias"
               >
                 <span>
@@ -600,6 +604,22 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   </span>
                 </span>
               </span>
+              <div
+                class="min-w-0 grow"
+              >
+                <span
+                  class="block w-full"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold leading-[17px] text-sm w-full text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                        data-testid="Address__address"
+                      />
+                    </span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </td>
@@ -715,23 +735,24 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="relative grow leading-[17px] sm:leading-5 text-left"
+                class="min-w-0 grow"
               >
-                <span>
+                <span
+                  class="block w-full"
+                >
                   <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      0x56F925416Ef2725646442D5E0150088bd7202aCd
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold leading-[17px] text-sm w-full text-base text-theme-text"
+                        data-testid="Address__address"
+                      >
+                        0x56F925416Ef2725646442D5E0150088bd7202aCd
+                      </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
                 </span>
               </div>
             </div>
@@ -867,23 +888,24 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="relative grow leading-[17px] sm:leading-5 text-left"
+                class="min-w-0 grow"
               >
-                <span>
+                <span
+                  class="block w-full"
+                >
                   <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold leading-[17px] text-sm w-full text-base text-theme-text"
+                        data-testid="Address__address"
+                      >
+                        0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                      </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
                 </span>
               </div>
             </div>

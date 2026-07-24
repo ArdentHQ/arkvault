@@ -173,7 +173,7 @@ describe("SendVoteSidePanel Encryption", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		await waitFor(() => {
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();

@@ -70,18 +70,26 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -257,18 +265,26 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -443,18 +459,26 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -630,18 +654,26 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -816,18 +848,26 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1001,18 +1041,26 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1167,18 +1215,26 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1291,18 +1347,26 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1457,18 +1521,26 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0x7F9d7FdA68521c09Bd2749a36514e514abB0866F
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0x7F9d7FdA68521c09Bd2749a36514e514abB0866F
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1572,18 +1644,26 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1697,18 +1777,26 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1882,18 +1970,26 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2067,18 +2163,26 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 </div>
                 <div>
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <div
+                      class="min-w-0 grow"
+                    >
+                      <span
+                        class="block w-full"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm text-base text-theme-text"
+                              data-testid="Address__address"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>

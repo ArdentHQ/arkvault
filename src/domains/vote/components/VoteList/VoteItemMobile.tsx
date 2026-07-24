@@ -19,7 +19,7 @@ export const VoteItemMobile = ({
 		<div className="w-0 flex-1 text-right md:text-left">
 			<Address
 				address={wallet.address()}
-				alignment="right"
+				wrapperClass="justify-end text-right"
 				walletName={wallet.username()}
 				walletNameClass="text-theme-text"
 			/>

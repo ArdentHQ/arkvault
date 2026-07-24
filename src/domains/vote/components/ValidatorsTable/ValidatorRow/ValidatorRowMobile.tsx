@@ -61,7 +61,7 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 						<Address
 							address={validator.username() ? undefined : validator.address()}
 							walletName={validator.username()}
-							size="sm"
+							addressClass="text-sm"
 						/>
 					</MobileTableElementRow>
 

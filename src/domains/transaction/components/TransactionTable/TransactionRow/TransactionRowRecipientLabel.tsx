@@ -4,6 +4,7 @@ import { Address } from "@/app/components/Address";
 import { useBreakpoint } from "@/app/hooks";
 import { useTranslation } from "react-i18next";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
+import cn from "classnames";
 
 interface Properties {
 	transaction: DTO.ExtendedConfirmedTransactionData;
@@ -72,7 +73,9 @@ export const BaseTransactionRowRecipientLabel = ({
 				walletName={walletName}
 				address={recipient}
 				addressClass={addressClass}
-				alignment={isXs || isSm ? "right" : undefined}
+				wrapperClass={cn({
+					"justify-end text-right": isXs || isSm,
+				})}
 			/>
 		);
 	}

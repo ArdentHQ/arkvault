@@ -29,10 +29,10 @@ exports[`TokenHeader > should not show address button when only one wallet exist
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -41,11 +41,27 @@ exports[`TokenHeader > should not show address button when only one wallet exist
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        Mainsail Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                   </span>
                 </span>
+                <div
+                  class="min-w-0 grow"
+                >
+                  <span
+                    class="block w-full"
+                  >
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                          data-testid="Address__address"
+                        />
+                      </span>
+                    </span>
+                  </span>
+                </div>
               </div>
               <button
                 class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
@@ -329,10 +345,10 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -341,11 +357,27 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        Mainsail Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                   </span>
                 </span>
+                <div
+                  class="min-w-0 grow"
+                >
+                  <span
+                    class="block w-full"
+                  >
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                          data-testid="Address__address"
+                        />
+                      </span>
+                    </span>
+                  </span>
+                </div>
               </div>
               <button
                 class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
@@ -629,10 +661,10 @@ exports[`TokenHeader > should render 1`] = `
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -641,11 +673,27 @@ exports[`TokenHeader > should render 1`] = `
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        Mainsail Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                   </span>
                 </span>
+                <div
+                  class="min-w-0 grow"
+                >
+                  <span
+                    class="block w-full"
+                  >
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                          data-testid="Address__address"
+                        />
+                      </span>
+                    </span>
+                  </span>
+                </div>
               </div>
               <button
                 class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
@@ -929,10 +977,10 @@ exports[`TokenHeader > should render with tokens 1`] = `
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -941,11 +989,27 @@ exports[`TokenHeader > should render with tokens 1`] = `
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        Mainsail Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                   </span>
                 </span>
+                <div
+                  class="min-w-0 grow"
+                >
+                  <span
+                    class="block w-full"
+                  >
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                          data-testid="Address__address"
+                        />
+                      </span>
+                    </span>
+                  </span>
+                </div>
               </div>
               <button
                 class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
@@ -1229,10 +1293,10 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -1241,11 +1305,27 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        Mainsail Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                   </span>
                 </span>
+                <div
+                  class="min-w-0 grow"
+                >
+                  <span
+                    class="block w-full"
+                  >
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                          data-testid="Address__address"
+                        />
+                      </span>
+                    </span>
+                  </span>
+                </div>
               </div>
               <div
                 class="inline-block font-semibold overflow-hidden no-ligatures px-1 rounded text-theme-primary-600 border-theme-primary-200 bg-transparent dark:text-theme-secondary-200 dim:text-theme-dim-100 dark:border-theme-dark-700 dim:border-theme-dim-700 text-xs leading-[15px] truncate border py-0.5 uppercase"
@@ -1534,10 +1614,10 @@ exports[`TokenHeader > should show balance information when tokens are available
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -1546,11 +1626,27 @@ exports[`TokenHeader > should show balance information when tokens are available
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        Mainsail Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                   </span>
                 </span>
+                <div
+                  class="min-w-0 grow"
+                >
+                  <span
+                    class="block w-full"
+                  >
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                          data-testid="Address__address"
+                        />
+                      </span>
+                    </span>
+                  </span>
+                </div>
               </div>
               <button
                 class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
@@ -1834,10 +1930,10 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -1846,11 +1942,27 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        Mainsail Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                   </span>
                 </span>
+                <div
+                  class="min-w-0 grow"
+                >
+                  <span
+                    class="block w-full"
+                  >
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                          data-testid="Address__address"
+                        />
+                      </span>
+                    </span>
+                  </span>
+                </div>
               </div>
               <button
                 class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
@@ -2134,10 +2246,10 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
               class="flex items-center gap-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -2146,11 +2258,27 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        Mainsail Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                   </span>
                 </span>
+                <div
+                  class="min-w-0 grow"
+                >
+                  <span
+                    class="block w-full"
+                  >
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                          data-testid="Address__address"
+                        />
+                      </span>
+                    </span>
+                  </span>
+                </div>
               </div>
               <button
                 class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"

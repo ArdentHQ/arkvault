@@ -183,7 +183,6 @@ export const ActionType = ({
 												<Address
 													walletName={alias}
 													address={alias ? undefined : transaction.from()}
-													truncateOnTable
 													wrapperClass={cn("flex-inline", { "w-44": !alias })}
 													addressClass="leading-6 text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 w-44 min-w-44"
 													walletNameClass="leading-6 text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
