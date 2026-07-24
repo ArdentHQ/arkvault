@@ -1165,6 +1165,16 @@ describe("Servers Settings", () => {
 		});
 	});
 
+	it("should render custom servers in mobile viewport", async () => {
+		const { asFragment } = renderResponsiveWithRoute(<ServersSettings />, "xs", {
+			route: `/profiles/${profile.id()}/settings/servers`,
+		});
+
+		await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1));
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	describe("Added unreachable servers", () => {
 		let profileHostsSpy;
 

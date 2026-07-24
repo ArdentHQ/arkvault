@@ -9,7 +9,6 @@ import { Button } from "@/app/components/Button";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
-import { DropdownOption } from "@/app/components/Dropdown/Dropdown.contracts";
 import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { Spinner } from "@/app/components/Spinner";
 import { useAccordion, useBreakpoint } from "@/app/hooks";
@@ -33,34 +32,15 @@ interface PeerRowProperties {
 	height: number | undefined;
 	onToggle: (isEnabled: boolean) => void;
 	networkName: string;
-	onSelectOption: ({ value }: DropdownOption) => void;
-	dropdownOptions: DropdownOption[];
+	onDelete: () => void;
+	onUpdate: () => void;
+	onRefresh: () => void;
 	hosts: {
 		publicApi: HostDetails;
 		txApi: HostDetails;
 		evmApi: HostDetails;
 	};
 }
-
-const renderIcon = (option: DropdownOption) => {
-	const { icon, iconClassName, iconSize } = option;
-
-	if (!icon) {
-		return null;
-	}
-
-	const classes: Record<string, boolean> = {};
-
-	if (!iconClassName) {
-		classes["dark:text-theme-secondary-600 dim:text-theme-dim-200"] = true;
-	} else if (typeof iconClassName === "function") {
-		classes[iconClassName(option)] = true;
-	} else {
-		classes[iconClassName] = true;
-	}
-
-	return <Icon name={icon} className={cn(classes)} size={iconSize || "md"} />;
-};
 
 const PeerRow = ({
 	name,
@@ -69,8 +49,9 @@ const PeerRow = ({
 	height,
 	networkName,
 	onToggle,
-	onSelectOption,
-	dropdownOptions,
+	onDelete,
+	onUpdate,
+	onRefresh,
 }: PeerRowProperties) => {
 	const { t } = useTranslation();
 
@@ -176,19 +157,34 @@ const PeerRow = ({
 						</DropdownToggle>
 						<DropdownContent>
 							<ul>
-								{dropdownOptions.map((option, index) => (
-									<DropdownListItem
-										key={option.value}
-										data-testid={`dropdown__option--${index}`}
-										onClick={() => onSelectOption(option)}
-									>
-										{option.iconPosition === "start" && renderIcon(option)}
-										<span className="flex w-full items-center justify-between">
-											{option.element || option.label}
-										</span>
-										{option.iconPosition !== "start" && renderIcon(option)}
-									</DropdownListItem>
-								))}
+								<DropdownListItem data-testid="dropdown__option--0" onClick={onUpdate}>
+									<Icon
+										name="Pencil"
+										className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+										size="md"
+									/>
+									<span className="flex w-full items-center justify-between">{t("COMMON.EDIT")}</span>
+								</DropdownListItem>
+								<DropdownListItem data-testid="dropdown__option--1" onClick={onDelete}>
+									<Icon
+										name="Trash"
+										className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+										size="md"
+									/>
+									<span className="flex w-full items-center justify-between">
+										{t("COMMON.DELETE")}
+									</span>
+								</DropdownListItem>
+								<DropdownListItem data-testid="dropdown__option--2" onClick={onRefresh}>
+									<Icon
+										name="ArrowRotateLeft"
+										className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+										size="md"
+									/>
+									<span className="flex w-full items-center justify-between">
+										{t("COMMON.REFRESH")}
+									</span>
+								</DropdownListItem>
 							</ul>
 						</DropdownContent>
 					</DropdownRoot>
@@ -257,34 +253,12 @@ const CustomPeersPeer = ({
 		profile,
 	});
 
-	const dropdownOptions: DropdownOption[] = [
-		{ icon: "Pencil", iconPosition: "start", label: t("COMMON.EDIT"), value: "edit" },
-		{ icon: "Trash", iconPosition: "start", label: t("COMMON.DELETE"), value: "delete" },
-		{ icon: "ArrowRotateLeft", iconPosition: "start", label: t("COMMON.REFRESH"), value: "refresh" },
-	];
-
 	useEffect(() => {
 		const interval = setInterval(() => syncStatus(), 60 * 1000 * 5);
 		syncStatus();
 
 		return () => clearInterval(interval);
 	}, []);
-
-	const handleSelectOption = async ({ value }) => {
-		if (value === "delete") {
-			onDelete(normalizedNetwork);
-			return;
-		}
-
-		if (value === "edit") {
-			onUpdate(normalizedNetwork);
-		}
-
-		if (value === "refresh") {
-			await syncStatus();
-			await persist();
-		}
-	};
 
 	const { isXs, isSm } = useBreakpoint();
 
@@ -325,19 +299,48 @@ const CustomPeersPeer = ({
 										</DropdownToggle>
 										<DropdownContent>
 											<ul>
-												{dropdownOptions.map((option, index) => (
-													<DropdownListItem
-														key={option.value}
-														data-testid={`dropdown__option--${index}`}
-														onClick={() => handleSelectOption(option)}
-													>
-														{option.iconPosition === "start" && renderIcon(option)}
-														<span className="flex w-full items-center justify-between">
-															{option.element || option.label}
-														</span>
-														{option.iconPosition !== "start" && renderIcon(option)}
-													</DropdownListItem>
-												))}
+												<DropdownListItem
+													data-testid="dropdown__option--0"
+													onClick={() => onUpdate(normalizedNetwork)}
+												>
+													<Icon
+														name="Pencil"
+														className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+														size="md"
+													/>
+													<span className="flex w-full items-center justify-between">
+														{t("COMMON.EDIT")}
+													</span>
+												</DropdownListItem>
+												<DropdownListItem
+													data-testid="dropdown__option--1"
+													onClick={() => onDelete(normalizedNetwork)}
+												>
+													<Icon
+														name="Trash"
+														className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+														size="md"
+													/>
+													<span className="flex w-full items-center justify-between">
+														{t("COMMON.DELETE")}
+													</span>
+												</DropdownListItem>
+												<DropdownListItem
+													data-testid="dropdown__option--2"
+													onClick={async () => {
+														await syncStatus();
+														await persist();
+													}}
+												>
+													<Icon
+														name="ArrowRotateLeft"
+														className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+														size="md"
+													/>
+													<span className="flex w-full items-center justify-between">
+														{t("COMMON.REFRESH")}
+													</span>
+												</DropdownListItem>
 											</ul>
 										</DropdownContent>
 									</DropdownRoot>
@@ -418,7 +421,7 @@ const CustomPeersPeer = ({
 							<Button
 								variant="secondary"
 								size="sm"
-								onClick={() => handleSelectOption({ value: "edit" })}
+								onClick={() => onUpdate(normalizedNetwork)}
 								data-testid="CustomPeers-network-item--mobile--edit"
 							>
 								<Icon name="Pencil" />
@@ -427,7 +430,10 @@ const CustomPeersPeer = ({
 							<Button
 								variant="secondary"
 								size="sm"
-								onClick={() => handleSelectOption({ value: "refresh" })}
+								onClick={async () => {
+									await syncStatus();
+									await persist();
+								}}
 								data-testid="CustomPeers-network-item--mobile--refresh"
 							>
 								<Icon name="ArrowRotateLeft" />
@@ -436,7 +442,7 @@ const CustomPeersPeer = ({
 							<Button
 								variant="danger"
 								size="sm"
-								onClick={() => handleSelectOption({ value: "delete" })}
+								onClick={() => onDelete(normalizedNetwork)}
 								data-testid="CustomPeers-network-item--mobile--delete"
 							>
 								<Icon name="Trash" />
@@ -469,8 +475,12 @@ const CustomPeersPeer = ({
 			checked={enabled}
 			height={height}
 			onToggle={onToggle}
-			onSelectOption={handleSelectOption}
-			dropdownOptions={dropdownOptions}
+			onDelete={() => onDelete(normalizedNetwork)}
+			onUpdate={() => onUpdate(normalizedNetwork)}
+			onRefresh={async () => {
+				await syncStatus();
+				await persist();
+			}}
 		/>
 	);
 };

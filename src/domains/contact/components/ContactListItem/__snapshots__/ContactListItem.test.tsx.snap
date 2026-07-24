@@ -154,7 +154,6 @@ exports[`ContactListItem > should render 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button
@@ -367,7 +366,6 @@ exports[`ContactListItem > should render as validator 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button
@@ -580,7 +578,6 @@ exports[`ContactListItem > should render options 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button
@@ -765,7 +762,6 @@ exports[`ContactListItem > should render options 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button
@@ -950,7 +946,6 @@ exports[`ContactListItem > should render options 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button
@@ -1163,7 +1158,6 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button
@@ -1348,7 +1342,6 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button
@@ -1533,7 +1526,6 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button
@@ -1747,7 +1739,6 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button
@@ -1933,7 +1924,6 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button
@@ -2119,7 +2109,6 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <button

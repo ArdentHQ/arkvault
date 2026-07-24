@@ -289,7 +289,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -402,7 +401,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -574,7 +572,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -728,7 +725,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -1341,7 +1337,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
-                                    role="button"
                                     tabindex="0"
                                   >
                                     <button
@@ -1545,7 +1540,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
-                                    role="button"
                                     tabindex="0"
                                   >
                                     <button
@@ -1749,7 +1743,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
-                                    role="button"
                                     tabindex="0"
                                   >
                                     <button
@@ -2106,7 +2099,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -2219,7 +2211,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -2391,7 +2382,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -2545,7 +2535,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -2888,7 +2877,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
-                                    role="button"
                                     tabindex="0"
                                   >
                                     <button
@@ -3058,7 +3046,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
-                                    role="button"
                                     tabindex="0"
                                   >
                                     <button
@@ -3228,7 +3215,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
-                                    role="button"
                                     tabindex="0"
                                   >
                                     <button
@@ -3657,7 +3643,6 @@ exports[`Contacts > should render with contacts 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -3763,7 +3748,6 @@ exports[`Contacts > should render with contacts 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -3935,7 +3919,6 @@ exports[`Contacts > should render with contacts 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -4089,7 +4072,6 @@ exports[`Contacts > should render with contacts 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -4702,7 +4684,6 @@ exports[`Contacts > should render with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
-                                    role="button"
                                     tabindex="0"
                                   >
                                     <button
@@ -4906,7 +4887,6 @@ exports[`Contacts > should render with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
-                                    role="button"
                                     tabindex="0"
                                   >
                                     <button
@@ -5110,7 +5090,6 @@ exports[`Contacts > should render with contacts 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="dialog"
                                     data-testid="dropdown__toggle"
-                                    role="button"
                                     tabindex="0"
                                   >
                                     <button
@@ -5467,7 +5446,6 @@ exports[`Contacts > should render without contacts in lg 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -5580,7 +5558,6 @@ exports[`Contacts > should render without contacts in lg 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -5752,7 +5729,6 @@ exports[`Contacts > should render without contacts in lg 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -5906,7 +5882,6 @@ exports[`Contacts > should render without contacts in lg 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -6688,7 +6663,6 @@ exports[`Contacts > should render without contacts in md 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -6801,7 +6775,6 @@ exports[`Contacts > should render without contacts in md 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -6973,7 +6946,6 @@ exports[`Contacts > should render without contacts in md 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -7127,7 +7099,6 @@ exports[`Contacts > should render without contacts in md 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -7909,7 +7880,6 @@ exports[`Contacts > should render without contacts in sm 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -8022,7 +7992,6 @@ exports[`Contacts > should render without contacts in sm 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -8194,7 +8163,6 @@ exports[`Contacts > should render without contacts in sm 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -8348,7 +8316,6 @@ exports[`Contacts > should render without contacts in sm 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -8966,7 +8933,6 @@ exports[`Contacts > should render without contacts in xl 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -9079,7 +9045,6 @@ exports[`Contacts > should render without contacts in xl 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -9251,7 +9216,6 @@ exports[`Contacts > should render without contacts in xl 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -9405,7 +9369,6 @@ exports[`Contacts > should render without contacts in xl 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -10187,7 +10150,6 @@ exports[`Contacts > should render without contacts in xs 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -10300,7 +10262,6 @@ exports[`Contacts > should render without contacts in xs 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -10472,7 +10433,6 @@ exports[`Contacts > should render without contacts in xs 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -10626,7 +10586,6 @@ exports[`Contacts > should render without contacts in xs 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button

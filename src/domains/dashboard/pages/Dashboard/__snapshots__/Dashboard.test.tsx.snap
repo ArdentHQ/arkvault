@@ -288,7 +288,6 @@ exports[`Dashboard > render in lg 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -401,7 +400,6 @@ exports[`Dashboard > render in lg 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -573,7 +571,6 @@ exports[`Dashboard > render in lg 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -727,7 +724,6 @@ exports[`Dashboard > render in lg 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -1294,7 +1290,6 @@ exports[`Dashboard > render in lg 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
-                            role="button"
                             tabindex="0"
                           >
                             <span>
@@ -2218,6 +2213,7 @@ exports[`Dashboard > render in lg 1`] = `
             </div>
             <div
               class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
+              data-testid="Transactions--mobile-filter"
             >
               <div
                 class="flex-1"
@@ -2226,7 +2222,6 @@ exports[`Dashboard > render in lg 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -2274,7 +2269,6 @@ exports[`Dashboard > render in lg 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -2351,7 +2345,6 @@ exports[`Dashboard > render in lg 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -8400,7 +8393,6 @@ exports[`Dashboard > render in md 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -8513,7 +8505,6 @@ exports[`Dashboard > render in md 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -8685,7 +8676,6 @@ exports[`Dashboard > render in md 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -8839,7 +8829,6 @@ exports[`Dashboard > render in md 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -9406,7 +9395,6 @@ exports[`Dashboard > render in md 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
-                            role="button"
                             tabindex="0"
                           >
                             <span>
@@ -10330,6 +10318,7 @@ exports[`Dashboard > render in md 1`] = `
             </div>
             <div
               class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
+              data-testid="Transactions--mobile-filter"
             >
               <div
                 class="flex-1"
@@ -10338,7 +10327,6 @@ exports[`Dashboard > render in md 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -10386,7 +10374,6 @@ exports[`Dashboard > render in md 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -10463,7 +10450,6 @@ exports[`Dashboard > render in md 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -16512,7 +16498,6 @@ exports[`Dashboard > render in sm 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -16625,7 +16610,6 @@ exports[`Dashboard > render in sm 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -16797,7 +16781,6 @@ exports[`Dashboard > render in sm 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -16951,7 +16934,6 @@ exports[`Dashboard > render in sm 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -17518,7 +17500,6 @@ exports[`Dashboard > render in sm 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
-                            role="button"
                             tabindex="0"
                           >
                             <span>
@@ -18442,6 +18423,7 @@ exports[`Dashboard > render in sm 1`] = `
             </div>
             <div
               class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
+              data-testid="Transactions--mobile-filter"
             >
               <div
                 class="flex-1"
@@ -18450,7 +18432,6 @@ exports[`Dashboard > render in sm 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -18498,7 +18479,6 @@ exports[`Dashboard > render in sm 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -18575,7 +18555,6 @@ exports[`Dashboard > render in sm 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -21477,7 +21456,6 @@ exports[`Dashboard > render in xl 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -21590,7 +21568,6 @@ exports[`Dashboard > render in xl 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -21762,7 +21739,6 @@ exports[`Dashboard > render in xl 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -21916,7 +21892,6 @@ exports[`Dashboard > render in xl 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -22483,7 +22458,6 @@ exports[`Dashboard > render in xl 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
-                            role="button"
                             tabindex="0"
                           >
                             <span>
@@ -23407,6 +23381,7 @@ exports[`Dashboard > render in xl 1`] = `
             </div>
             <div
               class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
+              data-testid="Transactions--mobile-filter"
             >
               <div
                 class="flex-1"
@@ -23415,7 +23390,6 @@ exports[`Dashboard > render in xl 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -23463,7 +23437,6 @@ exports[`Dashboard > render in xl 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -23540,7 +23513,6 @@ exports[`Dashboard > render in xl 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -29309,7 +29281,6 @@ exports[`Dashboard > render in xs 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -29422,7 +29393,6 @@ exports[`Dashboard > render in xs 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -29594,7 +29564,6 @@ exports[`Dashboard > render in xs 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -29748,7 +29717,6 @@ exports[`Dashboard > render in xs 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -30315,7 +30283,6 @@ exports[`Dashboard > render in xs 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
-                            role="button"
                             tabindex="0"
                           >
                             <span>
@@ -31239,6 +31206,7 @@ exports[`Dashboard > render in xs 1`] = `
             </div>
             <div
               class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
+              data-testid="Transactions--mobile-filter"
             >
               <div
                 class="flex-1"
@@ -31247,7 +31215,6 @@ exports[`Dashboard > render in xs 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -31295,7 +31262,6 @@ exports[`Dashboard > render in xs 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -31372,7 +31338,6 @@ exports[`Dashboard > render in xs 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -34275,7 +34240,6 @@ exports[`Dashboard > should render 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -34388,7 +34352,6 @@ exports[`Dashboard > should render 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -34560,7 +34523,6 @@ exports[`Dashboard > should render 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -34714,7 +34676,6 @@ exports[`Dashboard > should render 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -35281,7 +35242,6 @@ exports[`Dashboard > should render 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
-                            role="button"
                             tabindex="0"
                           >
                             <span>
@@ -36074,6 +36034,7 @@ exports[`Dashboard > should render 1`] = `
             </div>
             <div
               class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
+              data-testid="Transactions--mobile-filter"
             >
               <div
                 class="flex-1"
@@ -36082,7 +36043,6 @@ exports[`Dashboard > should render 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -36130,7 +36090,6 @@ exports[`Dashboard > should render 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -36207,7 +36166,6 @@ exports[`Dashboard > should render 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
@@ -42257,7 +42215,6 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -42370,7 +42327,6 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -42542,7 +42498,6 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -42696,7 +42651,6 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -43198,7 +43152,6 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                             aria-expanded="false"
                             aria-haspopup="dialog"
                             data-testid="dropdown__toggle"
-                            role="button"
                             tabindex="0"
                           >
                             <span>
@@ -44275,7 +44228,6 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <button
