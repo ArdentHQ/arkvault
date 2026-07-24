@@ -564,7 +564,6 @@ export const PortfolioHeader = ({
 													{
 														hasDivider: additionalOptions.hasDivider,
 														key: additionalOptions.key,
-														onSelect: additionalOptions.onSelect,
 														options: hasWalletsToMigrate
 															? [...additionalOptions.options, ...ledgerMigrationOptions]
 															: additionalOptions.options,
