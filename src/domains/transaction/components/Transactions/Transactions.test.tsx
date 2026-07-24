@@ -441,6 +441,33 @@ describe("Transactions", () => {
 		);
 	});
 
+	it("should toggle mobile dropdown", async () => {
+		renderResponsiveWithRoute(<Transactions profile={profile} wallets={profile.wallets().values()} />, "xs", {
+			route: dashboardURL,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
+		);
+
+		const mobileFilter = screen.getByTestId("Transactions--mobile-filter");
+		const button = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
+
+		expect(button).toBeInTheDocument();
+
+		await userEvent.click(button);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		});
+
+		await userEvent.click(button);
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
+		});
+	});
+
 	it("should ignore tab change on loading state", async () => {
 		render(<Transactions profile={profile} wallets={profile.wallets().values()} isLoading={true} />, {
 			route: dashboardURL,
