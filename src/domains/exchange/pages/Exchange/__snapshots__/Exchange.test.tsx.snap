@@ -289,7 +289,6 @@ exports[`Exchange > should render empty 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -402,7 +401,6 @@ exports[`Exchange > should render empty 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -574,7 +572,6 @@ exports[`Exchange > should render empty 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -728,7 +725,6 @@ exports[`Exchange > should render empty 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -1228,7 +1224,6 @@ exports[`Exchange > should render with exchanges 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -1341,7 +1336,6 @@ exports[`Exchange > should render with exchanges 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -1513,7 +1507,6 @@ exports[`Exchange > should render with exchanges 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -1667,7 +1660,6 @@ exports[`Exchange > should render with exchanges 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button

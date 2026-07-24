@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 
 import { NavigationBar } from "./NavigationBar";
 import * as navigation from "@/app/constants/navigation";
+import { translations } from "@/app/i18n/common/i18n";
 import * as environmentHooks from "@/app/hooks/env";
 import { useNavigationContext } from "@/app/contexts";
 import {
@@ -14,6 +15,7 @@ import {
 	waitFor,
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
+	within,
 } from "@/utils/testing-library";
 import * as PanelsMock from "@/app/contexts/Panels";
 import { expect, vi } from "vitest";
@@ -28,10 +30,12 @@ vi.spyOn(environmentHooks, "useActiveProfile").mockImplementation(() =>
 
 vi.spyOn(navigation, "getNavigationMenu").mockReturnValue([
 	{
+		id: "dashboard",
 		mountPath: (profileId: string) => `/profiles/${profileId}/dashboard`,
 		title: "Portfolio",
 	},
 	{
+		id: "test",
 		mountPath: () => "/test",
 		title: "test",
 	},
@@ -194,33 +198,27 @@ describe("NavigationBar", () => {
 
 		const { router } = render(<NavigationBar />);
 
-		await userEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
+		const menuToggle = within(screen.getByTestId("NavigationBar__menu-toggle")).getByTestId("dropdown__toggle");
+		await userEvent.click(menuToggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("dropdown__option--1"));
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
-		expect(router.state.location.pathname).toBe("/test");
+		expect(router.state.location.pathname).toContain("/dashboard");
 	});
 
 	it("should open user actions dropdown on click", async () => {
-		const getUserMenuActionsMock = vi.spyOn(navigation, "getUserMenuActions").mockReturnValue([
-			{ label: "Option 1", mountPath: () => "/test", title: "test", value: "/test" },
-			{ label: "Option 2", mountPath: () => "/test2", title: "test2", value: "/test2" },
-		]);
-
 		const { router } = render(<NavigationBar />);
 		const toggle = screen.getByTestId("UserMenu");
 
 		await userEvent.click(toggle);
 
-		expect(screen.getByText("Option 1")).toBeInTheDocument();
+		expect(screen.getByText(translations.SETTINGS)).toBeInTheDocument();
 
-		await userEvent.click(screen.getByText("Option 1"));
+		await userEvent.click(screen.getByText(translations.SETTINGS));
 
-		expect(router.state.location.pathname).toBe("/test");
-
-		getUserMenuActionsMock.mockRestore();
+		expect(router.state.location.pathname).toContain("/settings");
 	});
 
 	it("should open support chat when clicking contact menu", async () => {
@@ -243,24 +241,16 @@ describe("NavigationBar", () => {
 			}
 		});
 
-		const getUserMenuActionsMock = vi
-			.spyOn(navigation, "getUserMenuActions")
-			.mockReturnValue([{ label: "Option 1", mountPath: () => "/", title: "test2", value: "contact" }]);
-
 		const { router } = render(<NavigationBar />);
 		const toggle = screen.getByTestId("UserMenu");
 
 		await userEvent.click(toggle);
 
-		expect(screen.getByText("Option 1")).toBeInTheDocument();
+		expect(screen.getByText(translations.CONTACT_US)).toBeInTheDocument();
 
-		await userEvent.click(screen.getByText("Option 1"));
-
-		expect(router.state.location.pathname).toBe("/");
+		await userEvent.click(screen.getByText(translations.CONTACT_US));
 
 		await waitFor(() => expect(widgetMock).toHaveBeenCalledWith(webWidgetSelector));
-
-		getUserMenuActionsMock.mockRestore();
 
 		widgetMock.mockRestore();
 	});

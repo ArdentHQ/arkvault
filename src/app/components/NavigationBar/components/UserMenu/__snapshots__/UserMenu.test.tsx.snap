@@ -6,7 +6,6 @@ exports[`UserMenu > should render with regular image 1`] = `
     aria-expanded="false"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
-    role="button"
     tabindex="0"
   >
     <button
@@ -42,7 +41,6 @@ exports[`UserMenu > should render with svg image 1`] = `
     aria-expanded="false"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
-    role="button"
     tabindex="0"
   >
     <button

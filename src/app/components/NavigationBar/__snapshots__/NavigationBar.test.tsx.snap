@@ -248,7 +248,6 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -361,7 +360,6 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               aria-haspopup="dialog"
               class="flex items-center"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <div
@@ -533,7 +531,6 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -687,7 +684,6 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -1060,7 +1056,6 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -1166,7 +1161,6 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               aria-haspopup="dialog"
               class="flex items-center"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <div
@@ -1340,7 +1334,6 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -1494,7 +1487,6 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -1779,7 +1771,6 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -1885,7 +1876,6 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               aria-haspopup="dialog"
               class="flex items-center"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <div
@@ -2057,7 +2047,6 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -2211,7 +2200,6 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -2498,7 +2486,6 @@ exports[`NavigationBar > should render in lg 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -2611,7 +2598,6 @@ exports[`NavigationBar > should render in lg 1`] = `
               aria-haspopup="dialog"
               class="flex items-center"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <div
@@ -2783,7 +2769,6 @@ exports[`NavigationBar > should render in lg 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -2937,7 +2922,6 @@ exports[`NavigationBar > should render in lg 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -3224,7 +3208,6 @@ exports[`NavigationBar > should render in md 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -3337,7 +3320,6 @@ exports[`NavigationBar > should render in md 1`] = `
               aria-haspopup="dialog"
               class="flex items-center"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <div
@@ -3509,7 +3491,6 @@ exports[`NavigationBar > should render in md 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -3663,7 +3644,6 @@ exports[`NavigationBar > should render in md 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -3950,7 +3930,6 @@ exports[`NavigationBar > should render in sm 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -4063,7 +4042,6 @@ exports[`NavigationBar > should render in sm 1`] = `
               aria-haspopup="dialog"
               class="flex items-center"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <div
@@ -4235,7 +4213,6 @@ exports[`NavigationBar > should render in sm 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -4389,7 +4366,6 @@ exports[`NavigationBar > should render in sm 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -4676,7 +4652,6 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -4789,7 +4764,6 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               aria-haspopup="dialog"
               class="flex items-center"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <div
@@ -4961,7 +4935,6 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -5115,7 +5088,6 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -5402,7 +5374,6 @@ exports[`NavigationBar > should render in xs 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -5515,7 +5486,6 @@ exports[`NavigationBar > should render in xs 1`] = `
               aria-haspopup="dialog"
               class="flex items-center"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <div
@@ -5687,7 +5657,6 @@ exports[`NavigationBar > should render in xs 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -5841,7 +5810,6 @@ exports[`NavigationBar > should render in xs 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -6296,7 +6264,6 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
@@ -6409,7 +6376,6 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               aria-haspopup="dialog"
               class="flex items-center"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <div
@@ -6581,7 +6547,6 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -6735,7 +6700,6 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
-              role="button"
               tabindex="0"
             >
               <button
