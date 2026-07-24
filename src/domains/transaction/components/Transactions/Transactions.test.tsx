@@ -421,7 +421,8 @@ describe("Transactions", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(8),
 		);
 
-		const button = screen.getByTestId("dropdown__toggle-Transactions--filter-dropdown");
+		const mobileFilter = screen.getByTestId("Transactions--mobile-filter");
+		const button = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
 
 		expect(button).toBeInTheDocument();
 
@@ -429,7 +430,7 @@ describe("Transactions", () => {
 
 		await userEvent.click(button);
 
-		const dropdownContainer = within(screen.getByTestId("dropdown__content-Transactions--filter-dropdown"));
+		const dropdownContainer = within(screen.getByTestId("dropdown__content"));
 
 		await expect(dropdownContainer.findByTestId("dropdown__option--2")).resolves.toBeVisible();
 

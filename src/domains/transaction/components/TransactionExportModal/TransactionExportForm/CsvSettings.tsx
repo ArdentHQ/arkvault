@@ -22,7 +22,7 @@ const SelectDelimiter = ({ value, onSelect }: { value: CsvDelimiter; onSelect?: 
 	const delimiterOptions = useDelimiterOptions({ selectedValue: value });
 
 	return (
-		<FormField name="delimiter">
+		<FormField name="delimiter" data-testid="TransactionExportForm--delimiter">
 			<DropdownRoot>
 				<DropdownToggle>
 					{({ isOpen }: { isOpen: boolean }) => (

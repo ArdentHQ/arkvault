@@ -87,7 +87,6 @@ const addNewPeerButtonTestId = "CustomPeers--addnew";
 const peerStatusOkTestId = "CustomPeersPeer--statusok";
 const peerStatusLoadingTestId = "CustomPeersPeer--statusloading";
 const peerStatusErrorTestId = "CustomPeersPeer--statuserror";
-const peerDropdownMenuTestId = "-CustomPeers--dropdown";
 const serverDeleteConfirmationTestId = "ServersSettings--delete-confirmation";
 const customPeerListTestId = "CustomPeers--list";
 const networkAccordionIconTestId = "mobile-table-element-header";
@@ -1031,13 +1030,11 @@ describe("Servers Settings", () => {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
 
-			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+			const dropdown = within(screen.getByTestId(customPeerListTestId)).getAllByTestId("dropdown__toggle")[0];
 
 			await userEvent.click(dropdown);
 
-			const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-				"dropdown__option--1",
-			);
+			const deleteButton = within(screen.getByTestId("dropdown__content")).getByTestId("dropdown__option--1");
 
 			expect(deleteButton).toBeInTheDocument();
 
@@ -1054,13 +1051,11 @@ describe("Servers Settings", () => {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
 
-			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+			const dropdown = within(screen.getByTestId(customPeerListTestId)).getAllByTestId("dropdown__toggle")[0];
 
 			await userEvent.click(dropdown);
 
-			const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-				"dropdown__option--1",
-			);
+			const deleteButton = within(screen.getByTestId("dropdown__content")).getByTestId("dropdown__option--1");
 
 			expect(deleteButton).toBeInTheDocument();
 
@@ -1078,13 +1073,11 @@ describe("Servers Settings", () => {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
 
-			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+			const dropdown = within(screen.getByTestId(customPeerListTestId)).getAllByTestId("dropdown__toggle")[0];
 
 			await userEvent.click(dropdown);
 
-			const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-				"dropdown__option--1",
-			);
+			const deleteButton = within(screen.getByTestId("dropdown__content")).getByTestId("dropdown__option--1");
 
 			expect(deleteButton).toBeInTheDocument();
 
@@ -1102,13 +1095,11 @@ describe("Servers Settings", () => {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
 
-			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+			const dropdown = within(screen.getByTestId(customPeerListTestId)).getAllByTestId("dropdown__toggle")[0];
 
 			await userEvent.click(dropdown);
 
-			const editButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-				"dropdown__option--0",
-			);
+			const editButton = within(screen.getByTestId("dropdown__content")).getByTestId("dropdown__option--0");
 
 			expect(editButton).toBeInTheDocument();
 
@@ -1140,13 +1131,11 @@ describe("Servers Settings", () => {
 
 			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
 
-			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+			const dropdown = within(screen.getByTestId(customPeerListTestId)).getAllByTestId("dropdown__toggle")[0];
 
 			await userEvent.click(dropdown);
 
-			const refreshButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-				"dropdown__option--2",
-			);
+			const refreshButton = within(screen.getByTestId("dropdown__content")).getByTestId("dropdown__option--2");
 
 			expect(refreshButton).toBeInTheDocument();
 

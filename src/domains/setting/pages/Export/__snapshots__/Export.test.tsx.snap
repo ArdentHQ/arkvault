@@ -168,7 +168,6 @@ exports[`Export Settings > should render export settings 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -274,7 +273,6 @@ exports[`Export Settings > should render export settings 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -446,7 +444,6 @@ exports[`Export Settings > should render export settings 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -600,7 +597,6 @@ exports[`Export Settings > should render export settings 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -751,7 +747,6 @@ exports[`Export Settings > should render export settings 1`] = `
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div

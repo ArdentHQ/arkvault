@@ -168,7 +168,6 @@ exports[`General Settings > should disable submit button when profile is not res
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -281,7 +280,6 @@ exports[`General Settings > should disable submit button when profile is not res
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -455,7 +453,6 @@ exports[`General Settings > should disable submit button when profile is not res
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -609,7 +606,6 @@ exports[`General Settings > should disable submit button when profile is not res
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -758,7 +754,6 @@ exports[`General Settings > should disable submit button when profile is not res
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -2853,7 +2848,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -2966,7 +2960,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -3138,7 +3131,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -3292,7 +3284,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -3443,7 +3434,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -5582,7 +5572,6 @@ exports[`General Settings > should render 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -5695,7 +5684,6 @@ exports[`General Settings > should render 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -5867,7 +5855,6 @@ exports[`General Settings > should render 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -6021,7 +6008,6 @@ exports[`General Settings > should render 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -6172,7 +6158,6 @@ exports[`General Settings > should render 1`] = `
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -8338,7 +8323,6 @@ exports[`General Settings > should update profile 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -8451,7 +8435,6 @@ exports[`General Settings > should update profile 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -8623,7 +8606,6 @@ exports[`General Settings > should update profile 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -8777,7 +8759,6 @@ exports[`General Settings > should update profile 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -8928,7 +8909,6 @@ exports[`General Settings > should update profile 1`] = `
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -11023,7 +11003,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -11136,7 +11115,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -11308,7 +11286,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -11462,7 +11439,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -11613,7 +11589,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -13707,7 +13682,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -13820,7 +13794,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -13992,7 +13965,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -14146,7 +14118,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -14297,7 +14268,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div

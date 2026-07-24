@@ -168,7 +168,6 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -281,7 +280,6 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -453,7 +451,6 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -607,7 +604,6 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -758,7 +754,6 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -1524,7 +1519,6 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
                                           data-testid="dropdown__toggle"
-                                          role="button"
                                           tabindex="0"
                                         >
                                           <button
@@ -1839,7 +1833,6 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -1952,7 +1945,6 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -2124,7 +2116,6 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -2278,7 +2269,6 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -2429,7 +2419,6 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -3052,7 +3041,6 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
                                           data-testid="dropdown__toggle"
-                                          role="button"
                                           tabindex="0"
                                         >
                                           <button
@@ -3367,7 +3355,6 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -3480,7 +3467,6 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -3652,7 +3638,6 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -3806,7 +3791,6 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -3927,7 +3911,6 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -4327,7 +4310,6 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                               aria-expanded="false"
                                               aria-haspopup="dialog"
                                               data-testid="dropdown__toggle"
-                                              role="button"
                                               tabindex="0"
                                             >
                                               <button
@@ -4930,7 +4912,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -5043,7 +5024,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -5215,7 +5195,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -5369,7 +5348,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -5520,7 +5498,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -6286,7 +6263,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
                                           data-testid="dropdown__toggle"
-                                          role="button"
                                           tabindex="0"
                                         >
                                           <button
@@ -6601,7 +6577,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -6714,7 +6689,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -6886,7 +6860,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -7040,7 +7013,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -7161,7 +7133,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -7596,7 +7567,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                               aria-expanded="false"
                                               aria-haspopup="dialog"
                                               data-testid="dropdown__toggle"
-                                              role="button"
                                               tabindex="0"
                                             >
                                               <button
@@ -8307,7 +8277,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -8420,7 +8389,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -8592,7 +8560,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -8746,7 +8713,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -8897,7 +8863,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -9657,7 +9622,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
                                           data-testid="dropdown__toggle"
-                                          role="button"
                                           tabindex="0"
                                         >
                                           <button
@@ -9972,7 +9936,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -10085,7 +10048,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -10257,7 +10219,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -10411,7 +10372,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -10532,7 +10492,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div
@@ -10964,7 +10923,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                               aria-expanded="false"
                                               aria-haspopup="dialog"
                                               data-testid="dropdown__toggle"
-                                              role="button"
                                               tabindex="0"
                                             >
                                               <button
@@ -11672,7 +11630,6 @@ exports[`Servers Settings > should render servers page 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -11778,7 +11735,6 @@ exports[`Servers Settings > should render servers page 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -11950,7 +11906,6 @@ exports[`Servers Settings > should render servers page 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -12104,7 +12059,6 @@ exports[`Servers Settings > should render servers page 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -12255,7 +12209,6 @@ exports[`Servers Settings > should render servers page 1`] = `
                     aria-haspopup="dialog"
                     class="w-full"
                     data-testid="dropdown__toggle"
-                    role="button"
                     tabindex="0"
                   >
                     <div

@@ -138,11 +138,9 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
-		const testIdSuffix = "-VotesFilter";
+		await userEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
 
-		await userEvent.click(screen.getByTestId("dropdown__toggle" + testIdSuffix));
-
-		await expect(screen.findByTestId("dropdown__content" + testIdSuffix)).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 
@@ -325,11 +323,9 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
-		const testIdSuffix = "-VotesFilter";
+		await userEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
 
-		await userEvent.click(screen.getByTestId("dropdown__toggle" + testIdSuffix));
-
-		await expect(screen.findByTestId("dropdown__content" + testIdSuffix)).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 

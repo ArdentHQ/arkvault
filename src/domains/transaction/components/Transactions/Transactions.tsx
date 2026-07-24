@@ -196,7 +196,7 @@ export const Transactions = memo(function Transactions({
 						</TabList>
 					</Tabs>
 
-					<div className="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden">
+					<div data-testid="Transactions--mobile-filter" className="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden">
 						<div className="flex-1">
 							<DropdownRoot>
 								<DropdownToggle>

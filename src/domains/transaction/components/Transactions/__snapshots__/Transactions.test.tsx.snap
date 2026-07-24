@@ -57,6 +57,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
   </div>
   <div
     class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
+    data-testid="Transactions--mobile-filter"
   >
     <div
       class="flex-1"
@@ -65,7 +66,6 @@ exports[`Transactions > should fetch more transactions 1`] = `
         aria-expanded="false"
         aria-haspopup="dialog"
         data-testid="dropdown__toggle"
-        role="button"
         tabindex="0"
       >
         <div
@@ -115,7 +115,6 @@ exports[`Transactions > should fetch more transactions 1`] = `
           aria-expanded="false"
           aria-haspopup="dialog"
           data-testid="dropdown__toggle"
-          role="button"
           tabindex="0"
         >
           <button
@@ -192,7 +191,6 @@ exports[`Transactions > should fetch more transactions 1`] = `
           aria-expanded="false"
           aria-haspopup="dialog"
           data-testid="dropdown__toggle"
-          role="button"
           tabindex="0"
         >
           <button
@@ -32048,6 +32046,7 @@ exports[`Transactions > should hide view more button when there are no next page
   </div>
   <div
     class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
+    data-testid="Transactions--mobile-filter"
   >
     <div
       class="flex-1"
@@ -32056,7 +32055,6 @@ exports[`Transactions > should hide view more button when there are no next page
         aria-expanded="false"
         aria-haspopup="dialog"
         data-testid="dropdown__toggle"
-        role="button"
         tabindex="0"
       >
         <div
@@ -32106,7 +32104,6 @@ exports[`Transactions > should hide view more button when there are no next page
           aria-expanded="false"
           aria-haspopup="dialog"
           data-testid="dropdown__toggle"
-          role="button"
           tabindex="0"
         >
           <button
@@ -32183,7 +32180,6 @@ exports[`Transactions > should hide view more button when there are no next page
           aria-expanded="false"
           aria-haspopup="dialog"
           data-testid="dropdown__toggle"
-          role="button"
           tabindex="0"
         >
           <button
@@ -37729,6 +37725,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
   </div>
   <div
     class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
+    data-testid="Transactions--mobile-filter"
   >
     <div
       class="flex-1"
@@ -37737,7 +37734,6 @@ exports[`Transactions > should open detail side panel on transaction row click 1
         aria-expanded="false"
         aria-haspopup="dialog"
         data-testid="dropdown__toggle"
-        role="button"
         tabindex="0"
       >
         <div
@@ -37787,7 +37783,6 @@ exports[`Transactions > should open detail side panel on transaction row click 1
           aria-expanded="false"
           aria-haspopup="dialog"
           data-testid="dropdown__toggle"
-          role="button"
           tabindex="0"
         >
           <button
@@ -37864,7 +37859,6 @@ exports[`Transactions > should open detail side panel on transaction row click 1
           aria-expanded="false"
           aria-haspopup="dialog"
           data-testid="dropdown__toggle"
-          role="button"
           tabindex="0"
         >
           <button

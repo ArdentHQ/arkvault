@@ -17,7 +17,7 @@ export const VotesFilter = ({
 	const { t } = useTranslation();
 
 	return (
-		<div {...properties} className="mr-6 hidden md:block">
+		<div {...properties} data-testid="VotesFilter" className="mr-6 hidden md:block">
 			<DropdownRoot>
 				<DropdownToggle>
 					<Button variant="secondary" size="sm" icon="Funnel" className="h-8">

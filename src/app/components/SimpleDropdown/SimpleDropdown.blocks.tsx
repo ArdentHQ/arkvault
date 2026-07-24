@@ -16,11 +16,10 @@ export const DropdownToggle: FC<DropdownToggleProperties> = ({ children, ...prop
 
 	return (
 		<div
-			data-testid="dropdown__toggle"
 			ref={refs.setReference}
-			role="button"
 			tabIndex={0}
 			{...getReferenceProps(props)}
+			data-testid="dropdown__toggle"
 			onClick={(event) => {
 				event.preventDefault();
 				setOpen((previous) => !previous);
