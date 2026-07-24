@@ -501,7 +501,7 @@ export const PortfolioHeader = ({
 												<Button
 													data-testid="WalletHeader__send-button"
 													className="my-auto flex-1 px-8 dim:bg-theme-dim-navy-600 dim:disabled:bg-theme-dim-navy-900 dim:disabled:text-theme-dim-navy-700 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
-													disabled={!profile.totalBalance().isZero()}
+													disabled={profile.totalBalance().isZero()}
 													variant="primary"
 													onClick={handleSend}
 												>
