@@ -2281,6 +2281,7 @@ exports[`Dashboard > render in lg 1`] = `
                     />
                     <div
                       class="text-theme-secondary-700 dark:text-theme-dark-200"
+                      data-testid="mobile-filter__chevron-icon"
                     >
                       <div
                         style="height: 8px; width: 8px;"
@@ -10714,6 +10715,7 @@ exports[`Dashboard > render in md 1`] = `
                     />
                     <div
                       class="text-theme-secondary-700 dark:text-theme-dark-200"
+                      data-testid="mobile-filter__chevron-icon"
                     >
                       <div
                         style="height: 8px; width: 8px;"
@@ -19147,6 +19149,7 @@ exports[`Dashboard > render in sm 1`] = `
                     />
                     <div
                       class="text-theme-secondary-700 dark:text-theme-dark-200"
+                      data-testid="mobile-filter__chevron-icon"
                     >
                       <div
                         style="height: 8px; width: 8px;"
@@ -24192,6 +24195,7 @@ exports[`Dashboard > render in xl 1`] = `
                     />
                     <div
                       class="text-theme-secondary-700 dark:text-theme-dark-200"
+                      data-testid="mobile-filter__chevron-icon"
                     >
                       <div
                         style="height: 8px; width: 8px;"
@@ -32345,6 +32349,7 @@ exports[`Dashboard > render in xs 1`] = `
                     />
                     <div
                       class="text-theme-secondary-700 dark:text-theme-dark-200"
+                      data-testid="mobile-filter__chevron-icon"
                     >
                       <div
                         style="height: 8px; width: 8px;"
@@ -37252,6 +37257,7 @@ exports[`Dashboard > should render 1`] = `
                     />
                     <div
                       class="text-theme-secondary-700 dark:text-theme-dark-200"
+                      data-testid="mobile-filter__chevron-icon"
                     >
                       <div
                         style="height: 8px; width: 8px;"
