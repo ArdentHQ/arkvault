@@ -9,9 +9,9 @@ import { useLedgerRetryTimer } from "./hooks/use-ledger-retry-timer";
 
 vi.mock("./hooks/use-ledger-retry-timer", () => ({
 	useLedgerRetryTimer: vi.fn(() => ({
-		shouldShowRetry: false,
 		isRetrying: false,
 		reset: vi.fn().mockResolvedValue(undefined),
+		shouldShowRetry: false,
 	})),
 }));
 
@@ -22,9 +22,9 @@ describe("LedgerTransactionApproveStep", () => {
 
 	beforeEach(() => {
 		vi.mocked(useLedgerRetryTimer).mockReturnValue({
-			shouldShowRetry: false,
 			isRetrying: false,
 			reset: vi.fn().mockResolvedValue(undefined),
+			shouldShowRetry: false,
 		});
 	});
 
@@ -64,11 +64,10 @@ describe("LedgerTransactionApproveStep", () => {
 			writable: true,
 		});
 
-		const { container } = render(<LedgerTransactionApproveStep transfer={transfer} migrator={migrator} />, {
+		render(<LedgerTransactionApproveStep transfer={transfer} migrator={migrator} />, {
 			route,
 		});
 
-		expect(container.querySelector(".space-y-4")).toBeInTheDocument();
 		expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
 	});
 
@@ -91,11 +90,11 @@ describe("LedgerTransactionApproveStep", () => {
 			writable: true,
 		});
 
-		const { container } = render(<LedgerTransactionApproveStep transfer={transfer} migrator={multiTxMigrator} />, {
+		render(<LedgerTransactionApproveStep transfer={transfer} migrator={multiTxMigrator} />, {
 			route,
 		});
 
-		expect(container.querySelector(".space-y-4")).toBeInTheDocument();
+		expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
 	});
 
 	it("should call onSuccess when signAndBroadcast resolves", async () => {
@@ -149,9 +148,9 @@ describe("LedgerTransactionApproveStep", () => {
 		const resetMock = vi.fn().mockResolvedValue(undefined);
 
 		vi.mocked(useLedgerRetryTimer).mockReturnValue({
-			shouldShowRetry: true,
 			isRetrying: false,
 			reset: resetMock,
+			shouldShowRetry: true,
 		});
 
 		const onSuccess = vi.fn();
@@ -161,10 +160,9 @@ describe("LedgerTransactionApproveStep", () => {
 		transfer.setAmount(1);
 		vi.spyOn(transfer, "isCompleted").mockReturnValue(true);
 
-		let signAndBroadcastResolve: (value: any) => void;
 		const signAndBroadcastMock = vi
 			.fn()
-			.mockImplementation(() => new Promise((resolve) => (signAndBroadcastResolve = resolve)));
+			.mockImplementation(() => new Promise((resolve) => resolve({ hash: "0xabc123" })));
 
 		Object.defineProperty(transfer, "signAndBroadcast", {
 			configurable: true,

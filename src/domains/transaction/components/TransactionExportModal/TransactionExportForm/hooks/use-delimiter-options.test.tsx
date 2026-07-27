@@ -1,6 +1,7 @@
 import { renderHook } from "@testing-library/react";
 import { useDelimiterOptions } from "./use-delimiter-options";
 import { CsvDelimiter } from "@/domains/transaction/components/TransactionExportModal";
+import type { JSX } from "react";
 
 describe("useDelimiterOptions", () => {
 	it("should return options with correct active states", () => {

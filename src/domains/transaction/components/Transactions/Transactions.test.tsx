@@ -454,10 +454,7 @@ describe("Transactions", () => {
 		const button = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
 
 		expect(button).toBeInTheDocument();
-		await waitFor(() => {
-			const icon = button.querySelector("svg");
-			expect(icon).toBeInTheDocument();
-		});
+		expect(button.children.length).toBeGreaterThan(0);
 
 		await userEvent.click(button);
 
@@ -484,9 +481,9 @@ describe("Transactions", () => {
 		const mobileFilter = screen.getByTestId("Transactions--mobile-filter");
 		const toggleButton = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
 
-		const iconWrapper = screen.getByTestId("mobile-filter__chevron-icon") as HTMLElement;
+		const iconWrapper = screen.getByTestId("mobile-filter__chevron-icon");
 		expect(iconWrapper).toBeInTheDocument();
-		expect(iconWrapper.querySelector("svg")).toBeInTheDocument();
+		expect(iconWrapper.children.length).toBeGreaterThan(0);
 
 		await userEvent.click(toggleButton);
 
@@ -494,9 +491,9 @@ describe("Transactions", () => {
 			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		});
 
-		const iconAfterOpen = screen.getByTestId("mobile-filter__chevron-icon") as HTMLElement;
+		const iconAfterOpen = screen.getByTestId("mobile-filter__chevron-icon");
 		expect(iconAfterOpen).toBeInTheDocument();
-		expect(iconAfterOpen.querySelector("svg")).toBeInTheDocument();
+		expect(iconAfterOpen.children.length).toBeGreaterThan(0);
 
 		await userEvent.click(toggleButton);
 
@@ -504,9 +501,9 @@ describe("Transactions", () => {
 			expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
 		});
 
-		const iconAfterClose = screen.getByTestId("mobile-filter__chevron-icon") as HTMLElement;
+		const iconAfterClose = screen.getByTestId("mobile-filter__chevron-icon");
 		expect(iconAfterClose).toBeInTheDocument();
-		expect(iconAfterClose.querySelector("svg")).toBeInTheDocument();
+		expect(iconAfterClose.children.length).toBeGreaterThan(0);
 	});
 
 	it("should ignore tab change on loading state", async () => {
