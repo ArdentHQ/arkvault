@@ -2,7 +2,7 @@ import { ProfileRow, ProfileRowSkeleton } from "@/domains/profile/components/Pro
 import Slider, { Settings } from "react-slick";
 
 import { Contracts } from "@/app/lib/profiles";
-import { DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/SimpleDropdown";
 import React, { JSX } from "react";
 import { chunk } from "@/app/lib/helpers";
 
