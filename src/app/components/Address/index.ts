@@ -1,2 +1,2 @@
-export * from "./Address";
 export * from "./AddressLink";
+export { Address } from "./Address";

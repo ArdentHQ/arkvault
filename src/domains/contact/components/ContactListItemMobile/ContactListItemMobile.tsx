@@ -33,7 +33,7 @@ export const ContactListItemMobile = ({ contact, onSend, options, onAction, hasB
 	}, [hasBalance, profileAvailableNetworks]);
 
 	const renderAddress = useCallback(
-		(address: Contracts.IContactAddress) => <Address address={address.address()} size="sm" showCopyButton />,
+		(address: Contracts.IContactAddress) => <Address address={address.address()} showCopyButton />,
 		[hasBalance, onSend],
 	);
 

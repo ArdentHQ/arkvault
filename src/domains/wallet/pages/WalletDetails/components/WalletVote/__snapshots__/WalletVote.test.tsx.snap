@@ -17,18 +17,26 @@ exports[`#WalletVote > Votes > should render 1`] = `
         class="max-w-28 flex-1 shrink-0 truncate xs:max-w-32 sm:max-w-40 md:max-w-44"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
-          <span>
-            <span>
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
-                data-testid="Address__address"
-              >
-                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+          <div
+            class="min-w-0 grow"
+          >
+            <span
+              class="block w-full"
+            >
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5 text-base text-theme-text"
+                    data-testid="Address__address"
+                  >
+                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  </span>
+                </span>
               </span>
             </span>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -483,18 +491,26 @@ exports[`#WalletVote > WalletVote > should render as all resigned 1`] = `
             class="max-w-28 flex-1 shrink-0 truncate xs:max-w-32 sm:max-w-40 md:max-w-44"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
             >
-              <span>
-                <span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+              <div
+                class="min-w-0 grow"
+              >
+                <span
+                  class="block w-full"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5 text-base text-theme-text"
+                        data-testid="Address__address"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                    </span>
                   </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
         </div>
@@ -2373,18 +2389,26 @@ exports[`#WalletVote > WalletVote > single vote networks > should render a vote 
             class="max-w-28 flex-1 shrink-0 truncate xs:max-w-32 sm:max-w-40 md:max-w-44"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
             >
-              <span>
-                <span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+              <div
+                class="min-w-0 grow"
+              >
+                <span
+                  class="block w-full"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5 text-base text-theme-text"
+                        data-testid="Address__address"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                    </span>
                   </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
         </div>
@@ -2463,18 +2487,26 @@ exports[`#WalletVote > WalletVote > single vote networks > should render a vote 
             class="max-w-28 flex-1 shrink-0 truncate xs:max-w-32 sm:max-w-40 md:max-w-44"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
             >
-              <span>
-                <span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+              <div
+                class="min-w-0 grow"
+              >
+                <span
+                  class="block w-full"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5 text-base text-theme-text"
+                        data-testid="Address__address"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                    </span>
                   </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
         </div>
@@ -2657,18 +2689,26 @@ exports[`#WalletVote > WalletVote > single vote networks > should render a vote 
             class="max-w-28 flex-1 shrink-0 truncate xs:max-w-32 sm:max-w-40 md:max-w-44"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
             >
-              <span>
-                <span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+              <div
+                class="min-w-0 grow"
+              >
+                <span
+                  class="block w-full"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm dim:text-theme-dim-50 dark:text-theme-dark-50 md:text-base md:leading-5 text-base text-theme-text"
+                        data-testid="Address__address"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                    </span>
                   </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
         </div>

@@ -335,10 +335,10 @@ export const PortfolioHeader = ({
 												</div>
 												<div className="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]">
 													<Address
-														size={isXs ? "sm" : undefined}
 														address={wallet.address()}
-														truncateOnTable={true}
-														addressClass="leading-[17px] sm:leading-5"
+														addressClass={cn("leading-[17px] sm:leading-5", {
+															"text-sm": isXs,
+														})}
 													/>
 												</div>
 											</div>
