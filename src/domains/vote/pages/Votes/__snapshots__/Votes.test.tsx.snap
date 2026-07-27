@@ -293,6 +293,7 @@ exports[`Votes > should emit action on continue button 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -303,14 +304,27 @@ exports[`Votes > should emit action on continue button 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -389,7 +403,9 @@ exports[`Votes > should emit action on continue button 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -560,6 +576,7 @@ exports[`Votes > should emit action on continue button 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -712,6 +729,7 @@ exports[`Votes > should emit action on continue button 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -938,11 +956,13 @@ exports[`Votes > should emit action on continue button 1`] = `
                   </div>
                   <div
                     class="mr-6 hidden md:block"
+                    data-testid="VotesFilter"
                   >
                     <div
                       aria-expanded="false"
                       aria-haspopup="dialog"
-                      data-testid="dropdown__toggle-VotesFilter"
+                      data-testid="dropdown__toggle"
+                      tabindex="0"
                     >
                       <button
                         class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white h-8"
@@ -9550,6 +9570,7 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -9560,14 +9581,27 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -9646,7 +9680,9 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -9817,6 +9853,7 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -9969,6 +10006,7 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -10133,11 +10171,13 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
                   </div>
                   <div
                     class="mr-6 hidden md:block"
+                    data-testid="VotesFilter"
                   >
                     <div
                       aria-expanded="false"
                       aria-haspopup="dialog"
-                      data-testid="dropdown__toggle-VotesFilter"
+                      data-testid="dropdown__toggle"
+                      tabindex="0"
                     >
                       <button
                         class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white h-8"
@@ -18001,6 +18041,7 @@ exports[`Votes > should filter current validators 1`] = `
   >
     <div
       class="fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white dim:bg-theme-dim-950 dark:bg-black sm:hidden"
+      data-floating-ui-inert=""
       data-testid="NavigationBarMobile"
     >
       <div
@@ -18126,6 +18167,7 @@ exports[`Votes > should filter current validators 1`] = `
     <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dim:bg-theme-dim-900 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dim:border-b-theme-dim-700 dark:border-b-theme-dark-700"
+      data-floating-ui-inert=""
     >
       <div
         class="relative flex h-12 flex-row"
@@ -18285,6 +18327,7 @@ exports[`Votes > should filter current validators 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -18295,14 +18338,27 @@ exports[`Votes > should filter current validators 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -18381,7 +18437,9 @@ exports[`Votes > should filter current validators 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -18552,6 +18610,7 @@ exports[`Votes > should filter current validators 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -18704,6 +18763,7 @@ exports[`Votes > should filter current validators 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -18743,6 +18803,7 @@ exports[`Votes > should filter current validators 1`] = `
     >
       <div
         class="w-full py-4 first:pt-8 last:pb-8"
+        data-floating-ui-inert=""
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -18797,6 +18858,7 @@ exports[`Votes > should filter current validators 1`] = `
                 >
                   <div
                     class="pointer-events-none absolute left-0 items-center pl-6"
+                    data-floating-ui-inert=""
                   >
                     <div
                       class="text-theme-secondary-500 dim:text-theme-dim-500"
@@ -18852,6 +18914,7 @@ exports[`Votes > should filter current validators 1`] = `
                   </div>
                   <div
                     class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 pl-12"
+                    data-floating-ui-inert=""
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -18868,12 +18931,15 @@ exports[`Votes > should filter current validators 1`] = `
                   </div>
                   <div
                     class="mr-6 hidden md:block"
+                    data-testid="VotesFilter"
                   >
                     <div
                       aria-controls="_r_me_"
                       aria-expanded="true"
                       aria-haspopup="dialog"
-                      data-testid="dropdown__toggle-VotesFilter"
+                      data-floating-ui-inert=""
+                      data-testid="dropdown__toggle"
+                      tabindex="0"
                     >
                       <button
                         class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white h-8"
@@ -18927,9 +18993,36 @@ exports[`Votes > should filter current validators 1`] = `
                         </div>
                       </button>
                     </div>
+                    <span
+                      aria-hidden="true"
+                      data-floating-ui-inert=""
+                      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+                      tabindex="-1"
+                    />
+                    <span
+                      data-floating-ui-focus-guard=""
+                      data-type="outside"
+                      role="button"
+                      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+                      tabindex="0"
+                    />
+                    <span
+                      aria-owns="_r_10n_"
+                      data-floating-ui-inert=""
+                      style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
+                    />
+                    <span
+                      data-floating-ui-focus-guard=""
+                      data-type="outside"
+                      role="button"
+                      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+                      tabindex="0"
+                    />
                   </div>
                 </div>
-                <div>
+                <div
+                  data-floating-ui-inert=""
+                >
                   <div
                     class="table-wrapper with-x-padding"
                     role="table"
@@ -19262,6 +19355,7 @@ exports[`Votes > should filter current validators 1`] = `
         </div>
         <div
           class="dark:bg-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t border-theme-secondary-300 bg-theme-background py-3 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:mb-0"
+          data-floating-ui-inert=""
           data-testid="ValidatorTable__footer"
         >
           <div
@@ -19455,6 +19549,7 @@ exports[`Votes > should filter current validators 1`] = `
       </div>
       <div
         class="display-contents"
+        data-floating-ui-inert=""
       />
     </div>
   </div>
@@ -19755,6 +19850,7 @@ exports[`Votes > should render 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -19765,14 +19861,27 @@ exports[`Votes > should render 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -19851,7 +19960,9 @@ exports[`Votes > should render 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -20022,6 +20133,7 @@ exports[`Votes > should render 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -20174,6 +20286,7 @@ exports[`Votes > should render 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -20338,11 +20451,13 @@ exports[`Votes > should render 1`] = `
                   </div>
                   <div
                     class="mr-6 hidden md:block"
+                    data-testid="VotesFilter"
                   >
                     <div
                       aria-expanded="false"
                       aria-haspopup="dialog"
-                      data-testid="dropdown__toggle-VotesFilter"
+                      data-testid="dropdown__toggle"
+                      tabindex="0"
                     >
                       <button
                         class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white h-8"
@@ -28491,6 +28606,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -28501,14 +28617,27 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -28587,7 +28716,9 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -28758,6 +28889,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -28910,6 +29042,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -29074,11 +29207,13 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   </div>
                   <div
                     class="mr-6 hidden md:block"
+                    data-testid="VotesFilter"
                   >
                     <div
                       aria-expanded="false"
                       aria-haspopup="dialog"
-                      data-testid="dropdown__toggle-VotesFilter"
+                      data-testid="dropdown__toggle"
+                      tabindex="0"
                     >
                       <button
                         class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white h-8"
@@ -37227,6 +37362,7 @@ exports[`Votes > should select a validator 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -37237,14 +37373,27 @@ exports[`Votes > should select a validator 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -37323,7 +37472,9 @@ exports[`Votes > should select a validator 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -37494,6 +37645,7 @@ exports[`Votes > should select a validator 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -37646,6 +37798,7 @@ exports[`Votes > should select a validator 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -37810,11 +37963,13 @@ exports[`Votes > should select a validator 1`] = `
                   </div>
                   <div
                     class="mr-6 hidden md:block"
+                    data-testid="VotesFilter"
                   >
                     <div
                       aria-expanded="false"
                       aria-haspopup="dialog"
-                      data-testid="dropdown__toggle-VotesFilter"
+                      data-testid="dropdown__toggle"
+                      tabindex="0"
                     >
                       <button
                         class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white h-8"
@@ -46431,6 +46586,7 @@ exports[`Votes > should select an address and validator 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -46441,14 +46597,27 @@ exports[`Votes > should select an address and validator 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -46527,7 +46696,9 @@ exports[`Votes > should select an address and validator 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -46698,6 +46869,7 @@ exports[`Votes > should select an address and validator 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -46850,6 +47022,7 @@ exports[`Votes > should select an address and validator 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -47014,11 +47187,13 @@ exports[`Votes > should select an address and validator 1`] = `
                   </div>
                   <div
                     class="mr-6 hidden md:block"
+                    data-testid="VotesFilter"
                   >
                     <div
                       aria-expanded="false"
                       aria-haspopup="dialog"
-                      data-testid="dropdown__toggle-VotesFilter"
+                      data-testid="dropdown__toggle"
+                      tabindex="0"
                     >
                       <button
                         class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white h-8"
@@ -55165,6 +55340,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -55175,14 +55351,27 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -55254,7 +55443,9 @@ exports[`Votes > should trigger network connection warning 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -55425,6 +55616,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -55577,6 +55769,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -55803,11 +55996,13 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   </div>
                   <div
                     class="mr-6 hidden md:block"
+                    data-testid="VotesFilter"
                   >
                     <div
                       aria-expanded="false"
                       aria-haspopup="dialog"
-                      data-testid="dropdown__toggle-VotesFilter"
+                      data-testid="dropdown__toggle"
+                      tabindex="0"
                     >
                       <button
                         class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white h-8"
