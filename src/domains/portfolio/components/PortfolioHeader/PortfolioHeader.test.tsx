@@ -41,11 +41,52 @@ vi.mock("@/domains/wallet/hooks", async (importOriginal) => {
 
 vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options", () => {
 	const mockUseWalletOptions = vi.fn(() => ({
-		additionalOptions: { key: "additional", options: [], title: "Additional" },
-		contractOptions: { key: "contract", options: [], title: "Contract" },
-		primaryOptions: { key: "primary", options: [], title: "Primary" },
-		registrationOptions: { key: "registration", options: [], title: "Registration" },
-		secondaryOptions: { key: "secondary", options: [], title: "Secondary" },
+		additionalOptions: {
+			hasDivider: true,
+			key: "additional",
+			options: [
+				{ icon: "Sign", iconPosition: "start", label: "Sign Message", value: "sign-message" },
+				{
+					icon: "Info",
+					iconPosition: "end",
+					label: "With Secondary",
+					secondaryLabel: "secondary text",
+					value: "additional-secondary",
+				},
+				{
+					active: true,
+					label: "With Secondary 2",
+					secondaryLabel: (active: boolean) => (active ? "active" : "inactive"),
+					value: "additional-secondary-2",
+				},
+				{ disabled: true, label: "Disabled Option", value: "additional-disabled" },
+			],
+			title: "Additional",
+		},
+		contractOptions: {
+			key: "contract",
+			options: [{ icon: "File", label: "Deploy Contract", value: "deploy-contract" }],
+			title: "Contract",
+		},
+		primaryOptions: {
+			key: "primary",
+			options: [{ icon: "Send", iconPosition: "start" as const, label: "Send", value: "send" }],
+			title: "Primary",
+		},
+		registrationOptions: {
+			key: "registration",
+			options: [{ icon: "Pencil", label: "Register Username", value: "register-username" }],
+			title: "Registration",
+		},
+		secondaryOptions: {
+			hasDivider: true,
+			key: "secondary",
+			options: [
+				{ icon: "Trash", label: "Delete Wallet", value: "delete" },
+				{ icon: "ArrowSquareUpRight", iconPosition: "end", label: "Export", value: "export" },
+			],
+			title: "Secondary",
+		},
 	}));
 
 	return { useWalletOptions: mockUseWalletOptions };
@@ -210,7 +251,7 @@ describe("PortfolioHeader", () => {
 		});
 	});
 
-	it("should render the dropdown menu with additional options", async () => {
+	it("should render the dropdown menu with options and groups", async () => {
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
 		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
@@ -221,10 +262,65 @@ describe("PortfolioHeader", () => {
 			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
 		});
 
-		// Click the more button to open dropdown
 		const user = userEvent.setup();
-		const moreButton = screen.getByTestId("WalletHeaderMobile__more-button");
-		await user.click(moreButton);
+		await user.click(screen.getByTestId("dropdown__toggle"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		});
+
+		expect(screen.getByText("Primary")).toBeInTheDocument();
+		expect(screen.getByText("Registration")).toBeInTheDocument();
+		expect(screen.getByText("Contract")).toBeInTheDocument();
+		expect(screen.getByText("Additional")).toBeInTheDocument();
+		expect(screen.getByText("Secondary")).toBeInTheDocument();
+	});
+
+	it("should render dropdown options with secondary labels", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+
+		const user = userEvent.setup();
+		await user.click(screen.getByTestId("dropdown__toggle"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		});
+
+		expect(screen.getByText("With Secondary")).toBeInTheDocument();
+		expect(screen.getByText("With Secondary 2")).toBeInTheDocument();
+	});
+
+	it("should render disabled dropdown option", async () => {
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(100));
+
+		renderPortfolioHeader();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletHeader")).toBeInTheDocument();
+		});
+
+		const user = userEvent.setup();
+		await user.click(screen.getByTestId("dropdown__toggle"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByText("Disabled Option")).toBeInTheDocument();
+		});
+
+		await user.click(screen.getByText("Disabled Option"));
 	});
 
 	it("should render the wallet address display", async () => {
