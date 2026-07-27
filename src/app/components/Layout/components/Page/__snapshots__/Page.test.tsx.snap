@@ -293,7 +293,6 @@ exports[`Page > should render with navigation context 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -406,7 +405,6 @@ exports[`Page > should render with navigation context 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -578,7 +576,6 @@ exports[`Page > should render with navigation context 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -732,7 +729,6 @@ exports[`Page > should render with navigation context 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -1068,7 +1064,6 @@ exports[`Page > should render with navigation context 2`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -1181,7 +1176,6 @@ exports[`Page > should render with navigation context 2`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -1353,7 +1347,6 @@ exports[`Page > should render with navigation context 2`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -1507,7 +1500,6 @@ exports[`Page > should render with navigation context 2`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -1843,7 +1835,6 @@ exports[`Page > should render with navigation context 3`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -1956,7 +1947,6 @@ exports[`Page > should render with navigation context 3`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -2128,7 +2118,6 @@ exports[`Page > should render with navigation context 3`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -2282,7 +2271,6 @@ exports[`Page > should render with navigation context 3`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -2618,7 +2606,6 @@ exports[`Page > should render with sidebar = false 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -2724,7 +2711,6 @@ exports[`Page > should render with sidebar = false 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -2896,7 +2882,6 @@ exports[`Page > should render with sidebar = false 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -3050,7 +3035,6 @@ exports[`Page > should render with sidebar = false 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -3382,7 +3366,6 @@ exports[`Page > should render with sidebar = true 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
@@ -3488,7 +3471,6 @@ exports[`Page > should render with sidebar = true 1`] = `
                 aria-haspopup="dialog"
                 class="flex items-center"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <div
@@ -3660,7 +3642,6 @@ exports[`Page > should render with sidebar = true 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
-                  role="button"
                   tabindex="0"
                 >
                   <div
@@ -3814,7 +3795,6 @@ exports[`Page > should render with sidebar = true 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
-                role="button"
                 tabindex="0"
               >
                 <button
