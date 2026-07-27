@@ -4,11 +4,29 @@ import { Contracts } from "@/app/lib/profiles";
 import { LedgerTransactionApproveStep } from "./LedgerTransactionApproveStep";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { createLedgerMocks } from "@/tests/mocks/Ledger";
+import userEvent from "@testing-library/user-event";
+import { useLedgerRetryTimer } from "./hooks/use-ledger-retry-timer";
+
+vi.mock("./hooks/use-ledger-retry-timer", () => ({
+	useLedgerRetryTimer: vi.fn(() => ({
+		shouldShowRetry: false,
+		isRetrying: false,
+		reset: vi.fn().mockResolvedValue(undefined),
+	})),
+}));
 
 describe("LedgerTransactionApproveStep", () => {
 	let profile: Contracts.IProfile;
 	let migrator: LedgerMigrator;
 	const route = `/profiles/${getMainsailProfileId()}/dashboard`;
+
+	beforeEach(() => {
+		vi.mocked(useLedgerRetryTimer).mockReturnValue({
+			shouldShowRetry: false,
+			isRetrying: false,
+			reset: vi.fn().mockResolvedValue(undefined),
+		});
+	});
 
 	beforeAll(async () => {
 		mockNanoSTransport();
@@ -124,6 +142,77 @@ describe("LedgerTransactionApproveStep", () => {
 
 		await waitFor(() => {
 			expect(onError).toHaveBeenCalled();
+		});
+	});
+
+	it("should handle retry when retry button is clicked", async () => {
+		const resetMock = vi.fn().mockResolvedValue(undefined);
+
+		vi.mocked(useLedgerRetryTimer).mockReturnValue({
+			shouldShowRetry: true,
+			isRetrying: false,
+			reset: resetMock,
+		});
+
+		const onSuccess = vi.fn();
+		const transfer = profile.draftTransactionFactory().transfer();
+		transfer.setSender(profile.wallets().first());
+		transfer.addRecipientWallet(profile.wallets().last());
+		transfer.setAmount(1);
+		vi.spyOn(transfer, "isCompleted").mockReturnValue(true);
+
+		let signAndBroadcastResolve: (value: any) => void;
+		const signAndBroadcastMock = vi
+			.fn()
+			.mockImplementation(() => new Promise((resolve) => (signAndBroadcastResolve = resolve)));
+
+		Object.defineProperty(transfer, "signAndBroadcast", {
+			configurable: true,
+			value: signAndBroadcastMock,
+			writable: true,
+		});
+
+		render(<LedgerTransactionApproveStep transfer={transfer} migrator={migrator} onSuccess={onSuccess} />, {
+			route,
+		});
+
+		await waitFor(() => {
+			expect(signAndBroadcastMock).toHaveBeenCalled();
+		});
+
+		// Clear the initial call from useEffect
+		signAndBroadcastMock.mockClear();
+		resetMock.mockClear();
+
+		const retryButton = screen.getByText("Retry");
+		await userEvent.click(retryButton);
+
+		await waitFor(() => {
+			expect(resetMock).toHaveBeenCalled();
+		});
+
+		await waitFor(() => {
+			expect(signAndBroadcastMock).toHaveBeenCalled();
+		});
+	});
+
+	it("should not show retry button when shouldShowRetry is false", async () => {
+		const transfer = profile.draftTransactionFactory().transfer();
+		transfer.setSender(profile.wallets().first());
+		transfer.addRecipientWallet(profile.wallets().last());
+		transfer.setAmount(1);
+		vi.spyOn(transfer, "isCompleted").mockReturnValue(true);
+
+		Object.defineProperty(transfer, "signAndBroadcast", {
+			configurable: true,
+			value: vi.fn().mockResolvedValue({ hash: "0xabc123" }),
+			writable: true,
+		});
+
+		render(<LedgerTransactionApproveStep transfer={transfer} migrator={migrator} />, { route });
+
+		await waitFor(() => {
+			expect(screen.queryByText("Retry")).not.toBeInTheDocument();
 		});
 	});
 });
