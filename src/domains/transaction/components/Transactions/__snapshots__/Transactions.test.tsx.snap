@@ -78,6 +78,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
           </span>
           <div
             class="text-theme-secondary-700 dark:text-theme-dark-200"
+            data-testid="mobile-filter__chevron-icon"
           >
             <div
               style="height: 8px; width: 8px;"
@@ -32067,6 +32068,7 @@ exports[`Transactions > should hide view more button when there are no next page
           </span>
           <div
             class="text-theme-secondary-700 dark:text-theme-dark-200"
+            data-testid="mobile-filter__chevron-icon"
           >
             <div
               style="height: 8px; width: 8px;"
@@ -37746,6 +37748,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
           </span>
           <div
             class="text-theme-secondary-700 dark:text-theme-dark-200"
+            data-testid="mobile-filter__chevron-icon"
           >
             <div
               style="height: 8px; width: 8px;"

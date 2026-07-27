@@ -210,6 +210,7 @@ export const Transactions = memo(function Transactions({
 											</span>
 											<Icon
 												size="xs"
+												data-testid="mobile-filter__chevron-icon"
 												name={isOpen ? "ChevronUpSmall" : "ChevronDownSmall"}
 												className="text-theme-secondary-700 dark:text-theme-dark-200"
 											/>

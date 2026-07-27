@@ -472,6 +472,43 @@ describe("Transactions", () => {
 		});
 	});
 
+	it("should show correct chevron icon in mobile dropdown toggle based on open state", async () => {
+		renderResponsiveWithRoute(<Transactions profile={profile} wallets={profile.wallets().values()} />, "xs", {
+			route: dashboardURL,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
+		);
+
+		const mobileFilter = screen.getByTestId("Transactions--mobile-filter");
+		const toggleButton = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
+
+		const iconWrapper = screen.getByTestId("mobile-filter__chevron-icon") as HTMLElement;
+		expect(iconWrapper).toBeInTheDocument();
+		expect(iconWrapper.querySelector("svg")).toBeInTheDocument();
+
+		await userEvent.click(toggleButton);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		});
+
+		const iconAfterOpen = screen.getByTestId("mobile-filter__chevron-icon") as HTMLElement;
+		expect(iconAfterOpen).toBeInTheDocument();
+		expect(iconAfterOpen.querySelector("svg")).toBeInTheDocument();
+
+		await userEvent.click(toggleButton);
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
+		});
+
+		const iconAfterClose = screen.getByTestId("mobile-filter__chevron-icon") as HTMLElement;
+		expect(iconAfterClose).toBeInTheDocument();
+		expect(iconAfterClose.querySelector("svg")).toBeInTheDocument();
+	});
+
 	it("should ignore tab change on loading state", async () => {
 		render(<Transactions profile={profile} wallets={profile.wallets().values()} isLoading={true} />, {
 			route: dashboardURL,
