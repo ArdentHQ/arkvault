@@ -302,4 +302,60 @@ describe("NotificationsSidepanel", () => {
 			expect(screen.getByTestId("NotificationRow")).toBeInTheDocument();
 		});
 	});
+
+	it("should reset transaction modal item when side panel is closed", async () => {
+		const mockTransaction = {
+			confirmations: () => ({ toNumber: (): number => 10 }),
+			convertedAmount: (): string => "100.5",
+			data: () => ({
+				receipt: () => ({ hasUnknownError: (): boolean => false, prettyError: (): string => "Error" }),
+			}),
+			hash: (): string => "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+			isConfirmed: (): boolean => true,
+			isMultiPayment: (): boolean => false,
+			isSuccess: (): boolean => true,
+			isTokenTransfer: (): boolean => false,
+			isTransfer: (): boolean => true,
+			timestamp: () => ({ toUNIX: (): number => 1743669254 }),
+			wallet: () => ({ alias: (): string => "TestWallet" }),
+		};
+
+		vi.mocked(useNotifications).mockReturnValue({
+			hasUnread: false,
+			isNotificationUnread: () => false,
+			markAllAsRead: vi.fn(),
+			markAllAsRemoved: vi.fn(),
+			markAsRead: vi.fn(),
+			markAsRemoved: vi.fn(),
+			transactions: [mockTransaction],
+		});
+
+		const onOpenChange = vi.fn();
+
+		render(
+			<Wrapper>
+				<NotificationsSidepanel open={true} onOpenChange={onOpenChange} />,
+			</Wrapper>,
+			{
+				route: `/profiles/${getMainsailProfileId()}/portfolio`,
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("NotificationsSidepanel")).toBeInTheDocument();
+		});
+
+		const user = userEvent.setup();
+		await user.click(screen.getByTestId("NotificationRow"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm__back-button")).toBeInTheDocument();
+		});
+
+		const closeButton = screen.getByTestId("SidePanel__close-button");
+		await user.click(closeButton);
+
+		expect(onOpenChange).toHaveBeenCalledWith(false);
+	});
 });
