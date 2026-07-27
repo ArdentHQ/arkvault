@@ -454,6 +454,10 @@ describe("Transactions", () => {
 		const button = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
 
 		expect(button).toBeInTheDocument();
+		await waitFor(() => {
+			const icon = button.querySelector("svg");
+			expect(icon).toBeInTheDocument();
+		});
 
 		await userEvent.click(button);
 
@@ -461,7 +465,7 @@ describe("Transactions", () => {
 			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		});
 
-		await userEvent.click(button);
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
