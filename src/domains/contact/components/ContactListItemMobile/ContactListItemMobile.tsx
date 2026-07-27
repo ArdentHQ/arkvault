@@ -2,7 +2,7 @@ import React, { useCallback, useMemo } from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { Icon } from "@/app/components/Icon";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
-import { Dropdown } from "@/app/components/Dropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { useNetworks } from "@/app/hooks";
 import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
 import { useTranslation } from "react-i18next";
@@ -61,18 +61,29 @@ export const ContactListItemMobile = ({ contact, onSend, options, onAction, hasB
 
 							<span className="block h-5 w-px bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-secondary-800" />
 
-							<Dropdown
-								toggleContent={
+							<DropdownRoot>
+								<DropdownToggle>
 									<button
 										type="button"
 										className="flex text-theme-secondary-700 dim:text-theme-dim-200"
 									>
 										<Icon name="EllipsisVerticalFilled" size="md" />
 									</button>
-								}
-								options={options}
-								onSelect={(action: ContactListItemOption) => onAction(action)}
-							/>
+								</DropdownToggle>
+								<DropdownContent>
+									<ul>
+										{options.map((option, index) => (
+											<DropdownListItem
+												key={option.value}
+												data-testid={`dropdown__option--${index}`}
+												onClick={() => onAction(option as ContactListItemOption)}
+											>
+												{option.label}
+											</DropdownListItem>
+										))}
+									</ul>
+								</DropdownContent>
+							</DropdownRoot>
 						</div>
 					}
 				>
