@@ -1,5 +1,6 @@
 import React from "react";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { Icon } from "@/app/components/Icon";
 import { ButtonVariant } from "@/types";
 import { twMerge } from "tailwind-merge";
@@ -51,11 +52,8 @@ export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect
 			<div className="absolute -right-1 -top-1 m-4 flex items-center space-x-1">
 				{addonIcons}
 				{actions && actions.length > 0 && (
-					<Dropdown
-						placement="bottom"
-						options={actions}
-						onSelect={onSelect}
-						toggleContent={
+					<DropdownRoot>
+						<DropdownToggle>
 							<div className="flex w-4 justify-center overflow-hidden">
 								<Icon
 									name="EllipsisVertical"
@@ -63,8 +61,21 @@ export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect
 									size="md"
 								/>
 							</div>
-						}
-					/>
+						</DropdownToggle>
+						<DropdownContent>
+							<ul>
+								{actions.map((option, index) => (
+									<DropdownListItem
+										key={option.value}
+										data-testid={`dropdown__option--${index}`}
+										onClick={() => onSelect?.(option)}
+									>
+										{option.label}
+									</DropdownListItem>
+								))}
+							</ul>
+						</DropdownContent>
+					</DropdownRoot>
 				)}
 			</div>
 		</StyledButton>
