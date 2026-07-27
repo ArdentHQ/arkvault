@@ -1,6 +1,6 @@
 import { render, screen } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "./";
 
 describe("SimpleDropdown", () => {
@@ -14,9 +14,9 @@ describe("SimpleDropdown", () => {
 			</DropdownRoot>,
 		);
 
-		expect(screen.queryByTestId("DropdownContent")).not.toBeInTheDocument();
-		await userEvent.click(screen.getByTestId("DropdownToggle"));
-		expect(screen.getByTestId("DropdownContent")).toBeInTheDocument();
+		expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 	});
 
 	it("should close when clicked outside", async () => {
@@ -32,10 +32,10 @@ describe("SimpleDropdown", () => {
 			</div>,
 		);
 
-		await userEvent.click(screen.getByTestId("DropdownToggle"));
-		expect(screen.getByTestId("DropdownContent")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		await userEvent.click(screen.getByTestId("outside"));
-		expect(screen.queryByTestId("DropdownContent")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
 	});
 
 	it("should close when escape key is pressed", async () => {
@@ -48,9 +48,65 @@ describe("SimpleDropdown", () => {
 			</DropdownRoot>,
 		);
 
-		await userEvent.click(screen.getByTestId("DropdownToggle"));
-		expect(screen.getByTestId("DropdownContent")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		await userEvent.keyboard("{Escape}");
-		expect(screen.queryByTestId("DropdownContent")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
+	});
+
+	describe("DropdownToggle with function children", () => {
+		it("should receive isOpen prop", async () => {
+			const handler = vi.fn();
+			render(
+				<DropdownRoot>
+					<DropdownToggle>
+						{({ isOpen }) => {
+							handler({ isOpen });
+							return "Toggle";
+						}}
+					</DropdownToggle>
+					<DropdownContent>Content</DropdownContent>
+				</DropdownRoot>,
+			);
+
+			expect(handler).toHaveBeenCalledWith({ isOpen: false });
+
+			await userEvent.click(screen.getByTestId("dropdown__toggle"));
+			expect(handler).toHaveBeenLastCalledWith({ isOpen: true });
+		});
+	});
+
+	describe("DropdownListItem with close={false}", () => {
+		it("should not close when close is false", async () => {
+			render(
+				<DropdownRoot>
+					<DropdownToggle>Menu</DropdownToggle>
+					<DropdownContent>
+						<DropdownListItem close={false}>Persistent Item</DropdownListItem>
+					</DropdownContent>
+				</DropdownRoot>,
+			);
+
+			await userEvent.click(screen.getByTestId("dropdown__toggle"));
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+			await userEvent.click(screen.getByText("Persistent Item"));
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		});
+
+		it("should close by default", async () => {
+			render(
+				<DropdownRoot>
+					<DropdownToggle>Menu</DropdownToggle>
+					<DropdownContent>
+						<DropdownListItem>Default Item</DropdownListItem>
+					</DropdownContent>
+				</DropdownRoot>,
+			);
+
+			await userEvent.click(screen.getByTestId("dropdown__toggle"));
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+			await userEvent.click(screen.getByText("Default Item"));
+			expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
+		});
 	});
 });

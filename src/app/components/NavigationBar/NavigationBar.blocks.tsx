@@ -5,7 +5,8 @@ import { generatePath, NavLink, useLocation, useNavigate } from "react-router-do
 import cn from "classnames";
 import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
 import { Button } from "@/app/components/Button";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { BackButton } from "@/app/components/NavigationBar/components/BackButton";
@@ -20,11 +21,9 @@ import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
 import { assertString } from "@/utils/assertions";
-import { useLink } from "@/app/hooks/use-link";
 import { ProfilePaths } from "@/router/paths";
 import { Size } from "@/types";
 import { LogoAlpha } from "@/app/components/Logo";
-import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetwork } from "./components/SelectNetwork";
@@ -192,9 +191,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const location = useLocation();
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
-	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
-	const { showSupportChat } = useZendesk();
 	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const modalSize = useMemo<Size>(() => {
@@ -286,23 +283,37 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 				data-testid="NavigationBar__menu-toggle"
 				className="mr-auto flex content-center items-center xl:hidden"
 			>
-				<Dropdown
-					variant="navbar"
-					toggleContent={(isOpen) => (
-						<button
-							type="button"
-							className="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
-						>
-							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
-						</button>
-					)}
-					onSelect={handleSelectMenuItem}
-					options={navigationMenu.map((menuItem) => ({
-						disabled: isMenuItemDisabled(menuItem.id),
-						label: menuItem.title,
-						value: menuItem.mountPath(profile.id()),
-					}))}
-				/>
+				<DropdownRoot>
+					<DropdownToggle>
+						{(isOpen) => (
+							<button
+								type="button"
+								className="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+							>
+								<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
+							</button>
+						)}
+					</DropdownToggle>
+					<DropdownContent>
+						<ul data-testid="dropdown__options">
+							{navigationMenu.map((menuItem, index) => (
+								<DropdownListItem
+									key={menuItem.id}
+									disabled={isMenuItemDisabled(menuItem.id)}
+									data-testid={`dropdown__option--${index}`}
+									onClick={() =>
+										handleSelectMenuItem({
+											label: menuItem.title,
+											value: menuItem.id,
+										} as DropdownOption)
+									}
+								>
+									{menuItem.title}
+								</DropdownListItem>
+							))}
+						</ul>
+					</DropdownContent>
+				</DropdownRoot>
 			</div>
 		</>
 	);
@@ -428,21 +439,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 							<div className="ml-1 flex items-center gap-5 sm:ml-0">
 								<HideBalance className="hidden md-lg:flex" profile={profile} />
-								<UserMenu
-									userInitials={userInitials}
-									avatarImage={profile.avatar()}
-									onUserAction={(action: DropdownOption) => {
-										if (action.value === "contact") {
-											return showSupportChat(profile);
-										}
-
-										if (action.isExternal) {
-											return openExternal(action.mountPath());
-										}
-
-										return navigate(action.mountPath(profile.id()));
-									}}
-								/>
+								<UserMenu userInitials={userInitials} avatarImage={profile.avatar()} />
 							</div>
 						</div>
 					</div>
