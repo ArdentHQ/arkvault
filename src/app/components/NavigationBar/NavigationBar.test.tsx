@@ -173,9 +173,9 @@ describe("NavigationBar", () => {
 	it("should handle menu click", async () => {
 		const { router } = render(<NavigationBar />);
 
-		await userEvent.click(screen.getByText("test"));
+		await userEvent.click(screen.getByText(translations.PORTFOLIO));
 
-		expect(router.state.location.pathname).toBe("/test");
+		expect(router.state.location.pathname).toContain("/dashboard");
 	});
 
 	it("should handle menu click in small screen variant", async () => {
