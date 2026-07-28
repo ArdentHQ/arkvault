@@ -29,6 +29,13 @@ import { SelectNetwork } from "./components/SelectNetwork";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 
+interface NavigationMenuItem {
+	id: string;
+	titleKey: string;
+	pathCheck: string;
+	disabledKey?: string;
+}
+
 const NavWrapper = ({
 	variant = "default",
 	...props
@@ -234,6 +241,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const isActive = (pathCheck: string) => location.pathname.includes(pathCheck);
 
+	const navLinkBaseClass =
+		"ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50";
+
 	const renderNavigationMenu = () => {
 		const hideExchange = import.meta.env.VITE_HIDE_EXCHANGE_TAB === "true";
 
@@ -245,15 +255,12 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						<NavLink
 							to={generatePath(ProfilePaths.Dashboard, { profileId: profile.id() })}
 							title={t("COMMON.PORTFOLIO")}
-							className={cn(
-								"ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
-								{
-									"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
-										isActive("/dashboard"),
-									"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
-										!isActive("/dashboard"),
-								},
-							)}
+							className={cn(navLinkBaseClass, {
+								"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+									isActive("/dashboard"),
+								"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
+									!isActive("/dashboard"),
+							})}
 						>
 							{t("COMMON.PORTFOLIO")}
 						</NavLink>
@@ -272,15 +279,12 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							<NavLink
 								to={generatePath(ProfilePaths.Tokens, { profileId: profile.id() })}
 								title={t("COMMON.TOKENS")}
-								className={cn(
-									"ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
-									{
-										"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
-											isActive("/tokens"),
-										"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
-											!isActive("/tokens"),
-									},
-								)}
+								className={cn(navLinkBaseClass, {
+									"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+										isActive("/tokens"),
+									"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
+										!isActive("/tokens"),
+								})}
 							>
 								{t("COMMON.TOKENS")}
 							</NavLink>
@@ -301,15 +305,12 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								<NavLink
 									to={generatePath(ProfilePaths.Exchange, { profileId: profile.id() })}
 									title={t("COMMON.EXCHANGE")}
-									className={cn(
-										"ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
-										{
-											"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
-												isActive("/exchange"),
-											"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
-												!isActive("/exchange"),
-										},
-									)}
+									className={cn(navLinkBaseClass, {
+										"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+											isActive("/exchange"),
+										"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
+											!isActive("/exchange"),
+									})}
 								>
 									{t("COMMON.EXCHANGE")}
 								</NavLink>
@@ -322,15 +323,12 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						<NavLink
 							to={generatePath(ProfilePaths.Contacts, { profileId: profile.id() })}
 							title={t("COMMON.CONTACTS")}
-							className={cn(
-								"ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
-								{
-									"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
-										isActive("/contacts"),
-									"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
-										!isActive("/contacts"),
-								},
-							)}
+							className={cn(navLinkBaseClass, {
+								"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+									isActive("/contacts"),
+								"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
+									!isActive("/contacts"),
+							})}
 						>
 							{t("COMMON.CONTACTS")}
 						</NavLink>
@@ -349,15 +347,12 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							<NavLink
 								to={generatePath(ProfilePaths.Votes, { profileId: profile.id() })}
 								title={t("COMMON.VOTES")}
-								className={cn(
-									"ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
-									{
-										"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
-											isActive("/votes"),
-										"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
-											!isActive("/votes"),
-									},
-								)}
+								className={cn(navLinkBaseClass, {
+									"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+										isActive("/votes"),
+									"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
+										!isActive("/votes"),
+								})}
 							>
 								{t("COMMON.VOTES")}
 							</NavLink>
@@ -386,7 +381,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								<DropdownListItem
 									key="dashboard"
 									data-testid="dropdown__option--0"
-									onClick={() => navigate(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }))}
+									onClick={() =>
+										navigate(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }))
+									}
 								>
 									{t("COMMON.PORTFOLIO")}
 								</DropdownListItem>
@@ -394,7 +391,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									key="tokens"
 									disabled={isMenuItemDisabled("tokens")}
 									data-testid="dropdown__option--1"
-									onClick={() => navigate(generatePath(ProfilePaths.Tokens, { profileId: profile.id() }))}
+									onClick={() =>
+										navigate(generatePath(ProfilePaths.Tokens, { profileId: profile.id() }))
+									}
 								>
 									{t("COMMON.TOKENS")}
 								</DropdownListItem>
@@ -403,7 +402,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 										key="exchange"
 										disabled={isMenuItemDisabled("exchange")}
 										data-testid="dropdown__option--2"
-										onClick={() => navigate(generatePath(ProfilePaths.Exchange, { profileId: profile.id() }))}
+										onClick={() =>
+											navigate(generatePath(ProfilePaths.Exchange, { profileId: profile.id() }))
+										}
 									>
 										{t("COMMON.EXCHANGE")}
 									</DropdownListItem>
@@ -411,7 +412,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								<DropdownListItem
 									key="contacts"
 									data-testid="dropdown__option--3"
-									onClick={() => navigate(generatePath(ProfilePaths.Contacts, { profileId: profile.id() }))}
+									onClick={() =>
+										navigate(generatePath(ProfilePaths.Contacts, { profileId: profile.id() }))
+									}
 								>
 									{t("COMMON.CONTACTS")}
 								</DropdownListItem>
@@ -419,7 +422,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									key="votes"
 									disabled={isMenuItemDisabled("votes")}
 									data-testid="dropdown__option--4"
-									onClick={() => navigate(generatePath(ProfilePaths.Votes, { profileId: profile.id() }))}
+									onClick={() =>
+										navigate(generatePath(ProfilePaths.Votes, { profileId: profile.id() }))
+									}
 								>
 									{t("COMMON.VOTES")}
 								</DropdownListItem>
