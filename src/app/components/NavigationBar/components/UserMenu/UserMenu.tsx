@@ -1,11 +1,14 @@
-import React, { FC, useCallback, useMemo } from "react";
+import React, { FC, useCallback } from "react";
 import { useTranslation } from "react-i18next";
+import { generatePath, useNavigate } from "react-router-dom";
 
 import { Avatar } from "@/app/components/Avatar";
-import { Dropdown, DropdownOptionGroup } from "@/app/components/Dropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
+import { Icon } from "@/app/components/Icon";
 import { UserMenuProperties } from "@/app/components/NavigationBar";
-import { getUserMenuActions } from "@/app/constants/navigation";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+import { useLink } from "@/app/hooks/use-link";
+import { useZendesk } from "@/app/contexts/Zendesk";
 import { useConfiguration } from "@/app/contexts";
 import { useProfileBalance } from "@/app/hooks/use-profile-balance";
 import { Amount } from "@/app/components/Amount";
@@ -13,12 +16,14 @@ import { assertString } from "@/utils/assertions";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetworkMobile } from "@/app/components/NavigationBar/components/SelectNetwork";
 import { Contracts } from "@/app/lib/profiles";
+import { ProfilePaths } from "@/router/paths";
 
-export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
+export const UserMenu: FC<UserMenuProperties> = ({ avatarImage, userInitials }) => {
 	const { t } = useTranslation();
-
-	const userMenuActions = useMemo<DropdownOptionGroup[]>(() => getUserMenuActions(t), [t]);
 	const { isXs } = useBreakpoint();
+	const navigate = useNavigate();
+	const { openExternal } = useLink();
+	const { showSupportChat } = useZendesk();
 
 	const profile = useActiveProfile();
 
@@ -63,13 +68,9 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 	);
 
 	return (
-		<Dropdown
-			variant="navbar"
-			placement="bottom-end"
-			onSelect={onUserAction}
-			options={userMenuActions}
-			toggleContent={renderAvatarSection}
-			top={
+		<DropdownRoot>
+			<DropdownToggle>{({ isOpen }) => renderAvatarSection(isOpen)}</DropdownToggle>
+			<DropdownContent>
 				<div className="flex items-center justify-between bg-theme-secondary-100 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-950 dark:text-theme-dark-200 md-lg:hidden">
 					<p>{t("COMMON.BALANCE")}:</p>
 					<div className="flex items-center gap-2">
@@ -77,8 +78,27 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 						<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
 					</div>
 				</div>
-			}
-			bottom={showNetworkToggle ? <SelectNetworkMobile profile={profile} /> : undefined}
-		/>
+				<DropdownListItem
+					onClick={() => navigate(generatePath(ProfilePaths.Settings, { profileId: profile.id() }))}
+				>
+					{t("COMMON.SETTINGS")}
+				</DropdownListItem>
+				<DropdownListItem onClick={() => showSupportChat(profile)}>{t("COMMON.CONTACT_US")}</DropdownListItem>
+				<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
+				<DropdownListItem onClick={() => openExternal("https://arkvault.io/docs")}>
+					<Icon
+						name="ArrowExternal"
+						className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+						size="md"
+					/>
+					<span className="flex w-full items-center justify-between">{t("COMMON.DOCS")}</span>
+				</DropdownListItem>
+				<DropdownListItem onClick={() => navigate("/")}>
+					<Icon name="SignOut" className="dim:text-theme-dim-200 dark:text-theme-secondary-600" size="md" />
+					<span className="flex w-full items-center justify-between">{t("COMMON.SIGN_OUT")}</span>
+				</DropdownListItem>
+				{showNetworkToggle && <SelectNetworkMobile profile={profile} />}
+			</DropdownContent>
+		</DropdownRoot>
 	);
 };
