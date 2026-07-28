@@ -29,13 +29,6 @@ import { SelectNetwork } from "./components/SelectNetwork";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 
-interface NavigationMenuItem {
-	id: string;
-	titleKey: string;
-	pathCheck: string;
-	disabledKey?: string;
-}
-
 const NavWrapper = ({
 	variant = "default",
 	...props
