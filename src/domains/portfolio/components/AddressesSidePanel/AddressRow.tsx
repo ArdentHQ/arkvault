@@ -9,7 +9,8 @@ import { Icon } from "@/app/components/Icon";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { MobileAddressRow } from "@/domains/portfolio/components/AddressesSidePanel/MobileAddressRow";
 import { RadioButton } from "@/app/components/RadioButton";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { useTranslation } from "react-i18next";
 import { useLink } from "@/app/hooks/use-link";
 import { TFunction } from "i18next";
@@ -213,11 +214,8 @@ export const AddressRow = ({
 				</div>
 
 				{usesManageMode && (
-					<Dropdown
-						disableToggle={isEditing || !!deleteContent}
-						placement="bottom-end"
-						wrapperClass="z-50"
-						toggleContent={
+					<DropdownRoot>
+						<DropdownToggle>
 							<Button
 								size="icon"
 								variant="transparent"
@@ -237,10 +235,28 @@ export const AddressRow = ({
 									})}
 								/>
 							</Button>
-						}
-						options={getMenuOptions(t)}
-						onSelect={(action) => handleSelectOption(action, wallet)}
-					/>
+						</DropdownToggle>
+						<DropdownContent>
+							<ul>
+								{getMenuOptions(t).map((option, index) => (
+									<DropdownListItem
+										key={option.value}
+										data-testid={`dropdown__option--${index}`}
+										onClick={() => handleSelectOption(option, wallet)}
+									>
+										{option.iconPosition === "start" && option.icon && (
+											<Icon
+												name={option.icon}
+												className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+												size={option.iconSize || "md"}
+											/>
+										)}
+										<span className="flex w-full items-center justify-between">{option.label}</span>
+									</DropdownListItem>
+								))}
+							</ul>
+						</DropdownContent>
+					</DropdownRoot>
 				)}
 			</div>
 			{!!errorMessage && (

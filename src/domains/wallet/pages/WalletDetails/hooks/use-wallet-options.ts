@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
-import { DropdownOptionGroup } from "@/app/components/Dropdown";
+import { DropdownOptionGroup } from "@/app/components/SimpleDropdown";
 
 const isRestoredAndSynced = (wallet: Contracts.IReadWriteWallet) =>
 	wallet.hasBeenFullyRestored() && wallet.hasSyncedWithNetwork();

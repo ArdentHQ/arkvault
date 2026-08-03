@@ -3,7 +3,6 @@ import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
 import { NavigationBar } from "./NavigationBar";
-import * as navigation from "@/app/constants/navigation";
 import { translations } from "@/app/i18n/common/i18n";
 import * as environmentHooks from "@/app/hooks/env";
 import { useNavigationContext } from "@/app/contexts";
@@ -27,19 +26,6 @@ const navigationBarLogoButtonSelector = "NavigationBarLogo--button";
 vi.spyOn(environmentHooks, "useActiveProfile").mockImplementation(() =>
 	mockedTestEnvironment.profiles().findById(getMainsailProfileId()),
 );
-
-vi.spyOn(navigation, "getNavigationMenu").mockReturnValue([
-	{
-		id: "dashboard",
-		mountPath: (profileId: string) => `/profiles/${profileId}/dashboard`,
-		title: "Portfolio",
-	},
-	{
-		id: "test",
-		mountPath: () => "/test",
-		title: "test",
-	},
-]);
 
 const ContainerWithFixedFormButtons = ({ children }) => {
 	const { setHasFixedFormButtons } = useNavigationContext();
@@ -187,9 +173,9 @@ describe("NavigationBar", () => {
 	it("should handle menu click", async () => {
 		const { router } = render(<NavigationBar />);
 
-		await userEvent.click(screen.getByText("test"));
+		await userEvent.click(screen.getByText(translations.PORTFOLIO));
 
-		expect(router.state.location.pathname).toBe("/test");
+		expect(router.state.location.pathname).toContain("/dashboard");
 	});
 
 	it("should handle menu click in small screen variant", async () => {

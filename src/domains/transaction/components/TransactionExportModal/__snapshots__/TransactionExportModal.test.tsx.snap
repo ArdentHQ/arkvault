@@ -212,11 +212,13 @@ exports[`TransactionExportModal > should render 1`] = `
                             >
                               <fieldset
                                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                data-testid="TransactionExportForm--daterange"
                               >
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="dialog"
-                                  data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
+                                  data-testid="dropdown__toggle"
+                                  tabindex="0"
                                 >
                                   <button
                                     class="focus:outline-hidden flex items-center space-x-2 font-semibold w-full cursor-pointer justify-between space-x-4 overflow-hidden"
@@ -354,11 +356,13 @@ exports[`TransactionExportModal > should render 1`] = `
                             >
                               <fieldset
                                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                data-testid="TransactionExportForm--delimiter"
                               >
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="dialog"
-                                  data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
+                                  data-testid="dropdown__toggle"
+                                  tabindex="0"
                                 >
                                   <button
                                     class="focus:outline-hidden flex items-center space-x-2 font-semibold w-full cursor-pointer justify-between space-x-4 overflow-hidden"
@@ -871,11 +875,13 @@ exports[`TransactionExportModal > should render error status 1`] = `
                             >
                               <fieldset
                                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                data-testid="TransactionExportForm--daterange"
                               >
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="dialog"
-                                  data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
+                                  data-testid="dropdown__toggle"
+                                  tabindex="0"
                                 >
                                   <button
                                     class="focus:outline-hidden flex items-center space-x-2 font-semibold w-full cursor-pointer justify-between space-x-4 overflow-hidden"
@@ -1013,11 +1019,13 @@ exports[`TransactionExportModal > should render error status 1`] = `
                             >
                               <fieldset
                                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                data-testid="TransactionExportForm--delimiter"
                               >
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="dialog"
-                                  data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
+                                  data-testid="dropdown__toggle"
+                                  tabindex="0"
                                 >
                                   <button
                                     class="focus:outline-hidden flex items-center space-x-2 font-semibold w-full cursor-pointer justify-between space-x-4 overflow-hidden"
@@ -2126,11 +2134,13 @@ exports[`TransactionExportModal > should render success status 1`] = `
                             >
                               <fieldset
                                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                data-testid="TransactionExportForm--daterange"
                               >
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="dialog"
-                                  data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
+                                  data-testid="dropdown__toggle"
+                                  tabindex="0"
                                 >
                                   <button
                                     class="focus:outline-hidden flex items-center space-x-2 font-semibold w-full cursor-pointer justify-between space-x-4 overflow-hidden"
@@ -2268,11 +2278,13 @@ exports[`TransactionExportModal > should render success status 1`] = `
                             >
                               <fieldset
                                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                data-testid="TransactionExportForm--delimiter"
                               >
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="dialog"
-                                  data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
+                                  data-testid="dropdown__toggle"
+                                  tabindex="0"
                                 >
                                   <button
                                     class="focus:outline-hidden flex items-center space-x-2 font-semibold w-full cursor-pointer justify-between space-x-4 overflow-hidden"
@@ -2785,11 +2797,13 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                             >
                               <fieldset
                                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                data-testid="TransactionExportForm--daterange"
                               >
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="dialog"
-                                  data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
+                                  data-testid="dropdown__toggle"
+                                  tabindex="0"
                                 >
                                   <button
                                     class="focus:outline-hidden flex items-center space-x-2 font-semibold w-full cursor-pointer justify-between space-x-4 overflow-hidden"
@@ -2927,11 +2941,13 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                             >
                               <fieldset
                                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                data-testid="TransactionExportForm--delimiter"
                               >
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="dialog"
-                                  data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
+                                  data-testid="dropdown__toggle"
+                                  tabindex="0"
                                 >
                                   <button
                                     class="focus:outline-hidden flex items-center space-x-2 font-semibold w-full cursor-pointer justify-between space-x-4 overflow-hidden"

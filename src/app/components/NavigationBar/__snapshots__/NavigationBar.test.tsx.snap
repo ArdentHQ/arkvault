@@ -233,10 +233,46 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               <a
                 class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                 data-discover="true"
-                href="/test"
-                title="test"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                title="Tokens"
               >
-                test
+                Tokens
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -1041,10 +1077,46 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               <a
                 class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                 data-discover="true"
-                href="/test"
-                title="test"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                title="Tokens"
               >
-                test
+                Tokens
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -1756,10 +1828,46 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               <a
                 class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                 data-discover="true"
-                href="/test"
-                title="test"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                title="Tokens"
               >
-                test
+                Tokens
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -2471,10 +2579,46 @@ exports[`NavigationBar > should render in lg 1`] = `
               <a
                 class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                 data-discover="true"
-                href="/test"
-                title="test"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                title="Tokens"
               >
-                test
+                Tokens
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -3193,10 +3337,46 @@ exports[`NavigationBar > should render in md 1`] = `
               <a
                 class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                 data-discover="true"
-                href="/test"
-                title="test"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                title="Tokens"
               >
-                test
+                Tokens
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -3915,10 +4095,46 @@ exports[`NavigationBar > should render in sm 1`] = `
               <a
                 class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                 data-discover="true"
-                href="/test"
-                title="test"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                title="Tokens"
               >
-                test
+                Tokens
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -4637,10 +4853,46 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               <a
                 class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                 data-discover="true"
-                href="/test"
-                title="test"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                title="Tokens"
               >
-                test
+                Tokens
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -5359,10 +5611,46 @@ exports[`NavigationBar > should render in xs 1`] = `
               <a
                 class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                 data-discover="true"
-                href="/test"
-                title="test"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                title="Tokens"
               >
-                test
+                Tokens
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -6249,10 +6537,46 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               <a
                 class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
                 data-discover="true"
-                href="/test"
-                title="test"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                title="Tokens"
               >
-                test
+                Tokens
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
+                data-discover="true"
+                href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>

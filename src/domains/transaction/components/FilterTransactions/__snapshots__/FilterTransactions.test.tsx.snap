@@ -9,7 +9,9 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
       aria-controls="_r_4_"
       aria-expanded="true"
       aria-haspopup="dialog"
+      data-floating-ui-inert=""
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <button
         class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -62,6 +64,31 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
         </div>
       </button>
     </div>
+    <span
+      aria-hidden="true"
+      data-floating-ui-inert=""
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="-1"
+    />
+    <span
+      data-floating-ui-focus-guard=""
+      data-type="outside"
+      role="button"
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="0"
+    />
+    <span
+      aria-owns="_r_6_"
+      data-floating-ui-inert=""
+      style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
+    />
+    <span
+      data-floating-ui-focus-guard=""
+      data-type="outside"
+      role="button"
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="0"
+    />
   </div>
 </div>
 `;
@@ -75,6 +102,7 @@ exports[`FilterTransactions > should render 1`] = `
       aria-expanded="false"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <button
         class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
@@ -141,6 +169,7 @@ exports[`FilterTransactions > should render with default selected option 1`] = `
       aria-expanded="false"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <button
         class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
