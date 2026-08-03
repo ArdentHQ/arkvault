@@ -108,6 +108,50 @@ describe("Notification", () => {
 
 		expect(onRemove).toHaveBeenCalled();
 	});
+
+	it("should call onShowDetails when notification is clicked on desktop", async () => {
+		const mockTransaction = createMockTransaction();
+		const onShowDetails = vi.fn();
+
+		render(
+			<Notification
+				transaction={mockTransaction}
+				isUnread={false}
+				onShowDetails={onShowDetails}
+				onMarkAsRead={vi.fn()}
+				onRemove={vi.fn()}
+				isExpanded={false}
+				toggleExpand={vi.fn()}
+			/>,
+		);
+
+		const user = userEvent.setup();
+		await user.click(screen.getByTestId("NotificationRow"));
+
+		expect(onShowDetails).toHaveBeenCalled();
+	});
+
+	it("should call onRemove when details button is clicked", async () => {
+		const mockTransaction = createMockTransaction();
+		const onShowDetails = vi.fn();
+
+		render(
+			<Notification
+				transaction={mockTransaction}
+				isUnread={false}
+				onShowDetails={onShowDetails}
+				onMarkAsRead={vi.fn()}
+				onRemove={vi.fn()}
+				isExpanded={true}
+				toggleExpand={vi.fn()}
+			/>,
+		);
+
+		const user = userEvent.setup();
+		await user.click(screen.getByTestId("NotificationRow"));
+
+		expect(onShowDetails).toHaveBeenCalled();
+	});
 });
 
 describe("Notifications", () => {
@@ -190,6 +234,54 @@ describe("Notifications", () => {
 		await user.click(screen.getByTestId("MarkAllNotificationsRead"));
 
 		expect(markAllAsReadSpy).toHaveBeenCalled();
+	});
+
+	it("should call onViewTransactionDetails when notification is clicked", async () => {
+		const mockTransactions = [createMockTransaction()];
+		const onViewTransactionDetails = vi.fn();
+
+		vi.mocked(useNotifications).mockReturnValue({
+			hasUnread: false,
+			isNotificationUnread: () => false,
+			markAllAsRead: vi.fn(),
+			markAllAsRemoved: vi.fn(),
+			markAsRead: vi.fn(),
+			markAsRemoved: vi.fn(),
+			transactions: mockTransactions,
+		});
+
+		render(<Notifications profile={profile} onViewTransactionDetails={onViewTransactionDetails} />);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("NotificationRow")).toBeInTheDocument();
+		});
+
+		const user = userEvent.setup();
+		await user.click(screen.getByTestId("NotificationRow"));
+
+		expect(onViewTransactionDetails).toHaveBeenCalled();
+	});
+
+	it("should call markAllAsRemoved when remove all button is clicked", async () => {
+		const mockTransactions = [createMockTransaction()];
+		const markAllAsRemovedSpy = vi.fn();
+
+		vi.mocked(useNotifications).mockReturnValue({
+			hasUnread: false,
+			isNotificationUnread: () => false,
+			markAllAsRead: vi.fn(),
+			markAllAsRemoved: markAllAsRemovedSpy,
+			markAsRead: vi.fn(),
+			markAsRemoved: vi.fn(),
+			transactions: mockTransactions,
+		});
+
+		render(<Notifications profile={profile} />);
+
+		const user = userEvent.setup();
+		await user.click(screen.getByTestId("WalletVote__button"));
+
+		expect(markAllAsRemovedSpy).toHaveBeenCalled();
 	});
 
 	it("should disable mark all button when no unread notifications", async () => {

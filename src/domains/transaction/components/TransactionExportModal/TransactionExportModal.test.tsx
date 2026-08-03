@@ -15,9 +15,7 @@ const exportButton = () => screen.getByTestId("TransactionExport__submit-button"
 const downloadButton = () => screen.getByTestId("TransactionExportSuccess__download-button");
 
 const dateToggle = () =>
-	within(screen.getByTestId("dropdown__toggle-TransactionExportForm--daterange-options")).getByTestId(
-		"CollapseToggleButton",
-	);
+	within(screen.getByTestId("TransactionExportForm--daterange")).getByTestId("CollapseToggleButton");
 
 describe("TransactionExportModal", () => {
 	let profile: Contracts.IProfile;

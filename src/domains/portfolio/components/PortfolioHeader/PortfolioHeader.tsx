@@ -9,7 +9,8 @@ import { Contracts } from "@/app/lib/profiles";
 import { Copy } from "@/app/components/Copy";
 import { Divider } from "@/app/components/Divider";
 import { Dot } from "@/app/components/Dot";
-import { Dropdown } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { Icon } from "@/app/components/Icon";
 import { Label } from "@/app/components/Label";
 import { Skeleton } from "@/app/components/Skeleton";
@@ -33,6 +34,26 @@ import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import { DISPLAY_DECIMALS } from "@/domains/transaction/utils";
+
+const renderIcon = (option: DropdownOption) => {
+	const { icon, iconClassName, iconSize } = option;
+
+	if (!icon) {
+		return null;
+	}
+
+	const className: Record<string, boolean> = {};
+
+	if (!iconClassName) {
+		className["dark:text-theme-secondary-600 dim:text-theme-dim-200"] = true;
+	} else if (typeof iconClassName === "function") {
+		className[iconClassName(option)] = true;
+	} else {
+		className[iconClassName] = true;
+	}
+
+	return <Icon name={icon} className={cn(className)} size={iconSize || "md"} />;
+};
 
 export const PortfolioHeader = ({
 	profile,
@@ -491,21 +512,8 @@ export const PortfolioHeader = ({
 									)}
 
 									<div data-testid="WalletHeaderMobile__more-button" className="my-auto">
-										<Dropdown
-											options={[
-												primaryOptions,
-												registrationOptions,
-												contractOptions,
-												{
-													key: additionalOptions.key,
-													options: hasWalletsToMigrate
-														? [...additionalOptions.options, ...ledgerMigrationOptions]
-														: additionalOptions.options,
-													title: additionalOptions.title,
-												},
-												secondaryOptions,
-											]}
-											toggleContent={
+										<DropdownRoot>
+											<DropdownToggle>
 												<Tooltip
 													visible={
 														hasWalletsToMigrate &&
@@ -547,9 +555,69 @@ export const PortfolioHeader = ({
 														)}
 													</div>
 												</Tooltip>
-											}
-											onSelect={handleSelectOption}
-										/>
+											</DropdownToggle>
+											<DropdownContent>
+												{[
+													primaryOptions,
+													registrationOptions,
+													contractOptions,
+													{
+														hasDivider: additionalOptions.hasDivider,
+														key: additionalOptions.key,
+														options: hasWalletsToMigrate
+															? [...additionalOptions.options, ...ledgerMigrationOptions]
+															: additionalOptions.options,
+														title: additionalOptions.title,
+													},
+													secondaryOptions,
+												].map((group) => (
+													<div key={group.key}>
+														{group.hasDivider && (
+															<div>
+																<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
+															</div>
+														)}
+														<ul>
+															{group.title && group.options.length > 0 && (
+																<li className="mx-1 my-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-5 py-1 text-left text-xs font-semibold text-theme-secondary-700 dim:bg-theme-dim-navy-900 dim:text-theme-dim-200 dark:bg-theme-dark-800 dark:text-theme-dark-200">
+																	{group.title}
+																</li>
+															)}
+															{group.options.map((option, index) => (
+																<DropdownListItem
+																	key={option.value}
+																	disabled={option.disabled}
+																	data-testid={`dropdown__option--${group.key ? group.key + "-" : ""}${index}`}
+																	onClick={() => {
+																		if (!option.disabled) {
+																			handleSelectOption(option);
+																		}
+																	}}
+																>
+																	{option.iconPosition === "start" &&
+																		renderIcon(option)}
+																	<span className="flex w-full items-center justify-between">
+																		{option.element || option.label}
+																		{option.secondaryLabel && (
+																			<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-600">
+																				{typeof option.secondaryLabel ===
+																				"function"
+																					? option.secondaryLabel(
+																							!!option.active,
+																						)
+																					: option.secondaryLabel}
+																			</span>
+																		)}
+																	</span>
+																	{option.iconPosition !== "start" &&
+																		renderIcon(option)}
+																</DropdownListItem>
+															))}
+														</ul>
+													</div>
+												))}
+											</DropdownContent>
+										</DropdownRoot>
 									</div>
 								</div>
 							</div>

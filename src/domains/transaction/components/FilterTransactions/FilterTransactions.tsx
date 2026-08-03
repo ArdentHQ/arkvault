@@ -1,4 +1,5 @@
-import { Dropdown, DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown";
+import { DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import React, { memo, JSX } from "react";
 
 import { Button } from "@/app/components/Button";
@@ -91,7 +92,7 @@ export const FilterTransactions = memo(
 									onChange={() => onToggleAll(!isAllSelected)}
 								/>
 
-								<hr className="-mx-7 -mb-3.5 mt-3.5 border-b-0 border-t border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700" />
+								<hr className="-mx-6 -mb-3.5 mt-3.5 border-b-0 border-t border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700" />
 							</div>
 						),
 						label: "",
@@ -157,14 +158,8 @@ export const FilterTransactions = memo(
 
 		return (
 			<div className={className} data-testid="FilterTransactions" {...properties}>
-				<Dropdown
-					placement="bottom-end"
-					wrapperClass="sm:max-w-56"
-					options={options}
-					variant="options"
-					disableToggle={isDisabled}
-					closeOnSelect={false}
-					toggleContent={
+				<DropdownRoot>
+					<DropdownToggle>
 						<Button
 							variant="secondary"
 							size="sm"
@@ -176,8 +171,30 @@ export const FilterTransactions = memo(
 						>
 							<span>{t("COMMON.TYPE")}</span>
 						</Button>
-					}
-				/>
+					</DropdownToggle>
+					<DropdownContent className="sm:max-w-56">
+						{options.map((group) => (
+							<div key={group.key}>
+								<ul>
+									{group.title && (
+										<li className="mx-1 my-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-5 py-1 text-left text-xs font-semibold text-theme-secondary-700 dim:bg-theme-dim-navy-900 dim:text-theme-dim-200 dark:bg-theme-dark-800 dark:text-theme-dark-200">
+											{group.title}
+										</li>
+									)}
+									{group.options.map((option, index) => (
+										<DropdownListItem
+											key={option.value}
+											data-testid={`dropdown__option--${group.key}-${index}`}
+											tabIndex={-1}
+										>
+											{option.element}
+										</DropdownListItem>
+									))}
+								</ul>
+							</div>
+						))}
+					</DropdownContent>
+				</DropdownRoot>
 			</div>
 		);
 	},
