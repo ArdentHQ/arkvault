@@ -1,7 +1,8 @@
 import cn from "classnames";
 import { ProfileAvatar } from "@/domains/profile/components/ProfileAvatar";
 import { Icon } from "@/app/components/Icon";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/Dropdown/Dropdown.contracts";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { Skeleton } from "@/app/components/Skeleton";
@@ -50,11 +51,8 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 		</a>
 
 		<div className="relative">
-			<Dropdown
-				placement="bottom-end"
-				options={actions}
-				onSelect={onSelect}
-				toggleContent={
+			<DropdownRoot>
+				<DropdownToggle>
 					<div
 						className="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
 						tabIndex={1}
@@ -65,8 +63,21 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 							size="md"
 						/>
 					</div>
-				}
-			/>
+				</DropdownToggle>
+				<DropdownContent>
+					<ul>
+						{actions?.map((option, index) => (
+							<DropdownListItem
+								key={option.value}
+								data-testid={`dropdown__option--${index}`}
+								onClick={() => onSelect?.(option)}
+							>
+								{option.label}
+							</DropdownListItem>
+						))}
+					</ul>
+				</DropdownContent>
+			</DropdownRoot>
 		</div>
 	</div>
 );

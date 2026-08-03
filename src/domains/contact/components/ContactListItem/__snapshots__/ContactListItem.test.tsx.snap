@@ -155,6 +155,7 @@ exports[`ContactListItem > should render 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -367,6 +368,7 @@ exports[`ContactListItem > should render as validator 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -579,6 +581,7 @@ exports[`ContactListItem > should render options 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -763,6 +766,7 @@ exports[`ContactListItem > should render options 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -947,6 +951,7 @@ exports[`ContactListItem > should render options 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1159,6 +1164,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1343,6 +1349,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1527,6 +1534,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1740,6 +1748,7 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1925,6 +1934,7 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -2110,6 +2120,7 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
