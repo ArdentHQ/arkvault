@@ -293,6 +293,7 @@ exports[`Page > should render with navigation context 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -303,14 +304,27 @@ exports[`Page > should render with navigation context 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -369,6 +383,13 @@ exports[`Page > should render with navigation context 1`] = `
                             </svg>
                           </div>
                         </div>
+                        <div
+                          class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        >
+                          <div
+                            class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -382,7 +403,9 @@ exports[`Page > should render with navigation context 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -553,6 +576,7 @@ exports[`Page > should render with navigation context 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -705,6 +729,7 @@ exports[`Page > should render with navigation context 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -1039,6 +1064,7 @@ exports[`Page > should render with navigation context 2`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -1049,14 +1075,27 @@ exports[`Page > should render with navigation context 2`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -1115,6 +1154,13 @@ exports[`Page > should render with navigation context 2`] = `
                             </svg>
                           </div>
                         </div>
+                        <div
+                          class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        >
+                          <div
+                            class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1128,7 +1174,9 @@ exports[`Page > should render with navigation context 2`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -1299,6 +1347,7 @@ exports[`Page > should render with navigation context 2`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -1451,6 +1500,7 @@ exports[`Page > should render with navigation context 2`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -1785,6 +1835,7 @@ exports[`Page > should render with navigation context 3`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -1795,14 +1846,27 @@ exports[`Page > should render with navigation context 3`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -1881,7 +1945,9 @@ exports[`Page > should render with navigation context 3`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -2052,6 +2118,7 @@ exports[`Page > should render with navigation context 3`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -2204,6 +2271,7 @@ exports[`Page > should render with navigation context 3`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -2538,6 +2606,7 @@ exports[`Page > should render with sidebar = false 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -2548,14 +2617,27 @@ exports[`Page > should render with sidebar = false 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -2627,7 +2709,9 @@ exports[`Page > should render with sidebar = false 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -2798,6 +2882,7 @@ exports[`Page > should render with sidebar = false 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -2950,6 +3035,7 @@ exports[`Page > should render with sidebar = false 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -3280,6 +3366,7 @@ exports[`Page > should render with sidebar = true 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
@@ -3290,14 +3377,27 @@ exports[`Page > should render with sidebar = true 1`] = `
                       style="height: 20px; width: 20px;"
                     >
                       <svg
+                        fill="none"
                         style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        xml:space="preserve"
+                        viewBox="0 0 20 14"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 15.5h18M1 10h18M1 4.5h18"
-                          fill="none"
+                          d="M1 12.0781H7"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 6.53906H11"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1 1H19"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -3369,7 +3469,9 @@ exports[`Page > should render with sidebar = true 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                class="flex items-center"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <div
                   class="custom-button-nav-wrapper group"
@@ -3540,6 +3642,7 @@ exports[`Page > should render with sidebar = true 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <div
                     class="group"
@@ -3692,6 +3795,7 @@ exports[`Page > should render with sidebar = true 1`] = `
                 aria-expanded="false"
                 aria-haspopup="dialog"
                 data-testid="dropdown__toggle"
+                tabindex="0"
               >
                 <button
                   class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"

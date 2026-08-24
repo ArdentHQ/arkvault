@@ -6,9 +6,9 @@ import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
 import { FormField } from "@/app/components/Form";
 import { Link } from "@/app/components/Link";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { FormItem, FormItemRow, FormItemFooter, FormDivider } from "./ExchangeForm.blocks";
+import { MiddleTruncation } from "@/app/components/MiddleTruncation";
 
 export const ReviewStep = ({
 	withSignStep,
@@ -50,10 +50,9 @@ export const ReviewStep = ({
 					</FormItemRow>
 
 					<FormItemRow label={t("COMMON.ADDRESS")}>
-						<TruncateMiddleDynamic
-							value={recipientWallet}
-							className="no-ligatures font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50"
-						/>
+						<MiddleTruncation className="font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
+							{recipientWallet}
+						</MiddleTruncation>
 					</FormItemRow>
 
 					{estimatedTime && (

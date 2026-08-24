@@ -304,6 +304,27 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
+	test("should navigate back when device not available and no handler provided", async ({ defaultWallet }) => {
+		let location: Location | undefined;
+
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		mockLedgerTransportError("Access denied to use Ledger device");
+
+		renderWithForm(
+			<>
+				<LocationTracker onLocationChange={(currentLocation) => (location = currentLocation)} />
+				<AuthenticationStep subject={subject} wallet={defaultWallet} />
+			</>,
+			{
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() => expect(location?.pathname).toBe("/"));
+
+		vi.clearAllMocks();
+	});
+
 	test("should render with encryption password input", async () => {
 		const wallet = profile.wallets().first();
 		mockNanoXTransport();
@@ -333,6 +354,47 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
+	test("should disable second mnemonic when mnemonic is empty", async () => {
+		const wallet = profile.wallets().first();
+		mockNanoXTransport();
+
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+
+		renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, { withProviders: true });
+
+		const secondMnemonic = screen.getByTestId("AuthenticationStep__second-mnemonic");
+		await expect(screen.findByTestId("AuthenticationStep__second-mnemonic")).resolves.toBeVisible();
+
+		expect(secondMnemonic).toBeDisabled();
+
+		vi.clearAllMocks();
+	});
+
+	test("should enable second mnemonic when mnemonic is filled", async () => {
+		const wallet = profile.wallets().first();
+		mockNanoXTransport();
+
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+
+		const { form } = renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, {
+			withProviders: true,
+		});
+
+		await expect(screen.findByTestId("AuthenticationStep__second-mnemonic")).resolves.toBeVisible();
+
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MAINSAIL_MNEMONICS[0]);
+
+		await waitFor(() => {
+			expect(form()?.getValues("mnemonic")).toBe(MAINSAIL_MNEMONICS[0]);
+		});
+
+		vi.clearAllMocks();
+	});
+
 	test("should render with second secret", async () => {
 		const wallet = profile.wallets().first();
 		mockNanoXTransport();
@@ -343,6 +405,45 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, { withProviders: true });
 
 		await expect(screen.findByTestId("AuthenticationStep__second-secret")).resolves.toBeVisible();
+
+		vi.clearAllMocks();
+	});
+
+	test("should disable second secret when secret is empty", async () => {
+		const wallet = profile.wallets().first();
+		mockNanoXTransport();
+
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+		renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, { withProviders: true });
+
+		const secondSecret = screen.getByTestId("AuthenticationStep__second-secret");
+		await expect(screen.findByTestId("AuthenticationStep__second-secret")).resolves.toBeVisible();
+
+		expect(secondSecret).toBeDisabled();
+
+		vi.clearAllMocks();
+	});
+
+	test("should enable second secret when secret is filled", async () => {
+		const wallet = profile.wallets().first();
+		mockNanoXTransport();
+
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+		const { form } = renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, {
+			withProviders: true,
+		});
+
+		await expect(screen.findByTestId("AuthenticationStep__second-secret")).resolves.toBeVisible();
+
+		await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "testsecret");
+
+		await waitFor(() => {
+			expect(form()?.getValues("secret")).toBe("testsecret");
+		});
 
 		vi.clearAllMocks();
 	});

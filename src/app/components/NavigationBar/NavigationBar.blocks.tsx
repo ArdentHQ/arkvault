@@ -5,7 +5,7 @@ import { generatePath, NavLink, useLocation, useNavigate } from "react-router-do
 import cn from "classnames";
 import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
 import { Button } from "@/app/components/Button";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { BackButton } from "@/app/components/NavigationBar/components/BackButton";
@@ -13,18 +13,16 @@ import { UserMenu } from "@/app/components/NavigationBar/components/UserMenu/Use
 import { NotificationsDropdown } from "@/app/components/Notifications";
 import { ServerStatusIndicator } from "@/app/components/ServerStatusIndicator";
 import { Tooltip } from "@/app/components/Tooltip";
-import { getNavigationMenu } from "@/app/constants/navigation";
+
 import { useNavigationContext } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint, useInputFocus } from "@/app/hooks";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
 import { assertString } from "@/utils/assertions";
-import { useLink } from "@/app/hooks/use-link";
 import { ProfilePaths } from "@/router/paths";
 import { Size } from "@/types";
 import { LogoAlpha } from "@/app/components/Logo";
-import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetwork } from "./components/SelectNetwork";
@@ -192,9 +190,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const location = useLocation();
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
-	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
-	const { showSupportChat } = useZendesk();
 	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const modalSize = useMemo<Size>(() => {
@@ -228,14 +224,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 			.filter((wallet) => wallet.network().id() === activeNetwork.id());
 	}, [profile, isProfileRestored, activeNetwork]);
 
-	const navigationMenu = useMemo(() => getNavigationMenu(t, location.pathname), [t, location.pathname]);
-	const handleSelectMenuItem = useCallback(
-		({ value }: DropdownOption) => {
-			navigate(String(value));
-		},
-		[navigate],
-	);
-
 	const network = useMemo(
 		() => profile.availableNetworks().find((network) => network.id() === selectedWallet?.network.id()),
 		[selectedWallet, profile],
@@ -244,68 +232,202 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const isMenuItemDisabled = (id: string) =>
 		["tokens", "votes", "exchange"].includes(id) && profile.wallets().count() === 0;
 
-	const renderNavigationMenu = () => (
-		<>
-			<ul className="hidden h-12 items-center gap-0.5 xl:flex" data-testid="NavigationBar__menu">
-				{navigationMenu.map((menuItem, index) => {
-					if (isMenuItemDisabled(menuItem.id)) {
-						return (
-							<li key={index} className="flex">
-								<Tooltip content={menuItem.disabledMessage}>
+	const isActive = (pathCheck: string) => location.pathname.includes(pathCheck);
+
+	const navLinkBaseClass =
+		"ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50";
+
+	const renderNavigationMenu = () => {
+		const hideExchange = import.meta.env.VITE_HIDE_EXCHANGE_TAB === "true";
+
+		return (
+			<>
+				<ul className="hidden h-12 items-center gap-0.5 xl:flex" data-testid="NavigationBar__menu">
+					{/* Dashboard */}
+					<li key="dashboard" className="flex">
+						<NavLink
+							to={generatePath(ProfilePaths.Dashboard, { profileId: profile.id() })}
+							title={t("COMMON.PORTFOLIO")}
+							className={cn(navLinkBaseClass, {
+								"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+									isActive("/dashboard"),
+								"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
+									!isActive("/dashboard"),
+							})}
+						>
+							{t("COMMON.PORTFOLIO")}
+						</NavLink>
+					</li>
+
+					{/* Tokens */}
+					<li key="tokens" className="flex">
+						{isMenuItemDisabled("tokens") ? (
+							<Tooltip content={t("COMMON.TOKENS_DISABLED")}>
+								<span className="cursor-pointer border-transparent bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500">
+									{" "}
+									{t("COMMON.TOKENS")}{" "}
+								</span>
+							</Tooltip>
+						) : (
+							<NavLink
+								to={generatePath(ProfilePaths.Tokens, { profileId: profile.id() })}
+								title={t("COMMON.TOKENS")}
+								className={cn(navLinkBaseClass, {
+									"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+										isActive("/tokens"),
+									"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
+										!isActive("/tokens"),
+								})}
+							>
+								{t("COMMON.TOKENS")}
+							</NavLink>
+						)}
+					</li>
+
+					{/* Exchange (conditional) */}
+					{!hideExchange && (
+						<li key="exchange" className="flex">
+							{isMenuItemDisabled("exchange") ? (
+								<Tooltip content={t("COMMON.EXCHANGE_DISABLED")}>
 									<span className="cursor-pointer border-transparent bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500">
 										{" "}
-										{menuItem.title}{" "}
+										{t("COMMON.EXCHANGE")}{" "}
 									</span>
 								</Tooltip>
-							</li>
-						);
-					}
-
-					return (
-						<li key={index} className="flex">
-							<NavLink
-								to={menuItem.mountPath(profile.id())}
-								title={menuItem.title}
-								className={cn(
-									"ring-focus focus:outline-hidden relative flex h-fit items-center rounded border px-2 py-1 text-sm font-semibold leading-[17px] transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50",
-									{
+							) : (
+								<NavLink
+									to={generatePath(ProfilePaths.Exchange, { profileId: profile.id() })}
+									title={t("COMMON.EXCHANGE")}
+									className={cn(navLinkBaseClass, {
 										"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
-											menuItem.isActive,
+											isActive("/exchange"),
 										"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
-											!menuItem.isActive,
-									},
-								)}
-							>
-								{menuItem.title}
-							</NavLink>
+											!isActive("/exchange"),
+									})}
+								>
+									{t("COMMON.EXCHANGE")}
+								</NavLink>
+							)}
 						</li>
-					);
-				})}
-			</ul>
-			<div
-				data-testid="NavigationBar__menu-toggle"
-				className="mr-auto flex content-center items-center xl:hidden"
-			>
-				<Dropdown
-					variant="navbar"
-					toggleContent={(isOpen) => (
-						<button
-							type="button"
-							className="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
-						>
-							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
-						</button>
 					)}
-					onSelect={handleSelectMenuItem}
-					options={navigationMenu.map((menuItem) => ({
-						disabled: isMenuItemDisabled(menuItem.id),
-						label: menuItem.title,
-						value: menuItem.mountPath(profile.id()),
-					}))}
-				/>
-			</div>
-		</>
-	);
+
+					{/* Contacts */}
+					<li key="contacts" className="flex">
+						<NavLink
+							to={generatePath(ProfilePaths.Contacts, { profileId: profile.id() })}
+							title={t("COMMON.CONTACTS")}
+							className={cn(navLinkBaseClass, {
+								"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+									isActive("/contacts"),
+								"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
+									!isActive("/contacts"),
+							})}
+						>
+							{t("COMMON.CONTACTS")}
+						</NavLink>
+					</li>
+
+					{/* Votes */}
+					<li key="votes" className="flex">
+						{isMenuItemDisabled("votes") ? (
+							<Tooltip content={t("COMMON.VOTES_DISABLED")}>
+								<span className="cursor-pointer border-transparent bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500">
+									{" "}
+									{t("COMMON.VOTES")}{" "}
+								</span>
+							</Tooltip>
+						) : (
+							<NavLink
+								to={generatePath(ProfilePaths.Votes, { profileId: profile.id() })}
+								title={t("COMMON.VOTES")}
+								className={cn(navLinkBaseClass, {
+									"border-theme-primary-200 bg-theme-secondary-200 text-theme-primary-600 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:border-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+										isActive("/votes"),
+									"border-transparent bg-transparent text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200":
+										!isActive("/votes"),
+								})}
+							>
+								{t("COMMON.VOTES")}
+							</NavLink>
+						)}
+					</li>
+				</ul>
+
+				{/* Mobile dropdown */}
+				<div
+					data-testid="NavigationBar__menu-toggle"
+					className="mr-auto flex content-center items-center xl:hidden"
+				>
+					<DropdownRoot>
+						<DropdownToggle>
+							{(isOpen) => (
+								<button
+									type="button"
+									className="focus:outline-hidden flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+								>
+									<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
+								</button>
+							)}
+						</DropdownToggle>
+						<DropdownContent>
+							<ul data-testid="dropdown__options">
+								<DropdownListItem
+									key="dashboard"
+									data-testid="dropdown__option--0"
+									onClick={() =>
+										navigate(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }))
+									}
+								>
+									{t("COMMON.PORTFOLIO")}
+								</DropdownListItem>
+								<DropdownListItem
+									key="tokens"
+									disabled={isMenuItemDisabled("tokens")}
+									data-testid="dropdown__option--1"
+									onClick={() =>
+										navigate(generatePath(ProfilePaths.Tokens, { profileId: profile.id() }))
+									}
+								>
+									{t("COMMON.TOKENS")}
+								</DropdownListItem>
+								{!hideExchange && (
+									<DropdownListItem
+										key="exchange"
+										disabled={isMenuItemDisabled("exchange")}
+										data-testid="dropdown__option--2"
+										onClick={() =>
+											navigate(generatePath(ProfilePaths.Exchange, { profileId: profile.id() }))
+										}
+									>
+										{t("COMMON.EXCHANGE")}
+									</DropdownListItem>
+								)}
+								<DropdownListItem
+									key="contacts"
+									data-testid="dropdown__option--3"
+									onClick={() =>
+										navigate(generatePath(ProfilePaths.Contacts, { profileId: profile.id() }))
+									}
+								>
+									{t("COMMON.CONTACTS")}
+								</DropdownListItem>
+								<DropdownListItem
+									key="votes"
+									disabled={isMenuItemDisabled("votes")}
+									data-testid="dropdown__option--4"
+									onClick={() =>
+										navigate(generatePath(ProfilePaths.Votes, { profileId: profile.id() }))
+									}
+								>
+									{t("COMMON.VOTES")}
+								</DropdownListItem>
+							</ul>
+						</DropdownContent>
+					</DropdownRoot>
+				</div>
+			</>
+		);
+	};
 
 	const userInitials = useMemo(() => {
 		if (!isProfileRestored) {
@@ -428,21 +550,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 							<div className="ml-1 flex items-center gap-5 sm:ml-0">
 								<HideBalance className="hidden md-lg:flex" profile={profile} />
-								<UserMenu
-									userInitials={userInitials}
-									avatarImage={profile.avatar()}
-									onUserAction={(action: DropdownOption) => {
-										if (action.value === "contact") {
-											return showSupportChat(profile);
-										}
-
-										if (action.isExternal) {
-											return openExternal(action.mountPath());
-										}
-
-										return navigate(action.mountPath(profile.id()));
-									}}
-								/>
+								<UserMenu userInitials={userInitials} avatarImage={profile.avatar()} />
 							</div>
 						</div>
 					</div>

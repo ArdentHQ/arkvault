@@ -3544,23 +3544,24 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                                      class="min-w-0 grow"
                                     >
-                                      <span>
+                                      <span
+                                        class="block w-full"
+                                      >
                                         <span>
-                                          <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                            data-testid="Address__address"
-                                          >
-                                            0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                            </span>
                                           </span>
                                         </span>
-                                      </span>
-                                      <span>
-                                         
                                       </span>
                                     </div>
                                   </div>
@@ -3634,10 +3635,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -3651,6 +3652,22 @@ exports[`TransactionTable > should render responsive 1`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -3886,10 +3903,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -3903,6 +3920,22 @@ exports[`TransactionTable > should render responsive 1`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -4213,10 +4246,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -4230,6 +4263,22 @@ exports[`TransactionTable > should render responsive 1`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -4540,10 +4589,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -4557,6 +4606,22 @@ exports[`TransactionTable > should render responsive 1`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -4867,10 +4932,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -4884,6 +4949,22 @@ exports[`TransactionTable > should render responsive 1`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -5194,10 +5275,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -5211,6 +5292,22 @@ exports[`TransactionTable > should render responsive 1`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -5521,10 +5618,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -5538,6 +5635,22 @@ exports[`TransactionTable > should render responsive 1`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -5848,10 +5961,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -5865,6 +5978,22 @@ exports[`TransactionTable > should render responsive 1`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -5936,23 +6065,24 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                                      class="min-w-0 grow"
                                     >
-                                      <span>
+                                      <span
+                                        class="block w-full"
+                                      >
                                         <span>
-                                          <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                            data-testid="Address__address"
-                                          >
-                                            0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                            </span>
                                           </span>
                                         </span>
-                                      </span>
-                                      <span>
-                                         
                                       </span>
                                     </div>
                                   </div>
@@ -6190,10 +6320,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -6207,6 +6337,22 @@ exports[`TransactionTable > should render responsive 1`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -6257,7 +6403,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex flex-row gap-2"
+                          class="flex w-full flex-row gap-2"
                           data-testid="TransactionRowAddressing__multipayment"
                         >
                           <div
@@ -6463,23 +6609,24 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                                      class="min-w-0 grow"
                                     >
-                                      <span>
+                                      <span
+                                        class="block w-full"
+                                      >
                                         <span>
-                                          <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                            data-testid="Address__address"
-                                          >
-                                            0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                              data-testid="Address__address"
+                                            >
+                                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                            </span>
                                           </span>
                                         </span>
-                                      </span>
-                                      <span>
-                                         
                                       </span>
                                     </div>
                                   </div>
@@ -6553,10 +6700,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -6570,6 +6717,22 @@ exports[`TransactionTable > should render responsive 1`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -6829,23 +6992,24 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                                      class="min-w-0 grow"
                                     >
-                                      <span>
+                                      <span
+                                        class="block w-full"
+                                      >
                                         <span>
-                                          <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                            data-testid="Address__address"
-                                          >
-                                            0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                            </span>
                                           </span>
                                         </span>
-                                      </span>
-                                      <span>
-                                         
                                       </span>
                                     </div>
                                   </div>
@@ -6919,10 +7083,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -6936,6 +7100,22 @@ exports[`TransactionTable > should render responsive 2`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -7171,10 +7351,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -7188,6 +7368,22 @@ exports[`TransactionTable > should render responsive 2`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -7498,10 +7694,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -7515,6 +7711,22 @@ exports[`TransactionTable > should render responsive 2`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -7825,10 +8037,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -7842,6 +8054,22 @@ exports[`TransactionTable > should render responsive 2`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -8152,10 +8380,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -8169,6 +8397,22 @@ exports[`TransactionTable > should render responsive 2`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -8479,10 +8723,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -8496,6 +8740,22 @@ exports[`TransactionTable > should render responsive 2`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -8806,10 +9066,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -8823,6 +9083,22 @@ exports[`TransactionTable > should render responsive 2`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -9133,10 +9409,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -9150,6 +9426,22 @@ exports[`TransactionTable > should render responsive 2`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -9221,23 +9513,24 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                                      class="min-w-0 grow"
                                     >
-                                      <span>
+                                      <span
+                                        class="block w-full"
+                                      >
                                         <span>
-                                          <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                            data-testid="Address__address"
-                                          >
-                                            0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                            </span>
                                           </span>
                                         </span>
-                                      </span>
-                                      <span>
-                                         
                                       </span>
                                     </div>
                                   </div>
@@ -9475,10 +9768,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -9492,6 +9785,22 @@ exports[`TransactionTable > should render responsive 2`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -9542,7 +9851,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           </div>
                         </div>
                         <div
-                          class="flex flex-row gap-2"
+                          class="flex w-full flex-row gap-2"
                           data-testid="TransactionRowAddressing__multipayment"
                         >
                           <div
@@ -9748,23 +10057,24 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                                      class="min-w-0 grow"
                                     >
-                                      <span>
+                                      <span
+                                        class="block w-full"
+                                      >
                                         <span>
-                                          <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                            data-testid="Address__address"
-                                          >
-                                            0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                              data-testid="Address__address"
+                                            >
+                                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                            </span>
                                           </span>
                                         </span>
-                                      </span>
-                                      <span>
-                                         
                                       </span>
                                     </div>
                                   </div>
@@ -9838,10 +10148,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                                   data-testid="TransactionRowAddressing__address-container"
                                 >
                                   <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                    class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                                   >
                                     <span
-                                      class="font-semibold text-sm text-theme-text"
+                                      class="mr-2 text-base font-semibold text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span>
@@ -9855,6 +10165,22 @@ exports[`TransactionTable > should render responsive 2`] = `
                                         </span>
                                       </span>
                                     </span>
+                                    <div
+                                      class="min-w-0 grow"
+                                    >
+                                      <span
+                                        class="block w-full"
+                                      >
+                                        <span>
+                                          <span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </span>
@@ -10279,23 +10605,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="min-w-0 grow"
                               >
-                                <span>
+                                <span
+                                  class="block w-full"
+                                >
                                   <span>
-                                    <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                        data-testid="Address__address"
+                                      >
+                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                      </span>
                                     </span>
                                   </span>
-                                </span>
-                                <span>
-                                   
                                 </span>
                               </div>
                             </div>
@@ -10372,10 +10699,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -10389,6 +10716,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -10470,10 +10813,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -10487,6 +10830,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -10566,23 +10925,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -10852,10 +11212,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -10869,6 +11229,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -11382,10 +11758,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -11399,6 +11775,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -11912,10 +12304,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -11929,6 +12321,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -12442,10 +12850,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -12459,6 +12867,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -12972,10 +13396,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -12989,6 +13413,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -13502,10 +13942,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -13519,6 +13959,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -14032,10 +14488,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -14049,6 +14505,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -14123,23 +14595,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="min-w-0 grow"
                                 >
-                                  <span>
+                                  <span
+                                    class="block w-full"
+                                  >
                                     <span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                          data-testid="Address__address"
+                                        >
+                                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                        </span>
                                       </span>
                                     </span>
-                                  </span>
-                                  <span>
-                                     
                                   </span>
                                 </div>
                               </div>
@@ -14223,23 +14696,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -14321,23 +14795,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -14607,10 +15082,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -14624,6 +15099,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -14677,7 +15168,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     class="md-lg:hidden"
                   >
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__multipayment"
                     >
                       <div
@@ -14708,7 +15199,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
               >
                 <div
-                  class="flex flex-row gap-2"
+                  class="flex w-full flex-row gap-2"
                   data-testid="TransactionRowAddressing__multipayment"
                 >
                   <div
@@ -14737,7 +15228,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
               >
                 <div
-                  class="flex flex-row gap-2"
+                  class="flex w-full flex-row gap-2"
                   data-testid="TransactionRowAddressing__multipayment"
                 >
                   <div
@@ -14975,23 +15466,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="min-w-0 grow"
                               >
-                                <span>
+                                <span
+                                  class="block w-full"
+                                >
                                   <span>
-                                    <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                        data-testid="Address__address"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
                                   </span>
-                                </span>
-                                <span>
-                                   
                                 </span>
                               </div>
                             </div>
@@ -15068,10 +15560,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -15085,6 +15577,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -15166,10 +15674,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -15183,6 +15691,22 @@ exports[`TransactionTable > should render responsive 3`] = `
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -15262,23 +15786,24 @@ exports[`TransactionTable > should render responsive 3`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -15723,23 +16248,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="min-w-0 grow"
                               >
-                                <span>
+                                <span
+                                  class="block w-full"
+                                >
                                   <span>
-                                    <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                        data-testid="Address__address"
+                                      >
+                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                      </span>
                                     </span>
                                   </span>
-                                </span>
-                                <span>
-                                   
                                 </span>
                               </div>
                             </div>
@@ -15816,10 +16342,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -15833,6 +16359,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -15914,10 +16456,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -15931,6 +16473,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -16010,23 +16568,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -16296,10 +16855,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -16313,6 +16872,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -16826,10 +17401,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -16843,6 +17418,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -17356,10 +17947,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -17373,6 +17964,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -17886,10 +18493,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -17903,6 +18510,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -18416,10 +19039,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -18433,6 +19056,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -18946,10 +19585,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -18963,6 +19602,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -19476,10 +20131,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -19493,6 +20148,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -19567,23 +20238,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="min-w-0 grow"
                                 >
-                                  <span>
+                                  <span
+                                    class="block w-full"
+                                  >
                                     <span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                          data-testid="Address__address"
+                                        >
+                                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                        </span>
                                       </span>
                                     </span>
-                                  </span>
-                                  <span>
-                                     
                                   </span>
                                 </div>
                               </div>
@@ -19667,23 +20339,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -19765,23 +20438,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -20051,10 +20725,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -20068,6 +20742,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -20121,7 +20811,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     class="md-lg:hidden"
                   >
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__multipayment"
                     >
                       <div
@@ -20152,7 +20842,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
               >
                 <div
-                  class="flex flex-row gap-2"
+                  class="flex w-full flex-row gap-2"
                   data-testid="TransactionRowAddressing__multipayment"
                 >
                   <div
@@ -20181,7 +20871,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
               >
                 <div
-                  class="flex flex-row gap-2"
+                  class="flex w-full flex-row gap-2"
                   data-testid="TransactionRowAddressing__multipayment"
                 >
                   <div
@@ -20419,23 +21109,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="min-w-0 grow"
                               >
-                                <span>
+                                <span
+                                  class="block w-full"
+                                >
                                   <span>
-                                    <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                        data-testid="Address__address"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
                                   </span>
-                                </span>
-                                <span>
-                                   
                                 </span>
                               </div>
                             </div>
@@ -20512,10 +21203,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -20529,6 +21220,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -20610,10 +21317,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -20627,6 +21334,22 @@ exports[`TransactionTable > should render responsive 4`] = `
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -20706,23 +21429,24 @@ exports[`TransactionTable > should render responsive 4`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -21167,23 +21891,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="min-w-0 grow"
                               >
-                                <span>
+                                <span
+                                  class="block w-full"
+                                >
                                   <span>
-                                    <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                        data-testid="Address__address"
+                                      >
+                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                      </span>
                                     </span>
                                   </span>
-                                </span>
-                                <span>
-                                   
                                 </span>
                               </div>
                             </div>
@@ -21260,10 +21985,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -21277,6 +22002,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -21358,10 +22099,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -21375,6 +22116,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -21454,23 +22211,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -21721,10 +22479,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -21738,6 +22496,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -22232,10 +23006,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -22249,6 +23023,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -22743,10 +23533,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -22760,6 +23550,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -23254,10 +24060,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -23271,6 +24077,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -23765,10 +24587,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -23782,6 +24604,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -24276,10 +25114,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -24293,6 +25131,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -24787,10 +25641,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -24804,6 +25658,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -24878,23 +25748,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="min-w-0 grow"
                                 >
-                                  <span>
+                                  <span
+                                    class="block w-full"
+                                  >
                                     <span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                          data-testid="Address__address"
+                                        >
+                                          0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                        </span>
                                       </span>
                                     </span>
-                                  </span>
-                                  <span>
-                                     
                                   </span>
                                 </div>
                               </div>
@@ -24978,23 +25849,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -25076,23 +25948,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>
@@ -25343,10 +26216,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <span
-                                class="font-semibold text-sm text-theme-text"
+                                class="mr-2 text-base font-semibold text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span>
@@ -25360,6 +26233,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                   </span>
                                 </span>
                               </span>
+                              <div
+                                class="min-w-0 grow"
+                              >
+                                <span
+                                  class="block w-full"
+                                >
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                        data-testid="Address__address"
+                                      />
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -25413,7 +26302,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     class="md-lg:hidden"
                   >
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__multipayment"
                     >
                       <div
@@ -25444,7 +26333,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
               >
                 <div
-                  class="flex flex-row gap-2"
+                  class="flex w-full flex-row gap-2"
                   data-testid="TransactionRowAddressing__multipayment"
                 >
                   <div
@@ -25473,7 +26362,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
               >
                 <div
-                  class="flex flex-row gap-2"
+                  class="flex w-full flex-row gap-2"
                   data-testid="TransactionRowAddressing__multipayment"
                 >
                   <div
@@ -25692,23 +26581,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="min-w-0 grow"
                               >
-                                <span>
+                                <span
+                                  class="block w-full"
+                                >
                                   <span>
-                                    <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                    <span>
+                                      <span
+                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                        data-testid="Address__address"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
                                   </span>
-                                </span>
-                                <span>
-                                   
                                 </span>
                               </div>
                             </div>
@@ -25785,10 +26675,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="font-semibold text-sm text-theme-text"
+                                  class="mr-2 text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -25802,6 +26692,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                     </span>
                                   </span>
                                 </span>
+                                <div
+                                  class="min-w-0 grow"
+                                >
+                                  <span
+                                    class="block w-full"
+                                  >
+                                    <span>
+                                      <span>
+                                        <span
+                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                          data-testid="Address__address"
+                                        />
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </span>
@@ -25883,10 +26789,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <span
-                              class="font-semibold text-sm text-theme-text"
+                              class="mr-2 text-base font-semibold text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span>
@@ -25900,6 +26806,22 @@ exports[`TransactionTable > should render responsive 5`] = `
                                 </span>
                               </span>
                             </span>
+                            <div
+                              class="min-w-0 grow"
+                            >
+                              <span
+                                class="block w-full"
+                              >
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    />
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -25979,23 +26901,24 @@ exports[`TransactionTable > should render responsive 5`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                           >
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="min-w-0 grow"
                             >
-                              <span>
+                              <span
+                                class="block w-full"
+                              >
                                 <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                  <span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                    </span>
                                   </span>
                                 </span>
-                              </span>
-                              <span>
-                                 
                               </span>
                             </div>
                           </div>

@@ -12,8 +12,25 @@ exports[`SelectAddress > should render disabled 1`] = `
       class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
     >
       <div
-        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-      />
+        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
+      >
+        <div
+          class="min-w-0 grow"
+        >
+          <span
+            class="block w-full"
+          >
+            <span>
+              <span>
+                <span
+                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base text-theme-text"
+                  data-testid="Address__address"
+                />
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
     </span>
     <div
       class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dim:border-theme-dim-700 dim:bg-theme-dim-950 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
@@ -92,8 +109,25 @@ exports[`SelectAddress > should render empty 1`] = `
       class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
     >
       <div
-        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-      />
+        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
+      >
+        <div
+          class="min-w-0 grow"
+        >
+          <span
+            class="block w-full"
+          >
+            <span>
+              <span>
+                <span
+                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base text-theme-text"
+                  data-testid="Address__address"
+                />
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
     </span>
     <div
       class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
@@ -171,8 +205,25 @@ exports[`SelectAddress > should render invalid 1`] = `
       class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13 right-24"
     >
       <div
-        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-      />
+        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
+      >
+        <div
+          class="min-w-0 grow"
+        >
+          <span
+            class="block w-full"
+          >
+            <span>
+              <span>
+                <span
+                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base text-theme-text"
+                  data-testid="Address__address"
+                />
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
     </span>
     <div
       class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
@@ -303,18 +354,26 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
     >
       <div
-        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
       >
-        <span>
-          <span>
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              0x659A76be283644AEc2003aa8ba26485047fd1BFB
+        <div
+          class="min-w-0 grow"
+        >
+          <span
+            class="block w-full"
+          >
+            <span>
+              <span>
+                <span
+                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base text-theme-text"
+                  data-testid="Address__address"
+                >
+                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                </span>
+              </span>
             </span>
           </span>
-        </span>
+        </div>
       </div>
     </span>
     <div
@@ -393,8 +452,25 @@ exports[`SelectAddress > should render without user icon 1`] = `
       class="absolute inset-y-0 left-4 flex items-center border border-transparent right-4"
     >
       <div
-        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-      />
+        class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
+      >
+        <div
+          class="min-w-0 grow"
+        >
+          <span
+            class="block w-full"
+          >
+            <span>
+              <span>
+                <span
+                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base text-theme-text"
+                  data-testid="Address__address"
+                />
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
     </span>
     <div
       class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"

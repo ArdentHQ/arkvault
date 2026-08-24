@@ -68,6 +68,7 @@ export default defineConfig(async () => {
 						"src/tests/**/*",
 						"src/utils/e2e-utils.ts",
 						"src/utils/testing-library.tsx",
+						"src/utils/vitest-mocks.ts",
 						"src/utils/ledger-test-helpers.ts",
 						"src/utils/test-plugins.ts",
 						"src/utils/test-helpers.ts",

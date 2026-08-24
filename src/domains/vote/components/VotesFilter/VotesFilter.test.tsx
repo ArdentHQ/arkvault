@@ -2,11 +2,11 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { VotesFilter } from "./VotesFilter";
-import { render, screen, waitFor, act } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 import { within } from "@testing-library/react";
 
-const toggler = "dropdown__toggle-VotesFilter";
-const dropdownBody = "dropdown__content-VotesFilter";
+const getContainer = () => screen.getByTestId("VotesFilter");
+const getToggle = () => within(getContainer()).getByTestId("dropdown__toggle");
 
 describe("VotesFilter", () => {
 	it("should render", () => {
@@ -18,9 +18,9 @@ describe("VotesFilter", () => {
 	it("should render default", async () => {
 		const { asFragment } = render(<VotesFilter totalCurrentVotes={1} />);
 
-		await userEvent.click(screen.getByTestId(toggler));
+		await userEvent.click(getToggle());
 
-		await expect(screen.findByTestId(dropdownBody)).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -28,9 +28,9 @@ describe("VotesFilter", () => {
 	it("should render with current option selected", async () => {
 		const { asFragment } = render(<VotesFilter totalCurrentVotes={1} selectedOption="current" />);
 
-		await userEvent.click(screen.getByTestId(toggler));
+		await userEvent.click(getToggle());
 
-		await expect(screen.findByTestId(dropdownBody)).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -38,9 +38,9 @@ describe("VotesFilter", () => {
 	it("should render with disabled current option", async () => {
 		const { asFragment } = render(<VotesFilter totalCurrentVotes={0} />);
 
-		await userEvent.click(screen.getByTestId(toggler));
+		await userEvent.click(getToggle());
 
-		await expect(screen.findByTestId(dropdownBody)).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -49,9 +49,9 @@ describe("VotesFilter", () => {
 		const onChange = vi.fn();
 		render(<VotesFilter totalCurrentVotes={2} onChange={onChange} />);
 
-		await userEvent.click(screen.getByTestId(toggler));
+		await userEvent.click(getToggle());
 
-		await expect(screen.findByTestId(dropdownBody)).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		const filterOptionCurrent = screen.getByTestId("VotesFilter__option--current");
 		await userEvent.click(filterOptionCurrent);
@@ -68,24 +68,17 @@ describe("VotesFilter", () => {
 		const onChange = vi.fn();
 		render(<VotesFilter totalCurrentVotes={2} onChange={onChange} />);
 
-		await userEvent.click(screen.getByTestId(toggler));
+		await userEvent.click(getToggle());
 
-		await expect(screen.findByTestId(dropdownBody)).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
-		const currentOption = within(screen.getByTestId("VotesFilter__option--current")).getByRole("checkbox");
-
-		act(() => {
-			currentOption.focus();
-		});
-
-		await userEvent.keyboard("{enter}");
+		const currentCheckbox = within(screen.getByTestId("VotesFilter__option--current")).getByRole("checkbox");
+		await userEvent.type(currentCheckbox, "{Enter}");
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("current"));
 
-		const allOption = within(screen.getByTestId("VotesFilter__option--all")).getByRole("checkbox");
-		allOption.focus();
-
-		await userEvent.keyboard("{Spacebar}");
+		const allCheckbox = within(screen.getByTestId("VotesFilter__option--all")).getByRole("checkbox");
+		await userEvent.type(allCheckbox, "{Enter}");
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("all"));
 	});

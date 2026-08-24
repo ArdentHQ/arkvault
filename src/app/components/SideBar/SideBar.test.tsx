@@ -53,7 +53,7 @@ describe("SideBar", () => {
 
 		await userEvent.click(dropdown);
 
-		const passwordItem = screen.getByTestId("dropdown__option--1");
+		const passwordItem = screen.getByTestId("Sidebar--option-1");
 
 		expect(passwordItem).toBeInTheDocument();
 

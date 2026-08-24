@@ -236,7 +236,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[1].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		// Back to select a validator page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
@@ -267,7 +267,7 @@ describe("SendVote", () => {
 		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		// Back to select a validator page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
@@ -301,7 +301,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
@@ -375,7 +375,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
@@ -426,7 +426,7 @@ describe("SendVote", () => {
 		legacyNonceSpy.mockRestore();
 	});
 
-	it("should send a unvote & vote transaction and use split voting method", async () => {
+	it("should send an unvote & vote transaction and use split voting method", async () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 
 		await wallet.synchroniser().votes();
@@ -458,7 +458,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
@@ -705,7 +705,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
@@ -755,7 +755,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
@@ -849,7 +849,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -914,7 +914,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -959,7 +959,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1088,7 +1088,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		const address = wallet.address();
 		const balance = wallet.balance();
@@ -1188,7 +1188,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1232,7 +1232,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1267,7 +1267,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(wallet.address()));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 

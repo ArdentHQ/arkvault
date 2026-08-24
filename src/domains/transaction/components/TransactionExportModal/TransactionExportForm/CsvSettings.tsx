@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useFormContext } from "react-hook-form";
 import { useDelimiterOptions } from "./hooks";
 import { CollapseToggleButton } from "@/app/components/Collapse";
-import { Dropdown } from "@/app/components/Dropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { FormField } from "@/app/components/Form";
 import { Toggle } from "@/app/components/Toggle";
 import { CsvDelimiter } from "@/domains/transaction/components/TransactionExportModal";
@@ -22,26 +22,36 @@ const SelectDelimiter = ({ value, onSelect }: { value: CsvDelimiter; onSelect?: 
 	const delimiterOptions = useDelimiterOptions({ selectedValue: value });
 
 	return (
-		<FormField name="delimiter">
-			<Dropdown
-				variant="options"
-				data-testid="TransactionExportForm--delimiter-options"
-				wrapperClass="z-[52]"
-				options={delimiterOptions.options}
-				onSelect={(option) => onSelect?.(option.value as CsvDelimiter)}
-				toggleContent={(isOpen: boolean) => (
-					<CollapseToggleButton
-						isOpen={isOpen}
-						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-						label={
-							<SelectDelimiterLabel
-								label={delimiterOptions.selected?.label}
-								symbol={delimiterOptions.selected?.symbol}
-							/>
-						}
-					/>
-				)}
-			/>
+		<FormField name="delimiter" data-testid="TransactionExportForm--delimiter">
+			<DropdownRoot>
+				<DropdownToggle>
+					{({ isOpen }: { isOpen: boolean }) => (
+						<CollapseToggleButton
+							isOpen={isOpen}
+							className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+							label={
+								<SelectDelimiterLabel
+									label={delimiterOptions.selected?.label}
+									symbol={delimiterOptions.selected?.symbol}
+								/>
+							}
+						/>
+					)}
+				</DropdownToggle>
+				<DropdownContent className="z-[52]">
+					<ul>
+						{delimiterOptions.options.map((option, index) => (
+							<DropdownListItem
+								key={option.value}
+								data-testid={`dropdown__option--${index}`}
+								onClick={() => onSelect?.(option.value as CsvDelimiter)}
+							>
+								{option.label}
+							</DropdownListItem>
+						))}
+					</ul>
+				</DropdownContent>
+			</DropdownRoot>
 		</FormField>
 	);
 };

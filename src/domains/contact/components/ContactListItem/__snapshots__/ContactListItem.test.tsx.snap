@@ -40,23 +40,24 @@ exports[`ContactListItem > should render 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -154,6 +155,7 @@ exports[`ContactListItem > should render 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -251,23 +253,24 @@ exports[`ContactListItem > should render as validator 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -365,6 +368,7 @@ exports[`ContactListItem > should render as validator 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -462,23 +466,24 @@ exports[`ContactListItem > should render options 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -576,6 +581,7 @@ exports[`ContactListItem > should render options 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -648,23 +654,24 @@ exports[`ContactListItem > should render options 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -759,6 +766,7 @@ exports[`ContactListItem > should render options 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -831,23 +839,24 @@ exports[`ContactListItem > should render options 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -942,6 +951,7 @@ exports[`ContactListItem > should render options 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1039,23 +1049,24 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -1153,6 +1164,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1225,23 +1237,24 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -1336,6 +1349,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1408,23 +1422,24 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -1519,6 +1534,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1616,23 +1632,24 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -1731,6 +1748,7 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1803,23 +1821,24 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -1915,6 +1934,7 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"
@@ -1987,23 +2007,24 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
               class="w-0 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                  class="min-w-0 grow"
                 >
-                  <span>
+                  <span
+                    class="block w-full"
+                  >
                     <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                      <span>
+                        <span
+                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-sm leading-[17px] text-base text-theme-text"
+                          data-testid="Address__address"
+                        >
+                          DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span>
-                     
                   </span>
                 </div>
               </div>
@@ -2099,6 +2120,7 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
                   aria-expanded="false"
                   aria-haspopup="dialog"
                   data-testid="dropdown__toggle"
+                  tabindex="0"
                 >
                   <button
                     class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700"

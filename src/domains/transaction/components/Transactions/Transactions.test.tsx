@@ -421,7 +421,8 @@ describe("Transactions", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(8),
 		);
 
-		const button = screen.getByTestId("dropdown__toggle-Transactions--filter-dropdown");
+		const mobileFilter = screen.getByTestId("Transactions--mobile-filter");
+		const button = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
 
 		expect(button).toBeInTheDocument();
 
@@ -429,7 +430,7 @@ describe("Transactions", () => {
 
 		await userEvent.click(button);
 
-		const dropdownContainer = within(screen.getByTestId("dropdown__content-Transactions--filter-dropdown"));
+		const dropdownContainer = within(screen.getByTestId("dropdown__content"));
 
 		await expect(dropdownContainer.findByTestId("dropdown__option--2")).resolves.toBeVisible();
 
@@ -438,6 +439,71 @@ describe("Transactions", () => {
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
 		);
+	});
+
+	it("should toggle mobile dropdown", async () => {
+		renderResponsiveWithRoute(<Transactions profile={profile} wallets={profile.wallets().values()} />, "xs", {
+			route: dashboardURL,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
+		);
+
+		const mobileFilter = screen.getByTestId("Transactions--mobile-filter");
+		const button = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
+
+		expect(button).toBeInTheDocument();
+		expect(button.children.length).toBeGreaterThan(0);
+
+		await userEvent.click(button);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
+		});
+	});
+
+	it("should show correct chevron icon in mobile dropdown toggle based on open state", async () => {
+		renderResponsiveWithRoute(<Transactions profile={profile} wallets={profile.wallets().values()} />, "xs", {
+			route: dashboardURL,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
+		);
+
+		const mobileFilter = screen.getByTestId("Transactions--mobile-filter");
+		const toggleButton = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
+
+		const iconWrapper = screen.getByTestId("mobile-filter__chevron-icon");
+		expect(iconWrapper).toBeInTheDocument();
+		expect(iconWrapper.children.length).toBeGreaterThan(0);
+
+		await userEvent.click(toggleButton);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		});
+
+		const iconAfterOpen = screen.getByTestId("mobile-filter__chevron-icon");
+		expect(iconAfterOpen).toBeInTheDocument();
+		expect(iconAfterOpen.children.length).toBeGreaterThan(0);
+
+		await userEvent.click(toggleButton);
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
+		});
+
+		const iconAfterClose = screen.getByTestId("mobile-filter__chevron-icon");
+		expect(iconAfterClose).toBeInTheDocument();
+		expect(iconAfterClose.children.length).toBeGreaterThan(0);
 	});
 
 	it("should ignore tab change on loading state", async () => {
