@@ -2,8 +2,8 @@ import { describe, it, expect } from "vitest";
 import { HistoricalVolumeTransformer } from "./historical-volume-transformer";
 
 const fixture = [
-	{ time: 1_616_025_600, volumeto: 1000 },
-	{ time: 1_616_112_000, volumeto: 2200 },
+	{ close: 0.401, date: "2024-01-13", volume: 1_100_000 },
+	{ close: 0.412, date: "2024-01-14", volume: 1_230_000 },
 ];
 
 describe("HistoricalVolumeTransformer", () => {
@@ -13,7 +13,7 @@ describe("HistoricalVolumeTransformer", () => {
 
 		expect(result.labels).toHaveLength(2);
 		expect(result.datasets).toHaveLength(2);
-		expect(result.min).toBe(1000);
-		expect(result.max).toBe(2200);
+		expect(result.min).toBe(1_100_000);
+		expect(result.max).toBe(1_230_000);
 	});
 });

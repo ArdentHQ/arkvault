@@ -7,6 +7,7 @@ import * as browserAccess from "browser-fs-access";
 
 import { useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
+import { PlatformSdkChoices } from "@/data";
 import { toasts } from "@/app/services";
 import GeneralSettings, { SettingsGroup, SettingsButtonGroup, ViewingMode } from "@/domains/setting/pages/General";
 import {
@@ -46,6 +47,8 @@ const selectListInputTestId = "select-list__input";
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
+
+const arkPricingLabel = "ARK Pricing";
 
 describe("General Settings", () => {
 	beforeAll(async () => {
@@ -535,6 +538,12 @@ describe("General Settings", () => {
 	it("should default to USD if market provider does not support the selected currency", async () => {
 		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
+		const originalMarketProviders = PlatformSdkChoices.marketProviders;
+		PlatformSdkChoices.marketProviders = [
+			{ label: arkPricingLabel, unsupportedCurrencies: ["VND"], value: "arkpricing" },
+			{ label: "CoinGecko", unsupportedCurrencies: [], value: "coingecko" },
+		];
+
 		render(<GeneralSettings />, {
 			route: `/profiles/${profile.id()}/settings`,
 		});
@@ -556,7 +565,7 @@ describe("General Settings", () => {
 			return within(subject).getByTestId("SelectDropdown__input");
 		};
 
-		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
+		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue(arkPricingLabel);
 		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
 
 		await userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
@@ -581,20 +590,21 @@ describe("General Settings", () => {
 
 		await userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
 
-		await userEvent.click(screen.getByText("CryptoCompare"));
+		await userEvent.click(screen.getByText(arkPricingLabel));
 
-		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
+		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue(arkPricingLabel);
 
 		expect(toastSpy).toHaveBeenCalledWith(
 			translations.SETTINGS.GENERAL.UNSUPPORTED_CURRENCY.replace("{{currency}}", "VND").replace(
 				"{{provider}}",
-				"CryptoCompare",
+				arkPricingLabel,
 			),
 		);
 
 		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
 
 		toastSpy.mockRestore();
+		PlatformSdkChoices.marketProviders = originalMarketProviders;
 	});
 
 	it("should show confirmation modal when auto logoff field is changed", async () => {

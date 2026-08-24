@@ -1,0 +1,23 @@
+{
+	"data": {
+		"coin": "ark",
+		"USD": {
+			"price": 0.412,
+			"marketCap": 41200000,
+			"volume": 1230000,
+			"change24h": 2.31,
+			"timestamp": "2024-01-15T12:00:00Z",
+			"ath": { "price": 10.91, "date": "2018-01-10" },
+			"atl": { "price": 0.0261, "date": "2017-03-22" }
+		},
+		"BTC": {
+			"price": 0.00000976,
+			"marketCap": 976,
+			"volume": 29.13,
+			"change24h": 1.02,
+			"timestamp": "2024-01-15T12:00:00Z",
+			"ath": { "price": 0.0004901, "date": "2017-06-05" },
+			"atl": { "price": 0.00000116, "date": "2020-03-13" }
+		}
+	}
+}

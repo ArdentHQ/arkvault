@@ -2,7 +2,7 @@ import { DateTime } from "@/app/lib/intl";
 import { HistoricalData, HistoricalTransformer } from "@/app/lib/markets/contracts";
 
 /**
- *  Implements a transformer for historical volume data.
+ * Implements a transformer for historical volume data.
  *
  * @export
  * @class HistoricalVolumeTransformer
@@ -25,11 +25,11 @@ export class HistoricalVolumeTransformer implements HistoricalTransformer {
 	 * @memberof HistoricalVolumeTransformer
 	 */
 	public transform(options: Record<string, any>): HistoricalData {
-		const datasets = this.data.map((value) => value.volumeto);
+		const datasets = this.data.map((value) => value.volume);
 
 		return {
 			datasets,
-			labels: this.data.map((value) => DateTime.make(value.time * 1000).format(options.dateFormat)),
+			labels: this.data.map((value) => DateTime.make(value.date).format(options.dateFormat)),
 			max: Math.max(...datasets),
 			min: Math.min(...datasets),
 		};
