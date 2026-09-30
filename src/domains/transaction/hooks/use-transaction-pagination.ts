@@ -56,20 +56,17 @@ export const useTransactionPagination = ({ limit }: TransactionPaginationPropert
 
 	const nextCursor = useCallback(() => cursorRef.current + 1, []);
 
-	const acceptPage = useCallback(
-		(page: number, items: ConfirmedTransaction[]) => {
-			const fresh = items.filter((item) => !displayedHashesRef.current.has(item.hash()));
+	const acceptPage = useCallback((page: number, items: ConfirmedTransaction[]) => {
+		const fresh = items.filter((item) => !displayedHashesRef.current.has(item.hash()));
 
-			cursorRef.current = page;
+		cursorRef.current = page;
 
-			for (const item of fresh) {
-				displayedHashesRef.current.add(item.hash());
-			}
+		for (const item of fresh) {
+			displayedHashesRef.current.add(item.hash());
+		}
 
-			return fresh;
-		},
-		[],
-	);
+		return fresh;
+	}, []);
 
 	const hasMorePages = useCallback(
 		(itemsLength: number, hasMorePages: boolean, itemsLimit = limit) => {
