@@ -86,7 +86,7 @@ describe("TransactionEncoder", () => {
 
 	it("should encode updateValidator", async () => {
 		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
-		const result = encoder.updateValidator(validatorPassphrase);
+		const result = encoder.updateValidator(validatorPassphrase, profile.wallets().first().address());
 
 		expect(result.to).toBe(ContractAddresses.CONSENSUS);
 		expect(result.data).toBeDefined();
@@ -113,7 +113,7 @@ describe("TransactionEncoder", () => {
 
 	it("should encode validatorRegistration", async () => {
 		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
-		const result = encoder.validatorRegistration(validatorPassphrase);
+		const result = encoder.validatorRegistration(validatorPassphrase, profile.wallets().first().address());
 
 		expect(result.to).toBe(ContractAddresses.CONSENSUS);
 		expect(result.data).toBeDefined();
