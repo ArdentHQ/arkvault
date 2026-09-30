@@ -189,8 +189,10 @@ describe("useProfileTransactions", () => {
 		});
 
 		// Page 2 comes back as a stale copy of page 1; the real next batch is on page 3.
-		const allSpy = vi.spyOn(aggregate, "all").mockImplementation((async (query: any) =>
-			query?.cursor === 3 ? collection(pageTwo, true) : collection(pageOne, true)) as any);
+		const allSpy = vi
+			.spyOn(aggregate, "all")
+			.mockImplementation((async (query: any) =>
+				query?.cursor === 3 ? collection(pageTwo, true) : collection(pageOne, true)) as any);
 
 		const { result } = renderHook(
 			() => useProfileTransactions({ limit: 5, profile, wallets: profile.wallets().values() }),
