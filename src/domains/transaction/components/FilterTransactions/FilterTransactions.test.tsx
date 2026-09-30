@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { FilterTransactions } from "./FilterTransactions";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -151,6 +151,13 @@ describe("FilterTransactions", () => {
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
 		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		// `FloatingFocusManager` moves focus to the first option after the dropdown mounts.
+		// Wait for that to land, otherwise it can steal the focus we set below right before
+		// the keystroke is dispatched and the toggle fires on the wrong option.
+		await waitFor(() =>
+			expect(screen.getByTestId("dropdown__content")).toContainElement(document.activeElement as Element),
+		);
 
 		const options = screen.getAllByTestId("FilterOption__checkbox");
 
