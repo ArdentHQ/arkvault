@@ -15,7 +15,7 @@
 		"useUnknownInCatchVariables": false,
 		"noImplicitAny": false,
 		"noFallthroughCasesInSwitch": true,
-		"types": ["vite-plugin-pwa/client", "vitest/globals"],
+		"types": ["node", "vite-plugin-pwa/client", "vitest/globals"],
 		"paths": {
 			"@/*": ["./src/*"],
 			"dinero.js/currencies": ["../node_modules/dinero.js/dist/esm/currencies/index"]
