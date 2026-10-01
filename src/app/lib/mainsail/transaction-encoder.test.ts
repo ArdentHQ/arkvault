@@ -226,7 +226,7 @@ describe("TransactionEncoder", () => {
 
 		const result = encoder.byType(
 			{
-				senderAddress: "0x1234",
+				senderAddress: profile.wallets().first().address(),
 				voteAddresses: [voteAddress],
 			},
 			"vote",
@@ -241,7 +241,7 @@ describe("TransactionEncoder", () => {
 
 		const result = encoder.byType(
 			{
-				senderAddress: "0x1234",
+				senderAddress: profile.wallets().first().address(),
 				validatorPassphrase,
 			},
 			"validatorRegistration",
@@ -316,7 +316,7 @@ describe("TransactionEncoder", () => {
 
 		const result = encoder.byType(
 			{
-				senderAddress: "0x1234",
+				senderAddress: profile.wallets().first().address(),
 				validatorPassphrase,
 			},
 			"updateValidator",
