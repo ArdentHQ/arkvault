@@ -155,11 +155,9 @@ describe("FilterTransactions", () => {
 		// `FloatingFocusManager` moves focus to the first option after the dropdown mounts.
 		// Wait for that to land, otherwise it can steal the focus we set below right before
 		// the keystroke is dispatched and the toggle fires on the wrong option.
-		await waitFor(() =>
-			expect(screen.getByTestId("dropdown__content")).toContainElement(document.activeElement as Element),
-		);
-
 		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await waitFor(() => expect(options.at(0)).toHaveFocus());
 
 		options.at(1).focus();
 		await userEvent.keyboard("{enter}");
