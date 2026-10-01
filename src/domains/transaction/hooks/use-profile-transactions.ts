@@ -398,8 +398,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 			setState((state) => ({
 				...state,
-				// Not `hasMorePages()` on the item count: a page can legitimately come back
-				// entirely duplicated, which must not be mistaken for the end of the list.
 				hasMore: response.hasMorePages(),
 				isLoadingMore: false,
 				transactions: [...state.transactions, ...newItems],
