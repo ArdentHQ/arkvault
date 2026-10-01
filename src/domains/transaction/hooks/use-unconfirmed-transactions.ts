@@ -1,6 +1,6 @@
 import { DTO } from "@/app/lib/profiles";
 import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
-import { useCallback } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
 interface UnconfirmedTransactions {
@@ -26,6 +26,12 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 		"unconfirmed-transactions",
 		{},
 	);
+
+	const latestTransactionsRef = useRef<UnconfirmedTransactions>(unconfirmedTransactions);
+
+	useEffect(() => {
+		latestTransactionsRef.current = unconfirmedTransactions;
+	}, [unconfirmedTransactions]);
 
 	const addUnconfirmedTransactionFromSigned = useCallback(
 		(transaction: DTO.ExtendedSignedTransactionData) => {
@@ -140,6 +146,15 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 	const cleanupUnconfirmedForAddresses = useCallback(
 		(walletAddresses: string[], remoteHashes: string[], graceMs = 0) => {
 			const addressScope = new Set(walletAddresses);
+
+			const hasTransactions = Object.values(latestTransactionsRef.current ?? {}).some((byAddress) =>
+				Object.keys(byAddress).some((address) => addressScope.has(address)),
+			);
+
+			if (!hasTransactions) {
+				return;
+			}
+
 			const keepHashes = new Set(remoteHashes);
 			const now = Date.now();
 

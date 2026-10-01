@@ -68,48 +68,72 @@ export const useUnconfirmedTransactionSync = ({
 	const isFetchingRef = useRef(false);
 	const seenHashesRef = useRef(new Set<string>());
 
-	// The callback belongs to the caller and may change identity freely; reading it
-	// through a ref keeps the polling callback stable without going stale.
-	const onNewUnconfirmedRef = useRef(onNewUnconfirmed);
+	const latest = useRef({
+		addUnconfirmedTransactionFromApi,
+		cleanupUnconfirmedForAddresses,
+		fetchTransactions,
+		onNewUnconfirmed,
+		transactionTypes,
+		wallets,
+	});
 
 	useEffect(() => {
-		onNewUnconfirmedRef.current = onNewUnconfirmed;
-	}, [onNewUnconfirmed]);
+		latest.current = {
+			addUnconfirmedTransactionFromApi,
+			cleanupUnconfirmedForAddresses,
+			fetchTransactions,
+			onNewUnconfirmed,
+			transactionTypes,
+			wallets,
+		};
+	});
 
-	const walletAddresses = wallets.map((wallet) => wallet.address());
-	const walletAddressesStr = walletAddresses.join("-");
+	const walletAddressesStr = wallets.map((wallet) => wallet.address()).join("-");
+	const transactionTypesStr = transactionTypes.join("-");
 
 	const fetchUnconfirmedTransactions = useCallback(async () => {
+		const {
+			addUnconfirmedTransactionFromApi: addTransaction,
+			cleanupUnconfirmedForAddresses: cleanup,
+			fetchTransactions: fetch,
+			transactionTypes: types,
+			wallets: currentWallets,
+		} = latest.current;
+
 		/* istanbul ignore next -- @preserve */
-		if (wallets.length === 0 || isFetchingRef.current) {
+		if (currentWallets.length === 0 || isFetchingRef.current) {
 			return;
 		}
 
 		try {
 			isFetchingRef.current = true;
 
-			const response = (await fetchTransactions({
+			const response = (await fetch({
 				cursor: 1,
 				flush: true,
 				mode: "unconfirmed",
-				transactionTypes,
-				wallets,
+				transactionTypes: types,
+				wallets: currentWallets,
 			})) as UnconfirmedTransactionDataCollection;
 
 			const results = response.items();
 			const remoteHashes = results.map((transaction) => transaction.hash()).filter(Boolean);
 
-			cleanupUnconfirmedForAddresses(walletAddresses, remoteHashes, UNCONFIRMED_PRUNE_TIMEOUT_MS);
+			cleanup(
+				currentWallets.map((wallet) => wallet.address()),
+				remoteHashes,
+				UNCONFIRMED_PRUNE_TIMEOUT_MS,
+			);
 
 			const hasNewUnconfirmed = remoteHashes.some((hash) => !seenHashesRef.current.has(hash));
 			seenHashesRef.current = new Set(remoteHashes);
 
 			if (hasNewUnconfirmed) {
-				onNewUnconfirmedRef.current();
+				latest.current.onNewUnconfirmed();
 			}
 
 			for (const transaction of results) {
-				const matched = wallets.find((wallet) => {
+				const matched = currentWallets.find((wallet) => {
 					const walletAddress = wallet.address().toLowerCase();
 					return (
 						walletAddress === transaction.from().toLowerCase() ||
@@ -122,7 +146,7 @@ export const useUnconfirmedTransactionSync = ({
 					continue;
 				}
 
-				addUnconfirmedTransactionFromApi(matched.networkId(), matched.address(), transaction.raw());
+				addTransaction(matched.networkId(), matched.address(), transaction.raw());
 			}
 		} catch (error) {
 			/* istanbul ignore next -- @preserve */
@@ -130,14 +154,7 @@ export const useUnconfirmedTransactionSync = ({
 		}
 
 		isFetchingRef.current = false;
-	}, [
-		addUnconfirmedTransactionFromApi,
-		cleanupUnconfirmedForAddresses,
-		fetchTransactions,
-		transactionTypes,
-		walletAddressesStr,
-		wallets,
-	]);
+	}, [transactionTypesStr, walletAddressesStr]);
 
 	useEffect(() => {
 		void fetchUnconfirmedTransactions();
