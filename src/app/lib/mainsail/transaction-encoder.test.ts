@@ -86,7 +86,7 @@ describe("TransactionEncoder", () => {
 
 	it("should encode updateValidator", async () => {
 		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
-		const result = encoder.updateValidator(validatorPassphrase);
+		const result = encoder.updateValidator(validatorPassphrase, profile.wallets().first().address());
 
 		expect(result.to).toBe(ContractAddresses.CONSENSUS);
 		expect(result.data).toBeDefined();
@@ -113,7 +113,7 @@ describe("TransactionEncoder", () => {
 
 	it("should encode validatorRegistration", async () => {
 		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
-		const result = encoder.validatorRegistration(validatorPassphrase);
+		const result = encoder.validatorRegistration(validatorPassphrase, profile.wallets().first().address());
 
 		expect(result.to).toBe(ContractAddresses.CONSENSUS);
 		expect(result.data).toBeDefined();
@@ -226,7 +226,7 @@ describe("TransactionEncoder", () => {
 
 		const result = encoder.byType(
 			{
-				senderAddress: "0x1234",
+				senderAddress: profile.wallets().first().address(),
 				voteAddresses: [voteAddress],
 			},
 			"vote",
@@ -241,7 +241,7 @@ describe("TransactionEncoder", () => {
 
 		const result = encoder.byType(
 			{
-				senderAddress: "0x1234",
+				senderAddress: profile.wallets().first().address(),
 				validatorPassphrase,
 			},
 			"validatorRegistration",
@@ -316,7 +316,7 @@ describe("TransactionEncoder", () => {
 
 		const result = encoder.byType(
 			{
-				senderAddress: "0x1234",
+				senderAddress: profile.wallets().first().address(),
 				validatorPassphrase,
 			},
 			"updateValidator",

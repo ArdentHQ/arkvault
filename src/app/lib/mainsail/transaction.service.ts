@@ -210,13 +210,17 @@ export class TransactionService {
 		}
 
 		const nonce = await this.#generateNonce(input);
+		const { address } = await this.#signerData(input);
 
 		const builder = await ValidatorRegistrationBuilder.new()
-			.validatorPassphrase(input.data.validatorPassphrase)
+			.validatorProof(input.data.validatorPassphrase, {
+				chainId: Network.get().chainId(),
+				registrantAddress: address!,
+			})
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString())
-			.value(input.data.value);
+			.value(BigNumber.make(input.data.value).toFixed(0));
 
 		await this.#sign(input, builder);
 
@@ -237,9 +241,13 @@ export class TransactionService {
 		}
 
 		const nonce = await this.#generateNonce(input);
+		const { address } = await this.#signerData(input);
 
 		const builder = await ValidatorUpdateBuilder.new()
-			.validatorPassphrase(input.data.validatorPassphrase)
+			.validatorProof(input.data.validatorPassphrase, {
+				chainId: Network.get().chainId(),
+				registrantAddress: address!,
+			})
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());
@@ -276,8 +284,12 @@ export class TransactionService {
 			);
 		}
 
+		if (!vote) {
+			throw new Error("[TransactionService#vote] Expected votes or unvotes to be defined");
+		}
+
 		const builder = await VoteBuilder.new()
-			.vote(vote?.id)
+			.vote(vote.id)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());
