@@ -144,7 +144,7 @@ export const Transactions = memo(function Transactions({
 	// keep the latest handler in a ref and expose a permanently stable wrapper.
 	// Without this, React.memo(TransactionRow) can never bail out and every poll
 	// or "load more" re-renders the whole list.
-	const rowClickRef = useRef<(transaction: ExtendedTransactionDTO) => void>(() => {});
+	const rowClickRef = useRef<(transaction: ExtendedTransactionDTO) => void | undefined>(undefined);
 
 	useEffect(() => {
 		rowClickRef.current = (transaction: ExtendedTransactionDTO) => {
@@ -158,7 +158,7 @@ export const Transactions = memo(function Transactions({
 		};
 	});
 
-	const handleRowClick = useCallback((transaction: ExtendedTransactionDTO) => rowClickRef.current(transaction), []);
+	const handleRowClick = useCallback((transaction: ExtendedTransactionDTO) => rowClickRef.current?.(transaction), []);
 
 	const showTransactionTabs = useMemo(() => {
 		// Explicitly disabled by props
