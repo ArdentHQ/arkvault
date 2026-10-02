@@ -282,20 +282,28 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		};
 	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]);
 
+	const latest = useRef({ transactions, unconfirmedTransactions, wallets });
+
+	useEffect(() => {
+		latest.current = { transactions, unconfirmedTransactions, wallets };
+	});
+
 	const cleanUnconfirmedTransactions = useCallback(async () => {
-		if (transactions.length === 0 || unconfirmedTransactions.length === 0) {
+		const { transactions: currentTransactions, unconfirmedTransactions: currentUnconfirmed } = latest.current;
+
+		if (currentTransactions.length === 0 || currentUnconfirmed.length === 0) {
 			return;
 		}
 
 		const checkForConfirmedTransactions = removeConfirmedUnconfirmedTransactions(
-			transactions,
+			currentTransactions,
 			removeUnconfirmedTransaction,
 		);
 
-		for (const unconfirmedTx of unconfirmedTransactions) {
+		for (const unconfirmedTx of currentUnconfirmed) {
 			checkForConfirmedTransactions(unconfirmedTx.hash());
 		}
-	}, [transactions, unconfirmedTransactions]);
+	}, [removeUnconfirmedTransaction]);
 
 	const updateFilters = useCallback(
 		({
@@ -409,8 +417,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	}, [activeMode, pagination, wallets, selectedTransactionTypes, fetchTransactions]);
 
 	const checkNewTransactions = useCallback(async () => {
+		const { wallets: currentWallets, transactions: currentTransactions } = latest.current;
+
 		/* istanbul ignore next -- @preserve */
-		if (wallets.length === 0) {
+		if (currentWallets.length === 0) {
 			return;
 		}
 
@@ -423,7 +433,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			mode: activeMode,
 			transactionType: activeTransactionType,
 			transactionTypes: selectedTransactionTypes,
-			wallets,
+			wallets: currentWallets,
 		});
 
 		const items = filterTransactions({ transactions: response });
@@ -433,7 +443,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		const foundNew =
 			latestTransaction &&
 			/* istanbul ignore next -- @preserve */
-			!transactions.some(
+			!currentTransactions.some(
 				/* istanbul ignore next -- @preserve */
 				(transaction) => latestTransaction.hash() === transaction.hash(),
 			);
@@ -451,17 +461,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			isLoadingMore: false,
 			transactions: items,
 		}));
-	}, [
-		wallets,
-		activeMode,
-		activeTransactionType,
-		selectedTransactionTypes,
-		fetchTransactions,
-		transactions,
-		pagination,
-	]);
-
-	const walletAddressesStr = wallets.map((wallet) => wallet.address()).join("-");
+	}, [activeMode, activeTransactionType, selectedTransactionTypes, fetchTransactions, pagination]);
 
 	const { fetchUnconfirmedTransactions, pollIntervalMs } = useUnconfirmedTransactionSync({
 		addUnconfirmedTransactionFromApi,
@@ -488,7 +488,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				interval: pollIntervalMs,
 			},
 		],
-		[walletAddressesStr, activeMode, activeTransactionType, transactions, unconfirmedTransactions.length],
+		[checkNewTransactions, fetchUnconfirmedTransactions, cleanUnconfirmedTransactions, pollIntervalMs],
 	);
 
 	const { start, stop } = useSynchronizer(jobs);
