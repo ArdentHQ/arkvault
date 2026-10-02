@@ -12,12 +12,6 @@ interface Properties {
 	walletNameClass?: string;
 	addressClass?: string;
 	showTooltip?: boolean;
-	/**
-	 * Render with zero intrinsic width while still filling the space the parent offers.
-	 * Keeps a long address from widening an enclosing table column; the address then
-	 * truncates (or disappears, below `MiddleTruncation`'s `minChars`) instead.
-	 */
-	fillParent?: boolean;
 }
 
 export const Address = ({
@@ -28,15 +22,8 @@ export const Address = ({
 	walletNameClass,
 	addressClass,
 	showTooltip,
-	fillParent,
 }: Properties) => (
-	<div
-		className={cn(
-			"flex min-w-0 items-center overflow-hidden whitespace-nowrap",
-			fillParent ? "w-0 min-w-full" : "w-full",
-			wrapperClass,
-		)}
-	>
+	<div className={cn("flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap", wrapperClass)}>
 		{walletName && (
 			<span
 				data-testid="Address__alias"
@@ -46,7 +33,12 @@ export const Address = ({
 			</span>
 		)}
 
-		<div className="min-w-14 grow">
+		{/*
+			`basis-0` + `shrink-0` means the address claims only the free space the alias
+			leaves behind: it can never squeeze the alias, and its full length never widens
+			a surrounding table column. `minChars` hides it when even that is too narrow.
+		*/}
+		<div className="min-w-0 grow shrink-0 basis-0">
 			<MiddleTruncation
 				data-testid="Address__address"
 				minChars={4}

@@ -63,7 +63,6 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 			<Tooltip content={address} wrapperClass="grow">
 				<div className="grow" data-testid="TransactionRowAddressing__address-container">
 					<Address
-						fillParent
 						showTooltip={false}
 						walletName={alias}
 						address={address}
