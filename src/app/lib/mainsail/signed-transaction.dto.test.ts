@@ -528,7 +528,10 @@ describe("SignedTransactionData", () => {
 		});
 
 		it("should still detect an unprefixed vote", () => {
-			transaction.configure({ ...mockSignedData, data: `${TransactionFunctionSigs.Vote}deadbeef` }, mockSerialized);
+			transaction.configure(
+				{ ...mockSignedData, data: `${TransactionFunctionSigs.Vote}deadbeef` },
+				mockSerialized,
+			);
 			expect(transaction.isVote()).toBe(true);
 			expect(transaction.type()).toBe("vote");
 		});
