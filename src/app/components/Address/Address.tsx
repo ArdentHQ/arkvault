@@ -27,18 +27,13 @@ export const Address = ({
 		{walletName && (
 			<span
 				data-testid="Address__alias"
-				className={cn("min-w-0 truncate mr-2 text-base font-semibold text-theme-text", walletNameClass)}
+				className={cn("mr-2 min-w-0 truncate text-base font-semibold text-theme-text", walletNameClass)}
 			>
 				<TruncateEnd text={walletName} maxChars={16} showTooltip={walletName.length > 16} />
 			</span>
 		)}
 
-		{/*
-			`basis-0` + `shrink-0` means the address claims only the free space the alias
-			leaves behind: it can never squeeze the alias, and its full length never widens
-			a surrounding table column. `minChars` hides it when even that is too narrow.
-		*/}
-		<div className="min-w-0 grow shrink-0 basis-0">
+		<div className="min-w-0 shrink-0 grow basis-0">
 			<MiddleTruncation
 				data-testid="Address__address"
 				minChars={4}
