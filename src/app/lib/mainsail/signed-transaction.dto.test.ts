@@ -6,6 +6,7 @@ import * as DecodeFunctionDataMock from "./helpers/decode-function-data";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import * as TransactionTypeIdentifierMock from "@arkecosystem/typescript-crypto";
+import { TransactionFunctionSigs } from "@arkecosystem/typescript-crypto";
 
 describe("SignedTransactionData", () => {
 	let transaction: SignedTransactionData;
@@ -486,6 +487,50 @@ describe("SignedTransactionData", () => {
 			transaction.configure(mockSignedData, mockSerialized);
 			const methodHash = transaction.methodHash();
 			expect(methodHash).toBe("0x12345678");
+		});
+
+		it("should not prepend a second 0x when the payload is already prefixed", () => {
+			transaction.configure({ ...mockSignedData, data: "0x12345678" }, mockSerialized);
+			expect(transaction.methodHash()).toBe("0x12345678");
+		});
+	});
+
+	describe("payload prefix handling", () => {
+		beforeEach(() => {
+			// Earlier suites in this file leave `isMultiPayment`/`isTransfer` spies stubbed;
+			// these tests assert on the real type identification.
+			vi.restoreAllMocks();
+		});
+
+		it("should detect a plain transfer when the payload is an empty 0x string", () => {
+			transaction.configure({ ...mockSignedData, data: "0x" }, mockSerialized);
+			expect(transaction.isTransfer()).toBe(true);
+			expect(transaction.type()).toBe("transfer");
+		});
+
+		it("should detect a plain transfer when the payload is an empty string", () => {
+			transaction.configure({ ...mockSignedData, data: "" }, mockSerialized);
+			expect(transaction.isTransfer()).toBe(true);
+			expect(transaction.type()).toBe("transfer");
+		});
+
+		it("should detect a plain transfer when the payload is missing", () => {
+			transaction.configure({ ...mockSignedData, data: undefined }, mockSerialized);
+			expect(transaction.isTransfer()).toBe(true);
+			expect(transaction.type()).toBe("transfer");
+		});
+
+		it("should still detect a prefixed vote", () => {
+			const voteData = { ...mockSignedData, data: `0x${TransactionFunctionSigs.Vote}deadbeef` };
+			transaction.configure(voteData, mockSerialized);
+			expect(transaction.isVote()).toBe(true);
+			expect(transaction.type()).toBe("vote");
+		});
+
+		it("should still detect an unprefixed vote", () => {
+			transaction.configure({ ...mockSignedData, data: `${TransactionFunctionSigs.Vote}deadbeef` }, mockSerialized);
+			expect(transaction.isVote()).toBe(true);
+			expect(transaction.type()).toBe("vote");
 		});
 	});
 
