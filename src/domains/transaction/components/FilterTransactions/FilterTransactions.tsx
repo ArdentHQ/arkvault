@@ -137,7 +137,7 @@ export const FilterTransactions = memo(
 							/>
 						),
 						label: "",
-						value: "transfer",
+						value: "multiPayment",
 					},
 					{
 						disableFocus: true,
@@ -149,7 +149,7 @@ export const FilterTransactions = memo(
 							/>
 						),
 						label: "",
-						value: "transfer",
+						value: "others",
 					},
 				],
 				title: t("COMMON.TYPES"),

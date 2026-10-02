@@ -5,14 +5,13 @@ import { useSynchronizer, useWalletAlias } from "@/app/hooks";
 
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
-import { Network } from "@/app/lib/mainsail/network";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
 import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
-import { get } from "@/app/lib/helpers";
+import { useTransactionPagination } from "./use-transaction-pagination";
 import { useTransactionTypes } from "./use-transaction-types";
+import { useUnconfirmedTransactionSync } from "./use-unconfirmed-transaction-sync";
 import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
-import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -60,6 +59,7 @@ interface TransactionAggregateIdentifiers {
 
 interface TransactionAggregateQueryParameters {
 	identifiers?: TransactionAggregateIdentifiers[];
+	cursor?: number;
 	limit: number;
 	types?: string[];
 	orderBy?: string;
@@ -99,26 +99,8 @@ const removeConfirmedUnconfirmedTransactions = (
 	};
 };
 
-const getBlockTime = (network: Network): number => {
-	const DEFAULT_BLOCK_TIME = 8_000; // Close to expected ARK block time
-
-	try {
-		const milestone = network.milestone();
-		const blockTime = get(milestone, "timeouts.blockTime") as unknown;
-		/* istanbul ignore next -- @preserve */
-		if (typeof blockTime === "number" && Number.isFinite(blockTime) && blockTime > 0) {
-			return Math.max(1000, blockTime); // Minimum of 1 second
-		}
-	} catch (error) {
-		/* istanbul ignore next -- @preserve */
-		console.error("Failed to get block time:", error);
-	}
-	return DEFAULT_BLOCK_TIME;
-};
-
 export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
 	const isMounted = useRef(true);
-	const cursor = useRef(1);
 	const LIMIT = limit;
 
 	const { types } = useTransactionTypes({ wallets });
@@ -128,9 +110,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		unconfirmedTransactions: allUnconfirmedTransactions,
 		removeUnconfirmedTransaction,
 		addUnconfirmedTransactionFromApi,
+		cleanupUnconfirmedForAddresses,
 	} = useUnconfirmedTransactions();
 
-	const allTransactionTypes = [...types.core];
+	const allTransactionTypes = useMemo(() => [...types.core], [types.core]);
+
+	const pagination = useTransactionPagination({ limit: LIMIT });
 
 	const [sortBy, setSortBy] = useState<SortBy>({ column: "date", desc: true });
 
@@ -160,15 +145,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		transactions: [],
 	});
 
-	const blockTime = useMemo(() => getBlockTime(profile.activeNetwork()), [profile.activeNetwork()]);
-
-	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
-		if (itemsLength < itemsLimit) {
-			return false;
-		}
-		return hasMorePages;
-	};
-
 	const unconfirmedTransactions = useMemo(
 		() =>
 			wallets
@@ -187,7 +163,11 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 	const allTransactions = useMemo(() => {
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
-		const confirmedTransactionIds = new Set(transactions.map((tx) => tx.hash()));
+
+		// Defensive: never render the same transaction twice, however the
+		// accumulated pages ended up in state.
+		const confirmedTransactions = pagination.dedupe(transactions);
+		const confirmedTransactionIds = new Set(confirmedTransactions.map((transaction) => transaction.hash()));
 
 		const signedTransactions = unconfirmedTransactions
 			.filter((transaction) => (hasAllSelected ? true : selectedTransactionTypes.includes(transaction.type())))
@@ -204,7 +184,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			})
 			.filter((transaction) => !confirmedTransactionIds.has(transaction.hash()));
 
-		const combined: ExtendedTransactionDTO[] = [...signedTransactions, ...transactions];
+		const combined: ExtendedTransactionDTO[] = [...signedTransactions, ...confirmedTransactions];
 
 		const sorted = combined.sort((a, b) => {
 			const aTimestamp = a.timestamp()!.toUNIX();
@@ -228,12 +208,20 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return 0;
 		});
 
-		const baseLength = Math.max(transactions.length, LIMIT);
+		const baseLength = Math.max(confirmedTransactions.length, LIMIT);
 		const totalPages = Math.ceil(baseLength / LIMIT);
 		const maxDisplayItems = LIMIT * totalPages;
 
 		return sorted.slice(0, maxDisplayItems);
-	}, [transactions, unconfirmedTransactions, selectedTransactionTypes, activeMode, sortBy, allTransactionTypes]);
+	}, [
+		transactions,
+		unconfirmedTransactions,
+		selectedTransactionTypes,
+		activeMode,
+		sortBy,
+		allTransactionTypes,
+		pagination,
+	]);
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 
@@ -241,6 +229,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		const loadTransactions = async () => {
 			try {
 				const response = await fetchTransactions({
+					cursor: 1,
 					flush: true,
 					mode: activeMode!,
 					transactionType: activeTransactionType,
@@ -270,9 +259,13 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 				const items = filterTransactions({ transactions: response });
 
+				// This replaces the whole list with the first page, so the visible list
+				// restarts here.
+				pagination.startAt(items);
+
 				setState((state) => ({
 					...state,
-					hasMore: hasMorePages(items.length, response.hasMorePages()),
+					hasMore: pagination.hasMorePages(items.length, response.hasMorePages()),
 					isLoadingTransactions: false,
 					transactions: items,
 				}));
@@ -312,7 +305,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			selectedTransactionTypes: newTransactionTypes,
 		}: TransactionFilters) => {
 			const hasWallets = wallets.length > 0;
-			cursor.current = 1;
+			pagination.reset();
 
 			/* istanbul ignore next -- @preserve */
 			if (!isMounted.current) {
@@ -332,11 +325,11 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				transactions: [],
 			});
 		},
-		[wallets.length, selectedTransactionTypes],
+		[wallets.length, selectedTransactionTypes, pagination],
 	);
 
 	const fetchTransactions = useCallback(
-		async ({ flush, mode = "all", wallets, transactionTypes }: FetchTransactionProperties) => {
+		async ({ flush, cursor, mode = "all", wallets, transactionTypes }: FetchTransactionProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
@@ -349,6 +342,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				limit: LIMIT,
 				orderBy,
 			};
+
+			if (cursor !== undefined) {
+				queryParameters.cursor = cursor;
+			}
 
 			const hasAllSelected = transactionTypes.length === allTransactionTypes.length;
 
@@ -384,26 +381,32 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	);
 
 	const fetchMore = useCallback(async () => {
-		cursor.current = cursor.current + 1;
+		const nextPage = pagination.nextCursor();
+
 		setState((state) => ({ ...state, isLoadingMore: true }));
 
-		const response = await fetchTransactions({
-			cursor: cursor.current,
-			flush: false,
-			mode: activeMode,
-			transactionTypes: selectedTransactionTypes,
-			wallets,
-		});
+		try {
+			const response = await fetchTransactions({
+				cursor: nextPage,
+				flush: false,
+				mode: activeMode,
+				transactionTypes: selectedTransactionTypes,
+				wallets,
+			});
 
-		const items = filterTransactions({ transactions: response });
+			const newItems = pagination.acceptPage(nextPage, filterTransactions({ transactions: response }));
 
-		setState((state) => ({
-			...state,
-			hasMore: hasMorePages(items.length, response.hasMorePages()),
-			isLoadingMore: false,
-			transactions: [...state.transactions, ...items],
-		}));
-	}, [activeMode, wallets, selectedTransactionTypes, fetchTransactions]);
+			setState((state) => ({
+				...state,
+				hasMore: response.hasMorePages(),
+				isLoadingMore: false,
+				transactions: [...state.transactions, ...newItems],
+			}));
+		} catch (error) {
+			console.error({ error });
+			setState((state) => ({ ...state, isLoadingMore: false }));
+		}
+	}, [activeMode, pagination, wallets, selectedTransactionTypes, fetchTransactions]);
 
 	const checkNewTransactions = useCallback(async () => {
 		/* istanbul ignore next -- @preserve */
@@ -413,7 +416,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 		const response = await fetchTransactions({
 			cursor: 1,
-			flush: true,
+			// Deliberately not flushing: a flush rewinds the pagination history that
+			// "load more" depends on, which makes it re-request pages that are already
+			// on screen. The aggregate always hits the network, so the data is fresh.
+			flush: false,
 			mode: activeMode,
 			transactionType: activeTransactionType,
 			transactionTypes: selectedTransactionTypes,
@@ -436,69 +442,36 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return;
 		}
 
+		// The visible window restarts at the first page.
+		pagination.startAt(items);
+
 		setState((state) => ({
 			...state,
-			hasMore: hasMorePages(items.length, response.hasMorePages(), 1),
+			hasMore: pagination.hasMorePages(items.length, response.hasMorePages(), 1),
 			isLoadingMore: false,
 			transactions: items,
 		}));
-	}, [wallets, activeMode, activeTransactionType, selectedTransactionTypes, fetchTransactions, transactions]);
+	}, [
+		wallets,
+		activeMode,
+		activeTransactionType,
+		selectedTransactionTypes,
+		fetchTransactions,
+		transactions,
+		pagination,
+	]);
 
-	const isFetchingUnconfirmed = useRef(false);
+	const walletAddressesStr = wallets.map((wallet) => wallet.address()).join("-");
 
-	const walletAddresses = wallets.map((wallet) => wallet.address());
-	const walletAddressesStr = walletAddresses.join("-");
-
-	const fetchUnconfirmedTransactions = useCallback(async () => {
-		/* istanbul ignore next -- @preserve */
-		if (wallets.length === 0 || isFetchingUnconfirmed.current) {
-			return;
-		}
-
-		try {
-			isFetchingUnconfirmed.current = true;
-
-			const response = (await fetchTransactions({
-				cursor: 1,
-				flush: true,
-				mode: "unconfirmed",
-				transactionTypes: allTransactionTypes,
-				wallets,
-			})) as UnconfirmedTransactionDataCollection;
-
-			const results = response.items();
-			const remoteHashes = results.map((t) => t.hash()).filter(Boolean);
-
-			/* istanbul ignore next -- @preserve */
-			if (remoteHashes.length !== unconfirmedTransactions.length) {
-				setState((s) => ({ ...s, timestamp: Date.now() }));
-			}
-
-			for (const transaction of results) {
-				const matched = wallets.find((wallet) => {
-					const walletAddress = wallet.address().toLowerCase();
-					return (
-						walletAddress === transaction.from().toLowerCase() ||
-						walletAddress === transaction.to().toLowerCase()
-					);
-				});
-
-				if (!matched) {
-					continue;
-				}
-
-				addUnconfirmedTransactionFromApi(matched.networkId(), matched.address(), transaction.raw());
-			}
-		} catch (error) {
-			console.error("Failed to fetch unconfirmed transactions:", error);
-		}
-
-		isFetchingUnconfirmed.current = false;
-	}, [walletAddressesStr]);
-
-	useEffect(() => {
-		void fetchUnconfirmedTransactions();
-	}, [fetchUnconfirmedTransactions]);
+	const { fetchUnconfirmedTransactions, pollIntervalMs } = useUnconfirmedTransactionSync({
+		addUnconfirmedTransactionFromApi,
+		cleanupUnconfirmedForAddresses,
+		fetchTransactions,
+		onNewUnconfirmed: () => setState((state) => ({ ...state, timestamp: Date.now() })),
+		profile,
+		transactionTypes: allTransactionTypes,
+		wallets,
+	});
 
 	const jobs = useMemo(
 		() => [
@@ -508,11 +481,11 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			},
 			{
 				callback: fetchUnconfirmedTransactions,
-				interval: blockTime,
+				interval: pollIntervalMs,
 			},
 			{
 				callback: cleanUnconfirmedTransactions,
-				interval: blockTime,
+				interval: pollIntervalMs,
 			},
 		],
 		[walletAddressesStr, activeMode, activeTransactionType, transactions, unconfirmedTransactions.length],
