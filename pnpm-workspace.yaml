@@ -1,6 +1,0 @@
-allowBuilds:
-  '@ardenthq/arkvault-url': false
-  esbuild: false
-  keccak: false
-  msw: false
-  secp256k1: false
