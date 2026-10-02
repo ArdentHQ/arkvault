@@ -497,8 +497,6 @@ describe("SignedTransactionData", () => {
 
 	describe("payload prefix handling", () => {
 		beforeEach(() => {
-			// Earlier suites in this file leave `isMultiPayment`/`isTransfer` spies stubbed;
-			// these tests assert on the real type identification.
 			vi.restoreAllMocks();
 		});
 
