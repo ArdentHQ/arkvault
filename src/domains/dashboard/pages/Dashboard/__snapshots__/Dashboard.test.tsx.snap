@@ -2548,7 +2548,7 @@ exports[`Dashboard > render in lg 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap lg:min-w-80 first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -2774,13 +2774,11 @@ exports[`Dashboard > render in lg 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                               </span>
                                             </span>
                                           </div>
@@ -2881,13 +2879,11 @@ exports[`Dashboard > render in lg 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                                 </span>
                                               </span>
                                             </div>
@@ -2995,13 +2991,11 @@ exports[`Dashboard > render in lg 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                             </span>
                                           </span>
                                         </div>
@@ -3107,13 +3101,11 @@ exports[`Dashboard > render in lg 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -3425,13 +3417,11 @@ exports[`Dashboard > render in lg 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -3989,13 +3979,11 @@ exports[`Dashboard > render in lg 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -4553,13 +4541,11 @@ exports[`Dashboard > render in lg 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -5117,13 +5103,11 @@ exports[`Dashboard > render in lg 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -5681,13 +5665,11 @@ exports[`Dashboard > render in lg 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -6245,13 +6227,11 @@ exports[`Dashboard > render in lg 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -6809,13 +6789,11 @@ exports[`Dashboard > render in lg 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -6916,13 +6894,11 @@ exports[`Dashboard > render in lg 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                                 </span>
                                               </span>
                                             </div>
@@ -7030,13 +7006,11 @@ exports[`Dashboard > render in lg 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -7142,13 +7116,11 @@ exports[`Dashboard > render in lg 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -7460,13 +7432,11 @@ exports[`Dashboard > render in lg 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -7847,15 +7817,11 @@ exports[`Dashboard > render in lg 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                                    data-testid="Address__address"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                                data-testid="Address__address"
+                                              >
+                                                0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                               </span>
                                             </span>
                                           </div>
@@ -7956,13 +7922,11 @@ exports[`Dashboard > render in lg 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                                 </span>
                                               </span>
                                             </div>
@@ -8070,13 +8034,11 @@ exports[`Dashboard > render in lg 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                             </span>
                                           </span>
                                         </div>
@@ -8167,15 +8129,11 @@ exports[`Dashboard > render in lg 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                                  data-testid="Address__address"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                              data-testid="Address__address"
+                                            >
+                                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                             </span>
                                           </span>
                                         </div>
@@ -10982,7 +10940,7 @@ exports[`Dashboard > render in md 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap lg:min-w-80 first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -11208,13 +11166,11 @@ exports[`Dashboard > render in md 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                               </span>
                                             </span>
                                           </div>
@@ -11315,13 +11271,11 @@ exports[`Dashboard > render in md 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                                 </span>
                                               </span>
                                             </div>
@@ -11429,13 +11383,11 @@ exports[`Dashboard > render in md 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                             </span>
                                           </span>
                                         </div>
@@ -11541,13 +11493,11 @@ exports[`Dashboard > render in md 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -11859,13 +11809,11 @@ exports[`Dashboard > render in md 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -12423,13 +12371,11 @@ exports[`Dashboard > render in md 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -12987,13 +12933,11 @@ exports[`Dashboard > render in md 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -13551,13 +13495,11 @@ exports[`Dashboard > render in md 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -14115,13 +14057,11 @@ exports[`Dashboard > render in md 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -14679,13 +14619,11 @@ exports[`Dashboard > render in md 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -15243,13 +15181,11 @@ exports[`Dashboard > render in md 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -15350,13 +15286,11 @@ exports[`Dashboard > render in md 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                                 </span>
                                               </span>
                                             </div>
@@ -15464,13 +15398,11 @@ exports[`Dashboard > render in md 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -15576,13 +15508,11 @@ exports[`Dashboard > render in md 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -15894,13 +15824,11 @@ exports[`Dashboard > render in md 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -16281,15 +16209,11 @@ exports[`Dashboard > render in md 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                                    data-testid="Address__address"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                                data-testid="Address__address"
+                                              >
+                                                0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                               </span>
                                             </span>
                                           </div>
@@ -16390,13 +16314,11 @@ exports[`Dashboard > render in md 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                                 </span>
                                               </span>
                                             </div>
@@ -16504,13 +16426,11 @@ exports[`Dashboard > render in md 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                             </span>
                                           </span>
                                         </div>
@@ -16601,15 +16521,11 @@ exports[`Dashboard > render in md 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                                  data-testid="Address__address"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                              data-testid="Address__address"
+                                            >
+                                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                             </span>
                                           </span>
                                         </div>
@@ -19490,13 +19406,11 @@ exports[`Dashboard > render in sm 1`] = `
                                                 <span
                                                   class="block w-full"
                                                 >
-                                                  <span>
-                                                    <span>
-                                                      <span
-                                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                        data-testid="Address__address"
-                                                      />
-                                                    </span>
+                                                  <span
+                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                    data-testid="Address__address"
+                                                  >
+                                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                                   </span>
                                                 </span>
                                               </div>
@@ -21227,13 +21141,11 @@ exports[`Dashboard > render in sm 1`] = `
                                                 <span
                                                   class="block w-full"
                                                 >
-                                                  <span>
-                                                    <span>
-                                                      <span
-                                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                        data-testid="Address__address"
-                                                      />
-                                                    </span>
+                                                  <span
+                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                    data-testid="Address__address"
+                                                  >
+                                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                                   </span>
                                                 </span>
                                               </div>
@@ -21675,15 +21587,11 @@ exports[`Dashboard > render in sm 1`] = `
                                                 <span
                                                   class="block w-full"
                                                 >
-                                                  <span>
-                                                    <span>
-                                                      <span
-                                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                                        data-testid="Address__address"
-                                                      >
-                                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                      </span>
-                                                    </span>
+                                                  <span
+                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                                    data-testid="Address__address"
+                                                  >
+                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                                   </span>
                                                 </span>
                                               </div>
@@ -24462,7 +24370,7 @@ exports[`Dashboard > render in xl 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap lg:min-w-80 first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -24688,13 +24596,11 @@ exports[`Dashboard > render in xl 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                               </span>
                                             </span>
                                           </div>
@@ -24795,13 +24701,11 @@ exports[`Dashboard > render in xl 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                                 </span>
                                               </span>
                                             </div>
@@ -24909,13 +24813,11 @@ exports[`Dashboard > render in xl 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                             </span>
                                           </span>
                                         </div>
@@ -25021,13 +24923,11 @@ exports[`Dashboard > render in xl 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -25311,13 +25211,11 @@ exports[`Dashboard > render in xl 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -25847,13 +25745,11 @@ exports[`Dashboard > render in xl 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -26383,13 +26279,11 @@ exports[`Dashboard > render in xl 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -26919,13 +26813,11 @@ exports[`Dashboard > render in xl 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -27455,13 +27347,11 @@ exports[`Dashboard > render in xl 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -27991,13 +27881,11 @@ exports[`Dashboard > render in xl 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -28527,13 +28415,11 @@ exports[`Dashboard > render in xl 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -28634,13 +28520,11 @@ exports[`Dashboard > render in xl 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                                 </span>
                                               </span>
                                             </div>
@@ -28748,13 +28632,11 @@ exports[`Dashboard > render in xl 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -28860,13 +28742,11 @@ exports[`Dashboard > render in xl 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -29150,13 +29030,11 @@ exports[`Dashboard > render in xl 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -29509,15 +29387,11 @@ exports[`Dashboard > render in xl 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                                    data-testid="Address__address"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                                data-testid="Address__address"
+                                              >
+                                                0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                               </span>
                                             </span>
                                           </div>
@@ -29618,13 +29492,11 @@ exports[`Dashboard > render in xl 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                                 </span>
                                               </span>
                                             </div>
@@ -29732,13 +29604,11 @@ exports[`Dashboard > render in xl 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                             </span>
                                           </span>
                                         </div>
@@ -29829,15 +29699,11 @@ exports[`Dashboard > render in xl 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                                  data-testid="Address__address"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                              data-testid="Address__address"
+                                            >
+                                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                             </span>
                                           </span>
                                         </div>
@@ -32690,13 +32556,11 @@ exports[`Dashboard > render in xs 1`] = `
                                                 <span
                                                   class="block w-full"
                                                 >
-                                                  <span>
-                                                    <span>
-                                                      <span
-                                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                        data-testid="Address__address"
-                                                      />
-                                                    </span>
+                                                  <span
+                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                    data-testid="Address__address"
+                                                  >
+                                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                                   </span>
                                                 </span>
                                               </div>
@@ -34427,13 +34291,11 @@ exports[`Dashboard > render in xs 1`] = `
                                                 <span
                                                   class="block w-full"
                                                 >
-                                                  <span>
-                                                    <span>
-                                                      <span
-                                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                        data-testid="Address__address"
-                                                      />
-                                                    </span>
+                                                  <span
+                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                    data-testid="Address__address"
+                                                  >
+                                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                                   </span>
                                                 </span>
                                               </div>
@@ -34875,15 +34737,11 @@ exports[`Dashboard > render in xs 1`] = `
                                                 <span
                                                   class="block w-full"
                                                 >
-                                                  <span>
-                                                    <span>
-                                                      <span
-                                                        class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                                        data-testid="Address__address"
-                                                      >
-                                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                      </span>
-                                                    </span>
+                                                  <span
+                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                                    data-testid="Address__address"
+                                                  >
+                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                                   </span>
                                                 </span>
                                               </div>
@@ -37524,7 +37382,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap lg:min-w-80 first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -37750,13 +37608,11 @@ exports[`Dashboard > should render 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                               </span>
                                             </span>
                                           </div>
@@ -37857,13 +37713,11 @@ exports[`Dashboard > should render 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                                 </span>
                                               </span>
                                             </div>
@@ -37971,13 +37825,11 @@ exports[`Dashboard > should render 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                             </span>
                                           </span>
                                         </div>
@@ -38083,13 +37935,11 @@ exports[`Dashboard > should render 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -38401,13 +38251,11 @@ exports[`Dashboard > should render 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -38965,13 +38813,11 @@ exports[`Dashboard > should render 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -39529,13 +39375,11 @@ exports[`Dashboard > should render 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -40093,13 +39937,11 @@ exports[`Dashboard > should render 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -40657,13 +40499,11 @@ exports[`Dashboard > should render 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -41221,13 +41061,11 @@ exports[`Dashboard > should render 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -41785,13 +41623,11 @@ exports[`Dashboard > should render 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -41892,13 +41728,11 @@ exports[`Dashboard > should render 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                                 </span>
                                               </span>
                                             </div>
@@ -42006,13 +41840,11 @@ exports[`Dashboard > should render 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -42118,13 +41950,11 @@ exports[`Dashboard > should render 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
                                             </span>
                                           </span>
                                         </div>
@@ -42436,13 +42266,11 @@ exports[`Dashboard > should render 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                    data-testid="Address__address"
-                                                  />
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                data-testid="Address__address"
+                                              >
+                                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                               </span>
                                             </span>
                                           </div>
@@ -42823,15 +42651,11 @@ exports[`Dashboard > should render 1`] = `
                                             <span
                                               class="block w-full"
                                             >
-                                              <span>
-                                                <span>
-                                                  <span
-                                                    class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                                    data-testid="Address__address"
-                                                  >
-                                                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                  </span>
-                                                </span>
+                                              <span
+                                                class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                                data-testid="Address__address"
+                                              >
+                                                0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                               </span>
                                             </span>
                                           </div>
@@ -42932,13 +42756,11 @@ exports[`Dashboard > should render 1`] = `
                                               <span
                                                 class="block w-full"
                                               >
-                                                <span>
-                                                  <span>
-                                                    <span
-                                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                      data-testid="Address__address"
-                                                    />
-                                                  </span>
+                                                <span
+                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                                  data-testid="Address__address"
+                                                >
+                                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                                 </span>
                                               </span>
                                             </div>
@@ -43046,13 +42868,11 @@ exports[`Dashboard > should render 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                                  data-testid="Address__address"
-                                                />
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                             </span>
                                           </span>
                                         </div>
@@ -43143,15 +42963,11 @@ exports[`Dashboard > should render 1`] = `
                                           <span
                                             class="block w-full"
                                           >
-                                            <span>
-                                              <span>
-                                                <span
-                                                  class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                                  data-testid="Address__address"
-                                                >
-                                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                                </span>
-                                              </span>
+                                            <span
+                                              class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                              data-testid="Address__address"
+                                            >
+                                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                             </span>
                                           </span>
                                         </div>
@@ -45884,7 +45700,7 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap lg:min-w-80 first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"

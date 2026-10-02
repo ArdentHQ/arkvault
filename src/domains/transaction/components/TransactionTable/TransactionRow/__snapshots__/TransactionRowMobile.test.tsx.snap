@@ -131,13 +131,11 @@ exports[`TransactionRowMobile > should render 1`] = `
                                   <span
                                     class="block w-full"
                                   >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                          data-testid="Address__address"
-                                        />
-                                      </span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                     </span>
                                   </span>
                                 </div>
@@ -235,13 +233,11 @@ exports[`TransactionRowMobile > should render 1`] = `
                                   <span
                                     class="block w-full"
                                   >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                          data-testid="Address__address"
-                                        />
-                                      </span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                     </span>
                                   </span>
                                 </div>
@@ -479,13 +475,11 @@ exports[`TransactionRowMobile > should render 2`] = `
                                   <span
                                     class="block w-full"
                                   >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                          data-testid="Address__address"
-                                        />
-                                      </span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                     </span>
                                   </span>
                                 </div>
@@ -583,13 +577,11 @@ exports[`TransactionRowMobile > should render 2`] = `
                                   <span
                                     class="block w-full"
                                   >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                          data-testid="Address__address"
-                                        />
-                                      </span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                     </span>
                                   </span>
                                 </div>
@@ -812,15 +804,11 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                                   <span
                                     class="block w-full"
                                   >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                          data-testid="Address__address"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
-                                      </span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                     </span>
                                   </span>
                                 </div>
@@ -918,13 +906,11 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                                   <span
                                     class="block w-full"
                                   >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                          data-testid="Address__address"
-                                        />
-                                      </span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                     </span>
                                   </span>
                                 </div>
@@ -1147,15 +1133,11 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                                   <span
                                     class="block w-full"
                                   >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
-                                          data-testid="Address__address"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
-                                      </span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-text text-base text-theme-text"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                     </span>
                                   </span>
                                 </div>
@@ -1253,13 +1235,11 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                                   <span
                                     class="block w-full"
                                   >
-                                    <span>
-                                      <span>
-                                        <span
-                                          class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
-                                          data-testid="Address__address"
-                                        />
-                                      </span>
+                                    <span
+                                      class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                     </span>
                                   </span>
                                 </div>
