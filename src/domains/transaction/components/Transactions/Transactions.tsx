@@ -158,10 +158,7 @@ export const Transactions = memo(function Transactions({
 		};
 	});
 
-	const handleRowClick = useCallback(
-		(transaction: ExtendedTransactionDTO) => rowClickRef.current(transaction),
-		[],
-	);
+	const handleRowClick = useCallback((transaction: ExtendedTransactionDTO) => rowClickRef.current(transaction), []);
 
 	const showTransactionTabs = useMemo(() => {
 		// Explicitly disabled by props
