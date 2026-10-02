@@ -42,7 +42,7 @@ export const TokenTransfers = memo(function TokenTransfers({
 	});
 
 	// use ref to avoid re-creating the function in each render.
-	const rowClickRef = useRef<(transaction: ExtendedTransactionDTO) => void>(() => {});
+	const rowClickRef = useRef<(transaction: ExtendedTransactionDTO) => void | undefined>(undefined);
 
 	useEffect(() => {
 		rowClickRef.current = (transaction: ExtendedTransactionDTO) => {
@@ -56,7 +56,7 @@ export const TokenTransfers = memo(function TokenTransfers({
 		};
 	});
 
-	const handleRowClick = useCallback((transaction: ExtendedTransactionDTO) => rowClickRef.current(transaction), []);
+	const handleRowClick = useCallback((transaction: ExtendedTransactionDTO) => rowClickRef.current?.(transaction), []);
 
 	if (!isVisible) {
 		return <></>;
