@@ -55,6 +55,10 @@ export class TransactionEncoder {
 		this.#network = network;
 	}
 
+	#chainId(): number {
+		return this.#network.config().get("crypto.network.chainId");
+	}
+
 	public multiPayment(recipientList: RecipientPaymentItem[]): EncodedData & { value: Hex } {
 		const recipients: string[] = [];
 		const amounts: string[] = [];
@@ -80,9 +84,12 @@ export class TransactionEncoder {
 		};
 	}
 
-	public updateValidator(validatorPassphrase: string): EncodedData {
+	public updateValidator(validatorPassphrase: string, registrantAddress: string): EncodedData {
 		return {
-			data: TransactionDataEncoder.updateValidator(validatorPassphrase),
+			data: TransactionDataEncoder.updateValidator(validatorPassphrase, {
+				chainId: this.#chainId(),
+				registrantAddress,
+			}),
 			to: ContractAddresses.CONSENSUS,
 		};
 	}
@@ -101,11 +108,14 @@ export class TransactionEncoder {
 		};
 	}
 
-	public validatorRegistration(validatorPassphrase: string): EncodedData & { value: Hex } {
+	public validatorRegistration(validatorPassphrase: string, registrantAddress: string): EncodedData & { value: Hex } {
 		const value = this.#network.milestone()["validatorRegistrationFee"] ?? 0;
 
 		return {
-			data: TransactionDataEncoder.validatorRegistration(validatorPassphrase),
+			data: TransactionDataEncoder.validatorRegistration(validatorPassphrase, {
+				chainId: this.#chainId(),
+				registrantAddress,
+			}),
 			to: ContractAddresses.CONSENSUS,
 			value: numberToHex(BigNumber.make(value).toBigInt()),
 		};
@@ -208,7 +218,7 @@ export class TransactionEncoder {
 		}
 
 		if (type === "validatorRegistration" && inputData.validatorPassphrase) {
-			return this.validatorRegistration(inputData.validatorPassphrase);
+			return this.validatorRegistration(inputData.validatorPassphrase, inputData.senderAddress);
 		}
 
 		if (type === "validatorResignation") {
@@ -228,7 +238,7 @@ export class TransactionEncoder {
 		}
 
 		if (type === "updateValidator" && inputData.validatorPassphrase) {
-			return this.updateValidator(inputData.validatorPassphrase);
+			return this.updateValidator(inputData.validatorPassphrase, inputData.senderAddress);
 		}
 
 		if (type === "multiPayment" && inputData.recipients) {

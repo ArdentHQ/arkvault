@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable sonarjs/no-duplicate-string */
 
 import { Contracts } from "@/app/lib/profiles";
@@ -27,9 +26,22 @@ let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
+const buildPage = (page: number) => ({
+	data: Array.from({ length: 30 }, (_, index) => ({
+		...transactionsFixture.data[index % transactionsFixture.data.length],
+		hash: (page * 1_000 + index).toString(16).padStart(64, "0"),
+	})),
+	meta: {
+		...transactionsFixture.meta,
+		count: 30,
+		next: `/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&fullReceipt=false&transform=true&page=${page + 1}`,
+		totalCount: 63,
+	},
+});
+
 describe("Transactions", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(fixtureProfileId);
+		profile = await env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -297,18 +309,11 @@ describe("Transactions", () => {
 
 		// Paginated result
 		server.use(
-			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
-				// transaction.data only has 10 items, create 5 items more
-				data: [...transactionsFixture.data, ...transactionsFixture.data, ...transactionsFixture.data].slice(
-					0,
-					30,
-				),
-				meta: {
-					...transactionsFixture.meta,
-					count: 15,
-					next: "/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&fullReceipt=false&transform=true&page=2",
-					totalCount: 63,
-				},
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", buildPage(2), {
+				query: { page: "2" },
+			}),
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", buildPage(1), {
+				query: { page: "1" },
 			}),
 		);
 

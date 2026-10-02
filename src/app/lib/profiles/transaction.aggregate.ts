@@ -67,7 +67,7 @@ export class TransactionAggregate implements ITransactionAggregate {
 
 		const historyRecord = historyRecords[historyKey];
 
-		if (historyRecord && historyRecord.nextPage()) {
+		if (query.cursor === undefined && historyRecord && historyRecord.nextPage()) {
 			query = { ...query, cursor: historyRecord.nextPage() };
 		}
 
@@ -140,7 +140,7 @@ export class TransactionAggregate implements ITransactionAggregate {
 
 		const historyRecord = historyRecords[historyKey];
 
-		if (historyRecord && historyRecord.nextPage()) {
+		if (query.cursor === undefined && historyRecord && historyRecord.nextPage()) {
 			query = { ...query, cursor: historyRecord.nextPage() };
 		}
 
