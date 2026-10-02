@@ -3,8 +3,9 @@ import { Exceptions, Networks } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 import { Hex, numberToHex } from "viem";
-import { ContractAddresses, UnitConverter, TransactionDataEncoder } from "@arkecosystem/typescript-crypto";
+import { ContractAddresses, Network, UnitConverter, TransactionDataEncoder } from "@arkecosystem/typescript-crypto";
 import { IProfile } from "@/app/lib/profiles/contracts";
+import { NetworkConfig } from "@/app/lib/mainsail/network-config";
 import { assertToken } from "@/utils/assertions";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { calculateTotalAmount } from "@/domains/transaction/hooks/use-batch-transfer-details";
@@ -53,10 +54,8 @@ export class TransactionEncoder {
 	constructor(profile: IProfile, network: Networks.Network) {
 		this.#profile = profile;
 		this.#network = network;
-	}
 
-	#chainId(): number {
-		return this.#network.config().get("crypto.network.chainId");
+		Network.set(new NetworkConfig(network.config()));
 	}
 
 	public multiPayment(recipientList: RecipientPaymentItem[]): EncodedData & { value: Hex } {
@@ -86,10 +85,7 @@ export class TransactionEncoder {
 
 	public updateValidator(validatorPassphrase: string, registrantAddress: string): EncodedData {
 		return {
-			data: TransactionDataEncoder.updateValidator(validatorPassphrase, {
-				chainId: this.#chainId(),
-				registrantAddress,
-			}),
+			data: TransactionDataEncoder.updateValidator(validatorPassphrase, registrantAddress),
 			to: ContractAddresses.CONSENSUS,
 		};
 	}
@@ -112,10 +108,7 @@ export class TransactionEncoder {
 		const value = this.#network.milestone()["validatorRegistrationFee"] ?? 0;
 
 		return {
-			data: TransactionDataEncoder.validatorRegistration(validatorPassphrase, {
-				chainId: this.#chainId(),
-				registrantAddress,
-			}),
+			data: TransactionDataEncoder.validatorRegistration(validatorPassphrase, registrantAddress),
 			to: ContractAddresses.CONSENSUS,
 			value: numberToHex(BigNumber.make(value).toBigInt()),
 		};
