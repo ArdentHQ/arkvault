@@ -12,7 +12,13 @@ export type MiddleTruncationProps = React.ComponentPropsWithoutRef<"span"> & {
 	minChars?: number;
 };
 
-export function MiddleTruncation({ className, children, tooltip = true, minChars = 0, ...props }: MiddleTruncationProps) {
+export function MiddleTruncation({
+	className,
+	children,
+	tooltip = true,
+	minChars = 0,
+	...props
+}: MiddleTruncationProps) {
 	const containerRef = useRef<HTMLSpanElement>(null);
 	const [displayedText, setDisplayedText] = useState<string | null>(null);
 
