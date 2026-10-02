@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
+import React, { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -138,6 +138,29 @@ export const Transactions = memo(function Transactions({
 			});
 		},
 		[activeMode],
+	);
+
+	// The panels context hands out freshly created functions on every render, so
+	// keep the latest handler in a ref and expose a permanently stable wrapper.
+	// Without this, React.memo(TransactionRow) can never bail out and every poll
+	// or "load more" re-renders the whole list.
+	const rowClickRef = useRef<(transaction: ExtendedTransactionDTO) => void>(() => {});
+
+	useEffect(() => {
+		rowClickRef.current = (transaction: ExtendedTransactionDTO) => {
+			if (currentOpenedPanel?.name === Panel.TransactionDetails) {
+				setIsMinimized(false);
+			} else {
+				openPanel(Panel.TransactionDetails);
+			}
+
+			setTransactionModalItem(transaction);
+		};
+	});
+
+	const handleRowClick = useCallback(
+		(transaction: ExtendedTransactionDTO) => rowClickRef.current(transaction),
+		[],
 	);
 
 	const showTransactionTabs = useMemo(() => {
@@ -281,15 +304,7 @@ export const Transactions = memo(function Transactions({
 					exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 					isLoading={isLoadingTransactions}
 					skeletonRowsLimit={8}
-					onRowClick={(transaction) => {
-						if (currentOpenedPanel?.name === Panel.TransactionDetails) {
-							setIsMinimized(false);
-						} else {
-							openPanel(Panel.TransactionDetails);
-						}
-
-						setTransactionModalItem(transaction);
-					}}
+					onRowClick={handleRowClick}
 					profile={profile}
 					hideSender={selectedWallets === 1}
 					sortBy={sortBy}

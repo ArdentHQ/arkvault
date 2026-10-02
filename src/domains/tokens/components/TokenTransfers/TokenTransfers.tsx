@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { memo, useState } from "react";
+import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
@@ -41,6 +41,23 @@ export const TokenTransfers = memo(function TokenTransfers({
 		wallets,
 	});
 
+	// use ref to avoid re-creating the function in each render.
+	const rowClickRef = useRef<(transaction: ExtendedTransactionDTO) => void>(() => {});
+
+	useEffect(() => {
+		rowClickRef.current = (transaction: ExtendedTransactionDTO) => {
+			if (currentOpenedPanel?.name === Panel.TransactionDetails) {
+				setIsMinimized(false);
+			} else {
+				openPanel(Panel.TransactionDetails);
+			}
+
+			setTransactionModalItem(transaction);
+		};
+	});
+
+	const handleRowClick = useCallback((transaction: ExtendedTransactionDTO) => rowClickRef.current(transaction), []);
+
 	if (!isVisible) {
 		return <></>;
 	}
@@ -75,15 +92,7 @@ export const TokenTransfers = memo(function TokenTransfers({
 					exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 					isLoading={isLoadingTransfers}
 					skeletonRowsLimit={8}
-					onRowClick={(transaction) => {
-						if (currentOpenedPanel?.name === Panel.TransactionDetails) {
-							setIsMinimized(false);
-						} else {
-							openPanel(Panel.TransactionDetails);
-						}
-
-						setTransactionModalItem(transaction);
-					}}
+					onRowClick={handleRowClick}
 					profile={profile}
 					hideSender={selectedWallets === 1}
 					sortBy={{
