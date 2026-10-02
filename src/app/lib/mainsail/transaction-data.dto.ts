@@ -8,7 +8,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { AddressService } from "./address.service";
-import { TransactionTypeIdentifier, UnitConverter, Helpers } from "@arkecosystem/typescript-crypto";
+import { TransactionTypeIdentifier, UnitConverter } from "@arkecosystem/typescript-crypto";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 import { TransactionTokenData } from "@/app/lib/profiles/token.contracts";
 
@@ -73,7 +73,7 @@ export abstract class TransactionData {
 	}
 
 	public isTokenTransfer() {
-		return TransactionTypeIdentifier.isTokenTransfer(this.payload());
+		return TransactionTypeIdentifier.isTokenTransfer(this.data.data);
 	}
 
 	public isContractTransaction() {
@@ -92,19 +92,15 @@ export abstract class TransactionData {
 	}
 
 	public isApprove() {
-		return TransactionTypeIdentifier.isApprove(this.payload());
+		return TransactionTypeIdentifier.isApprove(this.data.data);
 	}
 
 	public isRevoke() {
-		return TransactionTypeIdentifier.isRevoke(this.payload());
+		return TransactionTypeIdentifier.isRevoke(this.data.data);
 	}
 
 	public isBatchTransfer() {
-		return TransactionTypeIdentifier.isBatchTransfer(this.payload());
-	}
-
-	protected payload(): string {
-		return Helpers.removeLeadingHexZero(this.data?.data ?? "");
+		return TransactionTypeIdentifier.isBatchTransfer(this.data.data);
 	}
 
 	public token(): TransactionToken | undefined {
@@ -239,39 +235,39 @@ export abstract class TransactionData {
 	}
 
 	public isTransfer(): boolean {
-		return TransactionTypeIdentifier.isTransfer(this.payload());
+		return TransactionTypeIdentifier.isTransfer(this.data.data);
 	}
 
 	public isUsernameRegistration(): boolean {
-		return TransactionTypeIdentifier.isUsernameRegistration(this.payload());
+		return TransactionTypeIdentifier.isUsernameRegistration(this.data.data);
 	}
 
 	public isUsernameResignation(): boolean {
-		return TransactionTypeIdentifier.isUsernameResignation(this.payload());
+		return TransactionTypeIdentifier.isUsernameResignation(this.data.data);
 	}
 
 	public isValidatorRegistration(): boolean {
-		return TransactionTypeIdentifier.isValidatorRegistration(this.payload());
+		return TransactionTypeIdentifier.isValidatorRegistration(this.data.data);
 	}
 
 	public isUpdateValidator(): boolean {
-		return TransactionTypeIdentifier.isUpdateValidator(this.payload());
+		return TransactionTypeIdentifier.isUpdateValidator(this.data.data);
 	}
 
 	public isVote(): boolean {
-		return TransactionTypeIdentifier.isVote(this.payload());
+		return TransactionTypeIdentifier.isVote(this.data.data);
 	}
 
 	public isUnvote(): boolean {
-		return TransactionTypeIdentifier.isUnvote(this.payload());
+		return TransactionTypeIdentifier.isUnvote(this.data.data);
 	}
 
 	public isMultiPayment(): boolean {
-		return TransactionTypeIdentifier.isMultiPayment(this.payload());
+		return TransactionTypeIdentifier.isMultiPayment(this.data.data);
 	}
 
 	public isValidatorResignation(): boolean {
-		return TransactionTypeIdentifier.isValidatorResignation(this.payload());
+		return TransactionTypeIdentifier.isValidatorResignation(this.data.data);
 	}
 
 	public username(): string {
@@ -316,7 +312,7 @@ export abstract class TransactionData {
 	}
 
 	public methodHash(): string {
-		return Helpers.addLeadingHexZero(this.payload().slice(0, 8));
+		return this.data.data.slice(0, 10);
 	}
 
 	public expirationType(): number {

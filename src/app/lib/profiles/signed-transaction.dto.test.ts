@@ -266,35 +266,6 @@ describe("ExtendedSignedTransactionData", () => {
 	});
 
 	describe("#total", () => {
-		it("should handle sending to self on a pending transfer that has 0x payload", () => {
-			const realData = new SignedTransactionData().configure(
-				{
-					data: "0x",
-					from: "0xSELF",
-					gasLimit: 15_000,
-					gasPrice: 7_000_000_000,
-					hash: "0xself-transfer",
-					nonce: "1",
-					senderPublicKey: "pubkey",
-					timestamp: 1_700_000_000,
-					to: "0xSELF",
-					value: "1000000000000000000",
-				},
-				"serialized",
-			);
-
-			const wallet = {
-				address: vi.fn().mockReturnValue("0xSELF"),
-				publicKey: vi.fn().mockReturnValue("pubkey"),
-			} as unknown as IReadWriteWallet;
-
-			const selfTransfer = new ExtendedSignedTransactionData(realData, wallet);
-
-			expect(selfTransfer.type()).toBe("transfer");
-			expect(selfTransfer.isReturn()).toBe(true);
-			expect(selfTransfer.total().toFixed(8)).toBe("0.99989500");
-		});
-
 		it("should return value minus fee for return transactions", () => {
 			mockData.isTransfer = vi.fn().mockReturnValue(true);
 			mockData.from = vi.fn().mockReturnValue("0x1");
