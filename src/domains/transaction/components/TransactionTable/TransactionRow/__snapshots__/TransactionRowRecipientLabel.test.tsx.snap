@@ -6,7 +6,7 @@ exports[`TransactionRowRecipientLabel > should render with right alignment on mo
     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
   >
     <div
-      class="min-w-0 grow"
+      class="min-w-0 shrink-0 grow basis-0"
     >
       <span
         class="block w-full"
@@ -33,7 +33,7 @@ exports[`TransactionRowRecipientLabel > should render with right alignment on mo
     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
   >
     <div
-      class="min-w-0 grow"
+      class="min-w-0 shrink-0 grow basis-0"
     >
       <span
         class="block w-full"

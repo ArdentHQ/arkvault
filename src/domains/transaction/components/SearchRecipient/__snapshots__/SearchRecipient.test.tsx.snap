@@ -223,7 +223,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -343,7 +343,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -672,7 +672,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -792,7 +792,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -1119,7 +1119,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -1239,7 +1239,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -1566,7 +1566,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -1928,7 +1928,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <div
-                                class="min-w-0 grow"
+                                class="min-w-0 shrink-0 grow basis-0"
                               >
                                 <span
                                   class="block w-full"
@@ -2235,7 +2235,7 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -2597,7 +2597,7 @@ exports[`SearchRecipient > should render with my address on mobile 1`] = `
                               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <div
-                                class="min-w-0 grow"
+                                class="min-w-0 shrink-0 grow basis-0"
                               >
                                 <span
                                   class="block w-full"
@@ -2904,7 +2904,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -3231,7 +3231,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -3351,7 +3351,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -3678,7 +3678,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -3798,7 +3798,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-52 min-w-52 justify-between"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -4160,7 +4160,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <div
-                                class="min-w-0 grow"
+                                class="min-w-0 shrink-0 grow basis-0"
                               >
                                 <span
                                   class="block w-full"
@@ -4295,7 +4295,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                             >
                               <div
-                                class="min-w-0 grow"
+                                class="min-w-0 shrink-0 grow basis-0"
                               >
                                 <span
                                   class="block w-full"

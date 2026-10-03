@@ -15,7 +15,7 @@ exports[`VoteList > should render in lg 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -45,7 +45,7 @@ exports[`VoteList > should render in lg 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -75,7 +75,7 @@ exports[`VoteList > should render in lg 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -114,7 +114,7 @@ exports[`VoteList > should render in md 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -144,7 +144,7 @@ exports[`VoteList > should render in md 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -174,7 +174,7 @@ exports[`VoteList > should render in md 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -213,7 +213,7 @@ exports[`VoteList > should render in sm 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -243,7 +243,7 @@ exports[`VoteList > should render in sm 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -273,7 +273,7 @@ exports[`VoteList > should render in sm 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -312,7 +312,7 @@ exports[`VoteList > should render in xl 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -342,7 +342,7 @@ exports[`VoteList > should render in xl 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -372,7 +372,7 @@ exports[`VoteList > should render in xl 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -411,7 +411,7 @@ exports[`VoteList > should render in xs 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -441,7 +441,7 @@ exports[`VoteList > should render in xs 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -471,7 +471,7 @@ exports[`VoteList > should render in xs 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -510,7 +510,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -550,7 +550,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -590,7 +590,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -639,7 +639,7 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -679,7 +679,7 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -719,7 +719,7 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -778,7 +778,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -818,7 +818,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -858,7 +858,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -897,7 +897,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -937,7 +937,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -977,7 +977,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -1036,7 +1036,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -1076,7 +1076,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -1116,7 +1116,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end text-right"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"

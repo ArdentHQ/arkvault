@@ -285,7 +285,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -420,7 +420,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -555,7 +555,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -713,7 +713,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -728,7 +728,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -1159,7 +1159,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -1294,7 +1294,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -1429,7 +1429,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -1587,7 +1587,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -1602,7 +1602,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -2033,7 +2033,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -2168,7 +2168,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -2303,7 +2303,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -2461,7 +2461,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -2476,7 +2476,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -2907,7 +2907,7 @@ exports[`ValidatorsTable > should render 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -3042,7 +3042,7 @@ exports[`ValidatorsTable > should render 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -3177,7 +3177,7 @@ exports[`ValidatorsTable > should render 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -3335,7 +3335,7 @@ exports[`ValidatorsTable > should render 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -3350,7 +3350,7 @@ exports[`ValidatorsTable > should render 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -3782,7 +3782,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -3917,7 +3917,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -4052,7 +4052,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -4210,7 +4210,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -4225,7 +4225,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -4656,7 +4656,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -4791,7 +4791,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -4926,7 +4926,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -5093,7 +5093,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -5108,7 +5108,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -5539,7 +5539,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -5674,7 +5674,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -5809,7 +5809,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -5967,7 +5967,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -5982,7 +5982,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -6461,7 +6461,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -6476,7 +6476,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -6911,7 +6911,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -7046,7 +7046,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -7181,7 +7181,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -7339,7 +7339,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -7354,7 +7354,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -7786,7 +7786,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -7921,7 +7921,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -8056,7 +8056,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -8214,7 +8214,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -8229,7 +8229,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -8661,7 +8661,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -8796,7 +8796,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -8931,7 +8931,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -9098,7 +9098,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -9113,7 +9113,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -9544,7 +9544,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -9679,7 +9679,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -9814,7 +9814,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -9972,7 +9972,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -9987,7 +9987,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -10419,7 +10419,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -10554,7 +10554,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -10689,7 +10689,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -10847,7 +10847,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -10862,7 +10862,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"
@@ -11294,7 +11294,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -11429,7 +11429,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -11564,7 +11564,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
                           >
                             <div
-                              class="min-w-0 grow"
+                              class="min-w-0 shrink-0 grow basis-0"
                             >
                               <span
                                 class="block w-full"
@@ -11722,7 +11722,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                       class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                     >
                       <span
-                        class="mr-2 text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                        class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                         data-testid="Address__alias"
                       >
                         <span>
@@ -11737,7 +11737,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                         </span>
                       </span>
                       <div
-                        class="min-w-0 grow"
+                        class="min-w-0 shrink-0 grow basis-0"
                       >
                         <span
                           class="block w-full"

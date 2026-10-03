@@ -20,7 +20,7 @@ exports[`#WalletVote > Votes > should render 1`] = `
           class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
         >
           <div
-            class="min-w-0 grow"
+            class="min-w-0 shrink-0 grow basis-0"
           >
             <span
               class="block w-full"
@@ -494,7 +494,7 @@ exports[`#WalletVote > WalletVote > should render as all resigned 1`] = `
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
             >
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -2392,7 +2392,7 @@ exports[`#WalletVote > WalletVote > single vote networks > should render a vote 
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
             >
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -2490,7 +2490,7 @@ exports[`#WalletVote > WalletVote > single vote networks > should render a vote 
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
             >
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -2692,7 +2692,7 @@ exports[`#WalletVote > WalletVote > single vote networks > should render a vote 
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
             >
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"

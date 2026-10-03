@@ -15,7 +15,7 @@ exports[`SelectAddress > should render disabled 1`] = `
         class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
       >
         <div
-          class="min-w-0 grow"
+          class="min-w-0 shrink-0 grow basis-0"
         >
           <span
             class="block w-full"
@@ -112,7 +112,7 @@ exports[`SelectAddress > should render empty 1`] = `
         class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
       >
         <div
-          class="min-w-0 grow"
+          class="min-w-0 shrink-0 grow basis-0"
         >
           <span
             class="block w-full"
@@ -208,7 +208,7 @@ exports[`SelectAddress > should render invalid 1`] = `
         class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
       >
         <div
-          class="min-w-0 grow"
+          class="min-w-0 shrink-0 grow basis-0"
         >
           <span
             class="block w-full"
@@ -357,7 +357,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
         class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
       >
         <div
-          class="min-w-0 grow"
+          class="min-w-0 shrink-0 grow basis-0"
         >
           <span
             class="block w-full"
@@ -455,7 +455,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
         class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
       >
         <div
-          class="min-w-0 grow"
+          class="min-w-0 shrink-0 grow basis-0"
         >
           <span
             class="block w-full"

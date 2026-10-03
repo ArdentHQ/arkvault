@@ -8,9 +8,17 @@ import { MiddleTruncator } from "./MiddleTruncator";
 export type MiddleTruncationProps = React.ComponentPropsWithoutRef<"span"> & {
 	children: string;
 	tooltip?: boolean;
+	/** Smallest head + tail worth rendering; below this the text is omitted entirely. */
+	minChars?: number;
 };
 
-export function MiddleTruncation({ className, children, tooltip = true, ...props }: MiddleTruncationProps) {
+export function MiddleTruncation({
+	className,
+	children,
+	tooltip = true,
+	minChars = 0,
+	...props
+}: MiddleTruncationProps) {
 	const containerRef = useRef<HTMLSpanElement>(null);
 	const [displayedText, setDisplayedText] = useState<string | null>(null);
 
@@ -23,7 +31,7 @@ export function MiddleTruncation({ className, children, tooltip = true, ...props
 		const recalculate = () => {
 			const computedStyle = window.getComputedStyle(element);
 			const font = `${computedStyle.fontStyle} ${computedStyle.fontWeight} ${computedStyle.fontSize} ${computedStyle.fontFamily}`;
-			setDisplayedText(MiddleTruncator.truncate(children, element.offsetWidth, font));
+			setDisplayedText(MiddleTruncator.truncate(children, element.offsetWidth, font, minChars));
 		};
 
 		recalculate();
