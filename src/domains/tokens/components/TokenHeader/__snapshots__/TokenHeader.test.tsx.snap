@@ -32,7 +32,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -47,7 +47,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -348,7 +348,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -363,7 +363,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -664,7 +664,7 @@ exports[`TokenHeader > should render 1`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -679,7 +679,7 @@ exports[`TokenHeader > should render 1`] = `
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -980,7 +980,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -995,7 +995,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -1296,7 +1296,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -1311,7 +1311,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -1617,7 +1617,7 @@ exports[`TokenHeader > should show balance information when tokens are available
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -1632,7 +1632,7 @@ exports[`TokenHeader > should show balance information when tokens are available
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -1933,7 +1933,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -1948,7 +1948,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -2249,7 +2249,7 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -2264,7 +2264,7 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"

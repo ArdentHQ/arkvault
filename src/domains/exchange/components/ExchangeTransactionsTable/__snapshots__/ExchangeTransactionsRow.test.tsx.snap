@@ -22,7 +22,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -247,7 +247,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -463,7 +463,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -679,7 +679,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -896,7 +896,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -1117,7 +1117,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -1338,7 +1338,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"

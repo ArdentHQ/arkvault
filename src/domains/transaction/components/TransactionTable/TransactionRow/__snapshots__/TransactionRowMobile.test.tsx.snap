@@ -111,7 +111,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="mr-2 text-base font-semibold text-theme-text"
+                                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -126,7 +126,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="min-w-0 grow"
+                                  class="min-w-0 shrink-0 grow basis-0"
                                 >
                                   <span
                                     class="block w-full"
@@ -213,7 +213,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="mr-2 text-base font-semibold text-theme-text"
+                                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -228,7 +228,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="min-w-0 grow"
+                                  class="min-w-0 shrink-0 grow basis-0"
                                 >
                                   <span
                                     class="block w-full"
@@ -455,7 +455,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="mr-2 text-base font-semibold text-theme-text"
+                                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -470,7 +470,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="min-w-0 grow"
+                                  class="min-w-0 shrink-0 grow basis-0"
                                 >
                                   <span
                                     class="block w-full"
@@ -557,7 +557,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="mr-2 text-base font-semibold text-theme-text"
+                                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -572,7 +572,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="min-w-0 grow"
+                                  class="min-w-0 shrink-0 grow basis-0"
                                 >
                                   <span
                                     class="block w-full"
@@ -799,7 +799,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <div
-                                  class="min-w-0 grow"
+                                  class="min-w-0 shrink-0 grow basis-0"
                                 >
                                   <span
                                     class="block w-full"
@@ -886,7 +886,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="mr-2 text-base font-semibold text-theme-text"
+                                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -901,7 +901,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="min-w-0 grow"
+                                  class="min-w-0 shrink-0 grow basis-0"
                                 >
                                   <span
                                     class="block w-full"
@@ -1128,7 +1128,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <div
-                                  class="min-w-0 grow"
+                                  class="min-w-0 shrink-0 grow basis-0"
                                 >
                                   <span
                                     class="block w-full"
@@ -1215,7 +1215,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                               >
                                 <span
-                                  class="mr-2 text-base font-semibold text-theme-text"
+                                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span>
@@ -1230,7 +1230,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="min-w-0 grow"
+                                  class="min-w-0 shrink-0 grow basis-0"
                                 >
                                   <span
                                     class="block w-full"
