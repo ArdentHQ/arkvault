@@ -19,7 +19,7 @@ dayjs.extend(utc);
 dayjs.extend(weekOfYear);
 dayjs.extend(relativeTime);
 
-type DateTimeLike = string | number | dayjs.Dayjs | DateTime;
+type DateTimeLike = string | number | Date | dayjs.Dayjs | DateTime;
 
 /**
  * Simplifies working with dates and times through day.js

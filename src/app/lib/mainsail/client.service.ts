@@ -1,13 +1,12 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 
 import { Collections, Contracts, DTO, Services } from "@/app/lib/mainsail";
-import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
+import { ConfigRepository } from "@/app/lib/mainsail";
 import { decodeFunctionResult, encodeFunctionData, hexToBigInt } from "viem";
 
 import { Client } from "@arkecosystem/typescript-client";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transactions.collection";
-import { DateTime } from "@/app/lib/intl";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { WalletData } from "./wallet.dto";
@@ -515,23 +514,8 @@ export class ClientService {
 		}
 
 		if (body.timestamp) {
-			const normalizeTimestamps = (timestamp: Services.RangeCriteria) => {
-				const epoch: string = this.#config.get<string>(ConfigKey.Epoch);
-
-				const normalized = { ...timestamp };
-
-				if (epoch) {
-					for (const [key, value] of Object.entries(normalized)) {
-						normalized[key] = Math.max(value - DateTime.make(epoch).toUNIX(), 0);
-					}
-				}
-
-				return normalized;
-			};
-
-			const normalized = normalizeTimestamps(body.timestamp);
-
-			result.searchParams.timestamp = normalized;
+			// The API filters on miliseconds
+			result.searchParams.timestamp = body.timestamp;
 			delete body.timestamp;
 		}
 
