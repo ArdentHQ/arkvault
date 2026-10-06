@@ -696,7 +696,7 @@ describe("ClientService", () => {
 			spy.mockRestore();
 		});
 
-		it("should normalize timestamps with epoch calculation", async () => {
+		it("should pass timestamps through unchanged (unix ms, no epoch offset)", async () => {
 			const epoch = "2017-03-21T13:00:00.000Z";
 			const configWithEpoch = {
 				get: (key?: string) => {
@@ -709,13 +709,13 @@ describe("ClientService", () => {
 			};
 			const serviceWithEpoch = new ClientService({ config: configWithEpoch as any, profile: mockProfile });
 
-			const epochUnix = 1490101200;
-			const futureTimestamp = epochUnix + 1000;
+			const from = Date.UTC(2026, 8, 24);
+			const to = Date.UTC(2026, 9, 1, 23, 59, 59);
 
-			await serviceWithEpoch.transactions({ timestamp: { from: futureTimestamp, to: futureTimestamp + 100 } });
+			await serviceWithEpoch.transactions({ timestamp: { from, to } });
 
 			expect(spy).toHaveBeenCalledWith(
-				expect.objectContaining({ limit: 10, page: 1, "timestamp.from": 1000, "timestamp.to": 1100 }),
+				expect.objectContaining({ limit: 10, page: 1, "timestamp.from": from, "timestamp.to": to }),
 			);
 		});
 	});

@@ -100,7 +100,7 @@ describe("useProfileTransactions", () => {
 	let profile: IProfile;
 
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = await env.profiles().findById(getDefaultProfileId());
 	});
 
 	afterEach(() => {
@@ -134,22 +134,97 @@ describe("useProfileTransactions", () => {
 	});
 
 	it("should fetch more transactions", async () => {
-		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
-			wrapper,
+		const aggregate = profile.transactionAggregate();
+		const source = await aggregate.all({ cursor: 1, limit: 30 });
+		const pageOne = source.items().slice(0, 5);
+		const pageTwo = source.items().slice(5, 10);
+
+		const collection = (items: typeof pageOne, hasMorePages: boolean) => ({
+			hasMorePages: () => hasMorePages,
+			items: () => items,
 		});
 
-		act(() => {
-			result.current.updateFilters({ activeMode: "all" });
+		const allSpy = vi
+			.spyOn(aggregate, "all")
+			.mockImplementation((async (query: any) =>
+				query?.cursor === 2 ? collection(pageTwo, false) : collection(pageOne, true)) as any);
+
+		const { result } = renderHook(
+			() => useProfileTransactions({ limit: 5, profile, wallets: profile.wallets().values() }),
+			{ wrapper },
+		);
+
+		try {
+			act(() => {
+				result.current.updateFilters({ activeMode: "all" });
+			});
+
+			await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+			await waitFor(() => expect(result.current.transactions).toHaveLength(5));
+			expect(result.current.hasMore).toBe(true);
+
+			await act(async () => {
+				await result.current.fetchMore();
+			});
+
+			await waitFor(() => expect(result.current.transactions).toHaveLength(10));
+
+			const hashes = result.current.transactions.map((transaction) => transaction.hash());
+			expect(new Set(hashes).size).toBe(10);
+			expect(result.current.hasMore).toBe(false);
+		} finally {
+			allSpy.mockRestore();
+		}
+	});
+
+	it("should never append transactions that are already displayed", async () => {
+		const aggregate = profile.transactionAggregate();
+		const source = await aggregate.all({ cursor: 1, limit: 30 });
+		const pageOne = source.items().slice(0, 5);
+		const pageTwo = source.items().slice(5, 10);
+
+		const collection = (items: typeof pageOne, hasMorePages: boolean) => ({
+			hasMorePages: () => hasMorePages,
+			items: () => items,
 		});
 
-		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
-		await waitFor(() => expect(result.current.transactions).toHaveLength(10));
+		// Page 2 comes back as a stale copy of page 1; the real next batch is on page 3.
+		const allSpy = vi
+			.spyOn(aggregate, "all")
+			.mockImplementation((async (query: any) =>
+				query?.cursor === 3 ? collection(pageTwo, true) : collection(pageOne, true)) as any);
 
-		await act(async () => {
-			await result.current.fetchMore();
-		});
+		const { result } = renderHook(
+			() => useProfileTransactions({ limit: 5, profile, wallets: profile.wallets().values() }),
+			{ wrapper },
+		);
 
-		await waitFor(() => expect(result.current.transactions).toHaveLength(20));
+		try {
+			act(() => {
+				result.current.updateFilters({ activeMode: "all" });
+			});
+
+			await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+			await waitFor(() => expect(result.current.transactions).toHaveLength(5));
+
+			await act(async () => {
+				await result.current.fetchMore();
+			});
+
+			// The duplicated page renders nothing extra...
+			await waitFor(() => expect(result.current.transactions).toHaveLength(5));
+			expect(new Set(result.current.transactions.map((t) => t.hash())).size).toBe(5);
+
+			// ...and the next click picks up the real next page.
+			await act(async () => {
+				await result.current.fetchMore();
+			});
+
+			await waitFor(() => expect(result.current.transactions).toHaveLength(10));
+			expect(new Set(result.current.transactions.map((t) => t.hash())).size).toBe(10);
+		} finally {
+			allSpy.mockRestore();
+		}
 	});
 
 	it("should update filters and fetch new data", async () => {
