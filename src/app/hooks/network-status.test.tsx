@@ -8,13 +8,13 @@ import { render, screen } from "@/utils/testing-library";
 
 let eventMap: any;
 
+const TestNetworkStatus: React.FC = () => {
+	const isOnline = useNetworkStatus();
+
+	return isOnline ? <h1>My App</h1> : <Offline />;
+};
+
 describe("useNetworkStatus", () => {
-	const TestNetworkStatus: React.FC = () => {
-		const isOnline = useNetworkStatus();
-
-		return isOnline ? <h1>My App</h1> : <Offline />;
-	};
-
 	beforeEach(() => {
 		vi.restoreAllMocks();
 

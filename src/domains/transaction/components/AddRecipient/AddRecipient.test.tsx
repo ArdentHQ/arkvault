@@ -74,6 +74,35 @@ const fillFieldsWithValidAddressAndAmount = async (address: string, amount: stri
 
 const selectRecipientID = "SelectRecipient__select-recipient";
 
+const TokenTransferComponent = (options?: { tokens: WalletToken[] }) => {
+	const tokens = options?.tokens ?? profile.tokens().selected().items();
+	const form = useForm({
+		defaultValues: { fee: 0, network, senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
+		mode: "onChange",
+	});
+
+	useEffect(() => {
+		form.register("network");
+		form.register("senderAddress");
+
+		form.register("tokenContractAddress");
+		form.setValue("tokenContractAddress", profile.tokens().selected().first().token().address());
+	}, []);
+
+	return (
+		<FormProvider {...form}>
+			<AddRecipientWrapper
+				profile={profile}
+				wallet={wallet}
+				onChange={vi.fn()}
+				recipients={[]}
+				isTokenTransfer
+				tokens={tokens}
+			/>
+		</FormProvider>
+	);
+};
+
 describe("AddRecipient", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -113,35 +142,6 @@ describe("AddRecipient", () => {
 
 		vi.spyOn(profile.tokens(), "selected").mockReturnValue(tokensCollection);
 	});
-
-	const Component = (options?: { tokens: WalletToken[] }) => {
-		const tokens = options?.tokens ?? profile.tokens().selected().items();
-		const form = useForm({
-			defaultValues: { fee: 0, network, senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
-			mode: "onChange",
-		});
-
-		useEffect(() => {
-			form.register("network");
-			form.register("senderAddress");
-
-			form.register("tokenContractAddress");
-			form.setValue("tokenContractAddress", profile.tokens().selected().first().token().address());
-		}, []);
-
-		return (
-			<FormProvider {...form}>
-				<AddRecipientWrapper
-					profile={profile}
-					wallet={wallet}
-					onChange={vi.fn()}
-					recipients={[]}
-					isTokenTransfer
-					tokens={tokens}
-				/>
-			</FormProvider>
-		);
-	};
 
 	it("should render", async () => {
 		const { container } = renderWithFormProvider(
@@ -779,7 +779,7 @@ describe("AddRecipient", () => {
 			recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 		};
 
-		render(<Component tokens={[]} />, {
+		render(<TokenTransferComponent tokens={[]} />, {
 			route: `/profiles/${profile.id()}`,
 		});
 

@@ -18,19 +18,30 @@ const Test = () => {
 	);
 };
 
+const ProviderCountWithoutProvider = () => {
+	const { exchangeProviders } = useExchangeContext();
+	return <span>provider counts: {exchangeProviders.length}</span>;
+};
+
+const ExchangeServiceStatus = () => {
+	const { exchangeService, setProvider } = useExchangeContext();
+
+	return (
+		<>
+			<button onClick={() => setProvider({ slug: "provider" })} />
+			<span>exchangeService is {exchangeService ? "set" : "undefined"}</span>;
+		</>
+	);
+};
+
 describe("Exchange Context", () => {
 	afterEach(() => httpClient.clearCache());
 
 	it("should throw without provider", () => {
 		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
-		const Test = () => {
-			const { exchangeProviders } = useExchangeContext();
-			return <span>provider counts: {exchangeProviders.length}</span>;
-		};
-
 		expect(() =>
-			renderWithoutRouter(<Test />, {
+			renderWithoutRouter(<ProviderCountWithoutProvider />, {
 				withProviders: false,
 			}),
 		).toThrow("[useExchangeContext] Component not wrapped within a Provider");
@@ -69,20 +80,9 @@ describe("Exchange Context", () => {
 	});
 
 	it("should instantiate ExchangeService after setting provider", async () => {
-		const Test = () => {
-			const { exchangeService, setProvider } = useExchangeContext();
-
-			return (
-				<>
-					<button onClick={() => setProvider({ slug: "provider" })} />
-					<span>exchangeService is {exchangeService ? "set" : "undefined"}</span>;
-				</>
-			);
-		};
-
 		const { container } = render(
 			<ExchangeProvider>
-				<Test />
+				<ExchangeServiceStatus />
 			</ExchangeProvider>,
 		);
 

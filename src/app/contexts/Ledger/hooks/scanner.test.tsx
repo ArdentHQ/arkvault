@@ -101,19 +101,74 @@ describe("Use Ledger Scanner", () => {
 		vi.clearAllMocks();
 	});
 
+	const ScanComponent = () => {
+		const { scan, wallets, isSelected } = useLedgerScanner(wallet.coinId(), wallet.networkId());
+
+		return (
+			<div>
+				{walletsList(wallets, isSelected)}
+				<button onClick={() => scan(profile)}>Scan</button>
+			</div>
+		);
+	};
+
+	const ToggleSelectComponent = () => {
+		const { toggleSelect, wallets, isSelected, scan } = useLedgerScanner(wallet.coinId(), wallet.networkId());
+
+		return (
+			<div>
+				<ul>
+					{wallets.map((wallet, index) => (
+						<li key={wallet.path}>
+							<p>{`Path: ${wallet.path}`}</p>
+							<p>{`Address: ${wallet.address}`}</p>
+							<p>{`Selected: ${isSelected(wallet.path)}`}</p>
+							<input
+								type="checkbox"
+								data-testid={`input--${index}`}
+								onChange={toggleSelect.bind(undefined, wallet.path)}
+							/>
+						</li>
+					))}
+				</ul>
+				<button data-testid="scan" onClick={() => scan(profile)}>
+					Scan
+				</button>
+			</div>
+		);
+	};
+
+	const ToggleSelectAllComponent = () => {
+		const { scan, toggleSelectAll, wallets, isSelected } = useLedgerScanner(wallet.coinId(), wallet.networkId());
+
+		return (
+			<div>
+				{walletsList(wallets, isSelected)}
+				<button onClick={() => scan(profile)}>Scan</button>
+				<button onClick={toggleSelectAll}>Toggle All</button>
+			</div>
+		);
+	};
+
+	const AbortScannerComponent = () => {
+		const { isBusy } = useLedgerContext();
+		const { scan, abortScanner } = useLedgerScanner(wallet.coinId(), wallet.networkId());
+
+		return (
+			<div>
+				<p>{isBusy ? "Busy" : "Idle"}</p>
+				<button data-testid="scan" onClick={() => scan(profile)}>
+					Scan
+				</button>
+				<button data-testid="abort" onClick={abortScanner}>
+					Abort
+				</button>
+			</div>
+		);
+	};
+
 	it("should render", async () => {
-		const Component = () => {
-			const { scan, wallets, isSelected } = useLedgerScanner(wallet.coinId(), wallet.networkId());
-
-			return (
-				<div>
-					{walletsList(wallets, isSelected)}
-					<button onClick={() => scan(profile)}>Scan</button>
-				</div>
-			);
-		};
-
-		const { container } = render(<Component />);
+		const { container } = render(<ScanComponent />);
 
 		await userEvent.click(screen.getByRole("button"));
 
@@ -124,33 +179,7 @@ describe("Use Ledger Scanner", () => {
 	});
 
 	it("should render with toggleSelect", async () => {
-		const Component = () => {
-			const { toggleSelect, wallets, isSelected, scan } = useLedgerScanner(wallet.coinId(), wallet.networkId());
-
-			return (
-				<div>
-					<ul>
-						{wallets.map((wallet, index) => (
-							<li key={wallet.path}>
-								<p>{`Path: ${wallet.path}`}</p>
-								<p>{`Address: ${wallet.address}`}</p>
-								<p>{`Selected: ${isSelected(wallet.path)}`}</p>
-								<input
-									type="checkbox"
-									data-testid={`input--${index}`}
-									onChange={toggleSelect.bind(undefined, wallet.path)}
-								/>
-							</li>
-						))}
-					</ul>
-					<button data-testid="scan" onClick={() => scan(profile)}>
-						Scan
-					</button>
-				</div>
-			);
-		};
-
-		render(<Component />);
+		render(<ToggleSelectComponent />);
 
 		await userEvent.click(screen.getByTestId("scan"));
 
@@ -163,22 +192,7 @@ describe("Use Ledger Scanner", () => {
 	});
 
 	it("should render with toggleSelectAll", async () => {
-		const Component = () => {
-			const { scan, toggleSelectAll, wallets, isSelected } = useLedgerScanner(
-				wallet.coinId(),
-				wallet.networkId(),
-			);
-
-			return (
-				<div>
-					{walletsList(wallets, isSelected)}
-					<button onClick={() => scan(profile)}>Scan</button>
-					<button onClick={toggleSelectAll}>Toggle All</button>
-				</div>
-			);
-		};
-
-		render(<Component />);
+		render(<ToggleSelectAllComponent />);
 
 		await userEvent.click(screen.getByText("Scan"));
 
@@ -300,24 +314,7 @@ describe("Use Ledger Scanner", () => {
 	});
 
 	it("should abort scanner", async () => {
-		const Component = () => {
-			const { isBusy } = useLedgerContext();
-			const { scan, abortScanner } = useLedgerScanner(wallet.coinId(), wallet.networkId());
-
-			return (
-				<div>
-					<p>{isBusy ? "Busy" : "Idle"}</p>
-					<button data-testid="scan" onClick={() => scan(profile)}>
-						Scan
-					</button>
-					<button data-testid="abort" onClick={abortScanner}>
-						Abort
-					</button>
-				</div>
-			);
-		};
-
-		render(<Component />);
+		render(<AbortScannerComponent />);
 
 		await userEvent.click(screen.getByTestId("scan"));
 		await userEvent.click(screen.getByTestId("abort"));

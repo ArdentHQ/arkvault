@@ -12,11 +12,11 @@ import * as useLinkMock from "@/app/hooks/use-link";
 let usePanelsMock;
 let openPanelSpy;
 
+const wrapper = ({ children }) => <Providers>{children}</Providers>;
+
 describe("useWalletActions", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-
-	const wrapper = ({ children }) => <Providers>{children}</Providers>;
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

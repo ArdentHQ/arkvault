@@ -6,6 +6,22 @@ import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 import { minVersionList } from "@/app/contexts";
 import { LedgerTabs } from "./LedgerTabs";
 
+const TestWrapper: React.FC<{ step: number; onCancel?: () => void }> = ({ step, onCancel = vi.fn() }) => {
+	const methods = useForm();
+	return (
+		<FormProvider {...methods}>
+			<LedgerTabs
+				activeIndex={step}
+				onCancel={onCancel}
+				onStepChange={vi.fn()}
+				onSubmit={vi.fn()}
+				onClickEditWalletName={vi.fn()}
+			/>
+			,
+		</FormProvider>
+	);
+};
+
 describe("LedgerTabs - cancel flow", () => {
 	let profile: any, wallet: any;
 
@@ -44,22 +60,6 @@ describe("LedgerTabs - cancel flow", () => {
 	afterAll(() => {
 		vi.restoreAllMocks();
 	});
-
-	const TestWrapper: React.FC<{ step: number; onCancel?: () => void }> = ({ step, onCancel = vi.fn() }) => {
-		const methods = useForm();
-		return (
-			<FormProvider {...methods}>
-				<LedgerTabs
-					activeIndex={step}
-					onCancel={onCancel}
-					onStepChange={vi.fn()}
-					onSubmit={vi.fn()}
-					onClickEditWalletName={vi.fn()}
-				/>
-				,
-			</FormProvider>
-		);
-	};
 
 	it("renders the ledger-auth (ListenLedger) step at index 1", async () => {
 		mockConnectedTransport();

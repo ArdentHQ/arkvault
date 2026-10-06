@@ -20,6 +20,22 @@ let contact: Contracts.IContact;
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
+const renderContactList = ({ options, onAction = vi.fn(), onSend = vi.fn(), item = contact }) =>
+	render(
+		<table>
+			<tbody>
+				<ContactListItem
+					profile={profile}
+					options={options}
+					onAction={onAction}
+					onSend={onSend}
+					item={item}
+					hasBalance={true}
+				/>
+			</tbody>
+		</table>,
+	);
+
 describe("ContactListItem", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -52,22 +68,6 @@ describe("ContactListItem", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 	});
-
-	const renderContactList = ({ options, onAction = vi.fn(), onSend = vi.fn(), item = contact }) =>
-		render(
-			<table>
-				<tbody>
-					<ContactListItem
-						profile={profile}
-						options={options}
-						onAction={onAction}
-						onSend={onSend}
-						item={item}
-						hasBalance={true}
-					/>
-				</tbody>
-			</table>,
-		);
 
 	it("should render as validator", () => {
 		const validatorContact = {

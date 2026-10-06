@@ -35,6 +35,16 @@ const encryptionPassword = "S3cUrePa$sword";
 const continueButton = () => screen.getByTestId("CreateWallet__continue-button");
 const importWalletContinueButton = () => screen.getByTestId("ImportWallet__continue-button");
 
+const ControlledPanel = () => {
+	const [open, setOpen] = React.useState(true);
+	return (
+		<>
+			<button data-testid="toggle-panel" onClick={() => setOpen((v) => !v)} />
+			<CreateAddressesSidePanel open={open} onOpenChange={setOpen} />
+		</>
+	);
+};
+
 describe("CreateAddressSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
 
@@ -419,16 +429,6 @@ describe("CreateAddressSidePanel", () => {
 
 	it("should reset state when panel is closed and reopened", async () => {
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-
-		const ControlledPanel = () => {
-			const [open, setOpen] = React.useState(true);
-			return (
-				<>
-					<button data-testid="toggle-panel" onClick={() => setOpen((v) => !v)} />
-					<CreateAddressesSidePanel open={open} onOpenChange={setOpen} />
-				</>
-			);
-		};
 
 		render(<ControlledPanel />, { route: createURL });
 

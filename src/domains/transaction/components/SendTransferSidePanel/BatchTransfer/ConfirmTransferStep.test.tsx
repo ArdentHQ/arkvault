@@ -14,6 +14,28 @@ import userEvent from "@testing-library/user-event";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 
+const ConfirmTransferStepWithForm = () => {
+	const form = useForm({
+		defaultValues: {},
+		mode: "onChange",
+	});
+
+	form.register("recipients");
+	form.register("tokenContractAddress");
+
+	form.setValue("tokenContractAddress", profile.tokens().selected().first().token().address());
+	form.setValue("recipients", [
+		{ address: wallet.address(), amount: 1 },
+		{ address: wallet.address(), amount: 2 },
+	]);
+
+	return (
+		<FormProvider {...form}>
+			<ConfirmTransferStep wallet={wallet} />
+		</FormProvider>
+	);
+};
+
 describe("#ConfirmTransferStep", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -55,30 +77,8 @@ describe("#ConfirmTransferStep", () => {
 		vi.restoreAllMocks();
 	});
 
-	const Component = () => {
-		const form = useForm({
-			defaultValues: {},
-			mode: "onChange",
-		});
-
-		form.register("recipients");
-		form.register("tokenContractAddress");
-
-		form.setValue("tokenContractAddress", profile.tokens().selected().first().token().address());
-		form.setValue("recipients", [
-			{ address: wallet.address(), amount: 1 },
-			{ address: wallet.address(), amount: 2 },
-		]);
-
-		return (
-			<FormProvider {...form}>
-				<ConfirmTransferStep wallet={wallet} />
-			</FormProvider>
-		);
-	};
-
 	it("should display recipients modal", async () => {
-		render(<Component />, {
+		render(<ConfirmTransferStepWithForm />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
 

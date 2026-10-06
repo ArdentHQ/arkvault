@@ -6,27 +6,27 @@ import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/test
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 
+const TestProfile: React.FC = () => {
+	const profile = useActiveProfile();
+
+	return <h1 data-testid="test-profile">{profile.name()}</h1>;
+};
+
+const TestWallet: React.FC = () => {
+	const wallet = useActiveWallet();
+
+	if (!wallet) {
+		return <h1>{wallet}</h1>;
+	}
+
+	return <h1 data-testid="test-wallet">{wallet.address()}</h1>;
+};
+
 describe("useActiveProfile", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
 	});
-
-	const TestProfile: React.FC = () => {
-		const profile = useActiveProfile();
-
-		return <h1 data-testid="test-profile">{profile.name()}</h1>;
-	};
-
-	const TestWallet: React.FC = () => {
-		const wallet = useActiveWallet();
-
-		if (!wallet) {
-			return <h1>{wallet}</h1>;
-		}
-
-		return <h1 data-testid="test-wallet">{wallet.address()}</h1>;
-	};
 
 	it("should return profile", () => {
 		render(<TestProfile />, {

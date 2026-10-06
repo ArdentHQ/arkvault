@@ -22,14 +22,14 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		value: () => BigNumber.make(transactionFixture.data.value),
 	});
 
+const wrapper = ({ children }: any) => (
+	<WithProviders>
+		<LedgerProvider>{children}</LedgerProvider>
+	</WithProviders>
+);
+
 describe("Use Transaction Builder with Ledger", () => {
 	let wallet: Contracts.IReadWriteWallet;
-
-	const wrapper = ({ children }: any) => (
-		<WithProviders>
-			<LedgerProvider>{children}</LedgerProvider>
-		</WithProviders>
-	);
 
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());

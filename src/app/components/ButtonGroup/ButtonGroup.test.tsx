@@ -5,6 +5,32 @@ import { ButtonGroup, ButtonGroupOption } from "./ButtonGroup";
 import { useSelectionState } from "./useSelectionState";
 import { render, screen } from "@/utils/testing-library";
 
+const ModernVariantOption = () => {
+	const state = useSelectionState(undefined);
+
+	return (
+		<ButtonGroupOption {...state} value="test" variant="modern" tooltipContent="tooltip">
+			Test
+		</ButtonGroupOption>
+	);
+};
+
+const SelectionStateOptions = () => {
+	const state = useSelectionState(undefined);
+
+	return (
+		<>
+			<span data-testid="selectedValue">{state.selectedValue}</span>
+			<ButtonGroupOption {...state} value={1}>
+				Test 1
+			</ButtonGroupOption>
+			<ButtonGroupOption {...state} value={2}>
+				Test 2
+			</ButtonGroupOption>
+		</>
+	);
+};
+
 describe("ButtonGroup", () => {
 	it("should render", () => {
 		const { asFragment } = render(<ButtonGroup />);
@@ -51,39 +77,13 @@ describe("ButtonGroupOption", () => {
 	});
 
 	it("should render with modern variant", () => {
-		const Component = () => {
-			const state = useSelectionState(undefined);
-
-			return (
-				<ButtonGroupOption {...state} value="test" variant="modern" tooltipContent="tooltip">
-					Test
-				</ButtonGroupOption>
-			);
-		};
-
-		const { asFragment } = render(<Component />);
+		const { asFragment } = render(<ModernVariantOption />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should work with useSelectionState", async () => {
-		const Component = () => {
-			const state = useSelectionState(undefined);
-
-			return (
-				<>
-					<span data-testid="selectedValue">{state.selectedValue}</span>
-					<ButtonGroupOption {...state} value={1}>
-						Test 1
-					</ButtonGroupOption>
-					<ButtonGroupOption {...state} value={2}>
-						Test 2
-					</ButtonGroupOption>
-				</>
-			);
-		};
-
-		render(<Component />);
+		render(<SelectionStateOptions />);
 
 		const buttons = screen.getAllByTestId("ButtonGroupOption");
 

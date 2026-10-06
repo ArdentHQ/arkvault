@@ -23,15 +23,41 @@ const mockGetValues = vi.fn().mockReturnValue([
 
 const mockSetValue = vi.fn();
 
-vi.mock("./LedgerScanStep", () => {
-	const mockShowLoadedLedgerWalletsMessage = (wallets) => {
-		if (wallets.length === 1) {
-			return <div>Loaded 1 wallet</div>;
+vi.mock("./LedgerScanStep", () => ({
+	LedgerScanStep: ({ cancelling = false }) => {
+		if (cancelling) {
+			return <div data-testid="LedgerCancellingScreen">Cancelling...</div>;
 		}
-		return <div>Loaded {wallets.length} wallets</div>;
-	};
 
-	const mockLedgerTable = ({ wallets = [], isScanningMore = false, network, toggleSelect }) => (
+		return (
+			<div>
+				<div data-testid="LedgerScanStep__select-all-mobile">
+					<input type="checkbox" role="checkbox" />
+				</div>
+				<div>
+					<input type="checkbox" data-testid="LedgerMobileItem__checkbox" role="checkbox" />
+					<div data-testid="AddressMobileItem__skeleton">D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
+					<div data-testid="AddressMobileItem__skeleton">D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
+					<input type="checkbox" data-testid="LedgerScanStep__checkbox-row" role="checkbox" />
+				</div>
+				<table>
+					<tbody>
+						<tr role="row" />
+						<tr role="row" />
+						<tr role="row" />
+						<tr role="row" />
+						<tr role="row" />
+						<tr role="row" />
+					</tbody>
+				</table>
+				<div data-testid="LedgerScanStep__load-more">Show All</div>
+				<div data-testid="LedgerScanStep__scan-more">Scanning more...</div>
+				<div>D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
+				<div>D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
+			</div>
+		);
+	},
+	LedgerTable: ({ wallets = [], isScanningMore = false, network, toggleSelect }) => (
 		<div>
 			{isScanningMore && <div data-testid="LedgerScanStep__scan-more">Scanning more...</div>}
 			{network && wallets.length > 5 && (
@@ -95,48 +121,14 @@ vi.mock("./LedgerScanStep", () => {
 				))}
 			</div>
 		</div>
-	);
-
-	const mockLedgerScanStep = ({ cancelling = false }) => {
-		if (cancelling) {
-			return <div data-testid="LedgerCancellingScreen">Cancelling...</div>;
+	),
+	showLoadedLedgerWalletsMessage: (wallets) => {
+		if (wallets.length === 1) {
+			return <div>Loaded 1 wallet</div>;
 		}
-
-		return (
-			<div>
-				<div data-testid="LedgerScanStep__select-all-mobile">
-					<input type="checkbox" role="checkbox" />
-				</div>
-				<div>
-					<input type="checkbox" data-testid="LedgerMobileItem__checkbox" role="checkbox" />
-					<div data-testid="AddressMobileItem__skeleton">D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
-					<div data-testid="AddressMobileItem__skeleton">D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
-					<input type="checkbox" data-testid="LedgerScanStep__checkbox-row" role="checkbox" />
-				</div>
-				<table>
-					<tbody>
-						<tr role="row" />
-						<tr role="row" />
-						<tr role="row" />
-						<tr role="row" />
-						<tr role="row" />
-						<tr role="row" />
-					</tbody>
-				</table>
-				<div data-testid="LedgerScanStep__load-more">Show All</div>
-				<div data-testid="LedgerScanStep__scan-more">Scanning more...</div>
-				<div>D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
-				<div>D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
-			</div>
-		);
-	};
-
-	return {
-		LedgerScanStep: mockLedgerScanStep,
-		LedgerTable: mockLedgerTable,
-		showLoadedLedgerWalletsMessage: mockShowLoadedLedgerWalletsMessage,
-	};
-});
+		return <div>Loaded {wallets.length} wallets</div>;
+	},
+}));
 
 vi.mock("@/app/contexts/Ledger", () => ({
 	useLedgerScanner: () => ({

@@ -88,6 +88,55 @@ describe("Use Ledger Connection", () => {
 		);
 	};
 
+	const LedgerConnectionComponent = ({
+		userProfile = profile,
+		retryOptions,
+	}: {
+		userProfile?: Contracts.IProfile;
+		retryOptions?: Options;
+	}) => {
+		const {
+			connect,
+			disconnect,
+			setBusy,
+			isConnected,
+			isBusy,
+			isAwaitingConnection,
+			error,
+			abortConnectionRetry,
+			listenDevice,
+			resetConnectionState,
+		} = useLedgerConnection();
+
+		useEffect(() => {
+			listenDevice();
+		}, []);
+
+		const handleConnect = async () => {
+			try {
+				await connect(userProfile, retryOptions);
+			} catch {
+				//
+			}
+		};
+
+		return (
+			<div>
+				{error && <span>{error}</span>}
+				{isAwaitingConnection && <span>Waiting Device</span>}
+				{isConnected && <span>Connected</span>}
+				{isBusy && <span>Busy</span>}
+				{!isConnected && <span>Disconnected</span>}
+
+				<button onClick={abortConnectionRetry}>Abort</button>
+				<button onClick={handleConnect}>Connect</button>
+				<button onClick={resetConnectionState}>Reset</button>
+				<button onClick={disconnect}>Disconnect</button>
+				<button onClick={setBusy}>Set Busy</button>
+			</div>
+		);
+	};
+
 	it("should have device available", async () => {
 		const listenSpy = mockNanoXTransport();
 
@@ -149,55 +198,6 @@ describe("Use Ledger Connection", () => {
 			vi.clearAllMocks();
 		});
 
-		const Component = ({
-			userProfile = profile,
-			retryOptions,
-		}: {
-			userProfile?: Contracts.IProfile;
-			retryOptions?: Options;
-		}) => {
-			const {
-				connect,
-				disconnect,
-				setBusy,
-				isConnected,
-				isBusy,
-				isAwaitingConnection,
-				error,
-				abortConnectionRetry,
-				listenDevice,
-				resetConnectionState,
-			} = useLedgerConnection();
-
-			useEffect(() => {
-				listenDevice();
-			}, []);
-
-			const handleConnect = async () => {
-				try {
-					await connect(userProfile, retryOptions);
-				} catch {
-					//
-				}
-			};
-
-			return (
-				<div>
-					{error && <span>{error}</span>}
-					{isAwaitingConnection && <span>Waiting Device</span>}
-					{isConnected && <span>Connected</span>}
-					{isBusy && <span>Busy</span>}
-					{!isConnected && <span>Disconnected</span>}
-
-					<button onClick={abortConnectionRetry}>Abort</button>
-					<button onClick={handleConnect}>Connect</button>
-					<button onClick={resetConnectionState}>Reset</button>
-					<button onClick={disconnect}>Disconnect</button>
-					<button onClick={setBusy}>Set Busy</button>
-				</div>
-			);
-		};
-
 		it.skip("should succeed in connecting without retries", async () => {
 			const getPublicKeySpy = vi
 				.spyOn(wallet.ledger(), "getPublicKey")
@@ -205,7 +205,7 @@ describe("Use Ledger Connection", () => {
 
 			const listenSpy = mockNanoXTransport();
 
-			render(<Component />);
+			render(<LedgerConnectionComponent />);
 
 			await userEvent.click(screen.getByText("Connect"));
 
@@ -227,7 +227,7 @@ describe("Use Ledger Connection", () => {
 
 			const listenSpy = mockNanoXTransport();
 
-			render(<Component retryOptions={{ retries: 2 }} />);
+			render(<LedgerConnectionComponent retryOptions={{ retries: 2 }} />);
 
 			await userEvent.click(screen.getByText("Connect"));
 
@@ -252,7 +252,7 @@ describe("Use Ledger Connection", () => {
 
 			const listenSpy = mockNanoXTransport();
 
-			render(<Component retryOptions={{ retries: 2 }} />);
+			render(<LedgerConnectionComponent retryOptions={{ retries: 2 }} />);
 
 			await userEvent.click(screen.getByText("Connect"));
 
@@ -279,7 +279,7 @@ describe("Use Ledger Connection", () => {
 
 			const listenSpy = mockNanoXTransport();
 
-			render(<Component retryOptions={{ retries: 2 }} />);
+			render(<LedgerConnectionComponent retryOptions={{ retries: 2 }} />);
 
 			await userEvent.click(screen.getByText("Connect"));
 
@@ -308,7 +308,7 @@ describe("Use Ledger Connection", () => {
 
 			const listenSpy = mockNanoXTransport({ deviceModel: { id: null, productName: "Nano S" } });
 
-			render(<Component retryOptions={{ retries: 2 }} />);
+			render(<LedgerConnectionComponent retryOptions={{ retries: 2 }} />);
 
 			await userEvent.click(screen.getByText("Connect"));
 
@@ -336,7 +336,7 @@ describe("Use Ledger Connection", () => {
 			const listenSpy = mockNanoXTransport();
 
 			render(
-				<Component
+				<LedgerConnectionComponent
 					retryOptions={{
 						factor: 1,
 						minTimeout: 10,
@@ -373,7 +373,7 @@ describe("Use Ledger Connection", () => {
 			const listenSpy = mockNanoXTransport();
 
 			render(
-				<Component
+				<LedgerConnectionComponent
 					retryOptions={{
 						factor: 1,
 						minTimeout: 10,
@@ -409,7 +409,7 @@ describe("Use Ledger Connection", () => {
 			const listenSpy = mockNanoXTransport();
 
 			render(
-				<Component
+				<LedgerConnectionComponent
 					retryOptions={{
 						factor: 1,
 						minTimeout: 10,
@@ -447,7 +447,7 @@ describe("Use Ledger Connection", () => {
 			});
 
 			render(
-				<Component
+				<LedgerConnectionComponent
 					retryOptions={{
 						factor: 1,
 						minTimeout: 10,
@@ -484,7 +484,7 @@ describe("Use Ledger Connection", () => {
 				throw new Error("Disconnect error");
 			});
 
-			render(<Component retryOptions={{ retries: 2 }} />);
+			render(<LedgerConnectionComponent retryOptions={{ retries: 2 }} />);
 
 			await expect(screen.findByText("Connect")).resolves.toBeVisible();
 
@@ -518,7 +518,7 @@ describe("Use Ledger Connection", () => {
 			const coinSpy = vi.spyOn(wallet.network(), "coin").mockReturnValue("BTC");
 
 			render(
-				<Component
+				<LedgerConnectionComponent
 					userProfile={profile}
 					userWallet={wallet}
 					retryOptions={{
@@ -553,7 +553,7 @@ describe("Use Ledger Connection", () => {
 			});
 
 			render(
-				<Component
+				<LedgerConnectionComponent
 					retryOptions={{
 						factor: 1,
 						minTimeout: 10,

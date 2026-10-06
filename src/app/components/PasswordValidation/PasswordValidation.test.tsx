@@ -8,6 +8,27 @@ import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
 
 const passwordInput = () => screen.getByTestId("PasswordValidation__password");
 
+const PasswordValidationWithCurrentPassword: React.VFC = () => {
+	const { register } = useFormContext();
+
+	return (
+		<>
+			<FormField name="currentPassword">
+				<InputPassword data-testid={`PasswordValidation__currentPassword`} ref={register()} />
+			</FormField>
+
+			<PasswordValidation
+				confirmPasswordField="confirmPassword"
+				confirmPasswordFieldLabel="confirmPassword"
+				passwordField="password"
+				passwordFieldLabel="password"
+				currentPasswordField="currentPassword"
+				optional={false}
+			/>
+		</>
+	);
+};
+
 describe("PasswordValidation", () => {
 	it("should render", async () => {
 		renderWithForm(
@@ -61,28 +82,7 @@ describe("PasswordValidation", () => {
 	});
 
 	it("should render password rules using current password", async () => {
-		const Component: React.VFC = () => {
-			const { register } = useFormContext();
-
-			return (
-				<>
-					<FormField name="currentPassword">
-						<InputPassword data-testid={`PasswordValidation__currentPassword`} ref={register()} />
-					</FormField>
-
-					<PasswordValidation
-						confirmPasswordField="confirmPassword"
-						confirmPasswordFieldLabel="confirmPassword"
-						passwordField="password"
-						passwordFieldLabel="password"
-						currentPasswordField="currentPassword"
-						optional={false}
-					/>
-				</>
-			);
-		};
-
-		renderWithForm(<Component />, {
+		renderWithForm(<PasswordValidationWithCurrentPassword />, {
 			registerCallback: ({ register }) => {
 				register("currentPassword");
 				register("password");

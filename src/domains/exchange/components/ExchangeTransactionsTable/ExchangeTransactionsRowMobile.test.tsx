@@ -36,6 +36,14 @@ const WrapperWithProviders = ({ children }) => {
 	return <>{children}</>;
 };
 
+const Wrapper = ({ children }: { children: React.ReactNode }) => (
+	<ExchangeProvider>
+		<table>
+			<tbody>{children}</tbody>
+		</table>
+	</ExchangeProvider>
+);
+
 describe("ExchangeTransactionsRowMobile", () => {
 	beforeAll(() => {
 		dateNowSpy = vi.spyOn(Date, "now").mockImplementation(() => new Date("2021-01-01").getTime());
@@ -47,14 +55,6 @@ describe("ExchangeTransactionsRowMobile", () => {
 	afterAll(() => {
 		dateNowSpy.mockRestore();
 	});
-
-	const Wrapper = ({ children }: { children: React.ReactNode }) => (
-		<ExchangeProvider>
-			<table>
-				<tbody>{children}</tbody>
-			</table>
-		</ExchangeProvider>
-	);
 
 	it.each([
 		["New", "clock"],

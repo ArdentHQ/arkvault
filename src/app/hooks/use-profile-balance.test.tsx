@@ -6,11 +6,11 @@ import { useProfileBalance } from "./use-profile-balance";
 import { ConfigurationProvider } from "@/app/contexts";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 
+const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
+
 describe("useProfileBalance", () => {
 	it("should get converted balance", async () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
-
 		const {
 			result: { current },
 		} = renderHook(() => useProfileBalance({ profile }), { wrapper });
@@ -20,8 +20,6 @@ describe("useProfileBalance", () => {
 
 	it("should get zero balance if loading", async () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
-
 		const {
 			result: { current },
 		} = renderHook(() => useProfileBalance({ isLoading: true, profile }), { wrapper });
@@ -32,8 +30,6 @@ describe("useProfileBalance", () => {
 	it("should update balance", async () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 		const profileConvertedBalanceMock = vi.spyOn(profile, "convertedBalance").mockReturnValue(10_000);
-
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
 			result: { current },
@@ -51,8 +47,6 @@ describe("useProfileBalance", () => {
 			throw new Error("profile is not restored");
 		});
 
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
-
 		const {
 			result: { current },
 		} = renderHook(() => useProfileBalance({ profile }), { wrapper });
@@ -66,8 +60,6 @@ describe("useProfileBalance", () => {
 	it("should default to zero if converted balance is undefined", async () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 		const profileConvertedBalanceMock = vi.spyOn(profile, "convertedBalance").mockReturnValue(undefined);
-
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
 			result: { current },

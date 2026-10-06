@@ -13,6 +13,8 @@ const getValuesMock = () => ({
 
 const LOW_BALANCE_MESSAGE = "The balance is too low";
 
+const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
+
 describe("useValidation hook", () => {
 	let profile: Contracts.IProfile;
 
@@ -22,7 +24,6 @@ describe("useValidation hook", () => {
 
 	describe("Common#gasPrice", () => {
 		it("should ignore validation if network not provided", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -34,7 +35,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should ignore validation if gasPrice is not provided", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -46,7 +46,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should error for no gasPrice", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -58,7 +57,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should error for gasPrice is less than min value", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -70,7 +68,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should error for zero balance", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -82,7 +79,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should error for negative balance", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -94,7 +90,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should error for lower than fee balance", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -109,7 +104,6 @@ describe("useValidation hook", () => {
 
 	describe("Common#gasLimit", () => {
 		it("should ignore validation if network not provided", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -121,7 +115,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should ignore validation if gas limit is not provided", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -133,7 +126,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should error for no gasLimit", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -145,7 +137,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should error for gasPrice is less than default value", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -157,7 +148,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should error for zero balance", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -169,7 +159,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should error for negative balance", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
@@ -181,7 +170,6 @@ describe("useValidation hook", () => {
 		});
 
 		it("should error for lower than fee balance", () => {
-			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });

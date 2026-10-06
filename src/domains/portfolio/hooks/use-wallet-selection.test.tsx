@@ -4,12 +4,12 @@ import { useWalletSelection } from "./use-wallet-selection";
 import { Contracts } from "@/app/lib/profiles";
 import { EnvironmentProvider } from "@/app//contexts";
 
+const wrapper = ({ children }: { children?: React.ReactNode }) => (
+	<EnvironmentProvider env={env}>{children}</EnvironmentProvider>
+);
+
 describe("useWalletSelection", () => {
 	let profile: Contracts.IProfile;
-
-	const wrapper = ({ children }: { children?: React.ReactNode }) => (
-		<EnvironmentProvider env={env}>{children}</EnvironmentProvider>
-	);
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

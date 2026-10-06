@@ -4,20 +4,20 @@ import React from "react";
 import { useReloadPath } from "./use-reload-path";
 import { render, screen } from "@/utils/testing-library";
 
-describe("useReloadPath hook", () => {
-	const TestComponent: React.FC = () => {
-		const reloadPath = useReloadPath();
+const TestComponent: React.FC = () => {
+	const reloadPath = useReloadPath();
 
-		const handle = () => {
-			reloadPath();
-		};
-		return (
-			<h1 data-testid="header_test" onClick={handle}>
-				UseReloadPath Test Component
-			</h1>
-		);
+	const handle = () => {
+		reloadPath();
 	};
+	return (
+		<h1 data-testid="header_test" onClick={handle}>
+			UseReloadPath Test Component
+		</h1>
+	);
+};
 
+describe("useReloadPath hook", () => {
 	it("should render useReloadPath", async () => {
 		render(<TestComponent />);
 

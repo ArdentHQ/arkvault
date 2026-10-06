@@ -6,14 +6,14 @@ import DefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.js
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getMainsailProfileId, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
 
+const wrapper = ({ children }) => (
+	<EnvironmentProvider env={env}>
+		<ConfigurationProvider>{children}</ConfigurationProvider>
+	</EnvironmentProvider>
+);
+
 describe("useNetworks", () => {
 	let profile: Contracts.IProfile;
-
-	const wrapper = ({ children }) => (
-		<EnvironmentProvider env={env}>
-			<ConfigurationProvider>{children}</ConfigurationProvider>
-		</EnvironmentProvider>
-	);
 
 	const renderHookWithProfile = (profile: Contracts.IProfile) =>
 		renderHook(

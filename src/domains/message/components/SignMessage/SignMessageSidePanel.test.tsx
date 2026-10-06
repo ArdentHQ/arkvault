@@ -54,6 +54,17 @@ vi.stubGlobal(
 	},
 );
 
+const Component = () => {
+	const [isOpen, setIsOpen] = React.useState(false);
+
+	return (
+		<div>
+			<button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
+			<SignMessageSidePanel open={isOpen} onOpenChange={setIsOpen} onMountChange={vi.fn()} />
+		</div>
+	);
+};
+
 describe("SignMessageSidePanel", () => {
 	let dashboardRoute: string | undefined;
 
@@ -248,17 +259,6 @@ describe("SignMessageSidePanel", () => {
 				expect(screen.queryByTestId("TruncateEnd")).not.toBeInTheDocument();
 			});
 		});
-
-		const Component = () => {
-			const [isOpen, setIsOpen] = React.useState(false);
-
-			return (
-				<div>
-					<button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
-					<SignMessageSidePanel open={isOpen} onOpenChange={setIsOpen} onMountChange={vi.fn()} />
-				</div>
-			);
-		};
 
 		it("should reset the form when unmounted", async () => {
 			// render the wrapper

@@ -14,17 +14,17 @@ beforeAll(async () => {
 	wallet = profile.wallets().first();
 });
 
-describe("WalletActions", () => {
-	const renderComponent = (isUpdatingTransactions?: boolean) =>
-		render(
-			<WalletActions
-				profile={profile}
-				wallet={wallet}
-				isUpdatingTransactions={isUpdatingTransactions}
-				onUpdate={() => {}}
-			/>,
-		);
+const renderComponent = (isUpdatingTransactions?: boolean) =>
+	render(
+		<WalletActions
+			profile={profile}
+			wallet={wallet}
+			isUpdatingTransactions={isUpdatingTransactions}
+			onUpdate={() => {}}
+		/>,
+	);
 
+describe("WalletActions", () => {
 	it("should render the refresh button with tooltip", () => {
 		renderComponent();
 

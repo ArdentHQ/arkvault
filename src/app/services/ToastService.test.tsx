@@ -8,6 +8,26 @@ import { act, render, screen } from "@/utils/testing-library";
 
 let subject: ToastService;
 
+const ToastMessageUpdater = () => {
+	let toastId: ToastId;
+
+	const showMessage = () => {
+		toastId = toasts.info("info message");
+	};
+
+	const updateMessage = () => {
+		toasts.update(toastId, "error", "updated message");
+	};
+
+	return (
+		<>
+			<ToastContainer />
+			<div data-testid="show" onClick={showMessage} />
+			<div data-testid="update" onClick={updateMessage} />
+		</>
+	);
+};
+
 describe("ToastService", () => {
 	beforeAll(() => {
 		subject = new ToastService();
@@ -80,27 +100,7 @@ describe("ToastService", () => {
 	});
 
 	it("should render and update toast message", async () => {
-		const Component = () => {
-			let toastId: ToastId;
-
-			const showMessage = () => {
-				toastId = toasts.info("info message");
-			};
-
-			const updateMessage = () => {
-				toasts.update(toastId, "error", "updated message");
-			};
-
-			return (
-				<>
-					<ToastContainer />
-					<div data-testid="show" onClick={showMessage} />
-					<div data-testid="update" onClick={updateMessage} />
-				</>
-			);
-		};
-
-		render(<Component />);
+		render(<ToastMessageUpdater />);
 
 		expect(screen.queryByTestId("ToastMessage__content")).not.toBeInTheDocument();
 

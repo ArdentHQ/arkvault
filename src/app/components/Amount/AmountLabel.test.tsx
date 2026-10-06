@@ -8,6 +8,16 @@ import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
 
 let profile: Contracts.IProfile;
 
+const HideBalanceToggle = () => {
+	const { hideBalance, setHideBalance } = useBalanceVisibility({ profile });
+	return (
+		<>
+			<AmountLabel value={123.456} ticker="USD" allowHideBalance profile={profile} />
+			<button onClick={() => setHideBalance(!hideBalance)}>Toggle</button>
+		</>
+	);
+};
+
 describe("AmountLabel", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -84,17 +94,7 @@ describe("AmountLabel", () => {
 	});
 
 	it("should hide balance if allowHideBalance is true and hideBalance is true", async () => {
-		const TestComponent = () => {
-			const { hideBalance, setHideBalance } = useBalanceVisibility({ profile });
-			return (
-				<>
-					<AmountLabel value={123.456} ticker="USD" allowHideBalance profile={profile} />
-					<button onClick={() => setHideBalance(!hideBalance)}>Toggle</button>
-				</>
-			);
-		};
-
-		render(<TestComponent />);
+		render(<HideBalanceToggle />);
 
 		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveTextContent("$123.46");
 

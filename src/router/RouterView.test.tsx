@@ -18,11 +18,13 @@ const NavigateAfterMount = ({ to }) => {
 	return null;
 };
 
-describe("RouterView", () => {
-	const Home = () => <div data-testid="home">Home</div>;
-	const First = () => <div data-testid="first">First</div>;
-	const Second = () => <div data-testid="second">Second</div>;
+const Home = () => <div data-testid="home">Home</div>;
+const First = () => <div data-testid="first">First</div>;
+const Second = () => <div data-testid="second">Second</div>;
 
+const Custom = () => <div data-testid="custom">Custom</div>;
+
+describe("RouterView", () => {
 	beforeAll(() => {
 		appPanelsMock = vi.spyOn(PanelsMock, "AppPanels").mockImplementation(() => <></>);
 	});
@@ -121,8 +123,6 @@ describe("RouterView", () => {
 				return true;
 			},
 		};
-
-		const Custom = () => <div data-testid="custom">Custom</div>;
 
 		render(
 			<MemoryRouter initialEntries={["/test"]}>

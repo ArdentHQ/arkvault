@@ -12,16 +12,16 @@ import { env, getMainsailProfileId, render, screen } from "@/utils/testing-libra
 
 let profile: Contracts.IProfile;
 
+const TestInputAddress = (properties: InputAddressProperties) => (
+	<EnvironmentProvider env={env}>
+		<InputAddress name="address" {...properties} />
+	</EnvironmentProvider>
+);
+
 describe("InputAddress", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
 	});
-
-	const TestInputAddress = (properties: InputAddressProperties) => (
-		<EnvironmentProvider env={env}>
-			<InputAddress name="address" {...properties} />
-		</EnvironmentProvider>
-	);
 
 	it("should render", () => {
 		render(<TestInputAddress coin="ARK" network="ark.devnet" profile={profile} />);

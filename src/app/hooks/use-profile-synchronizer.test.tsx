@@ -35,17 +35,27 @@ vi.mock("@/utils/delay", () => ({
 
 const mainsailDevnet = "mainsail.devnet";
 
+const ConfigurationWrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
+
+const ProfileRestoreWrapper = ({ children }: any) => <Providers> {children} </Providers>;
+
+const EnvironmentConfigurationWrapper = ({ children }: any) => (
+	<EnvironmentProvider env={env}>
+		<ConfigurationProvider>{children}</ConfigurationProvider>
+	</EnvironmentProvider>
+);
+
+const ProvidersWrapper = ({ children }: any) => <Providers>{children}</Providers>;
+
 describe("useProfileSyncStatus", () => {
 	it("should restore", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		const profile = env.profiles().findById(getMainsailProfileId());
 		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
-
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper: ConfigurationWrapper });
 
 		expect(current.shouldRestore(profile)).toBe(true);
 
@@ -58,11 +68,9 @@ describe("useProfileSyncStatus", () => {
 		process.env.REACT_APP_IS_E2E = undefined;
 		const profile = env.profiles().findById(getMainsailProfileId());
 
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
-
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper: ConfigurationWrapper });
 
 		expect(current.isIdle()).toBe(true);
 		expect(current.shouldRestore(profile)).toBe(false);
@@ -74,11 +82,9 @@ describe("useProfileSyncStatus", () => {
 		process.env.REACT_APP_IS_E2E = undefined;
 		const profile = env.profiles().findById(getMainsailProfileId());
 
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
-
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper: ConfigurationWrapper });
 
 		act(() => {
 			current.setStatus("restoring");
@@ -94,11 +100,9 @@ describe("useProfileSyncStatus", () => {
 		process.env.REACT_APP_IS_E2E = undefined;
 		const profile = env.profiles().findById(getMainsailProfileId());
 
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
-
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper: ConfigurationWrapper });
 
 		act(() => {
 			current.markAsRestored(profile.id());
@@ -114,11 +118,9 @@ describe("useProfileSyncStatus", () => {
 		process.env.REACT_APP_IS_E2E = undefined;
 		const profile = env.profiles().findById(getMainsailProfileId());
 
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
-
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper: ConfigurationWrapper });
 
 		act(() => {
 			current.setStatus("idle");
@@ -135,11 +137,9 @@ describe("useProfileSyncStatus", () => {
 		process.env.REACT_APP_IS_E2E = undefined;
 		const profile = env.profiles().findById(getMainsailProfileId());
 
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
-
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper: ConfigurationWrapper });
 
 		act(() => {
 			current.setStatus("synced");
@@ -155,11 +155,9 @@ describe("useProfileSyncStatus", () => {
 		process.env.REACT_APP_IS_E2E = undefined;
 		const profile = env.profiles().findById(getMainsailProfileId());
 
-		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
-
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper: ConfigurationWrapper });
 
 		act(() => {
 			current.setStatus("completed");
@@ -437,8 +435,6 @@ describe("useProfileSynchronizer", () => {
 });
 
 describe("useProfileRestore", () => {
-	const wrapper = ({ children }: any) => <Providers> {children} </Providers>;
-
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 	});
@@ -449,7 +445,7 @@ describe("useProfileRestore", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileRestore(profile.id()), { wrapper });
+		} = renderHook(() => useProfileRestore(profile.id()), { wrapper: ProfileRestoreWrapper });
 
 		await expect(current.restoreProfile(profile)).resolves.toBe(false);
 
@@ -469,7 +465,7 @@ describe("useProfileRestore", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileRestore(profile.id()), { wrapper });
+		} = renderHook(() => useProfileRestore(profile.id()), { wrapper: ProfileRestoreWrapper });
 
 		let isRestored: boolean | undefined;
 
@@ -497,7 +493,7 @@ describe("useProfileRestore", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileRestore(profile.id()), { wrapper });
+		} = renderHook(() => useProfileRestore(profile.id()), { wrapper: ProfileRestoreWrapper });
 
 		let isRestored: boolean | undefined;
 
@@ -523,7 +519,7 @@ describe("useProfileRestore", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileRestore("1"), { wrapper });
+		} = renderHook(() => useProfileRestore("1"), { wrapper: ProfileRestoreWrapper });
 
 		let isRestored: boolean | undefined;
 
@@ -549,7 +545,7 @@ describe("useProfileRestore", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileRestore(profile.id()), { wrapper });
+		} = renderHook(() => useProfileRestore(profile.id()), { wrapper: ProfileRestoreWrapper });
 
 		let isRestored: boolean | undefined;
 
@@ -591,17 +587,10 @@ describe("useProfileStatusWatcher", () => {
 		const onProfileSyncComplete = vi.fn();
 		const onProfileSyncError = vi.fn();
 
-		// eslint-disable-next-line sonarjs/no-identical-functions
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		renderHook(
 			() => useProfileStatusWatcher({ env, onProfileSyncComplete, onProfileSyncError, profile: undefined }),
 			{
-				wrapper,
+				wrapper: EnvironmentConfigurationWrapper,
 			},
 		);
 
@@ -720,8 +709,6 @@ describe("useProfileStatusWatcher", () => {
 		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getMainsailProfileId());
 
-		const wrapper = ({ children }: any) => <Providers>{children}</Providers>;
-
 		const setState = vi.fn();
 		const useStateSpy = vi.spyOn(React, "useState");
 		//@ts-ignore
@@ -748,7 +735,7 @@ describe("useProfileStatusWatcher", () => {
 					profile,
 				}),
 			{
-				wrapper,
+				wrapper: ProvidersWrapper,
 			},
 		);
 

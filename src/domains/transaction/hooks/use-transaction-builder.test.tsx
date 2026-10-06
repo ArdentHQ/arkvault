@@ -12,10 +12,11 @@ import React from "react";
 import { Services } from "@/app/lib/mainsail";
 import { useTransactionBuilder } from "./use-transaction-builder";
 
+const wrapper = ({ children }: any) => <WithProviders>{children}</WithProviders>;
+
 describe("Use Transaction Builder Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	const wrapper = ({ children }: any) => <WithProviders>{children}</WithProviders>;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());

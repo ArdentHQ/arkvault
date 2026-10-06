@@ -29,23 +29,43 @@ describe("Synchronizer Hook", () => {
 		},
 	];
 
+	const StopJobsComponent = () => {
+		const { start, stop } = useSynchronizer(jobs);
+
+		useEffect(() => {
+			start();
+		}, [start]);
+
+		return <button onClick={() => stop()}>Stop</button>;
+	};
+
+	const StopAndClearTimersComponent = () => {
+		const { start, stop } = useSynchronizer(jobs);
+
+		useEffect(() => {
+			start();
+		}, [start]);
+
+		return <button onClick={() => stop({ clearTimers: true })}>Stop</button>;
+	};
+
+	const PeriodicJobsComponent = () => {
+		const { start } = useSynchronizer(jobs);
+
+		useEffect(() => {
+			start();
+		}, [start]);
+
+		return <h1>Test</h1>;
+	};
+
 	beforeEach(() => {
 		vi.useFakeTimers({ shouldAdvanceTime: true });
 		onCall = vi.fn();
 	});
 
 	it("should stop jobs", async () => {
-		const Component = () => {
-			const { start, stop } = useSynchronizer(jobs);
-
-			useEffect(() => {
-				start();
-			}, [start]);
-
-			return <button onClick={() => stop()}>Stop</button>;
-		};
-
-		render(<Component />);
+		render(<StopJobsComponent />);
 
 		vi.advanceTimersByTime(200);
 
@@ -61,17 +81,7 @@ describe("Synchronizer Hook", () => {
 	});
 
 	it("should stop jobs and clear timers", async () => {
-		const Component = () => {
-			const { start, stop } = useSynchronizer(jobs);
-
-			useEffect(() => {
-				start();
-			}, [start]);
-
-			return <button onClick={() => stop({ clearTimers: true })}>Stop</button>;
-		};
-
-		render(<Component />);
+		render(<StopAndClearTimersComponent />);
 
 		vi.advanceTimersByTime(200);
 
@@ -87,17 +97,7 @@ describe("Synchronizer Hook", () => {
 	});
 
 	it("should run periodically", async () => {
-		const Component = () => {
-			const { start } = useSynchronizer(jobs);
-
-			useEffect(() => {
-				start();
-			}, [start]);
-
-			return <h1>Test</h1>;
-		};
-
-		const { unmount } = render(<Component />);
+		const { unmount } = render(<PeriodicJobsComponent />);
 
 		vi.advanceTimersByTime(200);
 

@@ -49,6 +49,19 @@ const fillMnemonic = async () => {
 	await waitFor(() => expect(sendButton()).not.toBeDisabled());
 };
 
+const renderComponent = (properties: Record<string, any> = {}) => {
+	render(
+		<SendExchangeTransfer
+			profile={profile}
+			network={profile.wallets().first().network()}
+			exchangeTransaction={exchangeTransaction}
+			onClose={vi.fn()}
+			onSuccess={vi.fn()}
+			{...properties}
+		/>,
+	);
+};
+
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -78,19 +91,6 @@ describe("SendExchangeTransfer", () => {
 	afterAll(() => {
 		useActiveProfileSpy.mockRestore();
 	});
-
-	const renderComponent = (properties: Record<string, any> = {}) => {
-		render(
-			<SendExchangeTransfer
-				profile={profile}
-				network={profile.wallets().first().network()}
-				exchangeTransaction={exchangeTransaction}
-				onClose={vi.fn()}
-				onSuccess={vi.fn()}
-				{...properties}
-			/>,
-		);
-	};
 
 	it("should render", async () => {
 		renderComponent();

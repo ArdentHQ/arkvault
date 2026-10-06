@@ -4,6 +4,11 @@ import React, { useState } from "react";
 import { InputCurrency } from "./InputCurrency";
 import { render, screen, waitFor } from "@/utils/testing-library";
 
+const ControlledInputCurrency = () => {
+	const [value, setValue] = useState("0.04");
+	return <InputCurrency value={value} onChange={setValue} />;
+};
+
 describe("InputCurrency", () => {
 	it("should render", () => {
 		const { asFragment } = render(<InputCurrency />);
@@ -49,12 +54,7 @@ describe("InputCurrency", () => {
 	});
 
 	it("should work with a controlled value", async () => {
-		const Component = () => {
-			const [value, setValue] = useState("0.04");
-			return <InputCurrency value={value} onChange={setValue} />;
-		};
-
-		render(<Component />);
+		render(<ControlledInputCurrency />);
 
 		const input: HTMLInputElement = screen.getByTestId("InputCurrency");
 

@@ -8,20 +8,20 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+const Component = () => {
+	useInputFocus();
+
+	return (
+		<div>
+			<input data-testid="input" />
+			<input data-testid="password" />
+			<textarea data-testid="textarea" />
+			<input type="button" data-testid="button" />
+		</div>
+	);
+};
+
 describe("useInputFocus", () => {
-	const Component = () => {
-		useInputFocus();
-
-		return (
-			<div>
-				<input data-testid="input" />
-				<input data-testid="password" />
-				<textarea data-testid="textarea" />
-				<input type="button" data-testid="button" />
-			</div>
-		);
-	};
-
 	it.each(["xs", "sm", "md", "lg", "xl"])(
 		"should handle input focus and unfocus in %s",
 		async (breakpoint: string) => {

@@ -8,6 +8,17 @@ import { render, screen, env, getMainsailProfileId, waitFor } from "@/utils/test
 let profile: Contracts.IProfile;
 const webWidgetSelector = "#webWidget";
 
+const SupportChatConsumer = () => {
+	const { showSupportChat, hideSupportChat } = useZendesk();
+	showSupportChat(profile);
+
+	return (
+		<p data-testid="content" onClick={() => hideSupportChat()}>
+			Configuration content
+		</p>
+	);
+};
+
 describe("Zendesk Context Provider", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -48,20 +59,9 @@ describe("Zendesk Context Provider", () => {
 			}
 		});
 
-		const Test = () => {
-			const { showSupportChat, hideSupportChat } = useZendesk();
-			showSupportChat(profile);
-
-			return (
-				<p data-testid="content" onClick={() => hideSupportChat()}>
-					Configuration content
-				</p>
-			);
-		};
-
 		render(
 			<ZendeskProvider>
-				<Test />
+				<SupportChatConsumer />
 			</ZendeskProvider>,
 		);
 

@@ -4,6 +4,15 @@ import React from "react";
 import { NavigationProvider, useNavigationContext } from "./Navigation";
 import { render, screen, waitFor, renderHook } from "@/utils/testing-library";
 
+const NavigationConsumer = () => {
+	const { hasFixedFormButtons, setHasFixedFormButtons } = useNavigationContext();
+	return (
+		<div data-testid="Navigation__consumer" onClick={() => setHasFixedFormButtons(true)}>
+			{hasFixedFormButtons ? "Has fixed form buttons" : "Does not have fixed form buttons"}
+		</div>
+	);
+};
+
 describe("Navigation Context", () => {
 	it("should render the wrapper properly", () => {
 		const { container, asFragment } = render(
@@ -29,18 +38,9 @@ describe("Navigation Context", () => {
 	});
 
 	it("should update navigation", async () => {
-		const Test = () => {
-			const { hasFixedFormButtons, setHasFixedFormButtons } = useNavigationContext();
-			return (
-				<div data-testid="Navigation__consumer" onClick={() => setHasFixedFormButtons(true)}>
-					{hasFixedFormButtons ? "Has fixed form buttons" : "Does not have fixed form buttons"}
-				</div>
-			);
-		};
-
 		const { asFragment } = render(
 			<NavigationProvider>
-				<Test />
+				<NavigationConsumer />
 			</NavigationProvider>,
 		);
 

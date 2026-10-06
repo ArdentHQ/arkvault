@@ -8,6 +8,23 @@ import { requestMock, server } from "@/tests/mocks/server";
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;
 
+const Component = () => {
+	const [status, setStatus] = useState<Contracts.ExchangeTransactionStatus>();
+
+	const { checkOrderStatus } = useOrderStatus();
+
+	useEffect(() => {
+		const fetchStatus = async () => {
+			const responses = await checkOrderStatus([exchangeTransaction]);
+			setStatus(responses.id.status);
+		};
+
+		fetchStatus();
+	}, []);
+
+	return <span>status: {status}</span>;
+};
+
 describe("useOrderStatus", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -34,23 +51,6 @@ describe("useOrderStatus", () => {
 					data: { id: "id", status: "waiting" },
 				}),
 			);
-
-			const Component = () => {
-				const [status, setStatus] = useState<Contracts.ExchangeTransactionStatus>();
-
-				const { checkOrderStatus } = useOrderStatus();
-
-				useEffect(() => {
-					const fetchStatus = async () => {
-						const responses = await checkOrderStatus([exchangeTransaction]);
-						setStatus(responses.id.status);
-					};
-
-					fetchStatus();
-				}, []);
-
-				return <span>status: {status}</span>;
-			};
 
 			const { container } = render(<Component />);
 

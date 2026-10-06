@@ -11,6 +11,16 @@ import {
 	waitFor,
 } from "@/utils/testing-library";
 
+const Component = ({
+	onDeviceNotAvailable = vi.fn(),
+	onDeviceAvailable = vi.fn(),
+	transport = mockNanoSTransport(),
+}) => (
+	<LedgerProvider transport={transport}>
+		<ListenLedger onDeviceNotAvailable={onDeviceNotAvailable} onDeviceAvailable={onDeviceAvailable} />
+	</LedgerProvider>
+);
+
 describe("ListenLedger", () => {
 	let profile: Contracts.IProfile;
 
@@ -19,16 +29,6 @@ describe("ListenLedger", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
-
-	const Component = ({
-		onDeviceNotAvailable = vi.fn(),
-		onDeviceAvailable = vi.fn(),
-		transport = mockNanoSTransport(),
-	}) => (
-		<LedgerProvider transport={transport}>
-			<ListenLedger onDeviceNotAvailable={onDeviceNotAvailable} onDeviceAvailable={onDeviceAvailable} />
-		</LedgerProvider>
-	);
 
 	it("should emit event on device available", async () => {
 		const onDeviceAvailable = vi.fn();

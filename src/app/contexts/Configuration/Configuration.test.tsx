@@ -4,6 +4,25 @@ import React from "react";
 import { ConfigurationProvider, useConfiguration } from "./Configuration";
 import { render, screen, waitFor, getMainsailProfileId, renderHook } from "@/utils/testing-library";
 
+const ConfigurationConsumer = () => {
+	useConfiguration();
+	return <p data-testid="Configuration__consumer">Configuration content</p>;
+};
+
+const ConfigurationUpdater = () => {
+	const { setConfiguration, getProfileConfiguration } = useConfiguration();
+	const { dashboard } = getProfileConfiguration(getMainsailProfileId());
+	return (
+		<div
+			data-testid="Configuration__consumer"
+			onClick={() => setConfiguration(getMainsailProfileId(), { dashboard: { viewType: "list" } })}
+		>
+			Configuration content
+			{dashboard && dashboard.viewType === "list" && <div data-testid="Configuration__list" />}
+		</div>
+	);
+};
+
 describe("Configuration Context", () => {
 	it("should render the wrapper properly", () => {
 		const { container, asFragment } = render(
@@ -29,31 +48,13 @@ describe("Configuration Context", () => {
 	});
 
 	it("should render configuration consumer component", () => {
-		const Test = () => {
-			useConfiguration();
-			return <p data-testid="Configuration__consumer">Configuration content</p>;
-		};
-		render(<Test />);
+		render(<ConfigurationConsumer />);
 
 		expect(screen.getByTestId("Configuration__consumer")).toBeInTheDocument();
 	});
 
 	it("should update configuration", async () => {
-		const Test = () => {
-			const { setConfiguration, getProfileConfiguration } = useConfiguration();
-			const { dashboard } = getProfileConfiguration(getMainsailProfileId());
-			return (
-				<div
-					data-testid="Configuration__consumer"
-					onClick={() => setConfiguration(getMainsailProfileId(), { dashboard: { viewType: "list" } })}
-				>
-					Configuration content
-					{dashboard && dashboard.viewType === "list" && <div data-testid="Configuration__list" />}
-				</div>
-			);
-		};
-
-		const { asFragment } = render(<Test />);
+		const { asFragment } = render(<ConfigurationUpdater />);
 
 		expect(screen.getByTestId("Configuration__consumer")).toBeInTheDocument();
 

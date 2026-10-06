@@ -5,24 +5,24 @@ import { render, screen, getMainsailProfileId } from "@/utils/testing-library";
 import { ServerStatus } from "@/utils/peers";
 import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 
+const Component = ({ serverStatus }: { serverStatus: ServerHealthStatus }) => {
+	const { setConfiguration } = useConfiguration();
+	const { status } = useServerHealthStatus();
+
+	useEffect(() => {
+		setConfiguration(getMainsailProfileId(), { serverStatus });
+	}, []);
+
+	return <div data-testid={`ServerHealthStatus--${status.value}`} />;
+};
+
+const ServerHealthStatusWrapper = ({ status }: { status: ServerStatus }) => (
+	<ConfigurationProvider>
+		<Component serverStatus={status} />
+	</ConfigurationProvider>
+);
+
 describe("useServerHealthStatus", () => {
-	const Component = ({ serverStatus }: { serverStatus: ServerHealthStatus }) => {
-		const { setConfiguration } = useConfiguration();
-		const { status } = useServerHealthStatus();
-
-		useEffect(() => {
-			setConfiguration(getMainsailProfileId(), { serverStatus });
-		}, []);
-
-		return <div data-testid={`ServerHealthStatus--${status.value}`} />;
-	};
-
-	const ServerHealthStatusWrapper = ({ status }: { status: ServerStatus }) => (
-		<ConfigurationProvider>
-			<Component serverStatus={status} />
-		</ConfigurationProvider>
-	);
-
 	it("should render as healthy", async () => {
 		render(<ServerHealthStatusWrapper status={{ "ark.devnet": { up: true } }} />, {
 			route: `/profiles/${getMainsailProfileId()}/votes`,

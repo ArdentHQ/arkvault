@@ -4,13 +4,13 @@ import React from "react";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { render } from "@/utils/testing-library";
 
+const Component = (properties: { keyName: string; callback: () => void }) => {
+	useKeydown(properties.keyName, properties.callback);
+
+	return <div />;
+};
+
 describe("useKeydown", () => {
-	const Component = (properties: { keyName: string; callback: () => void }) => {
-		useKeydown(properties.keyName, properties.callback);
-
-		return <div />;
-	};
-
 	it("should run a callback when mapped button is pressed", async () => {
 		const callback = vi.fn();
 

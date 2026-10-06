@@ -10,6 +10,21 @@ import {
 import { render, screen } from "@/utils/testing-library";
 import { useAccordion } from "@/app/hooks";
 
+const Accordion = () => {
+	useAccordion("accordion");
+
+	const { isExpanded, handleHeaderClick } = useAccordion("accordion");
+
+	return (
+		<AccordionWrapper>
+			<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick}>
+				Header
+			</AccordionHeader>
+			{isExpanded && <AccordionContent>Content</AccordionContent>}
+		</AccordionWrapper>
+	);
+};
+
 describe("Button", () => {
 	it("should render", () => {
 		const { container } = render(
@@ -97,21 +112,6 @@ describe("Button", () => {
 	});
 
 	it("should toggle the accordion on click", async () => {
-		const Accordion = () => {
-			useAccordion("accordion");
-
-			const { isExpanded, handleHeaderClick } = useAccordion("accordion");
-
-			return (
-				<AccordionWrapper>
-					<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick}>
-						Header
-					</AccordionHeader>
-					{isExpanded && <AccordionContent>Content</AccordionContent>}
-				</AccordionWrapper>
-			);
-		};
-
 		const { container } = render(<Accordion />);
 
 		expect(screen.getByTestId("AccordionHeader")).toBeInTheDocument();

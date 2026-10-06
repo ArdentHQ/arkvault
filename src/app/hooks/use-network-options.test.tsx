@@ -15,6 +15,9 @@ const fixtureProfileId = getMainsailProfileId();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
+const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
+const paddedWrapper = ({ children }: any) => <EnvironmentProvider env={env}> {children} </EnvironmentProvider>;
+
 describe("useNetworkOptions hook", () => {
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
@@ -35,7 +38,6 @@ describe("useNetworkOptions hook", () => {
 
 		const resetProfileNetworksMock2 = mockProfileWithPublicAndTestNetworks(profile);
 
-		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 		const { result } = renderHook(() => useNetworkOptions({ profile }), { wrapper });
 
 		const networks = result.current.networkOptions();
@@ -46,7 +48,6 @@ describe("useNetworkOptions hook", () => {
 	});
 
 	it("should return network options including test networks", () => {
-		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 		const { result } = renderHook(() => useNetworkOptions({ profile }), { wrapper });
 
 		const networks = result.current.networkOptions();
@@ -61,8 +62,7 @@ describe("useNetworkOptions hook", () => {
 	it("should get a network by its id", () => {
 		const id = "mainsail.mainnet";
 
-		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}> {children} </EnvironmentProvider>;
-		const { result } = renderHook(() => useNetworkOptions({ profile }), { wrapper });
+		const { result } = renderHook(() => useNetworkOptions({ profile }), { wrapper: paddedWrapper });
 
 		const network = result.current.networkById(id);
 

@@ -18,22 +18,32 @@ let profile: Contracts.IProfile;
 let nethash: string;
 let resetProfileNetworksMock: () => void;
 
-describe("useQueryParameters hook", () => {
-	const TestComponent: React.FC = () => {
-		const reloadPath = useQueryParameters();
+const QueryParametersTestComponent: React.FC = () => {
+	const reloadPath = useQueryParameters();
 
-		const handle = () => {
-			reloadPath.get("");
-		};
-		return (
-			<h1 data-testid="header_test" onClick={handle}>
-				useQueryParameters Test Component
-			</h1>
-		);
+	const handle = () => {
+		reloadPath.get("");
 	};
+	return (
+		<h1 data-testid="header_test" onClick={handle}>
+			useQueryParameters Test Component
+		</h1>
+	);
+};
 
+const NetworkFromQueryParametersTestComponent: React.FC = () => {
+	const network = useNetworkFromQueryParameters(profile);
+
+	if (!network) {
+		return null;
+	}
+
+	return <div data-testid={network.meta().nethash} />;
+};
+
+describe("useQueryParameters hook", () => {
 	it("should render useQueryParameters", () => {
-		render(<TestComponent />);
+		render(<QueryParametersTestComponent />);
 
 		expect(screen.getByTestId("header_test")).toBeInTheDocument();
 
@@ -54,30 +64,23 @@ describe("useNetworkFromQueryParameters hook", () => {
 		resetProfileNetworksMock();
 	});
 
-	const TestComponent: React.FC = () => {
-		const network = useNetworkFromQueryParameters(profile);
-
-		if (!network) {
-			return null;
-		}
-
-		return <div data-testid={network.meta().nethash} />;
-	};
-
 	it("should find network from query parameters using network id", () => {
-		render(<TestComponent />, { route: "/?network=mainsail.devnet", withProviders: false });
+		render(<NetworkFromQueryParametersTestComponent />, {
+			route: "/?network=mainsail.devnet",
+			withProviders: false,
+		});
 
 		expect(screen.getByTestId(nethash)).toBeInTheDocument();
 	});
 
 	it("should find network from query parameters using nethash", () => {
-		render(<TestComponent />, { route: `/?nethash=${nethash}`, withProviders: false });
+		render(<NetworkFromQueryParametersTestComponent />, { route: `/?nethash=${nethash}`, withProviders: false });
 
 		expect(screen.getByTestId(nethash)).toBeInTheDocument();
 	});
 
 	it("should fail to find network from query parameters using nethash", () => {
-		render(<TestComponent />, { router: "/?nethash=1", withProviders: false });
+		render(<NetworkFromQueryParametersTestComponent />, { router: "/?nethash=1", withProviders: false });
 
 		expect(() => screen.getByTestId(nethash)).toThrow(/Unable to find/);
 	});

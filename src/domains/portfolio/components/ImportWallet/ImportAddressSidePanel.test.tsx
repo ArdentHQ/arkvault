@@ -44,11 +44,11 @@ const successStep = () => screen.getByTestId("ImportWallet__success-step");
 const methodStep = () => screen.getByTestId("ImportWallet__method-step");
 const detailStep = () => screen.getByTestId("ImportWallet__detail-step");
 
+const OpenImportAddressesSidePanel = () => <ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />;
+
 describe("ImportSidePanel", () => {
 	let network;
 	let resetProfileNetworksMock: () => void;
-
-	const Component = () => <ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />;
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -64,7 +64,7 @@ describe("ImportSidePanel", () => {
 	});
 
 	it("should render method step", async () => {
-		render(<Component />, { route });
+		render(<OpenImportAddressesSidePanel />, { route });
 
 		expect(methodStep()).toBeInTheDocument();
 

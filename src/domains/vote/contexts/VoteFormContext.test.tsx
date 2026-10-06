@@ -65,6 +65,12 @@ const Component = () => {
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 
+const Test = () => {
+	useVoteFormContext();
+
+	return <div>hello</div>;
+};
+
 describe("VoteFormContext", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -82,12 +88,6 @@ describe("VoteFormContext", () => {
 	});
 
 	it("should throw without provider", () => {
-		const Test = () => {
-			useVoteFormContext();
-
-			return <div>hello</div>;
-		};
-
 		expect(() =>
 			renderWithoutRouter(<Test />, {
 				withProviders: false,

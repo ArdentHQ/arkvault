@@ -144,6 +144,74 @@ const confirmationStep = () => screen.getByTestId("ExchangeForm__confirmation-st
 const refundAddressID = "ExchangeForm__refund-address";
 const payoutValue = "37042.3588384";
 
+const renderComponent = (component: React.ReactNode) =>
+	render(
+		<ExchangeProvider>
+			<Wrapper>{component}</Wrapper>
+		</ExchangeProvider>,
+		{
+			route: exchangeURL,
+		},
+	);
+
+const FormStepWithForm = () => {
+	const form = useForm({
+		mode: "onChange",
+	});
+
+	return (
+		<FormProvider {...form}>
+			<FormStep profile={profile} />
+		</FormProvider>
+	);
+};
+
+const goToReviewStep = async () => {
+	const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+	renderComponent(<ExchangeSidePanel onReady={vi.fn()} exchangeId="changenow" onOpenChange={vi.fn()} />);
+
+	await expect(screen.findByTestId("ExchangeForm")).resolves.toBeVisible();
+
+	await selectCurrencies({
+		from: { name: "Ark", ticker: "ARK" },
+		to: { name: "Bitcoin", ticker: "BTC" },
+	});
+
+	const payinInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[0] as HTMLInputElement;
+	const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
+
+	// amount input
+	await userEvent.type(payinInput, "1");
+
+	await waitFor(() => {
+		expect(payinInput).toHaveValue("1");
+	});
+
+	await waitFor(() => {
+		expect(payoutInput).toHaveValue(payoutValue);
+	});
+
+	// select recipient
+	const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
+
+	expect(recipientDropdown).not.toBeDisabled();
+
+	await userEvent.type(recipientDropdown, "payoutAddress");
+
+	await waitFor(() => {
+		expect(recipientDropdown).toHaveValue("payoutAddress");
+	});
+
+	// go to the review step
+	await userEvent.click(continueButton());
+	await waitFor(() => {
+		expect(reviewStep()).toBeInTheDocument();
+	});
+
+	return resetProfileNetworksMock;
+};
+
 describe("ExchangeForm", () => {
 	let findExchangeTransactionMock;
 
@@ -167,16 +235,6 @@ describe("ExchangeForm", () => {
 		httpClient.clearCache();
 		findExchangeTransactionMock.mockRestore();
 	});
-
-	const renderComponent = (component: React.ReactNode) =>
-		render(
-			<ExchangeProvider>
-				<Wrapper>{component}</Wrapper>
-			</ExchangeProvider>,
-			{
-				route: exchangeURL,
-			},
-		);
 
 	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
 		renderResponsiveWithRoute(
@@ -1281,52 +1339,6 @@ describe("ExchangeForm", () => {
 		queryParametersMock.mockRestore();
 	});
 
-	const goToReviewStep = async () => {
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		renderComponent(<ExchangeSidePanel onReady={vi.fn()} exchangeId="changenow" onOpenChange={vi.fn()} />);
-
-		await expect(screen.findByTestId("ExchangeForm")).resolves.toBeVisible();
-
-		await selectCurrencies({
-			from: { name: "Ark", ticker: "ARK" },
-			to: { name: "Bitcoin", ticker: "BTC" },
-		});
-
-		const payinInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[0] as HTMLInputElement;
-		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
-
-		// amount input
-		await userEvent.type(payinInput, "1");
-
-		await waitFor(() => {
-			expect(payinInput).toHaveValue("1");
-		});
-
-		await waitFor(() => {
-			expect(payoutInput).toHaveValue(payoutValue);
-		});
-
-		// select recipient
-		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
-
-		expect(recipientDropdown).not.toBeDisabled();
-
-		await userEvent.type(recipientDropdown, "payoutAddress");
-
-		await waitFor(() => {
-			expect(recipientDropdown).toHaveValue("payoutAddress");
-		});
-
-		// go to the review step
-		await userEvent.click(continueButton());
-		await waitFor(() => {
-			expect(reviewStep()).toBeInTheDocument();
-		});
-
-		return resetProfileNetworksMock;
-	};
-
 	it("should show `Sign` and `Manual Transfer` buttons if from currency is ARK", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
@@ -1538,22 +1550,10 @@ describe("FormStep", () => {
 	});
 
 	it("should render", async () => {
-		const Component = () => {
-			const form = useForm({
-				mode: "onChange",
-			});
-
-			return (
-				<FormProvider {...form}>
-					<FormStep profile={profile} />
-				</FormProvider>
-			);
-		};
-
 		const { container } = render(
 			<ExchangeProvider>
 				<Wrapper>
-					<Component />
+					<FormStepWithForm />
 				</Wrapper>
 			</ExchangeProvider>,
 		);

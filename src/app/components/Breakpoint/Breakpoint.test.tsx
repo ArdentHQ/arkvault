@@ -6,31 +6,31 @@ import { LayoutBreakpoint } from "@/types";
 
 const SM_AND_ABOVE = "sm-and-above";
 
+const render = (
+	content,
+	containerSize: LayoutBreakpoint | "xs" | "sm-and-above",
+	breakpoint: LayoutBreakpoint | "xs" | "sm-and-above",
+) => {
+	if (containerSize === "xs") {
+		return renderResponsive(<Xs>{content}</Xs>, breakpoint);
+	}
+	if (containerSize === "sm") {
+		return renderResponsive(<Sm>{content}</Sm>, breakpoint);
+	}
+	if (containerSize === "md") {
+		return renderResponsive(<Md>{content}</Md>, breakpoint);
+	}
+	if (containerSize === "lg") {
+		return renderResponsive(<Lg>{content}</Lg>, breakpoint);
+	}
+	if (containerSize === "xl") {
+		return renderResponsive(<Xl>{content}</Xl>, breakpoint);
+	}
+
+	return renderResponsive(<SmAndAbove>{content}</SmAndAbove>, breakpoint);
+};
+
 describe("Breakpoint", () => {
-	const render = (
-		content,
-		containerSize: LayoutBreakpoint | "xs" | "sm-and-above",
-		breakpoint: LayoutBreakpoint | "xs" | "sm-and-above",
-	) => {
-		if (containerSize === "xs") {
-			return renderResponsive(<Xs>{content}</Xs>, breakpoint);
-		}
-		if (containerSize === "sm") {
-			return renderResponsive(<Sm>{content}</Sm>, breakpoint);
-		}
-		if (containerSize === "md") {
-			return renderResponsive(<Md>{content}</Md>, breakpoint);
-		}
-		if (containerSize === "lg") {
-			return renderResponsive(<Lg>{content}</Lg>, breakpoint);
-		}
-		if (containerSize === "xl") {
-			return renderResponsive(<Xl>{content}</Xl>, breakpoint);
-		}
-
-		return renderResponsive(<SmAndAbove>{content}</SmAndAbove>, breakpoint);
-	};
-
 	describe("Xs", () => {
 		it("should render in xs", () => {
 			const { container } = render("Hello!", "xs", "xs");

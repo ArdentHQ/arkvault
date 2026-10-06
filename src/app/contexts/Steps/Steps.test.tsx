@@ -3,6 +3,11 @@ import React from "react";
 import { StepsProvider, useSteps } from "./Steps";
 import { render, screen } from "@/utils/testing-library";
 
+const Test = () => {
+	useSteps();
+	return <p data-testid="content">Configuration content</p>;
+};
+
 describe("Steps Context", () => {
 	it("should render the wrapper properly", () => {
 		const { container, asFragment } = render(
@@ -18,11 +23,6 @@ describe("Steps Context", () => {
 	});
 
 	it("should render steps children", () => {
-		const Test = () => {
-			useSteps();
-			return <p data-testid="content">Configuration content</p>;
-		};
-
 		render(
 			<StepsProvider activeStep={1} steps={2}>
 				<Test />
@@ -33,11 +33,6 @@ describe("Steps Context", () => {
 	});
 
 	it("should not throw without provider", () => {
-		const Test = () => {
-			useSteps();
-			return <p data-testid="content">Configuration content</p>;
-		};
-
 		expect(() => render(<Test />, { withProviders: false })).not.toThrow();
 		expect(screen.getByTestId("content")).toBeInTheDocument();
 	});

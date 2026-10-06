@@ -7,24 +7,24 @@ import { render, renderResponsiveWithRoute, getMainsailProfileId, env } from "@/
 
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
+const Component = ({ serverStatus }: { serverStatus: ServerStatus }) => {
+	const profile = env.profiles().findById(getMainsailProfileId());
+	const { setConfiguration } = useConfiguration();
+
+	useEffect(() => {
+		setConfiguration(profile.id(), { serverStatus });
+	}, []);
+
+	return <ServerStatusIndicator profile={profile} />;
+};
+
+const ServerHealthStatusWrapper = ({ status }: { status: ServerStatus }) => (
+	<ConfigurationProvider>
+		<Component serverStatus={status} />
+	</ConfigurationProvider>
+);
+
 describe("Server Status Indicator", () => {
-	const Component = ({ serverStatus }: { serverStatus: ServerStatus }) => {
-		const profile = env.profiles().findById(getMainsailProfileId());
-		const { setConfiguration } = useConfiguration();
-
-		useEffect(() => {
-			setConfiguration(profile.id(), { serverStatus });
-		}, []);
-
-		return <ServerStatusIndicator profile={profile} />;
-	};
-
-	const ServerHealthStatusWrapper = ({ status }: { status: ServerStatus }) => (
-		<ConfigurationProvider>
-			<Component serverStatus={status} />
-		</ConfigurationProvider>
-	);
-
 	it.each(["sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
 			<ServerHealthStatusWrapper status={{ "mainsail.devnet": { up: true } }} />,

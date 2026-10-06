@@ -9,10 +9,11 @@ const UNKNOWN_ADDRESS = "unknown-address";
 const ONCHAIN_USERNAME = "onchain_username";
 const WALLET_NAME = "Mainsail Wallet 1";
 
+const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
+
 describe("useWalletAlias", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

@@ -15,12 +15,13 @@ let profile: Contracts.IProfile;
 let network: Networks.Network;
 let wallet: Contracts.IReadWriteWallet;
 
+const wrapper = ({ children }: any) => (
+	<EnvironmentProvider env={env}>
+		<ConfigurationProvider>{children}</ConfigurationProvider>
+	</EnvironmentProvider>
+);
+
 describe("useWalletImport", () => {
-	const wrapper = ({ children }: any) => (
-		<EnvironmentProvider env={env}>
-			<ConfigurationProvider>{children}</ConfigurationProvider>
-		</EnvironmentProvider>
-	);
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);

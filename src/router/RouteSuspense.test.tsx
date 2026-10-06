@@ -2,6 +2,8 @@ import React from "react";
 import { RouteSuspense } from "./RouteSuspense";
 import { render, screen } from "@/utils/testing-library";
 
+const SkeletonComponent = () => <p>skeleton</p>;
+
 describe("RouteSuspense", () => {
 	let LazyComponent;
 
@@ -10,8 +12,6 @@ describe("RouteSuspense", () => {
 	});
 
 	it("should render Suspense with skeleton component if specified", async () => {
-		const SkeletonComponent = () => <p>skeleton</p>;
-
 		render(
 			<RouteSuspense skeleton={SkeletonComponent} path="/path">
 				<LazyComponent />

@@ -32,32 +32,32 @@ const networkMock = {
 	ticker: () => "ARK",
 };
 
+const Component = ({
+	onConnect = vi.fn(),
+	onFailed = vi.fn(),
+	cancelling = false,
+}: {
+	onConnect?: () => void;
+	onFailed?: (error: Error) => void;
+	cancelling?: boolean;
+}) => {
+	const form = useForm();
+	return (
+		<FormProvider {...form}>
+			<LedgerConnectionStep
+				network={networkMock as any}
+				onConnect={onConnect}
+				onFailed={onFailed}
+				cancelling={cancelling}
+			/>
+		</FormProvider>
+	);
+};
+
 describe("LedgerConnectionStep component", () => {
 	beforeEach(() => {
 		vi.mocked(useLedgerContext).mockReturnValue({ ...defaultLedgerContext });
 	});
-
-	const Component = ({
-		onConnect = vi.fn(),
-		onFailed = vi.fn(),
-		cancelling = false,
-	}: {
-		onConnect?: () => void;
-		onFailed?: (error: Error) => void;
-		cancelling?: boolean;
-	}) => {
-		const form = useForm();
-		return (
-			<FormProvider {...form}>
-				<LedgerConnectionStep
-					network={networkMock as any}
-					onConnect={onConnect}
-					onFailed={onFailed}
-					cancelling={cancelling}
-				/>
-			</FormProvider>
-		);
-	};
 
 	it("should call setValue and onConnect when isConnected becomes true", async () => {
 		const onConnect = vi.fn();

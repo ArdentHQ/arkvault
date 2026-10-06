@@ -12,6 +12,10 @@ const wrapper = ({ children }: any) => (
 	<ConfigurationProvider defaultConfiguration={{ profileIsSyncing: false }}>{children}</ConfigurationProvider>
 );
 
+const syncingWrapper = ({ children }: any) => (
+	<ConfigurationProvider defaultConfiguration={{ profileIsSyncing: true }}>{children}</ConfigurationProvider>
+);
+
 describe("useWelcomeModal", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -23,9 +27,6 @@ describe("useWelcomeModal", () => {
 
 	it("should not show if in preview mode", async () => {
 		process.env.NODE_ENV = "development";
-		const wrapper = ({ children }: any) => (
-			<ConfigurationProvider defaultConfiguration={{ profileIsSyncing: false }}>{children}</ConfigurationProvider>
-		);
 
 		const { result } = renderHook(() => useWelcomeModal(env, profile), { wrapper });
 
@@ -159,11 +160,7 @@ describe("useWelcomeModal", () => {
 	});
 
 	it("should wait for profile syncing", async () => {
-		const wrapper = ({ children }: any) => (
-			<ConfigurationProvider defaultConfiguration={{ profileIsSyncing: true }}>{children}</ConfigurationProvider>
-		);
-
-		const { result } = renderHook(() => useWelcomeModal(env, profile), { wrapper });
+		const { result } = renderHook(() => useWelcomeModal(env, profile), { wrapper: syncingWrapper });
 
 		await waitFor(() => expect(result.current.show).toBeFalsy(), { timeout: 4000 });
 	});

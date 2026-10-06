@@ -5,8 +5,9 @@ import { useExchangeRate } from "./use-exchange-rate";
 import { env, WithProviders, getDefaultProfileId } from "@/utils/testing-library";
 import { IProfile } from "@/app/lib/profiles/contracts";
 
+const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
+
 describe("useExchangeRate", () => {
-	const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 	let profile: IProfile;
 
 	beforeAll(async () => {

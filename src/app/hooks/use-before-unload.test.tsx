@@ -3,6 +3,17 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { beforeunloadEventListener, useBeforeunload } from "./use-before-unload";
 
+const BeforeunloadButtons = () => {
+	const { addBeforeunload, removeBeforeunload } = useBeforeunload();
+
+	return (
+		<>
+			<div data-testid="addBeforeunload" onClick={addBeforeunload} />
+			<div data-testid="removeBeforeunload" onClick={removeBeforeunload} />
+		</>
+	);
+};
+
 describe("useBeforeunload", () => {
 	it("should return 'add' and 'remove' functions", () => {
 		const {
@@ -32,21 +43,10 @@ describe("useBeforeunload", () => {
 	});
 
 	it("should set and remove `beforeunload` listener", async () => {
-		const Component = () => {
-			const { addBeforeunload, removeBeforeunload } = useBeforeunload();
-
-			return (
-				<>
-					<div data-testid="addBeforeunload" onClick={addBeforeunload} />
-					<div data-testid="removeBeforeunload" onClick={removeBeforeunload} />
-				</>
-			);
-		};
-
 		const addEventListenerSpy = vi.spyOn(window, "addEventListener").mockImplementation(vi.fn());
 		const removeEventListenerSpy = vi.spyOn(window, "removeEventListener").mockImplementation(vi.fn());
 
-		render(<Component />);
+		render(<BeforeunloadButtons />);
 
 		await userEvent.click(screen.getByTestId("addBeforeunload"));
 		window.dispatchEvent(new Event("beforeunload"));
