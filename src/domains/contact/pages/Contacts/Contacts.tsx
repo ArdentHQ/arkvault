@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { generatePath, useNavigate } from "react-router-dom";
+import { generatePath, useNavigate } from "react-router";
 import { Column } from "react-table";
 import { useFilteredContacts } from "./Contacts.helpers";
 import { ContactsHeader } from "./Contacts.blocks";

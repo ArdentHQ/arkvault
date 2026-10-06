@@ -7,7 +7,7 @@ import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/ut
 
 import { ProfilePaths } from "@/router/paths";
 import React from "react";
-import { generatePath } from "react-router-dom";
+import { generatePath } from "react-router";
 import { truncate } from "@/app/lib/helpers";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import { manifest } from "@/app/lib/mainsail/manifest";

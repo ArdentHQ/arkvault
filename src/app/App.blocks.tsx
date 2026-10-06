@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
-import { createHashRouter, RouterProvider, useNavigate, useLocation } from "react-router-dom";
+import { createHashRouter, useNavigate, useLocation } from "react-router";
+import { RouterProvider } from "react-router/dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";

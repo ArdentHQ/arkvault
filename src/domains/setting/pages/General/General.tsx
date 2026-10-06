@@ -2,7 +2,7 @@ import { Contracts, Helpers } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-//import { Prompt } from "react-router-dom";
+//import { Prompt } from "react-router";
 
 import { GeneralSettingsState, SettingsOption } from "./General.contracts";
 import { Button } from "@/app/components/Button";

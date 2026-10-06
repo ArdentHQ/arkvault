@@ -1,6 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import { useIdleTimer } from "react-idle-timer";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router";
 import { useCallback } from "react";
 
 export const useAutoSignOut = (profile?: Contracts.IProfile) => {
