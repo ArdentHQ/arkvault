@@ -1,4 +1,4 @@
-import { http, HttpResponse } from "msw";
+import { http, HttpResponse, rest } from "msw";
 
 const endpoints = [
 	{ path: "/blockchain", data: require("../../fixtures/coins/mainsail/devnet/blockchain.json") },

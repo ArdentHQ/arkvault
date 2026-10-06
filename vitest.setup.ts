@@ -131,7 +131,7 @@ beforeAll(async () => {
 	MockDate.set(new Date("2026-03-26T00:00:00.000Z"));
 
 	process.env.REACT_APP_IS_UNIT = "1";
-	server.listen({ onUnhandledFrame: "warn" });
+	server.listen({ onUnhandledRequest: "warn" });
 
 	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
 
