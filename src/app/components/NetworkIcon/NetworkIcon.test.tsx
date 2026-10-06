@@ -4,7 +4,7 @@ import React from "react";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { NetworkIcon } from "./NetworkIcon";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 let network: Networks.Network;
 
@@ -30,6 +30,8 @@ describe("NetworkIcon", () => {
 		const { asFragment } = render(<NetworkIcon network={network} size="lg" />, {});
 
 		await userEvent.hover(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
+
+		await waitFor(() => expect(screen.getByRole("tooltip").innerHTML).toContain("transition-duration: 250ms"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
