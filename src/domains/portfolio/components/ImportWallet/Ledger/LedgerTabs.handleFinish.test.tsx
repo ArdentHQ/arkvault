@@ -5,7 +5,8 @@ import { useLedgerTabsHandleFinish } from "./LedgerTabs.blocks";
 
 const mockNavigate = vi.fn();
 
-vi.mock("react-router", () => ({
+vi.mock("react-router", async () => ({
+	...(await vi.importActual("react-router")),
 	useNavigate: () => mockNavigate,
 }));
 
