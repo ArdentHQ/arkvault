@@ -23,6 +23,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	footer,
 	manualSortBy,
 	onSortChange,
+	getRowId,
 	fixedLayout = false,
 }: TableProperties<RowDataType>) => {
 	const tableData = useMemo(() => data, [data]);
@@ -36,6 +37,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 			disableSortRemove: true,
 			initialState,
 			manualSortBy,
+			...(getRowId ? { getRowId } : {}),
 		},
 		useSortBy,
 	);

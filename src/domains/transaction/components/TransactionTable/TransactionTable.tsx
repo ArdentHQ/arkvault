@@ -5,7 +5,10 @@ import { TableState } from "react-table";
 import { TransactionRow } from "./TransactionRow/TransactionRow";
 import { ExtendedTransactionDTO, TransactionTableProperties } from "./TransactionTable.contracts";
 import { Table } from "@/app/components/Table";
-import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
+import {
+	getTransactionRowId,
+	useTransactionTableColumns,
+} from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import { useBreakpoint } from "@/app/hooks";
 import cn from "classnames";
 
@@ -73,6 +76,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				initialState={initialState}
 				onSortChange={onSortChange}
 				manualSortBy
+				getRowId={getTransactionRowId}
 				fixedLayout={hideSender}
 				className={cn({ "with-x-padding": isMdAndAbove })}
 			>
