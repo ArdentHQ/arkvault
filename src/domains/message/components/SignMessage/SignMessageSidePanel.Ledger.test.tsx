@@ -15,6 +15,14 @@ import {
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 import * as ReactRouter from "react-router";
 
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
+
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let useSearchParamsMock: MockInstance;

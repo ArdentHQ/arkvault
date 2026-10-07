@@ -8,6 +8,14 @@ import { translations as messageTranslations } from "@/domains/message/i18n";
 import userEvent from "@testing-library/user-event";
 import * as ReactRouter from "react-router";
 
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
+
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallet2: Contracts.IReadWriteWallet;

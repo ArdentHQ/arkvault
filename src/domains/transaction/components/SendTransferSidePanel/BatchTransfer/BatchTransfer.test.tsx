@@ -28,6 +28,14 @@ import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transac
 import { http, HttpResponse } from "msw";
 import { numberToHex, parseUnits } from "viem";
 
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
+
 const formStepID = "SendTransfer__form-step";
 const reviewStepID = "BatchTransfer__review-step";
 const approveStepID = "BatchTransfer__approve-step";

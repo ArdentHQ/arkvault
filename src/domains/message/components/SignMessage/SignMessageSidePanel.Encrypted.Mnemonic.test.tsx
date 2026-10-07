@@ -7,6 +7,14 @@ import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, render, screen, waitFor, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
+
 let profile: Contracts.IProfile;
 let useSearchParamsMock: MockInstance;
 

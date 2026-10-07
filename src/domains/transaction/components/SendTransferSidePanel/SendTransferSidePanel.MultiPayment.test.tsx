@@ -6,6 +6,14 @@ import { SendTransferSidePanel } from "./SendTransferSidePanel";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import * as ReactRouter from "react-router";
+
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
 const formStepID = "SendTransfer__form-step";
 const reviewStepID = "SendTransfer__review-step";
 const recipientAddButton = "AddRecipient__add-button";

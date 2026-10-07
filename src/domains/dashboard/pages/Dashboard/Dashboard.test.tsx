@@ -20,6 +20,14 @@ import { translations as profileTranslations } from "@/domains/profile/i18n";
 import userEvent from "@testing-library/user-event";
 import * as ReactRouter from "react-router";
 import * as PanelsContext from "@/app/contexts/Panels";
+
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 

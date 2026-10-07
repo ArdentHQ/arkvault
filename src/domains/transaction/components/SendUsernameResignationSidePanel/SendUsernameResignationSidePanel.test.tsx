@@ -24,6 +24,14 @@ import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { vi } from "vitest";
 import * as ReactRouter from "react-router";
+
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 const passphrase = getDefaultMainsailWalletMnemonic();

@@ -19,6 +19,14 @@ import { expect, vi } from "vitest";
 import * as ReactRouter from "react-router";
 import * as PanelsMock from "@/app/contexts/Panels";
 
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
+
 let emptyProfile: Contracts.IProfile;
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
