@@ -329,7 +329,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-20 min-w-20 lg:min-w-40 lg:w-40"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl lg:min-w-32 min-lg:min-w-32"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -345,7 +345,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-60"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -553,7 +553,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -590,9 +590,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -658,7 +656,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -695,9 +693,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -770,7 +766,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -807,9 +803,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -880,7 +874,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -1178,7 +1172,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -1215,9 +1209,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -1283,7 +1275,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -1320,9 +1312,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -1395,7 +1385,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -1432,9 +1422,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -1505,7 +1493,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -1803,7 +1791,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -1840,9 +1828,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -1908,7 +1894,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -1945,9 +1931,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -2020,7 +2004,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -2057,9 +2041,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -2130,7 +2112,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -2428,7 +2410,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -2465,9 +2447,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -2533,7 +2513,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -2570,9 +2550,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -2645,7 +2623,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -2682,9 +2660,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -2755,7 +2731,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3053,7 +3029,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3090,9 +3066,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -3158,7 +3132,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -3195,9 +3169,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -3270,7 +3242,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3307,9 +3279,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -3380,7 +3350,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3678,7 +3648,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3715,9 +3685,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -3783,7 +3751,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -3820,9 +3788,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -3895,7 +3861,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3932,9 +3898,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -4005,7 +3969,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -4303,7 +4267,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -4340,9 +4304,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -4847,7 +4809,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -4884,9 +4846,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -5391,7 +5351,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -5428,9 +5388,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -5935,7 +5893,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -5972,9 +5930,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -6479,7 +6435,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -6516,9 +6472,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -7023,7 +6977,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -7060,9 +7014,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -7567,7 +7519,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -7604,9 +7556,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -8111,7 +8061,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -8148,9 +8098,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -8655,7 +8603,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -8692,9 +8640,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -9199,7 +9145,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -9236,9 +9182,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -9743,7 +9687,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -9780,9 +9724,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -10287,7 +10229,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -10324,9 +10266,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -10831,7 +10771,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -10868,9 +10808,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -11375,7 +11313,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -11412,9 +11350,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -11919,7 +11855,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -11956,9 +11892,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -12463,7 +12397,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -12500,9 +12434,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -13007,7 +12939,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -13044,9 +12976,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -13551,7 +13481,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -13588,9 +13518,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -14095,7 +14023,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -14132,9 +14060,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -14639,7 +14565,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -14676,9 +14602,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -15183,7 +15107,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -15220,9 +15144,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -15727,7 +15649,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -15764,9 +15686,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -16271,7 +16191,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -16308,9 +16228,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -16815,7 +16733,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -16852,9 +16770,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -17359,7 +17275,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -17396,9 +17312,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -17903,7 +17817,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -17940,9 +17854,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -18447,7 +18359,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -18484,9 +18396,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -18991,7 +18901,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -19028,9 +18938,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -19535,7 +19443,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -19572,9 +19480,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -20079,7 +19985,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -20116,9 +20022,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -20623,7 +20527,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -20660,9 +20564,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -21167,7 +21069,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -21204,9 +21106,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -21711,7 +21611,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -21748,9 +21648,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -22255,7 +22153,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -22292,9 +22190,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -22799,7 +22695,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -22836,9 +22732,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -23343,7 +23237,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -23380,9 +23274,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -23887,7 +23779,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -23924,9 +23816,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -23992,7 +23882,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -24029,9 +23919,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -24104,7 +23992,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -24141,9 +24029,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -24214,7 +24100,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -24512,7 +24398,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -24549,9 +24435,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -24617,7 +24501,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -24654,9 +24538,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -24729,7 +24611,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -24766,9 +24648,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -24839,7 +24719,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -25137,7 +25017,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -25174,9 +25054,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -25242,7 +25120,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -25279,9 +25157,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -25354,7 +25230,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -25391,9 +25267,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -25464,7 +25338,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -25762,7 +25636,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -25799,9 +25673,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -25867,7 +25739,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -25904,9 +25776,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -25979,7 +25849,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -26016,9 +25886,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -26089,7 +25957,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -26387,7 +26255,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -26424,9 +26292,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -26492,7 +26358,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -26529,9 +26395,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -26604,7 +26468,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -26641,9 +26505,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -26714,7 +26576,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -27012,7 +26874,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -27049,9 +26911,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -27117,7 +26977,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -27154,9 +27014,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -27229,7 +27087,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -27266,9 +27124,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -27339,7 +27195,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -27637,7 +27493,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -27674,9 +27530,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -28019,7 +27873,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -28056,9 +27910,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -28401,7 +28253,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -28438,9 +28290,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -28783,7 +28633,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -28820,9 +28670,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -29165,7 +29013,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -29202,9 +29050,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -29547,7 +29393,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -29584,9 +29430,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -29929,7 +29773,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -30019,7 +29863,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -30056,9 +29900,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -30131,7 +29973,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -30168,9 +30010,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -30241,7 +30081,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -30524,7 +30364,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -30614,7 +30454,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -30651,9 +30491,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -30726,7 +30564,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -30763,9 +30601,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -30836,7 +30672,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -31119,7 +30955,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -31209,7 +31045,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -31246,9 +31082,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -31321,7 +31155,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -31358,9 +31192,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -31431,7 +31263,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -31714,7 +31546,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -31804,7 +31636,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -31841,9 +31673,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -31916,7 +31746,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -31953,9 +31783,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -32026,7 +31854,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -32309,7 +32137,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -32399,7 +32227,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -32436,9 +32264,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -32511,7 +32337,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -32548,9 +32374,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -32621,7 +32445,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -32904,7 +32728,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -32994,7 +32818,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -33031,9 +32855,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -33106,7 +32928,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -33143,9 +32965,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -33216,7 +33036,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -33711,7 +33531,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-20 min-w-20 lg:min-w-40 lg:w-40"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl lg:min-w-32 min-lg:min-w-32"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -33727,7 +33547,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-60"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -33935,7 +33755,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -33972,9 +33792,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -34040,7 +33858,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -34077,9 +33895,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -34152,7 +33968,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -34189,9 +34005,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -34262,7 +34076,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -34560,7 +34374,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -34597,9 +34411,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -35104,7 +34916,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -35141,9 +34953,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -35648,7 +35458,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -35685,9 +35495,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -36192,7 +36000,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -36229,9 +36037,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -36736,7 +36542,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -36773,9 +36579,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -37280,7 +37084,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -37317,9 +37121,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -37824,7 +37626,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -37861,9 +37663,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -37929,7 +37729,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -37966,9 +37766,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -38041,7 +37839,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -38078,9 +37876,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -38151,7 +37947,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -38449,7 +38245,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -38486,9 +38282,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -38831,7 +38625,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -38921,7 +38715,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -38958,9 +38752,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -39033,7 +38825,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -39070,9 +38862,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -39143,7 +38933,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -39623,7 +39413,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-20 min-w-20 lg:min-w-40 lg:w-40"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl lg:min-w-32 min-lg:min-w-32"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -39639,7 +39429,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-60"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -39847,7 +39637,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -39884,9 +39674,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -39952,7 +39740,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -39989,9 +39777,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -40064,7 +39850,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -40101,9 +39887,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -40174,7 +39958,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -40472,7 +40256,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -40509,9 +40293,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -41016,7 +40798,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -41053,9 +40835,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -41560,7 +41340,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -41597,9 +41377,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -42104,7 +41882,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -42141,9 +41919,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -42648,7 +42424,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -42685,9 +42461,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -43192,7 +42966,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -43229,9 +43003,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -43736,7 +43508,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -43773,9 +43545,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -43841,7 +43611,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -43878,9 +43648,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -43953,7 +43721,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -43990,9 +43758,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -44063,7 +43829,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -44361,7 +44127,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -44398,9 +44164,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -44743,7 +44507,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -44833,7 +44597,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           To
                         </div>
                         <div
-                          class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                         >
                           <span
                             class="grow"
@@ -44870,9 +44634,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                       <span
                                         class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                         data-testid="Address__address"
-                                      >
-                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                      </span>
+                                      />
                                     </span>
                                   </div>
                                 </div>
@@ -44945,7 +44707,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       To
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"
@@ -44982,9 +44744,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                   <span
                                     class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                     data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -45055,7 +44815,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                     >
                       <span
                         class="grow"

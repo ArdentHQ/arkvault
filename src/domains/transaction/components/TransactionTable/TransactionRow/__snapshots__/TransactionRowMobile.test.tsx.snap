@@ -97,7 +97,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -134,9 +134,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -199,7 +197,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -236,9 +234,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -441,7 +437,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -478,9 +474,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -543,7 +537,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -580,9 +574,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -785,7 +777,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -872,7 +864,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -909,9 +901,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
@@ -1114,7 +1104,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                         From
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -1201,7 +1191,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
+                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
                       >
                         <span
                           class="grow"
@@ -1238,9 +1228,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                                     <span
                                       class="no-ligatures block w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700"
                                       data-testid="Address__address"
-                                    >
-                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                    </span>
+                                    />
                                   </span>
                                 </div>
                               </div>
