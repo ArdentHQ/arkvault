@@ -22,14 +22,6 @@ import * as ReactRouter from "react-router";
 import { afterAll, vi } from "vitest";
 import { MNEMONICS } from "@/utils/testing-library";
 
-vi.mock("react-router", async () => {
-	const actual = await vi.importActual("react-router");
-	return {
-		...actual,
-		useSearchParams: vi.fn(actual.useSearchParams),
-	};
-});
-
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;

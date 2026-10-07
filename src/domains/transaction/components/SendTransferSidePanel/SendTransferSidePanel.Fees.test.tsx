@@ -12,14 +12,6 @@ import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
-vi.mock("react-router", async () => {
-	const actual = await vi.importActual("react-router");
-	return {
-		...actual,
-		useSearchParams: vi.fn(actual.useSearchParams),
-	};
-});
-
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));

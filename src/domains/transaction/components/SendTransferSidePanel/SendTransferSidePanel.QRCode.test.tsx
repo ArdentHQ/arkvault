@@ -22,14 +22,6 @@ import { toasts } from "@/app/services";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
-vi.mock("react-router", async () => {
-	const actual = await vi.importActual("react-router");
-	return {
-		...actual,
-		useSearchParams: vi.fn(actual.useSearchParams),
-	};
-});
-
 vi.mock("react-qr-reader", () => ({
 	QrReader: vi.fn().mockImplementation(() => null),
 }));

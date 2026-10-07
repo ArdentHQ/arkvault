@@ -25,14 +25,6 @@ import { afterAll, expect, vi } from "vitest";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
 import * as ReactRouter from "react-router";
-
-vi.mock("react-router", async () => {
-	const actual = await vi.importActual("react-router");
-	return {
-		...actual,
-		useSearchParams: vi.fn(actual.useSearchParams),
-	};
-});
 const fixtureProfileId = getMainsailProfileId();
 
 const passphrase = getDefaultWalletMnemonic();
