@@ -73,6 +73,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				initialState={initialState}
 				onSortChange={onSortChange}
 				manualSortBy
+				fixedLayout={hideSender}
 				className={cn({ "with-x-padding": isMdAndAbove })}
 			>
 				{renderTableRow}

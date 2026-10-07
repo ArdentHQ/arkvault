@@ -13,6 +13,7 @@ export interface TableProperties<RowDataType extends Record<never, unknown>> {
 	footer?: React.ReactNode;
 	manualSortBy?: boolean;
 	onSortChange?: (column: string, desc: boolean) => void;
+	fixedLayout?: boolean;
 }
 
 export interface SortBy {
