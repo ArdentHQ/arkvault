@@ -51,8 +51,8 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 			{
 				Header: t("COMMON.METHOD"),
 				cellWidth: classNames({
-					"w-20 lg:min-w-40 lg:w-40": hideSender,
 					"lg:min-w-32": !hideSender,
+					"w-20 lg:min-w-40 lg:w-40": hideSender,
 				}),
 				headerClassName: "no-border",
 			},
