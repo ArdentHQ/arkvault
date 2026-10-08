@@ -2740,7 +2740,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -2843,7 +2843,7 @@ exports[`Dashboard > render in lg 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -2953,7 +2953,7 @@ exports[`Dashboard > render in lg 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -3061,7 +3061,7 @@ exports[`Dashboard > render in lg 1`] = `
                                 From
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -3377,7 +3377,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -3937,7 +3937,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -4497,7 +4497,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -5057,7 +5057,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -5617,7 +5617,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -6177,7 +6177,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -6737,7 +6737,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -6840,7 +6840,7 @@ exports[`Dashboard > render in lg 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -6950,7 +6950,7 @@ exports[`Dashboard > render in lg 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -7058,7 +7058,7 @@ exports[`Dashboard > render in lg 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -7374,7 +7374,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -7772,7 +7772,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -7862,7 +7862,7 @@ exports[`Dashboard > render in lg 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -7972,7 +7972,7 @@ exports[`Dashboard > render in lg 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -8080,7 +8080,7 @@ exports[`Dashboard > render in lg 1`] = `
                                 From
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -11102,7 +11102,7 @@ exports[`Dashboard > render in md 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -11205,7 +11205,7 @@ exports[`Dashboard > render in md 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -11315,7 +11315,7 @@ exports[`Dashboard > render in md 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -11423,7 +11423,7 @@ exports[`Dashboard > render in md 1`] = `
                                 From
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -11739,7 +11739,7 @@ exports[`Dashboard > render in md 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -12299,7 +12299,7 @@ exports[`Dashboard > render in md 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -12859,7 +12859,7 @@ exports[`Dashboard > render in md 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -13419,7 +13419,7 @@ exports[`Dashboard > render in md 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -13979,7 +13979,7 @@ exports[`Dashboard > render in md 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -14539,7 +14539,7 @@ exports[`Dashboard > render in md 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -15099,7 +15099,7 @@ exports[`Dashboard > render in md 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -15202,7 +15202,7 @@ exports[`Dashboard > render in md 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -15312,7 +15312,7 @@ exports[`Dashboard > render in md 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -15420,7 +15420,7 @@ exports[`Dashboard > render in md 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -15736,7 +15736,7 @@ exports[`Dashboard > render in md 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -16134,7 +16134,7 @@ exports[`Dashboard > render in md 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -16224,7 +16224,7 @@ exports[`Dashboard > render in md 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -16334,7 +16334,7 @@ exports[`Dashboard > render in md 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -16442,7 +16442,7 @@ exports[`Dashboard > render in md 1`] = `
                                 From
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -19312,7 +19312,7 @@ exports[`Dashboard > render in sm 1`] = `
                                       From
                                     </div>
                                     <div
-                                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                     >
                                       <span
                                         class="grow"
@@ -21047,7 +21047,7 @@ exports[`Dashboard > render in sm 1`] = `
                                       To
                                     </div>
                                     <div
-                                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                     >
                                       <span
                                         class="grow"
@@ -21508,7 +21508,7 @@ exports[`Dashboard > render in sm 1`] = `
                                       From
                                     </div>
                                     <div
-                                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                     >
                                       <span
                                         class="grow"
@@ -24502,7 +24502,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -24605,7 +24605,7 @@ exports[`Dashboard > render in xl 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -24715,7 +24715,7 @@ exports[`Dashboard > render in xl 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -24823,7 +24823,7 @@ exports[`Dashboard > render in xl 1`] = `
                                 From
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -25111,7 +25111,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -25643,7 +25643,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -26175,7 +26175,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -26707,7 +26707,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -27239,7 +27239,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -27771,7 +27771,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -28303,7 +28303,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -28406,7 +28406,7 @@ exports[`Dashboard > render in xl 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -28516,7 +28516,7 @@ exports[`Dashboard > render in xl 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -28624,7 +28624,7 @@ exports[`Dashboard > render in xl 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -28912,7 +28912,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -29282,7 +29282,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -29372,7 +29372,7 @@ exports[`Dashboard > render in xl 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -29482,7 +29482,7 @@ exports[`Dashboard > render in xl 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -29590,7 +29590,7 @@ exports[`Dashboard > render in xl 1`] = `
                                 From
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -32432,7 +32432,7 @@ exports[`Dashboard > render in xs 1`] = `
                                       From
                                     </div>
                                     <div
-                                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                     >
                                       <span
                                         class="grow"
@@ -34167,7 +34167,7 @@ exports[`Dashboard > render in xs 1`] = `
                                       To
                                     </div>
                                     <div
-                                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                     >
                                       <span
                                         class="grow"
@@ -34628,7 +34628,7 @@ exports[`Dashboard > render in xs 1`] = `
                                       From
                                     </div>
                                     <div
-                                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                     >
                                       <span
                                         class="grow"
@@ -37484,7 +37484,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -37587,7 +37587,7 @@ exports[`Dashboard > should render 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -37697,7 +37697,7 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -37805,7 +37805,7 @@ exports[`Dashboard > should render 1`] = `
                                 From
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -38121,7 +38121,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -38681,7 +38681,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -39241,7 +39241,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -39801,7 +39801,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -40361,7 +40361,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -40921,7 +40921,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -41481,7 +41481,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -41584,7 +41584,7 @@ exports[`Dashboard > should render 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -41694,7 +41694,7 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -41802,7 +41802,7 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -42118,7 +42118,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -42516,7 +42516,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                 >
                                   <span
                                     class="grow"
@@ -42606,7 +42606,7 @@ exports[`Dashboard > should render 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                                   >
                                     <span
                                       class="grow"
@@ -42716,7 +42716,7 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"
@@ -42824,7 +42824,7 @@ exports[`Dashboard > should render 1`] = `
                                 From
                               </div>
                               <div
-                                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                               >
                                 <span
                                   class="grow"

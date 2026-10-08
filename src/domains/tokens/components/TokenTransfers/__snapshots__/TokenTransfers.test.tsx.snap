@@ -288,7 +288,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -391,7 +391,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -488,7 +488,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -583,7 +583,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -833,7 +833,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -936,7 +936,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -1033,7 +1033,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -1128,7 +1128,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -1378,7 +1378,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -1481,7 +1481,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -1578,7 +1578,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -1673,7 +1673,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -1923,7 +1923,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -2026,7 +2026,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -2123,7 +2123,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -2218,7 +2218,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -2468,7 +2468,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -2571,7 +2571,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -2668,7 +2668,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -2763,7 +2763,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3202,7 +3202,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3305,7 +3305,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -3402,7 +3402,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3497,7 +3497,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3747,7 +3747,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3850,7 +3850,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -3947,7 +3947,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -4042,7 +4042,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -4292,7 +4292,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -4395,7 +4395,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -4492,7 +4492,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -4587,7 +4587,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -4837,7 +4837,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -4940,7 +4940,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -5037,7 +5037,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -5132,7 +5132,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -5382,7 +5382,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -5485,7 +5485,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -5582,7 +5582,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -5677,7 +5677,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
