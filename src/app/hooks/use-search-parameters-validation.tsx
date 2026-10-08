@@ -190,6 +190,119 @@ const WrapperURI = ({ children }: { children?: React.ReactNode }) => {
 	);
 };
 
+/* istanbul ignore next -- @preserve */
+const buildSearchParametersError = ({ type, value }: { type: SearchParametersError; value?: string }, qr = false) => {
+	const ErrorWrapper = qr ? WrapperQR : WrapperURI;
+
+	if (type === SearchParametersError.AmbiguousValidator) {
+		return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.VALIDATOR_OR_PUBLICKEY" />;
+	}
+
+	if (type === SearchParametersError.ValidatorNotFound) {
+		return (
+			<Trans
+				parent={ErrorWrapper}
+				i18nKey="TRANSACTION.VALIDATION.VALIDATOR_NOT_FOUND"
+				values={{ delegate: value }}
+			/>
+		);
+	}
+
+	if (type === SearchParametersError.ValidatorResigned) {
+		return (
+			<Trans
+				parent={ErrorWrapper}
+				i18nKey="TRANSACTION.VALIDATION.VALIDATOR_RESIGNED"
+				values={{ delegate: value }}
+			/>
+		);
+	}
+
+	if (type === SearchParametersError.MethodNotSupported) {
+		return (
+			<Trans
+				parent={ErrorWrapper}
+				i18nKey="TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED"
+				values={{ method: value }}
+			/>
+		);
+	}
+
+	if (type === SearchParametersError.MissingValidator) {
+		return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.VALIDATOR_MISSING" />;
+	}
+
+	if (type === SearchParametersError.MissingMessage) {
+		return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.MESSAGE_MISSING" />;
+	}
+
+	if (type === SearchParametersError.MissingMethod) {
+		return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.METHOD_MISSING" />;
+	}
+
+	if (type === SearchParametersError.MissingNetworkOrNethash) {
+		return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING" />;
+	}
+
+	if (type === SearchParametersError.MissingSignatory) {
+		return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.SIGNATORY_MISSING" />;
+	}
+
+	if (type === SearchParametersError.MissingSignature) {
+		return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.SIGNATURE_MISSING" />;
+	}
+
+	if (type === SearchParametersError.NethashNotEnabled) {
+		return (
+			<Trans
+				parent={ErrorWrapper}
+				i18nKey="TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED"
+				values={{ nethash: value }}
+			/>
+		);
+	}
+
+	if (type === SearchParametersError.NetworkInvalid) {
+		return (
+			<Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_INVALID" values={{ network: value }} />
+		);
+	}
+
+	if (type === SearchParametersError.NetworkMismatch) {
+		return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_MISMATCH" />;
+	}
+
+	if (type === SearchParametersError.NetworkNotEnabled) {
+		return (
+			<Trans
+				parent={ErrorWrapper}
+				i18nKey="TRANSACTION.VALIDATION.NETWORK_NOT_ENABLED"
+				values={{ network: value }}
+			/>
+		);
+	}
+
+	if (type === SearchParametersError.NetworkNoWallets) {
+		return (
+			<Trans
+				parent={ErrorWrapper}
+				i18nKey="TRANSACTION.VALIDATION.NETWORK_NO_WALLETS"
+				values={{ network: value }}
+			/>
+		);
+	}
+
+	if (type === SearchParametersError.MessageMissing) {
+		return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.MESSAGE_MISSING" />;
+	}
+
+	if (type === SearchParametersError.InvalidAddress) {
+		return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.INVALID_ADDRESS_OR_NETWORK_MISMATCH" />;
+	}
+
+	return <WrapperURI />;
+};
+
 export const useSearchParametersValidation = () => {
 	const methods = {
 		sign: {
@@ -320,126 +433,6 @@ export const useSearchParametersValidation = () => {
 
 		// method specific validation
 		return await methods[method].validate({ env, network, parameters, profile });
-	};
-
-	/* istanbul ignore next -- @preserve */
-	const buildSearchParametersError = (
-		{ type, value }: { type: SearchParametersError; value?: string },
-		qr = false,
-	) => {
-		const ErrorWrapper = qr ? WrapperQR : WrapperURI;
-
-		if (type === SearchParametersError.AmbiguousValidator) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.VALIDATOR_OR_PUBLICKEY" />;
-		}
-
-		if (type === SearchParametersError.ValidatorNotFound) {
-			return (
-				<Trans
-					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.VALIDATOR_NOT_FOUND"
-					values={{ delegate: value }}
-				/>
-			);
-		}
-
-		if (type === SearchParametersError.ValidatorResigned) {
-			return (
-				<Trans
-					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.VALIDATOR_RESIGNED"
-					values={{ delegate: value }}
-				/>
-			);
-		}
-
-		if (type === SearchParametersError.MethodNotSupported) {
-			return (
-				<Trans
-					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED"
-					values={{ method: value }}
-				/>
-			);
-		}
-
-		if (type === SearchParametersError.MissingValidator) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.VALIDATOR_MISSING" />;
-		}
-
-		if (type === SearchParametersError.MissingMessage) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.MESSAGE_MISSING" />;
-		}
-
-		if (type === SearchParametersError.MissingMethod) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.METHOD_MISSING" />;
-		}
-
-		if (type === SearchParametersError.MissingNetworkOrNethash) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING" />;
-		}
-
-		if (type === SearchParametersError.MissingSignatory) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.SIGNATORY_MISSING" />;
-		}
-
-		if (type === SearchParametersError.MissingSignature) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.SIGNATURE_MISSING" />;
-		}
-
-		if (type === SearchParametersError.NethashNotEnabled) {
-			return (
-				<Trans
-					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED"
-					values={{ nethash: value }}
-				/>
-			);
-		}
-
-		if (type === SearchParametersError.NetworkInvalid) {
-			return (
-				<Trans
-					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.NETWORK_INVALID"
-					values={{ network: value }}
-				/>
-			);
-		}
-
-		if (type === SearchParametersError.NetworkMismatch) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_MISMATCH" />;
-		}
-
-		if (type === SearchParametersError.NetworkNotEnabled) {
-			return (
-				<Trans
-					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.NETWORK_NOT_ENABLED"
-					values={{ network: value }}
-				/>
-			);
-		}
-
-		if (type === SearchParametersError.NetworkNoWallets) {
-			return (
-				<Trans
-					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.NETWORK_NO_WALLETS"
-					values={{ network: value }}
-				/>
-			);
-		}
-
-		if (type === SearchParametersError.MessageMissing) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.MESSAGE_MISSING" />;
-		}
-
-		if (type === SearchParametersError.InvalidAddress) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.INVALID_ADDRESS_OR_NETWORK_MISMATCH" />;
-		}
-
-		return <WrapperURI />;
 	};
 
 	return { buildSearchParametersError, methods, validateSearchParameters };
