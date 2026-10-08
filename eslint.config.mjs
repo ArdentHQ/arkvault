@@ -175,6 +175,12 @@ export default [
 		},
 	},
 	{
+		files: ["**/*.test.{ts,tsx}"],
+		rules: {
+			"unicorn/consistent-function-scoping": "off",
+		},
+	},
+	{
 		files: ["**/e2e/**/*.ts", "**/cucumber/**/*.ts", "**/cucumber/**/*.feature"],
 		rules: {
 			"sort-keys-fix/sort-keys-fix": "off",
