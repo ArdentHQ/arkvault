@@ -193,31 +193,15 @@ export type AddressMethod =
 export type AddressMethods = AddressMethod[];
 
 export type KeyPairMethod =
-	| "mnemonic.bip39"
-	| "mnemonic.bip44"
-	| "mnemonic.bip49"
-	| "mnemonic.bip84"
-	| "privateKey"
-	| "secret"
-	| "wif";
+	"mnemonic.bip39" | "mnemonic.bip44" | "mnemonic.bip49" | "mnemonic.bip84" | "privateKey" | "secret" | "wif";
 export type KeyPairMethods = KeyPairMethod[];
 
 export type PrivateKeyMethod =
-	| "mnemonic.bip39"
-	| "mnemonic.bip44"
-	| "mnemonic.bip49"
-	| "mnemonic.bip84"
-	| "secret"
-	| "wif";
+	"mnemonic.bip39" | "mnemonic.bip44" | "mnemonic.bip49" | "mnemonic.bip84" | "secret" | "wif";
 export type PrivateKeyMethods = PrivateKeyMethod[];
 
 export type PublicKeyMethod =
-	| "mnemonic.bip39"
-	| "mnemonic.bip44"
-	| "mnemonic.bip49"
-	| "mnemonic.bip84"
-	| "secret"
-	| "wif";
+	"mnemonic.bip39" | "mnemonic.bip44" | "mnemonic.bip49" | "mnemonic.bip84" | "secret" | "wif";
 export type PublicKeyMethods = PublicKeyMethod[];
 
 export type WIFMethod = "mnemonic.bip39" | "mnemonic.bip44" | "mnemonic.bip49" | "mnemonic.bip84" | "secret";
