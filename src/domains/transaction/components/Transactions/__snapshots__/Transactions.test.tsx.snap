@@ -553,7 +553,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -656,7 +656,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -766,7 +766,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -874,7 +874,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -1172,7 +1172,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -1275,7 +1275,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -1385,7 +1385,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -1493,7 +1493,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -1791,7 +1791,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -1894,7 +1894,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -2004,7 +2004,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -2112,7 +2112,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -2410,7 +2410,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -2513,7 +2513,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -2623,7 +2623,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -2731,7 +2731,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3029,7 +3029,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3132,7 +3132,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -3242,7 +3242,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3350,7 +3350,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3648,7 +3648,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3751,7 +3751,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -3861,7 +3861,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -3969,7 +3969,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -4267,7 +4267,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -4809,7 +4809,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -5351,7 +5351,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -5893,7 +5893,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -6435,7 +6435,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -6977,7 +6977,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -7519,7 +7519,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -8061,7 +8061,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -8603,7 +8603,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -9145,7 +9145,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -9687,7 +9687,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -10229,7 +10229,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -10771,7 +10771,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -11313,7 +11313,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -11855,7 +11855,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -12397,7 +12397,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -12939,7 +12939,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -13481,7 +13481,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -14023,7 +14023,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -14565,7 +14565,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -15107,7 +15107,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -15649,7 +15649,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -16191,7 +16191,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -16733,7 +16733,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -17275,7 +17275,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -17817,7 +17817,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -18359,7 +18359,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -18901,7 +18901,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -19443,7 +19443,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -19985,7 +19985,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -20527,7 +20527,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -21069,7 +21069,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -21611,7 +21611,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -22153,7 +22153,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -22695,7 +22695,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -23237,7 +23237,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -23779,7 +23779,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -23882,7 +23882,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -23992,7 +23992,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -24100,7 +24100,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -24398,7 +24398,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -24501,7 +24501,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -24611,7 +24611,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -24719,7 +24719,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -25017,7 +25017,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -25120,7 +25120,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -25230,7 +25230,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -25338,7 +25338,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -25636,7 +25636,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -25739,7 +25739,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -25849,7 +25849,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -25957,7 +25957,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -26255,7 +26255,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -26358,7 +26358,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -26468,7 +26468,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -26576,7 +26576,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -26874,7 +26874,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -26977,7 +26977,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -27087,7 +27087,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -27195,7 +27195,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -27493,7 +27493,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -27873,7 +27873,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -28253,7 +28253,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -28633,7 +28633,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -29013,7 +29013,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -29393,7 +29393,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -29773,7 +29773,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -29863,7 +29863,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -29973,7 +29973,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -30081,7 +30081,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -30364,7 +30364,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -30454,7 +30454,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -30564,7 +30564,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -30672,7 +30672,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -30955,7 +30955,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -31045,7 +31045,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -31155,7 +31155,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -31263,7 +31263,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -31546,7 +31546,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -31636,7 +31636,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -31746,7 +31746,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -31854,7 +31854,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -32137,7 +32137,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -32227,7 +32227,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -32337,7 +32337,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -32445,7 +32445,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -32728,7 +32728,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -32818,7 +32818,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -32928,7 +32928,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -33036,7 +33036,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -33755,7 +33755,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -33858,7 +33858,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -33968,7 +33968,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -34076,7 +34076,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -34374,7 +34374,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -34916,7 +34916,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -35458,7 +35458,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -36000,7 +36000,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -36542,7 +36542,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -37084,7 +37084,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -37626,7 +37626,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -37729,7 +37729,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -37839,7 +37839,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -37947,7 +37947,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -38245,7 +38245,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -38625,7 +38625,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -38715,7 +38715,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -38825,7 +38825,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -38933,7 +38933,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -39637,7 +39637,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -39740,7 +39740,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -39850,7 +39850,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -39958,7 +39958,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -40256,7 +40256,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -40798,7 +40798,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -41340,7 +41340,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -41882,7 +41882,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -42424,7 +42424,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -42966,7 +42966,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -43508,7 +43508,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -43611,7 +43611,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -43721,7 +43721,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -43829,7 +43829,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -44127,7 +44127,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -44507,7 +44507,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -44597,7 +44597,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           To
                         </div>
                         <div
-                          class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                          class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                         >
                           <span
                             class="grow"
@@ -44707,7 +44707,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       To
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
@@ -44815,7 +44815,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       From
                     </div>
                     <div
-                      class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                      class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                     >
                       <span
                         class="grow"
