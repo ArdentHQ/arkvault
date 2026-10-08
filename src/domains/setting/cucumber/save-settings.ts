@@ -85,9 +85,9 @@ cucumber(
 		"And she is on the settings page": async (t: TestController) => {
 			await t.click(Selector('[data-testid="UserMenu"]'));
 			await t
-				.expect(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.SETTINGS).exists)
+				.expect(Selector('[data-testid="dropdown__content"] li').withText(translations.COMMON.SETTINGS).exists)
 				.ok();
-			await t.click(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.SETTINGS));
+			await t.click(Selector('[data-testid="dropdown__content"] li').withText(translations.COMMON.SETTINGS));
 			await t.expect(Selector("h1").withText(translations.SETTINGS.GENERAL.TITLE).exists).ok();
 		},
 		"When she saves a new currency setting": async (t: TestController) => {
