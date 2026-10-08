@@ -12,32 +12,28 @@ interface RulesProperties {
 	validationState: ValidationState;
 }
 
-const Rules = ({ validationState }: RulesProperties) => {
-	const renderRule = (rule: ValidationRule, isValid: boolean) => (
-		<div key={rule} className="flex items-center space-x-2">
-			<span
-				className={cn(
-					"flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-primary-500",
-					isValid ? "bg-theme-primary-200 dark:bg-theme-primary-900" : "border-2 border-theme-secondary-600",
-				)}
-			>
-				{isValid && <Icon name="CheckmarkSmall" size="xs" />}
-			</span>
+const renderRule = (rule: ValidationRule, isValid: boolean) => (
+	<div key={rule} className="flex items-center space-x-2">
+		<span
+			className={cn(
+				"flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-primary-500",
+				isValid ? "bg-theme-primary-200 dark:bg-theme-primary-900" : "border-2 border-theme-secondary-600",
+			)}
+		>
+			{isValid && <Icon name="CheckmarkSmall" size="xs" />}
+		</span>
 
-			<span
-				className={cn("text-sm font-semibold", isValid ? "text-theme-primary-600" : "text-theme-secondary-600")}
-			>
-				<>{t(`COMMON.VALIDATION.PASSWORD_RULES.${rule}`)}</>
-			</span>
-		</div>
-	);
+		<span className={cn("text-sm font-semibold", isValid ? "text-theme-primary-600" : "text-theme-secondary-600")}>
+			<>{t(`COMMON.VALIDATION.PASSWORD_RULES.${rule}`)}</>
+		</span>
+	</div>
+);
 
-	return (
-		<div data-testid="Rules" className="space-y-4">
-			{[...validationState].map(([rule, isValid]) => renderRule(rule, isValid))}
-		</div>
-	);
-};
+const Rules = ({ validationState }: RulesProperties) => (
+	<div data-testid="Rules" className="space-y-4">
+		{[...validationState].map(([rule, isValid]) => renderRule(rule, isValid))}
+	</div>
+);
 
 interface PasswordValidationProperties {
 	confirmPasswordField: string;
