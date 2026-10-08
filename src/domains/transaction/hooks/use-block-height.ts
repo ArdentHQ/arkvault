@@ -17,7 +17,7 @@ export const useBlockHeight = ({
 			return;
 		}
 
-		let isCancelled = false;
+		const controller = new AbortController();
 
 		// @TODO: Fetch block info/height from sdk (not yet supported).
 		const fetchBlockHeight = async () => {
@@ -25,16 +25,18 @@ export const useBlockHeight = ({
 
 			try {
 				const [api] = network.toObject().hosts;
-				const response = await new Http.HttpClient(0).get(`${api.host}/blocks/${blockHash}`);
+				const response = await new Http.HttpClient(0)
+					.withOptions({ signal: controller.signal })
+					.get(`${api.host}/blocks/${blockHash}`);
 				const { data } = response.json() as { data: { number: number } };
 
-				if (!isCancelled) {
+				if (!controller.signal.aborted) {
 					setBlockHeight(Numeral.make("en").format(data.number));
 				}
 			} catch {
-				// The block height is optional, so a failed request just leaves it empty.
+				// The block height is optional, so a failed or aborted request just leaves it empty.
 			} finally {
-				if (!isCancelled) {
+				if (!controller.signal.aborted) {
 					setIsLoading(false);
 				}
 			}
@@ -42,9 +44,7 @@ export const useBlockHeight = ({
 
 		void fetchBlockHeight();
 
-		return () => {
-			isCancelled = true;
-		};
+		return () => controller.abort();
 	}, [blockHash, network]);
 
 	return { blockHeight, isLoading };

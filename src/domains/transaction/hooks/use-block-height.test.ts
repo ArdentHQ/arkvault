@@ -41,9 +41,10 @@ describe("useBlockHeight", () => {
 		expect(result.current.blockHeight).toBeUndefined();
 	});
 
-	it("should ignore the response after unmount", async () => {
+	it("should abort the request and ignore the response after unmount", async () => {
 		let resolveRequest: (value: unknown) => void = () => {};
 
+		const withOptionsSpy = vi.spyOn(Http.HttpClient.prototype, "withOptions");
 		vi.spyOn(Http.HttpClient.prototype, "get").mockReturnValue(
 			new Promise((resolve) => {
 				resolveRequest = resolve;
@@ -54,7 +55,14 @@ describe("useBlockHeight", () => {
 
 		expect(result.current.isLoading).toBe(true);
 
+		const { signal } = withOptionsSpy.mock.calls[0][0] as { signal: AbortSignal };
+
+		expect(signal.aborted).toBe(false);
+
 		unmount();
+
+		expect(signal.aborted).toBe(true);
+
 		resolveRequest({ json: () => ({ data: { number: 1234 } }) });
 
 		await new Promise((resolve) => setTimeout(resolve, 0));
