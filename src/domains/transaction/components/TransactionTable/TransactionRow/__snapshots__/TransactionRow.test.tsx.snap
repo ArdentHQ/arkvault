@@ -111,7 +111,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   From
                 </div>
                 <div
-                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                 >
                   <span
                     class="grow"
@@ -214,7 +214,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     To
                   </div>
                   <div
-                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                   >
                     <span
                       class="grow"
@@ -324,7 +324,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 To
               </div>
               <div
-                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
               >
                 <span
                   class="grow"
@@ -432,7 +432,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 To
               </div>
               <div
-                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
               >
                 <span
                   class="grow"
@@ -687,7 +687,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                   From
                 </div>
                 <div
-                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                 >
                   <span
                     class="grow"
@@ -790,7 +790,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                     To
                   </div>
                   <div
-                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                   >
                     <span
                       class="grow"
@@ -900,7 +900,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 To
               </div>
               <div
-                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
               >
                 <span
                   class="grow"
@@ -1008,7 +1008,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 To
               </div>
               <div
-                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
               >
                 <span
                   class="grow"
@@ -1282,7 +1282,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                   From
                 </div>
                 <div
-                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                 >
                   <span
                     class="grow"
@@ -1385,7 +1385,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                     To
                   </div>
                   <div
-                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                   >
                     <span
                       class="grow"
@@ -1495,7 +1495,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 To
               </div>
               <div
-                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
               >
                 <span
                   class="grow"
@@ -1603,7 +1603,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 To
               </div>
               <div
-                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
               >
                 <span
                   class="grow"
@@ -1863,7 +1863,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -1963,7 +1963,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                         To
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -2217,7 +2217,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                   From
                 </div>
                 <div
-                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                 >
                   <span
                     class="grow"
@@ -2320,7 +2320,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                     To
                   </div>
                   <div
-                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                   >
                     <span
                       class="grow"
@@ -2430,7 +2430,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                 To
               </div>
               <div
-                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
               >
                 <span
                   class="grow"
@@ -2538,7 +2538,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                 To
               </div>
               <div
-                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
               >
                 <span
                   class="grow"
@@ -2779,7 +2779,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -2879,7 +2879,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                         To
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3119,7 +3119,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3219,7 +3219,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                         To
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3459,7 +3459,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                         From
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3559,7 +3559,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                         To
                       </div>
                       <div
-                        class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                        class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                       >
                         <span
                           class="grow"
@@ -3813,7 +3813,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                   From
                 </div>
                 <div
-                  class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                  class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                 >
                   <span
                     class="grow"
@@ -3916,7 +3916,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                     To
                   </div>
                   <div
-                    class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                    class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
                   >
                     <span
                       class="grow"
@@ -4026,7 +4026,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 To
               </div>
               <div
-                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
               >
                 <span
                   class="grow"
@@ -4134,7 +4134,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 To
               </div>
               <div
-                class="xl:min-w-26 flex grow items-center justify-between lg:px-0"
+                class="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0"
               >
                 <span
                   class="grow"
