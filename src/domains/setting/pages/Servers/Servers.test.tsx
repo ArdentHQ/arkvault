@@ -15,8 +15,9 @@ import {
 	renderResponsiveWithRoute,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
-import { http } from "msw";
+import { http, HttpResponse } from "msw";
 import { server, requestMock } from "@/tests/mocks/server";
+import cryptoConfiguration from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json";
 import { act } from "@testing-library/react";
 
 let profile: Contracts.IProfile;
@@ -504,8 +505,17 @@ describe("Servers Settings", () => {
 					mainsail: [],
 				});
 
+				const heightRequest = vi.fn();
+
 				mockRequests();
-				server.use(requestMock("https://127.0.0.1", peerResponse));
+				server.use(
+					requestMock("https://127.0.0.1", peerResponse),
+					requestMock("https://127.0.0.1/api/node/configuration/crypto", cryptoConfiguration),
+					http.get("https://127.0.0.1/api/blockchain", () => {
+						heightRequest();
+						return HttpResponse.json(peerResponseHeight);
+					}),
+				);
 
 				render(<ServersSettings />, {
 					route: `/profiles/${profile.id()}/settings/servers`,
@@ -517,6 +527,7 @@ describe("Servers Settings", () => {
 					publicApiEndpoint: "https://127.0.0.1/api",
 				});
 
+				await waitFor(() => expect(heightRequest).toHaveBeenCalled());
 				await waitUntilServerFormIsReady();
 				hostsMock.mockRestore();
 			});
