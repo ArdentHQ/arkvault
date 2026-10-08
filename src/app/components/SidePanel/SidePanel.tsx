@@ -115,6 +115,8 @@ const SidePanelContent = ({
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
 	const [isClosing, setIsClosing] = useState(false);
+	const shakeTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
+	const closingTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
 
 	const shouldPreventClosing = useCallback(() => preventClosing, [preventClosing]);
 
@@ -126,18 +128,28 @@ const SidePanelContent = ({
 
 			if (open === false && shakeWhenClosing && shouldPreventClosing()) {
 				setShake(true);
-				setTimeout(() => setShake(false), 900);
+				clearTimeout(shakeTimeout.current);
+				shakeTimeout.current = setTimeout(() => setShake(false), 900);
 
 				return;
 			}
 
 			onOpenChange(open);
 
-			setTimeout(() => {
+			clearTimeout(closingTimeout.current);
+			closingTimeout.current = setTimeout(() => {
 				setIsClosing(false);
 			}, SIDE_PANEL_TRANSITION_DURATION);
 		},
 		[onOpenChange, shakeWhenClosing, shouldPreventClosing, isMinimized],
+	);
+
+	useEffect(
+		() => () => {
+			clearTimeout(shakeTimeout.current);
+			clearTimeout(closingTimeout.current);
+		},
+		[],
 	);
 
 	const { refs, context } = useFloating({
