@@ -13,47 +13,39 @@ export const useBlockHeight = ({
 	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
-		if (blockHeight) {
+		if (!blockHash) {
 			return;
 		}
 
 		let isCancelled = false;
-		const client = new Http.HttpClient(0);
 
 		// @TODO: Fetch block info/height from sdk (not yet supported).
 		const fetchBlockHeight = async () => {
 			setIsLoading(true);
 
 			try {
-				const {
-					hosts: [api],
-				} = network.toObject();
-				const response = await client.get(`${api.host}/blocks/${blockHash}`);
-				const { data } = response.json();
+				const [api] = network.toObject().hosts;
+				const response = await new Http.HttpClient(0).get(`${api.host}/blocks/${blockHash}`);
+				const { data } = response.json() as { data: { number: number } };
 
 				if (!isCancelled) {
 					setBlockHeight(Numeral.make("en").format(data.number));
 				}
 			} catch {
-				//
-			}
-
-			if (!isCancelled) {
-				setIsLoading(false);
+				// The block height is optional, so a failed request just leaves it empty.
+			} finally {
+				if (!isCancelled) {
+					setIsLoading(false);
+				}
 			}
 		};
 
-		if (blockHash) {
-			fetchBlockHeight();
-		}
+		void fetchBlockHeight();
 
 		return () => {
 			isCancelled = true;
 		};
-	}, [blockHash, network, blockHeight]);
+	}, [blockHash, network]);
 
-	return {
-		blockHeight,
-		isLoading,
-	};
+	return { blockHeight, isLoading };
 };
