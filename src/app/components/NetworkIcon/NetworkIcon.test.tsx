@@ -31,8 +31,7 @@ describe("NetworkIcon", () => {
 
 		await userEvent.hover(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
 
-		const tooltip = await screen.findByRole("tooltip");
-		await waitFor(() => expect(tooltip.firstElementChild).not.toHaveStyle({ opacity: "0" }));
+		await waitFor(() => expect(screen.getByRole("tooltip")).not.toContainHTML("opacity: 0"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
