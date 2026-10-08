@@ -24,6 +24,9 @@ describe("ClipboardIcon", () => {
 		);
 
 		await userEvent.hover(screen.getByTestId("clipboard-icon__wrapper"));
+
+		await waitFor(() => expect(screen.getByRole("tooltip")).not.toContainHTML("opacity: 0"));
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
