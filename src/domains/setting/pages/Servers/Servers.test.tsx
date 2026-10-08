@@ -1182,6 +1182,8 @@ describe("Servers Settings", () => {
 		});
 
 		await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId(nodeStatusLoadingTestId)).not.toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
