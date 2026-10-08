@@ -17,6 +17,7 @@ export const useBlockHeight = ({
 			return;
 		}
 
+		let isCancelled = false;
 		const client = new Http.HttpClient(0);
 
 		// @TODO: Fetch block info/height from sdk (not yet supported).
@@ -30,17 +31,25 @@ export const useBlockHeight = ({
 				const response = await client.get(`${api.host}/blocks/${blockHash}`);
 				const { data } = response.json();
 
-				setBlockHeight(Numeral.make("en").format(data.number));
+				if (!isCancelled) {
+					setBlockHeight(Numeral.make("en").format(data.number));
+				}
 			} catch {
 				//
 			}
 
-			setIsLoading(false);
+			if (!isCancelled) {
+				setIsLoading(false);
+			}
 		};
 
 		if (blockHash) {
 			fetchBlockHeight();
 		}
+
+		return () => {
+			isCancelled = true;
+		};
 	}, [blockHash, network, blockHeight]);
 
 	return {
