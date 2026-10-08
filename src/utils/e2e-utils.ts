@@ -1,4 +1,4 @@
-/* eslint-disable unicorn/prevent-abbreviations */
+/* eslint-disable unicorn/name-replacements */
 /* eslint-disable max-lines */
 /* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable import-alias/import-alias */
