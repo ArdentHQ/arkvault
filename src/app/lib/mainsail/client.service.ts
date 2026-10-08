@@ -427,7 +427,7 @@ export class ClientService {
 		body: object | null;
 		searchParams: searchParams;
 	} {
-		if (Object.keys(body).length <= 0) {
+		if (Object.keys(body).length === 0) {
 			return { body: null, searchParams: { limit: 10, page: 1 } };
 		}
 
