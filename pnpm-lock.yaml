@@ -35,6 +35,12 @@ importers:
       '@ledgerhq/hw-transport-webusb':
         specifier: ^6.34.2
         version: 6.34.2
+      '@noble/ciphers':
+        specifier: ^2.4.0
+        version: 2.4.0
+      '@noble/hashes':
+        specifier: ^2.4.0
+        version: 2.4.0
       '@tailwindcss/forms':
         specifier: ^0.5.11
         version: 0.5.11(tailwindcss@4.3.0)
@@ -59,9 +65,6 @@ importers:
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
-      crypto-js:
-        specifier: ^4.2.0
-        version: 4.2.0
       dayjs:
         specifier: ^1.11.23
         version: 1.11.23
