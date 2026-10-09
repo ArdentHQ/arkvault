@@ -13,10 +13,10 @@ import {
 import { useVoteFormContext, VoteFormProvider } from "./VoteFormContext";
 import userEvent from "@testing-library/user-event";
 import { waitFor } from "@testing-library/react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router";
 
-vi.mock("react-router-dom", async () => {
-	const actual = await vi.importActual("react-router-dom");
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
 	return {
 		...actual,
 		useSearchParams: vi.fn(actual.useSearchParams),
