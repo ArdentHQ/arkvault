@@ -27,13 +27,13 @@ importers:
         specifier: ^0.27.20
         version: 0.27.20(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@ledgerhq/hw-app-eth':
-        specifier: ^7.8.19
+        specifier: ^7.10.0
         version: 7.10.0(debug@4.4.3(supports-color@11.0.0))(react@19.3.0)
       '@ledgerhq/hw-transport-webhid':
-        specifier: ^6.35.2
+        specifier: ^6.36.0
         version: 6.36.0
       '@ledgerhq/hw-transport-webusb':
-        specifier: ^6.34.2
+        specifier: ^6.35.0
         version: 6.35.0
       '@tailwindcss/forms':
         specifier: ^0.5.11
@@ -199,7 +199,7 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.12.0(jiti@2.7.0)(supports-color@11.0.0))
       '@ledgerhq/hw-transport-mocker':
-        specifier: ^6.34.2
+        specifier: ^6.35.0
         version: 6.35.0
       '@testing-library/dom':
         specifier: ^10.4.2
