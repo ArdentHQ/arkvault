@@ -150,6 +150,10 @@ describe("#BatchTransfer", { timeout: 8000 }, () => {
 		vi.restoreAllMocks();
 	});
 
+	beforeEach(() => {
+		server.use(requestMock("https://dwallets-evm.mainsailhq.com/api/blocks/*", { data: {} }));
+	});
+
 	afterEach(() => {
 		vi.useRealTimers();
 	});
