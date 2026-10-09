@@ -2,7 +2,7 @@
 import { isKnownPath, isAllowedUrl, isDisabledUrl } from "./url-validation";
 import { ProfilePaths } from "@/router/paths";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
-import { generatePath } from "react-router-dom";
+import { generatePath } from "react-router";
 
 describe("Url validation", () => {
 	it("#isKnownPath", async () => {

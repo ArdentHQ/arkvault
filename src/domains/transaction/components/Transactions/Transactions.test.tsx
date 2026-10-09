@@ -331,13 +331,17 @@ describe("Transactions", () => {
 
 		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.LOAD_MORE));
 
-		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30);
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+		);
 
 		await userEvent.click(screen.getByTestId("transactions__fetch-more-button"));
 
 		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.LOAD_MORE));
 
-		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(60);
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(60),
+		);
 
 		process.env.REACT_APP_IS_UNIT = undefined;
 
