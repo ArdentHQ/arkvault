@@ -58,7 +58,7 @@ export const PasswordValidation = ({
 	const { password: passwordValidation } = useValidation();
 
 	const { clearErrors, register, setError, setValue, trigger, watch } = useFormContext();
-	const [password, confirmPassword] = watch([passwordField, confirmPasswordField]);
+	const [password = "", confirmPassword = ""] = watch([passwordField, confirmPasswordField]);
 
 	let currentPassword;
 	if (currentPasswordField) {
