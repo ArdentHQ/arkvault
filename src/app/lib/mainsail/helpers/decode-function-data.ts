@@ -12,10 +12,10 @@ interface FunctionData {
 }
 
 export enum AbiType {
-	"Consensus" = "consensus",
-	"Username" = "username",
-	"MultiPayment" = "multiPayment",
-	"Token" = "token",
+	Consensus = "consensus",
+	Username = "username",
+	MultiPayment = "multiPayment",
+	Token = "token",
 }
 
 export const decodeFunctionData = (data: Hex, abiType: AbiType = AbiType.Consensus): FunctionData => {
