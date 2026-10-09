@@ -299,7 +299,7 @@ importers:
         version: 7.4.0(@cucumber/cucumber-expressions@20.1.0)(@cucumber/cucumber@13.3.0)(testcafe@3.7.6)
       globals:
         specifier: ^17.6.0
-        version: 17.13.0
+        version: 17.6.0
       history:
         specifier: ^5.3.0
         version: 5.3.0
@@ -3827,6 +3827,10 @@ packages:
 
   globals@17.13.0:
     resolution: {integrity: sha512-RwMTC61u7hrG3ZJMkZQOK4JLJrKS8QtoTii63EmWvFXHqycY9FObBJQCbsLxSO8kjKhWE5kV1GC+Vb1g3RI0Zg==}
+    engines: {node: '>=18'}
+
+  globals@17.6.0:
+    resolution: {integrity: sha512-sepffkT8stwnIYbsMBpoCHJuJM5l98FUF2AnE07hfvE0m/qp3R586hw4jF4uadbhvg1ooIdzuu7CsfD2jzCaNA==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -8906,7 +8910,7 @@ snapshots:
 
   '@typescript-eslint/utils@8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
-      '@eslint-community/eslint-utils': 4.10.1(eslint@10.4.1(jiti@2.7.0))
+      '@eslint-community/eslint-utils': 4.9.1(eslint@10.4.1(jiti@2.7.0))
       '@typescript-eslint/scope-manager': 8.60.1
       '@typescript-eslint/types': 8.60.1
       '@typescript-eslint/typescript-estree': 8.60.1(typescript@6.0.3)
@@ -10073,7 +10077,7 @@ snapshots:
       bytes: 3.1.2
       eslint: 10.4.1(jiti@2.7.0)
       functional-red-black-tree: 1.0.1
-      globals: 17.13.0
+      globals: 17.6.0
       jsx-ast-utils-x: 0.1.0
       lodash.merge: 4.6.2
       minimatch: 10.2.5
@@ -10536,6 +10540,8 @@ snapshots:
       ini: 4.1.1
 
   globals@17.13.0: {}
+
+  globals@17.6.0: {}
 
   globalthis@1.0.4:
     dependencies:
