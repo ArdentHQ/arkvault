@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { MemoryRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { MemoryRouter, Routes, Route, useNavigate } from "react-router";
 import { renderWithoutRouter as render, screen } from "@/utils/testing-library";
 import { RouterView } from "./RouterView";
 import { Middleware } from "./router.types";
