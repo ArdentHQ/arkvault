@@ -1,4 +1,4 @@
-import { matchPath } from "react-router-dom";
+import { matchPath } from "react-router";
 import { ProfilePaths } from "@/router/paths";
 import { getProfileFromUrl } from "@/utils/profile-utils";
 import { Environment } from "@/app/lib/profiles";

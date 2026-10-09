@@ -2,7 +2,7 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { Page, Section } from "@/app/components/Layout";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { matchPath, useLocation, useNavigate } from "react-router-dom";
+import { matchPath, useLocation, useNavigate } from "react-router";
 import { useDeeplink, useTheme } from "@/app/hooks";
 
 import { Button } from "@/app/components/Button";

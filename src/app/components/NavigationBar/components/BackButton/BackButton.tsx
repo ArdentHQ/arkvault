@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { Icon } from "@/app/components/Icon";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
