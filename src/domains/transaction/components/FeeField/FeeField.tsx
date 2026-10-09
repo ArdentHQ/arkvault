@@ -40,7 +40,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, data, i
 	const [estimatedGasLimit, setEstimatedGasLimit] = useState(BigNumber.make(0));
 
 	const { watch, setValue, getValues } = useFormContext();
-	const { fees, inputFeeSettings = {} } = watch(["fees", "inputFeeSettings"]);
+	const [fees, inputFeeSettings = {}] = watch(["fees", "inputFeeSettings"]);
 
 	const gasPrice = BigNumber.make(getValues("gasPrice") ?? 0);
 	const gasLimit = BigNumber.make(getValues("gasLimit") ?? 0);

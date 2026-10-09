@@ -30,7 +30,16 @@ const DUST_AMOUNT = 0.00015;
 export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
-	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue } = useFormContext();
+	const {
+		unregister,
+		watch,
+		register,
+		getValues,
+		setError,
+		formState: { errors },
+		clearErrors,
+		setValue,
+	} = useFormContext();
 	const { recipients, tokenContractAddress } = watch();
 	const profile = useActiveProfile();
 	const { gasPrice, gasLimit } = getValues();
@@ -162,7 +171,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 											className="flex items-center divide-x divide-theme-secondary-300 text-theme-danger-500 dim:divide-theme-dim-700 dark:divide-theme-secondary-800"
 										>
 											<div>
-												<Tooltip content={errors.amount.message} size="sm">
+												<Tooltip content={errors.amount.message as string} size="sm">
 													<span
 														data-errortext={errors.amount.message}
 														data-testid="Input__error"

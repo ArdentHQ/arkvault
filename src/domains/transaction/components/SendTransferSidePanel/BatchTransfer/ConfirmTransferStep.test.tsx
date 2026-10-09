@@ -57,18 +57,18 @@ describe("#ConfirmTransferStep", () => {
 
 	const Component = () => {
 		const form = useForm({
-			defaultValues: {},
+			defaultValues: {
+				recipients: [
+					{ address: wallet.address(), amount: 1 },
+					{ address: wallet.address(), amount: 2 },
+				],
+				tokenContractAddress: profile.tokens().selected().first().token().address(),
+			},
 			mode: "onChange",
 		});
 
 		form.register("recipients");
 		form.register("tokenContractAddress");
-
-		form.setValue("tokenContractAddress", profile.tokens().selected().first().token().address());
-		form.setValue("recipients", [
-			{ address: wallet.address(), amount: 1 },
-			{ address: wallet.address(), amount: 2 },
-		]);
 
 		return (
 			<FormProvider {...form}>

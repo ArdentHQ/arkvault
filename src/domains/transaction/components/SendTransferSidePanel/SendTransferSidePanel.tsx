@@ -114,7 +114,7 @@ export const SendTransferSidePanel = ({
 	const [isApproveTransactionConfirmed, setIsApproveTransactionConfirmed] = useState(false);
 
 	const { recipients, tokenContractAddress: contractAddress } = getValues();
-	const isBatchTransfer = contractAddress && contractAddress !== "ARK" && recipients?.length > 1;
+	const isBatchTransfer = !!contractAddress && contractAddress !== "ARK" && recipients?.length > 1;
 
 	const isInBatchTransferFlow = isBatchTransfer && activeTab === SendTransferStep.ReviewStep;
 
