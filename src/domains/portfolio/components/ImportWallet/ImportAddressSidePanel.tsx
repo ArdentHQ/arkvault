@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { JSX, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { HDWalletTabs } from "./HDWallet/HDWalletTabs";
 import { ImportDetailStep } from "./ImportDetailStep";

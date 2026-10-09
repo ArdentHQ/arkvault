@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { useFormContext } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useActiveProfile } from "@/app/hooks";
