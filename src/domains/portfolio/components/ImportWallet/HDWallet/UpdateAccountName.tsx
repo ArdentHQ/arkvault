@@ -68,7 +68,7 @@ export const UpdateAccountName = ({ onAfterSave, onCancel, profile, wallets }: U
 							errorMessage={errors.name?.message}
 							isInvalid={!!errors.name}
 							data-testid="UpdateWalletName__input"
-							ref={register(nameValidation)}
+							{...register("name", nameValidation)}
 						/>
 					</div>
 				</FormField>

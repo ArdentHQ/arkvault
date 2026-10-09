@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { act, env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { UpdateAccountName } from "./UpdateAccountName";
 
 describe("UpdateAccountName", () => {
@@ -84,6 +84,9 @@ describe("UpdateAccountName", () => {
 			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
+		// Let the initial validation settle so it can't override the result of clearing the input.
+		await act(async () => {});
+
 		const user = userEvent.setup();
 
 		// Clear input to make it invalid
@@ -123,6 +126,9 @@ describe("UpdateAccountName", () => {
 		const { unmount } = render(
 			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
+
+		// Let the initial validation settle so it can't override the result of clearing the input.
+		await act(async () => {});
 
 		const user = userEvent.setup();
 
