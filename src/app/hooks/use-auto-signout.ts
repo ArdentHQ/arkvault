@@ -15,7 +15,7 @@ export const useAutoSignOut = (profile?: Contracts.IProfile) => {
 		}
 
 		navigate("/");
-	}, [history]);
+	}, [location.pathname, navigate]);
 
 	const { start, pause } = useIdleTimer({
 		crossTab: true,
