@@ -1,4 +1,4 @@
-import { http, HttpResponse, rest } from "msw";
+import { http, HttpResponse } from "msw";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
 export const tokenTransfersEndpoint = "https://dwallets-evm.mainsailhq.com/api/tokens/transfers";
