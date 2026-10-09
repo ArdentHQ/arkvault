@@ -244,7 +244,7 @@ export const AuthenticationStep = ({
 						</FormLabel>
 						<InputPassword
 							data-testid="AuthenticationStep__secret"
-							{...register("secret", authentication.secret(wallet))}
+							{...register("secret", { ...authentication.secret(wallet), shouldUnregister: true })}
 						/>
 					</FormField>
 				</>
@@ -275,7 +275,10 @@ export const AuthenticationStep = ({
 						<FormLabel>{t("TRANSACTION.ENCRYPTION_PASSWORD")}</FormLabel>
 						<InputPassword
 							data-testid="AuthenticationStep__encryption-password"
-							{...register("encryptionPassword", authentication.encryptionPassword(wallet))}
+							{...register("encryptionPassword", {
+								...authentication.encryptionPassword(wallet),
+								shouldUnregister: true,
+							})}
 						/>
 					</FormField>
 				</>
@@ -306,7 +309,7 @@ export const AuthenticationStep = ({
 						<FormLabel>{t("TRANSACTION.MNEMONIC")}</FormLabel>
 						<InputPassword
 							data-testid="AuthenticationStep__mnemonic"
-							{...register("mnemonic", authentication.mnemonic(wallet))}
+							{...register("mnemonic", { ...authentication.mnemonic(wallet), shouldUnregister: true })}
 						/>
 						<MnemonicRules mnemonic={getValues("mnemonic")} wrapperClass="mt-0" />
 					</FormField>
@@ -319,7 +322,10 @@ export const AuthenticationStep = ({
 					<InputPassword
 						data-testid="AuthenticationStep__second-mnemonic"
 						disabled={!getValues("mnemonic") || !!errors.mnemonic}
-						{...register("secondMnemonic", authentication.secondMnemonic(wallet))}
+						{...register("secondMnemonic", {
+							...authentication.secondMnemonic(wallet),
+							shouldUnregister: true,
+						})}
 					/>
 				</FormField>
 			)}
@@ -330,7 +336,10 @@ export const AuthenticationStep = ({
 					<InputPassword
 						data-testid="AuthenticationStep__second-secret"
 						disabled={!getValues("secret") || !!errors.secret}
-						{...register("secondSecret", authentication.secondSecret(wallet))}
+						{...register("secondSecret", {
+							...authentication.secondSecret(wallet),
+							shouldUnregister: true,
+						})}
 					/>
 				</FormField>
 			)}
