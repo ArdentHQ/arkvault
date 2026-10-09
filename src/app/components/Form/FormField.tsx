@@ -3,7 +3,7 @@ import React from "react";
 import cn from "classnames";
 import { get } from "@/app/lib/helpers";
 import { twMerge } from "tailwind-merge";
-import { useFormContext } from "react-hook-form";
+import { useFormContext, useFormState } from "react-hook-form";
 
 type FormFieldProperties = {
 	name: string;
@@ -36,14 +36,13 @@ export const FormFieldStyled = ({
 	return <fieldset {...props} className={twMerge(classNames, props.className)} />;
 };
 
-export const FormField: React.FC<FormFieldProperties> = ({
+const FormFieldContent = ({
 	name,
+	error,
 	disableHover = false,
 	disableStateHints = false,
 	...properties
-}) => {
-	const form = useFormContext();
-	const error: { message: string } | undefined = get(form?.formState.errors, name);
+}: FormFieldProperties & { error?: { message?: string } }) => {
 	const errorMessage = error?.message;
 	const isInvalid = !!error;
 
@@ -60,4 +59,20 @@ export const FormField: React.FC<FormFieldProperties> = ({
 			</FormFieldProvider>
 		</FormFieldStyled>
 	);
+};
+
+const FormFieldWithFormState = (properties: FormFieldProperties) => {
+	const { errors } = useFormState({ name: properties.name });
+
+	return <FormFieldContent error={get(errors, properties.name)} {...properties} />;
+};
+
+export const FormField: React.FC<FormFieldProperties> = (properties) => {
+	const form = useFormContext();
+
+	if (!form) {
+		return <FormFieldContent {...properties} />;
+	}
+
+	return <FormFieldWithFormState {...properties} />;
 };

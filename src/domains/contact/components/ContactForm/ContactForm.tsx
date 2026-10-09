@@ -62,8 +62,10 @@ export const ContactForm = ({
 				<FormLabel>{t("CONTACTS.CONTACT_FORM.NAME")}</FormLabel>
 				<InputDefault
 					data-testid="contact-form__name-input"
-					ref={register(contactFormValidation.name(contact?.id()))}
-					onChange={() => onChange("name")}
+					{...register("name", {
+						...contactFormValidation.name(contact?.id()),
+						onChange: () => onChange("name"),
+					})}
 					defaultValue={contact?.name()}
 				/>
 			</FormField>

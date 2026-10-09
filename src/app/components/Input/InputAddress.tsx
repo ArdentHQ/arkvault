@@ -55,18 +55,10 @@ export const InputAddress = ({
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => onChange?.(event.target.value);
 
-	const registration =
-		registerRef && fieldContext
-			? registerRef(fieldContext.name, { ...rules, onChange: handleChange })
-			: { onChange: handleChange };
+	const name = properties.name ?? fieldContext?.name;
 
-	return (
-		<Input
-			{...registration}
-			type="text"
-			data-testid="InputAddress__input"
-			autoComplete="off"
-			{...properties}
-		/>
-	);
+	const registration =
+		registerRef && name ? registerRef(name, { ...rules, onChange: handleChange }) : { onChange: handleChange };
+
+	return <Input {...registration} type="text" data-testid="InputAddress__input" autoComplete="off" {...properties} />;
 };
