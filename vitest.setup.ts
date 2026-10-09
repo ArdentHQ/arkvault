@@ -91,6 +91,14 @@ vi.mock("p-retry", async () => {
 
 vi.mock("browser-fs-access");
 
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
+
 const createLocalStorageMock = () => {
 	const store: Record<string, string> = {};
 	return {

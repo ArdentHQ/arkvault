@@ -2,7 +2,7 @@ import { isValidProfileUrl } from "@/utils/profile-utils";
 import { ProfilePaths } from "@/router/paths";
 import { Middleware, MiddlewareParameters } from "@/router/router.types";
 import { isAllowedUrl, isDisabledUrl, isKnownPath } from "@/utils/url-validation";
-import { generatePath } from "react-router-dom";
+import { generatePath } from "react-router";
 
 export class UrlValidationMiddleware implements Middleware {
 	handler({ navigate, env, location }: MiddlewareParameters): boolean {

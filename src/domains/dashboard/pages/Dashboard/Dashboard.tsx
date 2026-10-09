@@ -2,7 +2,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 import React, { useEffect, useMemo, useState } from "react";
 import { Tab, TabList, TabScroll, Tabs } from "@/app/components/Tabs";
-import { generatePath, useNavigate } from "react-router-dom";
+import { generatePath, useNavigate } from "react-router";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
 import { Address } from "@/app/components/Address";
