@@ -49,6 +49,37 @@ describe("useAutoSignOut", () => {
 		vi.useRealTimers();
 	});
 
+	it("should redirect to home when idle after navigating away from home", async () => {
+		process.env.IDLE_TIME_THRESHOLD = "0";
+		vi.useFakeTimers({ shouldAdvanceTime: true });
+
+		const profile = env.profiles().findById(getMainsailProfileId());
+
+		vi.spyOn(profile.settings(), "get").mockReturnValue(0.001);
+		const Component = () => {
+			const { startIdleTimer } = useAutoSignOut(profile);
+			return <div data-testid="StartIdleTimer" onClick={() => startIdleTimer()} />;
+		};
+
+		const { router } = render(<Component />, {
+			route: "/",
+		});
+
+		await act(() => router.navigate(`/profiles/${profile.id()}/dashboard`));
+
+		await userEvent.click(screen.getByTestId("StartIdleTimer"));
+
+		act(() => {
+			vi.advanceTimersByTime(1000);
+		});
+
+		await waitFor(() => {
+			expect(router.state.location.pathname).toBe("/");
+		});
+
+		vi.useRealTimers();
+	});
+
 	it("should not redirect if already in home", async () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
 		vi.useFakeTimers({ shouldAdvanceTime: true });
