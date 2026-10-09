@@ -11,7 +11,8 @@ import { Contracts, Environment } from "@/app/lib/profiles";
 import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
 import { RenderResult, render, renderHook } from "@testing-library/react";
 
-import { createMemoryRouter, RouterProvider, useLocation } from "react-router-dom";
+import { createMemoryRouter, useLocation } from "react-router";
+import { RouterProvider } from "react-router/dom";
 import { BigNumber } from "@/app/lib/helpers";
 import { DTO } from "@/app/lib/profiles";
 import { DateTime } from "@/app/lib/intl";

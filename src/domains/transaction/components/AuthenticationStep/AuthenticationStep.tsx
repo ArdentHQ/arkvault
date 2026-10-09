@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { ListenLedger } from "./Ledger/ListenLedger";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputPassword } from "@/app/components/Input";
