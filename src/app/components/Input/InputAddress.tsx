@@ -1,16 +1,17 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { RegisterOptions } from "react-hook-form";
+import { RegisterOptions, UseFormRegister } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { Input } from "./Input";
+import { useFormField } from "@/app/components/Form/useFormField";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 
 export type InputAddressProperties = {
 	profile: Contracts.IProfile;
 	coin?: string;
 	network?: string;
-	registerRef?: (options: RegisterOptions) => (reference: HTMLInputElement | null) => void;
+	registerRef?: UseFormRegister<any>;
 	additionalRules?: RegisterOptions;
 	onValidAddress?: (address: string) => void;
 	onChange?: (address: string) => void;
@@ -26,9 +27,11 @@ export const InputAddress = ({
 	additionalRules = defaultProps.additionalRules,
 	onValidAddress,
 	useDefaultRules = true,
+	onChange,
 	...properties
 }: InputAddressProperties) => {
 	const { t } = useTranslation();
+	const fieldContext = useFormField();
 
 	const validateAddress = (address: string) => {
 		const isValidAddress: boolean = new AddressService().validate(address);
@@ -50,9 +53,16 @@ export const InputAddress = ({
 	};
 	const rules = useDefaultRules ? defaultRules : additionalRules;
 
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => onChange?.(event.target.value);
+
+	const registration =
+		registerRef && fieldContext
+			? registerRef(fieldContext.name, { ...rules, onChange: handleChange })
+			: { onChange: handleChange };
+
 	return (
 		<Input
-			ref={registerRef?.(rules)}
+			{...registration}
 			type="text"
 			data-testid="InputAddress__input"
 			autoComplete="off"

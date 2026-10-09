@@ -42,15 +42,10 @@ export const FormField: React.FC<FormFieldProperties> = ({
 	disableStateHints = false,
 	...properties
 }) => {
-	const FormProvider = useFormContext();
-	const { isInvalid, errorMessage } = React.useMemo(() => {
-		const error: { message: string } | undefined = get(FormProvider?.errors, name);
-
-		return {
-			errorMessage: error?.message,
-			isInvalid: !!error,
-		};
-	}, [FormProvider, name]);
+	const form = useFormContext();
+	const error: { message: string } | undefined = get(form?.formState.errors, name);
+	const errorMessage = error?.message;
+	const isInvalid = !!error;
 
 	return (
 		<FormFieldStyled
