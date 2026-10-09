@@ -8,7 +8,7 @@ import {
 	PanelsProvider,
 } from "@/app/contexts";
 import { Contracts, Environment } from "@/app/lib/profiles";
-import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
+import { FormProvider, UseFormReturn, useForm } from "react-hook-form";
 import { RenderResult, render, renderHook } from "@testing-library/react";
 
 import { createMemoryRouter, useLocation } from "react-router";
@@ -79,7 +79,7 @@ export function renderWithForm(
 	options?: {
 		withProviders?: boolean;
 		defaultValues?: any;
-		registerCallback?: (useFormMethods: UseFormMethods) => void;
+		registerCallback?: (useFormMethods: UseFormReturn) => void;
 		shouldUnregister?: boolean;
 		breakpoint?: LayoutBreakpoint;
 	},
@@ -95,7 +95,7 @@ export function renderWithForm(
 
 	const defaultValues = options?.defaultValues ?? {};
 
-	let form: UseFormMethods | undefined;
+	let form: UseFormReturn | undefined;
 
 	const Component = () => {
 		form = useForm<any>({
@@ -103,6 +103,9 @@ export function renderWithForm(
 			mode: "onChange",
 			shouldUnregister: options?.shouldUnregister,
 		});
+
+		// Reading formState during render subscribes it, so tests can read up-to-date values from `form()`.
+		void [form.formState.errors, form.formState.isDirty, form.formState.dirtyFields, form.formState.isValid];
 
 		options?.registerCallback?.(form);
 

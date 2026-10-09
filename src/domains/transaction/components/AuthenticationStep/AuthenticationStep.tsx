@@ -173,7 +173,11 @@ export const AuthenticationStep = ({
 }: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
 
-	const { register, errors, getValues } = useFormContext();
+	const {
+		register,
+		getValues,
+		formState: { errors },
+	} = useFormContext();
 	const { authentication } = useValidation();
 
 	if (wallet.isLedger()) {
@@ -240,7 +244,7 @@ export const AuthenticationStep = ({
 						</FormLabel>
 						<InputPassword
 							data-testid="AuthenticationStep__secret"
-							ref={register(authentication.secret(wallet))}
+							{...register("secret", authentication.secret(wallet))}
 						/>
 					</FormField>
 				</>
@@ -271,7 +275,7 @@ export const AuthenticationStep = ({
 						<FormLabel>{t("TRANSACTION.ENCRYPTION_PASSWORD")}</FormLabel>
 						<InputPassword
 							data-testid="AuthenticationStep__encryption-password"
-							ref={register(authentication.encryptionPassword(wallet))}
+							{...register("encryptionPassword", authentication.encryptionPassword(wallet))}
 						/>
 					</FormField>
 				</>
@@ -302,7 +306,7 @@ export const AuthenticationStep = ({
 						<FormLabel>{t("TRANSACTION.MNEMONIC")}</FormLabel>
 						<InputPassword
 							data-testid="AuthenticationStep__mnemonic"
-							ref={register(authentication.mnemonic(wallet))}
+							{...register("mnemonic", authentication.mnemonic(wallet))}
 						/>
 						<MnemonicRules mnemonic={getValues("mnemonic")} wrapperClass="mt-0" />
 					</FormField>
@@ -314,8 +318,8 @@ export const AuthenticationStep = ({
 					<FormLabel>{t("TRANSACTION.SECOND_MNEMONIC")}</FormLabel>
 					<InputPassword
 						data-testid="AuthenticationStep__second-mnemonic"
-						disabled={!getValues("mnemonic") || errors.mnemonic}
-						ref={register(authentication.secondMnemonic(wallet))}
+						disabled={!getValues("mnemonic") || !!errors.mnemonic}
+						{...register("secondMnemonic", authentication.secondMnemonic(wallet))}
 					/>
 				</FormField>
 			)}
@@ -325,8 +329,8 @@ export const AuthenticationStep = ({
 					<FormLabel>{t("TRANSACTION.SECOND_SECRET")}</FormLabel>
 					<InputPassword
 						data-testid="AuthenticationStep__second-secret"
-						disabled={!getValues("secret") || errors.secret}
-						ref={register(authentication.secondSecret(wallet))}
+						disabled={!getValues("secret") || !!errors.secret}
+						{...register("secondSecret", authentication.secondSecret(wallet))}
 					/>
 				</FormField>
 			)}
