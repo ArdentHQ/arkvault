@@ -85,7 +85,7 @@ describe("UpdateAccountName", () => {
 		);
 
 		// Let the initial validation settle so it can't override the result of clearing the input.
-		await act(async () => {});
+		await act(() => new Promise((resolve) => setTimeout(resolve, 0)));
 
 		const user = userEvent.setup();
 
@@ -128,7 +128,7 @@ describe("UpdateAccountName", () => {
 		);
 
 		// Let the initial validation settle so it can't override the result of clearing the input.
-		await act(async () => {});
+		await act(() => new Promise((resolve) => setTimeout(resolve, 0)));
 
 		const user = userEvent.setup();
 
