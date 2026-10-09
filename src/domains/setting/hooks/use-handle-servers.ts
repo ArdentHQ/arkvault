@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Http, Networks } from "@/app/lib/mainsail";
 import { addressIsValid as checkIfAddressIsValid, getServerHeight } from "@/utils/peers";
-import { DeepMap, FieldError } from "react-hook-form";
+import { FieldError, FieldErrors } from "react-hook-form";
 import { CustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { useTranslation } from "react-i18next";
 
@@ -49,7 +49,7 @@ const useHandleServers = ({
 	transactionApiEndpoint: string;
 	evmApiEndpoint: string;
 	network?: Networks.Network;
-	errors: DeepMap<CustomNetwork, FieldError>;
+	errors: FieldErrors<CustomNetwork>;
 	setError: (name: keyof CustomNetwork, error: FieldError) => void;
 	clearErrors: (name: keyof CustomNetwork | (keyof CustomNetwork)[] | undefined) => void;
 }) => {

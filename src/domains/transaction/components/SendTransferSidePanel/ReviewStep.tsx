@@ -33,7 +33,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue } = useFormContext();
 	const { recipients, tokenContractAddress } = watch();
 	const profile = useActiveProfile();
-	const { gasPrice, gasLimit } = getValues(["gasPrice", "gasLimit"]);
+	const { gasPrice, gasLimit } = getValues();
 
 	const nativeTokenBalance = wallet.balance();
 

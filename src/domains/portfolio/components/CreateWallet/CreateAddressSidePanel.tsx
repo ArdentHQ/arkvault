@@ -160,7 +160,7 @@ export const CreateAddressesSidePanel = ({
 		}
 
 		if (newIndex === CreateStep.SuccessStep && !isHDWalletCreation) {
-			const { mnemonic, network } = getValues(["mnemonic", "network"]);
+			const { mnemonic, network } = getValues();
 
 			assertNetwork(network);
 			assertString(mnemonic);
