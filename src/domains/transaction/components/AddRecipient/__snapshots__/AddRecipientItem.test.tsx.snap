@@ -61,7 +61,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
           >
             <span
-              class="mr-2 text-base font-semibold text-theme-text leading-5 text-theme-text"
+              class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text leading-5 text-theme-text"
               data-testid="Address__alias"
             >
               <span>
@@ -76,7 +76,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
               </span>
             </span>
             <div
-              class="min-w-0 grow"
+              class="min-w-0 shrink-0 grow basis-0"
             >
               <span
                 class="block w-full"
@@ -182,7 +182,7 @@ exports[`Add Recipient item > should render with size lg 1`] = `
             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
           >
             <span
-              class="mr-2 text-base font-semibold text-theme-text leading-5 text-theme-text"
+              class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text leading-5 text-theme-text"
               data-testid="Address__alias"
             >
               <span>
@@ -197,7 +197,7 @@ exports[`Add Recipient item > should render with size lg 1`] = `
               </span>
             </span>
             <div
-              class="min-w-0 grow"
+              class="min-w-0 shrink-0 grow basis-0"
             >
               <span
                 class="block w-full"
@@ -311,7 +311,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
                   class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                 >
                   <span
-                    class="mr-2 text-base font-semibold text-theme-text leading-[17px] text-sm"
+                    class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text leading-[17px] text-sm"
                     data-testid="Address__alias"
                   >
                     <span>
@@ -326,7 +326,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
                     </span>
                   </span>
                   <div
-                    class="min-w-0 grow"
+                    class="min-w-0 shrink-0 grow basis-0"
                   >
                     <span
                       class="block w-full"
@@ -455,7 +455,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
             class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
           >
             <span
-              class="mr-2 text-base font-semibold text-theme-text leading-5 text-theme-text"
+              class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text leading-5 text-theme-text"
               data-testid="Address__alias"
             >
               <span>
@@ -470,7 +470,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
               </span>
             </span>
             <div
-              class="min-w-0 grow"
+              class="min-w-0 shrink-0 grow basis-0"
             >
               <span
                 class="block w-full"

@@ -218,7 +218,7 @@ exports[`AddressTable > should render 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <span
-                      class="mr-2 text-base font-semibold text-theme-text text-sm"
+                      class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm"
                       data-testid="Address__alias"
                     >
                       <span>
@@ -233,7 +233,7 @@ exports[`AddressTable > should render 1`] = `
                       </span>
                     </span>
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -646,7 +646,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <span
-                      class="mr-2 text-base font-semibold text-theme-text text-sm"
+                      class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm"
                       data-testid="Address__alias"
                     >
                       <span>
@@ -661,7 +661,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                       </span>
                     </span>
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -1307,7 +1307,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <span
-                      class="mr-2 text-base font-semibold text-theme-text text-sm"
+                      class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-sm"
                       data-testid="Address__alias"
                     >
                       <span>
@@ -1322,7 +1322,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
                       </span>
                     </span>
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"

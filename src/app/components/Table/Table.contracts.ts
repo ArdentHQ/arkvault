@@ -13,6 +13,14 @@ export interface TableProperties<RowDataType extends Record<never, unknown>> {
 	footer?: React.ReactNode;
 	manualSortBy?: boolean;
 	onSortChange?: (column: string, desc: boolean) => void;
+	fixedLayout?: boolean;
+	/**
+	 * Stable identity for a row. Defaults to the row index, which makes React remount
+	 * every row whenever one is inserted or removed above it. Pass this for lists that
+	 * change while on screen (e.g. a new unconfirmed transaction) so existing rows
+	 * keep their DOM nodes, their state and any layout they already measured.
+	 */
+	getRowId?: (row: RowDataType, index: number) => string;
 }
 
 export interface SortBy {
