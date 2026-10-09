@@ -1,8 +1,0 @@
-allowBuilds:
-  "@ardenthq/arkvault-url": true
-  "@tailwindcss/oxide": true
-  bcrypto: true
-  esbuild: true
-  keccak: true
-  msw: true
-  secp256k1: true
