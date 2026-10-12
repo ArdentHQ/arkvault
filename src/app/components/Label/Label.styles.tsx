@@ -4,14 +4,7 @@ import { Size } from "@/types";
 const baseStyle = "inline-block font-semibold overflow-hidden no-ligatures";
 
 export type ColorType =
-	| "primary"
-	| "success"
-	| "danger"
-	| "warning"
-	| "neutral"
-	| "success-bg"
-	| "danger-bg"
-	| "secondary";
+	"primary" | "success" | "danger" | "warning" | "neutral" | "success-bg" | "danger-bg" | "secondary";
 
 const getColor = (color?: ColorType, variant?: string) => {
 	if (variant === "solid") {
