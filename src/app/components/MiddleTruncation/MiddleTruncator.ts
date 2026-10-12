@@ -55,7 +55,13 @@ export class Utils {
 export class MiddleTruncator {
 	static ELLIPSIS = "...";
 
-	static truncate(text: string, availableWidth: number, font: string): string {
+	/**
+	 * Truncates `text` in the middle so it fits `availableWidth`.
+	 *
+	 * `minCharacters` is the smallest truncation that still carries information (head + tail).
+	 * When the width cannot afford it, nothing is returned rather than a contentless ellipsis.
+	 */
+	static truncate(text: string, availableWidth: number, font: string, minCharacters = 0): string {
 		if (TextMeasurer.canFit(text, availableWidth, font)) {
 			return text;
 		}
@@ -64,6 +70,11 @@ export class MiddleTruncator {
 		const availableWidthForText = availableWidth - ellipsisWidth;
 
 		const totalCharacters = TextMeasurer.findMaximumTotalCharacters(text, availableWidthForText, font);
+
+		if (totalCharacters < minCharacters) {
+			return "";
+		}
+
 		const { headLength, tailLength } = Utils.splitHeadAndTail(totalCharacters);
 
 		return Utils.buildTruncatedText(text, headLength, tailLength);

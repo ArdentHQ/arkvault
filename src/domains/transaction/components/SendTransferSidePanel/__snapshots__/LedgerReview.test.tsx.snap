@@ -38,7 +38,7 @@ exports[`TransferLedgerReview > should render 1`] = `
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end sm:justify-start"
             >
               <span
-                class="mr-2 text-base font-semibold text-theme-text text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
                 data-testid="Address__alias"
               >
                 <span>
@@ -53,7 +53,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                 </span>
               </span>
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -341,7 +341,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end sm:justify-start"
             >
               <span
-                class="mr-2 text-base font-semibold text-theme-text text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
                 data-testid="Address__alias"
               >
                 <span>
@@ -356,7 +356,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                 </span>
               </span>
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -661,7 +661,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-end sm:justify-start"
             >
               <span
-                class="mr-2 text-base font-semibold text-theme-text text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
                 data-testid="Address__alias"
               >
                 <span>
@@ -676,7 +676,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                 </span>
               </span>
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
