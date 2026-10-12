@@ -45,7 +45,7 @@
 		"unused": "npx knip --config ./knip.json"
 	},
 	"dependencies": {
-		"@ardenthq/arkvault-crypto": "^0.0.8",
+		"@ardenthq/arkvault-crypto": "^0.0.9",
 		"@ardenthq/arkvault-url": "^1.2.0",
 		"@arkecosystem/typescript-client": "^0.19.0",
 		"@arkecosystem/typescript-crypto": "^0.0.33",
@@ -62,8 +62,6 @@
 		"bignumber.js": "^11.1.5",
 		"browser-fs-access": "^0.38.0",
 		"classnames": "^2.5.1",
-		"@noble/ciphers": "^2.4.0",
-		"@noble/hashes": "^2.4.0",
 		"dayjs": "^1.11.23",
 		"deepmerge": "^4.3.1",
 		"dinero.js": "^2.0.2",

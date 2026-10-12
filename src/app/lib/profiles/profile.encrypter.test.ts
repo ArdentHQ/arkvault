@@ -3,32 +3,11 @@ import { IProfile, IProfileEncrypter } from "./contracts";
 import { ProfileEncrypter } from "./profile.encrypter";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { PBKDF2, Base64 } from "@ardenthq/arkvault-crypto";
-import { cbc } from "@noble/ciphers/aes.js";
-import { md5 } from "@noble/hashes/legacy.js";
-import { concatBytes, randomBytes } from "@noble/hashes/utils.js";
 
-function evpBytesToKey(password: string, salt: Uint8Array): { key: Uint8Array; iv: Uint8Array } {
-	const passwordBytes = new TextEncoder().encode(password);
-	let derived = new Uint8Array(0);
-	let block = new Uint8Array(0);
-
-	while (derived.length < 48) {
-		block = md5(concatBytes(block, passwordBytes, salt));
-		derived = concatBytes(derived, block);
-	}
-
-	return { iv: derived.slice(32, 48), key: derived.slice(0, 32) };
-}
-
-function legacyAESEncrypt(plaintext: string, password: string): string {
-	const salt = randomBytes(8);
-	const { key, iv } = evpBytesToKey(password, salt);
-	const plaintextBytes = new TextEncoder().encode(plaintext);
-	const encrypted = cbc(key, iv).encrypt(plaintextBytes);
-	const header = new TextEncoder().encode("Salted__");
-	const result = concatBytes(header, salt, encrypted);
-	return btoa(Array.from(result, (b) => String.fromCharCode(b)).join(""));
-}
+// crypto-js@4.2.0: AES.encrypt('{"data":{"wallets":{"legacy":true}}}', "my-password").toString()
+const LEGACY_FIXTURE_ASCII = "U2FsdGVkX19grIMNTCW8AxTGRfWnyM4hBr3WeT7gmBAbJhT0MjSiKw+nYSkuZpbt6KJNDCbQTWP1/h1xWGoX2w==";
+// crypto-js@4.2.0: AES.encrypt('{"data":{"wallets":{"unicode":true}}}', "pässwörð").toString()
+const LEGACY_FIXTURE_UNICODE = "U2FsdGVkX1/YJdsl10e9lCodV/e5bmEj0wCLmA6mCI9qWW+3UicCcZEIbfXpJTgEmRiwCv6MnMte6+F+iOshGg==";
 
 describe("ProfileEncrypter", () => {
 	let profile: IProfile;
@@ -85,52 +64,24 @@ describe("ProfileEncrypter", () => {
 			);
 		});
 
-		it("should fallback to AES decryption for legacy data", async () => {
-			const profileData = { data: { wallets: { legacy: true } } };
-			const aesEncrypted = legacyAESEncrypt(JSON.stringify(profileData), password);
-			const base64 = Base64.encode(aesEncrypted);
-
-			profile.getAttributes().set("data", base64);
+		it("should fallback to legacy AES decryption for old profile data", async () => {
+			profile.getAttributes().set("data", Base64.encode(LEGACY_FIXTURE_ASCII));
 
 			const decrypted = await subject.decrypt(password);
 			expect(decrypted).toEqual({ wallets: { legacy: true } });
 		});
 
-		it("should decrypt data produced by crypto-js@4.2.0", async () => {
-			// Fixed ciphertext from: AES.encrypt('{"data":{"wallets":{"legacy":true}}}', "my-password").toString()
-			profile.getAttributes().set(
-				"data",
-				Base64.encode(
-					"U2FsdGVkX19grIMNTCW8AxTGRfWnyM4hBr3WeT7gmBAbJhT0MjSiKw+nYSkuZpbt6KJNDCbQTWP1/h1xWGoX2w==",
-				),
-			);
-
-			const decrypted = await subject.decrypt(password);
-			expect(decrypted).toEqual({ wallets: { legacy: true } });
-		});
-
-		it("should decrypt data produced by crypto-js@4.2.0 with unicode password", async () => {
-			// Fixed ciphertext from: AES.encrypt('{"data":{"wallets":{"unicode":true}}}', "pässwörð").toString()
-			profile.getAttributes().set(
-				"data",
-				Base64.encode(
-					"U2FsdGVkX1/YJdsl10e9lCodV/e5bmEj0wCLmA6mCI9qWW+3UicCcZEIbfXpJTgEmRiwCv6MnMte6+F+iOshGg==",
-				),
-			);
+		it("should decrypt legacy data with unicode password", async () => {
+			profile.getAttributes().set("data", Base64.encode(LEGACY_FIXTURE_UNICODE));
 
 			const decrypted = await subject.decrypt("pässwörð");
 			expect(decrypted).toEqual({ wallets: { unicode: true } });
 		});
 
 		it("should throw for wrong password on legacy data", async () => {
-			profile.getAttributes().set(
-				"data",
-				Base64.encode(
-					"U2FsdGVkX19grIMNTCW8AxTGRfWnyM4hBr3WeT7gmBAbJhT0MjSiKw+nYSkuZpbt6KJNDCbQTWP1/h1xWGoX2w==",
-				),
-			);
+			profile.getAttributes().set("data", Base64.encode(LEGACY_FIXTURE_ASCII));
 
-			await expect(subject.decrypt("wrong-password")).rejects.toThrow("aes: bad decrypt");
+			await expect(subject.decrypt("wrong-password")).rejects.toThrow("unable to decrypt data");
 		});
 	});
 });
