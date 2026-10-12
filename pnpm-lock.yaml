@@ -18,8 +18,8 @@ importers:
         specifier: ^0.19.0
         version: 0.19.0
       '@arkecosystem/typescript-crypto':
-        specifier: ^0.0.33
-        version: 0.0.33
+        specifier: ^0.0.34
+        version: 0.0.34
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0
@@ -387,8 +387,8 @@ packages:
     resolution: {integrity: sha512-0zLB0CMEjgQrwHBZBVTTpIjzGqr1B7A046DXvXfaFacvWPjf3ioQJHF3lQ7K1OpBaiF6KDMW7EEUXtexnb0k1g==}
     engines: {node: '>=20.12.2'}
 
-  '@arkecosystem/typescript-crypto@0.0.33':
-    resolution: {integrity: sha512-JoW5BsuCmIukrJDlSdIi7BCOY3nPvi+ZIUXKuqlc+jgTLV21CMuBjKkdIVi/6k4/pwRFuqI3z/xdvbAMGk1wsw==}
+  '@arkecosystem/typescript-crypto@0.0.34':
+    resolution: {integrity: sha512-1PxH1rujYIv7r3DA9pOuIcOZ8KYTkUUGifjMU59lVSGs2G9sPDYx1y89qvGRqQ4bcK8GoBrg183KV3ECm2RiMQ==}
     engines: {node: '>=22.14.2'}
 
   '@asamuzakjp/css-color@7.1.5':
@@ -6408,7 +6408,7 @@ snapshots:
 
   '@arkecosystem/typescript-client@0.19.0': {}
 
-  '@arkecosystem/typescript-crypto@0.0.33':
+  '@arkecosystem/typescript-crypto@0.0.34':
     dependencies:
       '@noble/curves': 2.4.0
       '@scure/bip39': 2.4.0
