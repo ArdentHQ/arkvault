@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Networks } from "@/app/lib/mainsail";
 import { useForm } from "react-hook-form";
@@ -102,13 +102,7 @@ const ServerFormModal = ({
 		}
 	}, [network, nameWasManuallySet]);
 
-	const formIsValid = useMemo(() => {
-		if (fetchingDetails) {
-			return false;
-		}
-
-		return isValid;
-	}, [fetchingDetails, isValid]);
+	const formIsValid = !fetchingDetails && isValid && Object.keys(errors).length === 0;
 
 	const handleSubmit = (values: CustomNetwork) => {
 		if (networkToUpdate) {
