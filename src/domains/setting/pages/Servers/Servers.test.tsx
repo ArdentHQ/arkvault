@@ -20,6 +20,9 @@ import { server, requestMock } from "@/tests/mocks/server";
 import cryptoConfiguration from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json";
 import { act } from "@testing-library/react";
 
+// The form validates asynchronously on mount, so let it settle before a synchronous test ends.
+const waitForInitialValidation = () => act(() => new Promise((resolve) => setTimeout(resolve, 0)));
+
 let profile: Contracts.IProfile;
 let network: Networks.Network;
 
@@ -200,7 +203,7 @@ describe("Servers Settings", () => {
 		mockTxEndpoint();
 	});
 
-	it("should render servers page", () => {
+	it("should render servers page", async () => {
 		const { container, asFragment } = render(<ServersSettings />, {
 			route: `/profiles/${profile.id()}/settings/servers`,
 		});
@@ -212,6 +215,8 @@ describe("Servers Settings", () => {
 		expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
+
+		await waitForInitialValidation();
 	});
 
 	it("should update profile fallback to default nodes setting", async () => {
@@ -235,7 +240,7 @@ describe("Servers Settings", () => {
 	});
 
 	describe("Default peers", () => {
-		it("should render node statuses", () => {
+		it("should render node statuses", async () => {
 			const { container } = render(<ServersSettings />, {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
@@ -245,6 +250,8 @@ describe("Servers Settings", () => {
 			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
 			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
+
+			await waitForInitialValidation();
 		});
 
 		describe("Node statuses", () => {
@@ -812,7 +819,7 @@ describe("Servers Settings", () => {
 			profileHostsSpy.mockRestore();
 		});
 
-		it("should render custom servers", () => {
+		it("should render custom servers", async () => {
 			const { asFragment } = render(<ServersSettings />, {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
@@ -826,6 +833,8 @@ describe("Servers Settings", () => {
 			expect(within(table).getAllByTestId(CustomPeersNetworkItem)).toHaveLength(1);
 
 			expect(asFragment()).toMatchSnapshot();
+
+			await waitForInitialValidation();
 		});
 
 		it("should fill the form and generate a name", async () => {
@@ -860,7 +869,7 @@ describe("Servers Settings", () => {
 			});
 		});
 
-		it("should render customs servers in xs", () => {
+		it("should render customs servers in xs", async () => {
 			const { asFragment } = renderResponsiveWithRoute(<ServersSettings />, "xs", {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
@@ -874,6 +883,8 @@ describe("Servers Settings", () => {
 			expect(within(table).getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1);
 
 			expect(asFragment()).toMatchSnapshot();
+
+			await waitForInitialValidation();
 		});
 
 		it("can expand a custom servers accordion in xs", async () => {
