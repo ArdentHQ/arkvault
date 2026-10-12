@@ -218,6 +218,7 @@ describe("Servers Settings", () => {
 	});
 
 	it("should update profile fallback to default nodes setting", async () => {
+		const fallbackToDefaultNodes = profile.settings().get(Contracts.ProfileSetting.FallbackToDefaultNodes);
 		const settingsSetSpy = vi.spyOn(profile.settings(), "set");
 
 		const { container } = render(<ServersSettings />, {
@@ -235,6 +236,7 @@ describe("Servers Settings", () => {
 		await waitFor(() => expect(settingsSetSpy).toHaveBeenCalledWith("FALLBACK_TO_DEFAULT_NODES", false));
 
 		settingsSetSpy.mockRestore();
+		profile.settings().set(Contracts.ProfileSetting.FallbackToDefaultNodes, fallbackToDefaultNodes);
 	});
 
 	describe("Default peers", () => {
