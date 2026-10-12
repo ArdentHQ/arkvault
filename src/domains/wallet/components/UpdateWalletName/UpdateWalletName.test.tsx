@@ -6,6 +6,7 @@ import { UpdateWalletName } from "./UpdateWalletName";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations } from "@/domains/wallet/i18n";
 import {
+	act,
 	env,
 	getDefaultMainsailWalletId,
 	getMainsailProfileId,
@@ -23,7 +24,7 @@ describe("UpdateWalletName", () => {
 		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 	});
 
-	it("should render", () => {
+	it("should render", async () => {
 		const { asFragment } = render(
 			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
@@ -33,6 +34,9 @@ describe("UpdateWalletName", () => {
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.DESCRIPTION);
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(commonTranslations.NAME);
 		expect(asFragment()).toMatchSnapshot();
+
+		// Let the initial validation settle so its state update doesn't leak into the next test.
+		await act(() => new Promise((resolve) => setTimeout(resolve, 0)));
 	});
 
 	it("should rename wallet", async () => {
