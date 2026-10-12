@@ -95,5 +95,42 @@ describe("ProfileEncrypter", () => {
 			const decrypted = await subject.decrypt(password);
 			expect(decrypted).toEqual({ wallets: { legacy: true } });
 		});
+
+		it("should decrypt data produced by crypto-js@4.2.0", async () => {
+			// Fixed ciphertext from: AES.encrypt('{"data":{"wallets":{"legacy":true}}}', "my-password").toString()
+			profile.getAttributes().set(
+				"data",
+				Base64.encode(
+					"U2FsdGVkX19grIMNTCW8AxTGRfWnyM4hBr3WeT7gmBAbJhT0MjSiKw+nYSkuZpbt6KJNDCbQTWP1/h1xWGoX2w==",
+				),
+			);
+
+			const decrypted = await subject.decrypt(password);
+			expect(decrypted).toEqual({ wallets: { legacy: true } });
+		});
+
+		it("should decrypt data produced by crypto-js@4.2.0 with unicode password", async () => {
+			// Fixed ciphertext from: AES.encrypt('{"data":{"wallets":{"unicode":true}}}', "pässwörð").toString()
+			profile.getAttributes().set(
+				"data",
+				Base64.encode(
+					"U2FsdGVkX1/YJdsl10e9lCodV/e5bmEj0wCLmA6mCI9qWW+3UicCcZEIbfXpJTgEmRiwCv6MnMte6+F+iOshGg==",
+				),
+			);
+
+			const decrypted = await subject.decrypt("pässwörð");
+			expect(decrypted).toEqual({ wallets: { unicode: true } });
+		});
+
+		it("should throw for wrong password on legacy data", async () => {
+			profile.getAttributes().set(
+				"data",
+				Base64.encode(
+					"U2FsdGVkX19grIMNTCW8AxTGRfWnyM4hBr3WeT7gmBAbJhT0MjSiKw+nYSkuZpbt6KJNDCbQTWP1/h1xWGoX2w==",
+				),
+			);
+
+			await expect(subject.decrypt("wrong-password")).rejects.toThrow("aes: bad decrypt");
+		});
 	});
 });
