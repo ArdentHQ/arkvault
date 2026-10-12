@@ -18,8 +18,8 @@ importers:
         specifier: ^0.19.0
         version: 0.19.0
       '@arkecosystem/typescript-crypto':
-        specifier: ^0.0.33
-        version: 0.0.33
+        specifier: ^0.0.34
+        version: 0.0.34
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0
@@ -37,12 +37,12 @@ importers:
         version: 6.35.0
       '@tailwindcss/forms':
         specifier: ^0.5.11
-        version: 0.5.11(tailwindcss@4.3.0)
+        version: 0.5.11(tailwindcss@4.3.3)
       '@tailwindcss/postcss':
-        specifier: ^4.3.0
+        specifier: ^4.3.3
         version: 4.3.3
       '@tailwindcss/vite':
-        specifier: ^4.3.0
+        specifier: ^4.3.3
         version: 4.3.3(vite@8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
       ajv:
         specifier: ^8.20.0
@@ -90,7 +90,7 @@ importers:
         specifier: ^14.0.0
         version: 14.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       i18next:
-        specifier: ^26.2.0
+        specifier: ^26.4.2
         version: 26.4.3(typescript@6.0.3)
       joi:
         specifier: ^18.2.9
@@ -106,7 +106,7 @@ importers:
         version: 1.1.0
       p-queue:
         specifier: ^9.3.3
-        version: 9.3.3
+        version: 9.3.4
       p-retry:
         specifier: ^8.0.1
         version: 8.0.1
@@ -135,7 +135,7 @@ importers:
         specifier: 6.15.8
         version: 6.15.8(react@19.3.0)
       react-i18next:
-        specifier: ^17.0.15
+        specifier: ^17.0.16
         version: 17.0.16(i18next@26.4.3(typescript@6.0.3))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@6.0.3)
       react-idle-timer:
         specifier: 5.7.3
@@ -186,7 +186,7 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(react@19.3.0)
       viem:
-        specifier: ^2.51.0
+        specifier: ^2.57.4
         version: 2.57.4(typescript@6.0.3)(zod@4.6.5)
     devDependencies:
       '@cucumber/cucumber':
@@ -243,9 +243,6 @@ importers:
       '@vitest/coverage-istanbul':
         specifier: 5.0.3
         version: 5.0.3(vitest@5.0.3)
-      autoprefixer:
-        specifier: ^10.5.0
-        version: 10.6.1(postcss@8.5.29)
       cross-fetch:
         specifier: ^4.1.0
         version: 4.1.0
@@ -319,7 +316,7 @@ importers:
         specifier: ^3.0.2
         version: 3.0.3(@types/node@26.6.5)(typescript@6.0.3)(vite@8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
       postcss:
-        specifier: ^8.5.28
+        specifier: ^8.5.29
         version: 8.5.29
       prettier:
         specifier: ^3.9.9
@@ -331,8 +328,8 @@ importers:
         specifier: ^7.1.1
         version: 7.1.1(rolldown@1.2.13)(rollup@4.64.5)
       tailwindcss:
-        specifier: 4.3.0
-        version: 4.3.0
+        specifier: 4.3.3
+        version: 4.3.3
       testcafe:
         specifier: ^3.7.6
         version: 3.7.6
@@ -390,8 +387,8 @@ packages:
     resolution: {integrity: sha512-0zLB0CMEjgQrwHBZBVTTpIjzGqr1B7A046DXvXfaFacvWPjf3ioQJHF3lQ7K1OpBaiF6KDMW7EEUXtexnb0k1g==}
     engines: {node: '>=20.12.2'}
 
-  '@arkecosystem/typescript-crypto@0.0.33':
-    resolution: {integrity: sha512-JoW5BsuCmIukrJDlSdIi7BCOY3nPvi+ZIUXKuqlc+jgTLV21CMuBjKkdIVi/6k4/pwRFuqI3z/xdvbAMGk1wsw==}
+  '@arkecosystem/typescript-crypto@0.0.34':
+    resolution: {integrity: sha512-1PxH1rujYIv7r3DA9pOuIcOZ8KYTkUUGifjMU59lVSGs2G9sPDYx1y89qvGRqQ4bcK8GoBrg183KV3ECm2RiMQ==}
     engines: {node: '>=22.14.2'}
 
   '@asamuzakjp/css-color@7.1.5':
@@ -2468,13 +2465,6 @@ packages:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
 
-  autoprefixer@10.6.1:
-    resolution: {integrity: sha512-cL1Qz6ADZhcEbny/8HPfe99J6HhNoYtpX2LFLIbhgGE7Q1hlQVkYFdetDN7Id3KiQxhDrHwzlHr/YQCnZ8+xSA==}
-    engines: {node: ^10 || ^12 || >=14}
-    hasBin: true
-    peerDependencies:
-      postcss: ^8.1.0
-
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
@@ -3467,9 +3457,6 @@ packages:
   form-data@4.0.6:
     resolution: {integrity: sha512-vKatAh4SlVfgbv+YtmhiRjhEMJsYpsG1Y2rMQtR+SVSbytsSD1YGzDIcrAJmdFec88u/+VoGmxnl+80gL1tRCQ==}
     engines: {node: '>= 6'}
-
-  fraction.js@5.3.4:
-    resolution: {integrity: sha512-1X1NTtiJphryn/uLQz3whtY6jK3fTqoE3ohKs0tT+Ujr1W59oopxmoEh7Lu5p6vBaPbgoM0bzveAW4Qi5RyWDQ==}
 
   framer-motion@14.1.0:
     resolution: {integrity: sha512-QsdZSdWoyQfUmgi+GZfow8Du5COG6VRYEo9FlgKUPgH87/Le/fYekHCAKwLdYKHdCZcZfWHg4iOxlD6RoqXciQ==}
@@ -4766,8 +4753,8 @@ packages:
     resolution: {integrity: sha512-d3qXVTF/s+W+CdJ5A29wywV2n8CQQYahlgz2bFiA+4eVNJbHJodPZ+/gXwPGh0bOqA+j8S+6+ckmvLGPk1QpxQ==}
     engines: {node: '>=8'}
 
-  p-queue@9.3.3:
-    resolution: {integrity: sha512-NXAOdnEe5FsZJfT4oK84lE1Y5cFFdWlRuOo5tww8DyNMxyRXwn39fIkUtNLKppcPC+UYU/bXujNCUGDv01y7CA==}
+  p-queue@9.3.4:
+    resolution: {integrity: sha512-bpTeG3CuPiOgPcDqn51QUsRYshkiKiaG+hP49tCGI0+nT92h7rqD4LPKZzP8kwab/OniQf+ntA4ta6yCp1eA0Q==}
     engines: {node: '>=20'}
 
   p-retry@8.0.1:
@@ -4921,9 +4908,6 @@ packages:
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
-
-  postcss-value-parser@4.2.0:
-    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
   postcss@8.5.29:
     resolution: {integrity: sha512-49cGhUbXj8Qenv0iTMxA1cFBzxXoctpC9Ujd77t1WcbJIr6nF/eI7g/8MgxrYldFRuAXvja7xQRwavoW7kgrxQ==}
@@ -5715,9 +5699,6 @@ packages:
   tailwind-merge@3.7.0:
     resolution: {integrity: sha512-XPPUyAc+cvspz3lHTcR/QgPfW2A0lv/xQNIjX3HGhLR+Nq2lHaLq5MtTesHn8GUr3W3DguT2KT5x3NVgRtYwmA==}
 
-  tailwindcss@4.3.0:
-    resolution: {integrity: sha512-y6nxMGB1nMW9R6k96e5gdIFzcfL/gTJRNaqGes1YvkLnPVXzWgbqFF2yLC0T8G774n24cx3Pe8XrKoniCOAH+Q==}
-
   tailwindcss@4.3.3:
     resolution: {integrity: sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==}
 
@@ -6427,7 +6408,7 @@ snapshots:
 
   '@arkecosystem/typescript-client@0.19.0': {}
 
-  '@arkecosystem/typescript-crypto@0.0.33':
+  '@arkecosystem/typescript-crypto@0.0.34':
     dependencies:
       '@noble/curves': 2.4.0
       '@scure/bip39': 2.4.0
@@ -8245,10 +8226,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tailwindcss/forms@0.5.11(tailwindcss@4.3.0)':
+  '@tailwindcss/forms@0.5.11(tailwindcss@4.3.3)':
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 4.3.0
+      tailwindcss: 4.3.3
 
   '@tailwindcss/node@4.3.3':
     dependencies:
@@ -8788,15 +8769,6 @@ snapshots:
   asynckit@0.4.0: {}
 
   at-least-node@1.0.0: {}
-
-  autoprefixer@10.6.1(postcss@8.5.29):
-    dependencies:
-      browserslist: 4.29.3
-      caniuse-lite: 1.0.30001815
-      fraction.js: 5.3.4
-      picocolors: 1.1.1
-      postcss: 8.5.29
-      postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
     dependencies:
@@ -9983,8 +9955,6 @@ snapshots:
       es-set-tostringtag: 2.1.0
       hasown: 2.0.4
       mime-types: 2.1.35
-
-  fraction.js@5.3.4: {}
 
   framer-motion@14.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
     dependencies:
@@ -11237,7 +11207,7 @@ snapshots:
     dependencies:
       aggregate-error: 3.1.0
 
-  p-queue@9.3.3:
+  p-queue@9.3.4:
     dependencies:
       eventemitter3: 5.0.4
       p-timeout: 7.0.2
@@ -11366,8 +11336,6 @@ snapshots:
   pngjs@5.0.0: {}
 
   possible-typed-array-names@1.1.0: {}
-
-  postcss-value-parser@4.2.0: {}
 
   postcss@8.5.29:
     dependencies:
@@ -12167,8 +12135,6 @@ snapshots:
   tagged-tag@1.0.0: {}
 
   tailwind-merge@3.7.0: {}
-
-  tailwindcss@4.3.0: {}
 
   tailwindcss@4.3.3: {}
 

@@ -212,11 +212,8 @@ export class TransactionService {
 		const nonce = await this.#generateNonce(input);
 		const { address } = await this.#signerData(input);
 
-		const builder = await ValidatorRegistrationBuilder.new()
-			.validatorProof(input.data.validatorPassphrase, {
-				chainId: Network.get().chainId(),
-				registrantAddress: address!,
-			})
+		const builder = ValidatorRegistrationBuilder.new()
+			.validatorProof(input.data.validatorPassphrase, address!)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString())
@@ -243,11 +240,8 @@ export class TransactionService {
 		const nonce = await this.#generateNonce(input);
 		const { address } = await this.#signerData(input);
 
-		const builder = await ValidatorUpdateBuilder.new()
-			.validatorProof(input.data.validatorPassphrase, {
-				chainId: Network.get().chainId(),
-				registrantAddress: address!,
-			})
+		const builder = ValidatorUpdateBuilder.new()
+			.validatorProof(input.data.validatorPassphrase, address!)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());

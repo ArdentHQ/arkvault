@@ -156,4 +156,11 @@ export const mainsailDevnetHandlers = [
 			data: [],
 		});
 	}),
+
+	// Catch-all: intercept any unhandled devnet request so it never reaches the real network.
+	// If this fires it means a new endpoint needs a dedicated handler above.
+	http.all("https://dwallets-evm.mainsailhq.com/*", ({ request }) => {
+		console.error(`[MSW] Unhandled devnet request: ${request.method} ${request.url}`);
+		return new HttpResponse(null, { status: 501 });
+	}),
 ];
