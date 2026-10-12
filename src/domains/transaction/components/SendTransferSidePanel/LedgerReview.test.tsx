@@ -2,10 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
 import { TransferLedgerReview } from "./LedgerReview";
-import { act, env, getDefaultProfileId, renderWithForm, screen } from "@/utils/testing-library";
-
-// The form validates asynchronously on mount, so let it settle before a synchronous test ends.
-const waitForInitialValidation = () => act(() => new Promise((resolve) => setTimeout(resolve, 0)));
+import { env, getDefaultProfileId, renderWithForm, screen, waitForInitialValidation } from "@/utils/testing-library";
 
 describe("TransferLedgerReview", () => {
 	let profile: Contracts.IProfile;

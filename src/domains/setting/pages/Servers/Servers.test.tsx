@@ -13,15 +13,13 @@ import {
 	fireEvent,
 	within,
 	renderResponsiveWithRoute,
+	waitForInitialValidation,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
 import { http, HttpResponse } from "msw";
 import { server, requestMock } from "@/tests/mocks/server";
 import cryptoConfiguration from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json";
 import { act } from "@testing-library/react";
-
-// The form validates asynchronously on mount, so let it settle before a synchronous test ends.
-const waitForInitialValidation = () => act(() => new Promise((resolve) => setTimeout(resolve, 0)));
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;

@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { act, env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor, waitForInitialValidation } from "@/utils/testing-library";
 import { UpdateAccountName } from "./UpdateAccountName";
 
 describe("UpdateAccountName", () => {
@@ -84,8 +84,7 @@ describe("UpdateAccountName", () => {
 			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
-		// Let the initial validation settle so it can't override the result of clearing the input.
-		await act(() => new Promise((resolve) => setTimeout(resolve, 0)));
+		await waitForInitialValidation();
 
 		const user = userEvent.setup();
 
@@ -127,8 +126,7 @@ describe("UpdateAccountName", () => {
 			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
-		// Let the initial validation settle so it can't override the result of clearing the input.
-		await act(() => new Promise((resolve) => setTimeout(resolve, 0)));
+		await waitForInitialValidation();
 
 		const user = userEvent.setup();
 

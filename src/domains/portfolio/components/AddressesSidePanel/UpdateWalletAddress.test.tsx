@@ -4,13 +4,13 @@ import React from "react";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
-	act,
 	env,
 	getDefaultMainsailWalletId,
 	getMainsailProfileId,
 	render,
 	screen,
 	waitFor,
+	waitForInitialValidation,
 } from "@/utils/testing-library";
 import { UpdateAddressName } from "./UpdateAddressName";
 
@@ -31,8 +31,7 @@ describe("UpdateAddressName", () => {
 		expect(screen.getByTestId("FormLabel")).toHaveTextContent(commonTranslations.NAME);
 		expect(asFragment()).toMatchSnapshot();
 
-		// Let the initial validation settle so its state update doesn't leak into the next test.
-		await act(() => new Promise((resolve) => setTimeout(resolve, 0)));
+		await waitForInitialValidation();
 	});
 
 	it("should rename wallet", async () => {
