@@ -993,7 +993,8 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		await userEvent.type(recipientDropdown, "payoutAddress");
+		await userEvent.clear(recipientDropdown);
+		await userEvent.paste("payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1104,7 +1105,8 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		await userEvent.type(recipientDropdown, "payoutAddress");
+		await userEvent.clear(recipientDropdown);
+		await userEvent.paste("payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1312,7 +1314,8 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		await userEvent.type(recipientDropdown, "payoutAddress");
+		await userEvent.clear(recipientDropdown);
+		await userEvent.paste("payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1353,7 +1356,7 @@ describe("ExchangeForm", () => {
 			.spyOn(profile.exchangeTransactions(), "findById")
 			.mockReturnValue(exchangeTransaction);
 
-		server.use(requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {} }));
+		server.use(requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {} }));
 
 		await expect(screen.findByText(t("EXCHANGE.MANUAL_TRANSFER"))).resolves.toBeVisible();
 
@@ -1389,7 +1392,7 @@ describe("ExchangeForm", () => {
 			.spyOn(profile.exchangeTransactions(), "findById")
 			.mockReturnValue(exchangeTransaction);
 
-		server.use(requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {} }));
+		server.use(requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {} }));
 
 		expect(continueButton()).toHaveTextContent(t("COMMON.SIGN"));
 
@@ -1426,7 +1429,7 @@ describe("ExchangeForm", () => {
 			.spyOn(profile.exchangeTransactions(), "findById")
 			.mockReturnValue(exchangeTransaction);
 
-		server.use(requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {} }));
+		server.use(requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {} }));
 
 		expect(continueButton()).toHaveTextContent(t("COMMON.SIGN"));
 
@@ -1475,7 +1478,7 @@ describe("ExchangeForm", () => {
 			.spyOn(profile.exchangeTransactions(), "findById")
 			.mockReturnValue(exchangeTransaction);
 
-		server.use(requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {} }));
+		server.use(requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {} }));
 
 		expect(continueButton()).toHaveTextContent(t("COMMON.SIGN"));
 
