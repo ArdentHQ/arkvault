@@ -1,4 +1,4 @@
-import { Base64, LegacyAES, PBKDF2 } from "@ardenthq/arkvault-crypto";
+import { AES, Base64, PBKDF2 } from "@ardenthq/arkvault-crypto";
 
 import { IProfile, IProfileData, IProfileEncrypter } from "./contracts.js";
 
@@ -35,7 +35,7 @@ export class ProfileEncrypter implements IProfileEncrypter {
 			return { id, ...data };
 		} catch (error) {
 			if (error instanceof Error && error.message.includes("is not valid JSON")) {
-				const decryptedData = LegacyAES.decrypt(decodedData, password);
+				const decryptedData = AES.decrypt(decodedData, password);
 
 				const profileData = JSON.parse(decryptedData);
 
