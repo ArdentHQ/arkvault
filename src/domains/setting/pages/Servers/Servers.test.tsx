@@ -1033,10 +1033,8 @@ describe("Servers Settings", () => {
 			// After ping it should show ok
 			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
 
-			act(() => {
-				for (const item of intervalPingFunction) {
-					item();
-				}
+			await act(async () => {
+				await Promise.all(intervalPingFunction.map((item) => item()));
 			});
 
 			// After ping, it should show ok
