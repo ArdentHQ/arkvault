@@ -2,7 +2,10 @@ import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
 import { TransferLedgerReview } from "./LedgerReview";
-import { env, getDefaultProfileId, renderWithForm, screen } from "@/utils/testing-library";
+import { act, env, getDefaultProfileId, renderWithForm, screen } from "@/utils/testing-library";
+
+// The form validates asynchronously on mount, so let it settle before a synchronous test ends.
+const waitForInitialValidation = () => act(() => new Promise((resolve) => setTimeout(resolve, 0)));
 
 describe("TransferLedgerReview", () => {
 	let profile: Contracts.IProfile;
@@ -13,7 +16,7 @@ describe("TransferLedgerReview", () => {
 		wallet = profile.wallets().first();
 	});
 
-	it("should render", () => {
+	it("should render", async () => {
 		const { asFragment } = renderWithForm(
 			<TransferLedgerReview wallet={wallet} estimatedExpiration={123} profile={profile} />,
 			{
@@ -30,9 +33,11 @@ describe("TransferLedgerReview", () => {
 
 		expect(screen.getByText("123")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
+
+		await waitForInitialValidation();
 	});
 
-	it("should render with memo", () => {
+	it("should render with memo", async () => {
 		const { asFragment } = renderWithForm(
 			<TransferLedgerReview wallet={wallet} estimatedExpiration={123} profile={profile} />,
 			{
@@ -51,9 +56,11 @@ describe("TransferLedgerReview", () => {
 
 		expect(screen.getByText("123")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
+
+		await waitForInitialValidation();
 	});
 
-	it("should render skeleton while loading expiration", () => {
+	it("should render skeleton while loading expiration", async () => {
 		const { asFragment } = renderWithForm(
 			<TransferLedgerReview wallet={wallet} estimatedExpiration={undefined} profile={profile} />,
 			{
@@ -70,5 +77,7 @@ describe("TransferLedgerReview", () => {
 
 		expect(screen.getByTestId("TransferLedgerReview__expiration-skeleton")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
+
+		await waitForInitialValidation();
 	});
 });
