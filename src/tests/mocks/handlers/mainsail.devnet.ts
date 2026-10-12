@@ -35,6 +35,7 @@ export const mainsailDevnetHandlers = [
 	http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", () => {
 		return HttpResponse.json({ data: [] });
 	}),
+	http.get("https://dwallets-evm.mainsailhq.com/api/blocks/:id", () => HttpResponse.json({}, { status: 404 })),
 	http.get("https://dwallets-evm.mainsailhq.com/", () => {
 		return HttpResponse.json({ data: "Hello World!" });
 	}),
