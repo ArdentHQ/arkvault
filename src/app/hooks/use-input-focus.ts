@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useBreakpoint } from "./use-breakpoint";
 import { delay } from "@/utils/delay";
 
 export const useInputFocus = () => {
 	const [isInputElementFocused, setIsInputElementFocused] = useState(false);
+	const scrollTimeout = useRef<ReturnType<typeof delay>>(undefined);
+	const focusOutTimeout = useRef<ReturnType<typeof delay>>(undefined);
 	const { isXs, isSm } = useBreakpoint();
 
 	const handleFocusIn = (event) => {
@@ -12,7 +14,8 @@ export const useInputFocus = () => {
 		}
 
 		if (isXs || isSm) {
-			delay(() => {
+			clearTimeout(scrollTimeout.current);
+			scrollTimeout.current = delay(() => {
 				event?.target?.scrollIntoView?.({ behavior: "smooth", block: "center" });
 			}, 500);
 		}
@@ -21,7 +24,8 @@ export const useInputFocus = () => {
 	};
 
 	const handleFocusOut = () => {
-		delay(() => setIsInputElementFocused(false), 300);
+		clearTimeout(focusOutTimeout.current);
+		focusOutTimeout.current = delay(() => setIsInputElementFocused(false), 300);
 	};
 
 	useEffect(() => {
@@ -31,6 +35,9 @@ export const useInputFocus = () => {
 		return () => {
 			document.removeEventListener("focusin", handleFocusIn);
 			document.removeEventListener("focusout", handleFocusOut);
+
+			clearTimeout(scrollTimeout.current);
+			clearTimeout(focusOutTimeout.current);
 		};
 	}, []);
 

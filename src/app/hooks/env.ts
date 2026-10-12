@@ -1,6 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
 import { useEnvironmentContext } from "@/app/contexts/Environment";
 import { getUrlParameter } from "@/utils/paths";

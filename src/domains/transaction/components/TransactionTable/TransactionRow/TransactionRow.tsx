@@ -55,7 +55,11 @@ export const TransactionRow = memo(
 		const timeStamp = transaction.timestamp();
 
 		return (
-			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
+			<TableRow
+				onClick={onClick ? () => onClick(transaction) : undefined}
+				className={twMerge("relative", className)}
+				{...properties}
+			>
 				<TableCell
 					variant="start"
 					innerClassName={cn(

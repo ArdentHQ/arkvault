@@ -32,16 +32,14 @@ export const useSynchronizer = (jobs: Job[]) => {
 		[persist, setError],
 	);
 
-	const stop = useCallback((properties?: { clearTimers: boolean }) => {
+	const stop = useCallback(() => {
 		setError(undefined);
 
 		for (const timer of timers.current) {
 			clearInterval(timer);
 		}
 
-		if (properties?.clearTimers) {
-			timers.current = [];
-		}
+		timers.current = [];
 	}, []);
 
 	const start = useCallback(() => {
@@ -53,14 +51,16 @@ export const useSynchronizer = (jobs: Job[]) => {
 
 	const runAll = useCallback(() => Promise.allSettled(jobs.map((job) => run(job.callback))), [run, jobs]);
 
-	useEffect(() => {
-		const current = timers.current;
-		return () => {
-			for (const timer of current) {
+	useEffect(
+		() => () => {
+			for (const timer of timers.current) {
 				clearInterval(timer);
 			}
-		};
-	}, [timers]);
+
+			timers.current = [];
+		},
+		[timers],
+	);
 
 	return useMemo(
 		() => ({ clearError: () => setError(undefined), error, runAll, start, stop }),

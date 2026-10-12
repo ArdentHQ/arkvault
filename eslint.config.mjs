@@ -145,7 +145,7 @@ export default [
 			"unicorn/import-style": "error",
 			"unicorn/no-abusive-eslint-disable": "error",
 			"unicorn/no-array-callback-reference": "warn",
-			"unicorn/no-array-for-each": "error",
+			"unicorn/no-for-each": "error",
 			"unicorn/no-array-method-this-argument": "warn",
 			"unicorn/no-array-reduce": "error",
 			"unicorn/no-await-expression-member": "error",
@@ -163,7 +163,7 @@ export default [
 			"unicorn/prefer-string-slice": "error",
 			"unicorn/prefer-ternary": "off",
 			"unicorn/prefer-top-level-await": "error",
-			"unicorn/prevent-abbreviations": ["error", { ignore: [{}, "i18n", "e2e"] }],
+			"unicorn/name-replacements": ["error", { ignore: [{}, "i18n", "e2e"] }],
 			"unicorn/prefer-blob-reading-methods": "warn",
 		},
 	},
@@ -172,6 +172,12 @@ export default [
 		rules: {
 			"@typescript-eslint/no-unused-vars": "off",
 			"unicorn/no-empty-file": "off",
+		},
+	},
+	{
+		files: ["**/*.test.{ts,tsx}"],
+		rules: {
+			"unicorn/consistent-function-scoping": "off",
 		},
 	},
 	{

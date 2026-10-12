@@ -47,11 +47,13 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 		return showSkeleton ? skeletonRows : transactions;
 	}, [showSkeleton, transactions, skeletonRowsLimit]);
 
+	const handleRowClick = useCallback((row: ExtendedTransactionDTO) => onRowClick?.(row), [onRowClick]);
+
 	const renderTableRow = useCallback(
 		(row: ExtendedTransactionDTO) => (
 			<TransactionRow
 				isLoading={showSkeleton}
-				onClick={() => onRowClick?.(row)}
+				onClick={handleRowClick}
 				transaction={row}
 				exchangeCurrency={exchangeCurrency}
 				profile={profile}
@@ -59,7 +61,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				coinName={coinName}
 			/>
 		),
-		[showSkeleton, onRowClick, exchangeCurrency, profile, hideSender],
+		[showSkeleton, handleRowClick, exchangeCurrency, profile, hideSender, coinName],
 	);
 
 	return (

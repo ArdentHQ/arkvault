@@ -374,13 +374,6 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
                     </div>
                   </div>
                 </button>
@@ -4994,13 +4987,6 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
                     </div>
                   </div>
                 </button>
@@ -6677,13 +6663,6 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
                       </div>
                     </div>
                   </div>

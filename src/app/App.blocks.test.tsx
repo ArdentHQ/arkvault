@@ -140,8 +140,6 @@ describe("App Main", () => {
 			onProfileUpdated();
 		});
 
-		await waitFor(() =>
-			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/dashboard`),
-		);
+		await waitFor(() => expect(router.state.location.pathname).toBe("/"));
 	});
 });

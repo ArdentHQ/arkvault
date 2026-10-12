@@ -9,8 +9,8 @@ export const goToSettings = async (t: TestController) => {
 	await goToProfile(t);
 
 	await t.click(Selector('[data-testid="UserMenu"]'));
-	await t.expect(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.SETTINGS).exists).ok();
-	await t.click(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.SETTINGS));
+	await t.expect(Selector('[data-testid="dropdown__content"] li').withText(translations.COMMON.SETTINGS).exists).ok();
+	await t.click(Selector('[data-testid="dropdown__content"] li').withText(translations.COMMON.SETTINGS));
 	await t.expect(Selector("h1").withText(translations.SETTINGS.GENERAL.TITLE).exists).ok();
 };
 

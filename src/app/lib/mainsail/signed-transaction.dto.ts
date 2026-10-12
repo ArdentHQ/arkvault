@@ -1,5 +1,5 @@
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
-import { Address, TransactionTypeIdentifier, UnitConverter } from "@arkecosystem/typescript-crypto";
+import { Address, Helpers, TransactionTypeIdentifier, UnitConverter } from "@arkecosystem/typescript-crypto";
 import {
 	ApproveDetails,
 	MultiPaymentItem,
@@ -99,6 +99,10 @@ export class SignedTransactionData {
 		return DateTime.make();
 	}
 
+	protected payload(): string {
+		return Helpers.removeLeadingHexZero(this.signedData?.data ?? "");
+	}
+
 	// Vote
 	public votes(): string[] {
 		let data = this.signedData.data as string;
@@ -116,31 +120,31 @@ export class SignedTransactionData {
 	}
 
 	public isTransfer(): boolean {
-		return TransactionTypeIdentifier.isTransfer(this.signedData.data);
+		return TransactionTypeIdentifier.isTransfer(this.payload());
 	}
 
 	public isUsernameRegistration(): boolean {
-		return TransactionTypeIdentifier.isUsernameRegistration(this.signedData.data);
+		return TransactionTypeIdentifier.isUsernameRegistration(this.payload());
 	}
 
 	public isUsernameResignation(): boolean {
-		return TransactionTypeIdentifier.isUsernameResignation(this.signedData.data);
+		return TransactionTypeIdentifier.isUsernameResignation(this.payload());
 	}
 
 	public isValidatorRegistration(): boolean {
-		return TransactionTypeIdentifier.isValidatorRegistration(this.signedData.data);
+		return TransactionTypeIdentifier.isValidatorRegistration(this.payload());
 	}
 
 	public isUpdateValidator(): boolean {
-		return TransactionTypeIdentifier.isUpdateValidator(this.signedData.data);
+		return TransactionTypeIdentifier.isUpdateValidator(this.payload());
 	}
 
 	public isVote(): boolean {
-		return TransactionTypeIdentifier.isVote(this.signedData.data);
+		return TransactionTypeIdentifier.isVote(this.payload());
 	}
 
 	public isUnvote(): boolean {
-		return TransactionTypeIdentifier.isUnvote(this.signedData.data);
+		return TransactionTypeIdentifier.isUnvote(this.payload());
 	}
 
 	// Multi-Payment
@@ -174,19 +178,15 @@ export class SignedTransactionData {
 	}
 
 	public isMultiPayment(): boolean {
-		return TransactionTypeIdentifier.isMultiPayment(this.signedData.data);
+		return TransactionTypeIdentifier.isMultiPayment(this.payload());
 	}
 
 	public isValidatorResignation(): boolean {
-		return TransactionTypeIdentifier.isValidatorResignation(this.signedData.data);
+		return TransactionTypeIdentifier.isValidatorResignation(this.payload());
 	}
 
 	public methodHash(): string {
-		// Signed transactions do not have data prefixed with `0x`
-		// that is why we are using first 8 chars to extract method.
-		const methodName = this.signedData.data.slice(0, 8);
-
-		return `0x${methodName}`;
+		return Helpers.addLeadingHexZero(this.payload().slice(0, 8));
 	}
 
 	public toBroadcast() {
@@ -296,7 +296,7 @@ export class SignedTransactionData {
 	}
 
 	public isTokenTransfer(): boolean {
-		return TransactionTypeIdentifier.isTokenTransfer(this.signedData.data);
+		return TransactionTypeIdentifier.isTokenTransfer(this.payload());
 	}
 
 	public isContractTransaction(): boolean {
@@ -315,14 +315,14 @@ export class SignedTransactionData {
 	}
 
 	public isApprove(): boolean {
-		return TransactionTypeIdentifier.isApprove(this.signedData.data);
+		return TransactionTypeIdentifier.isApprove(this.payload());
 	}
 
 	public isRevoke(): boolean {
-		return TransactionTypeIdentifier.isRevoke(this.signedData.data);
+		return TransactionTypeIdentifier.isRevoke(this.payload());
 	}
 
 	public isBatchTransfer(): boolean {
-		return TransactionTypeIdentifier.isBatchTransfer(this.signedData.data);
+		return TransactionTypeIdentifier.isBatchTransfer(this.payload());
 	}
 }

@@ -38,7 +38,11 @@ export const TransactionRowMobile = memo(
 		const amountLabel = coinName ? `${t("COMMON.AMOUNT")} (${coinName})` : t("COMMON.AMOUNT");
 
 		return (
-			<TableRow onClick={onClick} className={cn("border-b-0! group", className)} {...properties}>
+			<TableRow
+				onClick={onClick ? () => onClick(transaction) : undefined}
+				className={cn("border-b-0! group", className)}
+				{...properties}
+			>
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
 						<div className="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dim:bg-theme-dim-950 dark:bg-black">

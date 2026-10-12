@@ -15,7 +15,7 @@ const preSteps = {
 	"And selects to verify message": async (t: TestController) => {
 		await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
 		await t.click(
-			Selector('[data-testid="dropdown__options"] li').withText(
+			Selector('[data-testid="dropdown__content"] li').withText(
 				translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE,
 			),
 		);

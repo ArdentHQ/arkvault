@@ -5,10 +5,10 @@ import { ExtendedTransactionDTO } from "@/domains/transaction/components/Transac
 export type TransactionRowProperties = {
 	transaction: ExtendedTransactionDTO;
 	exchangeCurrency?: string;
-	onClick?: () => void;
+	onClick?: (transaction: ExtendedTransactionDTO) => void;
 	isLoading?: boolean;
 	profile: Contracts.IProfile;
 	hideSender?: boolean;
 	decimals?: number;
 	coinName?: string;
-} & React.HTMLProps<any>;
+} & Omit<React.HTMLProps<any>, "onClick">;

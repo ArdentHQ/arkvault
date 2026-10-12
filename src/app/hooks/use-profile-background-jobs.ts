@@ -123,10 +123,10 @@ export const useProfileBackgroundJobsRunner = (profile?: Contracts.IProfile) => 
 			return;
 		}
 
-		stop({ clearTimers: true });
+		stop();
 
 		return () => {
-			stop({ clearTimers: true });
+			stop();
 		};
 	}, [profile]);
 };

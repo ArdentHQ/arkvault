@@ -1,4 +1,4 @@
-/* eslint-disable unicorn/prevent-abbreviations */
+/* eslint-disable unicorn/name-replacements */
 /* eslint-disable max-lines */
 /* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable import-alias/import-alias */
@@ -264,9 +264,9 @@ export const requestMocks = {
 		mockRequest(
 			/^https:\/\/(dwallets-evm|testnet)\.mainsailhq.com\/api\/transactions\/[a-fA-F0-9]{64}\?includeTokens=true$/,
 			(request: any) => {
-				const regex = /\/transactions\/(?<hash>0x[a-fA-F0-9]{64})(?=\/?$)/;
+				const regex = /\/transactions\/(0x[a-fA-F0-9]{64})(?=\/?$)/;
 				const match = request.url.match(regex);
-				const hash = match?.groups?.hash;
+				const hash = match?.[1];
 
 				return JSON.stringify({
 					data: {

@@ -14,9 +14,9 @@ cucumber("@settingsRouting", {
 	"When she selects settings via navbar menu": async (t: TestController) => {
 		await t.click(Selector('[data-testid="UserMenu"]'));
 		await t
-			.expect(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.SETTINGS).exists)
+			.expect(Selector('[data-testid="dropdown__content"] li').withText(translations.COMMON.SETTINGS).exists)
 			.ok();
-		await t.click(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.SETTINGS));
+		await t.click(Selector('[data-testid="dropdown__content"] li').withText(translations.COMMON.SETTINGS));
 	},
 	"Then she is navigated to the Settings page": async (t: TestController) => {
 		await t.expect(Selector("h1").withText(translations.SETTINGS.GENERAL.TITLE).exists).ok();

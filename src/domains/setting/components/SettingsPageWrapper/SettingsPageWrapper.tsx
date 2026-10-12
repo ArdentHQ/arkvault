@@ -5,7 +5,7 @@ import { PageHeader } from "@/app/components/Header";
 import React from "react";
 import { SideBar } from "@/app/components/SideBar";
 import { ThemeIcon } from "@/app/components/Icon";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { useSettingsMenu } from "@/domains/setting/hooks/use-settings-menu";
 import { useTranslation } from "react-i18next";
 

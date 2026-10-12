@@ -34,6 +34,7 @@ export default defineConfig(async () => {
 				"process.env.APP_VERSION": JSON.stringify(pkg.version),
 			},
 			test: {
+				clearMocks: false,
 				css: false,
 				logHeapUsage: true,
 				maxConcurrency: 4,
@@ -54,9 +55,9 @@ export default defineConfig(async () => {
 					exclude: [
 						"**/build/*",
 						"**/dist/*",
-						"data.ts",
-						"index.ts",
-						"index.tsx",
+						"**/data.ts",
+						"**/index.ts",
+						"**/index.tsx",
 						"src/**/*.e2e.ts",
 						"src/**/*.models.{js,jsx,ts,tsx}",
 						"src/**/*.styles.{js,jsx,ts,tsx}",

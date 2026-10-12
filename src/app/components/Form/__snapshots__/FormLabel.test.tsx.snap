@@ -8,9 +8,7 @@ exports[`FormLabel > should render & hover if optional 1`] = `
   >
     Test
     <span>
-      <span
-        aria-describedby="_r_0_"
-      >
+      <span>
         <span
           class="ml-1 text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-secondary-700"
           data-testid="FormLabel__optional"
@@ -18,49 +16,6 @@ exports[`FormLabel > should render & hover if optional 1`] = `
           optional
         </span>
       </span>
-      <div
-        data-floating-ui-focusable=""
-        id="_r_0_"
-        role="tooltip"
-        style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
-        tabindex="-1"
-      >
-        <div
-          style="transition-property: opacity,transform; transition-duration: 250ms;"
-        >
-          <svg
-            aria-hidden="true"
-            class="fill-theme-secondary-900 dim:fill-theme-dim-700 dark:fill-theme-secondary-700"
-            height="14"
-            style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
-            viewBox="0 0 14 14"
-            width="14"
-          >
-            <path
-              d="M0,0 H14 L8.75,6 Q7,8 5.25,6 Z"
-              stroke="none"
-            />
-            <clippath
-              id="_r_2_"
-            >
-              <rect
-                height="14"
-                width="14"
-                x="0"
-                y="0"
-              />
-            </clippath>
-          </svg>
-          <div
-            class="overflow-wrap-anywhere whitespace-wrap max-w-72 break-words rounded-md bg-theme-secondary-900 px-2 py-1 text-sm font-semibold text-white dim:bg-theme-dim-700 dim:text-theme-dim-50 dark:bg-theme-secondary-700 dark:text-theme-secondary-200 sm:max-w-3xl sm:whitespace-nowrap"
-            style="font-feature-settings: "liga" off, "calt" off;"
-          >
-            <div>
-              This field is optional.
-            </div>
-          </div>
-        </div>
-      </div>
     </span>
   </label>
 </DocumentFragment>

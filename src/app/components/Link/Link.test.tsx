@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "./Link";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 const translations = buildTranslations();
 
@@ -103,6 +103,7 @@ describe("Link", () => {
 		expect(baseElement).toHaveTextContent("Custom Tooltip");
 
 		await userEvent.click(link);
+		await waitFor(() => expect(screen.getByRole("tooltip")).not.toContainHTML("opacity: 0"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
