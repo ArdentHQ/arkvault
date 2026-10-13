@@ -81,7 +81,7 @@ describe("ProfileEncrypter", () => {
 		it("should throw for wrong password on legacy data", async () => {
 			profile.getAttributes().set("data", Base64.encode(LEGACY_FIXTURE_ASCII));
 
-			await expect(subject.decrypt("wrong-password")).rejects.toThrow("unable to decrypt data");
+			await expect(subject.decrypt("wrong-password")).rejects.toThrow("aes: bad decrypt");
 		});
 	});
 });
