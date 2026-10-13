@@ -7,7 +7,8 @@ import { PBKDF2, Base64 } from "@ardenthq/arkvault-crypto";
 // crypto-js@4.2.0: AES.encrypt('{"data":{"wallets":{"legacy":true}}}', "my-password").toString()
 const LEGACY_FIXTURE_ASCII = "U2FsdGVkX19grIMNTCW8AxTGRfWnyM4hBr3WeT7gmBAbJhT0MjSiKw+nYSkuZpbt6KJNDCbQTWP1/h1xWGoX2w==";
 // crypto-js@4.2.0: AES.encrypt('{"data":{"wallets":{"unicode":true}}}', "pässwörð").toString()
-const LEGACY_FIXTURE_UNICODE = "U2FsdGVkX1/YJdsl10e9lCodV/e5bmEj0wCLmA6mCI9qWW+3UicCcZEIbfXpJTgEmRiwCv6MnMte6+F+iOshGg==";
+const LEGACY_FIXTURE_UNICODE =
+	"U2FsdGVkX1/YJdsl10e9lCodV/e5bmEj0wCLmA6mCI9qWW+3UicCcZEIbfXpJTgEmRiwCv6MnMte6+F+iOshGg==";
 
 describe("ProfileEncrypter", () => {
 	let profile: IProfile;
