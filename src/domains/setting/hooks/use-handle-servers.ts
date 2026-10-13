@@ -36,6 +36,8 @@ export async function pingEvmApi(endpoint: string, controller?: AbortController)
 	return body.result === "0x";
 }
 
+type Endpoint = "publicApi" | "transactionApi" | "evmApi";
+
 const useHandleServers = ({
 	transactionApiEndpoint,
 	publicApiEndpoint,
@@ -55,7 +57,15 @@ const useHandleServers = ({
 }) => {
 	const { t } = useTranslation();
 
-	const [fetchingDetails, setFetchingDetails] = useState(false);
+	// Tracked per endpoint so one finished check cannot mark the form as ready while another is still running.
+	const [fetching, setFetching] = useState<Record<Endpoint, boolean>>({
+		evmApi: false,
+		publicApi: false,
+		transactionApi: false,
+	});
+
+	const setFetchingDetails = (endpoint: Endpoint, isFetching: boolean) =>
+		setFetching((current) => ({ ...current, [endpoint]: isFetching }));
 
 	const [serverHeight, setServerHeight] = useState<number | undefined>(undefined);
 
@@ -76,7 +86,7 @@ const useHandleServers = ({
 
 		clearErrors("publicApiEndpoint");
 
-		setFetchingDetails(true);
+		setFetchingDetails("publicApi", true);
 
 		if (await network?.evaluateUrl(publicApiEndpoint)) {
 			setServerHeight(await getServerHeight(publicApiEndpoint));
@@ -86,7 +96,7 @@ const useHandleServers = ({
 				type: "invalidUrl",
 			});
 		}
-		setFetchingDetails(false);
+		setFetchingDetails("publicApi", false);
 	}
 
 	async function validateTransactionApi(controller: AbortController) {
@@ -96,7 +106,7 @@ const useHandleServers = ({
 
 		clearErrors("transactionApiEndpoint");
 
-		setFetchingDetails(true);
+		setFetchingDetails("transactionApi", true);
 
 		try {
 			const status = await pingTransactionApi(transactionApiEndpoint, controller);
@@ -113,7 +123,7 @@ const useHandleServers = ({
 			});
 		}
 
-		setFetchingDetails(false);
+		setFetchingDetails("transactionApi", false);
 	}
 
 	async function validateEvmApi(controller: AbortController) {
@@ -123,7 +133,7 @@ const useHandleServers = ({
 
 		clearErrors("evmApiEndpoint");
 
-		setFetchingDetails(true);
+		setFetchingDetails("evmApi", true);
 
 		try {
 			const status = await pingEvmApi(evmApiEndpoint, controller);
@@ -140,7 +150,7 @@ const useHandleServers = ({
 			});
 		}
 
-		setFetchingDetails(false);
+		setFetchingDetails("evmApi", false);
 	}
 
 	const controllers = useRef<Record<"transactionApi" | "evmApi", AbortController | undefined>>({
@@ -165,6 +175,8 @@ const useHandleServers = ({
 		controllers.current.evmApi = new AbortController();
 		void validateEvmApi(controllers.current.evmApi);
 	}, [networkId, evmApiEndpoint]);
+
+	const fetchingDetails = Object.values(fetching).some(Boolean);
 
 	return { fetchingDetails, serverHeight };
 };
