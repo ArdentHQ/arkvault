@@ -1,6 +1,4 @@
-import { Base64, PBKDF2 } from "@ardenthq/arkvault-crypto";
-
-import { AES } from "./aes.js";
+import { AES, Base64, PBKDF2 } from "@ardenthq/arkvault-crypto";
 
 import { IProfile, IProfileData, IProfileEncrypter } from "./contracts.js";
 
