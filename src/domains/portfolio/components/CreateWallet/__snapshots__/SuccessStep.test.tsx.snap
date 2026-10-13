@@ -41,7 +41,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-max! sm:w-full! text-sm sm:text-base"
               >
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -244,7 +244,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap w-max! sm:w-full! text-sm sm:text-base"
               >
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"

@@ -73,7 +73,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -268,7 +268,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -462,7 +462,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -657,7 +657,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -851,7 +851,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -1044,7 +1044,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -1218,7 +1218,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -1350,7 +1350,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -1524,7 +1524,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -1647,7 +1647,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -1780,7 +1780,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -1973,7 +1973,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"
@@ -2166,7 +2166,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                     class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
                   >
                     <div
-                      class="min-w-0 grow"
+                      class="min-w-0 shrink-0 grow basis-0"
                     >
                       <span
                         class="block w-full"

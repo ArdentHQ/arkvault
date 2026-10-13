@@ -1,6 +1,8 @@
 import { http, HttpResponse } from "msw";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
+export const tokenTransfersEndpoint = "https://dwallets-evm.mainsailhq.com/api/tokens/transfers";
+
 const endpoints = [
 	{ path: "/blockchain", data: require("../../fixtures/coins/mainsail/devnet/blockchain.json") },
 	{ path: "/node/configuration", data: require("../../fixtures/coins/mainsail/devnet/configuration.json") },
@@ -35,6 +37,7 @@ export const mainsailDevnetHandlers = [
 	http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", () => {
 		return HttpResponse.json({ data: [] });
 	}),
+	http.get("https://dwallets-evm.mainsailhq.com/api/blocks/:id", () => HttpResponse.json({}, { status: 404 })),
 	http.get("https://dwallets-evm.mainsailhq.com/", () => {
 		return HttpResponse.json({ data: "Hello World!" });
 	}),
@@ -115,7 +118,7 @@ export const mainsailDevnetHandlers = [
 		});
 	}),
 
-	http.get("https://dwallets-evm.mainsailhq.com/api/tokens/transfers", () => {
+	http.get(tokenTransfersEndpoint, () => {
 		return HttpResponse.json(Fixtures.TokenTransfers);
 	}),
 

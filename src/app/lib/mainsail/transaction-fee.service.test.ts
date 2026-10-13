@@ -16,6 +16,7 @@ describe("TransactionFeeService", () => {
 		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([]);
 
 		mockNetwork = {
+			config: () => ({ get: vi.fn() }),
 			fees: () => ({
 				estimateGas: vi.fn().mockResolvedValue(BigNumber.make(21000)),
 			}),

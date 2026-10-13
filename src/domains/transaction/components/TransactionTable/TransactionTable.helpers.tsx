@@ -2,6 +2,30 @@ import { Column } from "react-table";
 import { DTO } from "@/app/lib/profiles";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import classNames from "classnames";
+import { ExtendedTransactionDTO } from "./TransactionTable.contracts";
+
+/**
+ * Stable React key for a transaction row.
+ *
+ * react-table defaults the row id to the row index, so prepending an unconfirmed
+ * transaction shifts every visible row by one and React unmounts and remounts all
+ * of them. Those remounts reset address truncation (see MiddleTruncation) and make
+ * the whole table re-measure, which shows up as the addressing column resizing and
+ * some addresses briefly disappearing. Keying by hash keeps existing rows mounted.
+ */
+export const getTransactionRowId = (transaction: ExtendedTransactionDTO, index: number): string => {
+	try {
+		const hash = transaction?.hash?.();
+		if (typeof hash === "string" && hash.length > 0) {
+			return hash;
+		}
+	} catch {
+		// Skeleton rows and partially hydrated DTOs have no usable hash; fall through.
+	}
+
+	return `row-${index}`;
+};
 
 export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string; hideSender?: boolean }) => {
 	const { t } = useTranslation();
@@ -26,12 +50,17 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 			},
 			{
 				Header: t("COMMON.METHOD"),
-				cellWidth: "w-20 lg:min-w-40 lg:w-40",
+				cellWidth: classNames({
+					"lg:min-w-32": !hideSender,
+					"w-20 lg:min-w-40 lg:w-40": hideSender,
+				}),
 				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.ADDRESSING"),
-				cellWidth: "w-fit lg:w-24",
+				cellWidth: classNames("w-fit", {
+					"lg:w-60": !hideSender,
+				}),
 				headerClassName: "no-border whitespace-nowrap",
 			},
 			...(hideSender

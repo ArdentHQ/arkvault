@@ -23,7 +23,7 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -167,7 +167,7 @@ exports[`ValidatorRow > should render 1`] = `
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -311,7 +311,7 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -455,7 +455,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -590,7 +590,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <span
-                class="mr-2 text-base font-semibold text-theme-text"
+                class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                 data-testid="Address__alias"
               >
                 <span>
@@ -605,7 +605,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                 </span>
               </span>
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -738,7 +738,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
@@ -891,7 +891,7 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
               class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap justify-start"
             >
               <div
-                class="min-w-0 grow"
+                class="min-w-0 shrink-0 grow basis-0"
               >
                 <span
                   class="block w-full"
