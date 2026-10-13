@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@ardenthq/arkvault-crypto':
-        specifier: file:../../arkvault-crypto
-        version: file:../../arkvault-crypto
+        specifier: ^0.0.9
+        version: 0.0.9
       '@ardenthq/arkvault-url':
         specifier: ^1.2.0
         version: 1.2.0
@@ -388,8 +388,8 @@ packages:
     peerDependencies:
       ajv: '>=8'
 
-  '@ardenthq/arkvault-crypto@file:../../arkvault-crypto':
-    resolution: {directory: ../../arkvault-crypto, type: directory}
+  '@ardenthq/arkvault-crypto@0.0.9':
+    resolution: {integrity: sha512-OcG0g3+ZmbiJWxoT7UwUSwXINROJ2C0v1HMFmqkKmSaYIYSJV+ssirBBBdcRxljICKXK502t4MpaeVdNbjQJ7g==}
 
   '@ardenthq/arkvault-url@1.2.0':
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
@@ -1988,6 +1988,9 @@ packages:
   '@scure/bip32@1.7.0':
     resolution: {integrity: sha512-E4FFX/N3f4B80AKWp5dP6ow+flD1LQZo/w8UnLGYZO674jS6YnYeepycOOksv+vLPSpgN35wgKgy+ybfTb2SMw==}
 
+  '@scure/bip32@2.4.0':
+    resolution: {integrity: sha512-i3DS0CptAocyvqE4n3SUkpzeQK4vJMFwWLofTwRiiKo2aWojBOfyMCgfKw9HVpO6fSY5AK86sHS/Uzn8kK9Few==}
+
   '@scure/bip39@1.6.0':
     resolution: {integrity: sha512-+lF0BbLiJNwVlev4eKelw1WWLaiKXw7sSl8T6FvBlWkdX+94aGJ4o8XjUdlyhTCjd8c+B3KT3JfS8P0bLRNU6A==}
 
@@ -2264,8 +2267,8 @@ packages:
   '@types/node@20.14.5':
     resolution: {integrity: sha512-aoRR+fJkZT2l0aGOJhuA8frnCSoNX6W7U2mpNq63+BxBIj5BQFt8rHy627kijCmm63ijdSdwvGgpUsU6MBsZZA==}
 
-  '@types/node@22.19.19':
-    resolution: {integrity: sha512-dyh/xO2Fh5bYrfWaaqGrRQQGkNdmYw6AmaAUvYeUMNTWQtvb796ikLdmTchRmOlOiIJ1TDXfWgVx1QkUlQ6Hew==}
+  '@types/node@22.20.5':
+    resolution: {integrity: sha512-U2+DNr+wSjpsTS/wZGYHq7GcwfuSmKiKvoPvK22zwTlRhU91yOniN4qRR5KhIjvif7ysw/dz/hKmfDH0Ris4aA==}
 
   '@types/node@22.7.5':
     resolution: {integrity: sha512-jML7s2NAzMWc//QSJ1a3prpk78cOPchGvXJsC3C6R6PSMoooztvRVQEz89gmBTBY1SPMaqo5teB4uNHPdetShQ==}
@@ -2729,6 +2732,9 @@ packages:
 
   bn.js@5.2.3:
     resolution: {integrity: sha512-EAcmnPkxpntVL+DS7bO1zhcZNvCkxqtkd0ZY53h06GNQ3DEkkGZ/gKgmDv6DdZQGj9BgfSPKtJJ7Dp1GPP8f7w==}
+
+  bn.js@5.2.5:
+    resolution: {integrity: sha512-Vq886eXykuP5E6HcKSSStP3bJgrE6In5WKxVUvJ8XGpWWYs2xZHWqUwzCtGgEtBcxyd57KBFDPFoUfNzdaHCNg==}
 
   bowser@1.6.0:
     resolution: {integrity: sha512-Fk23J0+vRnI2eKDEDoUZXWtbMjijr098lKhuj4DKAfMKMCRVfJOuxXlbpxy0sTgbZ/Nr2N8MexmOir+GGI/ZMA==}
@@ -6226,8 +6232,8 @@ packages:
     resolution: {integrity: sha512-508e6IcKLrhxKdBbcA2b4KQZlLVp2+J5UwQ6F7Drckkc5N9ZJwFa4TgWtsww9UG8fGHbm6gbV19TdM5pQ4GaIA==}
     hasBin: true
 
-  uuid@11.1.1:
-    resolution: {integrity: sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ==}
+  uuid@14.0.3:
+    resolution: {integrity: sha512-Sc5u1VVln93y1Xnz4R+CunOZc7R9LUcTmhj7Rc7Eg3HVcf7rVn2FOoa812fe0W8p3jD7xeoGSYbfqCGGH2B6xw==}
     hasBin: true
 
   validate-npm-package-license@3.0.4:
@@ -6616,19 +6622,19 @@ snapshots:
       jsonpointer: 5.0.1
       leven: 3.1.0
 
-  '@ardenthq/arkvault-crypto@file:../../arkvault-crypto':
+  '@ardenthq/arkvault-crypto@0.0.9':
     dependencies:
-      '@noble/curves': 1.9.7
-      '@noble/hashes': 1.8.0
-      '@scure/base': 1.2.6
-      '@scure/bip32': 1.7.0
-      '@scure/bip39': 1.6.0
-      '@types/node': 22.19.19
+      '@noble/curves': 2.4.0
+      '@noble/hashes': 2.4.0
+      '@scure/base': 2.4.0
+      '@scure/bip32': 2.4.0
+      '@scure/bip39': 2.4.0
+      '@types/node': 22.20.5
       bcryptjs: 3.0.3
-      bn.js: 5.2.3
+      bn.js: 5.2.5
       create-xpub: 2.1.0
       hdkey: 2.1.0
-      uuid: 11.1.1
+      uuid: 14.0.3
 
   '@ardenthq/arkvault-url@1.2.0': {}
 
@@ -8381,6 +8387,12 @@ snapshots:
       '@noble/hashes': 1.8.0
       '@scure/base': 1.2.6
 
+  '@scure/bip32@2.4.0':
+    dependencies:
+      '@noble/curves': 2.4.0
+      '@noble/hashes': 2.4.0
+      '@scure/base': 2.4.0
+
   '@scure/bip39@1.6.0':
     dependencies:
       '@noble/hashes': 1.8.0
@@ -8657,7 +8669,7 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@22.19.19':
+  '@types/node@22.20.5':
     dependencies:
       undici-types: 6.21.0
 
@@ -9216,6 +9228,8 @@ snapshots:
   bn.js@4.12.3: {}
 
   bn.js@5.2.3: {}
+
+  bn.js@5.2.5: {}
 
   bowser@1.6.0: {}
 
@@ -12987,7 +13001,7 @@ snapshots:
 
   uuid@11.0.5: {}
 
-  uuid@11.1.1: {}
+  uuid@14.0.3: {}
 
   validate-npm-package-license@3.0.4:
     dependencies:
