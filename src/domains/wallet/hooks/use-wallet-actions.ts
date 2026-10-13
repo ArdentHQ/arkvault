@@ -1,6 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { DropdownOption } from "@/app/components/SimpleDropdown";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";

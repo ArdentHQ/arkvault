@@ -23,10 +23,15 @@ describe("useProfileSyncStatus", () => {
 	it("should sync profile and handle resync with errored networks", async () => {
 		let configuration: any;
 		let profileErroredNetworks: string[] = [];
+		let hasRetried = false;
 
 		const onProfileSyncError = (erroredNetworks: string[], retrySync) => {
 			profileErroredNetworks = erroredNetworks;
-			retrySync();
+
+			if (!hasRetried) {
+				hasRetried = true;
+				retrySync();
+			}
 		};
 
 		const onProfileSyncStart = vi.fn();
@@ -52,16 +57,15 @@ describe("useProfileSyncStatus", () => {
 			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(false),
 		);
 
+		await waitFor(() => expect(onProfileSyncStart).toHaveBeenCalledTimes(2));
+		await waitFor(() => expect(profileErroredNetworks).toHaveLength(1));
+
 		await renderAct(() => {
 			configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: true });
 		});
 		await waitFor(() =>
 			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(true),
 		);
-
-		expect(onProfileSyncStart).toHaveBeenCalledTimes(2);
-
-		await waitFor(() => expect(profileErroredNetworks).toHaveLength(1));
 
 		mockWalletSyncStatus.mockRestore();
 		resetProfileNetworksMock();

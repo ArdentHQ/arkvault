@@ -27,15 +27,16 @@ export const Address = ({
 		{walletName && (
 			<span
 				data-testid="Address__alias"
-				className={cn("mr-2 text-base font-semibold text-theme-text", walletNameClass)}
+				className={cn("mr-2 min-w-0 truncate text-base font-semibold text-theme-text", walletNameClass)}
 			>
 				<TruncateEnd text={walletName} maxChars={16} showTooltip={walletName.length > 16} />
 			</span>
 		)}
 
-		<div className="min-w-0 grow">
+		<div className="min-w-0 shrink-0 grow basis-0">
 			<MiddleTruncation
 				data-testid="Address__address"
+				minChars={4}
 				tooltip={showTooltip}
 				className={cn("font-semibold", addressClass, {
 					"text-base text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-secondary-700":

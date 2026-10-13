@@ -21,7 +21,7 @@ import {
 vi.mock(
 	"react-rsrc/domains/transaction/components/AuthenticationStep/AuthenticationStep.test.tsxouter-dom",
 	async () => ({
-		...(await vi.importActual("react-router-dom")),
+		...(await vi.importActual("react-router")),
 	}),
 );
 

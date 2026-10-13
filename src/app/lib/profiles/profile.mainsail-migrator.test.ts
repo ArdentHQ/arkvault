@@ -1,5 +1,5 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-import { describe, expect, it, vi, beforeEach, afterEach, beforeAll, afterAll } from "vitest";
+import { describe, expect, it, vi, beforeEach, afterEach, beforeAll } from "vitest";
 import { ProfileMainsailMigrator } from "./profile.mainsail-migrator";
 import { IProfile, IProfileData } from "./contracts.js";
 import { env } from "@/utils/testing-library";
@@ -62,10 +62,6 @@ describe("ProfileMainsailMigrator", () => {
 
 		server.resetHandlers();
 		vi.restoreAllMocks();
-	});
-
-	afterAll(() => {
-		server.close();
 	});
 
 	describe("migrate", () => {

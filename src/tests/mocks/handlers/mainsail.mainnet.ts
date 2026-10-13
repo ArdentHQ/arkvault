@@ -1,4 +1,4 @@
-import { http, HttpResponse, rest } from "msw";
+import { http, HttpResponse } from "msw";
 
 const endpoints = [
 	{ path: "/blockchain", data: require("../../fixtures/coins/mainsail/devnet/blockchain.json") },
@@ -27,6 +27,7 @@ export const mainsailMainnetHandlers = [
 			return HttpResponse.json(endpoint.data);
 		}),
 	),
+	http.get("https://wallets-evm.mainsailhq.com/api/blocks/:id", () => HttpResponse.json({}, { status: 404 })),
 	http.get("https://wallets-evm.mainsailhq.com/", () => {
 		return HttpResponse.json({ data: "Hello World!" });
 	}),

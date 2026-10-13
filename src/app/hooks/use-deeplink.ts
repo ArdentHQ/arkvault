@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 import { Contracts } from "@/app/lib/profiles";
 import { useCallback, useEffect } from "react";

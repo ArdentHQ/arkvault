@@ -55,16 +55,25 @@ export const TransactionRowLabel = ({ direction, style }: { direction: Direction
 	);
 };
 
-const FormattedAddress = ({ alias, address }: { alias?: string; address: string }): JSX.Element => {
+const FormattedAddress = ({
+	alias,
+	address,
+	hideAddressWhenAliased = false,
+}: {
+	alias?: string;
+	address: string;
+	hideAddressWhenAliased?: boolean;
+}): JSX.Element => {
 	const { t } = useTranslation();
 
 	return (
-		<div className="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36">
+		<div className="xl:min-w-26 flex grow items-center justify-between space-x-1 lg:px-0">
 			<Tooltip content={address} wrapperClass="grow">
 				<div className="grow" data-testid="TransactionRowAddressing__address-container">
 					<Address
+						showTooltip={false}
 						walletName={alias}
-						address={alias ? "" : address}
+						address={hideAddressWhenAliased && alias ? "" : address}
 						addressClass={cn({
 							"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
 							"text-theme-text": !alias,
@@ -152,7 +161,9 @@ const MultiPaymentAddressing = ({
 						</span>
 					</>
 				)}
-				{direction === "received" && <FormattedAddress address={transaction.from()} alias={alias} />}
+				{direction === "received" && (
+					<FormattedAddress address={transaction.from()} alias={alias} hideAddressWhenAliased={isAdvanced} />
+				)}
 			</span>
 		</div>
 	);
@@ -220,7 +231,7 @@ export const TransactionRowAddressing = ({
 			>
 				<TransactionRowLabel direction="received" style="return" />
 
-				<FormattedAddress address={senderAddress} alias={senderAlias} />
+				<FormattedAddress address={senderAddress} alias={senderAlias} hideAddressWhenAliased={isAdvanced} />
 			</div>
 		);
 	}
@@ -262,7 +273,11 @@ export const TransactionRowAddressing = ({
 				data-testid="TransactionRowAddressing__container_advanced_recipient"
 			>
 				<TransactionRowLabel direction="sent" style="return" />
-				<FormattedAddress address={recipientAddress} alias={recipientAlias} />
+				<FormattedAddress
+					address={recipientAddress}
+					alias={recipientAlias}
+					hideAddressWhenAliased={isAdvanced}
+				/>
 			</div>
 		);
 	}

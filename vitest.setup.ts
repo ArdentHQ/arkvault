@@ -91,6 +91,14 @@ vi.mock("p-retry", async () => {
 
 vi.mock("browser-fs-access");
 
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
+
 const createLocalStorageMock = () => {
 	const store: Record<string, string> = {};
 	return {
@@ -131,7 +139,7 @@ beforeAll(async () => {
 	MockDate.set(new Date("2026-03-26T00:00:00.000Z"));
 
 	process.env.REACT_APP_IS_UNIT = "1";
-	server.listen({ onUnhandledRequest: "warn" });
+	server.listen({ onUnhandledFrame: "warn" });
 
 	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
 

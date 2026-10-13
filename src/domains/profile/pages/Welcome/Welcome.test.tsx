@@ -24,10 +24,10 @@ import { renderHook } from "@testing-library/react";
 import { truncate } from "@/app/lib/helpers";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import userEvent from "@testing-library/user-event";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
-vi.mock("react-router-dom", async () => {
-	const actual = await vi.importActual("react-router-dom");
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
 	return {
 		...actual,
 		useLocation: vi.fn().mockReturnValue(defaultUseLocationValue()),

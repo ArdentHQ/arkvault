@@ -4,12 +4,37 @@ import { TokenTransfers } from "./TokenTransfers";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { tokenTransfersEndpoint } from "@/tests/mocks/handlers/mainsail.devnet";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
 let profile: Contracts.IProfile;
 
 const fixtureProfileId = getDefaultProfileId();
 let tokensPageURL: string;
+
+const transfersURL = tokenTransfersEndpoint;
+const pageSize = 10;
+
+const transfersPage = (page: number) => {
+	const offset = (page - 1) * pageSize;
+
+	return Array.from({ length: pageSize }, (_, index) => {
+		const transfer = Fixtures.TokenTransfers.data[index % Fixtures.TokenTransfers.data.length];
+		const position = offset + index;
+
+		return {
+			...transfer,
+			transactionHash: `${transfer.transactionHash.slice(0, -8)}${position.toString(16).padStart(8, "0")}`,
+		};
+	});
+};
+
+const transfersMeta = (page: number) => ({
+	...Fixtures.TokenTransfers.meta,
+	count: pageSize,
+	next: `/tokens/transfers?limit=${pageSize}&page=${page + 1}`,
+	totalCount: 25,
+});
 
 describe("TokenTransfer", () => {
 	beforeAll(async () => {
@@ -107,17 +132,13 @@ describe("TokenTransfer", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		// Paginated result
+		// Paginated result: two distinct pages so the second one stacks on the first.
 		server.use(
-			requestMock("https://dwallets-evm.mainsailhq.com/api/tokens/transfers", {
-				data: [...Fixtures.TokenTransfers.data, ...Fixtures.TokenTransfers.data].slice(0, 10),
-				meta: {
-					...Fixtures.TokenTransfers.meta,
-					count: 15,
-					next: "/tokens/transfer?limit=10&page=2",
-					totalCount: 15,
-				},
-			}),
+			requestMock(transfersURL, { data: transfersPage(1), meta: transfersMeta(1) }, { query: { page: "1" } }),
+		);
+
+		server.use(
+			requestMock(transfersURL, { data: transfersPage(2), meta: transfersMeta(2) }, { query: { page: "2" } }),
 		);
 
 		const { asFragment } = render(

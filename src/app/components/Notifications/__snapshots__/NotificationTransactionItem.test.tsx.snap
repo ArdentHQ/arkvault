@@ -27,7 +27,7 @@ exports[`Notifications > should render in xs 1`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -42,7 +42,7 @@ exports[`Notifications > should render in xs 1`] = `
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -120,7 +120,7 @@ exports[`Notifications > should render in xs 2`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -135,7 +135,7 @@ exports[`Notifications > should render in xs 2`] = `
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -214,7 +214,7 @@ exports[`Notifications > should render in xs 3`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -229,7 +229,7 @@ exports[`Notifications > should render in xs 3`] = `
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -323,7 +323,7 @@ exports[`Notifications > should render in xs 4`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -338,7 +338,7 @@ exports[`Notifications > should render in xs 4`] = `
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -432,7 +432,7 @@ exports[`Notifications > should render in xs 5`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -447,7 +447,7 @@ exports[`Notifications > should render in xs 5`] = `
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
@@ -541,7 +541,7 @@ exports[`Notifications > should render notification item 1`] = `
                 class="flex w-full min-w-0 items-center overflow-hidden whitespace-nowrap"
               >
                 <span
-                  class="mr-2 text-base font-semibold text-theme-text"
+                  class="mr-2 min-w-0 truncate text-base font-semibold text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span>
@@ -556,7 +556,7 @@ exports[`Notifications > should render notification item 1`] = `
                   </span>
                 </span>
                 <div
-                  class="min-w-0 grow"
+                  class="min-w-0 shrink-0 grow basis-0"
                 >
                   <span
                     class="block w-full"
