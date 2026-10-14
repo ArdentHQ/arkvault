@@ -15,9 +15,9 @@ import * as matchers from "jest-extended";
 // in its constructor. Node.js 22 setMaxListeners validates the target is a native
 // EventTarget, but jsdom replaces globalThis.EventTarget so the check fails.
 // Suppress the node:events lookup so PQueue works in jsdom environments.
-if ((process as any).getBuiltinModule) {
-	const orig = (process as any).getBuiltinModule.bind(process);
-	(process as any).getBuiltinModule = (name: string) => (name === "node:events" ? undefined : orig(name));
+if (process.getBuiltinModule) {
+	const orig = process.getBuiltinModule.bind(process);
+	process.getBuiltinModule = (name: string) => (name === "node:events" ? undefined : orig(name));
 }
 
 expect.extend(matchers);
