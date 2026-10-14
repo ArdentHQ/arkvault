@@ -1,8 +1,7 @@
-import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
 import { images } from "@/app/assets/images";
-import { useActiveProfile, useTheme } from "@/app/hooks";
+import { useTheme } from "@/app/hooks";
 import { shouldUseDarkColors, shouldUseDimColors } from "@/utils/theme";
 
 type ImageProperties = {
@@ -14,15 +13,6 @@ type ImageProperties = {
 export const Image = ({ name, domain = "common", loading = "lazy", ...properties }: ImageProperties) => {
 	const [imageName, setImageName] = React.useState("");
 	const { isDarkMode, isDimMode } = useTheme();
-
-	// TODO: remove try/catch usage
-	let profile: Contracts.IProfile | undefined;
-	try {
-		// eslint-disable-next-line react-hooks/rules-of-hooks
-		profile = useActiveProfile();
-	} catch {
-		profile = undefined;
-	}
 
 	React.useLayoutEffect(() => {
 		let imageName: string = name;
@@ -36,7 +26,7 @@ export const Image = ({ name, domain = "common", loading = "lazy", ...properties
 		}
 
 		setImageName(imageName);
-	}, [name, profile, isDarkMode, isDimMode]);
+	}, [name, isDarkMode, isDimMode]);
 
 	const Image = (images as any)[domain][imageName] || (images as any)[domain][name];
 
