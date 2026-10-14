@@ -8,8 +8,8 @@ import {
 	PanelsProvider,
 } from "@/app/contexts";
 import { Contracts, Environment } from "@/app/lib/profiles";
-import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
-import { RenderResult, render, renderHook } from "@testing-library/react";
+import { FormProvider, UseFormReturn, useForm } from "react-hook-form";
+import { RenderResult, act, render, renderHook } from "@testing-library/react";
 
 import { createMemoryRouter, useLocation } from "react-router";
 import { RouterProvider } from "react-router/dom";
@@ -79,7 +79,7 @@ export function renderWithForm(
 	options?: {
 		withProviders?: boolean;
 		defaultValues?: any;
-		registerCallback?: (useFormMethods: UseFormMethods) => void;
+		registerCallback?: (useFormMethods: UseFormReturn) => void;
 		shouldUnregister?: boolean;
 		breakpoint?: LayoutBreakpoint;
 	},
@@ -95,7 +95,7 @@ export function renderWithForm(
 
 	const defaultValues = options?.defaultValues ?? {};
 
-	let form: UseFormMethods | undefined;
+	let form: UseFormReturn | undefined;
 
 	const Component = () => {
 		form = useForm<any>({
@@ -103,6 +103,9 @@ export function renderWithForm(
 			mode: "onChange",
 			shouldUnregister: options?.shouldUnregister,
 		});
+
+		// Reading formState during render subscribes it, so tests can read up-to-date values from `form()`.
+		void [form.formState.errors, form.formState.isDirty, form.formState.dirtyFields, form.formState.isValid];
 
 		options?.registerCallback?.(form);
 
@@ -264,6 +267,12 @@ export const env = environmentWithMocks();
 export const syncValidators = async (profile: Contracts.IProfile) => await profile.validators().syncAll(profile);
 
 export const syncFees = async (profile: Contracts.IProfile) => await env.fees().sync(profile);
+
+// react-hook-form validates asynchronously on mount; let it settle so its state update stays inside `act`.
+export const waitForInitialValidation = (): Promise<void> =>
+	act(async () => {
+		await new Promise((resolve) => setTimeout(resolve, 0));
+	});
 
 export const MNEMONICS = [
 	"skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin",

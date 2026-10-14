@@ -36,7 +36,12 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { t } = useTranslation();
 
 	const { usernameRegistration } = useValidation();
-	const { getValues, register, setValue, errors } = useFormContext();
+	const {
+		getValues,
+		register,
+		setValue,
+		formState: { errors },
+	} = useFormContext();
 	const username = getValues("username");
 	const senderAddress = getValues("senderAddress");
 

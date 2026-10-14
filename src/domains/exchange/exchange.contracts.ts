@@ -12,6 +12,8 @@ export interface ExchangeFormState {
 	minPayinAmount: number;
 	minPayoutAmount: number;
 	externalId: string;
+	exchangeRate?: string;
+	estimatedTime?: number;
 }
 
 export interface CurrencyData {

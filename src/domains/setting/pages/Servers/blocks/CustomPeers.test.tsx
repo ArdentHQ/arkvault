@@ -5,6 +5,7 @@ import { render, screen, waitFor } from "@/utils/testing-library";
 import { Contracts } from "@/app/lib/profiles";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import userEvent from "@testing-library/user-event";
+import { translations } from "@/app/i18n/common/i18n";
 
 let profile: Contracts.IProfile;
 let serverStatusMock: {
@@ -95,6 +96,39 @@ describe("CustomPeers", () => {
 		statusIcon.dispatchEvent(clickEvent);
 
 		expect(stopPropagationSpy).toHaveBeenCalled();
+	});
+
+	it("should render not available when the peer height is unknown", async () => {
+		const networksStub = [
+			{
+				enabled: true,
+				evmApiEndpoint: "https://dwallets-evm.mainsailhq.com/evm/api",
+				name: "Test Peer Without Height",
+				network: { id: () => "mainsail.devnet" },
+				publicApiEndpoint: "https://dwallets-evm.mainsailhq.com/api",
+				transactionApiEndpoint: "https://dwallets-evm.mainsailhq.com/tx/api",
+			} as unknown as NormalizedNetwork,
+		];
+
+		render(
+			<CustomPeers
+				addNewServerHandler={() => {}}
+				networks={networksStub}
+				onDelete={vi.fn()}
+				onUpdate={vi.fn()}
+				onToggle={vi.fn()}
+				profile={profile}
+			/>,
+			{
+				route: `/profiles/${profile.id()}/settings/servers`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("CustomPeers-network-item--checked")).toBeInTheDocument();
+		});
+
+		expect(screen.getByText(translations.NOT_AVAILABLE)).toBeInTheDocument();
 	});
 
 	it("should handle mobile dropdown actions", async () => {

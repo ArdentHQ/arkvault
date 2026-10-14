@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -17,14 +17,10 @@ export const SuccessStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { getValues, watch } = useFormContext();
+	const { getValues } = useFormContext();
 
-	// getValues does not get the value of `defaultValues` on first render
-	const [defaultNetwork] = useState(() => watch("network"));
-	const network = getValues("network") || defaultNetwork;
-
-	const [defaultWallet] = useState(() => watch("wallet"));
-	const wallet = getValues("wallet") || defaultWallet;
+	const network = getValues("network");
+	const wallet = getValues("wallet");
 
 	assertNetwork(network);
 	assertWallet(wallet);

@@ -27,7 +27,7 @@ const SecondInputField = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =>
 
 				<InputPassword
 					data-testid="EncryptPassword__second-mnemonic"
-					ref={register({
+					{...register("secondInput", {
 						required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 							field: t("COMMON.SECOND_MNEMONIC"),
 						}).toString(),
@@ -51,7 +51,7 @@ const SecondInputField = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =>
 
 			<InputPassword
 				data-testid="EncryptPassword__second-secret"
-				ref={register({
+				{...register("secondInput", {
 					required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t("COMMON.SECOND_SECRET"),
 					}).toString(),

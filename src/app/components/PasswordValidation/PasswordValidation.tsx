@@ -58,10 +58,7 @@ export const PasswordValidation = ({
 	const { password: passwordValidation } = useValidation();
 
 	const { clearErrors, register, setError, setValue, trigger, watch } = useFormContext();
-	const watchedValues = watch([passwordField, confirmPasswordField]);
-
-	const password = watchedValues[passwordField];
-	const confirmPassword = watchedValues[confirmPasswordField];
+	const [password = "", confirmPassword = ""] = watch([passwordField, confirmPasswordField]);
 
 	let currentPassword;
 	if (currentPasswordField) {
@@ -126,7 +123,7 @@ export const PasswordValidation = ({
 				<FormLabel label={passwordFieldLabel} optional={optional ? !password && !confirmPassword : false} />
 				<InputPassword
 					data-testid={`PasswordValidation__${passwordField}`}
-					ref={register()}
+					{...register(passwordField)}
 					isInvalid={hasError}
 					errorMessage={t("COMMON.VALIDATION.PASSWORD_GENERIC_ERROR")}
 				/>
@@ -141,7 +138,8 @@ export const PasswordValidation = ({
 				/>
 				<InputPassword
 					data-testid={`PasswordValidation__${confirmPasswordField}`}
-					ref={register(
+					{...register(
+						confirmPasswordField,
 						optional
 							? passwordValidation.confirmOptionalPassword(password)
 							: passwordValidation.confirmPassword(password),

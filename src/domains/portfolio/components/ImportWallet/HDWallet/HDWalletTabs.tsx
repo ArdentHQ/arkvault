@@ -166,7 +166,7 @@ export const HDWalletTabs = ({
 				let mnemonic = mnemonicValue as string | undefined;
 
 				if (encryptedPassword) {
-					register({ name: "password", type: "string", value: encryptionPassword });
+					register("password", { value: encryptionPassword });
 
 					const accountWallet = activeProfile
 						.wallets()
@@ -176,7 +176,7 @@ export const HDWalletTabs = ({
 					mnemonic = await accountWallet.signingKey().get(encryptedPassword as string);
 				}
 
-				register({ name: "mnemonic", type: "string", value: mnemonic });
+				register("mnemonic", { value: mnemonic });
 
 				setActiveTab(HDWalletTabStep.SelectAddressStep);
 			},
@@ -184,7 +184,7 @@ export const HDWalletTabs = ({
 				const { value } = getValues();
 
 				if (value) {
-					register({ name: "mnemonic", type: "string", value });
+					register("mnemonic", { value });
 				}
 
 				setActiveTab(useEncryption ? HDWalletTabStep.EncryptPasswordStep : HDWalletTabStep.SelectAddressStep);
@@ -192,7 +192,7 @@ export const HDWalletTabs = ({
 			[HDWalletTabStep.EncryptPasswordStep]: async () => {
 				const { encryptionPassword } = getValues();
 				if (encryptionPassword) {
-					register({ name: "password", type: "string", value: encryptionPassword });
+					register("password", { value: encryptionPassword });
 				}
 
 				setActiveTab(HDWalletTabStep.SelectAddressStep);
