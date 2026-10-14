@@ -69,7 +69,7 @@ export const ReviewStep = ({
 			<div>
 				<FormField name="hasAgreedToTerms" className="sm:pt-2">
 					<label className="flex cursor-pointer items-center space-x-3">
-						<Checkbox name="hasAgreedToTerms" ref={register({ required: true })} />
+						<Checkbox {...register("hasAgreedToTerms", { required: true })} />
 						<span className="text-sm leading-5">
 							<Trans
 								i18nKey="EXCHANGE.EXCHANGE_FORM.TERMS"

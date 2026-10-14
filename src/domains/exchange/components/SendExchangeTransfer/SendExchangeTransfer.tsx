@@ -76,10 +76,12 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		const validate = async () => {
 			await form.trigger("amount");
 
-			if (form.errors.amount) {
+			const { error } = form.getFieldState("amount");
+
+			if (error) {
 				form.setError("senderAddress", {
-					message: form.errors.amount.message,
-					type: form.errors.amount.type,
+					message: error.message,
+					type: error.type,
 				});
 			}
 		};

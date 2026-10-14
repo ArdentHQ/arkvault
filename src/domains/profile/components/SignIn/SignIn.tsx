@@ -25,7 +25,8 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 	const { t } = useTranslation();
 
 	const methods = useForm({ mode: "onChange" });
-	const { errors, formState, register, setError } = methods;
+	const { formState, register, setError } = methods;
+	const { errors } = formState;
 
 	const [count, setCount] = useState(0);
 	const [remainingTime, setRemainingTime] = useState(0);
@@ -117,7 +118,7 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 				<FormField name="password">
 					<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PASSWORD")} />
 					<InputPassword
-						ref={register({
+						{...register("password", {
 							required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 								field: t("COMMON.PASSWORD"),
 							}).toString(),
@@ -133,7 +134,11 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 							{t("COMMON.CANCEL")}
 						</Button>
 
-						<Button data-testid="SignIn__submit-button" type="submit" disabled={!formState.isValid}>
+						<Button
+							data-testid="SignIn__submit-button"
+							type="submit"
+							disabled={!formState.isValid || hasReachedLimit()}
+						>
 							{t("COMMON.SIGN_IN")}
 						</Button>
 					</FormButtons>

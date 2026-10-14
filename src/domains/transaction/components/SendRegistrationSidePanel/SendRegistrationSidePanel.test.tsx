@@ -356,7 +356,12 @@ describe("SendRegistrationSidePanel", () => {
 			rejected: [],
 		});
 
-		const derivationPathMock = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/60'/0'/0/3");
+		const walletDataGet = wallet.data().get.bind(wallet.data());
+		const derivationPathMock = vi
+			.spyOn(wallet.data(), "get")
+			.mockImplementation((key, defaultValue) =>
+				key === Contracts.WalletData.DerivationPath ? "m/44'/60'/0'/0/3" : walletDataGet(key, defaultValue),
+			);
 		const transactionMock = createValidatorRegistrationMock(wallet);
 		await userEvent.click(continueButton());
 

@@ -33,7 +33,7 @@ export const PasswordModal = ({ isOpen, title, description, onClose, onSubmit }:
 				<FormField name="password">
 					<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PASSWORD")} />
 					<InputPassword
-						ref={form.register({
+						{...form.register("password", {
 							required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 								field: t("COMMON.PASSWORD"),
 							}).toString(),
