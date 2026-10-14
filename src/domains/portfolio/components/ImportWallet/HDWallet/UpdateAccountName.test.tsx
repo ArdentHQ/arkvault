@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor, waitForInitialValidation } from "@/utils/testing-library";
 import { UpdateAccountName } from "./UpdateAccountName";
 
 describe("UpdateAccountName", () => {
@@ -84,6 +84,8 @@ describe("UpdateAccountName", () => {
 			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
+		await waitForInitialValidation();
+
 		const user = userEvent.setup();
 
 		// Clear input to make it invalid
@@ -123,6 +125,8 @@ describe("UpdateAccountName", () => {
 		const { unmount } = render(
 			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
+
+		await waitForInitialValidation();
 
 		const user = userEvent.setup();
 

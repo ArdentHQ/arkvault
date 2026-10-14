@@ -62,7 +62,7 @@ const MnemonicField = ({
 		<FormField name="value">
 			<FormLabel label={label} />
 			<InputPassword
-				ref={register({
+				{...register("value", {
 					required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: label,
 					}).toString(),
@@ -162,7 +162,7 @@ const PublicKeyField = ({ profile }: { profile: Contracts.IProfile }) => {
 		<FormField name="value">
 			<FormLabel label={t("COMMON.PUBLIC_KEY")} />
 			<Input
-				ref={register({
+				{...register("value", {
 					required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t("COMMON.PUBLIC_KEY"),
 					}).toString(),

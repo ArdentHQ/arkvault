@@ -12,6 +12,7 @@ import {
 	render,
 	screen,
 	waitFor,
+	waitForInitialValidation,
 } from "@/utils/testing-library";
 
 describe("UpdateWalletName", () => {
@@ -23,7 +24,7 @@ describe("UpdateWalletName", () => {
 		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 	});
 
-	it("should render", () => {
+	it("should render", async () => {
 		const { asFragment } = render(
 			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
@@ -33,6 +34,8 @@ describe("UpdateWalletName", () => {
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.DESCRIPTION);
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(commonTranslations.NAME);
 		expect(asFragment()).toMatchSnapshot();
+
+		await waitForInitialValidation();
 	});
 
 	it("should rename wallet", async () => {

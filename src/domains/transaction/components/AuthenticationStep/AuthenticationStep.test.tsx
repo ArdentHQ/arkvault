@@ -2,11 +2,13 @@ import { Contracts } from "@/app/lib/profiles";
 import { PBKDF2 } from "@ardenthq/arkvault-crypto";
 import userEvent from "@testing-library/user-event";
 import React from "react";
+import { FormProvider, UseFormReturn, useForm } from "react-hook-form";
 import { AuthenticationStep } from "./AuthenticationStep";
 import {
 	env,
 	getDefaultProfileId,
 	MAINSAIL_MNEMONICS,
+	render,
 	renderWithForm,
 	screen,
 	waitFor,
@@ -105,6 +107,41 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should clear the secret after leaving the step", async () => {
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+
+		let form: UseFormReturn | undefined;
+
+		const SidePanel = () => {
+			form = useForm({ mode: "onChange" });
+			const [isAuthenticationStep, setIsAuthenticationStep] = React.useState(true);
+
+			return (
+				<FormProvider {...form}>
+					<button
+						type="button"
+						data-testid="toggle"
+						onClick={() => setIsAuthenticationStep(!isAuthenticationStep)}
+					/>
+					{isAuthenticationStep && <AuthenticationStep subject={subject} wallet={wallet} />}
+				</FormProvider>
+			);
+		};
+
+		render(<SidePanel />);
+
+		await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "secret");
+		await waitFor(() => expect(form?.getValues("secret")).toBe("secret"));
+
+		await userEvent.click(screen.getByTestId("toggle"));
+		await userEvent.click(screen.getByTestId("toggle"));
+
+		expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue("");
+		expect(form?.getValues("secret")).toBe("");
+	});
+
 	test("should request mnemonic if wallet was imported using address", async () => {
 		const wallet = profile.wallets().first();
 		vi.spyOn(wallet, "actsWithAddress").mockReturnValue(true);
@@ -125,7 +162,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	test("should show only ledger confirmation", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValue(true);
 
 		const { asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={defaultWallet} />, {
 			withProviders: true,
@@ -150,7 +187,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	test("should specify ledger supported model", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValue(true);
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
@@ -176,7 +213,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	test("should show ledger waiting device screen", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValue(true);
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep subject={subject} wallet={defaultWallet} ledgerIsAwaitingDevice={true} />,
@@ -195,7 +232,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	test("should not show ledger confirmation", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValue(true);
 
 		renderWithForm(
 			<AuthenticationStep subject={subject} wallet={defaultWallet} requireLedgerConfirmation={false} />,
@@ -215,7 +252,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	test("should show ledger waiting device screen for Nano X", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValue(true);
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
@@ -238,7 +275,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	test("should show ledger waiting device screen for Nano S", async ({ defaultWallet }) => {
 		mockNanoSTransport();
-		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValue(true);
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
@@ -261,7 +298,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	test("should show ledger waiting app screen", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValue(true);
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
@@ -286,7 +323,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	test("should handle ledger error", async ({ defaultWallet }) => {
 		let location: Location | undefined;
 
-		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValue(true);
 		mockLedgerTransportError("No transports appear to be supported.");
 
 		renderWithForm(
@@ -307,7 +344,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	test("should navigate back when device not available and no handler provided", async ({ defaultWallet }) => {
 		let location: Location | undefined;
 
-		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValue(true);
 		mockLedgerTransportError("Access denied to use Ledger device");
 
 		renderWithForm(

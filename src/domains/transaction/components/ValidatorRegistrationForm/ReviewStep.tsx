@@ -23,7 +23,12 @@ export const ReviewStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { getValues, unregister, errors, trigger } = useFormContext();
+	const {
+		getValues,
+		unregister,
+		formState: { errors },
+		trigger,
+	} = useFormContext();
 
 	const { validatorPassphrase } = getValues();
 
@@ -60,7 +65,7 @@ export const ReviewStep = ({
 
 	return (
 		<section data-testid="ValidatorRegistrationForm__review-step">
-			{errors.lockedFee && <Alert>{errors.lockedFee.message}</Alert>}
+			{errors.lockedFee && <Alert>{errors.lockedFee.message as string}</Alert>}
 
 			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses

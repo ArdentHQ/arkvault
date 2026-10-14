@@ -73,9 +73,9 @@ export const UpdateAccountNameForm = ({
 					<Input
 						autoFocus
 						errorMessage={errors.name?.message}
-						isInvalid={!isValid}
+						isInvalid={!!errors.name}
 						data-testid="UpdateWalletAccountName__input"
-						ref={register(nameValidation)}
+						{...register("name", nameValidation)}
 					/>
 				</div>
 			</FormField>

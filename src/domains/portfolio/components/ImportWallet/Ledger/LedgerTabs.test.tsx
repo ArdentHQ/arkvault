@@ -700,7 +700,7 @@ describe("LedgerTabs", () => {
 			wallets: mockWallets,
 		});
 
-		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn());
+		vi.spyOn(profile.wallets(), "push").mockImplementation((wallet) => wallet);
 
 		const ledgerTransportMock = mockNanoXTransport();
 

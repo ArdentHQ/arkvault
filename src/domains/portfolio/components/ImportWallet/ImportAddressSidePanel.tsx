@@ -98,9 +98,9 @@ export const ImportAddressesSidePanel = ({
 	}, [isLedgerImport, activeTab, stepConfig, ledgerConfig, isHDWalletImport, HDWalletConfig]);
 
 	useEffect(() => {
-		register({ name: "importOption", type: "custom" });
-		register({ name: "useEncryption", type: "boolean", value: false });
-		register({ name: "acceptResponsibility", type: "boolean", value: false });
+		register("importOption");
+		register("useEncryption", { value: false });
+		register("acceptResponsibility", { value: false });
 	}, [register]);
 
 	useEffect(() => {

@@ -40,7 +40,7 @@ export const InputDate = ({
 			name={fieldContext!.name}
 			control={control}
 			rules={rules}
-			render={(field, { invalid }) => (
+			render={({ field, fieldState: { invalid } }) => (
 				<DatePicker
 					ref={calenderReference}
 					selected={field.value}

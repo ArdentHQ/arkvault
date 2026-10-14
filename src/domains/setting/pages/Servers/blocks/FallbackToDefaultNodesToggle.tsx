@@ -11,8 +11,7 @@ export const FallbackToDefaultNodesToggle = () => {
 
 	return (
 		<Toggle
-			ref={form.register()}
-			name="fallbackToDefaultNodes"
+			{...form.register("fallbackToDefaultNodes")}
 			defaultChecked={value}
 			data-testid="Plugin-settings__servers--fallback-to-default-nodes"
 		/>

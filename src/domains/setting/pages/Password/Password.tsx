@@ -86,7 +86,7 @@ export const PasswordSettings = () => {
 			return true;
 		}
 
-		return !password || isSubmitting || !isValid || errors.validation;
+		return !password || isSubmitting || !isValid || !!errors.validation;
 	};
 
 	const getSubmitButtonText = () => {
@@ -133,7 +133,7 @@ export const PasswordSettings = () => {
 								<FormField name="currentPassword">
 									<FormLabel label={t("SETTINGS.PASSWORD.CURRENT")} />
 									<InputPassword
-										ref={register({
+										{...register("currentPassword", {
 											required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 												field: t("SETTINGS.PASSWORD.CURRENT"),
 											}).toString(),

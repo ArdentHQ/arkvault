@@ -146,7 +146,7 @@ export const GeneralSettings: React.FC = () => {
 						placeholder={t(selectOption, {
 							option: t("SETTINGS.GENERAL.SECURITY.AUTOMATIC_SIGN_OUT_PERIOD.TITLE"),
 						})}
-						ref={register({
+						{...register("automaticSignOutPeriod", {
 							required: t(requiredFieldMessage, {
 								field: t("SETTINGS.GENERAL.SECURITY.AUTOMATIC_SIGN_OUT_PERIOD.TITLE"),
 							}).toString(),
@@ -156,7 +156,7 @@ export const GeneralSettings: React.FC = () => {
 							value: `${count}`,
 						}))}
 						onChange={(signOutPeriod: SettingsOption | null) => {
-							setValue("automaticSignOutPeriod", signOutPeriod?.value, {
+							setValue("automaticSignOutPeriod", signOutPeriod?.value as string, {
 								shouldDirty: true,
 								shouldValidate: true,
 							});
@@ -381,14 +381,16 @@ export const GeneralSettings: React.FC = () => {
 							<FormField name="name">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.NAME")} />
 								<InputDefault
-									ref={register(settingsValidation.name(profile.id()))}
+									{...register("name", {
+										...settingsValidation.name(profile.id()),
+										onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
+											if (!avatar || hasDefaultAvatar) {
+												const nameValue = event.target.value.trim();
+												setValue("avatar", nameValue ? Helpers.Avatar.make(nameValue) : "");
+											}
+										},
+									})}
 									defaultValue={getDefaultValues().name}
-									onBlur={(event: React.FocusEvent<HTMLInputElement>) => {
-										if (!avatar || hasDefaultAvatar) {
-											const nameValue = event.target.value.trim();
-											setValue("avatar", nameValue ? Helpers.Avatar.make(nameValue) : "");
-										}
-									}}
 									data-testid="General-settings__input--name"
 								/>
 							</FormField>
@@ -400,13 +402,13 @@ export const GeneralSettings: React.FC = () => {
 									placeholder={t(selectOption, {
 										option: t("SETTINGS.GENERAL.PERSONAL.PASSPHRASE_LANGUAGE"),
 									})}
-									ref={register({
+									{...register("bip39Locale", {
 										required: t(requiredFieldMessage, {
 											field: t("SETTINGS.GENERAL.PERSONAL.PASSPHRASE_LANGUAGE"),
 										}).toString(),
 									})}
 									onChange={(bip39Locale: SettingsOption | null) => {
-										setValue("bip39Locale", bip39Locale?.value, {
+										setValue("bip39Locale", bip39Locale?.value as string, {
 											shouldDirty: true,
 											shouldValidate: true,
 										});
@@ -423,7 +425,7 @@ export const GeneralSettings: React.FC = () => {
 									placeholder={t(selectOption, {
 										option: t("SETTINGS.GENERAL.PERSONAL.CURRENCY"),
 									})}
-									ref={register({
+									{...register("exchangeCurrency", {
 										required: t(requiredFieldMessage, {
 											field: t("SETTINGS.GENERAL.PERSONAL.CURRENCY"),
 										}).toString(),
@@ -431,7 +433,7 @@ export const GeneralSettings: React.FC = () => {
 									options={currencyOptions}
 									defaultValue={exchangeCurrency}
 									onChange={(exchangeCurrency: SettingsOption) => {
-										setValue("exchangeCurrency", exchangeCurrency?.value, {
+										setValue("exchangeCurrency", exchangeCurrency?.value as string, {
 											shouldDirty: true,
 											shouldValidate: true,
 										});
@@ -448,7 +450,7 @@ export const GeneralSettings: React.FC = () => {
 									placeholder={t(selectOption, {
 										option: t("SETTINGS.GENERAL.PERSONAL.LANGUAGE"),
 									})}
-									ref={register({
+									{...register("locale", {
 										required: t(requiredFieldMessage, {
 											field: t("SETTINGS.GENERAL.PERSONAL.LANGUAGE"),
 										}).toString(),
@@ -456,7 +458,7 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.languages}
 									defaultValue={getDefaultValues().locale}
 									onChange={(locale: SettingsOption) => {
-										setValue("locale", locale?.value, {
+										setValue("locale", locale?.value as string, {
 											shouldDirty: true,
 											shouldValidate: true,
 										});
@@ -471,7 +473,7 @@ export const GeneralSettings: React.FC = () => {
 									placeholder={t(selectOption, {
 										option: t("SETTINGS.GENERAL.PERSONAL.PRICE_SOURCE"),
 									})}
-									ref={register({
+									{...register("marketProvider", {
 										required: t(requiredFieldMessage, {
 											field: t("SETTINGS.GENERAL.PERSONAL.PRICE_SOURCE"),
 										}).toString(),
@@ -493,7 +495,7 @@ export const GeneralSettings: React.FC = () => {
 											});
 										}
 
-										setValue("marketProvider", selectedMarketProvider?.value, {
+										setValue("marketProvider", selectedMarketProvider?.value as string, {
 											shouldDirty: true,
 											shouldValidate: true,
 										});
@@ -508,7 +510,7 @@ export const GeneralSettings: React.FC = () => {
 									placeholder={t(selectOption, {
 										option: t("SETTINGS.GENERAL.PERSONAL.TIME_FORMAT"),
 									})}
-									ref={register({
+									{...register("timeFormat", {
 										required: t(requiredFieldMessage, {
 											field: t("SETTINGS.GENERAL.PERSONAL.TIME_FORMAT"),
 										}).toString(),
@@ -516,7 +518,7 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.timeFormats}
 									defaultValue={getDefaultValues().timeFormat}
 									onChange={(timeFormat: SettingsOption) => {
-										setValue("timeFormat", timeFormat?.value, {
+										setValue("timeFormat", timeFormat?.value as string, {
 											shouldDirty: true,
 											shouldValidate: true,
 										});

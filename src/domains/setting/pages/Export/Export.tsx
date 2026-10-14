@@ -33,8 +33,7 @@ export const ExportSettings = () => {
 			label: t("SETTINGS.EXPORT.OPTIONS.EXCLUDE_EMPTY_WALLETS.TITLE"),
 			labelAddon: (
 				<Toggle
-					ref={register}
-					name="excludeEmptyWallets"
+					{...register("excludeEmptyWallets")}
 					defaultChecked={false}
 					data-testid="Plugin-settings__toggle--exclude-empty-wallets"
 				/>
@@ -46,8 +45,7 @@ export const ExportSettings = () => {
 			label: t("SETTINGS.EXPORT.OPTIONS.EXCLUDE_LEDGER_WALLETS.TITLE"),
 			labelAddon: (
 				<Toggle
-					ref={register}
-					name="excludeLedgerWallets"
+					{...register("excludeLedgerWallets")}
 					defaultChecked={false}
 					data-testid="Plugin-settings__toggle--exclude-ledger-wallets"
 				/>
@@ -57,9 +55,9 @@ export const ExportSettings = () => {
 	];
 
 	const exportDataToFile = async () => {
-		const exportData = await formatExportData({
-			...form.getValues(["excludeEmptyWallets", "excludeLedgerWallets"]),
-		});
+		const { excludeEmptyWallets, excludeLedgerWallets } = form.getValues();
+
+		const exportData = await formatExportData({ excludeEmptyWallets, excludeLedgerWallets });
 
 		const options = {
 			description: "Web Wallet Export",

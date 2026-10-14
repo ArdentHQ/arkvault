@@ -16,7 +16,7 @@ const Mnemonic = ({ wallet }: { wallet: Contracts.IReadWriteWallet }): JSX.Eleme
 	return (
 		<FormField name="mnemonicValue">
 			<FormLabel label={t(`COMMON.MNEMONIC_TYPE.BIP44`)} />
-			<InputPassword ref={register(authentication.mnemonic(wallet))} />
+			<InputPassword {...register("mnemonicValue", authentication.mnemonic(wallet))} />
 		</FormField>
 	);
 };
@@ -30,7 +30,7 @@ const EncryptedPassword = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 	return (
 		<FormField name="encryptedPassword">
 			<FormLabel label={t(`COMMON.ENCRYPTED_PASSWORD`)} />
-			<InputPassword ref={register(authentication.encryptionPassword(wallet))} />
+			<InputPassword {...register("encryptedPassword", authentication.encryptionPassword(wallet))} />
 		</FormField>
 	);
 };

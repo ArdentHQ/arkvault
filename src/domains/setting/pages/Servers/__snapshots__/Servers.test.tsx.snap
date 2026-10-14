@@ -910,6 +910,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                                     class="flex items-center cursor-pointer h-4"
                                   >
                                     <input
+                                      checked=""
                                       class="toggle-input sr-only"
                                       data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                       name="fallbackToDefaultNodes"
@@ -2575,6 +2576,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                     class="flex items-center cursor-pointer h-4"
                                   >
                                     <input
+                                      checked=""
                                       class="toggle-input sr-only"
                                       data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                       name="fallbackToDefaultNodes"
@@ -4067,6 +4069,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                     class="flex items-center cursor-pointer h-4"
                                   >
                                     <input
+                                      checked=""
                                       class="toggle-input sr-only"
                                       data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                       name="fallbackToDefaultNodes"
@@ -5654,6 +5657,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                     class="flex items-center cursor-pointer h-4"
                                   >
                                     <input
+                                      checked=""
                                       class="toggle-input sr-only"
                                       data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                       name="fallbackToDefaultNodes"
@@ -7289,6 +7293,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                     class="flex items-center cursor-pointer h-4"
                                   >
                                     <input
+                                      checked=""
                                       class="toggle-input sr-only"
                                       data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                       name="fallbackToDefaultNodes"
@@ -9019,6 +9024,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                     class="flex items-center cursor-pointer h-4"
                                   >
                                     <input
+                                      checked=""
                                       class="toggle-input sr-only"
                                       data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                       name="fallbackToDefaultNodes"
@@ -10648,6 +10654,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                     class="flex items-center cursor-pointer h-4"
                                   >
                                     <input
+                                      checked=""
                                       class="toggle-input sr-only"
                                       data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                       name="fallbackToDefaultNodes"
@@ -12342,6 +12349,7 @@ exports[`Servers Settings > should render custom servers in mobile viewport 1`] 
                                     class="flex items-center cursor-pointer h-4"
                                   >
                                     <input
+                                      checked=""
                                       class="toggle-input sr-only"
                                       data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                       name="fallbackToDefaultNodes"
