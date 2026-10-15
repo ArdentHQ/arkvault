@@ -24,6 +24,8 @@ const profileSubmitButton = "ProfileForm__submit-button";
 const createBlob = (fileContents: string | Buffer, fileName?: string) =>
 	new File([new Blob([fileContents])], fileName || "fileName.wwe");
 
+vi.mock("@/app/components/Image", () => ({ Image: () => null }));
+
 describe("ImportProfile", () => {
 	it("should render first step", () => {
 		render(<ImportProfile />);
