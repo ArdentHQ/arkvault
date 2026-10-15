@@ -700,7 +700,9 @@ describe("Welcome", () => {
 	it("should not select profile on wrong last location", () => {
 		const { container, navigate } = render(<Welcome />);
 
-		navigate("/");
+		act(() => {
+			navigate("/");
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -751,7 +753,9 @@ describe("Welcome", () => {
 		expect(screen.getByTestId(submitTestID)).toBeDisabled();
 
 		// the timer seems to update only every two seconds
-		vi.advanceTimersByTime(120_000);
+		await act(async () => {
+			vi.advanceTimersByTime(120_000);
+		});
 
 		// wait for form to be updated
 		await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();
