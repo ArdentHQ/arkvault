@@ -1,7 +1,7 @@
 import { renderHook, act, waitFor } from "@testing-library/react";
 import { vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
-import { env, getMainsailProfileId } from "@/utils/testing-library";
+import { WithProviders, env, getMainsailProfileId } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/mainsail/devnet/notification-transactions.json";
 import TransactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
@@ -26,45 +26,31 @@ describe("useNotifications", () => {
 	});
 
 	it("#transactions", async () => {
-		const { result } = renderHook(() => useNotifications({ profile }));
+		const { result } = renderHook(() => useNotifications({ profile }), { wrapper: WithProviders });
 		expect(result.current.transactions).toHaveLength(3);
 	});
 
 	it("#markAsRead", async () => {
-		const { result } = renderHook(() => useNotifications({ profile }));
+		const { result } = renderHook(() => useNotifications({ profile }), { wrapper: WithProviders });
 
-		const all = Object.values(profile.notifications().all());
-		const target = (all as any[]).find((n) => n.read_at === undefined) ?? (all as any[])[0];
-		const id = target.id;
-
-		expect(profile.notifications().get(id).read_at).toBeUndefined();
-
-		act(() => {
-			result.current.markAsRead(true, id);
-		});
-
-		expect(profile.notifications().get(id).read_at).toBeTruthy();
-	});
-
-	it("should not mark as read if not visible", async () => {
-		const { result } = renderHook(() => useNotifications({ profile }));
-		const tx = result.current.transactions[1];
+		const tx = result.current.transactions[0];
 		const notif = profile.notifications().transactions().findByTransactionId(tx.hash())!;
 
-		result.current.markAsRead(false, notif.id);
-
 		expect(profile.notifications().get(notif.id).read_at).toBeUndefined();
+
+		await act(async () => {
+			await result.current.markAsRead(tx.hash());
+		});
+
+		expect(profile.notifications().get(notif.id).read_at).toBeTruthy();
 	});
 
-	it("#markAllTransactionsAsRead", async () => {
-		const { result } = renderHook(() => useNotifications({ profile }));
+	it("#markAllAsRead", async () => {
+		const { result } = renderHook(() => useNotifications({ profile }), { wrapper: WithProviders });
 
-		result.current.markAllTransactionsAsRead(true);
-
-		expect(profile.notifications().transactions().recent()[0].read_at).toBeTruthy();
-		expect(profile.notifications().transactions().recent()[1].read_at).toBeTruthy();
-
-		result.current.markAllTransactionsAsRead(false);
+		await act(async () => {
+			await result.current.markAllAsRead();
+		});
 
 		expect(profile.notifications().transactions().recent()[0].read_at).toBeTruthy();
 		expect(profile.notifications().transactions().recent()[1].read_at).toBeTruthy();
@@ -77,7 +63,7 @@ describe("useNotifications", () => {
 		const isSyncingSpy = vi.spyOn(txService, "isSyncing").mockReturnValue(false);
 		const transactionsSpy = vi.spyOn(txService, "transactions").mockReturnValue([]);
 
-		renderHook(() => useNotifications({ profile }));
+		renderHook(() => useNotifications({ profile }), { wrapper: WithProviders });
 
 		await waitFor(() => expect(syncSpy).toHaveBeenCalledTimes(1));
 
@@ -87,7 +73,7 @@ describe("useNotifications", () => {
 	});
 
 	it("isNotificationUnread returns true for unread matching notification and false after markAsRead", async () => {
-		const { result, rerender } = renderHook(() => useNotifications({ profile }));
+		const { result, rerender } = renderHook(() => useNotifications({ profile }), { wrapper: WithProviders });
 
 		const tx = result.current.transactions[0];
 		const notif = profile.notifications().transactions().findByTransactionId(tx.hash())!;

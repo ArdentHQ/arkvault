@@ -26,6 +26,8 @@ import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters
 import userEvent from "@testing-library/user-event";
 import { useLocation } from "react-router";
 
+vi.mock("@/app/components/Image", () => ({ Image: () => null }));
+
 vi.mock("react-router", async () => {
 	const actual = await vi.importActual("react-router");
 	return {
@@ -698,7 +700,9 @@ describe("Welcome", () => {
 	it("should not select profile on wrong last location", () => {
 		const { container, navigate } = render(<Welcome />);
 
-		navigate("/");
+		act(() => {
+			navigate("/");
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -749,7 +753,9 @@ describe("Welcome", () => {
 		expect(screen.getByTestId(submitTestID)).toBeDisabled();
 
 		// the timer seems to update only every two seconds
-		vi.advanceTimersByTime(120_000);
+		await act(async () => {
+			vi.advanceTimersByTime(120_000);
+		});
 
 		// wait for form to be updated
 		await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();
