@@ -26,6 +26,8 @@ import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters
 import userEvent from "@testing-library/user-event";
 import { useLocation } from "react-router";
 
+vi.mock("@/app/components/Image", () => ({ Image: () => null }));
+
 vi.mock("react-router", async () => {
 	const actual = await vi.importActual("react-router");
 	return {
