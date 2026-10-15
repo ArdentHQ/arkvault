@@ -50,6 +50,8 @@ const renderComponent = async () => {
 	return utils;
 };
 
+vi.mock("@/app/components/Image", () => ({ Image: () => null }));
+
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
