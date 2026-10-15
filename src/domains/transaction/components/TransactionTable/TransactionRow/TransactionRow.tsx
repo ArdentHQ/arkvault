@@ -14,7 +14,6 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
-import { Amount } from "@/app/components/Amount";
 import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 
 export const TransactionRow = memo(
@@ -124,7 +123,7 @@ export const TransactionRow = memo(
 					innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
 				>
 					{isLgAndAbove ? (
-						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
+						<TransactionFiatAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
 					) : (
 						<div className="flex flex-col items-end gap-1">
 							<TransactionAmountLabel transaction={transaction} />

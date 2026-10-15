@@ -9,19 +9,19 @@ interface Input {
 }
 
 interface Output {
-	convert: (value?: number) => number;
+	convert: (value?: number, date?: DateTime) => number;
 }
 
 export const useExchangeRate = ({ ticker, exchangeTicker }: Input): Output => {
 	const { env } = useEnvironmentContext();
 
 	const convert = useCallback(
-		(value?: number) => {
+		(value?: number, date: DateTime = DateTime.make()) => {
 			if (!ticker || !exchangeTicker || !value) {
 				return 0;
 			}
 
-			return env.exchangeRates().exchange(ticker, exchangeTicker, DateTime.make(), value);
+			return env.exchangeRates().exchange(ticker, exchangeTicker, date, value);
 		},
 		[env, exchangeTicker, ticker],
 	);
