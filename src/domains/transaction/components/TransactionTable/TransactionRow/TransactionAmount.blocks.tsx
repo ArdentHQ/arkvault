@@ -95,5 +95,6 @@ export const TransactionFiatAmount = ({
 	const returnedAmount = calculateReturnedAmount(transaction);
 	const amount = transaction.total() - returnedAmount;
 
-	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} />;
+	// Uses the rate of the transaction date, falling back to today when the transaction has no timestamp.
+	return <Amount value={convert(amount, transaction.timestamp())} ticker={exchangeCurrency || ""} />;
 };
