@@ -59,7 +59,7 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 			}, 1000);
 
 			return () => clearInterval(timer);
-		} else if (errors.password?.type === "maxAttempts") {
+		} else if (errors.password) {
 			setError("password", {
 				message: t("COMMON.VALIDATION.FIELD_INVALID", {
 					field: t("COMMON.PASSWORD"),
