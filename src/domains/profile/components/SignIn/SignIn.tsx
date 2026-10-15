@@ -67,7 +67,12 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 				type: "invalid",
 			});
 		}
-	}, [errors, remainingTime, setError, t]);
+		// errors intentionally omitted: react-hook-form v7 always creates a new
+		// formState.errors reference on setError, which would re-trigger this
+		// effect and cause an infinite render loop. The effect only needs to
+		// react to remainingTime changes.
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [remainingTime, setError, t]);
 
 	const handleSubmit = ({ password }) => {
 		if (!profile.auth().verifyPassword(password)) {

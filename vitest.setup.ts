@@ -11,6 +11,15 @@ import { pwnedMock } from "./src/tests/mocks/handlers/pwned";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
 
+// p-queue v10 extends EventTarget and calls node:events.setMaxListeners(Infinity, this)
+// in its constructor. Node.js 22 setMaxListeners validates the target is a native
+// EventTarget, but jsdom replaces globalThis.EventTarget so the check fails.
+// Suppress the node:events lookup so PQueue works in jsdom environments.
+if (process.getBuiltinModule) {
+	const orig = process.getBuiltinModule.bind(process);
+	process.getBuiltinModule = (name: string) => (name === "node:events" ? undefined : orig(name));
+}
+
 expect.extend(matchers);
 
 vi.mock("@/app/contexts/Ledger/ledger.transport.factory", () => {
