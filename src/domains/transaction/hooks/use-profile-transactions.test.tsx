@@ -390,11 +390,11 @@ describe("useProfileTransactions", () => {
 		);
 
 		act(() => {
-			result.current.setSortBy({ column: "Fiat Value", desc: false });
+			result.current.setSortBy({ column: "date", desc: false });
 		});
 
 		await waitFor(() =>
-			expect(transactionAggregateSpy).toHaveBeenCalledWith(expect.objectContaining({ orderBy: "amount:asc" })),
+			expect(transactionAggregateSpy).toHaveBeenCalledWith(expect.objectContaining({ orderBy: "timestamp:asc" })),
 		);
 
 		transactionAggregateSpy.mockRestore();
