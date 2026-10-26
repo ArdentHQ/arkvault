@@ -78,7 +78,6 @@ const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
 
 const getOrderByStr = ({ column, desc }: SortBy): string => {
 	const columnMap = {
-		amount: "value",
 		date: "timestamp",
 	};
 
