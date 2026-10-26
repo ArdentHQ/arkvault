@@ -78,8 +78,7 @@ const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
 
 const getOrderByStr = ({ column, desc }: SortBy): string => {
 	const columnMap = {
-		"Fiat Value": "amount",
-		amount: "amount",
+		amount: "value",
 		date: "timestamp",
 	};
 
