@@ -23,6 +23,7 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
+import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
@@ -442,6 +443,45 @@ describe("CreateAddressSidePanel", () => {
 		await userEvent.click(screen.getByTestId("toggle-panel"));
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+	});
+
+	it("should close from success step without crashing", async () => {
+		const ControlledPanel = () => {
+			const [open, setOpen] = React.useState(true);
+
+			return (
+				<>
+					<div data-testid="panel-sibling" />
+					<ResetWhenUnmounted>
+						<CreateAddressesSidePanel open={open} onOpenChange={setOpen} />
+					</ResetWhenUnmounted>
+				</>
+			);
+		};
+
+		render(<ControlledPanel />, { route: `/profiles/${fixtureProfileId}/dashboard` });
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
+
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
+		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+		await userEvent.type(firstInput, "power");
+		await userEvent.type(secondInput, "return");
+		await userEvent.type(thirdInput, "attend");
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
+
+		await waitFor(() => expect(screen.queryByTestId("CreateAddressSidePanel")).not.toBeInTheDocument());
+
+		expect(screen.getByTestId("panel-sibling")).toBeInTheDocument();
 	});
 
 	it("should call onOpenChange when clicking back on WalletOverviewStep", async () => {
