@@ -20,16 +20,19 @@ export interface TabButtonProps extends React.HTMLProps<HTMLButtonElement> {
 export function Tabs({ children, activeId, className, onChange, id, disabled }: TabsProperties) {
 	const context = useTab({ disabled, initialId: activeId });
 	const { currentId, setCurrentId } = context;
+	const [previousActiveId, setPreviousActiveId] = React.useState(activeId);
+
+	// Synced during render so panels never show the previous tab against already-updated state.
+	if (!Object.is(activeId, previousActiveId)) {
+		setPreviousActiveId(activeId);
+		setCurrentId(activeId);
+	}
 
 	React.useEffect(() => {
 		if (currentId && !disabled) {
 			onChange?.(currentId);
 		}
 	}, [currentId]); // eslint-disable-line react-hooks/exhaustive-deps
-
-	React.useEffect(() => {
-		setCurrentId(activeId);
-	}, [setCurrentId, activeId]);
 
 	return (
 		<TabContext.Provider value={context}>
