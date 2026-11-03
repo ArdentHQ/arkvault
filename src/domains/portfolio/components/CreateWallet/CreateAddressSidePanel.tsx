@@ -49,6 +49,7 @@ export const CreateAddressesSidePanel = ({
 	const firstStep = usesHDWallets ? CreateStep.MethodStep : CreateStep.WalletOverviewStep;
 	const [HDWalletActiveTab, setHDWalletActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
 	const [mnemonic, setMnemonic] = useState<string | undefined>();
+	const [createdWallet, setCreatedWallet] = useState<Contracts.IReadWriteWallet | undefined>();
 
 	const [activeTab, setActiveTab] = useState<CreateStep>(firstStep);
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -98,6 +99,7 @@ export const CreateAddressesSidePanel = ({
 
 		setActiveTab(CreateStep.MethodStep);
 		setMnemonic(undefined);
+		setCreatedWallet(undefined);
 		reset();
 	}, [open]);
 
@@ -191,6 +193,7 @@ export const CreateAddressesSidePanel = ({
 			}
 
 			setValue("wallet", wallet);
+			setCreatedWallet(wallet);
 
 			await persist();
 		}
@@ -361,8 +364,11 @@ export const CreateAddressesSidePanel = ({
 									onBack={handleBackFromHdWallet}
 								/>
 							)}
-							{!isHDWalletCreation && (
-								<SuccessStep onClickEditAlias={(wallet) => setEditingWallet(wallet)} />
+							{!isHDWalletCreation && createdWallet && (
+								<SuccessStep
+									wallet={createdWallet}
+									onClickEditAlias={(wallet) => setEditingWallet(wallet)}
+								/>
 							)}
 						</TabPanel>
 					</div>

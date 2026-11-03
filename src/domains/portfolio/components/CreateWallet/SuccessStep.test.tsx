@@ -1,8 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
-import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { FormProvider, useForm } from "react-hook-form";
 
 import { SuccessStep } from "./SuccessStep";
 import { env, getMainsailProfileId, renderResponsive, screen } from "@/utils/testing-library";
@@ -18,21 +16,10 @@ describe("SuccessStep", () => {
 	});
 
 	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					network: wallet.network(),
-					wallet,
-				},
-			}),
-		);
-
 		const onClickEditAlias = vi.fn();
 
 		const { asFragment } = renderResponsive(
-			<FormProvider {...form.current}>
-				<SuccessStep onClickEditAlias={onClickEditAlias} />
-			</FormProvider>,
+			<SuccessStep wallet={wallet} onClickEditAlias={onClickEditAlias} />,
 			breakpoint,
 		);
 
