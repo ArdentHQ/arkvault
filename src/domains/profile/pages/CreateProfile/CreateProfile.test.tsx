@@ -21,7 +21,7 @@ const baseSettings = {
 	FALLBACK_TO_DEFAULT_NODES: true,
 	HIDE_DUST_TOKEN: false,
 	LOCALE: "en-US",
-	MARKET_PROVIDER: "cryptocompare",
+	MARKET_PROVIDER: "arkpricing",
 	NAME: profileName,
 	THEME: "light",
 	TIME_FORMAT: "h:mm A",

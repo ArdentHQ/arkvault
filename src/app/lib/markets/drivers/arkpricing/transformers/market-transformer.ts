@@ -19,21 +19,24 @@ export class MarketTransformer implements MarketTransformer {
 	/**
 	 * Transforms the given data into a normalised format.
 	 *
-	 * @param {Record<string, any>} options
 	 * @returns {MarketDataCollection}
 	 * @memberof MarketTransformer
 	 */
 	public transform(): MarketDataCollection {
 		const result = {};
 
-		for (const value of Object.values(this.data) as any) {
-			result[value.TOSYMBOL] = {
-				change24h: value.CHANGEPCT24HOUR,
-				currency: value.TOSYMBOL,
-				date: new Date(value.LASTUPDATE * 1000),
-				marketCap: value.MKTCAP,
-				price: value.PRICE,
-				volume: value.TOTALVOLUME24HTO,
+		for (const [currency, value] of Object.entries(this.data) as any) {
+			if (currency === "coin") {
+				continue;
+			}
+
+			result[currency] = {
+				change24h: value.change24h,
+				currency,
+				date: new Date(value.timestamp),
+				marketCap: value.marketCap,
+				price: value.price,
+				volume: value.volume,
 			};
 		}
 

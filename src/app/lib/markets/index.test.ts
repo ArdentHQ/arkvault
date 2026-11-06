@@ -19,7 +19,7 @@ describe("MarketService", () => {
 		expect(marketService).toBeInstanceOf(MarketService);
 	});
 
-	it.each(["coincap", "coingecko", "cryptocompare"])("should make a service for %s", (adapter) => {
+	it.each(["arkpricing", "coingecko"])("should make a service for %s", (adapter) => {
 		const marketService = MarketService.make(adapter, new Http.HttpClient(0));
 		expect(marketService).toBeInstanceOf(MarketService);
 	});
