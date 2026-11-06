@@ -184,9 +184,7 @@ describe("LedgerTabs", () => {
 			const formContextSpy = vi.spyOn(reactHookForm, "useFormContext").mockImplementation((...parameters) => {
 				const result = originalUseFormContext(...parameters);
 
-				result.formState.isSubmitting = true;
-
-				return result;
+				return { ...result, formState: { ...result.formState, isSubmitting: true } };
 			});
 
 			const ledgerTransportMock = mockNanoXTransport();

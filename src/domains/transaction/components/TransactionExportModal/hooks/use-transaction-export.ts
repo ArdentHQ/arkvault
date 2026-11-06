@@ -18,8 +18,8 @@ const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
 
 	if (dateRange === DateRange.Custom) {
 		return {
-			from: DateTime.make(from!.toString()).startOf("day").toUNIX(),
-			to: DateTime.make(to!.toString()).endOf("day").toUNIX(),
+			from: DateTime.make(from!).startOf("day").valueOf(),
+			to: DateTime.make(to!).endOf("day").valueOf(),
 		};
 	}
 
@@ -30,16 +30,12 @@ const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
 		to?: number;
 	} = {};
 
-	timestamp.from = DateTime.make()
-		.startOf(period as any)
-		.toUNIX();
+	const start = DateTime.make().startOf(period as any);
+
+	timestamp.from = (offset === "last" ? start[`sub${upperFirst(period)}`]() : start).valueOf();
 
 	if (offset === "last") {
-		timestamp.from = DateTime.fromUnix(timestamp.from)[`sub${upperFirst(period)}`]().toUNIX();
-		timestamp.to = DateTime.make()
-			.startOf(period as any)
-			.subSecond()
-			.toUNIX();
+		timestamp.to = start.subSecond().valueOf();
 	}
 
 	return timestamp;

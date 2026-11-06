@@ -69,11 +69,10 @@ export const PaginationSearchForm = ({
 				ref={reference}
 			>
 				<SearchInput
-					ref={register}
+					{...register("page")}
 					type="number"
 					min="1"
 					max={totalPages}
-					name="page"
 					data-testid="PaginationSearch__input"
 					placeholder={t("COMMON.PAGINATION.ENTER_NUMBER")}
 				/>

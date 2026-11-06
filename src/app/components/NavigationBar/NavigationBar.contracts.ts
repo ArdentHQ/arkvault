@@ -1,6 +1,5 @@
 import React from "react";
 
-import { DropdownOption } from "@/app/components/Dropdown";
 import { NavbarVariant } from "@/types";
 
 export interface NavigationBarMenuItem {
@@ -19,7 +18,6 @@ export interface NavigationBarProperties {
 
 export interface UserMenuProperties {
 	avatarImage: string;
-	onUserAction: (option: DropdownOption) => void;
 	userInitials?: string;
 }
 

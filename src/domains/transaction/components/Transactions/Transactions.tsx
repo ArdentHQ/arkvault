@@ -1,10 +1,10 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
+import React, { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
-import { Dropdown } from "@/app/components/Dropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { FilterTransactions } from "@/domains/transaction/components/FilterTransactions";
 import { Icon } from "@/app/components/Icon";
 import { TabId } from "@/app/components/Tabs/useTab";
@@ -140,6 +140,26 @@ export const Transactions = memo(function Transactions({
 		[activeMode],
 	);
 
+	// The panels context hands out freshly created functions on every render, so
+	// keep the latest handler in a ref and expose a permanently stable wrapper.
+	// Without this, React.memo(TransactionRow) can never bail out and every poll
+	// or "load more" re-renders the whole list.
+	const rowClickRef = useRef<(transaction: ExtendedTransactionDTO) => void | undefined>(undefined);
+
+	useEffect(() => {
+		rowClickRef.current = (transaction: ExtendedTransactionDTO) => {
+			if (currentOpenedPanel?.name === Panel.TransactionDetails) {
+				setIsMinimized(false);
+			} else {
+				openPanel(Panel.TransactionDetails);
+			}
+
+			setTransactionModalItem(transaction);
+		};
+	});
+
+	const handleRowClick = useCallback((transaction: ExtendedTransactionDTO) => rowClickRef.current?.(transaction), []);
+
 	const showTransactionTabs = useMemo(() => {
 		// Explicitly disabled by props
 		if (showTabs === false) {
@@ -196,26 +216,41 @@ export const Transactions = memo(function Transactions({
 						</TabList>
 					</Tabs>
 
-					<div className="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden">
+					<div
+						data-testid="Transactions--mobile-filter"
+						className="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
+					>
 						<div className="flex-1">
-							<Dropdown
-								data-testid="Transactions--filter-dropdown"
-								disableToggle={wallets.length === 0 || isLoadingTransactions}
-								options={filterOptions}
-								onSelect={({ value }) => activeModeChangeHandler(value)}
-								toggleContent={(isOpen) => (
-									<div className="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dim:border-theme-dim-500 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3">
-										<span className="text-base font-semibold leading-tight">
-											{selectedFilterLabel}
-										</span>
-										<Icon
-											size="xs"
-											name={isOpen ? "ChevronUpSmall" : "ChevronDownSmall"}
-											className="text-theme-secondary-700 dark:text-theme-dark-200"
-										/>
-									</div>
-								)}
-							/>
+							<DropdownRoot>
+								<DropdownToggle>
+									{(isOpen) => (
+										<div className="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dim:border-theme-dim-500 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3">
+											<span className="text-base font-semibold leading-tight">
+												{selectedFilterLabel}
+											</span>
+											<Icon
+												size="xs"
+												data-testid="mobile-filter__chevron-icon"
+												name={isOpen ? "ChevronUpSmall" : "ChevronDownSmall"}
+												className="text-theme-secondary-700 dark:text-theme-dark-200"
+											/>
+										</div>
+									)}
+								</DropdownToggle>
+								<DropdownContent>
+									<ul>
+										{filterOptions.map((option, index) => (
+											<DropdownListItem
+												key={option.value}
+												data-testid={`dropdown__option--${index}`}
+												onClick={() => activeModeChangeHandler(option.value)}
+											>
+												{option.label}
+											</DropdownListItem>
+										))}
+									</ul>
+								</DropdownContent>
+							</DropdownRoot>
 						</div>
 
 						<div className="hidden flex-1">
@@ -266,15 +301,7 @@ export const Transactions = memo(function Transactions({
 					exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 					isLoading={isLoadingTransactions}
 					skeletonRowsLimit={8}
-					onRowClick={(transaction) => {
-						if (currentOpenedPanel?.name === Panel.TransactionDetails) {
-							setIsMinimized(false);
-						} else {
-							openPanel(Panel.TransactionDetails);
-						}
-
-						setTransactionModalItem(transaction);
-					}}
+					onRowClick={handleRowClick}
 					profile={profile}
 					hideSender={selectedWallets === 1}
 					sortBy={sortBy}

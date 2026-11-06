@@ -54,7 +54,6 @@ export const TransactionRecipient = ({
 
 				<div className="flex w-full">
 					<Address
-						truncateOnTable
 						address={recipient?.address}
 						walletName={recipient?.alias}
 						showCopyButton

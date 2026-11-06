@@ -5,6 +5,7 @@ import { Column } from "react-table";
 
 import { UnconfirmedTransactionRow } from "./UnconfirmedTransactionRow";
 import { Table } from "@/app/components/Table";
+import { getTransactionRowId } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import { useBreakpoint } from "@/app/hooks";
 
 interface Properties {
@@ -48,7 +49,7 @@ export const UnconfirmedTransactionTable = memo(({ transactions, profile }: Prop
 
 	return (
 		<div data-testid="TransactionTable" className="relative">
-			<Table hideHeader={isSm || isXs} columns={columns()} data={transactions}>
+			<Table hideHeader={isSm || isXs} columns={columns()} data={transactions} getRowId={getTransactionRowId}>
 				{(row: DTO.ExtendedConfirmedTransactionData) => (
 					<UnconfirmedTransactionRow transaction={row} profile={profile} />
 				)}

@@ -41,9 +41,10 @@ describe("FormLabel", () => {
 	it("should render & hover if optional", async () => {
 		const { asFragment, baseElement } = render(<FormLabel label="Test" optional />);
 
+		expect(asFragment()).toMatchSnapshot();
+
 		await userEvent.hover(screen.getByTestId("FormLabel__optional"));
 
 		expect(baseElement).toHaveTextContent("This field is optional");
-		expect(asFragment()).toMatchSnapshot();
 	});
 });

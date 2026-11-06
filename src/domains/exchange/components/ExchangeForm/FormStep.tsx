@@ -35,7 +35,15 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 	const [isLoadingPayoutAmount, setIsLoadingPayoutAmount] = useState(false);
 	const [showRefundInput, setShowRefundInput] = useState(false);
 
-	const { clearErrors, errors, getValues, setError, setValue, trigger, watch } = useFormContext();
+	const {
+		clearErrors,
+		formState: { errors },
+		getValues,
+		setError,
+		setValue,
+		trigger,
+		watch,
+	} = useFormContext();
 	const { currencies, exchangeRate, fromCurrency, toCurrency, payinAmount, payoutAmount } = watch();
 
 	const { isXs } = useBreakpoint();

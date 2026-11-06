@@ -85,6 +85,23 @@ export const WalletStatus = ({
 	);
 };
 
+const renderRestOfVotes = (restOfVotes: number) => {
+	const rest = (
+		<span className="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500">
+			+{restOfVotes}
+		</span>
+	);
+
+	return (
+		<Circle
+			size="lg"
+			className="h-8! w-8! relative border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800"
+		>
+			{rest}
+		</Circle>
+	);
+};
+
 export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProperties) => {
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
@@ -126,23 +143,6 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 	}, [profileHasSyncedOnce, profileIsSyncingWallets, wallet]);
 
 	const hasVotes = votes.length > 0;
-
-	const renderRestOfVotes = (restOfVotes: number) => {
-		const rest = (
-			<span className="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500">
-				+{restOfVotes}
-			</span>
-		);
-
-		return (
-			<Circle
-				size="lg"
-				className="h-8! w-8! relative border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800"
-			>
-				{rest}
-			</Circle>
-		);
-	};
 
 	const renderRank = (wallet?: Contracts.IReadOnlyWallet) => {
 		if (!wallet) {

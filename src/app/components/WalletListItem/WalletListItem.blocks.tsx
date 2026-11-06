@@ -20,7 +20,6 @@ import { Contracts } from "@/app/lib/profiles";
 import { TFunction } from "i18next";
 import { Label } from "@/app/components/Label";
 import { Divider } from "@/app/components/Divider";
-
 export const Balance = ({ wallet, isSynced, isLargeScreen = true, className }: BalanceProperties) => {
 	const renderAmount = () => {
 		if (isSynced) {
@@ -35,17 +34,13 @@ export const Balance = ({ wallet, isSynced, isLargeScreen = true, className }: B
 				/>
 			);
 		}
-
 		return <Skeleton height={16} width={100} />;
 	};
-
 	if (!isLargeScreen) {
 		return renderAmount();
 	}
-
 	return <TableCell innerClassName="font-semibold justify-end">{renderAmount()}</TableCell>;
 };
-
 export const RecipientItemMobile = ({
 	onClick,
 	selected = false,
@@ -54,7 +49,6 @@ export const RecipientItemMobile = ({
 	name,
 }: RecipientItemMobileProperties) => {
 	const { t } = useTranslation();
-
 	return (
 		<MultiEntryItem
 			dataTestId="RecipientItemMobile"
@@ -72,7 +66,6 @@ export const RecipientItemMobile = ({
 					>
 						{name}
 					</div>
-
 					<Button
 						onClick={onClick}
 						data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
@@ -92,7 +85,6 @@ export const RecipientItemMobile = ({
 					label={
 						<div className="flex items-center gap-2 leading-[17px]">
 							<span>{t("COMMON.ADDRESS")}</span>
-
 							<Label
 								color="secondary"
 								size="xs"
@@ -107,9 +99,8 @@ export const RecipientItemMobile = ({
 						<div className="max-w-100">
 							<Address
 								showCopyButton={true}
-								truncateOnTable={true}
 								address={address}
-								addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
+								addressClass="leading-[17px] text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
 							/>
 						</div>
 					}
@@ -118,7 +109,6 @@ export const RecipientItemMobile = ({
 		/>
 	);
 };
-
 export const RecipientItem: React.FC<RecipientItemProperties> = ({
 	onClick,
 	selected = false,
@@ -128,7 +118,6 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 	name,
 }) => {
 	const { t } = useTranslation();
-
 	return (
 		<div
 			onClick={onClick}
@@ -171,15 +160,13 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 								address={address}
 								wrapperClass="w-52 min-w-52 justify-between"
 								addressClass={cn(
-									"text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200",
+									"leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200",
 								)}
 							/>
-
 							<Divider
 								type="vertical"
 								className="border-theme-secondary-300 dim:border-theme-dim-700 group-hover:dim:border-theme-dim-500 dark:border-theme-secondary-800 group-hover:dark:border-theme-dark-500"
 							/>
-
 							<Label
 								color="secondary"
 								size="xs"
@@ -196,7 +183,6 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 						</div>
 					</div>
 				</div>
-
 				<div className="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4">
 					<Button
 						tabIndex={-1}
@@ -223,15 +209,12 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 		</div>
 	);
 };
-
 export const getTooltipContent = (wallet: Contracts.IReadWriteWallet, t: TFunction): string => {
 	if (wallet.balance().isZero()) {
 		return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
 	}
-
 	return t("TRANSACTION.TRANSACTION_TYPE_NOT_AVAILABLE");
 };
-
 export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 	onClick,
 	selected = false,
@@ -240,7 +223,6 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 	name,
 }) => {
 	const { t } = useTranslation();
-
 	return (
 		<MultiEntryItem
 			dataTestId="ReceiverItemMobile"
@@ -287,7 +269,6 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 								<div className="max-w-100">
 									<Address
 										showCopyButton={true}
-										truncateOnTable={true}
 										address={wallet.address()}
 										addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
 									/>
@@ -310,7 +291,6 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 		/>
 	);
 };
-
 export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 	onClick,
 	selected = false,
@@ -322,7 +302,6 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 }) => {
 	const { t } = useTranslation();
 	const isDisabled = disabled || !isLedgerWalletCompatible(wallet);
-
 	return (
 		<Tooltip wrapperClass="block" content={getTooltipContent(wallet, t)} disabled={!disabled}>
 			<div
@@ -393,7 +372,6 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 										disabled,
 								})}
 							/>
-
 							{wallet.network().isLive() && (
 								<div data-testid="ReceiverItem--exchangeAmount" className="leading-[17px]">
 									<Amount
@@ -408,7 +386,6 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 							)}
 						</div>
 					</div>
-
 					<div className="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4">
 						<Button
 							tabIndex={-1}

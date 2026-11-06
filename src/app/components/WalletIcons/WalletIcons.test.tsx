@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { WalletIcons, WalletIconsSkeleton } from "./WalletIcons";
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 
@@ -20,6 +20,7 @@ describe("WalletIcons", () => {
 		const { asFragment } = render(<WalletIcons wallet={wallet} />);
 
 		await userEvent.hover(screen.getByTestId("WalletIcon__Verified"));
+		await waitFor(() => expect(screen.getByRole("tooltip")).not.toContainHTML("opacity: 0"));
 
 		walletSpy.mockRestore();
 		expect(asFragment()).toMatchSnapshot();

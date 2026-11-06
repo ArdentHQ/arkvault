@@ -75,6 +75,24 @@ describe("useWalletSelection", () => {
 		});
 	});
 
+	it("should persist wallet selection", async () => {
+		const { result } = renderHook(() => useWalletSelection(profile), {
+			wrapper,
+		});
+
+		const addresses = [profile.wallets().first().address()];
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual(addresses);
+		});
+
+		await act(async () => {
+			await result.current.persistSelection(addresses);
+		});
+
+		expect(result.current.selectedAddresses).toEqual(addresses);
+	});
+
 	it("should toggle selection on unselected wallet", async () => {
 		const { result } = renderHook(() => useWalletSelection(profile), {
 			wrapper,

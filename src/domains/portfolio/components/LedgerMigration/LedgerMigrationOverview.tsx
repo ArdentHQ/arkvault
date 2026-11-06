@@ -31,8 +31,8 @@ export const LedgerMigrationOverview = ({
 					<div className="space-y-3">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 							<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
+							address={transfer.recipient()?.address()}
 							<Address
-								address={transfer.recipient()?.address()}
 								showCopyButton
 								walletNameClass="text-theme-text"
 								wrapperClass="justify-end sm:justify-start"

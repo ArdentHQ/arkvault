@@ -6,7 +6,7 @@ import { t } from "i18next";
 import { useTransactionTypeOptions, useDateRangeOptions } from "./hooks";
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { CollapseToggleButton } from "@/app/components/Collapse";
-import { Dropdown } from "@/app/components/Dropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { ListDivided } from "@/app/components/ListDivided";
 import { useBreakpoint } from "@/app/hooks";
@@ -89,28 +89,75 @@ const TransactionTypeOptions = () => {
 const DateRangeOptions = ({ isDisabled }: { isDisabled: boolean }) => {
 	const form = useFormContext();
 
-	const { options, selected } = useDateRangeOptions({
+	const { selected } = useDateRangeOptions({
 		selectedValue: form.watch("dateRange"),
 	});
 
 	return (
-		<FormField name="dateRange">
-			<Dropdown
-				variant="options"
-				wrapperClass="z-[52]"
-				data-testid="TransactionExportForm--daterange-options"
-				options={options}
-				onSelect={(option) => form.setValue("dateRange", option.value)}
-				disableToggle={isDisabled}
-				toggleContent={(isOpen: boolean) => (
-					<CollapseToggleButton
-						isOpen={isOpen}
-						disabled={isDisabled}
-						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-						label={<div className="whitespace-nowrap leading-tight">{selected?.label}</div>}
-					/>
-				)}
-			/>
+		<FormField name="dateRange" data-testid="TransactionExportForm--daterange">
+			<DropdownRoot>
+				<DropdownToggle>
+					{({ isOpen }: { isOpen: boolean }) => (
+						<CollapseToggleButton
+							isOpen={isOpen}
+							disabled={isDisabled}
+							className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+							label={<div className="whitespace-nowrap leading-tight">{selected}</div>}
+						/>
+					)}
+				</DropdownToggle>
+				<DropdownContent className="z-[52]">
+					<DropdownListItem
+						data-testid="dropdown__option--all-0"
+						onClick={() => form.setValue("dateRange", DateRange.CurrentMonth)}
+					>
+						{t("TRANSACTION.EXPORT.FORM.CURRENT_MONTH")}
+					</DropdownListItem>
+					<DropdownListItem
+						data-testid="dropdown__option--all-1"
+						onClick={() => form.setValue("dateRange", DateRange.LastMonth)}
+					>
+						{t("TRANSACTION.EXPORT.FORM.LAST_MONTH")}
+					</DropdownListItem>
+					<DropdownListItem
+						data-testid="dropdown__option--all-2"
+						onClick={() => form.setValue("dateRange", DateRange.CurrentQuarter)}
+					>
+						{t("TRANSACTION.EXPORT.FORM.CURRENT_QUARTER")}
+					</DropdownListItem>
+					<DropdownListItem
+						data-testid="dropdown__option--all-3"
+						onClick={() => form.setValue("dateRange", DateRange.LastQuarter)}
+					>
+						{t("TRANSACTION.EXPORT.FORM.LAST_QUARTER")}
+					</DropdownListItem>
+					<DropdownListItem
+						data-testid="dropdown__option--all-4"
+						onClick={() => form.setValue("dateRange", DateRange.CurrentYear)}
+					>
+						{t("TRANSACTION.EXPORT.FORM.CURRENT_YEAR")}
+					</DropdownListItem>
+					<DropdownListItem
+						data-testid="dropdown__option--all-5"
+						onClick={() => form.setValue("dateRange", DateRange.LastYear)}
+					>
+						{t("TRANSACTION.EXPORT.FORM.LASTYEAR")}
+					</DropdownListItem>
+					<DropdownListItem
+						data-testid="dropdown__option--all-6"
+						onClick={() => form.setValue("dateRange", DateRange.All)}
+					>
+						{t("TRANSACTION.EXPORT.FORM.ALL")}
+					</DropdownListItem>
+					<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
+					<DropdownListItem
+						data-testid="dropdown__option--custom-0"
+						onClick={() => form.setValue("dateRange", DateRange.Custom)}
+					>
+						{t("TRANSACTION.EXPORT.FORM.CUSTOM")}
+					</DropdownListItem>
+				</DropdownContent>
+			</DropdownRoot>
 		</FormField>
 	);
 };

@@ -3,32 +3,12 @@ import { BigNumber } from "@/app/lib/helpers";
 export type Color = "info" | "success" | "warning" | "danger" | "hint";
 
 export type Size =
-	| "3xs"
-	| "2xs"
-	| "xs"
-	| "sm"
-	| "md"
-	| "lg"
-	| "xl"
-	| "2xl"
-	| "3xl"
-	| "4xl"
-	| "5xl"
-	| "icon"
-	| "avatarMobile";
+	"3xs" | "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "icon" | "avatarMobile";
 
 export type LayoutBreakpoint = "sm" | "md" | "lg" | "xl";
 
 export type Position =
-	| "top"
-	| "top-right"
-	| "right"
-	| "bottom-right"
-	| "bottom"
-	| "bottom-left"
-	| "left"
-	| "top-left"
-	| "top-center";
+	"top" | "top-right" | "right" | "bottom-right" | "bottom" | "bottom-left" | "left" | "top-left" | "top-center";
 
 export type ButtonVariant =
 	| "primary"

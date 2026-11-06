@@ -22,7 +22,7 @@ export class HttpResponse {
 	}
 
 	public body(): string {
-		if (!this._body || this._body.length <= 0) {
+		if (!this._body || this._body.length === 0) {
 			throw new Error("The response body is empty.");
 		}
 

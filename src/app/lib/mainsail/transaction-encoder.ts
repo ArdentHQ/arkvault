@@ -3,8 +3,9 @@ import { Exceptions, Networks } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 import { Hex, numberToHex } from "viem";
-import { ContractAddresses, UnitConverter, TransactionDataEncoder } from "@arkecosystem/typescript-crypto";
+import { ContractAddresses, Network, UnitConverter, TransactionDataEncoder } from "@arkecosystem/typescript-crypto";
 import { IProfile } from "@/app/lib/profiles/contracts";
+import { NetworkConfig } from "@/app/lib/mainsail/network-config";
 import { assertToken } from "@/utils/assertions";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { calculateTotalAmount } from "@/domains/transaction/hooks/use-batch-transfer-details";
@@ -53,6 +54,8 @@ export class TransactionEncoder {
 	constructor(profile: IProfile, network: Networks.Network) {
 		this.#profile = profile;
 		this.#network = network;
+
+		Network.set(new NetworkConfig(network.config()));
 	}
 
 	public multiPayment(recipientList: RecipientPaymentItem[]): EncodedData & { value: Hex } {
@@ -80,9 +83,9 @@ export class TransactionEncoder {
 		};
 	}
 
-	public updateValidator(validatorPassphrase: string): EncodedData {
+	public updateValidator(validatorPassphrase: string, registrantAddress: string): EncodedData {
 		return {
-			data: TransactionDataEncoder.updateValidator(validatorPassphrase),
+			data: TransactionDataEncoder.updateValidator(validatorPassphrase, registrantAddress),
 			to: ContractAddresses.CONSENSUS,
 		};
 	}
@@ -101,11 +104,11 @@ export class TransactionEncoder {
 		};
 	}
 
-	public validatorRegistration(validatorPassphrase: string): EncodedData & { value: Hex } {
+	public validatorRegistration(validatorPassphrase: string, registrantAddress: string): EncodedData & { value: Hex } {
 		const value = this.#network.milestone()["validatorRegistrationFee"] ?? 0;
 
 		return {
-			data: TransactionDataEncoder.validatorRegistration(validatorPassphrase),
+			data: TransactionDataEncoder.validatorRegistration(validatorPassphrase, registrantAddress),
 			to: ContractAddresses.CONSENSUS,
 			value: numberToHex(BigNumber.make(value).toBigInt()),
 		};
@@ -208,7 +211,7 @@ export class TransactionEncoder {
 		}
 
 		if (type === "validatorRegistration" && inputData.validatorPassphrase) {
-			return this.validatorRegistration(inputData.validatorPassphrase);
+			return this.validatorRegistration(inputData.validatorPassphrase, inputData.senderAddress);
 		}
 
 		if (type === "validatorResignation") {
@@ -228,7 +231,7 @@ export class TransactionEncoder {
 		}
 
 		if (type === "updateValidator" && inputData.validatorPassphrase) {
-			return this.updateValidator(inputData.validatorPassphrase);
+			return this.updateValidator(inputData.validatorPassphrase, inputData.senderAddress);
 		}
 
 		if (type === "multiPayment" && inputData.recipients) {

@@ -140,7 +140,7 @@ describe("Use Ledger Connection", () => {
 		expect(importedWallet?.isLedgerNanoX()).toBe(true);
 		expect(importedWallet?.data().get(Contracts.WalletData.LedgerModel)).toBe(Contracts.WalletLedgerModel.NanoX);
 
-		profile.wallets().forget("0x393f3F74F0cd9e790B5192789F31E0A38159ae03");
+		profile.wallets().forget(importedWallet!.id());
 		await env.persist();
 	});
 

@@ -14,7 +14,7 @@ describe("Form", () => {
 
 		render(
 			<Form context={form.current} onSubmit={onSubmit}>
-				<input name="name" ref={form.current.register()} defaultValue="test" />
+				<input {...form.current.register("name")} defaultValue="test" />
 				<button type="submit" data-testid={formSubmitButtonId} />
 			</Form>,
 		);
@@ -31,7 +31,7 @@ describe("Form", () => {
 
 		render(
 			<Form context={form.current}>
-				<input name="name" ref={form.current.register()} defaultValue="test" />
+				<input {...form.current.register("name")} defaultValue="test" />
 				<button type="submit" data-testid={formSubmitButtonId} />
 			</Form>,
 		);

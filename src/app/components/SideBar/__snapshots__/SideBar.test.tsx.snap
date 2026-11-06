@@ -8,10 +8,12 @@ exports[`SideBar > should render 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="dialog"
+      class="w-full"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
-        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dim:border dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 text-left dim:border dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
         <span
           class="flex-1 font-semibold leading-tight"
@@ -109,10 +111,13 @@ exports[`SideBar > should render responsive dropdown 1`] = `
       aria-controls="_r_2_"
       aria-expanded="true"
       aria-haspopup="dialog"
+      class="w-full"
+      data-floating-ui-inert=""
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
-        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dim:border dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 text-left dim:border dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
         <span
           class="flex-1 font-semibold leading-tight"
@@ -147,9 +152,35 @@ exports[`SideBar > should render responsive dropdown 1`] = `
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-floating-ui-inert=""
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="-1"
+    />
+    <span
+      data-floating-ui-focus-guard=""
+      data-type="outside"
+      role="button"
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="0"
+    />
+    <span
+      aria-owns="_r_4_"
+      data-floating-ui-inert=""
+      style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
+    />
+    <span
+      data-floating-ui-focus-guard=""
+      data-type="outside"
+      role="button"
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="0"
+    />
   </div>
   <div
     class="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dim:border-theme-dim-700 dark:border-theme-dark-700 lg:block"
+    data-floating-ui-inert=""
   >
     <ul
       class="space-y-1"
@@ -210,10 +241,13 @@ exports[`SideBar > should render responsive dropdown 2`] = `
       aria-controls="_r_5_"
       aria-expanded="true"
       aria-haspopup="dialog"
+      class="w-full"
+      data-floating-ui-inert=""
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
-        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dim:border dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 text-left dim:border dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
         <span
           class="flex-1 font-semibold leading-tight"
@@ -248,9 +282,35 @@ exports[`SideBar > should render responsive dropdown 2`] = `
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-floating-ui-inert=""
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="-1"
+    />
+    <span
+      data-floating-ui-focus-guard=""
+      data-type="outside"
+      role="button"
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="0"
+    />
+    <span
+      aria-owns="_r_7_"
+      data-floating-ui-inert=""
+      style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
+    />
+    <span
+      data-floating-ui-focus-guard=""
+      data-type="outside"
+      role="button"
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="0"
+    />
   </div>
   <div
     class="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dim:border-theme-dim-700 dark:border-theme-dark-700 lg:block"
+    data-floating-ui-inert=""
   >
     <ul
       class="space-y-1"
@@ -311,10 +371,13 @@ exports[`SideBar > should render responsive dropdown 3`] = `
       aria-controls="_r_8_"
       aria-expanded="true"
       aria-haspopup="dialog"
+      class="w-full"
+      data-floating-ui-inert=""
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
-        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dim:border dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 text-left dim:border dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
         <span
           class="flex-1 font-semibold leading-tight"
@@ -349,9 +412,35 @@ exports[`SideBar > should render responsive dropdown 3`] = `
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-floating-ui-inert=""
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="-1"
+    />
+    <span
+      data-floating-ui-focus-guard=""
+      data-type="outside"
+      role="button"
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="0"
+    />
+    <span
+      aria-owns="_r_a_"
+      data-floating-ui-inert=""
+      style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
+    />
+    <span
+      data-floating-ui-focus-guard=""
+      data-type="outside"
+      role="button"
+      style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+      tabindex="0"
+    />
   </div>
   <div
     class="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dim:border-theme-dim-700 dark:border-theme-dark-700 lg:block"
+    data-floating-ui-inert=""
   >
     <ul
       class="space-y-1"

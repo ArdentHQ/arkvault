@@ -1,5 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
+import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
 
 import { TransactionRowMobile } from "./TransactionRowMobile";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -45,6 +47,22 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
 		expect(screen.getAllByTestId("Amount")).toHaveLength(2);
+	});
+
+	it("should call onClick with the transaction when the row is clicked", async () => {
+		const onClick = vi.fn();
+
+		render(
+			<table>
+				<tbody>
+					<TransactionRowMobile transaction={fixture} profile={profile} onClick={onClick} />
+				</tbody>
+			</table>,
+		);
+
+		await userEvent.click(screen.getByTestId("TableRow__mobile"));
+
+		expect(onClick).toHaveBeenCalledWith(fixture);
 	});
 
 	it("should render skeleton responsive", () => {

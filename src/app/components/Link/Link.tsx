@@ -1,7 +1,7 @@
 import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Link as RouterLink, LinkProps } from "react-router-dom";
+import { Link as RouterLink, LinkProps } from "react-router";
 
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";

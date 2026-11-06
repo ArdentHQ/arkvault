@@ -41,11 +41,13 @@ export const DropdownRoot: FC<{ children: ReactNode }> = ({ children }) => {
 		placement: "bottom-start",
 		whileElementsMounted: autoUpdate,
 	});
+
 	const { getReferenceProps, getFloatingProps } = useInteractions([
 		useClick(context),
 		useDismiss(context),
 		useRole(context),
 	]);
+
 	return (
 		<DropdownContext.Provider
 			value={{ context, floatingStyles, getFloatingProps, getReferenceProps, open, refs, setOpen }}

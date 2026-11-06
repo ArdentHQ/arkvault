@@ -8,18 +8,24 @@ import userEvent from "@testing-library/user-event";
 
 const setValueMock = vi.fn();
 
-vi.mock("react-hook-form", () => ({
-	useForm: () => ({
-		clearErrors: vi.fn(),
-		formState: { dirtyFields: {}, errors: {}, isValid: true },
-		handleSubmit: vi.fn(),
-		register: () => ({}),
-		setError: vi.fn(),
-		setValue: setValueMock,
-		trigger: vi.fn(),
-		watch: () => ({}),
-	}),
-}));
+vi.mock("react-hook-form", async () => {
+	const actual = await vi.importActual<typeof import("react-hook-form")>("react-hook-form");
+
+	return {
+		...actual,
+		useForm: () => ({
+			...actual.useForm(),
+			clearErrors: vi.fn(),
+			formState: { dirtyFields: {}, errors: {}, isValid: true },
+			handleSubmit: vi.fn(),
+			register: () => ({}),
+			setError: vi.fn(),
+			setValue: setValueMock,
+			trigger: vi.fn(),
+			watch: () => ({}),
+		}),
+	};
+});
 
 vi.mock("@/app/hooks", () => ({
 	useActiveProfile: () => ({ id: () => "profile-id" }),

@@ -31,7 +31,7 @@ const JsonForm = () => {
 					initialHeight={90}
 					rows={5}
 					placeholder={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_PLACEHOLDER")}
-					ref={register(verifyMessage.jsonString())}
+					{...register("jsonString", verifyMessage.jsonString())}
 				/>
 			</FormField>
 		</div>
@@ -54,7 +54,10 @@ const ManualForm = () => {
 					textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
 					label={t("COMMON.SIGNATORY")}
 				/>
-				<InputDefault data-testid="VerifyMessage__manual-signatory" ref={register(verifyMessage.signatory())} />
+				<InputDefault
+					data-testid="VerifyMessage__manual-signatory"
+					{...register("signatory", verifyMessage.signatory())}
+				/>
 			</FormField>
 
 			<FormField name="message">
@@ -62,7 +65,10 @@ const ManualForm = () => {
 					textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
 					label={t("COMMON.MESSAGE")}
 				/>
-				<InputDefault data-testid="VerifyMessage__manual-message" ref={register(verifyMessage.message())} />
+				<InputDefault
+					data-testid="VerifyMessage__manual-message"
+					{...register("message", verifyMessage.message())}
+				/>
 			</FormField>
 
 			<FormField name="signature">
@@ -70,7 +76,10 @@ const ManualForm = () => {
 					textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
 					label={t("COMMON.SIGNATURE")}
 				/>
-				<InputDefault data-testid="VerifyMessage__manual-signature" ref={register(verifyMessage.signature())} />
+				<InputDefault
+					data-testid="VerifyMessage__manual-signature"
+					{...register("signature", verifyMessage.signature())}
+				/>
 			</FormField>
 		</div>
 	);

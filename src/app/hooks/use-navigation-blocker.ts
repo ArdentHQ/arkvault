@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { BlockerFunction, useBlocker } from "react-router-dom";
+import { BlockerFunction, useBlocker } from "react-router";
 
 export const useNavigationBlocker = ({ shouldBlock }: { shouldBlock: BlockerFunction }) => {
 	const [isOpen, setIsOpen] = useState(false);

@@ -25,7 +25,8 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 	const { t } = useTranslation();
 
 	const methods = useForm({ mode: "onChange" });
-	const { errors, formState, register, setError } = methods;
+	const { formState, register, setError } = methods;
+	const { errors } = formState;
 
 	const [count, setCount] = useState(0);
 	const [remainingTime, setRemainingTime] = useState(0);
@@ -66,7 +67,12 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 				type: "invalid",
 			});
 		}
-	}, [errors, remainingTime, setError, t]);
+		// errors intentionally omitted: react-hook-form v7 always creates a new
+		// formState.errors reference on setError, which would re-trigger this
+		// effect and cause an infinite render loop. The effect only needs to
+		// react to remainingTime changes.
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [remainingTime, setError, t]);
 
 	const handleSubmit = ({ password }) => {
 		if (!profile.auth().verifyPassword(password)) {
@@ -117,7 +123,7 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 				<FormField name="password">
 					<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PASSWORD")} />
 					<InputPassword
-						ref={register({
+						{...register("password", {
 							required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 								field: t("COMMON.PASSWORD"),
 							}).toString(),
@@ -133,7 +139,11 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 							{t("COMMON.CANCEL")}
 						</Button>
 
-						<Button data-testid="SignIn__submit-button" type="submit" disabled={!formState.isValid}>
+						<Button
+							data-testid="SignIn__submit-button"
+							type="submit"
+							disabled={!formState.isValid || hasReachedLimit()}
+						>
 							{t("COMMON.SIGN_IN")}
 						</Button>
 					</FormButtons>

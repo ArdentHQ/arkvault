@@ -7,7 +7,7 @@ import { ReviewStep } from "./ReviewStep";
 import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { useEnvironmentContext } from "@/app/contexts";
+import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
@@ -16,6 +16,7 @@ import { getAuthenticationStepSubtitle, handleBroadcastError } from "@/domains/t
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 import { httpClient } from "@/app/services";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
@@ -59,6 +60,8 @@ export const SendValidatorResignationSidePanel = ({
 
 	const activeProfile = useActiveProfile();
 
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+
 	const [mounted, setMounted] = useState(false);
 
 	const { activeWallet, setActiveWallet } = useSelectsTransactionSender({
@@ -66,6 +69,12 @@ export const SendValidatorResignationSidePanel = ({
 		onWalletChange: (wallet) => {
 			setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: true });
 		},
+	});
+
+	const { triggerLedger, abort } = useConnectLedger({
+		canConnect: !!activeWallet,
+		onReady: () => handleSubmit(),
+		profile: activeProfile,
 	});
 
 	useEffect(() => {
@@ -108,6 +117,10 @@ export const SendValidatorResignationSidePanel = ({
 
 	const handleNext = () => {
 		const newIndex = activeTab + 1;
+
+		if (newIndex === Step.AuthenticationStep && activeWallet?.isLedger()) {
+			void triggerLedger();
+		}
 
 		setActiveTab(newIndex);
 	};
@@ -257,6 +270,8 @@ export const SendValidatorResignationSidePanel = ({
 			setMounted(mounted);
 
 			if (!mounted) {
+				abort();
+
 				resetForm(() => {
 					setActiveTab(Step.FormStep);
 
@@ -272,6 +287,7 @@ export const SendValidatorResignationSidePanel = ({
 	const preventAccidentalClosing = activeTab !== Step.FormStep;
 
 	const isLastStep = activeTab === Step.SummaryStep;
+	const isLedgerAuthenticationStep = activeWallet && activeWallet.isLedger() && activeTab === Step.AuthenticationStep;
 
 	return (
 		<SidePanel
@@ -292,7 +308,7 @@ export const SendValidatorResignationSidePanel = ({
 			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
-				<SidePanelButtons>
+				<SidePanelButtons hidden={isLedgerAuthenticationStep}>
 					{!isLastStep && (
 						<Button
 							data-testid="SendRegistration__back-button"
@@ -347,7 +363,18 @@ export const SendValidatorResignationSidePanel = ({
 					</TabPanel>
 
 					<TabPanel tabId={Step.AuthenticationStep}>
-						<AuthenticationStep wallet={activeWallet!} noHeading />
+						<AuthenticationStep
+							wallet={activeWallet!}
+							ledgerIsAwaitingDevice={!hasDeviceAvailable}
+							ledgerIsAwaitingApp={!isConnected}
+							ledgerIsConnected={isConnected}
+							onDeviceNotAvailable={() => {
+								abort();
+								setErrorMessage(t("COMMON.LEDGER_REJECTED"));
+								setActiveTab(Step.ErrorStep);
+							}}
+							noHeading
+						/>
 					</TabPanel>
 
 					<TabPanel tabId={Step.SummaryStep}>

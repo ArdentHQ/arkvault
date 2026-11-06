@@ -9,10 +9,10 @@ import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/context
 import { translations } from "@/domains/exchange/i18n";
 import { env, getMainsailProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router";
 
-vi.mock("react-router-dom", async () => {
-	const actual = await vi.importActual("react-router-dom");
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
 	return {
 		...actual,
 		useSearchParams: vi.fn(actual.useSearchParams),

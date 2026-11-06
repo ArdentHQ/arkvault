@@ -24,10 +24,12 @@ import { renderHook } from "@testing-library/react";
 import { truncate } from "@/app/lib/helpers";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import userEvent from "@testing-library/user-event";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
-vi.mock("react-router-dom", async () => {
-	const actual = await vi.importActual("react-router-dom");
+vi.mock("@/app/components/Image", () => ({ Image: () => null }));
+
+vi.mock("react-router", async () => {
+	const actual = await vi.importActual("react-router");
 	return {
 		...actual,
 		useLocation: vi.fn().mockReturnValue(defaultUseLocationValue()),
@@ -698,7 +700,9 @@ describe("Welcome", () => {
 	it("should not select profile on wrong last location", () => {
 		const { container, navigate } = render(<Welcome />);
 
-		navigate("/");
+		act(() => {
+			navigate("/");
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -749,7 +753,9 @@ describe("Welcome", () => {
 		expect(screen.getByTestId(submitTestID)).toBeDisabled();
 
 		// the timer seems to update only every two seconds
-		vi.advanceTimersByTime(120_000);
+		await act(async () => {
+			vi.advanceTimersByTime(120_000);
+		});
 
 		// wait for form to be updated
 		await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();

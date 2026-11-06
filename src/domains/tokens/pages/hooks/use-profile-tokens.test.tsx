@@ -224,50 +224,45 @@ describe("useProfileTokens", () => {
 
 		const wallets = profile.wallets().values();
 
-		const mockFirstPage = {
-			hasMorePages: () => true,
-			items: () => [
-				{
-					address: () => wallets[0].address(),
-					balance: () => "1",
-					token: () => ({
-						address: () => "0xToken1",
-						decimals: () => 18,
-						displaySymbol: () => "TKN1",
-						name: () => "Token 1",
-						symbol: () => "TKN1",
-					}),
-				},
-			],
+		const firstToken = {
+			address: () => wallets[0].address(),
+			balance: () => "1",
+			token: () => ({
+				address: () => "0xToken1",
+				decimals: () => 18,
+				displaySymbol: () => "TKN1",
+				name: () => "Token 1",
+				symbol: () => "TKN1",
+			}),
 		};
 
-		const mockSecondPage = {
+		const newToken = {
+			address: () => wallets[0].address(),
+			balance: () => "2",
+			token: () => ({
+				address: () => "0xToken2",
+				decimals: () => 18,
+				displaySymbol: () => "TKN2",
+				name: () => "Token 2",
+				symbol: () => "TKN2",
+			}),
+		};
+
+		const mockFirstPage = {
+			hasMorePages: () => true,
+			items: () => [firstToken],
+		};
+
+		const mockUpdatedPage = {
 			hasMorePages: () => false,
-			items: () => [
-				{
-					address: () => wallets[0].address(),
-					balance: () => "2",
-					token: () => ({
-						address: () => "0xToken2",
-						decimals: () => 18,
-						displaySymbol: () => "TKN2",
-						name: () => "Token 2",
-						symbol: () => "TKN2",
-					}),
-				},
-			],
+			items: () => [newToken, firstToken],
 		};
 
 		let callCount = 0;
 		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated").mockImplementation(() => {
 			callCount++;
-			if (callCount === 1) {
-				return mockFirstPage;
-			}
-			if (callCount === 2) {
-				return mockSecondPage;
-			}
-			return mockSecondPage;
+
+			return callCount === 1 ? mockFirstPage : mockUpdatedPage;
 		});
 
 		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {

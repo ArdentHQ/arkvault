@@ -18,6 +18,20 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+const { showSupportChat: showSupportChatMock, isSupportChatOpen } = vi.hoisted(() => ({
+	hideSupportChat: vi.fn(),
+	isSupportChatOpen: vi.fn().mockReturnValue(false),
+	showSupportChat: vi.fn(),
+}));
+
+vi.mock("@/app/contexts/Zendesk", () => ({
+	useZendesk: () => ({
+		hideSupportChat: vi.fn(),
+		isSupportChatOpen,
+		showSupportChat: showSupportChatMock,
+	}),
+}));
+
 describe("General Settings", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -36,20 +50,6 @@ describe("General Settings", () => {
 	});
 
 	it("should not restore support chat after form submission if chat was not open", async () => {
-		const { showSupportChat: showSupportChatMock, isSupportChatOpen } = vi.hoisted(() => ({
-			hideSupportChat: vi.fn(),
-			isSupportChatOpen: vi.fn().mockReturnValue(false),
-			showSupportChat: vi.fn(),
-		}));
-
-		vi.mock("@/app/contexts/Zendesk", () => ({
-			useZendesk: () => ({
-				hideSupportChat: vi.fn(),
-				isSupportChatOpen,
-				showSupportChat: showSupportChatMock,
-			}),
-		}));
-
 		render(<GeneralSettings />, {
 			route: `/profiles/${profile.id()}/settings`,
 		});

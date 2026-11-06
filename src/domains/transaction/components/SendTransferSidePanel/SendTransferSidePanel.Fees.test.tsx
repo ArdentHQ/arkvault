@@ -199,7 +199,7 @@ describe("SendTransferSidePanel Fee Handling", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, "1000000000");
+		await userEvent.paste("1000000000");
 		await waitFor(() => expect(inputElement).toHaveValue("1000000000"));
 	});
 });

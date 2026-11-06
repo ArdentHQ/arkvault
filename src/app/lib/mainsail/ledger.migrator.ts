@@ -130,7 +130,7 @@ export class LedgerMigrator {
 		// Start with the min path of the given list,
 		// and increment by 1 for the migrated addresses not to have gaps.
 		let currentIndex = BIP44.parse(migratingAddresses[0].path).addressIndex;
-		let firstRecipient: Contracts.IReadWriteWallet | undefined = undefined;
+		let firstRecipient: Contracts.IReadWriteWallet | undefined;
 
 		for (const { address, path } of migratingAddresses) {
 			const newPath =

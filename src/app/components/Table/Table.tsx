@@ -23,6 +23,8 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	footer,
 	manualSortBy,
 	onSortChange,
+	getRowId,
+	fixedLayout = false,
 }: TableProperties<RowDataType>) => {
 	const tableData = useMemo(() => data, [data]);
 	const tableColumns = useMemo(() => columns, [columns]);
@@ -35,6 +37,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 			disableSortRemove: true,
 			initialState,
 			manualSortBy,
+			...(getRowId ? { getRowId } : {}),
 		},
 		useSortBy,
 	);
@@ -114,7 +117,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 
 	return (
 		<TableWrapper {...getTableProps({ className })}>
-			<table cellPadding={0} className="w-full table-auto">
+			<table cellPadding={0} className={twMerge("w-full table-auto", fixedLayout && "table-fixed")}>
 				{!hideHeader && renderHeader}
 
 				<tbody {...getTableBodyProps()}>

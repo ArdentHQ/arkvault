@@ -93,76 +93,19 @@ exports[`UpdateAccountNameModal > should render 1`] = `
                   class="relative"
                 >
                   <div
-                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
                   >
                     <div
                       class="relative flex h-full flex-1"
                     >
                       <input
-                        aria-invalid="true"
+                        aria-invalid="false"
                         autocomplete="off"
                         class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
                         data-testid="UpdateWalletAccountName__input"
                         name="name"
                         type="text"
                       />
-                    </div>
-                    <div
-                      class="flex items-center divide-x divide-theme-secondary-300 dim:divide-theme-dim-700 dark:divide-theme-secondary-800 text-theme-danger-500"
-                      data-testid="Input__addon-end"
-                    >
-                      <div
-                        class=""
-                      >
-                        <span>
-                          <span>
-                            <span
-                              data-testid="Input__error"
-                            >
-                              <div
-                                class="text-theme-danger-500"
-                              >
-                                <div
-                                  style="height: 20px; width: 20px;"
-                                >
-                                  <svg
-                                    id="circle-exclamation-mark"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                    >
-                                      <circle
-                                        cx="10"
-                                        cy="10"
-                                        r="9"
-                                        stroke-miterlimit="10"
-                                      />
-                                      <path
-                                        d="M10 10.5v-5"
-                                        stroke-linecap="round"
-                                        stroke-miterlimit="10"
-                                      />
-                                      <path
-                                        d="M10 14h0"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </span>
-                          </span>
-                        </span>
-                      </div>
                     </div>
                   </div>
                 </div>

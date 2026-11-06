@@ -120,13 +120,13 @@ exports[`PageSkeleton > should render without profile 1`] = `
                   >
                     <div
                       class="slick-track"
-                      style="opacity: 1; -webkit-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px);"
+                      style="width: 49995px; opacity: 1; -webkit-transform: translate3d(-9999px, 0px, 0px); transform: translate3d(-9999px, 0px, 0px);"
                     >
                       <div
                         aria-hidden="true"
                         class="slick-slide slick-cloned"
                         data-index="-1"
-                        style="width: 0px;"
+                        style="width: 9999px;"
                         tabindex="-1"
                       >
                         <div>
@@ -173,7 +173,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                         aria-hidden="false"
                         class="slick-slide slick-active slick-current"
                         data-index="0"
-                        style="outline: none; width: 0px;"
+                        style="outline: none; width: 9999px;"
                         tabindex="-1"
                       >
                         <div>
@@ -220,7 +220,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                         aria-hidden="true"
                         class="slick-slide"
                         data-index="1"
-                        style="outline: none; width: 0px;"
+                        style="outline: none; width: 9999px;"
                         tabindex="-1"
                       >
                         <div>
@@ -267,7 +267,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                         aria-hidden="true"
                         class="slick-slide"
                         data-index="2"
-                        style="outline: none; width: 0px;"
+                        style="outline: none; width: 9999px;"
                         tabindex="-1"
                       >
                         <div>
@@ -314,7 +314,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                         aria-hidden="true"
                         class="slick-slide slick-cloned"
                         data-index="3"
-                        style="width: 0px;"
+                        style="width: 9999px;"
                         tabindex="-1"
                       >
                         <div>

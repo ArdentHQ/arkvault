@@ -3,15 +3,15 @@ import { Environment } from "./environment";
 import { StubStorage } from "@/tests/mocks";
 import { DataRepository } from "./data.repository";
 
-describe("Environment", () => {
-	vi.mock("@/app/lib/mainsail", () => ({
-		Http: {
-			HttpClient: vi.fn(),
-		},
-		Networks: {},
-		Services: {},
-	}));
+vi.mock("@/app/lib/mainsail", () => ({
+	Http: {
+		HttpClient: vi.fn(),
+	},
+	Networks: {},
+	Services: {},
+}));
 
+describe("Environment", () => {
 	it("should create environment instance", () => {
 		const environment = new Environment({} as any);
 		expect(environment).toBeDefined();

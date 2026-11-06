@@ -161,6 +161,7 @@ describe("SelectDropdown", () => {
 
 		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
 		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "Opt");
+		await waitFor(() => expect(screen.getByRole("tooltip")).not.toContainHTML("opacity: 0"));
 
 		expect(container).toMatchSnapshot();
 		expect(screen.getByText("Label Option 1")).toBeInTheDocument();
@@ -179,6 +180,7 @@ describe("SelectDropdown", () => {
 
 			await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
 			await userEvent.type(screen.getByTestId("SelectDropdown__input"), "Opt");
+			await waitFor(() => expect(screen.getByRole("tooltip")).not.toContainHTML("opacity: 0"));
 
 			expect(container).toMatchSnapshot();
 			expect(screen.getByText("Label Option 1")).toBeInTheDocument();

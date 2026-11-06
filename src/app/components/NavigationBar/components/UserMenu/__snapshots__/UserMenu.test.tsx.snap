@@ -6,6 +6,7 @@ exports[`UserMenu > should render with regular image 1`] = `
     aria-expanded="false"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
+    tabindex="0"
   >
     <button
       class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"
@@ -40,6 +41,7 @@ exports[`UserMenu > should render with svg image 1`] = `
     aria-expanded="false"
     aria-haspopup="dialog"
     data-testid="dropdown__toggle"
+    tabindex="0"
   >
     <button
       class="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700"

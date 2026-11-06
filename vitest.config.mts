@@ -6,7 +6,7 @@ import { defineConfig } from "vitest/config";
 import viteConfig from "./vite.config.mts";
 import svgr from "vite-plugin-svgr";
 import { VitePWA } from "vite-plugin-pwa";
-import pkg from "./package.json";
+import pkg from "./package.json" with { type: "json" };
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
@@ -34,6 +34,7 @@ export default defineConfig(async () => {
 				"process.env.APP_VERSION": JSON.stringify(pkg.version),
 			},
 			test: {
+				clearMocks: false,
 				css: false,
 				logHeapUsage: true,
 				maxConcurrency: 4,
@@ -54,9 +55,9 @@ export default defineConfig(async () => {
 					exclude: [
 						"**/build/*",
 						"**/dist/*",
-						"data.ts",
-						"index.ts",
-						"index.tsx",
+						"**/data.ts",
+						"**/index.ts",
+						"**/index.tsx",
 						"src/**/*.e2e.ts",
 						"src/**/*.models.{js,jsx,ts,tsx}",
 						"src/**/*.styles.{js,jsx,ts,tsx}",
@@ -68,6 +69,7 @@ export default defineConfig(async () => {
 						"src/tests/**/*",
 						"src/utils/e2e-utils.ts",
 						"src/utils/testing-library.tsx",
+						"src/utils/vitest-mocks.ts",
 						"src/utils/ledger-test-helpers.ts",
 						"src/utils/test-plugins.ts",
 						"src/utils/test-helpers.ts",

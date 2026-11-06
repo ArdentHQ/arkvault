@@ -12,7 +12,7 @@ export const VoteLedgerReview = ({ wallet, votes, unvotes }: SendVoteStepPropert
 	const { getValues } = useFormContext();
 	const { t } = useTranslation();
 
-	const { gasPrice, gasLimit } = getValues(["gasLimit", "gasPrice"]);
+	const { gasPrice, gasLimit } = getValues();
 	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	return (

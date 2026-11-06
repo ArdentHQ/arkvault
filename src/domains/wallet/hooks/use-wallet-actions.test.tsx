@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import React from "react";
 import { env, act, getMainsailProfileId, Providers, LocationTracker } from "@/utils/testing-library";
-import { DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/SimpleDropdown";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 import { afterEach, expect, vi } from "vitest";

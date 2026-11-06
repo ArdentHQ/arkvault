@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
 import { SideBarItem } from "./SideBarItem";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/SimpleDropdown";
 import { Icon } from "@/app/components/Icon";
 import classNames from "classnames";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 
 export interface Item {
 	itemKey: string;
@@ -35,23 +36,38 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 	return (
 		<>
 			<div className="relative -mx-6 -mt-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dim:border-theme-dim-700 dim:bg-theme-dim-950 dark:border-theme-dark-700 dark:bg-black md:m-0 md:border-t-0 md:bg-transparent md:p-0 dim:md:bg-transparent dark:md:bg-transparent lg:hidden">
-				<Dropdown
-					placement="bottom-start"
-					wrapperClass="sm:w-full px-6 sm:px-6 md:px-10 -mt-2"
-					options={options}
-					onSelect={({ value }) => handleActiveItem(String(value))}
-					toggleContent={(isOpen) => (
-						<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dim:border dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300">
-							<span className="flex-1 font-semibold leading-tight">{selectedLabel}</span>
+				<DropdownRoot>
+					<DropdownToggle className="w-full">
+						{({ isOpen }) => (
+							<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 text-left dim:border dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300">
+								<span className="flex-1 font-semibold leading-tight">{selectedLabel}</span>
 
-							<Icon
-								name="ChevronDownSmall"
-								className={classNames("transition-transform", { "rotate-180": isOpen })}
-								size="sm"
-							/>
-						</div>
-					)}
-				/>
+								<Icon
+									name="ChevronDownSmall"
+									className={classNames("transition-transform", { "rotate-180": isOpen })}
+									size="sm"
+								/>
+							</div>
+						)}
+					</DropdownToggle>
+					<DropdownContent>
+						<ul>
+							{options.map((option, index) => (
+								<DropdownListItem
+									key={option.value}
+									data-testid={`Sidebar--option-${index}`}
+									className={classNames({
+										"bg-theme-secondary-200 text-theme-primary-600 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+											option.active,
+									})}
+									onClick={() => handleActiveItem(String(option.value))}
+								>
+									{option.label}
+								</DropdownListItem>
+							))}
+						</ul>
+					</DropdownContent>
+				</DropdownRoot>
 			</div>
 
 			<div className="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dim:border-theme-dim-700 dark:border-theme-dark-700 lg:block">

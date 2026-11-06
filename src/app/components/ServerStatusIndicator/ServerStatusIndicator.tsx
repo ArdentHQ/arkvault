@@ -3,7 +3,7 @@ import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
-import { Dropdown } from "@/app/components/Dropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent } from "@/app/components/SimpleDropdown";
 import { NavigationButtonWrapper } from "@/app/components/NavigationBar/NavigationBar.blocks";
 import { useServerHealthStatus } from "@/app/hooks";
 import { Link } from "@/app/components/Link";
@@ -37,10 +37,8 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 
 	return (
 		<div>
-			<Dropdown
-				wrapperClass="mt-2"
-				placement="bottom"
-				toggleContent={
+			<DropdownRoot>
+				<DropdownToggle className="flex items-center">
 					<NavigationButtonWrapper className="group">
 						<Tooltip content={t("COMMON.NETWORK_STATUS")}>
 							<Button
@@ -56,25 +54,26 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 							</Button>
 						</Tooltip>
 					</NavigationButtonWrapper>
-				}
-			>
-				<div className="w-full sm:w-128">
-					<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-8 py-4 dim:bg-theme-dim-950 dark:bg-black">
-						<div className="text-sm font-semibold text-theme-secondary-500 dim:text-theme-dim-200">
-							{t("COMMON.NETWORK_STATUS")}
+				</DropdownToggle>
+				<DropdownContent className="mt-2">
+					<div className="w-full sm:w-128">
+						<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-8 py-4 dim:bg-theme-dim-950 dark:bg-black">
+							<div className="text-sm font-semibold text-theme-secondary-500 dim:text-theme-dim-200">
+								{t("COMMON.NETWORK_STATUS")}
+							</div>
+							<Link to={`/profiles/${profile.id()}/settings/servers`}>
+								<span className="text-sm font-semibold">{t("COMMON.MANAGE_SERVERS")}</span>
+							</Link>
 						</div>
-						<Link to={`/profiles/${profile.id()}/settings/servers`}>
-							<span className="text-sm font-semibold">{t("COMMON.MANAGE_SERVERS")}</span>
-						</Link>
-					</div>
-					<div className="flex items-start space-x-2 px-8 py-4 text-theme-text">
-						<div className="mt-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dim:text-theme-dim-200 dark:group-hover:bg-theme-secondary-800">
-							<StatusDot status={status.value} />
+						<div className="flex items-start space-x-2 px-8 py-4 text-theme-text">
+							<div className="mt-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dim:text-theme-dim-200 dark:group-hover:bg-theme-secondary-800">
+								<StatusDot status={status.value} />
+							</div>
+							<div>{status.label}</div>
 						</div>
-						<div>{status.label}</div>
 					</div>
-				</div>
-			</Dropdown>
+				</DropdownContent>
+			</DropdownRoot>
 		</div>
 	);
 };

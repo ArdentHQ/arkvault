@@ -89,7 +89,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 					<div>
 						<FormField name="name">
 							<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.NAME")} />
-							<InputDefault ref={register(createProfile.name())} />
+							<InputDefault {...register("name", createProfile.name())} />
 						</FormField>
 					</div>
 
@@ -111,7 +111,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 								placeholder={t("COMMON.SELECT_OPTION", {
 									option: t("SETTINGS.GENERAL.PERSONAL.CURRENCY"),
 								})}
-								ref={register(createProfile.currency())}
+								{...register("currency", createProfile.currency())}
 								options={currencyOptions}
 								onChange={(currency: any) =>
 									setValue("currency", currency?.value, {
@@ -175,8 +175,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 						<label className="flex cursor-pointer items-center space-x-3">
 							<Checkbox
 								data-testid="ProfileForm__disclaimer-checkbox"
-								name="disclaimer"
-								ref={register(createProfile.disclaimer())}
+								{...register("disclaimer", createProfile.disclaimer())}
 								onChange={() =>
 									setValue("disclaimer", !disclaimer, {
 										shouldDirty: true,

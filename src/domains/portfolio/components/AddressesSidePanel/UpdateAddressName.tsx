@@ -60,9 +60,9 @@ export const UpdateAddressName = ({ onAfterSave, onCancel, profile, wallet }: Up
 					<Input
 						autoFocus
 						errorMessage={errors.name?.message}
-						isInvalid={!isValid}
+						isInvalid={!!errors.name}
 						data-testid="UpdateWalletName__input"
-						ref={register(aliasValidation)}
+						{...register("name", aliasValidation)}
 					/>
 				</div>
 			</FormField>

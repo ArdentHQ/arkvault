@@ -98,10 +98,10 @@ describe("Contacts", () => {
 		await userEvent.click(firstContactOptionsDropdown);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		});
 
-		const updateOption = within(screen.getByTestId("dropdown__options")).getByText(commonTranslations.EDIT);
+		const updateOption = within(screen.getByTestId("dropdown__content")).getByText(commonTranslations.EDIT);
 
 		await userEvent.click(updateOption);
 
@@ -240,10 +240,10 @@ describe("Contacts", () => {
 		await userEvent.click(firstContactOptionsDropdown);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		});
 
-		const deleteOption = within(screen.getByTestId("dropdown__options")).getByText(commonTranslations.DELETE);
+		const deleteOption = within(screen.getByTestId("dropdown__content")).getByText(commonTranslations.DELETE);
 		await userEvent.click(deleteOption);
 
 		await waitFor(() => {
@@ -279,10 +279,10 @@ describe("Contacts", () => {
 		await userEvent.click(firstContactOptionsDropdown);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		});
 
-		const deleteOption = within(screen.getByTestId("dropdown__options")).getByText(commonTranslations.DELETE);
+		const deleteOption = within(screen.getByTestId("dropdown__content")).getByText(commonTranslations.DELETE);
 		await userEvent.click(deleteOption);
 
 		await waitFor(() => {
@@ -317,10 +317,10 @@ describe("Contacts", () => {
 		await userEvent.click(firstContactOptionsDropdown);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		});
 
-		await userEvent.click(within(screen.getByTestId("dropdown__options")).getByText(commonTranslations.EDIT));
+		await userEvent.click(within(screen.getByTestId("dropdown__content")).getByText(commonTranslations.EDIT));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -370,10 +370,10 @@ describe("Contacts", () => {
 		await userEvent.click(firstContactOptionsDropdown);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		});
 
-		const editOption = within(screen.getByTestId("dropdown__options")).getByText(commonTranslations.EDIT);
+		const editOption = within(screen.getByTestId("dropdown__content")).getByText(commonTranslations.EDIT);
 		await userEvent.click(editOption);
 
 		await waitFor(() => {

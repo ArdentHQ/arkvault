@@ -48,9 +48,9 @@ export const ImportProfileForm = ({
 			.settings()
 			.set(Contracts.ProfileSetting.Avatar, avatarImage || Helpers.Avatar.make(profile.name().trim()));
 
-		if (enteredPassword || password) {
+		if (enteredPassword) {
 			// @ts-ignore
-			profile.auth().setPassword(enteredPassword || password);
+			profile.auth().setPassword(enteredPassword);
 		}
 
 		onSubmit(profile);

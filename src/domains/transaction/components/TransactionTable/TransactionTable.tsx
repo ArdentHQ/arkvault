@@ -5,7 +5,10 @@ import { TableState } from "react-table";
 import { TransactionRow } from "./TransactionRow/TransactionRow";
 import { ExtendedTransactionDTO, TransactionTableProperties } from "./TransactionTable.contracts";
 import { Table } from "@/app/components/Table";
-import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
+import {
+	getTransactionRowId,
+	useTransactionTableColumns,
+} from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import { useBreakpoint } from "@/app/hooks";
 import cn from "classnames";
 
@@ -47,11 +50,13 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 		return showSkeleton ? skeletonRows : transactions;
 	}, [showSkeleton, transactions, skeletonRowsLimit]);
 
+	const handleRowClick = useCallback((row: ExtendedTransactionDTO) => onRowClick?.(row), [onRowClick]);
+
 	const renderTableRow = useCallback(
 		(row: ExtendedTransactionDTO) => (
 			<TransactionRow
 				isLoading={showSkeleton}
-				onClick={() => onRowClick?.(row)}
+				onClick={handleRowClick}
 				transaction={row}
 				exchangeCurrency={exchangeCurrency}
 				profile={profile}
@@ -59,7 +64,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				coinName={coinName}
 			/>
 		),
-		[showSkeleton, onRowClick, exchangeCurrency, profile, hideSender],
+		[showSkeleton, handleRowClick, exchangeCurrency, profile, hideSender, coinName],
 	);
 
 	return (
@@ -71,6 +76,8 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				initialState={initialState}
 				onSortChange={onSortChange}
 				manualSortBy
+				getRowId={getTransactionRowId}
+				fixedLayout={hideSender}
 				className={cn({ "with-x-padding": isMdAndAbove })}
 			>
 				{renderTableRow}

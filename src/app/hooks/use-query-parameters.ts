@@ -1,7 +1,7 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
 export const useQueryParameters = () => {
 	const { search } = useLocation();

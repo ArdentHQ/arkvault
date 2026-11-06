@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { BigNumber } from "@/app/lib/helpers";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
-import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
+import { FormProvider, useForm, UseFormReturn } from "react-hook-form";
 
 import { UsernameRegistrationForm, signUsernameRegistration, handleSelectSender } from "./UsernameRegistrationForm";
 import { getWalletAddress } from "./FormStep";
@@ -28,7 +28,7 @@ let isValidatorMock: vi.Mock;
 const fees = { avg: 1.354, max: 10, min: 0 };
 
 const renderComponent = (properties?: any) => {
-	let form: UseFormMethods | undefined;
+	let form: UseFormReturn | undefined;
 
 	const defaultValues = properties?.defaultValues ?? { fee: "2" };
 	const activeTab = properties?.activeTab ?? 1;
@@ -42,7 +42,6 @@ const renderComponent = (properties?: any) => {
 			register("fee");
 			register("fees");
 			register("inputFeeSettings");
-			register("username");
 			register("senderAddress");
 		}, [register]);
 

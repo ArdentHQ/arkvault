@@ -9,7 +9,7 @@ import {
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
-import { Dropdown } from "@/app/components/Dropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -67,7 +67,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 			<TableCell data-testid="ContactListItem__address" className={borderClasses()} innerClassName="space-x-4">
 				<div className="w-0 flex-1">
-					<Address address={address.address()} truncateOnTable addressClass="text-sm leading-[17px]" />
+					<Address address={address.address()} addressClass="text-sm leading-[17px]" />
 				</div>
 			</TableCell>
 
@@ -104,9 +104,8 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 					)}
 
 					<div className={index === 0 ? "visible" : "invisible"}>
-						<Dropdown
-							placement="bottom-end"
-							toggleContent={
+						<DropdownRoot>
+							<DropdownToggle>
 								<Button
 									size="icon"
 									variant="transparent"
@@ -118,10 +117,21 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 										className="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
 									/>
 								</Button>
-							}
-							options={options}
-							onSelect={(action: ContactListItemOption) => onAction(action)}
-						/>
+							</DropdownToggle>
+							<DropdownContent>
+								<ul>
+									{options.map((option, index) => (
+										<DropdownListItem
+											key={option.value}
+											data-testid={`dropdown__option--${index}`}
+											onClick={() => onAction(option as ContactListItemOption)}
+										>
+											{option.label}
+										</DropdownListItem>
+									))}
+								</ul>
+							</DropdownContent>
+						</DropdownRoot>
 					</div>
 				</div>
 			</TableCell>

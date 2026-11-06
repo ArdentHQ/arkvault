@@ -9,7 +9,7 @@ import { Button } from "@/app/components/Button";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
 import { Spinner } from "@/app/components/Spinner";
 import { useAccordion, useBreakpoint } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
@@ -32,8 +32,9 @@ interface PeerRowProperties {
 	height: number | undefined;
 	onToggle: (isEnabled: boolean) => void;
 	networkName: string;
-	onSelectOption: ({ value }: DropdownOption) => void;
-	dropdownOptions: DropdownOption[];
+	onDelete: () => void;
+	onUpdate: () => void;
+	onRefresh: () => void;
 	hosts: {
 		publicApi: HostDetails;
 		txApi: HostDetails;
@@ -48,8 +49,9 @@ const PeerRow = ({
 	height,
 	networkName,
 	onToggle,
-	onSelectOption,
-	dropdownOptions,
+	onDelete,
+	onUpdate,
+	onRefresh,
 }: PeerRowProperties) => {
 	const { t } = useTranslation();
 
@@ -143,10 +145,8 @@ const PeerRow = ({
 						/>
 					</div>
 
-					<Dropdown
-						placement="right-start"
-						data-testid="CustomPeers--dropdown"
-						toggleContent={
+					<DropdownRoot>
+						<DropdownToggle>
 							<Button
 								variant="transparent"
 								size="icon"
@@ -154,10 +154,40 @@ const PeerRow = ({
 							>
 								<Icon name="EllipsisVerticalFilled" size="md" />
 							</Button>
-						}
-						onSelect={onSelectOption}
-						options={dropdownOptions}
-					/>
+						</DropdownToggle>
+						<DropdownContent>
+							<ul>
+								<DropdownListItem data-testid="dropdown__option--0" onClick={onUpdate}>
+									<Icon
+										name="Pencil"
+										className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+										size="md"
+									/>
+									<span className="flex w-full items-center justify-between">{t("COMMON.EDIT")}</span>
+								</DropdownListItem>
+								<DropdownListItem data-testid="dropdown__option--1" onClick={onDelete}>
+									<Icon
+										name="Trash"
+										className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+										size="md"
+									/>
+									<span className="flex w-full items-center justify-between">
+										{t("COMMON.DELETE")}
+									</span>
+								</DropdownListItem>
+								<DropdownListItem data-testid="dropdown__option--2" onClick={onRefresh}>
+									<Icon
+										name="ArrowRotateLeft"
+										className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+										size="md"
+									/>
+									<span className="flex w-full items-center justify-between">
+										{t("COMMON.REFRESH")}
+									</span>
+								</DropdownListItem>
+							</ul>
+						</DropdownContent>
+					</DropdownRoot>
 				</div>
 			</TableCell>
 		</TableRow>
@@ -211,7 +241,6 @@ const CustomPeersPeer = ({
 	onDelete: (network: NormalizedNetwork) => void;
 	onUpdate: (network: NormalizedNetwork) => void;
 	onToggle: (isEnabled: boolean) => void;
-	// TODO: break it down into smaller components.
 }) => {
 	const { persist } = useEnvironmentContext();
 	const { name, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, height, enabled, network } =
@@ -224,34 +253,12 @@ const CustomPeersPeer = ({
 		profile,
 	});
 
-	const dropdownOptions: DropdownOption[] = [
-		{ icon: "Pencil", iconPosition: "start", label: t("COMMON.EDIT"), value: "edit" },
-		{ icon: "Trash", iconPosition: "start", label: t("COMMON.DELETE"), value: "delete" },
-		{ icon: "ArrowRotateLeft", iconPosition: "start", label: t("COMMON.REFRESH"), value: "refresh" },
-	];
-
 	useEffect(() => {
 		const interval = setInterval(() => syncStatus(), 60 * 1000 * 5);
 		syncStatus();
 
 		return () => clearInterval(interval);
 	}, []);
-
-	const handleSelectOption = async ({ value }) => {
-		if (value === "delete") {
-			onDelete(normalizedNetwork);
-			return;
-		}
-
-		if (value === "edit") {
-			onUpdate(normalizedNetwork);
-		}
-
-		if (value === "refresh") {
-			await syncStatus();
-			await persist();
-		}
-	};
 
 	const { isXs, isSm } = useBreakpoint();
 
@@ -280,9 +287,8 @@ const CustomPeersPeer = ({
 								<Divider type="vertical" />
 
 								<div className="hidden h-4 sm:block">
-									<Dropdown
-										data-testid="CustomPeers--dropdown"
-										toggleContent={
+									<DropdownRoot>
+										<DropdownToggle>
 											<Button
 												variant="transparent"
 												size="icon"
@@ -290,10 +296,54 @@ const CustomPeersPeer = ({
 											>
 												<Icon name="EllipsisVerticalFilled" size="md" />
 											</Button>
-										}
-										onSelect={handleSelectOption}
-										options={dropdownOptions}
-									/>
+										</DropdownToggle>
+										<DropdownContent>
+											<ul>
+												<DropdownListItem
+													data-testid="dropdown__option--0"
+													onClick={() => onUpdate(normalizedNetwork)}
+												>
+													<Icon
+														name="Pencil"
+														className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+														size="md"
+													/>
+													<span className="flex w-full items-center justify-between">
+														{t("COMMON.EDIT")}
+													</span>
+												</DropdownListItem>
+												<DropdownListItem
+													data-testid="dropdown__option--1"
+													onClick={() => onDelete(normalizedNetwork)}
+												>
+													<Icon
+														name="Trash"
+														className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+														size="md"
+													/>
+													<span className="flex w-full items-center justify-between">
+														{t("COMMON.DELETE")}
+													</span>
+												</DropdownListItem>
+												<DropdownListItem
+													data-testid="dropdown__option--2"
+													onClick={async () => {
+														await syncStatus();
+														await persist();
+													}}
+												>
+													<Icon
+														name="ArrowRotateLeft"
+														className="dim:text-theme-dim-200 dark:text-theme-secondary-600"
+														size="md"
+													/>
+													<span className="flex w-full items-center justify-between">
+														{t("COMMON.REFRESH")}
+													</span>
+												</DropdownListItem>
+											</ul>
+										</DropdownContent>
+									</DropdownRoot>
 								</div>
 
 								<div className="sm:hidden">
@@ -371,7 +421,7 @@ const CustomPeersPeer = ({
 							<Button
 								variant="secondary"
 								size="sm"
-								onClick={() => handleSelectOption({ value: "edit" })}
+								onClick={() => onUpdate(normalizedNetwork)}
 								data-testid="CustomPeers-network-item--mobile--edit"
 							>
 								<Icon name="Pencil" />
@@ -380,7 +430,10 @@ const CustomPeersPeer = ({
 							<Button
 								variant="secondary"
 								size="sm"
-								onClick={() => handleSelectOption({ value: "refresh" })}
+								onClick={async () => {
+									await syncStatus();
+									await persist();
+								}}
 								data-testid="CustomPeers-network-item--mobile--refresh"
 							>
 								<Icon name="ArrowRotateLeft" />
@@ -389,7 +442,7 @@ const CustomPeersPeer = ({
 							<Button
 								variant="danger"
 								size="sm"
-								onClick={() => handleSelectOption({ value: "delete" })}
+								onClick={() => onDelete(normalizedNetwork)}
 								data-testid="CustomPeers-network-item--mobile--delete"
 							>
 								<Icon name="Trash" />
@@ -422,8 +475,12 @@ const CustomPeersPeer = ({
 			checked={enabled}
 			height={height}
 			onToggle={onToggle}
-			onSelectOption={handleSelectOption}
-			dropdownOptions={dropdownOptions}
+			onDelete={() => onDelete(normalizedNetwork)}
+			onUpdate={() => onUpdate(normalizedNetwork)}
+			onRefresh={async () => {
+				await syncStatus();
+				await persist();
+			}}
 		/>
 	);
 };

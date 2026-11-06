@@ -31,21 +31,21 @@ describe("InputAddress", () => {
 
 	it("should validate a wrong address", async () => {
 		const { result } = renderHook(() => useForm({ mode: "onChange" }));
-		const { register, errors } = result.current;
+		const { register, getFieldState } = result.current;
 
 		render(<TestInputAddress coin="Mainsail" network="mainsail.devnet" registerRef={register} profile={profile} />);
 
 		await userEvent.type(screen.getByTestId("InputAddress__input"), "Abc");
 
 		await waitFor(() =>
-			expect(errors.address?.message).toBe(commonTranslations.INPUT_ADDRESS.VALIDATION.NOT_VALID),
+			expect(getFieldState("address").error?.message).toBe(commonTranslations.INPUT_ADDRESS.VALIDATION.NOT_VALID),
 		);
 	});
 
 	it("should validate a valid address and emit event", async () => {
 		const onValidAddress = vi.fn();
 		const { result } = renderHook(() => useForm({ mode: "onChange" }));
-		const { register, errors } = result.current;
+		const { register, getFieldState } = result.current;
 		const validAddress = "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
 
 		render(
@@ -61,7 +61,7 @@ describe("InputAddress", () => {
 		await userEvent.type(screen.getByTestId("InputAddress__input"), validAddress);
 
 		await waitFor(() => {
-			expect(errors.address?.message).toBeUndefined();
+			expect(getFieldState("address").error?.message).toBeUndefined();
 		});
 
 		await waitFor(() => {
@@ -71,7 +71,7 @@ describe("InputAddress", () => {
 
 	it("should validate with additional rules", async () => {
 		const { result } = renderHook(() => useForm({ mode: "onChange" }));
-		const { register, errors } = result.current;
+		const { register, getFieldState } = result.current;
 
 		render(
 			<TestInputAddress
@@ -85,7 +85,7 @@ describe("InputAddress", () => {
 
 		await userEvent.type(screen.getByTestId("InputAddress__input"), "Abc");
 
-		await waitFor(() => expect(errors.address?.type).toBe("minLength"));
+		await waitFor(() => expect(getFieldState("address").error?.type).toBe("minLength"));
 	});
 
 	it("should not use default validation", async () => {

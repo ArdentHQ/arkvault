@@ -2,7 +2,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 import React, { useEffect, useMemo, useState } from "react";
 import { Tab, TabList, TabScroll, Tabs } from "@/app/components/Tabs";
-import { generatePath, useNavigate } from "react-router-dom";
+import { generatePath, useNavigate } from "react-router";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
 import { Address } from "@/app/components/Address";
@@ -235,8 +235,6 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 								<div className="min-w-4/6 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 									<Address
 										address={wallet.publicKey()}
-										size="sm"
-										truncateOnTable
 										showCopyButton
 										addressClass="leading-[17px] sm:leading-5"
 									/>

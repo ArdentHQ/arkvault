@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { matchPath } from "react-router-dom";
+import { matchPath } from "react-router";
 import { ProfilePaths } from "@/router/paths";
 
 interface UseSettingsPromptInput {

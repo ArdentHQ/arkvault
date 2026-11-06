@@ -90,7 +90,7 @@ export const TransferOverwriteModal = ({
 								currentRecipient ? (
 									<Address
 										address={currentRecipient}
-										orientation="vertical"
+										wrapperClass="flex-col items-start"
 										addressClass="font-medium text-theme-secondary-900 dark:text-theme-secondary-200"
 									/>
 								) : (

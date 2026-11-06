@@ -129,14 +129,14 @@ describe("useTransactionExport hook", () => {
 			await result.current.startExport({
 				dateRange: "custom",
 				delimiter: "comma",
-				from: Date.now(),
+				from: new Date(),
 				includeCryptoAmount: true,
 				includeDate: true,
 				includeFiatAmount: true,
 				includeHeaderRow: true,
 				includeSenderRecipient: true,
 				includeTransactionId: true,
-				to: Date.now(),
+				to: new Date(),
 				transactionType: "sent",
 			});
 		});
@@ -168,12 +168,15 @@ describe("useTransactionExport hook", () => {
 	it("should properly handle errors", async () => {
 		const { result } = renderExportHook();
 
+		let requestCount = 0;
+		const timestampToValues: (string | null)[] = [];
+
 		const handler = http.get(`https://dwallets-evm.mainsailhq.com/api/transactions`, ({ request }) => {
 			const url = new URL(request.url);
-			const to = url.searchParams.get("timestamp.to");
+			timestampToValues.push(url.searchParams.get("timestamp.to"));
 
 			// return OK response for the first request
-			if (to === "0") {
+			if (requestCount++ === 0) {
 				return HttpResponse.json({
 					data: Array.from({ length: 100 }).fill(transactionsFixture.data[0]),
 					meta: {
@@ -196,14 +199,14 @@ describe("useTransactionExport hook", () => {
 			await result.current.startExport({
 				dateRange: "custom",
 				delimiter: "comma",
-				from: Date.now(),
+				from: new Date(),
 				includeCryptoAmount: true,
 				includeDate: true,
 				includeFiatAmount: true,
 				includeHeaderRow: true,
 				includeSenderRecipient: true,
 				includeTransactionId: true,
-				to: Date.now(),
+				to: new Date(),
 				transactionType: "all",
 			});
 		});
@@ -211,6 +214,11 @@ describe("useTransactionExport hook", () => {
 		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Success));
 		await waitFor(() => expect(result.current.file.content.length).toBeGreaterThan(1));
 		await waitFor(() => expect(result.current.count).toBe(100));
+
+		expect(timestampToValues.length).toBeGreaterThan(0);
+		for (const value of timestampToValues) {
+			expect(Number(value)).toBeGreaterThan(1e12);
+		}
 
 		server.resetHandlers();
 	});

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable sonarjs/no-duplicate-string */
 
 import { Contracts } from "@/app/lib/profiles";
@@ -27,9 +26,22 @@ let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
+const buildPage = (page: number) => ({
+	data: Array.from({ length: 30 }, (_, index) => ({
+		...transactionsFixture.data[index % transactionsFixture.data.length],
+		hash: (page * 1_000 + index).toString(16).padStart(64, "0"),
+	})),
+	meta: {
+		...transactionsFixture.meta,
+		count: 30,
+		next: `/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&fullReceipt=false&transform=true&page=${page + 1}`,
+		totalCount: 63,
+	},
+});
+
 describe("Transactions", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(fixtureProfileId);
+		profile = await env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -297,18 +309,11 @@ describe("Transactions", () => {
 
 		// Paginated result
 		server.use(
-			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
-				// transaction.data only has 10 items, create 5 items more
-				data: [...transactionsFixture.data, ...transactionsFixture.data, ...transactionsFixture.data].slice(
-					0,
-					30,
-				),
-				meta: {
-					...transactionsFixture.meta,
-					count: 15,
-					next: "/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&fullReceipt=false&transform=true&page=2",
-					totalCount: 63,
-				},
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", buildPage(2), {
+				query: { page: "2" },
+			}),
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", buildPage(1), {
+				query: { page: "1" },
 			}),
 		);
 
@@ -326,13 +331,17 @@ describe("Transactions", () => {
 
 		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.LOAD_MORE));
 
-		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30);
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+		);
 
 		await userEvent.click(screen.getByTestId("transactions__fetch-more-button"));
 
 		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.LOAD_MORE));
 
-		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(60);
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(60),
+		);
 
 		process.env.REACT_APP_IS_UNIT = undefined;
 
@@ -421,7 +430,8 @@ describe("Transactions", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(8),
 		);
 
-		const button = screen.getByTestId("dropdown__toggle-Transactions--filter-dropdown");
+		const mobileFilter = screen.getByTestId("Transactions--mobile-filter");
+		const button = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
 
 		expect(button).toBeInTheDocument();
 
@@ -429,7 +439,7 @@ describe("Transactions", () => {
 
 		await userEvent.click(button);
 
-		const dropdownContainer = within(screen.getByTestId("dropdown__content-Transactions--filter-dropdown"));
+		const dropdownContainer = within(screen.getByTestId("dropdown__content"));
 
 		await expect(dropdownContainer.findByTestId("dropdown__option--2")).resolves.toBeVisible();
 
@@ -438,6 +448,71 @@ describe("Transactions", () => {
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
 		);
+	});
+
+	it("should toggle mobile dropdown", async () => {
+		renderResponsiveWithRoute(<Transactions profile={profile} wallets={profile.wallets().values()} />, "xs", {
+			route: dashboardURL,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
+		);
+
+		const mobileFilter = screen.getByTestId("Transactions--mobile-filter");
+		const button = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
+
+		expect(button).toBeInTheDocument();
+		expect(button.children.length).toBeGreaterThan(0);
+
+		await userEvent.click(button);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
+		});
+	});
+
+	it("should show correct chevron icon in mobile dropdown toggle based on open state", async () => {
+		renderResponsiveWithRoute(<Transactions profile={profile} wallets={profile.wallets().values()} />, "xs", {
+			route: dashboardURL,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
+		);
+
+		const mobileFilter = screen.getByTestId("Transactions--mobile-filter");
+		const toggleButton = within(mobileFilter).getAllByTestId("dropdown__toggle")[0];
+
+		const iconWrapper = screen.getByTestId("mobile-filter__chevron-icon");
+		expect(iconWrapper).toBeInTheDocument();
+		expect(iconWrapper.children.length).toBeGreaterThan(0);
+
+		await userEvent.click(toggleButton);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		});
+
+		const iconAfterOpen = screen.getByTestId("mobile-filter__chevron-icon");
+		expect(iconAfterOpen).toBeInTheDocument();
+		expect(iconAfterOpen.children.length).toBeGreaterThan(0);
+
+		await userEvent.click(toggleButton);
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
+		});
+
+		const iconAfterClose = screen.getByTestId("mobile-filter__chevron-icon");
+		expect(iconAfterClose).toBeInTheDocument();
+		expect(iconAfterClose.children.length).toBeGreaterThan(0);
 	});
 
 	it("should ignore tab change on loading state", async () => {

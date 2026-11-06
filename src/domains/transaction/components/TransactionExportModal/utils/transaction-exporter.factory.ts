@@ -113,7 +113,7 @@ export const TransactionExporter = ({
 		}
 
 		let nextDateRange: Services.RangeCriteria = {
-			to: fetchedTransactions[fetchedTransactionsCount - 1].timestamp()?.subMillisecond().toUNIX(),
+			to: fetchedTransactions[fetchedTransactionsCount - 1].timestamp()?.subMillisecond().valueOf(),
 		};
 
 		if (dateRange?.from) {

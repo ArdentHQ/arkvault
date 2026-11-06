@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { JSX, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { HDWalletTabs } from "./HDWallet/HDWalletTabs";
 import { ImportDetailStep } from "./ImportDetailStep";
@@ -98,9 +98,9 @@ export const ImportAddressesSidePanel = ({
 	}, [isLedgerImport, activeTab, stepConfig, ledgerConfig, isHDWalletImport, HDWalletConfig]);
 
 	useEffect(() => {
-		register({ name: "importOption", type: "custom" });
-		register({ name: "useEncryption", type: "boolean", value: false });
-		register({ name: "acceptResponsibility", type: "boolean", value: false });
+		register("importOption");
+		register("useEncryption", { value: false });
+		register("acceptResponsibility", { value: false });
 	}, [register]);
 
 	useEffect(() => {

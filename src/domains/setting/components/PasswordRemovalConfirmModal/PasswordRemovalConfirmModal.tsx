@@ -42,7 +42,7 @@ export const PasswordRemovalConfirmModal: React.FC<PasswordRemovalProperties> = 
 					<FormLabel label={t("SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD")} />
 					<InputPassword
 						data-testid="PasswordRemovalConfirmModal__input-password"
-						ref={register({
+						{...register("currentPassword", {
 							required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 								field: t("SETTINGS.PASSWORD.CURRENT"),
 							}).toString(),

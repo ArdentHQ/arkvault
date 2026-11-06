@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";

@@ -6,9 +6,9 @@ import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
 import { FormField } from "@/app/components/Form";
 import { Link } from "@/app/components/Link";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { FormItem, FormItemRow, FormItemFooter, FormDivider } from "./ExchangeForm.blocks";
+import { MiddleTruncation } from "@/app/components/MiddleTruncation";
 
 export const ReviewStep = ({
 	withSignStep,
@@ -50,10 +50,9 @@ export const ReviewStep = ({
 					</FormItemRow>
 
 					<FormItemRow label={t("COMMON.ADDRESS")}>
-						<TruncateMiddleDynamic
-							value={recipientWallet}
-							className="no-ligatures font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50"
-						/>
+						<MiddleTruncation className="font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
+							{recipientWallet}
+						</MiddleTruncation>
 					</FormItemRow>
 
 					{estimatedTime && (
@@ -70,7 +69,7 @@ export const ReviewStep = ({
 			<div>
 				<FormField name="hasAgreedToTerms" className="sm:pt-2">
 					<label className="flex cursor-pointer items-center space-x-3">
-						<Checkbox name="hasAgreedToTerms" ref={register({ required: true })} />
+						<Checkbox {...register("hasAgreedToTerms", { required: true })} />
 						<span className="text-sm leading-5">
 							<Trans
 								i18nKey="EXCHANGE.EXCHANGE_FORM.TERMS"

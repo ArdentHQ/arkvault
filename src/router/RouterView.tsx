@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useRef, useState } from "react";
-import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { RouteItem, Middleware } from "@/router/router.types";

@@ -21,11 +21,11 @@ const mocks = [
 				return false;
 			}
 
-			const regex = /\/wallets\/(?<address>0x[a-fA-F0-9]{6,})(?=\/?$)/;
+			const regex = /\/wallets\/(0x[a-fA-F0-9]{6,})(?=\/?$)/;
 
 			const match = request.url.match(regex);
 
-			const address = match?.groups?.address;
+			const address = match?.[1];
 
 			return !mockedAddresses.includes(address);
 		},

@@ -34,6 +34,8 @@ export interface SendTransferForm {
 	secondSecret: string;
 	tokenContractAddress?: string;
 	tokens?: WalletToken[];
+	inputFeeSettings?: Record<string, unknown>;
+	suppressWarning?: boolean;
 }
 
 export interface BuildTransferDataProperties {

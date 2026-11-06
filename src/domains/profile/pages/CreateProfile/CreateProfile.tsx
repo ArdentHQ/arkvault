@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useLayoutEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { generatePath, useNavigate } from "react-router";
 
 import { Header } from "@/app/components/Header";
 import { Page } from "@/app/components/Layout";
@@ -10,7 +10,6 @@ import { useLocaleCurrency, useTheme } from "@/app/hooks";
 
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 import { ThemeIcon } from "@/app/components/Icon";
-import { generatePath } from "react-router-dom";
 import { ProfilePaths } from "@/router/paths";
 
 export const CreateProfile = () => {

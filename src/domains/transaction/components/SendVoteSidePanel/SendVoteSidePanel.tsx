@@ -3,7 +3,7 @@ import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 import { FormStep } from "@/domains/transaction/components/SendVoteSidePanel/FormStep";
 import { VoteLedgerReview } from "@/domains/transaction/components/SendVoteSidePanel/LedgerReview";

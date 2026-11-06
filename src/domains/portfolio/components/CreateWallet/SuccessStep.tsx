@@ -1,33 +1,20 @@
-import React, { useState } from "react";
-import { useFormContext } from "react-hook-form";
+import React, { JSX } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
-import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
 import { Contracts } from "@/app/lib/profiles";
 
-export const SuccessStep = ({
-	onClickEditAlias,
-}: {
+interface SuccessStepProperties {
+	wallet: Contracts.IReadWriteWallet;
 	onClickEditAlias: (wallet: Contracts.IReadWriteWallet) => void;
-}) => {
+}
+
+export const SuccessStep = ({ wallet, onClickEditAlias }: SuccessStepProperties): JSX.Element => {
 	const { t } = useTranslation();
-
-	const { getValues, watch } = useFormContext();
-
-	// getValues does not get the value of `defaultValues` on first render
-	const [defaultNetwork] = useState(() => watch("network"));
-	const network = getValues("network") || defaultNetwork;
-
-	const [defaultWallet] = useState(() => watch("wallet"));
-	const wallet = getValues("wallet") || defaultWallet;
-
-	assertNetwork(network);
-	assertWallet(wallet);
 
 	return (
 		<section data-testid="CreateWallet__SuccessStep">

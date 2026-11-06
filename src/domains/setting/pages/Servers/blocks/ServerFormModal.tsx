@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Networks } from "@/app/lib/mainsail";
 import { useForm } from "react-hook-form";
@@ -102,13 +102,7 @@ const ServerFormModal = ({
 		}
 	}, [network, nameWasManuallySet]);
 
-	const formIsValid = useMemo(() => {
-		if (fetchingDetails) {
-			return false;
-		}
-
-		return isValid;
-	}, [fetchingDetails, isValid]);
+	const formIsValid = !fetchingDetails && isValid && Object.keys(errors).length === 0;
 
 	const handleSubmit = (values: CustomNetwork) => {
 		if (networkToUpdate) {
@@ -174,7 +168,7 @@ const ServerFormModal = ({
 								profileAllEnabledNetworkIds(profile).includes(network.id()),
 							)}
 							profile={profile}
-							ref={register(server.network())}
+							{...register("network", server.network())}
 							selectedNetwork={networks.find((networkOption) => networkOption.id() === network)}
 							placeholder={t("COMMON.INPUT_NETWORK.PLACEHOLDER")}
 							onChange={(selectedNetwork) => {
@@ -192,17 +186,21 @@ const ServerFormModal = ({
 					<FormLabel label={t("COMMON.NAME")} />
 					<InputDefault
 						data-testid="ServerFormModal--name"
-						ref={register(server.name(customNetworks, networkToUpdate))}
-						onChange={() => setNameWasManuallySet(true)}
+						{...register("name", {
+							...server.name(customNetworks, networkToUpdate),
+							onChange: () => setNameWasManuallySet(true),
+						})}
 					/>
 				</FormField>
 
 				<FormField name="publicApiEndpoint">
 					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.PUBLIC_API_ENDPOINT")} />
 					<Input
-						name="publicApiEndpoint"
 						data-testid="ServerFormModal--publicApiEndpoint"
-						ref={register(server.address(customNetworks, "publicApiEndpoint", networkToUpdate))}
+						{...register(
+							"publicApiEndpoint",
+							server.address(customNetworks, "publicApiEndpoint", networkToUpdate),
+						)}
 						addons={endpointInputAddon("publicApiEndpoint")}
 					/>
 				</FormField>
@@ -211,8 +209,10 @@ const ServerFormModal = ({
 					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.TRANSACTION_API_ENDPOINT")} />
 					<Input
 						data-testid="ServerFormModal--transactionApiEndpoint"
-						name="transactionApiEndpoint"
-						ref={register(server.address(customNetworks, "transactionApiEndpoint", networkToUpdate))}
+						{...register(
+							"transactionApiEndpoint",
+							server.address(customNetworks, "transactionApiEndpoint", networkToUpdate),
+						)}
 						addons={endpointInputAddon("transactionApiEndpoint")}
 					/>
 				</FormField>
@@ -220,9 +220,11 @@ const ServerFormModal = ({
 				<FormField name="evmApiEndpoint">
 					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.EVM_API_ENDPOINT")} />
 					<Input
-						name="evmApiEndpoint"
 						data-testid="ServerFormModal--evmApiEndpoint"
-						ref={register(server.address(customNetworks, "evmApiEndpoint", networkToUpdate))}
+						{...register(
+							"evmApiEndpoint",
+							server.address(customNetworks, "evmApiEndpoint", networkToUpdate),
+						)}
 						addons={endpointInputAddon("evmApiEndpoint")}
 					/>
 				</FormField>

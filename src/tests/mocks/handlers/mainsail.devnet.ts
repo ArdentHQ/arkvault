@@ -1,5 +1,7 @@
-import { http, HttpResponse, rest } from "msw";
+import { http, HttpResponse } from "msw";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
+
+export const tokenTransfersEndpoint = "https://dwallets-evm.mainsailhq.com/api/tokens/transfers";
 
 const endpoints = [
 	{ path: "/blockchain", data: require("../../fixtures/coins/mainsail/devnet/blockchain.json") },
@@ -35,6 +37,7 @@ export const mainsailDevnetHandlers = [
 	http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", () => {
 		return HttpResponse.json({ data: [] });
 	}),
+	http.get("https://dwallets-evm.mainsailhq.com/api/blocks/:id", () => HttpResponse.json({}, { status: 404 })),
 	http.get("https://dwallets-evm.mainsailhq.com/", () => {
 		return HttpResponse.json({ data: "Hello World!" });
 	}),
@@ -115,7 +118,7 @@ export const mainsailDevnetHandlers = [
 		});
 	}),
 
-	http.get("https://dwallets-evm.mainsailhq.com/api/tokens/transfers", () => {
+	http.get(tokenTransfersEndpoint, () => {
 		return HttpResponse.json(Fixtures.TokenTransfers);
 	}),
 
@@ -154,5 +157,12 @@ export const mainsailDevnetHandlers = [
 			},
 			data: [],
 		});
+	}),
+
+	// Catch-all: intercept any unhandled devnet request so it never reaches the real network.
+	// If this fires it means a new endpoint needs a dedicated handler above.
+	http.all("https://dwallets-evm.mainsailhq.com/*", ({ request }) => {
+		console.error(`[MSW] Unhandled devnet request: ${request.method} ${request.url}`);
+		return new HttpResponse(null, { status: 501 });
 	}),
 ];

@@ -14,9 +14,11 @@
 	"browserInitTimeout": 240000,
 	"compilerOptions": {
 		"typescript": {
-			"customCompilerModulePath": "../typescript",
+			"customCompilerModulePath": "../../../../typescript",
 			"options": {
-				"esModuleInterop": true
+				"esModuleInterop": true,
+				"ignoreDeprecations": "6.0",
+				"strict": false
 			}
 		}
 	}

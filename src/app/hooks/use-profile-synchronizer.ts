@@ -4,7 +4,7 @@ import {
 	getProfileStoredPassword,
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 

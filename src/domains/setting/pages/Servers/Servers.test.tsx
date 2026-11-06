@@ -13,10 +13,12 @@ import {
 	fireEvent,
 	within,
 	renderResponsiveWithRoute,
+	waitForInitialValidation,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
-import { http } from "msw";
+import { http, HttpResponse } from "msw";
 import { server, requestMock } from "@/tests/mocks/server";
+import cryptoConfiguration from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json";
 import { act } from "@testing-library/react";
 
 let profile: Contracts.IProfile;
@@ -87,7 +89,6 @@ const addNewPeerButtonTestId = "CustomPeers--addnew";
 const peerStatusOkTestId = "CustomPeersPeer--statusok";
 const peerStatusLoadingTestId = "CustomPeersPeer--statusloading";
 const peerStatusErrorTestId = "CustomPeersPeer--statuserror";
-const peerDropdownMenuTestId = "-CustomPeers--dropdown";
 const serverDeleteConfirmationTestId = "ServersSettings--delete-confirmation";
 const customPeerListTestId = "CustomPeers--list";
 const networkAccordionIconTestId = "mobile-table-element-header";
@@ -200,7 +201,7 @@ describe("Servers Settings", () => {
 		mockTxEndpoint();
 	});
 
-	it("should render servers page", () => {
+	it("should render servers page", async () => {
 		const { container, asFragment } = render(<ServersSettings />, {
 			route: `/profiles/${profile.id()}/settings/servers`,
 		});
@@ -212,9 +213,12 @@ describe("Servers Settings", () => {
 		expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
+
+		await waitForInitialValidation();
 	});
 
 	it("should update profile fallback to default nodes setting", async () => {
+		const fallbackToDefaultNodes = profile.settings().get(Contracts.ProfileSetting.FallbackToDefaultNodes);
 		const settingsSetSpy = vi.spyOn(profile.settings(), "set");
 
 		const { container } = render(<ServersSettings />, {
@@ -232,10 +236,11 @@ describe("Servers Settings", () => {
 		await waitFor(() => expect(settingsSetSpy).toHaveBeenCalledWith("FALLBACK_TO_DEFAULT_NODES", false));
 
 		settingsSetSpy.mockRestore();
+		profile.settings().set(Contracts.ProfileSetting.FallbackToDefaultNodes, fallbackToDefaultNodes);
 	});
 
 	describe("Default peers", () => {
-		it("should render node statuses", () => {
+		it("should render node statuses", async () => {
 			const { container } = render(<ServersSettings />, {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
@@ -245,6 +250,8 @@ describe("Servers Settings", () => {
 			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
 			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
+
+			await waitForInitialValidation();
 		});
 
 		describe("Node statuses", () => {
@@ -505,8 +512,17 @@ describe("Servers Settings", () => {
 					mainsail: [],
 				});
 
+				const heightRequest = vi.fn();
+
 				mockRequests();
-				server.use(requestMock("https://127.0.0.1", peerResponse));
+				server.use(
+					requestMock("https://127.0.0.1", peerResponse),
+					requestMock("https://127.0.0.1/api/node/configuration/crypto", cryptoConfiguration),
+					http.get("https://127.0.0.1/api/blockchain", () => {
+						heightRequest();
+						return HttpResponse.json(peerResponseHeight);
+					}),
+				);
 
 				render(<ServersSettings />, {
 					route: `/profiles/${profile.id()}/settings/servers`,
@@ -518,6 +534,7 @@ describe("Servers Settings", () => {
 					publicApiEndpoint: "https://127.0.0.1/api",
 				});
 
+				await waitFor(() => expect(heightRequest).toHaveBeenCalled());
 				await waitUntilServerFormIsReady();
 				hostsMock.mockRestore();
 			});
@@ -802,7 +819,7 @@ describe("Servers Settings", () => {
 			profileHostsSpy.mockRestore();
 		});
 
-		it("should render custom servers", () => {
+		it("should render custom servers", async () => {
 			const { asFragment } = render(<ServersSettings />, {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
@@ -816,6 +833,8 @@ describe("Servers Settings", () => {
 			expect(within(table).getAllByTestId(CustomPeersNetworkItem)).toHaveLength(1);
 
 			expect(asFragment()).toMatchSnapshot();
+
+			await waitForInitialValidation();
 		});
 
 		it("should fill the form and generate a name", async () => {
@@ -850,7 +869,7 @@ describe("Servers Settings", () => {
 			});
 		});
 
-		it("should render customs servers in xs", () => {
+		it("should render customs servers in xs", async () => {
 			const { asFragment } = renderResponsiveWithRoute(<ServersSettings />, "xs", {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
@@ -864,6 +883,8 @@ describe("Servers Settings", () => {
 			expect(within(table).getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1);
 
 			expect(asFragment()).toMatchSnapshot();
+
+			await waitForInitialValidation();
 		});
 
 		it("can expand a custom servers accordion in xs", async () => {
@@ -1012,10 +1033,8 @@ describe("Servers Settings", () => {
 			// After ping it should show ok
 			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
 
-			act(() => {
-				for (const item of intervalPingFunction) {
-					item();
-				}
+			await act(async () => {
+				await Promise.all(intervalPingFunction.map((item) => item()));
 			});
 
 			// After ping, it should show ok
@@ -1031,13 +1050,11 @@ describe("Servers Settings", () => {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
 
-			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+			const dropdown = within(screen.getByTestId(customPeerListTestId)).getAllByTestId("dropdown__toggle")[0];
 
 			await userEvent.click(dropdown);
 
-			const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-				"dropdown__option--1",
-			);
+			const deleteButton = within(screen.getByTestId("dropdown__content")).getByTestId("dropdown__option--1");
 
 			expect(deleteButton).toBeInTheDocument();
 
@@ -1054,13 +1071,11 @@ describe("Servers Settings", () => {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
 
-			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+			const dropdown = within(screen.getByTestId(customPeerListTestId)).getAllByTestId("dropdown__toggle")[0];
 
 			await userEvent.click(dropdown);
 
-			const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-				"dropdown__option--1",
-			);
+			const deleteButton = within(screen.getByTestId("dropdown__content")).getByTestId("dropdown__option--1");
 
 			expect(deleteButton).toBeInTheDocument();
 
@@ -1078,13 +1093,11 @@ describe("Servers Settings", () => {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
 
-			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+			const dropdown = within(screen.getByTestId(customPeerListTestId)).getAllByTestId("dropdown__toggle")[0];
 
 			await userEvent.click(dropdown);
 
-			const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-				"dropdown__option--1",
-			);
+			const deleteButton = within(screen.getByTestId("dropdown__content")).getByTestId("dropdown__option--1");
 
 			expect(deleteButton).toBeInTheDocument();
 
@@ -1102,13 +1115,11 @@ describe("Servers Settings", () => {
 				route: `/profiles/${profile.id()}/settings/servers`,
 			});
 
-			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+			const dropdown = within(screen.getByTestId(customPeerListTestId)).getAllByTestId("dropdown__toggle")[0];
 
 			await userEvent.click(dropdown);
 
-			const editButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-				"dropdown__option--0",
-			);
+			const editButton = within(screen.getByTestId("dropdown__content")).getByTestId("dropdown__option--0");
 
 			expect(editButton).toBeInTheDocument();
 
@@ -1140,13 +1151,11 @@ describe("Servers Settings", () => {
 
 			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
 
-			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+			const dropdown = within(screen.getByTestId(customPeerListTestId)).getAllByTestId("dropdown__toggle")[0];
 
 			await userEvent.click(dropdown);
 
-			const refreshButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-				"dropdown__option--2",
-			);
+			const refreshButton = within(screen.getByTestId("dropdown__content")).getByTestId("dropdown__option--2");
 
 			expect(refreshButton).toBeInTheDocument();
 
@@ -1174,6 +1183,18 @@ describe("Servers Settings", () => {
 
 			serverPushSpy.mockReset();
 		});
+	});
+
+	it("should render custom servers in mobile viewport", async () => {
+		const { asFragment } = renderResponsiveWithRoute(<ServersSettings />, "xs", {
+			route: `/profiles/${profile.id()}/settings/servers`,
+		});
+
+		await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId(nodeStatusLoadingTestId)).not.toBeInTheDocument());
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	describe("Added unreachable servers", () => {

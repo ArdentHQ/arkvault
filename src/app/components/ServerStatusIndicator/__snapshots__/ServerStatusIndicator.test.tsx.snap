@@ -6,7 +6,9 @@ exports[`Server Status Indicator > should render as downgraded 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="dialog"
+      class="flex items-center"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
         class="custom-button-nav-wrapper group"
@@ -66,7 +68,9 @@ exports[`Server Status Indicator > should render as healthy 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="dialog"
+      class="flex items-center"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
         class="custom-button-nav-wrapper group"
@@ -126,7 +130,9 @@ exports[`Server Status Indicator > should render as unavailable 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="dialog"
+      class="flex items-center"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
         class="custom-button-nav-wrapper group"
@@ -186,7 +192,9 @@ exports[`Server Status Indicator > should render default 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="dialog"
+      class="flex items-center"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
         class="custom-button-nav-wrapper group"
@@ -246,7 +254,9 @@ exports[`Server Status Indicator > should render in lg 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="dialog"
+      class="flex items-center"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
         class="custom-button-nav-wrapper group"
@@ -306,7 +316,9 @@ exports[`Server Status Indicator > should render in md 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="dialog"
+      class="flex items-center"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
         class="custom-button-nav-wrapper group"
@@ -366,7 +378,9 @@ exports[`Server Status Indicator > should render in sm 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="dialog"
+      class="flex items-center"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
         class="custom-button-nav-wrapper group"
@@ -426,7 +440,9 @@ exports[`Server Status Indicator > should render in xl 1`] = `
     <div
       aria-expanded="false"
       aria-haspopup="dialog"
+      class="flex items-center"
       data-testid="dropdown__toggle"
+      tabindex="0"
     >
       <div
         class="custom-button-nav-wrapper group"

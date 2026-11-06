@@ -46,7 +46,6 @@ export const TokensTransferred = ({
 
 					{!isRefreshingTransaction && (
 						<Address
-							truncateOnTable
 							address={transaction.token()?.to()}
 							walletName={alias}
 							showCopyButton

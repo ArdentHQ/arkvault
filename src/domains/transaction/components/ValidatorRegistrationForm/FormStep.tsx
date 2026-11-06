@@ -39,7 +39,12 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const { validatorRegistration } = useValidation();
 
-	const { getValues, register, setValue, errors } = useFormContext();
+	const {
+		getValues,
+		register,
+		setValue,
+		formState: { errors },
+	} = useFormContext();
 	const validatorPassphrase = getValues("validatorPassphrase");
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
@@ -55,7 +60,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	return (
 		<section data-testid="ValidatorRegistrationForm_form-step">
-			{errors.lockedFee && <Alert className="mb-4">{errors.lockedFee.message}</Alert>}
+			{errors.lockedFee && <Alert className="mb-4">{errors.lockedFee.message as string}</Alert>}
 
 			<FormField name="senderAddress">
 				<FormLabel

@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import cn from "classnames";
-import { DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption } from "@/app/components/SimpleDropdown";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 

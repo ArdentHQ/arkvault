@@ -8,7 +8,7 @@ import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
 import { getStyles } from "@/app/components/Button/Button.styles";
 import { twMerge } from "tailwind-merge";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { MiddleTruncation } from "@/app/components/MiddleTruncation";
 
 interface Properties {
 	transaction: Pick<
@@ -43,7 +43,7 @@ export const TransactionId = ({ transaction, isConfirmed, label }: Properties): 
 			</div>
 
 			<div ref={reference} className="flex-1 overflow-hidden font-semibold sm:mx-4">
-				<TruncateMiddleDynamic value={transaction.hash()} parentRef={reference} />
+				<MiddleTruncation>{transaction.hash()}</MiddleTruncation>
 			</div>
 
 			<div className="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0">
