@@ -36,7 +36,11 @@ export const PlatformSdkChoices = {
 	},
 	languages: [{ label: "English", value: "en-US" }],
 	marketProviders: [
-		{ label: "ARK Pricing", unsupportedCurrencies: [] as string[], value: "arkpricing" },
+		{
+			label: "ARK Pricing",
+			unsupportedCurrencies: ["DKK", "HKD", "IDR", "INR", "MXN", "NOK", "SEK", "VND"],
+			value: "arkpricing",
+		},
 		{ label: "CoinGecko", unsupportedCurrencies: [] as string[], value: "coingecko" },
 	],
 	passphraseLanguages: [
