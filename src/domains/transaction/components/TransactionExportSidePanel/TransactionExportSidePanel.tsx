@@ -38,7 +38,7 @@ export const TransactionExportSidePanel = ({
 	const { download } = useFileDownload();
 
 	const form = useTransactionExportForm();
-	const { isDirty, isSubmitting, isValid } = form.formState;
+	const { errors, isDirty, isSubmitting, isValid } = form.formState;
 
 	const showFiatColumn = !!wallets.at(0)?.network().isLive();
 
@@ -139,7 +139,7 @@ export const TransactionExportSidePanel = ({
 				</Button>
 
 				<Button
-					disabled={isSubmitting || (isDirty ? !isValid : false)}
+					disabled={isSubmitting || !!errors.noColumns || (isDirty ? !isValid : false)}
 					variant="primary"
 					onClick={form.handleSubmit(handleSubmit)}
 					data-testid="TransactionExport__submit-button"
