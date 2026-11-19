@@ -132,10 +132,15 @@ export const useWalletActions = ({
 				openPanel(Panel.LedgerMigration);
 			}
 
+			if (option.value === "transaction-history") {
+				openPanel(Panel.TransactionExport, { wallets });
+			}
+
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
 		[
 			wallet,
+			wallets,
 			navigate,
 			profile,
 			hasMultipleWallets,

@@ -3,6 +3,7 @@ import { Panel, SIDE_PANEL_TRANSITION_DURATION, usePanels } from "./contexts";
 import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 import { Alert } from "@/app/components/Alert";
 import { Button } from "@/app/components/Button";
+import { Contracts } from "@/app/lib/profiles";
 import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
 import { FormButtons } from "@/app/components/Form";
 import { Image } from "@/app/components/Image";
@@ -17,6 +18,7 @@ import { SendTransferSidePanel } from "@/domains/transaction/components/SendTran
 import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
 import { SendValidatorResignationSidePanel } from "@/domains/transaction/components/SendValidatorResignationSidePanel/SendValidatorResignationSidePanel";
 import SignMessageSidePanel from "@/domains/message/components/SignMessage";
+import { TransactionExportSidePanel } from "@/domains/transaction/components/TransactionExportSidePanel";
 import VerifyMessageSidePanel from "@/domains/message/components/VerifyMessage";
 import { useHasProfile } from "./hooks";
 import { useTranslation } from "react-i18next";
@@ -164,6 +166,16 @@ export const AppPanels = () => {
 				<NotificationsSidepanel
 					open={currentOpenedPanel?.name === Panel.Notifications}
 					onOpenChange={closePanel}
+				/>
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<TransactionExportSidePanel
+					open={currentOpenedPanel?.name === Panel.TransactionExport}
+					onOpenChange={closePanel}
+					wallets={
+						(currentOpenedPanel?.properties?.wallets as Contracts.IReadWriteWallet[] | undefined) ?? []
+					}
 				/>
 			</ResetWhenUnmounted>
 
