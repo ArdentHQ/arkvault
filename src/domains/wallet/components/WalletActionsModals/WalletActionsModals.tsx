@@ -6,7 +6,6 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { UpdateAccountNameModal } from "@/domains/wallet/components/UpdateAccountName";
 import { WalletActionsProperties } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
-import { TransactionExportModal } from "@/domains/transaction/components/TransactionExportModal";
 import { Contracts } from "@/app/lib/profiles";
 
 export const WalletActionsModals = ({
@@ -87,10 +86,6 @@ export const WalletActionsModals = ({
 					}}
 					wallet={wallet}
 				/>
-			)}
-
-			{activeModal === "transaction-history" && (
-				<TransactionExportModal wallets={wallets} isOpen onClose={hideActiveModal} />
 			)}
 		</>
 	);
