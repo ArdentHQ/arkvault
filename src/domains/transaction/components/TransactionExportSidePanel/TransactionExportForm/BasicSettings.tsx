@@ -4,9 +4,10 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { t } from "i18next";
 import { useTransactionTypeOptions, useDateRangeOptions } from "./hooks";
+import { SelectOption } from "./SelectOption";
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { CollapseToggleButton } from "@/app/components/Collapse";
-import { DropdownRoot, DropdownToggle, DropdownContent, DropdownListItem } from "@/app/components/SimpleDropdown";
+import { DropdownRoot, DropdownToggle, DropdownContent } from "@/app/components/SimpleDropdown";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { ListDivided } from "@/app/components/ListDivided";
 import { useBreakpoint } from "@/app/hooks";
@@ -89,9 +90,9 @@ const TransactionTypeOptions = () => {
 const DateRangeOptions = ({ isDisabled }: { isDisabled: boolean }) => {
 	const form = useFormContext();
 
-	const { selected } = useDateRangeOptions({
-		selectedValue: form.watch("dateRange"),
-	});
+	const selectedValue = form.watch("dateRange") as DateRange;
+
+	const { options, selected } = useDateRangeOptions({ selectedValue });
 
 	return (
 		<FormField name="dateRange" data-testid="TransactionExportForm--daterange">
@@ -106,56 +107,24 @@ const DateRangeOptions = ({ isDisabled }: { isDisabled: boolean }) => {
 						/>
 					)}
 				</DropdownToggle>
-				<DropdownContent className="z-[52]">
-					<DropdownListItem
-						data-testid="dropdown__option--all-0"
-						onClick={() => form.setValue("dateRange", DateRange.CurrentMonth)}
-					>
-						{t("TRANSACTION.EXPORT.FORM.CURRENT_MONTH")}
-					</DropdownListItem>
-					<DropdownListItem
-						data-testid="dropdown__option--all-1"
-						onClick={() => form.setValue("dateRange", DateRange.LastMonth)}
-					>
-						{t("TRANSACTION.EXPORT.FORM.LAST_MONTH")}
-					</DropdownListItem>
-					<DropdownListItem
-						data-testid="dropdown__option--all-2"
-						onClick={() => form.setValue("dateRange", DateRange.CurrentQuarter)}
-					>
-						{t("TRANSACTION.EXPORT.FORM.CURRENT_QUARTER")}
-					</DropdownListItem>
-					<DropdownListItem
-						data-testid="dropdown__option--all-3"
-						onClick={() => form.setValue("dateRange", DateRange.LastQuarter)}
-					>
-						{t("TRANSACTION.EXPORT.FORM.LAST_QUARTER")}
-					</DropdownListItem>
-					<DropdownListItem
-						data-testid="dropdown__option--all-4"
-						onClick={() => form.setValue("dateRange", DateRange.CurrentYear)}
-					>
-						{t("TRANSACTION.EXPORT.FORM.CURRENT_YEAR")}
-					</DropdownListItem>
-					<DropdownListItem
-						data-testid="dropdown__option--all-5"
-						onClick={() => form.setValue("dateRange", DateRange.LastYear)}
-					>
-						{t("TRANSACTION.EXPORT.FORM.LASTYEAR")}
-					</DropdownListItem>
-					<DropdownListItem
-						data-testid="dropdown__option--all-6"
-						onClick={() => form.setValue("dateRange", DateRange.All)}
-					>
-						{t("TRANSACTION.EXPORT.FORM.ALL")}
-					</DropdownListItem>
-					<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
-					<DropdownListItem
-						data-testid="dropdown__option--custom-0"
-						onClick={() => form.setValue("dateRange", DateRange.Custom)}
-					>
-						{t("TRANSACTION.EXPORT.FORM.CUSTOM")}
-					</DropdownListItem>
+				<DropdownContent className="z-[52] py-1">
+					<ul>
+						{options.map((option, index) => (
+							<SelectOption
+								key={option.value}
+								className="w-50"
+								isActive={option.value === selectedValue}
+								data-testid={
+									option.value === DateRange.Custom
+										? "dropdown__option--custom-0"
+										: `dropdown__option--all-${index}`
+								}
+								onClick={() => form.setValue("dateRange", option.value)}
+							>
+								{option.label}
+							</SelectOption>
+						))}
+					</ul>
 				</DropdownContent>
 			</DropdownRoot>
 		</FormField>
