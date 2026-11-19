@@ -18,7 +18,7 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { toasts } from "@/app/services";
 import { useActiveProfile } from "@/app/hooks";
 
-const TOTAL_STEPS = 3;
+const TOTAL_STEPS = 2;
 
 export const TransactionExportSidePanel = ({
 	open,
@@ -78,12 +78,8 @@ export const TransactionExportSidePanel = ({
 		if (status === ExportProgressStatus.Progress) {
 			return (
 				<SidePanelButtons>
-					<Button
-						variant="secondary"
-						onClick={cancelExport}
-						data-testid="TransactionExportProgress__cancel-button"
-					>
-						{t("COMMON.CANCEL")}
+					<Button variant="secondary" onClick={cancelExport} data-testid="TransactionExport__back-button">
+						{t("COMMON.BACK")}
 					</Button>
 
 					<Button variant="primary" disabled>
@@ -96,12 +92,8 @@ export const TransactionExportSidePanel = ({
 		if (status === ExportProgressStatus.Success) {
 			return (
 				<SidePanelButtons>
-					<Button
-						variant="secondary"
-						onClick={handleClose}
-						data-testid="TransactionExportSuccess__close-button"
-					>
-						{t("COMMON.CLOSE")}
+					<Button variant="secondary" onClick={cancelExport} data-testid="TransactionExport__back-button">
+						{t("COMMON.BACK")}
 					</Button>
 
 					<Button
@@ -119,12 +111,8 @@ export const TransactionExportSidePanel = ({
 		if (status === ExportProgressStatus.Error) {
 			return (
 				<SidePanelButtons>
-					<Button
-						variant="secondary"
-						onClick={handleClose}
-						data-testid="TransactionExportError__close-button"
-					>
-						{t("COMMON.CLOSE")}
+					<Button variant="secondary" onClick={cancelExport} data-testid="TransactionExport__back-button">
+						{t("COMMON.BACK")}
 					</Button>
 
 					{finalCount > 0 && (
@@ -172,9 +160,8 @@ export const TransactionExportSidePanel = ({
 			dataTestId="TransactionExportSidePanel"
 			hasSteps
 			totalSteps={TOTAL_STEPS}
-			activeStep={Math.min(status, TOTAL_STEPS)}
+			activeStep={status === ExportProgressStatus.Idle ? 1 : TOTAL_STEPS}
 			onBack={cancelExport}
-			isLastStep={status === ExportProgressStatus.Success}
 			footer={renderFooter()}
 		>
 			<Form context={form} onSubmit={handleSubmit}>

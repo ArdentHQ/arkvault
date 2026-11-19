@@ -13,6 +13,7 @@ let dashboardURL: string;
 
 const exportButton = () => screen.getByTestId("TransactionExport__submit-button");
 const downloadButton = () => screen.getByTestId("TransactionExportSuccess__download-button");
+const backButton = () => screen.getByTestId("TransactionExport__back-button");
 
 const dateToggle = () =>
 	within(screen.getByTestId("TransactionExportForm--daterange")).getByTestId("CollapseToggleButton");
@@ -102,13 +103,12 @@ describe("TransactionExportSidePanel", () => {
 		transactionIndexMock.mockRestore();
 	});
 
-	it("should close from error status", async () => {
-		const onOpenChange = vi.fn();
+	it("should go back to form from error status", async () => {
 		const transactionIndexMock = vi.spyOn(profile.transactionAggregate(), "received").mockImplementation(() => {
 			throw new Error("error");
 		});
 
-		renderPanel(onOpenChange);
+		renderPanel();
 
 		await waitFor(() => {
 			expect(dateToggle()).toBeEnabled();
@@ -116,13 +116,13 @@ describe("TransactionExportSidePanel", () => {
 
 		await userEvent.click(exportButton());
 
-		await expect(screen.findByTestId("TransactionExportError__close-button")).resolves.toBeInTheDocument();
+		await expect(screen.findByTestId("TransactionExportError")).resolves.toBeInTheDocument();
 
 		expect(screen.queryByTestId("TransactionExportError__download")).not.toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("TransactionExportError__close-button"));
+		await userEvent.click(backButton());
 
-		await waitFor(() => expect(onOpenChange).toHaveBeenCalledWith(false));
+		await expect(screen.findByTestId("TransactionExportForm")).resolves.toBeInTheDocument();
 
 		transactionIndexMock.mockRestore();
 	});
@@ -178,10 +178,8 @@ describe("TransactionExportSidePanel", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should close from success status", async () => {
-		const onOpenChange = vi.fn();
-
-		renderPanel(onOpenChange);
+	it("should go back to form from success status", async () => {
+		renderPanel();
 
 		await waitFor(() => {
 			expect(dateToggle()).toBeEnabled();
@@ -193,9 +191,9 @@ describe("TransactionExportSidePanel", () => {
 			expect(downloadButton()).toBeEnabled();
 		});
 
-		await userEvent.click(screen.getByTestId("TransactionExportSuccess__close-button"));
+		await userEvent.click(backButton());
 
-		await waitFor(() => expect(onOpenChange).toHaveBeenCalledWith(false));
+		await expect(screen.findByTestId("TransactionExportForm")).resolves.toBeInTheDocument();
 	});
 
 	it("should download file and close", async () => {
@@ -247,7 +245,7 @@ describe("TransactionExportSidePanel", () => {
 		browserAccessMock.mockRestore();
 	});
 
-	it("should cancel export while in progress", async () => {
+	it("should go back to form while in progress", async () => {
 		const receivedMock = vi
 			.spyOn(profile.transactionAggregate(), "received")
 			.mockImplementation(() => new Promise(() => {}));
@@ -262,7 +260,7 @@ describe("TransactionExportSidePanel", () => {
 
 		await expect(screen.findByTestId("TransactionExportProgress")).resolves.toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("TransactionExportProgress__cancel-button"));
+		await userEvent.click(backButton());
 
 		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
