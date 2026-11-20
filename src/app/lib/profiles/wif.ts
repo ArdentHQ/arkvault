@@ -20,16 +20,11 @@ export class WalletImportFormat implements IWalletImportFormat {
 			throw new Error("This wallet does not use PBKDF2 encryption.");
 		}
 
-		try {
-			return await PBKDF2.decrypt(encryptedKey, password);
-		} catch (error) {
-			// Pre-Mainsail profiles stored keys encrypted with CryptoJS AES.
-			try {
-				return AES.decrypt(encryptedKey, password);
-			} catch {
-				throw error;
-			}
+		if (this.#isLegacyFormat(encryptedKey)) {
+			return AES.decrypt(encryptedKey, password);
 		}
+
+		return await PBKDF2.decrypt(encryptedKey, password);
 	}
 
 	/** {@inheritDoc IWalletImportFormat.set} */
@@ -52,5 +47,15 @@ export class WalletImportFormat implements IWalletImportFormat {
 		this.#wallet.data().forget(this.#key);
 
 		this.#wallet.profile().status().markAsDirty();
+	}
+
+	// Pre-Mainsail profiles stored keys as CryptoJS AES output, which is never JSON.
+	#isLegacyFormat(value: string): boolean {
+		try {
+			JSON.parse(value);
+			return false;
+		} catch {
+			return true;
+		}
 	}
 }
