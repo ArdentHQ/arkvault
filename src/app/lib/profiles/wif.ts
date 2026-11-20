@@ -1,6 +1,7 @@
 import { AES, PBKDF2 } from "@ardenthq/arkvault-crypto";
 
 import { IReadWriteWallet, IWalletImportFormat } from "./contracts.js";
+import { isLegacyEncryption } from "./helpers/legacy-encryption.js";
 
 // @TODO: rename to something better
 export class WalletImportFormat implements IWalletImportFormat {
@@ -20,7 +21,7 @@ export class WalletImportFormat implements IWalletImportFormat {
 			throw new Error("This wallet does not use PBKDF2 encryption.");
 		}
 
-		if (this.#isLegacyFormat(encryptedKey)) {
+		if (isLegacyEncryption(encryptedKey)) {
 			return AES.decrypt(encryptedKey, password);
 		}
 
@@ -47,15 +48,5 @@ export class WalletImportFormat implements IWalletImportFormat {
 		this.#wallet.data().forget(this.#key);
 
 		this.#wallet.profile().status().markAsDirty();
-	}
-
-	// Pre-Mainsail profiles stored keys as CryptoJS AES output, which is never JSON.
-	#isLegacyFormat(value: string): boolean {
-		try {
-			JSON.parse(value);
-			return false;
-		} catch {
-			return true;
-		}
 	}
 }
