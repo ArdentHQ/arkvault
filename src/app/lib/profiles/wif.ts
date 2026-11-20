@@ -2,9 +2,6 @@ import { AES, PBKDF2 } from "@ardenthq/arkvault-crypto";
 
 import { IReadWriteWallet, IWalletImportFormat } from "./contracts.js";
 
-// Base64 of "Salted__", the prefix of CryptoJS AES output used by pre-Mainsail profiles.
-const LEGACY_ENCRYPTION_PREFIX = "U2FsdGVkX1";
-
 // @TODO: rename to something better
 export class WalletImportFormat implements IWalletImportFormat {
 	readonly #wallet: IReadWriteWallet;
@@ -23,11 +20,16 @@ export class WalletImportFormat implements IWalletImportFormat {
 			throw new Error("This wallet does not use PBKDF2 encryption.");
 		}
 
-		if (encryptedKey.startsWith(LEGACY_ENCRYPTION_PREFIX)) {
-			return AES.decrypt(encryptedKey, password);
+		try {
+			return await PBKDF2.decrypt(encryptedKey, password);
+		} catch (error) {
+			// Pre-Mainsail profiles stored keys encrypted with CryptoJS AES.
+			try {
+				return AES.decrypt(encryptedKey, password);
+			} catch {
+				throw error;
+			}
 		}
-
-		return await PBKDF2.decrypt(encryptedKey, password);
 	}
 
 	/** {@inheritDoc IWalletImportFormat.set} */

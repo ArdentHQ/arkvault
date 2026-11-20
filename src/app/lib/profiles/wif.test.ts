@@ -54,6 +54,13 @@ describe("WalletImportFormat", () => {
 		await expect(wif.get("password")).resolves.toBe("secret");
 	});
 
+	it("should fail to decrypt a key with a wrong password", async () => {
+		const wif = new WalletImportFormat(mockWallet as any, "wif");
+		await wif.set("secret", "password");
+
+		await expect(wif.get("wrong")).rejects.toThrow("Decryption failed");
+	});
+
 	it("should decrypt a key encrypted with the legacy format", async () => {
 		mockData.set("wif", legacyEncryptedKey);
 		const wif = new WalletImportFormat(mockWallet as any, "wif");
