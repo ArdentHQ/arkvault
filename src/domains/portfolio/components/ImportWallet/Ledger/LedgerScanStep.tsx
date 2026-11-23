@@ -162,20 +162,22 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 				{!showSkeleton && (
 					<div className="flex flex-col gap-3 px-6 pb-4">
-						<Button
-							data-testid="LedgerScanStep__scan-more"
-							isLoading={isScanningMore}
-							disabled={isScanningMore}
-							variant={isScanningMore ? "primary" : "secondary"}
-							icon="Plus"
-							iconPosition="left"
-							className="w-full"
-							onClick={scanMore}
-						>
-							<span className="pl-1">
-								<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
-							</span>
-						</Button>
+						{scanMore && (
+							<Button
+								data-testid="LedgerScanStep__scan-more"
+								isLoading={isScanningMore}
+								disabled={isScanningMore}
+								variant={isScanningMore ? "primary" : "secondary"}
+								icon="Plus"
+								iconPosition="left"
+								className="w-full"
+								onClick={scanMore}
+							>
+								<span className="pl-1">
+									<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
+								</span>
+							</Button>
+						)}
 
 						{data.length > 6 && !showAll && (
 							<Button
@@ -255,20 +257,22 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 							/>
 						))}
 
-					<Button
-						data-testid="LedgerScanStep__scan-more-mobile"
-						isLoading={isScanningMore}
-						disabled={isScanningMore}
-						variant={isScanningMore ? "primary" : "secondary"}
-						icon="Plus"
-						iconPosition="left"
-						className="w-full"
-						onClick={scanMore}
-					>
-						<span className="pl-1">
-							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
-						</span>
-					</Button>
+					{scanMore && (
+						<Button
+							data-testid="LedgerScanStep__scan-more-mobile"
+							isLoading={isScanningMore}
+							disabled={isScanningMore}
+							variant={isScanningMore ? "primary" : "secondary"}
+							icon="Plus"
+							iconPosition="left"
+							className="w-full"
+							onClick={scanMore}
+						>
+							<span className="pl-1">
+								<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
+							</span>
+						</Button>
+					)}
 				</div>
 			</div>
 		</div>
