@@ -457,7 +457,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1287,7 +1287,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -4460,7 +4460,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
             >
               <button
-                class="group css-eti7fq"
+                class="group css-jt2164"
                 data-testid="PaginationSearchButton"
                 type="button"
               >
@@ -4933,7 +4933,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
       >
         <div
-          class="css-tz6w2"
+          class="css-iml7e5"
           data-testid="Accordion__toggle"
         >
           <div
@@ -5993,7 +5993,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
       >
         <div
-          class="css-tz6w2"
+          class="css-iml7e5"
           data-testid="Accordion__toggle"
         >
           <div
@@ -7055,7 +7055,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
       >
         <div
-          class="css-tz6w2"
+          class="css-iml7e5"
           data-testid="Accordion__toggle"
         >
           <div
@@ -8118,7 +8118,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -8925,7 +8925,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -12097,7 +12097,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
             >
               <button
-                class="group css-eti7fq"
+                class="group css-jt2164"
                 data-testid="PaginationSearchButton"
                 type="button"
               >
@@ -12404,7 +12404,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -13211,7 +13211,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -16383,7 +16383,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
             >
               <button
-                class="group css-eti7fq"
+                class="group css-jt2164"
                 data-testid="PaginationSearchButton"
                 type="button"
               >
@@ -16652,7 +16652,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -17428,7 +17428,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -20600,7 +20600,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
             >
               <button
-                class="group css-eti7fq"
+                class="group css-jt2164"
                 data-testid="PaginationSearchButton"
                 type="button"
               >

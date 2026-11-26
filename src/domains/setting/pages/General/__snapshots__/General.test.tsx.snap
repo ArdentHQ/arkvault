@@ -6,7 +6,7 @@ exports[`General Settings > should disable submit button when profile is not res
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -141,7 +141,7 @@ exports[`General Settings > should disable submit button when profile is not res
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1990,7 +1990,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     </ul>
                   </div>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -2022,7 +2022,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2157,7 +2157,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -4037,7 +4037,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     </ul>
                   </div>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
@@ -4068,7 +4068,7 @@ exports[`General Settings > should render 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4203,7 +4203,7 @@ exports[`General Settings > should render 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -6048,7 +6048,7 @@ exports[`General Settings > should render 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -6080,7 +6080,7 @@ exports[`General Settings > should show identicon when removing image if name is
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -6215,7 +6215,7 @@ exports[`General Settings > should show identicon when removing image if name is
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -8060,7 +8060,7 @@ exports[`General Settings > should show identicon when removing image if name is
                     </ul>
                   </div>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -8092,7 +8092,7 @@ exports[`General Settings > should update profile 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -8227,7 +8227,7 @@ exports[`General Settings > should update profile 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -10072,7 +10072,7 @@ exports[`General Settings > should update profile 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -10104,7 +10104,7 @@ exports[`General Settings > should update the avatar when removing focus from na
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -10239,7 +10239,7 @@ exports[`General Settings > should update the avatar when removing focus from na
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -12084,7 +12084,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </ul>
                   </div>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
@@ -12115,7 +12115,7 @@ exports[`General Settings > should update the avatar when removing focus from na
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -12250,7 +12250,7 @@ exports[`General Settings > should update the avatar when removing focus from na
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -14136,7 +14136,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </ul>
                   </div>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"

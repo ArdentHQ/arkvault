@@ -457,7 +457,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1310,7 +1310,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2690,7 +2690,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -3543,7 +3543,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div
@@ -4923,7 +4923,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-tz6w2"
+            class="css-iml7e5"
             data-testid="Accordion__toggle"
           >
             <div

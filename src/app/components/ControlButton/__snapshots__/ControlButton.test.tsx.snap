@@ -30,7 +30,7 @@ exports[`ControlButton > should render disabled 1`] = `
     class="group"
   >
     <button
-      class="ring-focus css-1b09r5h"
+      class="ring-focus css-1if0uo5"
       disabled=""
     />
   </div>
@@ -63,7 +63,7 @@ exports[`ControlButton > should render without border 1`] = `
     class="group"
   >
     <button
-      class="ring-focus css-46sfhd"
+      class="ring-focus css-g0l1ox"
     />
   </div>
 </DocumentFragment>
@@ -75,7 +75,7 @@ exports[`ControlButton > should render without border and with dot 1`] = `
     class="group"
   >
     <button
-      class="ring-focus css-46sfhd"
+      class="ring-focus css-g0l1ox"
     >
       <div
         class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
