@@ -6,7 +6,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -135,7 +135,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -596,7 +596,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-46sfhd"
+                        class="ring-focus css-g0l1ox"
                         type="button"
                       >
                         <div
@@ -1590,7 +1590,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1719,7 +1719,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -2158,7 +2158,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="group"
               >
                 <button
-                  class="ring-focus css-46sfhd"
+                  class="ring-focus css-g0l1ox"
                   type="button"
                 >
                   <div
@@ -2343,7 +2343,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
             >
               <div
-                class="css-tz6w2"
+                class="css-iml7e5"
                 data-testid="Accordion__toggle"
               >
                 <div
@@ -2555,7 +2555,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
             >
               <div
-                class="css-tz6w2"
+                class="css-iml7e5"
                 data-testid="Accordion__toggle"
               >
                 <div
@@ -2895,7 +2895,7 @@ exports[`Contacts > should render with contacts 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3024,7 +3024,7 @@ exports[`Contacts > should render with contacts 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -3485,7 +3485,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-46sfhd"
+                        class="ring-focus css-g0l1ox"
                         type="button"
                       >
                         <div
@@ -4479,7 +4479,7 @@ exports[`Contacts > should render without contacts 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4608,7 +4608,7 @@ exports[`Contacts > should render without contacts 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"

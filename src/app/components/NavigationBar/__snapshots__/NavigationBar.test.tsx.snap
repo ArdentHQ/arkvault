@@ -3,7 +3,7 @@
 exports[`NavigationBar > should not render with title if variant is full 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="css-v72zfb"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -132,7 +132,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="css-qjx2bd"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -574,7 +574,7 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
 exports[`NavigationBar > should render full variant when profile restored is false 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="css-v72zfb"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -705,7 +705,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="css-qjx2bd"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -1106,7 +1106,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
 exports[`NavigationBar > should render full variant when profile restored is true 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="css-v72zfb"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -1235,7 +1235,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="css-qjx2bd"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -1630,7 +1630,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
 exports[`NavigationBar > should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="css-v72zfb"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -1759,7 +1759,7 @@ exports[`NavigationBar > should render in lg 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="css-qjx2bd"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -2154,7 +2154,7 @@ exports[`NavigationBar > should render in lg 1`] = `
 exports[`NavigationBar > should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="css-v72zfb"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -2283,7 +2283,7 @@ exports[`NavigationBar > should render in md 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="css-qjx2bd"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -2678,7 +2678,7 @@ exports[`NavigationBar > should render in md 1`] = `
 exports[`NavigationBar > should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="css-v72zfb"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -2807,7 +2807,7 @@ exports[`NavigationBar > should render in sm 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="css-qjx2bd"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -3202,7 +3202,7 @@ exports[`NavigationBar > should render in sm 1`] = `
 exports[`NavigationBar > should render in small screen variant 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="css-v72zfb"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -3331,7 +3331,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="css-qjx2bd"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -3726,7 +3726,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
 exports[`NavigationBar > should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="css-v72zfb"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -3855,7 +3855,7 @@ exports[`NavigationBar > should render in xs 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="css-qjx2bd"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -4250,7 +4250,7 @@ exports[`NavigationBar > should render in xs 1`] = `
 exports[`NavigationBar > should render with custom menu 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="css-v72zfb"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -4379,7 +4379,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="css-qjx2bd"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -4774,7 +4774,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
 exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="css-v72zfb"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -4903,7 +4903,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="css-qjx2bd"
         >
           <div
             class="mx-auto css-15txs7d"

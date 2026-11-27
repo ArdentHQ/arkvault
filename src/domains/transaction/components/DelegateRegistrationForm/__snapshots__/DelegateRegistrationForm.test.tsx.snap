@@ -37,7 +37,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6 sm:mt-4"
         >
           <div
-            class="css-rzhg83"
+            class="css-m9uf57"
           >
             <div
               class="css-v0ob3f"
@@ -427,7 +427,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6 sm:mt-4"
         >
           <div
-            class="css-rzhg83"
+            class="css-m9uf57"
           >
             <div
               class="css-v0ob3f"
@@ -1075,7 +1075,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6 sm:mt-4"
         >
           <div
-            class="css-rzhg83"
+            class="css-m9uf57"
           >
             <div
               class="css-v0ob3f"
@@ -1331,7 +1331,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                           class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
                         >
                           <button
-                            class="border-r sm:border-r-0 css-jmpn15"
+                            class="border-r sm:border-r-0 css-b9ryyd"
                             data-testid="InputFeeAdvanced__up"
                             type="button"
                           >
@@ -1360,7 +1360,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                             </div>
                           </button>
                           <button
-                            class="css-1ddtsjs"
+                            class="css-1le18lt"
                             data-testid="InputFeeAdvanced__down"
                             type="button"
                           >
@@ -1440,7 +1440,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
           class="flex flex-col overflow-hidden rounded-xl mt-6 sm:mt-4"
         >
           <div
-            class="css-rzhg83"
+            class="css-m9uf57"
           >
             <div
               class="css-v0ob3f"
@@ -1830,7 +1830,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
           class="flex flex-col overflow-hidden rounded-xl mt-6 sm:mt-4"
         >
           <div
-            class="css-rzhg83"
+            class="css-m9uf57"
           >
             <div
               class="css-v0ob3f"

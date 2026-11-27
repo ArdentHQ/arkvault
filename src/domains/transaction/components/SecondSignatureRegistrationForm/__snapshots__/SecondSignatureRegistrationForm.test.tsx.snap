@@ -34,7 +34,7 @@ exports[`SecondSignatureRegistrationForm > backup step > should render 1`] = `
             class="flex flex-col overflow-hidden rounded-xl"
           >
             <div
-              class="css-rzhg83"
+              class="css-m9uf57"
             >
               <div
                 class="css-v0ob3f"
@@ -270,7 +270,7 @@ exports[`SecondSignatureRegistrationForm > should not generate mnemonic if alrea
           class="flex flex-col overflow-hidden rounded-xl"
         >
           <div
-            class="css-rzhg83"
+            class="css-m9uf57"
           >
             <div
               class="css-v0ob3f"
@@ -460,7 +460,7 @@ exports[`SecondSignatureRegistrationForm > should not generate mnemonic if alrea
                         class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
                       >
                         <button
-                          class="border-r sm:border-r-0 css-jmpn15"
+                          class="border-r sm:border-r-0 css-b9ryyd"
                           data-testid="InputFeeAdvanced__up"
                           disabled=""
                           type="button"
@@ -490,7 +490,7 @@ exports[`SecondSignatureRegistrationForm > should not generate mnemonic if alrea
                           </div>
                         </button>
                         <button
-                          class="css-1ddtsjs"
+                          class="css-1le18lt"
                           data-testid="InputFeeAdvanced__down"
                           disabled=""
                           type="button"
@@ -571,7 +571,7 @@ exports[`SecondSignatureRegistrationForm > should render generation step 1`] = `
           class="flex flex-col overflow-hidden rounded-xl"
         >
           <div
-            class="css-rzhg83"
+            class="css-m9uf57"
           >
             <div
               class="css-v0ob3f"
@@ -761,7 +761,7 @@ exports[`SecondSignatureRegistrationForm > should render generation step 1`] = `
                         class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
                       >
                         <button
-                          class="border-r sm:border-r-0 css-jmpn15"
+                          class="border-r sm:border-r-0 css-b9ryyd"
                           data-testid="InputFeeAdvanced__up"
                           disabled=""
                           type="button"
@@ -791,7 +791,7 @@ exports[`SecondSignatureRegistrationForm > should render generation step 1`] = `
                           </div>
                         </button>
                         <button
-                          class="css-1ddtsjs"
+                          class="css-1le18lt"
                           data-testid="InputFeeAdvanced__down"
                           disabled=""
                           type="button"

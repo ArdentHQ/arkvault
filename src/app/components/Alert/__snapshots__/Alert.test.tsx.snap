@@ -6,7 +6,7 @@ exports[`Alert > should render 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-rzhg83"
+      class="css-m9uf57"
     >
       <div
         class="css-v0ob3f"
@@ -66,7 +66,7 @@ exports[`Alert > should render as collapsible 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-m7hn3f"
+      class="css-69105a"
     >
       <div
         class="css-v0ob3f"
@@ -109,7 +109,7 @@ exports[`Alert > should render as collapsible 1`] = `
         Warning
       </span>
       <span
-        class="css-1tj6cyx"
+        class="css-18ma0ay"
         data-testid="Alert__chevron"
       >
         <div
@@ -147,7 +147,7 @@ exports[`Alert > should render as danger alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-6pjap5"
+      class="css-1apqton"
     >
       <div
         class="css-v0ob3f"
@@ -202,7 +202,7 @@ exports[`Alert > should render as hint alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-mlglor"
+      class="css-qkzjxb"
     >
       <div
         class="css-v0ob3f"
@@ -256,7 +256,7 @@ exports[`Alert > should render as info alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-1jg2bxs"
+      class="css-933jbp"
     >
       <div
         class="css-v0ob3f"
@@ -316,7 +316,7 @@ exports[`Alert > should render as success alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-1o2lvkz"
+      class="css-s4fg5w"
     >
       <div
         class="css-v0ob3f"
@@ -371,7 +371,7 @@ exports[`Alert > should render as warning alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-rzhg83"
+      class="css-m9uf57"
     >
       <div
         class="css-v0ob3f"
@@ -431,7 +431,7 @@ exports[`Alert > should render as warning-dark alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-rzhg83"
+      class="css-m9uf57"
     >
       <div
         class="css-v0ob3f"
