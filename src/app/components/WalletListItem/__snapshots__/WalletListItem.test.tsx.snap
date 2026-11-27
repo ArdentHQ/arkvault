@@ -382,7 +382,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="css-1tlnwsw"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -976,7 +976,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="css-1tlnwsw"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1392,7 +1392,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="css-1tlnwsw"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -2244,7 +2244,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="css-1tlnwsw"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -2708,7 +2708,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="css-1tlnwsw"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -3124,7 +3124,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="css-1tlnwsw"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -3540,7 +3540,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="css-1tlnwsw"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
