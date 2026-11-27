@@ -1,3 +1,4 @@
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { Networks } from "@/app/lib/mainsail";
 import { URLBuilder } from "@ardenthq/arkvault-url";
 import { isValidUrl } from "@/utils/url-validation";
@@ -43,7 +44,7 @@ export const isSendTransferNextDisabled = ({
 	return !isValid;
 };
 
-export const handleQRCodeReadError = (t: (key: string, options?: Record<string, any>) => string): void => {
+export const handleQRCodeReadError = (t: TFunction): void => {
 	toasts.error(t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }));
 };
 
