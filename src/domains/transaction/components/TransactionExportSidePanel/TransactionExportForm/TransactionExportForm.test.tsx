@@ -1,0 +1,240 @@
+import { Contracts } from "@/app/lib/profiles";
+import userEvent from "@testing-library/user-event";
+import React from "react";
+
+import { TransactionExportForm } from ".";
+import {
+	env,
+	getDefaultProfileId,
+	renderWithForm,
+	screen,
+	syncValidators,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
+
+const toggleTestId = "dropdown__toggle";
+const dropdownContentTestId = "dropdown__content";
+
+const formContainer = () => screen.getByTestId("TransactionExportForm--daterange");
+const dateToggle = () => within(formContainer()).getByTestId("CollapseToggleButton");
+
+describe("TransactionExportForm", () => {
+	let profile: Contracts.IProfile;
+
+	beforeEach(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		await syncValidators(profile);
+
+		await env.profiles().restore(profile);
+		await profile.sync();
+	});
+
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", async (breakpoint: string) => {
+		const { asFragment } = renderWithForm(
+			<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />,
+			{
+				breakpoint,
+			},
+		);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render fiat column if wallets network is live", async () => {
+		const walletSpy = vi.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
+
+		const { asFragment } = renderWithForm(
+			<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />,
+		);
+
+		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		expect(asFragment()).toMatchSnapshot();
+
+		walletSpy.mockRestore();
+	});
+
+	it("should select outgoing transactions", async () => {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(screen.getAllByTestId("ButtonGroupOption")[1]);
+	});
+
+	it("should select last month", async () => {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(within(formContainer()).getByTestId(toggleTestId));
+
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--all-1"));
+	});
+
+	it("should render custom date range", async () => {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />, {
+			defaultValues: {
+				from: new Date(),
+				to: new Date(),
+			},
+			registerCallback: ({ register }) => {
+				register("dateRange");
+				register("from");
+				register("to");
+			},
+		});
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(within(formContainer()).getByTestId(toggleTestId));
+
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--custom-0"));
+	});
+
+	it("should select current month", async () => {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(within(formContainer()).getByTestId(toggleTestId));
+
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--all-0"));
+	});
+
+	it("should select current quarter", async () => {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(within(formContainer()).getByTestId(toggleTestId));
+
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--all-2"));
+	});
+
+	it("should select last quarter", async () => {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(within(formContainer()).getByTestId(toggleTestId));
+
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--all-3"));
+	});
+
+	it("should select current year", async () => {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(within(formContainer()).getByTestId(toggleTestId));
+
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--all-4"));
+	});
+
+	it("should select last year", async () => {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(within(formContainer()).getByTestId(toggleTestId));
+
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--all-5"));
+	});
+
+	it("should select all", async () => {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(within(formContainer()).getByTestId(toggleTestId));
+
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--all-6"));
+	});
+
+	it("should select tab delimiter", async () => {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />, {
+			defaultValues: {
+				delimiter: ",",
+			},
+		});
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(
+			within(screen.getByTestId("TransactionExportForm--delimiter")).getByTestId("dropdown__toggle"),
+		);
+
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--2"));
+	});
+});

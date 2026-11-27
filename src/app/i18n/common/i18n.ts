@@ -406,6 +406,7 @@ export const translations = {
 		SEND_VOTE: "Send Vote",
 		SIGN_MESSAGE: "Sign Message",
 		TRANSACTION_DETAILS: "Transaction Details",
+		TRANSACTION_EXPORT: "Transaction History",
 		VERIFY_MESSAGE: "Verify Message",
 	},
 	PARTICIPANT: "Participant",

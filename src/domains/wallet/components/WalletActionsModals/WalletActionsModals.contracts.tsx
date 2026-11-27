@@ -7,7 +7,6 @@ export type WalletActionsModalType =
 	| "wallet-name"
 	| "delete-wallet"
 	| "second-signature"
-	| "transaction-history"
 	| "hd-account-name";
 
 export interface WalletActionsProperties {

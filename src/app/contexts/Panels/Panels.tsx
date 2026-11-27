@@ -19,6 +19,7 @@ export enum Panel {
 	Addresses = "ADDRESSES",
 	LedgerMigration = "LEDGER_MIGRATION",
 	TransactionDetails = "TRANSACTION_DETAILS",
+	TransactionExport = "TRANSACTION_EXPORT",
 	Notifications = "NOTIFICATIONS",
 }
 

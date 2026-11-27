@@ -158,18 +158,4 @@ describe("WalletActionsModals", () => {
 
 		expect(asFragment).toMatchSnapshot();
 	});
-
-	it("should render `transaction-history` modal", async () => {
-		const { asFragment } = render(
-			<WalletActionsModals
-				wallets={[wallet]}
-				activeModal={"transaction-history"}
-				setActiveModal={setActiveModal}
-			/>,
-		);
-
-		await expect(screen.findByTestId("TransactionExportForm")).resolves.toBeInTheDocument();
-
-		expect(asFragment).toMatchSnapshot();
-	});
 });
