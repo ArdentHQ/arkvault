@@ -6,7 +6,7 @@ exports[`Toast > should render 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-1hr04bz"
+      class="css-f0f4u1"
     >
       <div
         class="css-v0ob3f"
@@ -63,7 +63,7 @@ exports[`Toast > should render as danger toast 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-1tghewh"
+      class="css-1vufxzn"
     >
       <div
         class="css-v0ob3f"
@@ -115,7 +115,7 @@ exports[`Toast > should render as hint toast 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-1gmw2vt"
+      class="css-n4n1gv"
     >
       <div
         class="css-v0ob3f"
@@ -166,7 +166,7 @@ exports[`Toast > should render as info toast 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-1azrxwi"
+      class="css-ghkqda"
     >
       <div
         class="css-v0ob3f"
@@ -223,7 +223,7 @@ exports[`Toast > should render as success toast 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-njel2h"
+      class="css-1mztnfi"
     >
       <div
         class="css-v0ob3f"
@@ -275,7 +275,7 @@ exports[`Toast > should render as warning toast 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-1hr04bz"
+      class="css-f0f4u1"
     >
       <div
         class="css-v0ob3f"

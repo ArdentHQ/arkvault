@@ -6,7 +6,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -139,7 +139,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1080,7 +1080,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-v1kihw"
+                                  class="css-1wgl5ya"
                                   color="info"
                                 />
                               </div>
@@ -1164,7 +1164,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-v1kihw"
+                                  class="css-1wgl5ya"
                                   color="info"
                                 />
                               </div>
@@ -1294,7 +1294,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -1326,7 +1326,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1459,7 +1459,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -3567,7 +3567,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                     </li>
                   </ul>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -3599,7 +3599,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3732,7 +3732,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -4672,7 +4672,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-v1kihw"
+                                  class="css-1wgl5ya"
                                   color="info"
                                 />
                               </div>
@@ -4756,7 +4756,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-v1kihw"
+                                  class="css-1wgl5ya"
                                   color="info"
                                 />
                               </div>
@@ -5058,7 +5058,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="css-v1kihw"
+                                              class="css-1wgl5ya"
                                               color="info"
                                             />
                                           </div>
@@ -5324,7 +5324,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="css-v1kihw"
+                                              class="css-1wgl5ya"
                                               color="info"
                                             />
                                           </div>
@@ -5563,7 +5563,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="css-v1kihw"
+                                              class="css-1wgl5ya"
                                               color="info"
                                             />
                                           </div>
@@ -5702,7 +5702,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -5734,7 +5734,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -5867,7 +5867,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -6807,7 +6807,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-v1kihw"
+                                  class="css-1wgl5ya"
                                   color="info"
                                 />
                               </div>
@@ -6891,7 +6891,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-v1kihw"
+                                  class="css-1wgl5ya"
                                   color="info"
                                 />
                               </div>
@@ -7036,7 +7036,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           data-testid="CustomPeersPeer--statusloading"
                                         >
                                           <div
-                                            class="css-v1kihw"
+                                            class="css-1wgl5ya"
                                             color="info"
                                           />
                                         </div>
@@ -7071,7 +7071,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -7205,7 +7205,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                               data-testid="CustomPeersPeer--statusloading"
                                             >
                                               <div
-                                                class="css-v1kihw"
+                                                class="css-1wgl5ya"
                                                 color="info"
                                               />
                                             </div>
@@ -7410,7 +7410,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           data-testid="CustomPeersPeer--statusloading"
                                         >
                                           <div
-                                            class="css-v1kihw"
+                                            class="css-1wgl5ya"
                                             color="info"
                                           />
                                         </div>
@@ -7445,7 +7445,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -7597,7 +7597,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                               data-testid="CustomPeersPeer--statusloading"
                                             >
                                               <div
-                                                class="css-v1kihw"
+                                                class="css-1wgl5ya"
                                                 color="info"
                                               />
                                             </div>
@@ -7777,7 +7777,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           data-testid="CustomPeersPeer--statusloading"
                                         >
                                           <div
-                                            class="css-v1kihw"
+                                            class="css-1wgl5ya"
                                             color="info"
                                           />
                                         </div>
@@ -7812,7 +7812,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -7964,7 +7964,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                               data-testid="CustomPeersPeer--statusloading"
                                             >
                                               <div
-                                                class="css-v1kihw"
+                                                class="css-1wgl5ya"
                                                 color="info"
                                               />
                                             </div>
@@ -8134,7 +8134,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                     </li>
                   </ul>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -8166,7 +8166,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -8299,7 +8299,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -10407,7 +10407,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     </li>
                   </ul>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -10439,7 +10439,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -10572,7 +10572,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -11858,7 +11858,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -12293,7 +12293,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -12721,7 +12721,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -13076,7 +13076,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     </li>
                   </ul>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -13108,7 +13108,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -13241,7 +13241,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -14527,7 +14527,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -14709,7 +14709,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -15137,7 +15137,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -15492,7 +15492,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     </li>
                   </ul>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -15524,7 +15524,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -15657,7 +15657,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -17750,7 +17750,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     </li>
                   </ul>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -17782,7 +17782,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -17915,7 +17915,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -19192,7 +19192,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -19371,7 +19371,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -19525,7 +19525,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -19609,7 +19609,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     </li>
                   </ul>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
@@ -19641,7 +19641,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -19774,7 +19774,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -21051,7 +21051,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -21480,7 +21480,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -21634,7 +21634,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
                                   >
                                     <div
-                                      class="css-tz6w2"
+                                      class="css-iml7e5"
                                       data-testid="Accordion__toggle"
                                     >
                                       <div
@@ -21718,7 +21718,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     </li>
                   </ul>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"

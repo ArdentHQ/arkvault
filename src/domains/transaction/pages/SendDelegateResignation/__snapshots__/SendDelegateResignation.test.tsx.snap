@@ -16,7 +16,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -574,7 +574,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                     class="flex flex-col overflow-hidden rounded-xl"
                   >
                     <div
-                      class="css-rzhg83"
+                      class="css-m9uf57"
                     >
                       <div
                         class="css-v0ob3f"
@@ -866,7 +866,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                                     class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
                                   >
                                     <button
-                                      class="border-r sm:border-r-0 css-jmpn15"
+                                      class="border-r sm:border-r-0 css-b9ryyd"
                                       data-testid="InputFeeAdvanced__up"
                                       type="button"
                                     >
@@ -895,7 +895,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                                       </div>
                                     </button>
                                     <button
-                                      class="css-1ddtsjs"
+                                      class="css-1le18lt"
                                       data-testid="InputFeeAdvanced__down"
                                       type="button"
                                     >
@@ -935,7 +935,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -975,7 +975,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1110,7 +1110,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1668,7 +1668,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                     class="flex flex-col overflow-hidden rounded-xl"
                   >
                     <div
-                      class="css-rzhg83"
+                      class="css-m9uf57"
                     >
                       <div
                         class="css-v0ob3f"
@@ -2006,7 +2006,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -2046,7 +2046,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2181,7 +2181,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -2991,7 +2991,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -3031,7 +3031,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3166,7 +3166,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -3881,7 +3881,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                 </div>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -3947,7 +3947,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4082,7 +4082,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -4615,7 +4615,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="css-6pjap5"
+                          class="css-1apqton"
                         >
                           <div
                             class="css-v0ob3f"
@@ -4688,7 +4688,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                     </div>
                   </div>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <div
                       class="mr-auto"
@@ -4800,7 +4800,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -5556,7 +5556,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                 </div>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"

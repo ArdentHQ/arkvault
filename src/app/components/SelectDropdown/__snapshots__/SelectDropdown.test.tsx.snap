@@ -774,7 +774,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
       class="absolute z-10 w-full"
     >
       <ul
-        class="css-1jfh2qw"
+        class="css-1ggtvh9"
       >
         <li
           aria-selected="false"
@@ -956,7 +956,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
       class="absolute z-10 w-full"
     >
       <ul
-        class="css-1jfh2qw"
+        class="css-1ggtvh9"
       >
         <li
           aria-selected="false"
@@ -1675,7 +1675,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
       class="absolute z-10 w-full"
     >
       <ul
-        class="css-1jfh2qw"
+        class="css-1ggtvh9"
       >
         <ul
           class="select-list-option-group"
@@ -1856,7 +1856,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
       class="absolute z-10 w-full"
     >
       <ul
-        class="css-1jfh2qw"
+        class="css-1ggtvh9"
       >
         <ul
           class="select-list-option-group"
