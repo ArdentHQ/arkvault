@@ -304,7 +304,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class=" css-1b8xvkx"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -608,7 +608,7 @@ exports[`AddRecipient > should render 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class=" css-1b8xvkx"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -912,7 +912,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class=" css-1b8xvkx"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1216,7 +1216,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class=" css-1b8xvkx"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1520,7 +1520,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class=" css-1b8xvkx"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1757,7 +1757,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class=" css-1b8xvkx"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -2061,7 +2061,7 @@ exports[`AddRecipient > should set available amount 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class="active css-15n2mow"
+                class="active css-1b8xvkx"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -2380,7 +2380,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class=" css-1b8xvkx"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -2732,7 +2732,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
               class="hidden sm:inline-flex"
             >
               <button
-                class="active css-15n2mow"
+                class="active css-1b8xvkx"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >

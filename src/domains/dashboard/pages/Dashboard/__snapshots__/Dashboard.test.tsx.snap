@@ -6,7 +6,7 @@ exports[`Dashboard > should render 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -135,7 +135,7 @@ exports[`Dashboard > should render 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1g24tay"
+            class="css-281c5n"
             disabled=""
           >
             <div
@@ -1049,7 +1049,7 @@ exports[`Dashboard > should render 1`] = `
                 class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
               >
                 <div
-                  class="css-tz6w2"
+                  class="css-iml7e5"
                   data-testid="Accordion__toggle"
                 >
                   <div
@@ -1864,7 +1864,7 @@ exports[`Dashboard > should render 1`] = `
                 class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
               >
                 <div
-                  class="css-tz6w2"
+                  class="css-iml7e5"
                   data-testid="Accordion__toggle"
                 >
                   <div

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
+import { resetIdCounter } from "downshift";
 import React from "react";
 import "jest-styled-components";
 import { ContactForm } from "./ContactForm";
@@ -34,6 +35,8 @@ const ARKDevnet = "ARK Devnet";
 
 describe("ContactForm", () => {
 	beforeEach(async () => {
+		resetIdCounter();
+
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 

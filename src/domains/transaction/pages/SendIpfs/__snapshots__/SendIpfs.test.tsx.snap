@@ -16,7 +16,7 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -698,7 +698,7 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1023,7 +1023,7 @@ exports[`SendIpfs > should render form step 1`] = `
                     class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
                   >
                     <button
-                      class="border-r sm:border-r-0 css-jmpn15"
+                      class="border-r sm:border-r-0 css-b9ryyd"
                       data-testid="InputFeeAdvanced__up"
                       disabled=""
                       type="button"
@@ -1053,7 +1053,7 @@ exports[`SendIpfs > should render form step 1`] = `
                       </div>
                     </button>
                     <button
-                      class="css-1ddtsjs"
+                      class="css-1le18lt"
                       data-testid="InputFeeAdvanced__down"
                       disabled=""
                       type="button"
@@ -2452,7 +2452,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2585,7 +2585,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -3810,7 +3810,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -3839,7 +3839,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3972,7 +3972,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -5197,7 +5197,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -5228,7 +5228,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -5361,7 +5361,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -6586,7 +6586,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -6625,7 +6625,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -7449,7 +7449,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -7490,7 +7490,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -7623,7 +7623,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -8154,7 +8154,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="css-6pjap5"
+                          class="css-1apqton"
                         >
                           <div
                             class="css-v0ob3f"
@@ -8227,7 +8227,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-145pihz"
+                    class="css-1riig01"
                   >
                     <div
                       class="mr-auto"

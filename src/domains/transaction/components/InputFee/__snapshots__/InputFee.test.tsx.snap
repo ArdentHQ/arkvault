@@ -73,7 +73,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
                 class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
               >
                 <button
-                  class="border-r sm:border-r-0 css-jmpn15"
+                  class="border-r sm:border-r-0 css-b9ryyd"
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
@@ -102,7 +102,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-1ddtsjs"
+                  class="css-1le18lt"
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
@@ -223,7 +223,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
                 class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
               >
                 <button
-                  class="border-r sm:border-r-0 css-jmpn15"
+                  class="border-r sm:border-r-0 css-b9ryyd"
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
@@ -252,7 +252,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
                   </div>
                 </button>
                 <button
-                  class="css-1ddtsjs"
+                  class="css-1le18lt"
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
@@ -325,7 +325,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
               class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
             >
               <button
-                class="border-r sm:border-r-0 css-jmpn15"
+                class="border-r sm:border-r-0 css-b9ryyd"
                 data-testid="InputFeeAdvanced__up"
                 disabled=""
                 type="button"
@@ -355,7 +355,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
                 </div>
               </button>
               <button
-                class="css-1ddtsjs"
+                class="css-1le18lt"
                 data-testid="InputFeeAdvanced__down"
                 disabled=""
                 type="button"
@@ -465,7 +465,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                 class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
               >
                 <button
-                  class="border-r sm:border-r-0 css-jmpn15"
+                  class="border-r sm:border-r-0 css-b9ryyd"
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
@@ -494,7 +494,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                   </div>
                 </button>
                 <button
-                  class="css-1ddtsjs"
+                  class="css-1le18lt"
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >

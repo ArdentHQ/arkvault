@@ -6,7 +6,7 @@ exports[`Exchange > should render empty 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -137,7 +137,7 @@ exports[`Exchange > should render empty 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1g24tay"
+            class="css-281c5n"
             disabled=""
           >
             <div
@@ -590,7 +590,7 @@ exports[`Exchange > should render empty 1`] = `
         </div>
       </div>
       <nav
-        class="css-h27fpz"
+        class="css-8x10g2"
       >
         <div
           class="mx-auto flex items-center justify-between px-6 lg:container md:px-10"
@@ -664,7 +664,7 @@ exports[`Exchange > should render with exchanges 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -795,7 +795,7 @@ exports[`Exchange > should render with exchanges 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1g24tay"
+            class="css-281c5n"
             disabled=""
           >
             <div
@@ -1248,7 +1248,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         </div>
       </div>
       <nav
-        class="css-h27fpz"
+        class="css-8x10g2"
       >
         <div
           class="mx-auto flex items-center justify-between px-6 lg:container md:px-10"

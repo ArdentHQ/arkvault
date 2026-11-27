@@ -16,7 +16,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1314,7 +1314,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                 </section>
               </div>
               <div
-                class="css-j6ajdm"
+                class="css-1tlnwsw"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1614,7 +1614,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                         </div>
                       </div>
                       <div
-                        class="css-j6ajdm"
+                        class="css-1tlnwsw"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1668,7 +1668,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -2350,7 +2350,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -2538,7 +2538,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             class="hidden sm:flex sm:h-full sm:align-bottom"
           >
             <button
-              class="group css-10lw8nr"
+              class="group css-1po05mg"
               data-testid="QRCodeModalButton"
               type="button"
             >
@@ -2963,7 +2963,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                     class="hidden sm:inline-flex"
                   >
                     <button
-                      class=" css-15n2mow"
+                      class=" css-1b8xvkx"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -3665,7 +3665,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                     class="hidden sm:inline-flex"
                   >
                     <button
-                      class=" css-15n2mow"
+                      class=" css-1b8xvkx"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -3772,7 +3772,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                     class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
                   >
                     <button
-                      class="border-r sm:border-r-0 css-jmpn15"
+                      class="border-r sm:border-r-0 css-b9ryyd"
                       data-testid="InputFeeAdvanced__up"
                       disabled=""
                       type="button"
@@ -3802,7 +3802,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       </div>
                     </button>
                     <button
-                      class="css-1ddtsjs"
+                      class="css-1le18lt"
                       data-testid="InputFeeAdvanced__down"
                       disabled=""
                       type="button"
@@ -3849,7 +3849,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3982,7 +3982,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -4612,7 +4612,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -6310,7 +6310,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -6443,7 +6443,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -7741,7 +7741,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -7780,7 +7780,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -9078,7 +9078,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                 </section>
               </div>
               <div
-                class="css-j6ajdm"
+                class="css-1tlnwsw"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -9494,7 +9494,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                         </div>
                       </div>
                       <div
-                        class="css-j6ajdm"
+                        class="css-1tlnwsw"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -9538,7 +9538,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -9671,7 +9671,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -10969,7 +10969,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -11008,7 +11008,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -12306,7 +12306,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -12345,7 +12345,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -13643,7 +13643,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="css-1riig01"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
