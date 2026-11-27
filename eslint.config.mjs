@@ -24,6 +24,7 @@ export default [
 			parserOptions: {
 				ecmaFeatures: { jsx: true },
 				ecmaVersion: "latest",
+				jsxPragma: "React",
 				sourceType: "module",
 				project: "./tsconfig.eslint.json",
 				tsconfigRootDir: new URL(".", import.meta.url).pathname,
