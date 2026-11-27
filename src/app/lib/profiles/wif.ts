@@ -1,6 +1,7 @@
-import { PBKDF2 } from "@ardenthq/arkvault-crypto";
+import { AES, PBKDF2 } from "@ardenthq/arkvault-crypto";
 
 import { IReadWriteWallet, IWalletImportFormat } from "./contracts.js";
+import { isLegacyEncryption } from "./helpers/legacy-encryption.js";
 
 // @TODO: rename to something better
 export class WalletImportFormat implements IWalletImportFormat {
@@ -18,6 +19,10 @@ export class WalletImportFormat implements IWalletImportFormat {
 
 		if (encryptedKey === undefined) {
 			throw new Error("This wallet does not use PBKDF2 encryption.");
+		}
+
+		if (isLegacyEncryption(encryptedKey)) {
+			return AES.decrypt(encryptedKey, password);
 		}
 
 		return await PBKDF2.decrypt(encryptedKey, password);
