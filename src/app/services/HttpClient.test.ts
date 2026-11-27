@@ -93,12 +93,4 @@ describe("HttpClient", () => {
 			"Received no response. This looks like a bug.",
 		);
 	});
-
-	// @README: Run this locally with TOR running.
-	// it("should connect with TOR", async () => {
-	// 	const realAddress = await subject.get("https://ipinfo.io");
-	// 	const newAddress = await subject.withSocksProxy("socks5://127.0.0.1:9050").get("https://ipinfo.io");
-
-	// 	expect(newAddress.json().ip).not.toBe(realAddress);
-	// });
 });
