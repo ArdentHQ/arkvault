@@ -24,7 +24,7 @@ exports[`ContactsHeader > should render responsive 1`] = `
             class="group"
           >
             <button
-              class="ring-focus css-46sfhd"
+              class="ring-focus css-g0l1ox"
               type="button"
             >
               <div
@@ -178,7 +178,7 @@ exports[`ContactsHeader > should render responsive 2`] = `
                   class="group"
                 >
                   <button
-                    class="ring-focus css-46sfhd"
+                    class="ring-focus css-g0l1ox"
                     type="button"
                   >
                     <div
@@ -285,7 +285,7 @@ exports[`ContactsHeaderExtra > should render responsive 1`] = `
           class="group"
         >
           <button
-            class="ring-focus css-46sfhd"
+            class="ring-focus css-g0l1ox"
             type="button"
           >
             <div
@@ -408,7 +408,7 @@ exports[`ContactsHeaderExtra > should render responsive 2`] = `
           class="group"
         >
           <button
-            class="ring-focus css-46sfhd"
+            class="ring-focus css-g0l1ox"
             type="button"
           >
             <div
