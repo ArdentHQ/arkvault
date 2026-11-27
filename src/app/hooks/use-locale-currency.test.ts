@@ -1,5 +1,6 @@
 import { renderHook } from "@testing-library/react";
 import { useLocaleCurrency } from "./use-locale-currency";
+import { PlatformSdkChoices } from "@/data";
 
 describe("useLocaleCurrency", () => {
 	it("should get currency based on locale", () => {
@@ -49,6 +50,11 @@ describe("useLocaleCurrency", () => {
 	});
 
 	it("should fall back to USD if currency is not supported", () => {
+		const originalMarketProviders = PlatformSdkChoices.marketProviders;
+		PlatformSdkChoices.marketProviders = [
+			{ label: "ARK Pricing", unsupportedCurrencies: ["VND"], value: "arkpricing" },
+		];
+
 		vi.spyOn(Intl, "DateTimeFormat").mockImplementationOnce(() => ({
 			resolvedOptions: () => ({
 				locale: "vi-VN",
@@ -60,5 +66,7 @@ describe("useLocaleCurrency", () => {
 		} = renderHook(() => useLocaleCurrency());
 
 		expect(current.defaultCurrency).toBe("USD");
+
+		PlatformSdkChoices.marketProviders = originalMarketProviders;
 	});
 });

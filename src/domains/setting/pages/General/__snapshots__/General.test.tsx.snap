@@ -1671,7 +1671,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                     readonly=""
                                     tabindex="-1"
                                     type="text"
-                                    value="cryptocompare"
+                                    value="arkpricing"
                                   />
                                 </div>
                               </div>
@@ -1691,7 +1691,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         <div
                                           class="invisible fixed w-auto whitespace-nowrap"
                                         >
-                                          CryptoCompare…
+                                          ARK Pricing…
                                         </div>
                                         <div
                                           class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
@@ -1713,7 +1713,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                               placeholder="Select Price Source"
                                               role="combobox"
                                               type="text"
-                                              value="CryptoCompare"
+                                              value="ARK Pricing"
                                             />
                                             <span
                                               class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -1722,7 +1722,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                               <span
                                                 class="truncate"
                                               >
-                                                CryptoCompare
+                                                ARK Pricing
                                               </span>
                                             </span>
                                           </div>
@@ -4396,7 +4396,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                     readonly=""
                                     tabindex="-1"
                                     type="text"
-                                    value="cryptocompare"
+                                    value="arkpricing"
                                   />
                                 </div>
                               </div>
@@ -4416,7 +4416,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         <div
                                           class="invisible fixed w-auto whitespace-nowrap"
                                         >
-                                          CryptoCompare…
+                                          ARK Pricing…
                                         </div>
                                         <div
                                           class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
@@ -4438,7 +4438,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                               placeholder="Select Price Source"
                                               role="combobox"
                                               type="text"
-                                              value="CryptoCompare"
+                                              value="ARK Pricing"
                                             />
                                             <span
                                               class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -4447,7 +4447,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                               <span
                                                 class="truncate"
                                               >
-                                                CryptoCompare
+                                                ARK Pricing
                                               </span>
                                             </span>
                                           </div>
@@ -7075,7 +7075,7 @@ exports[`General Settings > should render 1`] = `
                                     readonly=""
                                     tabindex="-1"
                                     type="text"
-                                    value="cryptocompare"
+                                    value="arkpricing"
                                   />
                                 </div>
                               </div>
@@ -7095,7 +7095,7 @@ exports[`General Settings > should render 1`] = `
                                         <div
                                           class="invisible fixed w-auto whitespace-nowrap"
                                         >
-                                          CryptoCompare…
+                                          ARK Pricing…
                                         </div>
                                         <div
                                           class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
@@ -7117,7 +7117,7 @@ exports[`General Settings > should render 1`] = `
                                               placeholder="Select Price Source"
                                               role="combobox"
                                               type="text"
-                                              value="CryptoCompare"
+                                              value="ARK Pricing"
                                             />
                                             <span
                                               class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -7126,7 +7126,7 @@ exports[`General Settings > should render 1`] = `
                                               <span
                                                 class="truncate"
                                               >
-                                                CryptoCompare
+                                                ARK Pricing
                                               </span>
                                             </span>
                                           </div>
@@ -9826,7 +9826,7 @@ exports[`General Settings > should update profile 1`] = `
                                     readonly=""
                                     tabindex="-1"
                                     type="text"
-                                    value="cryptocompare"
+                                    value="arkpricing"
                                   />
                                 </div>
                               </div>
@@ -9846,7 +9846,7 @@ exports[`General Settings > should update profile 1`] = `
                                         <div
                                           class="invisible fixed w-auto whitespace-nowrap"
                                         >
-                                          CryptoCompare…
+                                          ARK Pricing…
                                         </div>
                                         <div
                                           class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
@@ -9868,7 +9868,7 @@ exports[`General Settings > should update profile 1`] = `
                                               placeholder="Select Price Source"
                                               role="combobox"
                                               type="text"
-                                              value="CryptoCompare"
+                                              value="ARK Pricing"
                                             />
                                             <span
                                               class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -9877,7 +9877,7 @@ exports[`General Settings > should update profile 1`] = `
                                               <span
                                                 class="truncate"
                                               >
-                                                CryptoCompare
+                                                ARK Pricing
                                               </span>
                                             </span>
                                           </div>
@@ -12506,7 +12506,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     readonly=""
                                     tabindex="-1"
                                     type="text"
-                                    value="cryptocompare"
+                                    value="arkpricing"
                                   />
                                 </div>
                               </div>
@@ -12526,7 +12526,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         <div
                                           class="invisible fixed w-auto whitespace-nowrap"
                                         >
-                                          CryptoCompare…
+                                          ARK Pricing…
                                         </div>
                                         <div
                                           class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
@@ -12548,7 +12548,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               placeholder="Select Price Source"
                                               role="combobox"
                                               type="text"
-                                              value="CryptoCompare"
+                                              value="ARK Pricing"
                                             />
                                             <span
                                               class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -12557,7 +12557,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               <span
                                                 class="truncate"
                                               >
-                                                CryptoCompare
+                                                ARK Pricing
                                               </span>
                                             </span>
                                           </div>
@@ -15288,7 +15288,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     readonly=""
                                     tabindex="-1"
                                     type="text"
-                                    value="cryptocompare"
+                                    value="arkpricing"
                                   />
                                 </div>
                               </div>
@@ -15308,7 +15308,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         <div
                                           class="invisible fixed w-auto whitespace-nowrap"
                                         >
-                                          CryptoCompare…
+                                          ARK Pricing…
                                         </div>
                                         <div
                                           class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
@@ -15330,7 +15330,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               placeholder="Select Price Source"
                                               role="combobox"
                                               type="text"
-                                              value="CryptoCompare"
+                                              value="ARK Pricing"
                                             />
                                             <span
                                               class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -15339,7 +15339,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                               <span
                                                 class="truncate"
                                               >
-                                                CryptoCompare
+                                                ARK Pricing
                                               </span>
                                             </span>
                                           </div>

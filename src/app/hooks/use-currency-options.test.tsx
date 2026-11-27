@@ -20,8 +20,21 @@ describe("useCurrencyOptions", () => {
 	it("returns only supported currencies if market provider is specified and has unsupported currencies", () => {
 		const {
 			result: { current: currencyOptions },
-		} = renderHook(() => useCurrencyOptions("cryptocompare"), { wrapper: WithProviders });
+		} = renderHook(() => useCurrencyOptions("arkpricing"), { wrapper: WithProviders });
 
-		expect(currencyOptions[0].options.map((option) => option.value)).not.toContain("VND");
+		const fiatValues = currencyOptions[0].options.map((option) => option.value);
+
+		expect(fiatValues).toHaveLength(PlatformSdkChoices.currencies.fiat.length - 8);
+		expect(fiatValues).not.toContain("MXN");
+		expect(fiatValues).not.toContain("VND");
+		expect(currencyOptions[1].options).toHaveLength(PlatformSdkChoices.currencies.crypto.length);
+	});
+
+	it("returns all currencies if the market provider supports every currency", () => {
+		const {
+			result: { current: currencyOptions },
+		} = renderHook(() => useCurrencyOptions("coingecko"), { wrapper: WithProviders });
+
+		expect(currencyOptions[0].options).toHaveLength(PlatformSdkChoices.currencies.fiat.length);
 	});
 });

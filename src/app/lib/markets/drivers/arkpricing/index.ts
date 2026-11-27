@@ -15,15 +15,15 @@ import { HistoricalVolumeTransformer } from "./transformers/historical-volume-tr
 import { MarketTransformer } from "./transformers/market-transformer";
 
 /**
- * Implements a price tracker through the CryptoCompare API.
+ * Implements a price tracker through the ARK Pricing API.
  *
- * @see https://min-api.cryptocompare.com/
+ * @see https://github.com/ArdentHQ/ark-pricing
  *
  * @export
  * @class PriceTracker
  * @implements {PriceTracker}
  */
-export class CryptoCompare implements PriceTracker {
+export class ArkPricing implements PriceTracker {
 	/**
 	 * The HTTP client instance.
 	 *
@@ -33,12 +33,12 @@ export class CryptoCompare implements PriceTracker {
 	readonly #httpClient: Http.HttpClient;
 
 	/**
-	 * The host of the CryptoCompare API.
+	 * The host of the ARK Pricing API.
 	 *
 	 * @type {string}
 	 * @memberof PriceTracker
 	 */
-	readonly #host: string = "https://min-api.cryptocompare.com";
+	readonly #host: string = "https://pricing.ardenthq.com/api/v1";
 
 	/**
 	 * Creates an instance of PriceTracker.
@@ -53,12 +53,9 @@ export class CryptoCompare implements PriceTracker {
 	/** {@inheritDoc PriceTracker.verifyToken} */
 	public async verifyToken(token: string): Promise<boolean> {
 		try {
-			const body = await this.#get("data/price", {
-				fsym: token,
-				tsyms: "BTC",
-			});
+			const body = await this.#get(`coins/${token.toLowerCase()}/price`, this.#currenciesQuery(["USD"]));
 
-			return !!body.BTC;
+			return !!body.data;
 		} catch {
 			return false;
 		}
@@ -66,61 +63,76 @@ export class CryptoCompare implements PriceTracker {
 
 	/** {@inheritDoc PriceTracker.marketData} */
 	public async marketData(token: string): Promise<MarketDataCollection> {
-		const body = await this.#get("data/pricemultifull", {
-			fsyms: token,
-			tsyms: Object.keys(CURRENCIES).join(","),
-		});
+		const body = await this.#get(
+			`coins/${token.toLowerCase()}/market`,
+			this.#currenciesQuery(Object.keys(CURRENCIES)),
+		);
 
-		return new MarketTransformer(body.RAW && body.RAW[token] ? body.RAW[token] : {}).transform();
+		return new MarketTransformer(body.data ?? {}).transform();
 	}
 
 	/** {@inheritDoc PriceTracker.historicalPrice} */
 	public async historicalPrice(options: HistoricalPriceOptions): Promise<HistoricalData> {
-		const body = await this.#get(`data/v2/histo${options.type}`, {
-			fsym: options.token,
+		const body = await this.#get(`coins/${options.token.toLowerCase()}/history`, {
+			currency: options.currency,
+			interval: options.type,
 			limit: options.days,
-			toTs: Math.round(Date.now() / 1000),
-			tsym: options.currency,
 		});
 
-		return new HistoricalPriceTransformer(body.Data.Data).transform(options);
+		return new HistoricalPriceTransformer(body.data.prices).transform(options);
 	}
 
 	/** {@inheritDoc PriceTracker.historicalVolume} */
 	public async historicalVolume(options: HistoricalVolumeOptions): Promise<HistoricalData> {
-		const body = await this.#get(`data/v2/histo${options.type}`, {
-			fsym: options.token,
+		const body = await this.#get(`coins/${options.token.toLowerCase()}/history`, {
+			currency: options.currency,
+			interval: options.type,
 			limit: options.days,
-			toTs: Math.round(Date.now() / 1000),
-			tsym: options.currency,
 		});
 
-		return new HistoricalVolumeTransformer(body.Data.Data).transform(options);
+		return new HistoricalVolumeTransformer(body.data.prices).transform(options);
 	}
 
 	/** {@inheritDoc PriceTracker.dailyAverage} */
 	public async dailyAverage(options: DailyAverageOptions): Promise<number> {
-		const response = await this.#get(`data/dayAvg`, {
-			fsym: options.token,
-			toTs: DateTime.make(options.timestamp).toUNIX(),
-			tsym: options.currency,
+		const body = await this.#get(`coins/${options.token.toLowerCase()}/average`, {
+			currency: options.currency,
+			date: DateTime.make(options.timestamp).format("YYYY-MM-DD"),
 		});
 
-		return response[options.currency.toUpperCase()];
+		return body.data.average;
 	}
 
 	/** {@inheritDoc PriceTracker.currentPrice} */
 	public async currentPrice(options: CurrentPriceOptions): Promise<number> {
-		const body = await this.#get("data/price", {
-			fsym: options.token,
-			tsyms: options.currency,
-		});
+		const body = await this.#get(
+			`coins/${options.token.toLowerCase()}/price`,
+			this.#currenciesQuery([options.currency]),
+		);
 
-		return body[options.currency];
+		return body.data.prices[options.currency.toUpperCase()].price;
 	}
 
 	/**
-	 * Sends an HTTP GET request to the CryptoCompare API.
+	 * Builds an indexed query object so the currencies reach the API as an array.
+	 *
+	 * @private
+	 * @param {string[]} currencies
+	 * @returns {Record<string, string>}
+	 * @memberof PriceTracker
+	 */
+	#currenciesQuery(currencies: string[]): Record<string, string> {
+		const query: Record<string, string> = {};
+
+		for (const [index, currency] of currencies.entries()) {
+			query[`currencies[${index}]`] = currency.toUpperCase();
+		}
+
+		return query;
+	}
+
+	/**
+	 * Sends an HTTP GET request to the ARK Pricing API.
 	 *
 	 * @private
 	 * @param {string} path

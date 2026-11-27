@@ -1,9 +1,8 @@
 import { DateTime } from "@/app/lib/intl";
-import { convertToCurrency } from "@/app/lib/markets/drivers/coincap/utils";
 import { HistoricalData, HistoricalTransformer } from "@/app/lib/markets/contracts";
 
 /**
- * Implements a transformer for historical volume data.
+ * Implements a transformer for historical price data.
  *
  * @export
  * @class HistoricalPriceTransformer
@@ -26,27 +25,13 @@ export class HistoricalPriceTransformer implements HistoricalTransformer {
 	 * @memberof HistoricalPriceTransformer
 	 */
 	public transform(options: Record<string, any>): HistoricalData {
-		const { token, currency, rates, dateFormat } = options;
-
-		const tokenId = token.toUpperCase();
-		const datasets = {};
-
-		for (const value of Object.values(this.data)) {
-			datasets[DateTime.make(value.time).format(dateFormat)] = convertToCurrency(value.priceUsd, {
-				base: tokenId,
-				from: currency,
-				rates,
-				to: tokenId,
-			});
-		}
-
-		const datasetValues: number[] = Object.values(datasets);
+		const datasets = this.data.map((value) => value.close);
 
 		return {
-			datasets: datasetValues,
-			labels: Object.keys(datasets).map((time) => DateTime.make(time).format(dateFormat)),
-			max: Math.max(...datasetValues),
-			min: Math.min(...datasetValues),
+			datasets,
+			labels: this.data.map((value) => DateTime.make(value.date).format(options.dateFormat)),
+			max: Math.max(...datasets),
+			min: Math.min(...datasets),
 		};
 	}
 }

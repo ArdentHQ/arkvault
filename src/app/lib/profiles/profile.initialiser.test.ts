@@ -45,7 +45,7 @@ describe("ProfileInitialiser", () => {
 		expect(profile.settings().get(ProfileSetting.FallbackToDefaultNodes)).toBe(true);
 		expect(profile.settings().get(ProfileSetting.ExchangeCurrency)).toBe("BTC");
 		expect(profile.settings().get(ProfileSetting.Locale)).toBe("en-US");
-		expect(profile.settings().get(ProfileSetting.MarketProvider)).toBe("cryptocompare");
+		expect(profile.settings().get(ProfileSetting.MarketProvider)).toBe("arkpricing");
 		expect(profile.settings().get(ProfileSetting.Theme)).toBe("light");
 		expect(profile.settings().get(ProfileSetting.TimeFormat)).toBe("h:mm A");
 		expect(profile.settings().get(ProfileSetting.UseNetworkWalletNames)).toBe(false);
