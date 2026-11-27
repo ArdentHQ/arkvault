@@ -131,6 +131,25 @@ describe("ImportWallet LedgerTable", () => {
 		expect(screen.getByTestId("LedgerScanStep__scan-more")).toHaveTextContent(/ADD_NEW_ADDRESS|Add New/i);
 	});
 
+	it("should hide add new address buttons when scanMore is not provided", () => {
+		render(
+			<LedgerTable
+				wallets={defaultScannerState.wallets}
+				selectedWallets={[]}
+				isSelected={() => false}
+				network={network}
+				toggleSelectAll={() => {}}
+				toggleSelect={() => {}}
+				isScanning={false}
+			>
+				{() => null}
+			</LedgerTable>,
+		);
+
+		expect(screen.queryByTestId("LedgerScanStep__scan-more")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("LedgerScanStep__scan-more-mobile")).not.toBeInTheDocument();
+	});
+
 	it("should render mobile view with skeleton rows when isScanning is true", async () => {
 		render(
 			<LedgerTable
