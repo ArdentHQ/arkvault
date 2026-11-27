@@ -6,7 +6,7 @@ exports[`Page > should render with navigation context 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -141,7 +141,7 @@ exports[`Page > should render with navigation context 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -574,7 +574,7 @@ exports[`Page > should render with navigation context 2`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -705,7 +705,7 @@ exports[`Page > should render with navigation context 2`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1138,7 +1138,7 @@ exports[`Page > should render with navigation context 3`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1269,7 +1269,7 @@ exports[`Page > should render with navigation context 3`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1702,7 +1702,7 @@ exports[`Page > should render with sidebar = false 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1833,7 +1833,7 @@ exports[`Page > should render with sidebar = false 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -2262,7 +2262,7 @@ exports[`Page > should render with sidebar = true 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2393,7 +2393,7 @@ exports[`Page > should render with sidebar = true 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"

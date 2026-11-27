@@ -1430,7 +1430,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                         class="flex flex-col overflow-hidden rounded-xl"
                       >
                         <div
-                          class="css-6pjap5"
+                          class="css-1apqton"
                         >
                           <div
                             class="css-v0ob3f"
@@ -1486,7 +1486,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                         class="inline-flex w-full items-center justify-center space-x-3"
                       >
                         <div
-                          class="css-1ppx3l2"
+                          class="css-8kobkb"
                           color="info"
                         />
                         <span

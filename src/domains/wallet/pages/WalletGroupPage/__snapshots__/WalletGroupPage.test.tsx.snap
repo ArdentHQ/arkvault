@@ -8,7 +8,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -139,7 +139,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -5259,7 +5259,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                     class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
                   >
                     <button
-                      class="group css-eti7fq"
+                      class="group css-jt2164"
                       data-testid="PaginationSearchButton"
                       type="button"
                     >
