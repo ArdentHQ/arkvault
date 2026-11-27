@@ -98,6 +98,9 @@ describe("Password Settings", () => {
 
 		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
 
+		// the mobile navigation bar reappears 300ms after the inputs lose focus
+		await expect(screen.findByTestId("NavigationBarMobile")).resolves.toBeInTheDocument();
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 

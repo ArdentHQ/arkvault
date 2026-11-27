@@ -10,7 +10,7 @@ exports[`Votes > should filter current delegates 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -143,7 +143,7 @@ exports[`Votes > should filter current delegates 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -594,7 +594,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-46sfhd"
+                      class="ring-focus css-g0l1ox"
                       type="button"
                     >
                       <div
@@ -676,7 +676,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-46sfhd"
+                        class="ring-focus css-g0l1ox"
                       >
                         <div
                           class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
@@ -1235,7 +1235,7 @@ exports[`Votes > should render 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1368,7 +1368,7 @@ exports[`Votes > should render 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1819,7 +1819,7 @@ exports[`Votes > should render 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-46sfhd"
+                      class="ring-focus css-g0l1ox"
                       type="button"
                     >
                       <div
@@ -1900,7 +1900,7 @@ exports[`Votes > should render 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-46sfhd"
+                        class="ring-focus css-g0l1ox"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -2742,7 +2742,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2875,7 +2875,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -3326,7 +3326,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     class="group"
                   >
                     <button
-                      class="ring-focus css-46sfhd"
+                      class="ring-focus css-g0l1ox"
                       type="button"
                     >
                       <div
@@ -3407,7 +3407,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       class="group"
                     >
                       <button
-                        class="ring-focus css-46sfhd"
+                        class="ring-focus css-g0l1ox"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -4249,7 +4249,7 @@ exports[`Votes > should render with no wallets 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4380,7 +4380,7 @@ exports[`Votes > should render with no wallets 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -4962,7 +4962,7 @@ exports[`Votes > should select a delegate 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -5095,7 +5095,7 @@ exports[`Votes > should select a delegate 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -5546,7 +5546,7 @@ exports[`Votes > should select a delegate 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-46sfhd"
+                      class="ring-focus css-g0l1ox"
                       type="button"
                     >
                       <div
@@ -5627,7 +5627,7 @@ exports[`Votes > should select a delegate 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-46sfhd"
+                        class="ring-focus css-g0l1ox"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -6469,7 +6469,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -6598,7 +6598,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -7056,7 +7056,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-46sfhd"
+                      class="ring-focus css-g0l1ox"
                       type="button"
                     >
                       <div
@@ -7140,7 +7140,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-46sfhd"
+                        class="ring-focus css-g0l1ox"
                       >
                         <div
                           class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
@@ -7706,7 +7706,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -7835,7 +7835,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -8293,7 +8293,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                     class="group"
                   >
                     <button
-                      class="ring-focus css-46sfhd"
+                      class="ring-focus css-g0l1ox"
                       type="button"
                     >
                       <div
@@ -8377,7 +8377,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                       class="group"
                     >
                       <button
-                        class="ring-focus css-46sfhd"
+                        class="ring-focus css-g0l1ox"
                       >
                         <div
                           class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
@@ -8943,7 +8943,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-wwznix"
+      class="css-v72zfb"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -9072,7 +9072,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -9530,7 +9530,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-46sfhd"
+                      class="ring-focus css-g0l1ox"
                       type="button"
                     >
                       <div
@@ -9614,7 +9614,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-46sfhd"
+                        class="ring-focus css-g0l1ox"
                       >
                         <div
                           class="css-1i4b0eq"
@@ -10338,7 +10338,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-sdeely"
+      class="css-13rr8ys"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -10471,7 +10471,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="css-qjx2bd"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -10922,7 +10922,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-46sfhd"
+                      class="ring-focus css-g0l1ox"
                       type="button"
                     >
                       <div
@@ -11003,7 +11003,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-46sfhd"
+                        class="ring-focus css-g0l1ox"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -11067,7 +11067,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               class="flex flex-col overflow-hidden rounded-xl mb-4"
             >
               <div
-                class="css-rzhg83"
+                class="css-m9uf57"
               >
                 <div
                   class="css-v0ob3f"
