@@ -27,8 +27,8 @@ importers:
         specifier: ^0.27.20
         version: 0.27.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@ledgerhq/hw-app-eth':
-        specifier: ^7.13.1
-        version: 7.13.1(debug@4.4.3(supports-color@11.0.0))(react@19.3.1)(supports-color@11.0.0)
+        specifier: ^7.14.0
+        version: 7.14.0(debug@4.4.3(supports-color@11.0.0))(react@19.3.1)(supports-color@11.0.0)
       '@ledgerhq/hw-transport-webhid':
         specifier: ^6.36.0
         version: 6.36.0
@@ -75,8 +75,8 @@ importers:
         specifier: 9.5.0
         version: 9.5.0(react@19.3.1)
       fast-copy:
-        specifier: ^4.3.3
-        version: 4.3.3
+        specifier: ^4.3.4
+        version: 4.3.4
       fast-deep-equal:
         specifier: ^3.1.3
         version: 3.1.3
@@ -150,8 +150,8 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(react@19.3.1)
       react-router:
-        specifier: ^8.5.2
-        version: 8.5.2(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        specifier: ^8.5.3
+        version: 8.5.3(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react-slick:
         specifier: ^0.31.0
         version: 0.31.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
@@ -183,8 +183,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(react@19.3.1)
       viem:
-        specifier: ^2.58.6
-        version: 2.58.6(typescript@6.0.3)(zod@4.6.7)
+        specifier: ^2.58.7
+        version: 2.58.7(typescript@6.0.3)(zod@4.6.7)
     devDependencies:
       '@cucumber/cucumber':
         specifier: ^13.3.0
@@ -1418,19 +1418,19 @@ packages:
   '@ledgerhq/devices@8.19.0':
     resolution: {integrity: sha512-tj5vHCXUXNd+4yePFd0+rwi39TaLDgBKxH0g5v+S0oDWk0UmaPolOVmQpy4Gt+DFTIG6Kx9AKEBaKYsreaVQKQ==}
 
-  '@ledgerhq/domain-service@1.10.0':
-    resolution: {integrity: sha512-PckRNB8a1JXsvPtUsKh6Ajk/TC0zooR+3Kvyfuo6EjAsCesfh732kKDPQKZ5JUjeALoJ1NaDaCdakRdrSGxOMA==}
+  '@ledgerhq/domain-service@1.10.1':
+    resolution: {integrity: sha512-nnZ3el58lc5UwvNOhlgYh3Xvu/aPB9g7g2noX87XUzFveGR/5dxeZO6yKTvpPLy5U92ANDgDkLkO9gkExP00Jw==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
 
   '@ledgerhq/errors@6.37.0':
     resolution: {integrity: sha512-T5yiKI5UX7ugeocdTF3TUsCIN2BH41Bio4ZeN410YFjFOf3es08n/5JyMzzKwzRgP0blG3HfBf7s7vJKqCSAeg==}
 
-  '@ledgerhq/evm-tools@2.1.0':
-    resolution: {integrity: sha512-zJ7toplbczr3D69861Z6/9+ODsOetB8gu1gcFbhqMpVIcI53Uh5wbellaWWA8K3pdMaCDl/fz29QqiDa76+afA==}
+  '@ledgerhq/evm-tools@2.1.1':
+    resolution: {integrity: sha512-lJyCQHEs/2szQwBZyFQ7NQetSAYWqV23gmN/SvnR8zAGGV5fHfbqw+Q9bamBAYLeXxJATq08AIV+PlDLLn5LFw==}
 
-  '@ledgerhq/hw-app-eth@7.13.1':
-    resolution: {integrity: sha512-2UdtUhEtjDU7emfpcYdji++qEr+663Sh+Og2EeozXFRktcCvnTV6ixudoOpIkti6skX803m/xIIwphV0ncOpYw==}
+  '@ledgerhq/hw-app-eth@7.14.0':
+    resolution: {integrity: sha512-tEj0D2cCK8BtaYpqawUwJNR3QaUogcJLkCYntSqWIxK2Z5bklqOlnwuUVVvX71+kAPsPMXUYUQKVgjHUnRmRpw==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
     peerDependenciesMeta:
@@ -1463,8 +1463,8 @@ packages:
   '@ledgerhq/logs@6.20.0':
     resolution: {integrity: sha512-Pp+s24tGEGR3ANA+qQM50vlAUH/SmAaxkpCw0pmYYUa/fcGggko+7c1+RvgpjA6PhB3XPKTmu9vQdVrROJXjuw==}
 
-  '@ledgerhq/types-live@6.132.0':
-    resolution: {integrity: sha512-EmFXQyAq+nhAQJlmMWJ8bCEFNAT0qaAMQDZ3FZ3liM8MC6II8BARwDQsaRQnxZcfDIgzPfOA3pY9UqneSPY2Yg==}
+  '@ledgerhq/types-live@6.133.0':
+    resolution: {integrity: sha512-q2/n1FSrBa3hIBDsL8KXMkNgBz5cLmVbFTclLehFlbML6h7NoEtH3ClnVMdFazPdb0WpOgqhx1DCzQA/jowLjg==}
 
   '@msw/url@0.1.3':
     resolution: {integrity: sha512-IvN0kCVRFtr12gBS3Nk8PRqjWjE/80ydze2DNQ0Z74ZjnMDWibVoaYFqGv9vR2LoiUfcVgEVaBWLFyp15M5YJg==}
@@ -2606,8 +2606,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@1.20.0:
-    resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
+  axios@1.21.1:
+    resolution: {integrity: sha512-6eI5Q/Y4u/Um9dDlsRoq5pY2rxnUTv+L4PpLitnbk/i4jb3MxLZ5CsN5Ih3IysbeRYK4pR+P7qfMsOQl9fwwFQ==}
 
   babel-plugin-module-resolver@5.0.0:
     resolution: {integrity: sha512-g0u+/ChLSJ5+PzYwLwP8Rp8Rcfowz58TJNCe+L/ui4rpzE/mg//JVX0EWBUYoxaextqnwuGHzfGp2hh0PPV25Q==}
@@ -3487,8 +3487,8 @@ packages:
     resolution: {integrity: sha512-KfYbmpRm0VbLjEvVa9yGwCi9GI34xvi7A/HXYWQO65CSD2u3MczUJSuwXKFIxlGsgBQizV9q5J9NHj4VG0n+pA==}
     engines: {node: '>=12.0.0'}
 
-  fast-copy@4.3.3:
-    resolution: {integrity: sha512-U3A5d4cBrc7fpZ2Sbz46FbFl+VdnCBAwRQaIR7IFWsyvndISF5CGjTbhiawGoMv7Ob8slBY1nT8XT3bWRFErzA==}
+  fast-copy@4.3.4:
+    resolution: {integrity: sha512-o+7Dj5GG97OeQdPAVAo9EQE3O8YmRqUjCg0iqk9P2xH3IXI7rQPRyanWdoqK1QIzGje1oKF+kQudEStF93atyw==}
 
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -3572,8 +3572,8 @@ packages:
   focus-visible@5.2.1:
     resolution: {integrity: sha512-8Bx950VD1bWTQJEH/AM6SpEk+SU55aVnp4Ujhuuxy3eMEBCRwBnTBnVXr9YAPvZL3/CNjCa8u4IWfNmEO53whA==}
 
-  follow-redirects@1.16.1:
-    resolution: {integrity: sha512-FNvFGzoMLWmE6Yj9spb/zjd7yiNCHiAW9/Tg9CXrQ8wuu32HtlJOwWO11OJafl5FfY3DxTdQ0vj42zU1kvv5jg==}
+  follow-redirects@1.16.3:
+    resolution: {integrity: sha512-toOSoqN6d51Wjf1aOFJYcoVv1aND9rj/CwjLU0Vz40oDuSpWDayCeKe4JpL5NL0WdFvoOOCI3BRo69HahjbR1A==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -5307,8 +5307,8 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
 
-  react-router@8.5.2:
-    resolution: {integrity: sha512-luPXqNUAIZAmCHbeBysc2KO7VJjckIMZk4ByEetS7Jotit8R6lLSVVeC76UE//AYK6QD6tAnVAPGkvmqMd+b1w==}
+  react-router@8.5.3:
+    resolution: {integrity: sha512-oPYDMFH4CFeJ8n2dKvKHPAByYQhEikuvUf6OruNMuxgrq2hvZn7jz0cO/IdFW//EH1a/Vcwi84v405B2Q/gxTw==}
     engines: {node: '>=22.22.0'}
     peerDependencies:
       '@types/react': '>=19.2.0'
@@ -6187,8 +6187,8 @@ packages:
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
-  viem@2.58.6:
-    resolution: {integrity: sha512-dBxl7nsHrENzD3HR/wOeeH2NcfXSwoEibTSZKJR7kcQOyqIDa50O27H2JU2ZMAQqS1QrEojaYCy6dLWIsdb9cA==}
+  viem@2.58.7:
+    resolution: {integrity: sha512-9s29POkcUOdlvEN5ePdBTBryhoEQE+ikXuuwjvJRqTc99yCMVkVqwvrjogYpTaJLo2rIrgOEjAglbdr6DCRdkg==}
     peerDependencies:
       mppx: '>=0.17.0'
       typescript: '>=5.0.4'
@@ -7902,10 +7902,10 @@ snapshots:
     dependencies:
       semver: 7.8.5
 
-  '@ledgerhq/domain-service@1.10.0(debug@4.4.3(supports-color@11.0.0))(react@19.3.1)(supports-color@11.0.0)':
+  '@ledgerhq/domain-service@1.10.1(debug@4.4.3(supports-color@11.0.0))(react@19.3.1)(supports-color@11.0.0)':
     dependencies:
       '@ledgerhq/logs': 6.20.0
-      axios: 1.20.0(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0)
+      axios: 1.21.1(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0)
       eip55: 2.1.1
       react: 19.3.1
     transitivePeerDependencies:
@@ -7914,29 +7914,29 @@ snapshots:
 
   '@ledgerhq/errors@6.37.0': {}
 
-  '@ledgerhq/evm-tools@2.1.0(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0)':
+  '@ledgerhq/evm-tools@2.1.1(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0)':
     dependencies:
       '@ethersproject/constants': 5.8.0
       '@ethersproject/hash': 5.8.0
       '@ledgerhq/live-env': 4.2.0
       '@noble/hashes': 2.4.0
-      axios: 1.20.0(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0)
+      axios: 1.21.1(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0)
     transitivePeerDependencies:
       - debug
       - supports-color
 
-  '@ledgerhq/hw-app-eth@7.13.1(debug@4.4.3(supports-color@11.0.0))(react@19.3.1)(supports-color@11.0.0)':
+  '@ledgerhq/hw-app-eth@7.14.0(debug@4.4.3(supports-color@11.0.0))(react@19.3.1)(supports-color@11.0.0)':
     dependencies:
       '@ethersproject/abi': 5.8.0
       '@ethersproject/rlp': 5.8.0
       '@ethersproject/transactions': 5.8.0
-      '@ledgerhq/domain-service': 1.10.0(debug@4.4.3(supports-color@11.0.0))(react@19.3.1)(supports-color@11.0.0)
-      '@ledgerhq/evm-tools': 2.1.0(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0)
+      '@ledgerhq/domain-service': 1.10.1(debug@4.4.3(supports-color@11.0.0))(react@19.3.1)(supports-color@11.0.0)
+      '@ledgerhq/evm-tools': 2.1.1(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0)
       '@ledgerhq/hw-transport': 6.37.0
       '@ledgerhq/hw-transport-mocker': 6.36.0
       '@ledgerhq/logs': 6.20.0
-      '@ledgerhq/types-live': 6.132.0
-      axios: 1.20.0(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0)
+      '@ledgerhq/types-live': 6.133.0
+      axios: 1.21.1(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0)
       bignumber.js: 9.3.1
       semver: 7.8.5
     optionalDependencies:
@@ -7985,7 +7985,7 @@ snapshots:
 
   '@ledgerhq/logs@6.20.0': {}
 
-  '@ledgerhq/types-live@6.132.0':
+  '@ledgerhq/types-live@6.133.0':
     dependencies:
       bignumber.js: 9.3.1
       rxjs: 7.8.2
@@ -8998,9 +8998,9 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  axios@1.20.0(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0):
+  axios@1.21.1(debug@4.4.3(supports-color@11.0.0))(supports-color@11.0.0):
     dependencies:
-      follow-redirects: 1.16.1(debug@4.4.3(supports-color@11.0.0))
+      follow-redirects: 1.16.3(debug@4.4.3(supports-color@11.0.0))
       form-data: 4.0.6
       https-proxy-agent: 5.0.1(supports-color@11.0.0)
       proxy-from-env: 2.1.0
@@ -10089,7 +10089,7 @@ snapshots:
 
   expect-type@1.4.0: {}
 
-  fast-copy@4.3.3: {}
+  fast-copy@4.3.4: {}
 
   fast-deep-equal@3.1.3: {}
 
@@ -10173,7 +10173,7 @@ snapshots:
 
   focus-visible@5.2.1: {}
 
-  follow-redirects@1.16.1(debug@4.4.3(supports-color@11.0.0)):
+  follow-redirects@1.16.3(debug@4.4.3(supports-color@11.0.0)):
     optionalDependencies:
       debug: 4.4.3(supports-color@11.0.0)
 
@@ -11859,7 +11859,7 @@ snapshots:
       react: 19.3.1
       shallow-equal: 3.1.0
 
-  react-router@8.5.2(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
+  react-router@8.5.3(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       '@remix-run/route-pattern': 0.22.1
       cookie-es: 3.1.1
@@ -12976,7 +12976,7 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  viem@2.58.6(typescript@6.0.3)(zod@4.6.7):
+  viem@2.58.7(typescript@6.0.3)(zod@4.6.7):
     dependencies:
       '@noble/curves': 1.9.1
       '@noble/hashes': 1.8.0
